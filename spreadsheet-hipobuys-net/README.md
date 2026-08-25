@@ -1,4 +1,4 @@
-# Spreadsheet Hipobuys — Cloudflare Workers
+# Spreadsheet Hipobuys — Cloudflare Pages
 
 Independent Hipobuy spreadsheet, QC and shipping guide.
 
@@ -6,17 +6,15 @@ Independent Hipobuy spreadsheet, QC and shipping guide.
 
 - `app/` — pages, articles, translations and site data
 - `public/` — brand and social-preview assets
-- `worker/` — production worker entry point
 - `tests/` — rendered HTML checks
 
 ## Cloudflare deployment
 
 - Root directory: `spreadsheet-hipobuys-net`
 - Build command: `npm run build`
-- Deploy command: `npm run deploy`
-- Worker name: `spreadsheet-hipobuys-net`
+- Build output directory: `out`
 
-Cloudflare currently recommends Vinext on Workers for Next.js applications. The Cloudflare Vite plugin builds the Worker and static assets together, and Wrangler automatically uses the generated deployment configuration.
+The site is exported as static HTML so Cloudflare Pages can publish every route directly from the `out` directory.
 
 ## Commands
 
@@ -24,6 +22,5 @@ Cloudflare currently recommends Vinext on Workers for Next.js applications. The 
 - `npm run dev`
 - `npm run build`
 - `npm test`
-- `npm run deploy`
 
 The public site keeps all product, category and search actions pointed only at the owner's main catalog. Research sources are shown as non-clickable notes so the guide does not send visitors to third-party websites.

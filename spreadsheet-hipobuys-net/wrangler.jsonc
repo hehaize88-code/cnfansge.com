@@ -1,10 +1,6 @@
 {
-  "$schema": "./node_modules/wrangler/config-schema.json",
   "name": "spreadsheet-hipobuys-net",
-  "main": "./worker/index.ts",
+  "pages_build_output_dir": "./out",
   "compatibility_date": "2026-08-25",
-  "compatibility_flags": ["nodejs_compat"],
-  "observability": {
-    "enabled": true
-  }
+  "compatibility_flags": ["nodejs_compat"]
 }
