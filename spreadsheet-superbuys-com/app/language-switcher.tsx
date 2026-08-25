@@ -203,6 +203,55 @@ const sharedCopy: Record<LanguageCode, Record<string, string>> = {
   },
 };
 
+const enhancementCopy: Record<LanguageCode, Record<string, string>> = {
+  en: {},
+  de: {
+    updated:"Unabhängiger Link-Prüfindex · Geprüft am 25. August 2026", title:"Superbuy-Tabellenlinks vor der Bestellung prüfen.", intro:"Nach Kategorie durchsuchen, das aktuelle Ziel öffnen und Angebot, verfügbare Optionen sowie Verkäuferangaben vor der Bestellung erneut prüfen.",
+    indexEyebrow:"LINKSTATUS · AKTUELLER PRODUKTINDEX", indexTitle:"Tabellenlinks prüfen,", indexTitleEm:"danach das Angebot verifizieren.", indexIntro:"Nutze den Statusüberblick als Ausgangspunkt und prüfe Ziel, ausgewählte Option, Verkäuferangaben und Preis zum Bestellzeitpunkt erneut.",
+    linkSnapshotEyebrow:"ÜBERBLICK DER LINKPRÜFUNG", linkSnapshotTitle:"6 von 6 aktuellen Zielen erreichbar.", linkSnapshotIntro:"Geprüft am 25. August 2026. Eine erfolgreiche Antwort bestätigt nur, dass das Ziel geöffnet wird; sie garantiert weder Bestand noch Preis, Verkäuferidentität oder Variantenrichtigkeit.", destinationReachable:"Ziel erreichbar", checkedDateShort:"Geprüft am 25. Aug. 2026",
+    howPageVisualTitle:"Ein sichererer Tabellen-Workflow", howPageVisualStep1:"Index öffnen", howPageVisualStep2:"Aktuelles Angebot prüfen", howPageVisualStep3:"Gewählte Option sichern", howPageVisualStep4:"Lagerbelege vergleichen", howPageVisualStep5:"Paket aufgeben",
+    qcPageVisualTitle:"QC-Fotos für sichtbare Fragen nutzen", qcPageVisualStep1:"Gesicherte Bestellung", qcPageVisualStep2:"Lagerfotos", qcPageVisualStep3:"Sichtbarer Vergleich", qcPageVisualStep4:"Gezielt nachfragen", qcPageVisualStep5:"Akzeptieren oder klären",
+    shippingPageVisualTitle:"Versandschätzung in Ebenen aufbauen", shippingPageVisualStep1:"Artikel und Inlandslieferung", shippingPageVisualStep2:"Packgewicht und Volumen", shippingPageVisualStep3:"Routenschätzung", shippingPageVisualStep4:"Versanddepot", shippingPageVisualStep5:"Bestätigter Endbetrag",
+    warehousePageVisualTitle:"Lagerzeit als Entscheidungsplan nutzen", warehousePageVisualStep1:"Artikel kommt an", warehousePageVisualStep2:"Belege prüfen", warehousePageVisualStep3:"Abweichungen klären", warehousePageVisualStep4:"Konsolidierung planen", warehousePageVisualStep5:"Vor Frist aufgeben",
+  },
+  fr: {
+    updated:"Index indépendant de vérification des liens · Vérifié le 25 août 2026", title:"Vérifiez les liens du tableur Superbuy avant de commander.", intro:"Parcourez les catégories, ouvrez la destination actuelle puis revérifiez l’annonce, les options disponibles et le vendeur avant de commander.",
+    indexEyebrow:"ÉTAT DES LIENS · INDEX PRODUIT ACTUEL", indexTitle:"Vérifiez les liens du tableur,", indexTitleEm:"puis contrôlez l’annonce.", indexIntro:"Utilisez l’état des liens comme point de départ, puis revérifiez la destination, l’option choisie, le vendeur et le prix au moment de commander.",
+    linkSnapshotEyebrow:"ÉTAT DE VÉRIFICATION DES LIENS", linkSnapshotTitle:"6 destinations récentes sur 6 sont accessibles.", linkSnapshotIntro:"Vérifié le 25 août 2026. Une réponse réussie confirme que la destination s’ouvre ; elle ne garantit ni stock, ni prix actuel, ni identité du vendeur, ni exactitude de la variante.", destinationReachable:"Destination accessible", checkedDateShort:"Vérifié le 25 août 2026",
+    howPageVisualTitle:"Un processus plus sûr avec le tableur", howPageVisualStep1:"Ouvrir l’index", howPageVisualStep2:"Vérifier l’annonce actuelle", howPageVisualStep3:"Enregistrer l’option choisie", howPageVisualStep4:"Comparer les preuves d’entrepôt", howPageVisualStep5:"Soumettre le colis",
+    qcPageVisualTitle:"Utiliser les photos QC pour répondre aux questions visibles", qcPageVisualStep1:"Commande enregistrée", qcPageVisualStep2:"Photos d’entrepôt", qcPageVisualStep3:"Comparaison visible", qcPageVisualStep4:"Demande ciblée", qcPageVisualStep5:"Accepter ou résoudre",
+    shippingPageVisualTitle:"Construire l’estimation d’envoi par étapes", shippingPageVisualStep1:"Article et livraison locale", shippingPageVisualStep2:"Poids et volume emballés", shippingPageVisualStep3:"Estimation de l’itinéraire", shippingPageVisualStep4:"Acompte d’envoi", shippingPageVisualStep5:"Total confirmé par le transporteur",
+    warehousePageVisualTitle:"Utiliser le stockage comme calendrier de décision", warehousePageVisualStep1:"Arrivée de l’article", warehousePageVisualStep2:"Contrôler les preuves", warehousePageVisualStep3:"Résoudre les écarts", warehousePageVisualStep4:"Planifier la consolidation", warehousePageVisualStep5:"Soumettre avant l’échéance",
+  },
+  es: {
+    updated:"Índice independiente de verificación de enlaces · Comprobado el 25 de agosto de 2026", title:"Verifica los enlaces de la hoja de Superbuy antes de comprar.", intro:"Explora por categoría, abre el destino actual y vuelve a comprobar el anuncio, las opciones disponibles y el vendedor antes de comprar.",
+    indexEyebrow:"ESTADO DE ENLACES · ÍNDICE ACTUAL", indexTitle:"Comprueba los enlaces de la hoja,", indexTitleEm:"después verifica el anuncio.", indexIntro:"Usa el estado de los enlaces como punto de partida y vuelve a comprobar el destino, la opción elegida, el vendedor y el precio al realizar el pedido.",
+    linkSnapshotEyebrow:"RESUMEN DE VERIFICACIÓN DE ENLACES", linkSnapshotTitle:"6 de 6 destinos recientes accesibles.", linkSnapshotIntro:"Comprobado el 25 de agosto de 2026. Una respuesta correcta confirma que el destino abre; no garantiza stock, precio actual, identidad del vendedor ni exactitud de la variante.", destinationReachable:"Destino accesible", checkedDateShort:"Comprobado el 25 ago 2026",
+    howPageVisualTitle:"Un proceso más seguro con la hoja", howPageVisualStep1:"Abrir el índice", howPageVisualStep2:"Verificar el anuncio actual", howPageVisualStep3:"Guardar la opción elegida", howPageVisualStep4:"Comparar pruebas del almacén", howPageVisualStep5:"Enviar el paquete",
+    qcPageVisualTitle:"Usa las fotos QC para preguntas visibles", qcPageVisualStep1:"Pedido guardado", qcPageVisualStep2:"Fotos del almacén", qcPageVisualStep3:"Comparación visible", qcPageVisualStep4:"Consulta específica", qcPageVisualStep5:"Aceptar o resolver",
+    shippingPageVisualTitle:"Construye la estimación de envío por capas", shippingPageVisualStep1:"Artículo y entrega local", shippingPageVisualStep2:"Peso y volumen embalados", shippingPageVisualStep3:"Estimación de ruta", shippingPageVisualStep4:"Depósito de envío", shippingPageVisualStep5:"Total confirmado por el transportista",
+    warehousePageVisualTitle:"Usa el almacenamiento como cronología de decisiones", warehousePageVisualStep1:"Llega el artículo", warehousePageVisualStep2:"Revisar pruebas", warehousePageVisualStep3:"Resolver diferencias", warehousePageVisualStep4:"Planificar consolidación", warehousePageVisualStep5:"Enviar antes del plazo",
+  },
+  it: {
+    updated:"Indice indipendente di verifica link · Controllato il 25 agosto 2026", title:"Verifica i link del foglio Superbuy prima di ordinare.", intro:"Esplora per categoria, apri la destinazione attuale e ricontrolla inserzione, opzioni disponibili e venditore prima di ordinare.",
+    indexEyebrow:"STATO LINK · INDICE PRODOTTI ATTUALE", indexTitle:"Controlla i link del foglio,", indexTitleEm:"poi verifica l’inserzione.", indexIntro:"Usa lo stato dei link come punto di partenza, quindi ricontrolla destinazione, opzione scelta, venditore e prezzo al momento dell’ordine.",
+    linkSnapshotEyebrow:"RIEPILOGO VERIFICA LINK", linkSnapshotTitle:"6 destinazioni recenti su 6 raggiungibili.", linkSnapshotIntro:"Controllato il 25 agosto 2026. Una risposta corretta conferma solo che la destinazione si apre; non garantisce disponibilità, prezzo, identità del venditore o variante.", destinationReachable:"Destinazione raggiungibile", checkedDateShort:"Controllato il 25 ago 2026",
+    howPageVisualTitle:"Un flusso più sicuro con il foglio", howPageVisualStep1:"Apri l’indice", howPageVisualStep2:"Verifica l’inserzione attuale", howPageVisualStep3:"Salva l’opzione scelta", howPageVisualStep4:"Confronta le prove del magazzino", howPageVisualStep5:"Invia il pacco",
+    qcPageVisualTitle:"Usa le foto QC per domande visibili", qcPageVisualStep1:"Ordine salvato", qcPageVisualStep2:"Foto del magazzino", qcPageVisualStep3:"Confronto visibile", qcPageVisualStep4:"Richiesta mirata", qcPageVisualStep5:"Accetta o risolvi",
+    shippingPageVisualTitle:"Costruisci la stima di spedizione per livelli", shippingPageVisualStep1:"Articolo e consegna locale", shippingPageVisualStep2:"Peso e volume imballati", shippingPageVisualStep3:"Stima della rotta", shippingPageVisualStep4:"Deposito di spedizione", shippingPageVisualStep5:"Totale confermato dal corriere",
+    warehousePageVisualTitle:"Usa il deposito come calendario decisionale", warehousePageVisualStep1:"Arrivo dell’articolo", warehousePageVisualStep2:"Controlla le prove", warehousePageVisualStep3:"Risolvi le differenze", warehousePageVisualStep4:"Pianifica il consolidamento", warehousePageVisualStep5:"Invia prima della scadenza",
+  },
+  pl: {
+    updated:"Niezależny indeks weryfikacji linków · Sprawdzono 25 sierpnia 2026", title:"Sprawdź linki arkusza Superbuy przed zamówieniem.", intro:"Przeglądaj kategorie, otwórz aktualny cel i przed zamówieniem ponownie sprawdź ofertę, dostępne opcje oraz sprzedawcę.",
+    indexEyebrow:"STATUS LINKÓW · AKTUALNY INDEKS", indexTitle:"Sprawdź linki arkusza,", indexTitleEm:"potem zweryfikuj ofertę.", indexIntro:"Potraktuj status linków jako punkt wyjścia, a podczas zamówienia ponownie sprawdź cel, wybraną opcję, sprzedawcę i cenę.",
+    linkSnapshotEyebrow:"PODSUMOWANIE WERYFIKACJI LINKÓW", linkSnapshotTitle:"6 z 6 ostatnich celów jest dostępnych.", linkSnapshotIntro:"Sprawdzono 25 sierpnia 2026. Prawidłowa odpowiedź potwierdza tylko otwarcie celu; nie gwarantuje stanu, ceny, tożsamości sprzedawcy ani zgodności wariantu.", destinationReachable:"Cel dostępny", checkedDateShort:"Sprawdzono 25 sie 2026",
+    howPageVisualTitle:"Bezpieczniejszy proces korzystania z arkusza", howPageVisualStep1:"Otwórz indeks", howPageVisualStep2:"Sprawdź aktualną ofertę", howPageVisualStep3:"Zapisz wybraną opcję", howPageVisualStep4:"Porównaj dowody z magazynu", howPageVisualStep5:"Nadaj paczkę",
+    qcPageVisualTitle:"Użyj zdjęć QC do pytań wizualnych", qcPageVisualStep1:"Zapisane zamówienie", qcPageVisualStep2:"Zdjęcia magazynowe", qcPageVisualStep3:"Porównanie wizualne", qcPageVisualStep4:"Precyzyjne pytanie", qcPageVisualStep5:"Zaakceptuj lub wyjaśnij",
+    shippingPageVisualTitle:"Buduj szacunek wysyłki warstwami", shippingPageVisualStep1:"Produkt i dostawa lokalna", shippingPageVisualStep2:"Waga i objętość paczki", shippingPageVisualStep3:"Szacunek trasy", shippingPageVisualStep4:"Depozyt wysyłkowy", shippingPageVisualStep5:"Kwota potwierdzona przez przewoźnika",
+    warehousePageVisualTitle:"Użyj magazynu jako osi decyzji", warehousePageVisualStep1:"Produkt dociera", warehousePageVisualStep2:"Sprawdź dowody", warehousePageVisualStep3:"Wyjaśnij różnice", warehousePageVisualStep4:"Zaplanuj konsolidację", warehousePageVisualStep5:"Nadaj przed terminem",
+  },
+};
+
 const translationAliases: Record<string, string> = {
   libraryTitle1: "articleTitle1",
   libraryTitle2: "articleTitle2",
@@ -221,7 +270,8 @@ function applyLanguage(lang: LanguageCode) {
     const alias = translationAliases[key];
     const translated = lang === "en"
       ? original
-      : generatedCopy[lang]?.[key]
+      : enhancementCopy[lang]?.[key]
+        || generatedCopy[lang]?.[key]
         || copy[lang][key]
         || sharedCopy[lang][key]
         || (alias ? generatedCopy[lang]?.[alias] || copy[lang][alias] || sharedCopy[lang][alias] : "")
@@ -234,7 +284,7 @@ function applyLanguage(lang: LanguageCode) {
     if (!input.dataset.i18nOriginalPlaceholder) input.dataset.i18nOriginalPlaceholder = original;
     const translated = lang === "en"
       ? original
-      : generatedCopy[lang]?.[key] || copy[lang][key] || sharedCopy[lang][key] || original;
+      : enhancementCopy[lang]?.[key] || generatedCopy[lang]?.[key] || copy[lang][key] || sharedCopy[lang][key] || original;
     if (input.placeholder !== translated) input.placeholder = translated;
   });
 }

@@ -1,5 +1,27 @@
+import type { Metadata } from "next";
 import Link from "next/link";
 import { ArrowIcon, CategoryGrid, Footer, Header, ProductGrid, SearchBox } from "./components";
+
+export const metadata: Metadata = {
+  title: "Superbuy Spreadsheet Link Checker & Live Product Index 2026",
+  description: "Verify current Superbuy spreadsheet destinations, browse the live product index and recheck listing, option and seller details before ordering.",
+  alternates: { canonical: "/" },
+  robots: { index: true, follow: true },
+  openGraph: {
+    title: "Superbuy Spreadsheet Link Checker & Live Product Index 2026",
+    description: "Check current product destinations before ordering, then use practical QC, warehouse and shipping guides.",
+    type: "website",
+    url: "/",
+    siteName: "Superbuy Spreadsheet Link Checker",
+    images: [{ url: "/og.png", width: 1200, height: 630, alt: "Superbuy spreadsheet link checker and live product index" }],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Superbuy Spreadsheet Link Checker & Live Product Index 2026",
+    description: "Check current product destinations before ordering.",
+    images: ["/og.png"],
+  },
+};
 
 const guideCards = [
   { title: "How to use the spreadsheet", copy: "From product discovery to a checked order link.", href: "/how-to-use/", label: "Getting started" },
@@ -15,14 +37,27 @@ const articleCards = [
 ];
 
 export default function Home() {
+  const websiteSchema = {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    name: "Superbuy Spreadsheet Link Checker",
+    url: "https://spreadsheet-superbuys.com/",
+    description: "An independent link-verification index and buyer guide.",
+    potentialAction: {
+      "@type": "SearchAction",
+      target: "https://cnfansge.com/search.html?keywords={search_term_string}&channelid=2&method=1",
+      "query-input": "required name=search_term_string",
+    },
+  };
   return (
     <div className="site-shell">
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(websiteSchema) }} />
       <Header />
       <main>
         <section className="hero wrap">
-          <span className="hero-label" data-i18n="updated">Independent product index · Updated 25 August 2026</span>
-          <h1 data-i18n="title">Superbuy spreadsheet. Simple to browse.</h1>
-          <p className="hero-lede" data-i18n="intro">Find products by category, open the current listing and check practical buyer notes before placing an order.</p>
+          <span className="hero-label" data-i18n="updated">Independent link verification index · Checked 25 August 2026</span>
+          <h1 data-i18n="title">Verify Superbuy spreadsheet links before ordering.</h1>
+          <p className="hero-lede" data-i18n="intro">Browse by category, open the current destination and recheck the listing, available options and seller details before placing an order.</p>
           <SearchBox />
           <div className="hero-links">
             <a href="https://cnfansge.com/AllProducts/" target="_blank" rel="noopener noreferrer"><span data-i18n="all">View all products</span> <ArrowIcon /></a>

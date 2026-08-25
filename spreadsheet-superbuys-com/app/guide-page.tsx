@@ -11,6 +11,13 @@ export type GuideSource = {
   label: string;
 };
 
+const guideVisuals: Record<string, { title: string; steps: string[] }> = {
+  howPage: { title: "A safer spreadsheet workflow", steps: ["Open the index", "Verify the live listing", "Save the selected option", "Compare warehouse evidence", "Submit the parcel"] },
+  qcPage: { title: "Use QC photos to answer visible questions", steps: ["Saved order", "Warehouse photos", "Visible comparison", "Targeted follow-up", "Accept or resolve"] },
+  shippingPage: { title: "Build the shipping estimate in layers", steps: ["Item and local delivery", "Packed weight and volume", "Route estimate", "Shipping deposit", "Carrier-confirmed total"] },
+  warehousePage: { title: "Use the storage window as a decision timeline", steps: ["Item arrives", "Inspect evidence", "Resolve discrepancies", "Plan consolidation", "Submit before deadline"] },
+};
+
 export function GuidePage({
   eyebrow,
   title,
@@ -44,9 +51,21 @@ export function GuidePage({
     datePublished: "2026-08-25",
     dateModified: "2026-08-25",
     author: { "@type": "Organization", name: "Superbuy Spreadsheet Editorial" },
-    publisher: { "@type": "Organization", name: "Superbuy Spreadsheet" },
+    image: ["https://spreadsheet-superbuys.com/og.png"],
+    publisher: {
+      "@type": "Organization",
+      name: "Spreadsheet Superbuys Editorial",
+      url: "https://spreadsheet-superbuys.com/",
+      logo: {
+        "@type": "ImageObject",
+        url: "https://spreadsheet-superbuys.com/superbuy-logo.png",
+        width: 726,
+        height: 142,
+      },
+    },
     mainEntityOfPage: pageUrl,
   };
+  const visual = guideVisuals[pageKey];
   return (
     <div className="site-shell">
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }} />
@@ -66,6 +85,10 @@ export function GuidePage({
           </aside>
           <article className="article-body">
             <div className="truth-note"><b data-i18n="verificationTitle">Verification note</b><p data-i18n="verificationCopy">Service details below are based on Superbuy’s public English guidance. Product links and availability are checked separately in the linked catalog. Neither source should be treated as a permanent price or availability guarantee.</p></div>
+            <figure className="article-visual" aria-labelledby={`${pageKey}-visual-title`}>
+              <figcaption id={`${pageKey}-visual-title`} data-i18n={`${pageKey}VisualTitle`}>{visual.title}</figcaption>
+              <div>{visual.steps.map((step, index) => <div className="visual-step" key={step}><span>0{index + 1}</span><b data-i18n={`${pageKey}VisualStep${index + 1}`}>{step}</b></div>)}</div>
+            </figure>
             <section className="article-takeaways" aria-labelledby="key-takeaways">
               <span className="section-no" data-i18n="quickAnswer">QUICK ANSWER</span>
               <h2 id="key-takeaways" data-i18n="keyTakeaways">Key takeaways</h2>
