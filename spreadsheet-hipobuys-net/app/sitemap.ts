@@ -1,5 +1,6 @@
 import type { MetadataRoute } from "next";
 import { articles } from "./article-data";
+export const dynamic = "force-static";
 export default function sitemap(): MetadataRoute.Sitemap {
   const base="https://spreadsheet-hipobuys.net";
   const staticPages=["/","/spreadsheet/","/qc/","/shipping/","/guides/","/articles/","/faq/"];
