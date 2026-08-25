@@ -37,7 +37,7 @@ export default async function ArticlePage({ params }: { params: Promise<{ slug: 
     image: article.image ? [article.image] : undefined
   };
 
-  return <GuideLayout kicker={article.kicker} title={article.title} intro={article.summary}>
+  return <GuideLayout path={`/articles/${article.slug}/`} kicker={article.kicker} title={article.title} intro={article.summary}>
     <article className="long-article">
       <div className="article-meta"><span>Published {article.published}</span><span>Updated {article.updated}</span><span>{article.readTime}</span><span>Independent guide</span></div>
       <div className="article-layout">

@@ -4,13 +4,13 @@ import GuideLayout from "../components/GuideLayout";
 import { articles } from "../article-data";
 
 export const metadata: Metadata = {
-  title: "Hipobuy Articles: Spreadsheet, QC & Shipping Guides",
-  description: "Evidence-led Hipobuy articles covering spreadsheet research, warehouse QC photos, shipping cost, storage and practical buyer decisions.",
+  title: "Hipobuy Order Reconciliation Articles",
+  description: "Evidence-led Hipobuy articles about spreadsheet-to-order handoffs, warehouse discrepancies, item identity and parcel mapping.",
   alternates: { canonical: "/articles/" }
 };
 
 export default function ArticlesPage() {
-  return <GuideLayout kicker="Evidence-led buyer library" title="Hipobuy articles built around real decisions." intro="Long-form guides based on current official platform information, clearly separated from estimates, community reports and changing seller details.">
+  return <GuideLayout path="/articles/" kicker="Evidence-led buyer library" title="Hipobuy articles built around real decisions." intro="Long-form guides based on current official platform information, clearly separated from estimates, community reports and changing seller details.">
     <section className="article-hub">
       <div className="article-hub-intro"><p className="section-kicker">Published guides</p><h2>Start with the workflow, then go deeper.</h2><p>The first three articles follow the order a buyer actually makes decisions: find the listing, inspect the warehouse evidence, then calculate the delivered cost.</p></div>
       <div className="article-card-grid">{articles.map((article, index) => <article className="article-card" key={article.slug}>

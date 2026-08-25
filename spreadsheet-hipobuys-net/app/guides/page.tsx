@@ -2,9 +2,9 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import GuideLayout from "../components/GuideLayout";
 
-export const metadata: Metadata = { title: "Hipobuy Guides: Buying, QC, Storage & Shipping", description: "Practical Hipobuy guides covering source-page checks, warehouse QC photos, parcel consolidation, shipping lines and buyer risk.", alternates: { canonical: "/guides/" } };
+export const metadata: Metadata = { title: "Hipobuy Order Reconciliation Guides", description: "Evidence-led Hipobuy guides for source-to-order handoffs, warehouse intake discrepancies, QC clarification and item-to-parcel records.", alternates: { canonical: "/guides/" } };
 
-export default function GuidesPage() { return <GuideLayout kicker="Buyer library" title="Guides organized around real decisions." intro="No invented delivery promises, guaranteed quality claims or recycled sneaker news. Each guide explains a specific decision and identifies what must be checked again on the live platform.">
+export default function GuidesPage() { return <GuideLayout path="/guides/" kicker="Buyer library" title="Guides organized around real decisions." intro="No invented delivery promises, guaranteed quality claims or recycled sneaker news. Each guide explains a specific decision and identifies what must be checked again on the live platform.">
   <section className="formula-card"><div><p className="section-kicker">Research baseline · 25 August 2026</p><h2>What Hipobuy’s current public pages confirm</h2></div><p>The official app descriptions name Taobao and 1688 purchasing, 90 days of free storage, international shipping to more than 200 countries, professional buyers advertised as available 24/7 and a community hub. The app landing page promotes QC-photo search and displays PayPal, Klarna, Visa, Mastercard and JCB. Every guide below separates those platform statements from changing seller details and individual user experience.</p></section>
   <section className="guide-cards">{[
     ["Start here","How the shopping-agent workflow works","Understand source marketplace → purchasing → warehouse → QC → parcel → international delivery.","/spreadsheet/"],

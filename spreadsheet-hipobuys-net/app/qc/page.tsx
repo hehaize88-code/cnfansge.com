@@ -1,9 +1,9 @@
 import type { Metadata } from "next";
 import GuideLayout from "../components/GuideLayout";
 
-export const metadata: Metadata = { title: "Hipobuy QC Photos: Warehouse Inspection Checklist", description: "Use this Hipobuy QC photo checklist to inspect shape, measurements, stitching, labels, color and visible defects before shipping.", alternates: { canonical: "/qc/" } };
+export const metadata: Metadata = { title: "Hipobuy Warehouse QC Checklist: Order-Match Evidence", description: "Use a Hipobuy warehouse QC checklist to reconcile the received item with the submitted color, size, model, quantity and saved source evidence.", alternates: { canonical: "/qc/" } };
 
-export default function QCPage() { return <GuideLayout kicker="Warehouse decision" title="QC photos are evidence—not a quality guarantee." intro="Hipobuy’s app landing page promotes finding products and viewing QC photos before purchase. Use those images as visual evidence, not as a certification of materials, fit or long-term performance." accent="lime">
+export default function QCPage() { return <GuideLayout path="/qc/" kicker="Warehouse decision" title="QC photos are evidence—not a quality guarantee." intro="Hipobuy’s app landing page promotes finding products and viewing QC photos before purchase. Use those images as visual evidence, not as a certification of materials, fit or long-term performance." accent="lime">
   <section className="formula-card"><div><p className="section-kicker">Official feature, practical limit</p><h2>“View QC photos first” helps discovery—but the decision still belongs to the buyer.</h2></div><p>Hipobuy publicly positions QC imagery as part of product search. The official pages do not promise that every listing has the same number of images, every angle is covered or every hidden defect can be detected. Save the selected listing and compare it with the exact warehouse record for your order.</p></section>
   <section className="qc-board"><div className="qc-board-head"><p className="section-kicker">Eight-point check</p><h2>Read the photo set in order</h2></div><div className="qc-grid">{[
     ["01","Order match","Confirm color, size, version and quantity against the order record."],

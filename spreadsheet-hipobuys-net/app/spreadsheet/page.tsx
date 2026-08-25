@@ -1,14 +1,31 @@
 import type { Metadata } from "next";
 import GuideLayout from "../components/GuideLayout";
+import { products } from "../data";
 
-export const metadata: Metadata = { title: "Hipobuy Spreadsheet: How to Search Product Finds", description: "Learn how to search a Hipobuy spreadsheet, validate source listings and move from a product find to a warehouse QC decision.", alternates: { canonical: "/spreadsheet/" } };
+export const metadata: Metadata = { title: "Hipobuy Spreadsheet Order Record: Source-to-Warehouse Checks", description: "Use a Hipobuy spreadsheet order record to preserve source, variant and item identity evidence through order submission and warehouse intake.", alternates: { canonical: "/spreadsheet/" } };
 
 const categoryLinks = [
   ["Shoes", "https://cnfansge.com/shoes/"], ["Hoodies", "https://cnfansge.com/hoodies-sweaters/"], ["T-Shirts", "https://cnfansge.com/t-shirts/"], ["Jackets", "https://cnfansge.com/jackets/"], ["Pants & Shorts", "https://cnfansge.com/pants-shorts/"], ["Headwear", "https://cnfansge.com/headwear/"], ["Accessories", "https://cnfansge.com/accessories/"], ["Jerseys", "https://cnfansge.com/jersey/"], ["Electronics", "https://cnfansge.com/electronics/"], ["Other Stuff", "https://cnfansge.com/other-stuff/"]
 ];
 
-export default function SpreadsheetPage() { return <GuideLayout kicker="Product discovery" title="How to use a Hipobuy spreadsheet without buying blind." intro="A spreadsheet is a discovery index, not proof of quality. Use it to find a source listing quickly, then verify the live page and warehouse evidence before making the next decision.">
+export default function SpreadsheetPage() {
+  const itemListSchema = {
+    "@context": "https://schema.org",
+    "@type": "ItemList",
+    name: "Hipobuy spreadsheet source records",
+    numberOfItems: products.length,
+    itemListElement: products.map((product, index) => ({
+      "@type": "ListItem",
+      position: index + 1,
+      name: product.name,
+      url: product.url,
+    })),
+  };
+
+  return <GuideLayout path="/spreadsheet/" kicker="Order evidence record" title="Keep the source-to-order handoff traceable." intro="Use the spreadsheet as the first evidence record: preserve the source URL, selected option and item identity, then reconcile them with the submitted order and warehouse intake.">
   <section className="content-split"><div className="sticky-title"><span>01</span><h2>Start with the source</h2><p>The displayed card is only a snapshot. Product variants, price, availability and seller terms can change.</p></div><div className="prose"><h3>What the official service actually confirms</h3><p>Hipobuy’s current Apple App Store and Google Play descriptions say the service helps international users purchase from Chinese marketplaces including Taobao and 1688, hold purchases in a warehouse and arrange international shipping. The listings advertise professional buyers available around the clock, 90 days of free storage and delivery coverage to more than 200 countries. Those are platform statements—not a guarantee that every source listing, warehouse request or route is available for every order.</p><p>The separate Hipobuy app landing page promotes searching products with QC photos and displays PayPal, Klarna, Visa, Mastercard and JCB. A spreadsheet can therefore support the discovery stage, but the decisive information still comes from the live listing, the order record, the warehouse evidence and the shipping options shown for the actual parcel.</p><h3>The four checks that matter</h3><ol><li><strong>Open the exact listing.</strong> Confirm that the title, photos and available variants still describe the item you intended to find.</li><li><strong>Read the options carefully.</strong> A low headline price may represent the cheapest color, size or accessory—not the version shown in the main image.</li><li><strong>Check domestic delivery.</strong> Seller-to-warehouse shipping and dispatch time affect both cost and how quickly warehouse evidence can become available.</li><li><strong>Save the source reference.</strong> Keep the listing URL and your chosen variant together so you can compare them with the warehouse record.</li></ol><div className="callout"><b>Directory rule</b><p>A product row is a lead to investigate, not an endorsement of the seller or item. Official platform claims were checked on 25 August 2026; live terms can change.</p></div></div></section>
   <section className="category-directory"><div className="section-heading"><div><p className="section-kicker">Browse routes</p><h2>Explore by category</h2></div><p>Every category opens the matching collection on the main product index.</p></div><div className="route-grid">{categoryLinks.map(([name,url],index)=><a href={url} key={name}><span>{String(index+1).padStart(2,"0")}</span><strong>{name}</strong><b>↗</b></a>)}</div></section>
   <section className="content-split reverse"><div className="sticky-title"><span>02</span><h2>Move from find to QC</h2><p>The most useful spreadsheet workflow continues after the warehouse receives the item.</p></div><div className="prose"><h3>A practical decision sequence</h3><div className="timeline"><div><b>Find</b><p>Use search and category filters to locate relevant source pages.</p></div><div><b>Verify</b><p>Confirm listing details, variants, seller photos and current terms.</p></div><div><b>Order</b><p>Submit the source page through the shopping-agent workflow and keep the order record.</p></div><div><b>Inspect</b><p>Compare warehouse QC photos with the saved listing, selected option and measurements.</p></div><div><b>Ship</b><p>Choose a line only after checking restrictions, packed parcel data and landed cost.</p></div></div><h3>Before accepting a spreadsheet row</h3><ul><li>Confirm the source page is still live and the intended option can actually be selected.</li><li>Save the current size chart, seller images, domestic delivery and dispatch information.</li><li>Estimate a realistic delivered-cost range before committing to the item.</li><li>Decide which measurements or close-ups you will need from the warehouse.</li><li>Remove the item from your shortlist if the listing becomes unclear or the economics no longer work.</li></ul><a className="solid-button" href="https://cnfansge.com/AllProducts/">Browse product finds ↗</a></div></section>
-  </GuideLayout>; }
+    <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(itemListSchema) }} />
+  </GuideLayout>;
+}
