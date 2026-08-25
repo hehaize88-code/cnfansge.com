@@ -5,7 +5,7 @@ export const metadata: Metadata = {
   metadataBase: new URL("https://spreadsheet-superbuy.net"),
   title: {
     default: "Superbuy Spreadsheet 2026 | Checked Links & QC Notes",
-    template: "%s | Superbuy Spreadsheet 2026",
+    template: "%s",
   },
   description: "Browse a regularly checked Superbuy spreadsheet with current product links, USD price references, categories, QC notes and practical parcel guidance.",
   alternates: { canonical: "/" },
@@ -15,8 +15,9 @@ export const metadata: Metadata = {
     description: "Verified links. Clear QC checks. Smarter hauls.",
     type: "website",
     url: "/",
+    images: [{ url: "/superbuy-logo.png", width: 756, height: 120, alt: "Superbuy spreadsheet research" }],
   },
-  twitter: { card: "summary", title: "Superbuy Spreadsheet 2026", description: "Verified links. Clear QC checks. Smarter hauls." },
+  twitter: { card: "summary_large_image", title: "Superbuy Spreadsheet 2026", description: "Verified links. Clear QC checks. Smarter hauls.", images: ["/superbuy-logo.png"] },
   icons: { icon: "/favicon.svg" },
 };
 
