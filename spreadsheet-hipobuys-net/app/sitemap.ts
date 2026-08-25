@@ -1,11 +1,27 @@
 import type { MetadataRoute } from "next";
 import { articles } from "./article-data";
+
 export const dynamic = "force-static";
+
 export default function sitemap(): MetadataRoute.Sitemap {
-  const base="https://spreadsheet-hipobuys.net";
-  const staticPages=["/","/spreadsheet/","/qc/","/shipping/","/guides/","/articles/","/faq/"];
+  const base = "https://spreadsheet-hipobuys.net";
+  const staticPages = [
+    { path: "/", changeFrequency: "weekly" as const, priority: 1 },
+    { path: "/spreadsheet/", changeFrequency: "weekly" as const, priority: 0.8 },
+    { path: "/qc/", changeFrequency: "monthly" as const, priority: 0.8 },
+    { path: "/shipping/", changeFrequency: "monthly" as const, priority: 0.8 },
+    { path: "/guides/", changeFrequency: "weekly" as const, priority: 0.8 },
+    { path: "/articles/", changeFrequency: "weekly" as const, priority: 0.8 },
+    { path: "/faq/", changeFrequency: "monthly" as const, priority: 0.8 },
+  ];
+
   return [
-    ...staticPages.map((path,index)=>({url:`${base}${path}`,lastModified:new Date("2026-08-25"),changeFrequency:(index===0?"daily":"weekly") as "daily"|"weekly",priority:index===0?1:.8})),
-    ...articles.map((article)=>({url:`${base}/articles/${article.slug}/`,lastModified:new Date(article.updated),changeFrequency:"monthly" as const,priority:.75}))
+    ...staticPages.map(({ path, ...entry }) => ({ url: `${base}${path}`, ...entry })),
+    ...articles.map((article) => ({
+      url: `${base}/articles/${article.slug}/`,
+      lastModified: new Date(article.updated),
+      changeFrequency: "monthly" as const,
+      priority: 0.75,
+    })),
   ];
 }

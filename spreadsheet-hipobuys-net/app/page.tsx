@@ -38,9 +38,9 @@ export default function Home() {
 
     <section className="clean-hero">
       <div className="clean-hero-copy">
-        <p className="eyebrow"><span className="status-dot" /> Updated August 2026</p>
-        <h1>Hipobuy finds,<br/><em>made easier.</em></h1>
-        <p>Search a clean product index, open the exact source page, and use practical QC and shipping checks before you decide.</p>
+        <p className="eyebrow"><span className="status-dot" /> Independent order evidence guide</p>
+        <h1>Hipobuy orders,<br/><em>checked end to end.</em></h1>
+        <p>Start with a spreadsheet row, preserve the selected item evidence, and reconcile each handoff from order submission to warehouse intake and parcel mapping.</p>
       </div>
       <div className="clean-search-card">
         <p className="search-label">Search the spreadsheet</p>
@@ -93,6 +93,6 @@ export default function Home() {
       <div className="faq-list"><details open><summary>Is this the official Hipobuy website?</summary><p>No. This is an independent product-discovery and education site. Hipobuy’s official domain is hipobuy.com.</p></details><details><summary>Are prices and availability guaranteed?</summary><p>No. Every card is a snapshot. Open the exact listing and confirm current price, variants and availability before paying.</p></details><details><summary>Can QC photos guarantee quality?</summary><p>No. They can show visible condition and measurements, but cannot prove comfort, material composition or long-term durability.</p></details><Link className="faq-more" href="/faq/">View all questions →</Link></div>
     </section>
 
-    <footer><div className="footer-brand"><img src="/hipobuy-logo.png" alt="Hipobuy" width="180" height="43"/><p>Independent Hipobuy spreadsheet guide.</p></div><div className="footer-links"><Link href="/spreadsheet/">Spreadsheet</Link><Link href="/qc/">QC</Link><Link href="/shipping/">Shipping</Link><Link href="/guides/">Guides</Link><Link href="/articles/">Articles</Link><Link href="/faq/">FAQ</Link></div><p className="footer-note">Not affiliated with Hipobuy, Taobao, 1688 or any product brand. Purchases are completed on third-party platforms. © 2026 Hipo Index.</p></footer>
+    <footer><div className="footer-brand"><img src="/hipobuy-logo.png" alt="Hipobuy" width="180" height="43"/><p>Independent Hipobuy order reconciliation and spreadsheet guide.</p></div><div className="footer-links"><Link href="/spreadsheet/">Spreadsheet</Link><Link href="/qc/">QC</Link><Link href="/shipping/">Shipping</Link><Link href="/guides/">Guides</Link><Link href="/articles/">Articles</Link><Link href="/faq/">FAQ</Link></div><p className="footer-note">Not affiliated with Hipobuy, Taobao, 1688 or any product brand. Purchases are completed on third-party platforms. © 2026 Hipo Index.</p></footer>
   </main>;
 }
