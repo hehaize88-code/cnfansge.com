@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Script from "next/script";
 import "./globals.css";
 import LanguageSwitcher from "./components/LanguageSwitcher";
 
@@ -30,6 +31,8 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
   return (
     <html lang="en">
       <body>
+        <Script src="https://www.googletagmanager.com/gtag/js?id=G-LXGCJ9PL8W" strategy="afterInteractive" />
+        <Script id="google-analytics" strategy="afterInteractive">{`window.dataLayer = window.dataLayer || []; function gtag(){dataLayer.push(arguments);} gtag('js', new Date()); gtag('config', 'G-LXGCJ9PL8W');`}</Script>
         <header className="siteHeader">
           <div className="wrap headerInner">
             <a href="/" className="brand" aria-label="Hipobuy spreadsheet home">
