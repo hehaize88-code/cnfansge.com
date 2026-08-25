@@ -20,6 +20,10 @@ export default {
 
     if (request.method !== "GET") return env.ASSETS.fetch(request);
 
+    // Query-string pages are not canonical index pages. Serve them normally,
+    // but do not create separate HTML edge-cache entries for tracking/search parameters.
+    if (url.search) return env.ASSETS.fetch(request);
+
     const cacheUrl = new URL(request.url);
     cacheUrl.hostname = CANONICAL_HOST;
     cacheUrl.searchParams.set("__edge_version", CACHE_VERSION);
