@@ -1,4 +1,11 @@
 import PageHero from "../components/PageHero";
+import { pageMetadata } from "../seo";
+
+export const metadata = pageMetadata({
+  title: "Hipobuy Spreadsheet Search | Filter Checked Product Rows",
+  description: "Filter checked Hipobuy spreadsheet rows, open exact product pages and separate discovery from listing and QC verification.",
+  path: "/spreadsheet/",
+});
 import ProductExplorer from "../components/ProductExplorer";
 
 export default function SpreadsheetPage() {

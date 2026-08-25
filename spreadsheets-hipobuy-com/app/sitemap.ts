@@ -3,24 +3,22 @@ import type { MetadataRoute } from "next";
 export const dynamic = "force-static";
 
 const routes = [
-  "",
-  "/spreadsheet/",
-  "/finds/",
-  "/articles/",
-  "/articles/use-hipobuy-spreadsheet/",
-  "/guide/",
-  "/qc/",
-  "/shipping/",
-  "/faq/",
-];
+  { path: "/", lastModified: "2026-08-25", priority: 1, changeFrequency: "daily" },
+  { path: "/spreadsheet/", lastModified: "2026-08-25", priority: 0.8, changeFrequency: "weekly" },
+  { path: "/finds/", lastModified: "2026-08-25", priority: 0.7, changeFrequency: "weekly" },
+  { path: "/articles/", lastModified: "2026-08-25", priority: 0.8, changeFrequency: "weekly" },
+  { path: "/articles/use-hipobuy-spreadsheet/", lastModified: "2026-08-25", priority: 0.8, changeFrequency: "monthly" },
+  { path: "/guide/", lastModified: "2026-08-25", priority: 0.7, changeFrequency: "monthly" },
+  { path: "/qc/", lastModified: "2026-08-25", priority: 0.7, changeFrequency: "monthly" },
+  { path: "/shipping/", lastModified: "2026-08-25", priority: 0.7, changeFrequency: "monthly" },
+  { path: "/faq/", lastModified: "2026-08-25", priority: 0.7, changeFrequency: "monthly" },
+] as const;
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const lastModified = new Date("2026-08-25T00:00:00.000Z");
-
-  return routes.map((route, index) => ({
-    url: `https://spreadsheets-hipobuy.com${route || "/"}`,
-    lastModified,
-    changeFrequency: index === 0 ? "daily" : "weekly",
-    priority: index === 0 ? 1 : route.startsWith("/articles/") ? 0.8 : 0.7,
+  return routes.map((route) => ({
+    url: `https://spreadsheets-hipobuy.com${route.path}`,
+    lastModified: new Date(`${route.lastModified}T00:00:00.000Z`),
+    changeFrequency: route.changeFrequency,
+    priority: route.priority,
   }));
 }

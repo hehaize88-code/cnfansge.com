@@ -1,16 +1,17 @@
-import type { Metadata } from "next";
+import JsonLd from "../../components/JsonLd";
+import { absoluteUrl, breadcrumbSchema, pageMetadata, SITE_URL } from "../../seo";
 
-export const metadata: Metadata = {
+export const metadata = pageMetadata({
   title: "How to Use a Hipobuy Spreadsheet Without Buying Blind",
   description: "A practical, source-checked method for Hipobuy product discovery, listing options, QC photos and parcel decisions.",
-  robots: { index: false, follow: false },
-  openGraph: { title: "How to Use a Hipobuy Spreadsheet Without Buying Blind", description: "A source-checked Hipobuy buying workflow from shortlist to parcel.", type: "article", images: [{ url: "/official/hipobuy-how-to-use.jpg", width: 1024, height: 500, alt: "Official Hipobuy how-to-use app artwork" }] },
-  twitter: { card: "summary_large_image", title: "How to Use a Hipobuy Spreadsheet Without Buying Blind", description: "A source-checked Hipobuy buying workflow from shortlist to parcel.", images: ["/official/hipobuy-how-to-use.jpg"] },
-};
+  path: "/articles/use-hipobuy-spreadsheet/",
+  type: "article",
+  image: "/official/hipobuy-how-to-use.jpg",
+});
 
-export default function ArticlePage(){const schema={"@context":"https://schema.org","@type":"Article",headline:"How to Use a Hipobuy Spreadsheet Without Buying Blind",dateModified:"2026-08-25",author:{"@type":"Organization",name:"Spreadsheets Hipobuy"},description:"A practical method for checking Hipobuy product rows, listing options, QC photos and parcel decisions."};return <><script type="application/ld+json" dangerouslySetInnerHTML={{__html:JSON.stringify(schema)}}/><article className="articleBody wrap">
+export default function ArticlePage(){const schema=[breadcrumbSchema("How to Use a Hipobuy Spreadsheet Without Buying Blind","/articles/use-hipobuy-spreadsheet/"),{"@context":"https://schema.org","@type":"Article",headline:"How to Use a Hipobuy Spreadsheet Without Buying Blind",description:"A practical method for checking Hipobuy product rows, listing options, QC photos and parcel decisions.",datePublished:"2026-08-25",dateModified:"2026-08-25",mainEntityOfPage:absoluteUrl("/articles/use-hipobuy-spreadsheet/"),image:[absoluteUrl("/official/hipobuy-how-to-use.jpg")],author:{"@type":"Organization",name:"Hipobuy Spreadsheet",url:SITE_URL},publisher:{"@type":"Organization",name:"Hipobuy Spreadsheet",url:SITE_URL,logo:{"@type":"ImageObject",url:absoluteUrl("/hipobuy-logo.png")}}}];return <><JsonLd data={schema}/><article className="articleBody wrap">
   <header><span className="kicker">BUYER GUIDE · 12 MIN READ</span><h1>How to use a Hipobuy spreadsheet without buying blind</h1><p className="standfirst">A spreadsheet is excellent for discovery. It is not proof of stock, sizing, seller reliability or product quality. This workflow shows how to use each row as the start of a decision rather than the end of one.</p><div className="byline"><span>Editorial desk</span><span>Checked 25 August 2026</span><span>Independent guide</span></div></header>
-  <figure className="articleLeadMedia"><img src="/official/hipobuy-how-to-use.jpg" alt="Official Hipobuy how-to-use app artwork" /><figcaption>Official Hipobuy promotional artwork. Interface details and offers can change; always verify the live app.</figcaption></figure>
+  <figure className="articleLeadMedia"><img src="/official/hipobuy-how-to-use.jpg" alt="Official Hipobuy how-to-use app artwork" width={1024} height={500} decoding="async" /><figcaption>Official Hipobuy promotional artwork. Interface details and offers can change; always verify the live app.</figcaption></figure>
   <div className="articleLayout"><aside><b>IN THIS GUIDE</b><a href="#shortlist">1. Build a shortlist</a><a href="#listing">2. Read the live listing</a><a href="#price">3. Separate the costs</a><a href="#qc">4. Use QC evidence</a><a href="#parcel">5. Plan the parcel</a><a href="#decision">6. Record the decision</a><a href="#research">Research basis</a></aside><div className="prose">
     <p>A well-organised Hipobuy spreadsheet removes one of the most frustrating parts of buying from Chinese marketplaces: product discovery. Instead of searching several platforms with translated keywords and opening dozens of seller pages, you can start with categories, product images and direct links. That speed is useful, but it can also encourage an expensive mistake—treating a convenient row as if it were a product recommendation.</p>
     <p>The correct mental model is simple: a spreadsheet row is a bookmark with context. It may tell you what the item looked like when added, the observed source price and the category. It cannot tell you whether the listing is unchanged today, whether your chosen size will fit, what the warehouse receives or how much the completed parcel will cost. Each of those questions needs a separate check.</p>

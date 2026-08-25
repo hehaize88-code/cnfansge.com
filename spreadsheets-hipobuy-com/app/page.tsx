@@ -1,4 +1,29 @@
 import ProductExplorer from "./components/ProductExplorer";
+import JsonLd from "./components/JsonLd";
+import { pageMetadata, SITE_URL } from "./seo";
+
+export const metadata = pageMetadata({
+  title: "Hipobuy Spreadsheet Search 2026 | Checked Finds & Guides",
+  description: "Search checked Hipobuy spreadsheet rows, open exact product pages and use practical query, QC and parcel-planning guides.",
+  path: "/",
+});
+
+const homeSchema = [
+  {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    name: "Hipobuy Spreadsheet",
+    url: SITE_URL,
+    description: "Independent Hipobuy spreadsheet search and buyer-education resource.",
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    name: "Hipobuy Spreadsheet",
+    url: SITE_URL,
+    logo: `${SITE_URL}/hipobuy-logo.png`,
+  },
+];
 
 const categories = [
   ["Shoes", "58+", "https://cnfansge.com/shoes/"],
@@ -21,6 +46,7 @@ const checks = [
 export default function Home() {
   return (
     <>
+      <JsonLd data={homeSchema} />
       <section className="hero wrap">
         <div className="heroCopy">
           <div className="eyebrow"><span /> Independent Hipobuy product research</div>
@@ -38,7 +64,7 @@ export default function Home() {
           </form>
           <div className="trustLine">
             <span><b>5</b> listings checked today</span>
-            <span><b>10</b> focused categories</span>
+            <span><b>8</b> focused categories</span>
             <span><b>0</b> competitor links</span>
           </div>
         </div>

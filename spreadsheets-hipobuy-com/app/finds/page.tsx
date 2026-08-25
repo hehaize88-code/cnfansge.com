@@ -1,4 +1,11 @@
 import PageHero from "../components/PageHero";
+import { pageMetadata } from "../seo";
+
+export const metadata = pageMetadata({
+  title: "Hipobuy Product Search by Category | Shoes, Hoodies & More",
+  description: "Search Hipobuy finds by category and learn which visible details to check for shoes, hoodies, jerseys, jackets and accessories.",
+  path: "/finds/",
+});
 
 const links = [["Shoes","Shape, sizing and sole checks","https://cnfansge.com/shoes/"],["Hoodies","Fabric weight, print and measurement checks","https://cnfansge.com/hoodies-sweaters/"],["T-Shirts","Length, chest width and print placement","https://cnfansge.com/t-shirts/"],["Jerseys","Badges, namesets and sizing notes","https://cnfansge.com/jersey/"],["Jackets","Hardware, lining and construction checks","https://cnfansge.com/jackets/"],["Accessories","Materials, dimensions and detail checks","https://cnfansge.com/accessories/"],["Headwear","Shape, embroidery and circumference checks","https://cnfansge.com/headwear/"],["Electronics","Compatibility, plug and battery restrictions","https://cnfansge.com/electronics/"]];
 export default function FindsPage(){return <><PageHero eyebrow="CATEGORY ROUTES" title="Browse by what needs checking." copy="Each category has different failure points. Start with the product type, then use the matching verification checklist."/><section className="wrap findGrid">{links.map(([name,copy,url],i)=><a href={url} target="_blank" rel="noreferrer" key={name}><span>{String(i+1).padStart(2,"0")}</span><h2>{name}</h2><p>{copy}</p><b>Open category ↗</b></a>)}</section></>}

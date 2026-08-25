@@ -30,7 +30,7 @@ export default function ProductExplorer() {
         {filtered.map((p, i) => (
           <article className="productCard" key={p.url}>
             <a href={p.url} target="_blank" rel="noreferrer" className="productImage">
-              <img src={p.image} alt={p.name} loading={i > 1 ? "lazy" : "eager"} />
+              <img src={p.image} alt={p.name} width={600} height={600} loading="lazy" decoding="async" />
               <span>LINK CHECKED</span>
             </a>
             <div className="productMeta"><span>{p.category}</span><small><span>Checked</span> <span>{p.checked}</span></small></div>
