@@ -1,0 +1,3 @@
+export default function PageHero({ eyebrow, title, copy }: { eyebrow: string; title: string; copy: string }) {
+  return <section className="subHero wrap"><span className="kicker">{eyebrow}</span><h1>{title}</h1><p>{copy}</p></section>;
+}
