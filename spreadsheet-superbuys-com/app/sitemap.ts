@@ -1,5 +1,7 @@
 import type { MetadataRoute } from "next";
 
+export const dynamic = "force-static";
+
 export default function sitemap(): MetadataRoute.Sitemap {
   const base = "https://spreadsheet-superbuys.com";
   return ["", "/spreadsheet/", "/articles/", "/how-to-use/", "/qc-photos/", "/shipping-cost/", "/warehouse-storage/", "/faq/"].map((path, index) => ({
