@@ -8,6 +8,7 @@ Independent LitBuy spreadsheet, product-find, QC, shipping and review guide.
 - Build command: `npm run build`
 - Build output directory: `out`
 - Production branch: `main`
+- Cloudflare Pages URL: `https://litbuys-store.pages.dev`
 
 The project exports every route as static HTML for Cloudflare Pages, including
 the product detail pages, article pages, sitemap, robots file and real 404 page.
