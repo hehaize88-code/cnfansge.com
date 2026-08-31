@@ -1,4 +1,6 @@
 import { longArticle, longArticleSlug, type Topic } from "./topics";
+import { articleTranslations } from "./article-translations";
+import type { Lang } from "./site-data";
 
 export type ResearchArticle = Topic & {
   slug: string;
@@ -119,6 +121,15 @@ export const researchArticles: ResearchArticle[] = [
 
 export const articleSlugs = researchArticles.map((article) => article.slug);
 
-export function getArticle(slug: string) {
-  return researchArticles.find((article) => article.slug === slug);
+export function getArticle(slug: string, lang: Lang = "en") {
+  const article = researchArticles.find((item) => item.slug === slug);
+  if (!article || lang === "en") return article;
+  const translation = articleTranslations[lang][slug];
+  return translation ? { ...article, ...translation } : undefined;
+}
+
+export function getResearchArticles(lang: Lang) {
+  return researchArticles
+    .map((article) => getArticle(article.slug, lang))
+    .filter((article): article is ResearchArticle => Boolean(article));
 }

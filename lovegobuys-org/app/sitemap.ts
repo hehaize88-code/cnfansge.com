@@ -10,11 +10,11 @@ export default function sitemap(): MetadataRoute.Sitemap {
     changeFrequency: route === "/articles" ? "weekly" as const : "monthly" as const,
     priority: route === "" ? 1 : route === "/finds" || route === "/categories" ? 0.9 : 0.75,
   })));
-  const articles = articleSlugs.map((slug) => ({
-    url: `https://lovegobuys.org/en/articles/${slug}`,
+  const articles = languages.flatMap((lang) => articleSlugs.map((slug) => ({
+    url: `https://lovegobuys.org/${lang}/articles/${slug}`,
     lastModified: new Date("2026-08-31"),
     changeFrequency: "weekly" as const,
     priority: 0.8,
-  }));
+  })));
   return [...localized, ...articles];
 }

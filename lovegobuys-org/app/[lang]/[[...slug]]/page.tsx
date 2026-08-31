@@ -7,7 +7,7 @@ import { SiteFooter } from "@/components/site-footer";
 import { DocumentLanguage } from "@/components/document-language";
 import { categories, copy, guideCards, isLang, languages, products, sectionSlugs, type Lang } from "@/lib/site-data";
 import { topics, type Topic } from "@/lib/topics";
-import { articleSlugs, getArticle, researchArticles } from "@/lib/articles";
+import { articleSlugs, getArticle, getResearchArticles } from "@/lib/articles";
 import { researchFacts, type PageKind } from "@/lib/research-facts";
 
 type PageProps = { params: Promise<{ lang: string; slug?: string[] }> };
@@ -31,20 +31,18 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
   const lang = rawLang;
   const c = copy[lang];
   const key = slug[0] ?? "home";
-  const article = slug[0] === "articles" && slug[1] && slug.length === 2 ? getArticle(slug[1]) : null;
+  const article = slug[0] === "articles" && slug[1] && slug.length === 2 ? getArticle(slug[1], lang) : null;
   const title = article?.title ?? (key === "home" ? "LoveGoBuy Spreadsheet 2026 — Finds, QC & Shipping" : c.nav[sectionSlugs.indexOf(key)] || "LoveGoBuy Guide");
   const description = article?.intro ?? (key === "home" ? c.heroText : topics[key as keyof typeof topics]?.[lang]?.intro ?? c.guidesText);
-  const canonical = article ? absolutePath("en", slug) : absolutePath(lang, slug);
+  const canonical = absolutePath(lang, slug);
   return {
     title,
     description,
     alternates: {
       canonical,
-      languages: article
-        ? { en: absolutePath("en", slug), "x-default": absolutePath("en", slug) }
-        : Object.fromEntries(languages.map((item) => [item, absolutePath(item, slug)]).concat([["x-default", absolutePath("en", slug)]])),
+      languages: Object.fromEntries(languages.map((item) => [item, absolutePath(item, slug)]).concat([["x-default", absolutePath("en", slug)]])),
     },
-    robots: { index: article ? lang === "en" : true, follow: true },
+    robots: { index: true, follow: true },
   };
 }
 
@@ -81,9 +79,10 @@ function ResearchStrip({ lang, kind }: { lang: Lang; kind: PageKind }) {
 
 function ArticleCards({ lang, limit }: { lang: Lang; limit?: number }) {
   const c = copy[lang];
+  const articles = getResearchArticles(lang);
   return (
     <div className="article-card-grid">
-      {researchArticles.slice(0, limit).map((article, index) => (
+      {articles.slice(0, limit).map((article, index) => (
         <Link key={article.slug} href={`/${lang}/articles/${article.slug}`} className={index === 0 ? "article-card featured" : "article-card"}>
           <span>{String(index + 1).padStart(2, "0")} / {article.readingTime}</span>
           <h3>{article.title}</h3>
@@ -315,11 +314,11 @@ function ArticlesPage({ lang }: { lang: Lang }) {
 }
 
 function ArticlePage({ article, lang }: { article: NonNullable<ReturnType<typeof getArticle>>; lang: Lang }) {
-  const schema = { "@context": "https://schema.org", "@type": "Article", headline: article.title, description: article.intro, datePublished: article.published, dateModified: article.modified, inLanguage: "en", mainEntityOfPage: absolutePath("en", ["articles", article.slug]), author: { "@type": "Organization", name: "LoveGoBuy Field Guide" } };
+  const schema = { "@context": "https://schema.org", "@type": "Article", headline: article.title, description: article.intro, datePublished: article.published, dateModified: article.modified, inLanguage: lang, mainEntityOfPage: absolutePath(lang, ["articles", article.slug]), author: { "@type": "Organization", name: "LoveGoBuy Field Guide" } };
   return (
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schema).replace(/</g, "\\u003c") }} />
-      <TopicPage lang={lang} topic={article} kind="article" sourceBasis={article.sourceBasis} contentLang="en" />
+      <TopicPage lang={lang} topic={article} kind="article" sourceBasis={article.sourceBasis} contentLang={lang} />
     </>
   );
 }
@@ -336,7 +335,7 @@ export default async function LocalizedPage({ params }: PageProps) {
   else if (key === "faq" && slug.length === 1) content = <FaqPage lang={lang} />;
   else if (key === "articles" && slug.length === 1) content = <ArticlesPage lang={lang} />;
   else if (key === "articles" && slug[1] && slug.length === 2) {
-    const article = getArticle(slug[1]);
+    const article = getArticle(slug[1], lang);
     if (!article) notFound();
     content = <ArticlePage article={article} lang={lang} />;
   }

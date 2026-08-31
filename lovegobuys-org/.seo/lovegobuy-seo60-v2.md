@@ -39,11 +39,11 @@ Everything present before LoveGoBuy C01 is an immutable baseline, including:
 - Home, Finds, Categories, Guide, QC, Shipping, FAQ, Articles, product cards, product details, filtering, and search modules
 - All product records, names, prices, weights, categories, images, USD presentation, CTA copy, form actions, and outbound targets
 - The existing EN/DE/ES/FR/IT site-language architecture, navigation, same-route switching, HTML language behavior, and language-state behavior
-- The current English-only long-form article routing and article presentation; do not create empty, partial, or artificial translated article routes
+- The complete EN/DE/ES/FR/IT long-form article architecture, including same-slug localized detail routes, localized article cards, self-referencing canonicals, hreflang, and localized structured data; never reuse an English body on a non-English route or publish an empty or partial translation
 - robots, sitemap, HTTPS, apex/www behavior, canonical, hreflang, Open Graph, structured data, assets, Worker configuration, and real 404 behavior
 - Every existing link target, especially the approved https://cnfansge.com product, category, search, and CTA destinations
 
-The following five existing English articles are baseline content. They do not count toward the LoveGoBuy cursor and must not be rewritten, retitled, repurposed, or cannibalized:
+The following five existing English articles and their complete DE/ES/FR/IT translations are baseline content. They do not count toward the LoveGoBuy cursor and must not be rewritten, retitled, repurposed, reduced, or cannibalized:
 
 1. `lovegobuy-spreadsheet-research-workflow`: spreadsheet maintenance, product records, link checks, price observations, shortlist workflow, and spreadsheet research
 2. `how-to-buy-with-lovegobuy-2026`: broad start-to-finish buying workflow from source search through warehouse, QC, and parcel creation
@@ -123,7 +123,7 @@ Independent public sources may be used only when genuinely necessary, current, i
 - Research-source URLs belong in the private run report; do not add new outbound official, review, competitor-agent, or affiliate links to public pages
 - Do not expose C labels, automation language, prompts, internal reports, or the raw main-site domain in public content
 
-Preserve the current language architecture exactly. The site has EN/DE/ES/FR/IT static routes while its long-form article routes are currently English-only. New C articles must follow that current English-only article architecture unless the latest main branch already contains an approved complete multilingual article system. Do not create empty translations, partial translations, fake hreflang, or language reduction. Do not change language navigation, route behavior, or existing static localized content.
+Preserve the current complete EN/DE/ES/FR/IT language architecture exactly. Every new C article must publish a complete DE/ES/FR/IT translation alongside the 1,200–1,800-word English original, using the same slug and the same section, paragraph, checklist, factual, CTA, and link structure. Translate the title, introduction, deck, source basis, every heading, every paragraph, and every list item. Do not shorten, summarize, omit fields, reuse the English body on a non-English route, create partial translations, or publish fake hreflang. All five locale versions must use self-referencing canonicals, mutual hreflang, localized Article metadata, and the existing same-route language switch. If any locale is incomplete or fails production verification, retain the cycle and do not publish or advance.
 
 Images are optional. Add one to three only when they materially improve evidence or process understanding and rights are clear. Host and compress them locally inside `lovegobuys-org/`, with accurate alt, width, height, caption, source record, and lazy loading outside the hero. Never use hotlinks, private orders, addresses, payment records, tracking numbers, support chats, avatars, customer-private images, or unclear copyrighted material.
 
@@ -148,7 +148,7 @@ Before publication validate:
 - Internal links and Articles discoverability
 - Sitemap and robots
 - Canonical, Open Graph, Article or BlogPosting, and BreadcrumbList
-- Preservation of current language architecture without fake hreflang
+- Complete EN/DE/ES/FR/IT article bodies with matching section, paragraph, checklist, CTA, and link structure; self-referencing canonicals and mutual hreflang without English-body reuse
 - Image rights, size, alt, dimensions, captions, and loading behavior when images are used
 - Successful production build using the repository's existing Vinext/Cloudflare Worker setup
 - Real random-path 404 and no horizontal overflow on mobile
@@ -159,10 +159,10 @@ After pushing main, use only the repository's already configured deployment path
 Then verify on https://lovegobuys.org/:
 
 - New article returns 200 at its final canonical URL
-- The Articles entry exposes it according to the existing architecture
+- Each EN/DE/ES/FR/IT Articles entry exposes its fully translated version at the same localized slug
 - Home and all baseline routes still work
 - Sitemap and robots are current
-- All five baseline articles remain unchanged and reachable
+- All five English baseline articles remain unchanged, and their complete DE/ES/FR/IT translations remain reachable
 - Finds, Categories, Guide, QC, Shipping, FAQ, product details, product/category/search/CTA destinations, CSS, JS, structured data, and existing language routes still work
 - Canonical and current language metadata remain correct
 - HTTP status, mobile rendering, and a random nonexistent path returning a real 404
