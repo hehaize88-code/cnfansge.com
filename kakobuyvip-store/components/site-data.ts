@@ -27,9 +27,9 @@ export const copy: Record<Lang, Copy> = {
   en: {
     note: "Independent product research hub · Updated August 2026",
     nav: ["Spreadsheet", "Finds", "QC guide", "Shipping", "Articles", "FAQ"],
-    eyebrow: "The cleaner way to research a haul",
-    title: ["Find it.", "Check it.", "Route it."],
-    intro: "A focused Kakobuy spreadsheet experience built around visual finds, practical QC checks and direct product routes—without a slow, endless sheet.",
+    eyebrow: "Latest Kakobuy finds and category updates",
+    title: ["Kakobuy finds.", "Checked routes.", "Current categories."],
+    intro: "A focused Kakobuy product-route directory for recently added finds, category updates, matching images and practical checks before you open the current destination.",
     search: "Search a product, category or style",
     searchButton: "Search the full catalog",
     browse: "Browse spreadsheet",
@@ -49,9 +49,9 @@ export const copy: Record<Lang, Copy> = {
   de: {
     note: "Unabhängiger Produkt-Research-Hub · Aktualisiert August 2026",
     nav: ["Tabelle", "Funde", "QC-Ratgeber", "Versand", "Artikel", "FAQ"],
-    eyebrow: "Hauls übersichtlicher recherchieren",
-    title: ["Finden.", "Prüfen.", "Öffnen."],
-    intro: "Eine fokussierte Kakobuy-Spreadsheet-Erfahrung mit visuellen Funden, praktischen QC-Prüfungen und direkten Produktrouten – ohne endlose, langsame Tabelle.",
+    eyebrow: "Aktuelle Kakobuy-Funde und Kategorie-Updates",
+    title: ["Kakobuy-Funde.", "Geprüfte Routen.", "Aktuelle Kategorien."],
+    intro: "Ein fokussiertes Kakobuy-Verzeichnis für neue Funde, Kategorie-Updates, passende Bilder und praktische Prüfungen vor dem Öffnen des aktuellen Ziels.",
     search: "Produkt, Kategorie oder Stil suchen",
     searchButton: "Gesamten Katalog suchen",
     browse: "Spreadsheet öffnen",
@@ -71,9 +71,9 @@ export const copy: Record<Lang, Copy> = {
   es: {
     note: "Centro independiente de investigación · Actualizado en agosto de 2026",
     nav: ["Hoja", "Hallazgos", "Guía QC", "Envío", "Artículos", "FAQ"],
-    eyebrow: "Una forma más clara de preparar tu haul",
-    title: ["Encuentra.", "Comprueba.", "Abre."],
-    intro: "Una experiencia Kakobuy Spreadsheet centrada en hallazgos visuales, controles QC útiles y rutas directas, sin una hoja lenta e interminable.",
+    eyebrow: "Últimos hallazgos Kakobuy y categorías actualizadas",
+    title: ["Hallazgos Kakobuy.", "Rutas revisadas.", "Categorías actuales."],
+    intro: "Un directorio Kakobuy centrado en hallazgos recientes, actualizaciones de categorías, imágenes correspondientes y controles prácticos antes de abrir el destino actual.",
     search: "Busca un producto, categoría o estilo",
     searchButton: "Buscar en todo el catálogo",
     browse: "Ver spreadsheet",
@@ -93,9 +93,9 @@ export const copy: Record<Lang, Copy> = {
   fr: {
     note: "Centre de recherche indépendant · Mis à jour en août 2026",
     nav: ["Tableur", "Sélections", "Guide QC", "Livraison", "Articles", "FAQ"],
-    eyebrow: "Une façon plus claire de préparer un haul",
-    title: ["Trouvez.", "Vérifiez.", "Ouvrez."],
-    intro: "Une expérience Kakobuy Spreadsheet centrée sur les sélections visuelles, les contrôles QC utiles et les liens directs, sans tableur lent et interminable.",
+    eyebrow: "Dernières sélections Kakobuy et catégories actualisées",
+    title: ["Sélections Kakobuy.", "Liens vérifiés.", "Catégories actuelles."],
+    intro: "Un répertoire Kakobuy centré sur les sélections récentes, les mises à jour de catégories, les images correspondantes et les contrôles utiles avant d’ouvrir la destination actuelle.",
     search: "Rechercher un produit, une catégorie ou un style",
     searchButton: "Rechercher dans le catalogue",
     browse: "Voir le spreadsheet",
@@ -115,9 +115,9 @@ export const copy: Record<Lang, Copy> = {
   it: {
     note: "Hub di ricerca indipendente · Aggiornato ad agosto 2026",
     nav: ["Spreadsheet", "Prodotti", "Guida QC", "Spedizione", "Articoli", "FAQ"],
-    eyebrow: "Un modo più chiaro per preparare il tuo haul",
-    title: ["Trova.", "Controlla.", "Apri."],
-    intro: "Un'esperienza Kakobuy Spreadsheet basata su prodotti visivi, controlli QC pratici e percorsi diretti, senza un foglio lento e infinito.",
+    eyebrow: "Ultimi prodotti Kakobuy e categorie aggiornate",
+    title: ["Prodotti Kakobuy.", "Percorsi controllati.", "Categorie attuali."],
+    intro: "Una directory Kakobuy per prodotti aggiunti di recente, aggiornamenti di categoria, immagini corrispondenti e controlli pratici prima di aprire la destinazione attuale.",
     search: "Cerca un prodotto, categoria o stile",
     searchButton: "Cerca nel catalogo",
     browse: "Apri lo spreadsheet",
@@ -137,6 +137,20 @@ export const copy: Record<Lang, Copy> = {
 };
 
 export const navHref = ["/spreadsheet", "/finds", "/qc", "/shipping", "/articles", "/faq"];
+
+export const languages: Lang[] = ["en", "de", "es", "fr", "it"];
+
+export function stripLanguagePrefix(pathname: string) {
+  const match = pathname.match(/^\/(de|es|fr|it)(?=\/|$)/);
+  if (!match) return pathname || "/";
+  return pathname.slice(match[0].length) || "/";
+}
+
+export function localizedPath(pathname: string, lang: Lang) {
+  const cleanPath = stripLanguagePrefix(pathname).replace(/\/$/, "") || "/";
+  if (lang === "en") return cleanPath;
+  return cleanPath === "/" ? `/${lang}` : `/${lang}${cleanPath}`;
+}
 
 export const categories = [
   ["Shoes", "Footwear", "https://cnfansge.com/shoes/"],

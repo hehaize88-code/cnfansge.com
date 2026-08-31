@@ -1,7 +1,8 @@
 "use client";
 
-import { FormEvent, useEffect, useMemo, useState } from "react";
+import { FormEvent, useEffect, useMemo } from "react";
 import Link from "next/link";
+import { usePathname, useRouter } from "next/navigation";
 import {
   ArrowUpRight,
   Check,
@@ -20,15 +21,17 @@ import {
   SelectTrigger,
   SelectValue,
 } from "@/components/ui/select";
-import { copy, Lang, navHref } from "./site-data";
+import { copy, Lang, localizedPath, navHref } from "./site-data";
 import { articlesByLang, categoriesByLang, interfaceText, productsByLang } from "./localized-data";
 
 export function Mark() {
   return <img className="brand-logo" src="/kakobuy-logo.png" alt="Kakobuy" width="642" height="162" />;
 }
 
-export function KakobuyHome() {
-  const [lang, setLang] = useState<Lang>("en");
+export function KakobuyHome({ initialLang = "en" }: { initialLang?: Lang }) {
+  const lang = initialLang;
+  const pathname = usePathname();
+  const router = useRouter();
   const t = useMemo(() => copy[lang], [lang]);
   const ui = interfaceText[lang];
   const categories = categoriesByLang[lang];
@@ -36,17 +39,13 @@ export function KakobuyHome() {
   const articles = articlesByLang[lang];
 
   useEffect(() => {
-    const saved = window.localStorage.getItem("kv-language") as Lang | null;
-    if (saved && copy[saved]) {
-      setLang(saved);
-      document.documentElement.lang = saved;
-    }
-  }, []);
+    document.documentElement.lang = lang;
+    window.localStorage.setItem("kv-language", lang);
+  }, [lang]);
 
   const changeLanguage = (value: Lang) => {
-    setLang(value);
     window.localStorage.setItem("kv-language", value);
-    document.documentElement.lang = value;
+    router.push(localizedPath(pathname, value));
   };
 
   const submitSearch = (event: FormEvent<HTMLFormElement>) => {
@@ -62,9 +61,9 @@ export function KakobuyHome() {
     <main className="site-shell">
       <div className="top-note"><span>{t.note}</span><span>EN · DE · ES · FR · IT</span></div>
       <header className="site-header">
-        <Link href="/" className="brand" aria-label={ui.homeAria}><Mark /></Link>
+        <Link href={localizedPath("/", lang)} className="brand" aria-label={ui.homeAria}><Mark /></Link>
         <nav aria-label={ui.primaryNavigation}>
-          {t.nav.map((item, index) => <Link key={item} href={navHref[index]}>{item}</Link>)}
+          {t.nav.map((item, index) => <Link key={item} href={localizedPath(navHref[index], lang)}>{item}</Link>)}
         </nav>
         <Select value={lang} onValueChange={(value) => changeLanguage(value as Lang)}>
           <SelectTrigger className="language-select" aria-label={ui.selectLanguage}><SelectValue /></SelectTrigger>
@@ -85,8 +84,8 @@ export function KakobuyHome() {
             <button type="submit">{t.searchButton}<ArrowUpRight size={18} /></button>
           </form>
           <div className="hero-actions">
-            <Link href="/spreadsheet" className="primary-link">{t.browse}<ChevronRight size={18} /></Link>
-            <Link href="/guide" className="text-link">{t.guide}<ArrowUpRight size={17} /></Link>
+            <Link href={localizedPath("/spreadsheet", lang)} className="primary-link">{t.browse}<ChevronRight size={18} /></Link>
+            <Link href={localizedPath("/guide", lang)} className="text-link">{t.guide}<ArrowUpRight size={17} /></Link>
           </div>
         </div>
         <div className="hero-manifest" aria-label={ui.researchWorkflow}>
@@ -137,9 +136,9 @@ export function KakobuyHome() {
       </section>
 
       <section className="content-section article-section">
-        <div className="section-heading"><div><p>{t.articles[0]}</p><h2>{t.articles[1]}</h2></div><Link href="/articles" className="text-link">{ui.allArticles} <ArrowUpRight size={17} /></Link></div>
+        <div className="section-heading"><div><p>{t.articles[0]}</p><h2>{t.articles[1]}</h2></div><Link href={localizedPath("/articles", lang)} className="text-link">{ui.allArticles} <ArrowUpRight size={17} /></Link></div>
         <div className="article-grid">
-          {articles.map(([tag, title, text, href], index) => <Link href={href} className={`article-card article-${index + 1}`} key={title}><small>{tag} / {ui.longFormGuide}</small><h3>{title}</h3><p>{text}</p><span>{t.read}<ArrowUpRight size={17} /></span></Link>)}
+          {articles.map(([tag, title, text, href], index) => <Link href={localizedPath(href, lang)} className={`article-card article-${index + 1}`} key={title}><small>{tag} / {ui.longFormGuide}</small><h3>{title}</h3><p>{text}</p><span>{t.read}<ArrowUpRight size={17} /></span></Link>)}
         </div>
       </section>
 
@@ -148,7 +147,7 @@ export function KakobuyHome() {
         <div className="faq-grid">{t.faq.map(([question, answer], index) => <article key={question}><span>0{index + 1}</span><h3>{question}</h3><p>{answer}</p></article>)}</div>
       </section>
 
-      <footer><div className="brand"><Mark /></div><p>{t.footer}</p><div><Link href="/spreadsheet">{ui.footerLinks[0]}</Link><Link href="/qc">{ui.footerLinks[1]}</Link><Link href="/shipping">{ui.footerLinks[2]}</Link><Link href="/articles">{ui.footerLinks[3]}</Link></div></footer>
+      <footer><div className="brand"><Mark /></div><p>{t.footer}</p><div><Link href={localizedPath("/spreadsheet", lang)}>{ui.footerLinks[0]}</Link><Link href={localizedPath("/qc", lang)}>{ui.footerLinks[1]}</Link><Link href={localizedPath("/shipping", lang)}>{ui.footerLinks[2]}</Link><Link href={localizedPath("/articles", lang)}>{ui.footerLinks[3]}</Link></div></footer>
     </main>
   );
 }

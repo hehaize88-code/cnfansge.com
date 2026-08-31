@@ -4,11 +4,9 @@ export const dynamic = "force-static";
 
 export default function robots(): MetadataRoute.Robots {
   return {
-    rules: {
-      userAgent: "*",
-      allow: "/",
-    },
+    rules: { userAgent: "*", allow: "/" },
     sitemap: "https://kakobuyvip.store/sitemap.xml",
     host: "https://kakobuyvip.store",
   };
 }
+

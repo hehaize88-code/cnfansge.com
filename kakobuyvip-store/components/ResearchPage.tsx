@@ -1,7 +1,8 @@
 "use client";
 
-import { useEffect, useMemo, useState } from "react";
+import { useEffect, useMemo } from "react";
 import Link from "next/link";
+import { usePathname, useRouter } from "next/navigation";
 import { ArrowLeft, ArrowUpRight, Check } from "lucide-react";
 import {
   Select,
@@ -11,7 +12,9 @@ import {
   SelectValue,
 } from "@/components/ui/select";
 import { Mark } from "./KakobuyHome";
-import { copy, Lang, navHref } from "./site-data";
+import { JsonLd } from "./JsonLd";
+import { baseUrl } from "./seo-data";
+import { copy, Lang, localizedPath, navHref } from "./site-data";
 import { articlesByLang, categoriesByLang, interfaceText, productsByLang } from "./localized-data";
 
 export type SectionKey = "spreadsheet" | "finds" | "guide" | "qc" | "shipping" | "faq" | "articles";
@@ -20,13 +23,13 @@ type PageText = { eyebrow: string; title: string; intro: string; cards: string[]
 
 const pages: Record<Lang, Record<SectionKey, PageText>> = {
   en: {
-    spreadsheet: { eyebrow: "Spreadsheet / Visual index", title: "A spreadsheet built like a decision tool.", intro: "Browse focused categories, compare real product imagery and open a direct route only when the item deserves a closer look.", cards: [["Focused categories", "Ten intent-led sections replace a crowded wall of rows."], ["Visual evidence", "Product imagery stays visible while you compare routes."], ["USD references", "Reference conversions make rough comparison faster."], ["Current destinations", "Each card opens its current product or category destination."]], checklist: ["Choose one category", "Shortlist three items", "Compare images and measurements", "Verify the live destination"] },
-    finds: { eyebrow: "Finds / Current routes", title: "Fresh finds with fewer blind spots.", intro: "A compact selection of recently added routes, presented for scanning rather than hype. Final availability belongs to the destination page.", cards: [["New routes", "Recently added products appear first."], ["Useful labels", "Category and reference price remain visible."], ["No fake certainty", "The site does not label an item verified without evidence."], ["Direct details", "Every product card opens the matching detail route."]], checklist: ["Scan the latest set", "Open the matching detail page", "Review size and options", "Re-check before proceeding"] },
+    spreadsheet: { eyebrow: "Kakobuy Spreadsheet / Category index", title: "Kakobuy Spreadsheet: a category and route index.", intro: "Use the stable index to browse focused categories, compare matching product imagery and understand each route field before opening the current destination.", cards: [["Category-first index", "Ten intent-led sections create a stable catalog map rather than a date-sorted update feed."], ["Consistent route fields", "Image, category, USD reference and destination stay visible for every comparison."], ["USD references", "Reference conversions make rough comparison faster but are not live checkout quotes."], ["Current destinations", "Each row-like card opens the current product or category destination for final verification."]], checklist: ["Choose one category", "Read the route fields", "Compare images and measurements", "Verify the live destination"] },
+    finds: { eyebrow: "Kakobuy Finds / Latest routes", title: "Kakobuy Finds: recently added product routes.", intro: "Scan the latest route set by recency, category and reference price. Unlike the stable Spreadsheet index, this page is the update feed for recent additions.", cards: [["Latest additions", "Recently added products appear as a current route set rather than a permanent category index."], ["Useful labels", "Category and reference price remain visible so new routes can be screened quickly."], ["Evidence boundary", "A new route is not called verified unless the visible product and destination data support that claim."], ["Live re-check", "Every find opens the matching detail destination, where price, options and availability must be checked again."]], checklist: ["Scan the latest set", "Open the matching detail page", "Review size and options", "Re-check before proceeding"] },
     guide: { eyebrow: "Guide / First-order workflow", title: "A calmer way from product link to parcel.", intro: "Separate discovery, inspection and shipping research. Most preventable mistakes happen when those decisions are rushed into one click.", cards: [["1. Discover", "Use one category or a short product keyword. Avoid building a huge cart before you understand the process."], ["2. Compare", "Look at similar routes, size charts and visible materials. A listing image is not a QC photo."], ["3. Inspect", "When warehouse images are available, review every angle and request clarification when something is hidden."], ["4. Plan", "Research likely parcel weight, packaging and destination-specific options before submitting anything."]], checklist: ["Start with a small shortlist", "Save the exact product route", "Check return conditions early", "Keep screenshots of important details"] },
     qc: { eyebrow: "QC / Evidence checklist", title: "Read evidence, not marketing.", intro: "QC photos can reveal condition and dimensions, but they cannot prove every material claim or long-term quality. Use a fixed inspection order.", cards: [["Shape first", "Compare left and right sides, overall proportions and whether the item sits naturally."], ["Details second", "Zoom into seams, edges, prints, hardware and areas most likely to show defects."], ["Measure third", "Use the ruler or measurement image instead of trusting a size label alone."], ["Decide last", "Separate a harmless variation from a defect that would affect use, fit or appearance."]], checklist: ["Count all expected pieces", "Check front, back and side angles", "Compare measured dimensions", "Save evidence before deciding"] },
     shipping: { eyebrow: "Shipping / Parcel planning", title: "Weight is only half the parcel story.", intro: "International cost depends on the selected line, destination, parcel dimensions, actual weight and service rules. Treat estimates as estimates.", cards: [["Actual weight", "The scale weight of the packed parcel and its contents."], ["Volumetric weight", "A dimensional calculation that can matter when the box is large for its mass."], ["Packaging", "Boxes, protection and removed packaging can change both weight and dimensions."], ["Route conditions", "Limits, handling rules and available lines vary by destination and time."]], checklist: ["Estimate item and packaging weight", "Check dimensions, not weight alone", "Review current line restrictions", "Leave room for estimate changes"] },
     faq: { eyebrow: "FAQ / Independent answers", title: "Straight answers before the first click.", intro: "Clear boundaries make a research site more useful. This directory helps you discover and compare; it does not sell, inspect or ship products.", cards: copy.en.faq, checklist: ["Independent directory", "No order processing", "No payment collection", "Live details must be rechecked"] },
-    articles: { eyebrow: "Articles / Research library", title: "Field notes for better decisions.", intro: "Practical, evidence-led guides on QC, sizing, shipping math and beginner workflows—written to solve one problem at a time.", cards: [["QC", "Photo-reading checklists and decision frameworks."], ["Shipping", "Weight, dimensions, packing and estimate context."], ["Workflow", "Shortlists, link checks and pre-order research."], ["Updates", "Platform facts are rechecked before publication."]], checklist: ["One search intent per article", "Official facts separated from estimates", "Clear next-step checklist", "No invented guarantees"] },
+    articles: { eyebrow: "Kakobuy Articles / Research library", title: "Kakobuy guides for product, QC and parcel decisions.", intro: "Practical, evidence-led guides on QC, sizing, shipping math and beginner workflows—each built around one buyer decision.", cards: [["QC decisions", "Photo-reading checklists and category-specific inspection frameworks."], ["Shipping decisions", "Weight, dimensions, packing and estimate context before parcel submission."], ["Order workflow", "Shortlists, link checks, warehouse stages and after-sale preparation."], ["Source updates", "Official facts and community figures are identified with a re-check date."]], checklist: ["Choose the question you need answered", "Separate official facts from estimates", "Follow the practical checklist", "Re-check live terms before acting"] },
   },
   de: {
     spreadsheet: { eyebrow: "Spreadsheet / Visueller Index", title: "Ein Spreadsheet als Entscheidungshilfe.", intro: "Gezielte Kategorien durchsuchen, echte Produktbilder vergleichen und eine direkte Route erst öffnen, wenn der Artikel genauer geprüft werden soll.", cards: [["Klare Kategorien", "Zehn Bereiche ersetzen eine überladene Zeilenwand."], ["Visuelle Hinweise", "Produktbilder bleiben beim Vergleich sichtbar."], ["USD-Referenzen", "Ungefähre Umrechnungen erleichtern den Vergleich."], ["Aktuelle Ziele", "Jede Karte öffnet die aktuelle Produkt- oder Kategorieseite."]], checklist: ["Eine Kategorie wählen", "Drei Artikel vormerken", "Bilder und Maße vergleichen", "Live-Ziel prüfen"] },
@@ -35,7 +38,7 @@ const pages: Record<Lang, Record<SectionKey, PageText>> = {
     qc: { eyebrow: "QC / Prüfliste", title: "Belege lesen, nicht Werbung.", intro: "QC-Fotos zeigen Zustand und Maße, beweisen aber nicht jede Materialaussage oder Langzeitqualität. Immer in fester Reihenfolge prüfen.", cards: [["Erst Form", "Symmetrie, Proportionen und natürlichen Sitz vergleichen."], ["Dann Details", "Nähte, Kanten, Drucke, Hardware und mögliche Defekte vergrößern."], ["Dann Maße", "Messfoto statt Größenetikett verwenden."], ["Zuletzt entscheiden", "Normale Abweichung von relevantem Defekt trennen."]], checklist: ["Alle Teile zählen", "Vorder-, Rück- und Seitenansicht", "Maße vergleichen", "Belege speichern"] },
     shipping: { eyebrow: "Versand / Paketplanung", title: "Gewicht ist nur die halbe Paketgeschichte.", intro: "Kosten hängen von Linie, Ziel, Maßen, tatsächlichem Gewicht und Regeln ab. Eine Schätzung bleibt eine Schätzung.", cards: [["Echtgewicht", "Waagengewicht des gepackten Pakets."], ["Volumengewicht", "Maßberechnung bei großen, leichten Kartons."], ["Verpackung", "Schutz und entfernte Boxen ändern Maße und Gewicht."], ["Routenregeln", "Grenzen und verfügbare Linien variieren nach Ziel und Zeit."]], checklist: ["Artikel plus Verpackung schätzen", "Maße mitprüfen", "Aktuelle Beschränkungen lesen", "Spielraum einplanen"] },
     faq: { eyebrow: "FAQ / Unabhängige Antworten", title: "Klare Antworten vor dem ersten Klick.", intro: "Dieses Verzeichnis unterstützt Suche und Vergleich; es verkauft, prüft und versendet keine Produkte.", cards: copy.de.faq, checklist: ["Unabhängiges Verzeichnis", "Keine Bestellabwicklung", "Keine Zahlungsannahme", "Live-Daten erneut prüfen"] },
-    articles: { eyebrow: "Artikel / Recherchebibliothek", title: "Praxisnotizen für bessere Entscheidungen.", intro: "Nützliche Leitfäden zu QC, Größen, Versandberechnung und Einsteigerabläufen – jeweils für ein konkretes Problem.", cards: [["QC", "Fotoprüflisten und Entscheidungshilfen."], ["Versand", "Gewicht, Maße, Verpackung und Schätzungen."], ["Ablauf", "Auswahl, Linkprüfung und Vorabrecherche."], ["Updates", "Plattformfakten werden vor Veröffentlichung geprüft."]], checklist: ["Eine Suchabsicht pro Artikel", "Fakten von Schätzungen trennen", "Klare Prüfliste", "Keine erfundenen Garantien"] },
+    articles: { eyebrow: "Kakobuy-Artikel / Recherchebibliothek", title: "Kakobuy-Ratgeber für Produkt-, QC- und Paketfragen.", intro: "Nützliche Leitfäden zu QC, Größen, Versandberechnung und Einsteigerabläufen – jeweils für eine konkrete Käuferentscheidung.", cards: [["QC-Entscheidungen", "Fotoprüflisten und kategoriespezifische Entscheidungshilfen."], ["Versandentscheidungen", "Gewicht, Maße, Verpackung und Schätzungen vor der Paketabgabe."], ["Bestellablauf", "Auswahl, Linkprüfung, Lagerstatus und Vorbereitung der Nachbetreuung."], ["Quellenstand", "Offizielle Fakten und Community-Zahlen erhalten ein Prüfdatum."]], checklist: ["Die passende Käuferfrage wählen", "Fakten von Schätzungen trennen", "Der praktischen Prüfliste folgen", "Live-Bedingungen vorab prüfen"] },
   },
   es: {} as Record<SectionKey, PageText>, fr: {} as Record<SectionKey, PageText>, it: {} as Record<SectionKey, PageText>,
 };
@@ -98,10 +101,10 @@ const facts: Record<Lang, Record<FactGroup, string[][]>> = {
       ["Customs uncertainty", "Customs rules, taxes and carrier events remain destination-specific and cannot be guaranteed by a static guide."],
     ],
     editorial: [
-      ["Official facts first", "Platform features and policy statements are checked against Kakobuy service and help pages before publication."],
+      ["Official facts first", "Platform features and policy statements are checked against dated Kakobuy service and help references."],
       ["Anecdotes labelled", "Trustpilot and Reddit experiences are identified as individual reports rather than platform-wide proof."],
-      ["Long-form answers", "Core English guides contain 1,200–1,800 words and answer one search intent without padding."],
-      ["Reader-facing content", "Articles contain practical checks, source boundaries and decisions—not internal prompts or publishing conversations."],
+      ["Problem-led guides", "Each guide answers one buyer question with practical checks, limitations and current-source context."],
+      ["Clear decision boundaries", "Articles explain what can be checked, what remains uncertain and which live detail must be confirmed next."],
     ],
   },
   de: {
@@ -109,61 +112,92 @@ const facts: Record<Lang, Record<FactGroup, string[][]>> = {
     service: [["Shopping-Agent","Kakobuy beschreibt sich als Einkaufsagent für Taobao und 1688."],["Lagerablauf","Produkte verschiedener Verkäufer können ins Lager gelangen und zusammen versendet werden."],["100 Tage Lagerung","Die offizielle Serviceseite nennt 100 Tage kostenlose Lagerung."],["Bedingte Rückgabe","Die 5-Tage-Garantie hängt von Grund, Verkäufer, Produkt und Nachweis ab."]],
     qc: [["Offizielle Aussage","Kakobuy nennt Prüfkriterien und Fotos beim Wareneingang."],["Sichtbare Belege","Fotos zeigen sichtbaren Zustand und Maße, beweisen aber nicht jede Material- oder Funktionsaussage."],["Entscheidung des Käufers","Fehlende wichtige Winkel vor internationalem Versand anfragen."],["Belege sichern","Listing, Variante und entscheidende Lagerbilder zusammen speichern."]],
     shipping: [["Offizieller Rechner","Kakobuy bietet einen Versandkostenrechner; aktuelle Paketdaten bleiben entscheidend."],["Kostenrahmen","Genannt werden Produkt, internationaler Versand, Verpackung und optionale Services."],["Keine Universalformel","Volumengewichtsregeln unterscheiden sich je aktueller Linie."],["Zoll bleibt variabel","Steuern, Zoll und Carrier-Ereignisse hängen vom Ziel ab."]],
-    editorial: [["Offizielle Fakten zuerst","Plattformangaben werden mit Kakobuy-Hilfe- und Serviceseiten geprüft."],["Erfahrungen markiert","Trustpilot- und Reddit-Berichte werden als Einzelfälle bezeichnet."],["Ausführliche Antworten","Englische Kernartikel umfassen 1.200–1.800 Wörter pro Suchintention."],["Inhalt für Leser","Keine internen Prompts oder Gespräche werden veröffentlicht."]],
+    editorial: [["Offizielle Fakten zuerst","Plattformangaben werden mit datierten Kakobuy-Hilfe- und Servicereferenzen geprüft."],["Erfahrungen markiert","Trustpilot- und Reddit-Berichte werden als Einzelfälle bezeichnet."],["Problembezogene Ratgeber","Jeder Ratgeber beantwortet eine Käuferfrage mit Prüfungen, Grenzen und aktuellem Quellenkontext."],["Klare Entscheidungsgrenzen","Artikel zeigen, was prüfbar ist, was unsicher bleibt und welches Live-Detail als Nächstes bestätigt werden muss."]],
   },
   es: {
     directory: [["Investigación, no inventario","El directorio organiza rutas actuales; precio, opciones y disponibilidad se comprueban en el destino."],["Imágenes correspondientes","Cada tarjeta usa la imagen vinculada al destino."],["USD orientativo","Los importes en USD ayudan a comparar, pero no son definitivos."],["Alcance independiente","No procesa pedidos, pagos, inspecciones ni envíos."]],
     service: [["Agente de compra","Kakobuy se describe como agente para Taobao y 1688."],["Flujo de almacén","Los productos de distintos vendedores pueden llegar al almacén y enviarse juntos."],["100 días","La página oficial anuncia 100 días de almacenamiento gratuito."],["Devolución condicional","La garantía de cinco días depende del motivo, vendedor, producto y pruebas."]],
     qc: [["Declaración oficial","Kakobuy indica que aplica criterios de inspección y toma fotos al recibir."],["Prueba visible","Las fotos ayudan con estado y medidas, no prueban todo material o función."],["Decisión del comprador","Pide ángulos críticos antes del envío internacional."],["Guardar pruebas","Conserva anuncio, variante y fotos decisivas."]],
     shipping: [["Estimador oficial","El estimador depende del destino, peso, dimensiones y línea actual."],["Marco de costes","La ayuda oficial menciona producto, transporte, embalaje y servicios opcionales."],["Sin fórmula universal","Las reglas de peso volumétrico cambian según la línea."],["Aduanas variables","Impuestos, aduanas y eventos del transportista dependen del destino."]],
-    editorial: [["Primero fuentes oficiales","Las funciones se comprueban con páginas de Kakobuy."],["Experiencias etiquetadas","Trustpilot y Reddit se presentan como casos individuales."],["Guías extensas","Los artículos ingleses tienen 1.200–1.800 palabras por intención."],["Contenido para lectores","No se publican instrucciones internas ni conversaciones."]],
+    editorial: [["Primero fuentes oficiales","Las funciones se comprueban con referencias Kakobuy fechadas."],["Experiencias etiquetadas","Trustpilot y Reddit se presentan como casos individuales."],["Guías por problema","Cada guía responde a una pregunta del comprador con controles, límites y contexto de fuentes actuales."],["Límites claros","Los artículos explican qué puede comprobarse, qué sigue incierto y qué dato en vivo debe confirmarse."]],
   },
   fr: {
     directory: [["Recherche, pas inventaire","Le répertoire organise des liens actuels; prix, options et disponibilité se vérifient à destination."],["Images correspondantes","Chaque carte utilise l’image liée à sa destination."],["USD indicatif","Les montants USD servent à comparer et ne sont pas définitifs."],["Périmètre indépendant","Aucune commande, paiement, inspection ou expédition n’est traité."]],
     service: [["Agent d’achat","Kakobuy se présente comme agent pour Taobao et 1688."],["Parcours entrepôt","Des achats de vendeurs différents peuvent entrer en entrepôt puis être regroupés."],["100 jours","La page officielle annonce 100 jours de stockage gratuit."],["Retour conditionnel","La garantie de cinq jours dépend du motif, du vendeur, du produit et des preuves."]],
     qc: [["Déclaration officielle","Kakobuy indique suivre des critères d’inspection et prendre des photos à réception."],["Preuve visible","Les photos aident pour l’état et les mesures, sans prouver toute matière ou fonction."],["Décision de l’acheteur","Demandez les angles importants avant l’expédition internationale."],["Conserver les preuves","Gardez annonce, variante et photos décisives."]],
     shipping: [["Estimateur officiel","L’estimation dépend de la destination, du poids, des dimensions et de la ligne."],["Cadre des coûts","L’aide mentionne produit, fret international, emballage et services optionnels."],["Pas de formule universelle","Les règles de poids volumétrique varient selon la ligne."],["Douane variable","Taxes, douane et événements transporteur dépendent de la destination."]],
-    editorial: [["Sources officielles d’abord","Les fonctions sont vérifiées sur les pages Kakobuy."],["Expériences signalées","Trustpilot et Reddit sont présentés comme témoignages individuels."],["Guides approfondis","Les articles anglais comptent 1 200 à 1 800 mots par intention."],["Contenu lecteur","Aucune consigne interne ni conversation n’est publiée."]],
+    editorial: [["Sources officielles d’abord","Les fonctions sont vérifiées avec des références Kakobuy datées."],["Expériences signalées","Trustpilot et Reddit sont présentés comme témoignages individuels."],["Guides par problème","Chaque guide répond à une question d’acheteur avec contrôles, limites et contexte de sources actuelles."],["Limites claires","Les articles expliquent ce qui est vérifiable, ce qui reste incertain et quel détail en direct confirmer."]],
   },
   it: {
     directory: [["Ricerca, non inventario","La directory organizza percorsi attuali; prezzo, opzioni e disponibilità si verificano a destinazione."],["Immagini corrispondenti","Ogni scheda usa l’immagine collegata alla destinazione."],["USD indicativo","Gli importi USD aiutano il confronto ma non sono definitivi."],["Ambito indipendente","Non gestisce ordini, pagamenti, controlli o spedizioni."]],
     service: [["Agente d’acquisto","Kakobuy si descrive come agente per Taobao e 1688."],["Flusso magazzino","Prodotti di venditori diversi possono arrivare in magazzino e partire insieme."],["100 giorni","La pagina ufficiale indica 100 giorni di deposito gratuito."],["Reso condizionale","La garanzia di cinque giorni dipende da motivo, venditore, prodotto e prove."]],
     qc: [["Dichiarazione ufficiale","Kakobuy afferma di applicare criteri di ispezione e scattare foto alla ricezione."],["Prova visibile","Le foto aiutano su stato e misure, non provano ogni materiale o funzione."],["Decisione dell’acquirente","Richiedi angoli importanti prima della spedizione internazionale."],["Salvare le prove","Conserva inserzione, variante e foto decisive."]],
     shipping: [["Stimatore ufficiale","La stima dipende da destinazione, peso, dimensioni e linea attuale."],["Quadro costi","L’aiuto ufficiale cita prodotto, trasporto internazionale, imballaggio e servizi opzionali."],["Nessuna formula universale","Le regole del peso volumetrico cambiano per linea."],["Dogana variabile","Tasse, dogana ed eventi del vettore dipendono dalla destinazione."]],
-    editorial: [["Prima le fonti ufficiali","Le funzioni sono verificate sulle pagine Kakobuy."],["Esperienze etichettate","Trustpilot e Reddit sono presentati come casi individuali."],["Guide approfondite","Gli articoli inglesi contano 1.200–1.800 parole per intento."],["Contenuto per lettori","Nessuna istruzione interna o conversazione viene pubblicata."]],
+    editorial: [["Prima le fonti ufficiali","Le funzioni sono verificate con riferimenti Kakobuy datati."],["Esperienze etichettate","Trustpilot e Reddit sono presentati come casi individuali."],["Guide per problema","Ogni guida risponde a una domanda dell’acquirente con controlli, limiti e fonti attuali."],["Limiti chiari","Gli articoli spiegano cosa è verificabile, cosa resta incerto e quale dato live confermare."]],
   },
 };
 
-export function ResearchPage({ section }: { section: SectionKey }) {
-  const [lang, setLang] = useState<Lang>("en");
+export function ResearchPage({ section, initialLang = "en" }: { section: SectionKey; initialLang?: Lang }) {
+  const lang = initialLang;
+  const pathname = usePathname();
+  const router = useRouter();
   useEffect(() => {
-    const saved = localStorage.getItem("kv-language") as Lang | null;
-    if (saved && copy[saved]) {
-      setLang(saved);
-      document.documentElement.lang = saved;
-    }
-  }, []);
+    localStorage.setItem("kv-language", lang);
+    document.documentElement.lang = lang;
+  }, [lang]);
   const t = useMemo(() => copy[lang], [lang]);
   const ui = interfaceText[lang];
   const categories = categoriesByLang[lang];
   const products = productsByLang[lang];
   const articles = articlesByLang[lang];
   const page = pages[lang][section];
+  const pageTitle = page.title.includes("Kakobuy") ? page.title : `Kakobuy · ${page.title}`;
   const pageFacts = facts[lang][factGroupBySection[section]];
-  const changeLanguage = (value: Lang) => { setLang(value); localStorage.setItem("kv-language", value); document.documentElement.lang = value; };
+  const changeLanguage = (value: Lang) => { localStorage.setItem("kv-language", value); router.push(localizedPath(pathname, value)); };
 
   const showProducts = section === "spreadsheet" || section === "finds";
   const showArticles = section === "articles";
   const showFaq = section === "faq";
+  const relatedIndexes: Partial<Record<SectionKey, number[]>> = { guide: [0], qc: [1], shipping: [2, 3] };
+  const relatedArticles = (relatedIndexes[section] ?? []).map((index) => articles[index]);
+  const canonicalPath = localizedPath(`/${section}`, lang);
+  const schemas: Record<string, unknown>[] = [
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      itemListElement: [
+        { "@type": "ListItem", position: 1, name: ui.home, item: `${baseUrl}${localizedPath("/", lang) === "/" ? "" : localizedPath("/", lang)}` },
+        { "@type": "ListItem", position: 2, name: pageTitle, item: `${baseUrl}${canonicalPath}` },
+      ],
+    },
+  ];
+  if (section === "spreadsheet" || section === "finds") {
+    const items = section === "spreadsheet" ? categories : products;
+    schemas.push({
+      "@context": "https://schema.org",
+      "@type": "ItemList",
+      name: pageTitle,
+      numberOfItems: items.length,
+      itemListElement: items.map((item, index) => ({ "@type": "ListItem", position: index + 1, name: item[0], url: item[item.length - 1] })),
+    });
+  }
+  if (section === "faq") {
+    schemas.push({
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      mainEntity: t.faq.map(([question, answer]) => ({ "@type": "Question", name: question, acceptedAnswer: { "@type": "Answer", text: answer } })),
+    });
+  }
 
   return <main className={`site-shell inner-shell inner-${section}`}>
+    <JsonLd data={schemas} />
     <div className="top-note"><span>{t.note}</span><span>EN · DE · ES · FR · IT</span></div>
     <header className="site-header">
-      <Link href="/" className="brand" aria-label={ui.homeAria}><Mark /></Link>
-      <nav aria-label={ui.primaryNavigation}>{t.nav.map((item, index) => <Link key={item} href={navHref[index]}>{item}</Link>)}</nav>
+      <Link href={localizedPath("/", lang)} className="brand" aria-label={ui.homeAria}><Mark /></Link>
+      <nav aria-label={ui.primaryNavigation}>{t.nav.map((item, index) => <Link key={item} href={localizedPath(navHref[index], lang)}>{item}</Link>)}</nav>
       <Select value={lang} onValueChange={(value) => changeLanguage(value as Lang)}><SelectTrigger className="language-select" aria-label={ui.selectLanguage}><SelectValue /></SelectTrigger><SelectContent><SelectItem value="en">EN</SelectItem><SelectItem value="de">DE</SelectItem><SelectItem value="es">ES</SelectItem><SelectItem value="fr">FR</SelectItem><SelectItem value="it">IT</SelectItem></SelectContent></Select>
     </header>
-    <section className="inner-hero"><Link href="/" className="back-link"><ArrowLeft size={16}/> {ui.home}</Link><p>{page.eyebrow}</p><h1>{page.title}</h1><div><p>{page.intro}</p><span>{ui.updatedStamp}</span></div></section>
+    <section className="inner-hero"><Link href={localizedPath("/", lang)} className="back-link"><ArrowLeft size={16}/> {ui.home}</Link><p>{page.eyebrow}</p><h1>{pageTitle}</h1><div><p>{page.intro}</p><span>{ui.updatedStamp}</span></div></section>
     <section className="inner-content">
       <div className="research-card-grid">{page.cards.map(([title, text], index) => <article key={`${title}-${index}`}><span>0{index + 1}</span><h2>{title}</h2><p>{text}</p></article>)}</div>
       <aside className="checklist-panel"><small>{ui.quickCheck}</small><h2>{ui.beforeNextStep}</h2>{page.checklist.map(item => <p key={item}><Check size={16}/>{item}</p>)}</aside>
@@ -174,8 +208,9 @@ export function ResearchPage({ section }: { section: SectionKey }) {
     </section>
     {section === "spreadsheet" && <section className="content-section"><div className="section-heading"><div><p>{ui.catalogRoutes}</p><h2>{t.category[1]}</h2></div></div><div className="category-grid">{categories.map(([name, desc, href], index) => <a key={name} href={href} className="category-card"><span>{String(index + 1).padStart(2,"0")}</span><div><b>{name}</b><small>{desc}</small></div><ArrowUpRight/></a>)}</div></section>}
     {showProducts && <section className="content-section product-section"><div className="section-heading"><div><p>{ui.productRoutes}</p><h2>{t.products[1]}</h2></div><p>{t.products[2]}</p></div><div className="product-grid">{products.map(([name, category, price, image, href], index) => <a key={name} href={href} className="product-card"><div className="product-image"><img src={image} alt={name} width="750" height="750" loading={index < 2 ? "eager" : "lazy"}/><span>{ui.route} {index + 1}</span></div><div className="product-meta"><small>{category}</small><h3>{name}</h3><div><b>{price}</b><span>{t.open}<ArrowUpRight size={16}/></span></div></div></a>)}</div></section>}
-    {showArticles && <section className="content-section"><div className="article-grid">{articles.map(([tag,title,text,href],index)=><Link href={href} className={`article-card article-${index+1}`} key={title}><small>{tag} / {ui.longFormGuide}</small><h3>{title}</h3><p>{text}</p><span>{t.read}<ArrowUpRight size={17}/></span></Link>)}</div></section>}
+    {showArticles && <section className="content-section"><div className="article-grid">{articles.map(([tag,title,text,href],index)=><Link href={localizedPath(href, lang)} className={`article-card article-${index+1}`} key={title}><small>{tag} / {ui.longFormGuide}</small><h3>{title}</h3><p>{text}</p><span>{t.read}<ArrowUpRight size={17}/></span></Link>)}</div></section>}
+    {relatedArticles.length > 0 && <section className="content-section related-articles"><div className="section-heading"><div><p>{t.articles[0]}</p><h2>{t.articles[1]}</h2></div></div><div className="article-grid">{relatedArticles.map(([tag,title,text,href],index)=><Link href={localizedPath(href, lang)} className={`article-card article-${index+1}`} key={title}><small>{tag} / {ui.longFormGuide}</small><h3>{title}</h3><p>{text}</p><span>{t.read}<ArrowUpRight size={17}/></span></Link>)}</div></section>}
     {showFaq && <section className="content-section faq-section"><div className="faq-grid">{t.faq.map(([question,answer],index)=><article key={question}><span>0{index+1}</span><h3>{question}</h3><p>{answer}</p></article>)}</div></section>}
-    <footer><div className="brand"><Mark/></div><p>{t.footer}</p><div><Link href="/spreadsheet">{ui.footerLinks[0]}</Link><Link href="/qc">{ui.footerLinks[1]}</Link><Link href="/shipping">{ui.footerLinks[2]}</Link><Link href="/articles">{ui.footerLinks[3]}</Link></div></footer>
+    <footer><div className="brand"><Mark/></div><p>{t.footer}</p><div><Link href={localizedPath("/spreadsheet", lang)}>{ui.footerLinks[0]}</Link><Link href={localizedPath("/qc", lang)}>{ui.footerLinks[1]}</Link><Link href={localizedPath("/shipping", lang)}>{ui.footerLinks[2]}</Link><Link href={localizedPath("/articles", lang)}>{ui.footerLinks[3]}</Link></div></footer>
   </main>;
 }

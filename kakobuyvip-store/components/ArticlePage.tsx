@@ -1,11 +1,15 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useEffect } from "react";
 import Link from "next/link";
+import { usePathname, useRouter } from "next/navigation";
 import { ArrowLeft, ArrowUpRight, Check, Clock3 } from "lucide-react";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 import { Mark } from "./KakobuyHome";
-import { copy, Lang, navHref } from "./site-data";
+import { JsonLd } from "./JsonLd";
+import { baseUrl } from "./seo-data";
+import { sourceHeadings, sourcesForArticle } from "./source-data";
+import { copy, Lang, localizedPath, navHref } from "./site-data";
 import { interfaceText } from "./localized-data";
 import { getLocalizedArticle } from "./localized-article-data";
 import { articleBySlug, ArticleSlug } from "./article-data";
@@ -41,19 +45,19 @@ function ArticleVisual({ slug, lang }: { slug: ArticleSlug; lang: Lang }) {
   return null;
 }
 
-export function ArticlePage({ slug }: { slug: ArticleSlug }) {
-  const [lang, setLang] = useState<Lang>("en");
+export function ArticlePage({ slug, initialLang = "en" }: { slug: ArticleSlug; initialLang?: Lang }) {
+  const lang = initialLang;
+  const pathname = usePathname();
+  const router = useRouter();
   useEffect(() => {
-    const saved = localStorage.getItem("kv-language") as Lang | null;
-    if (saved && copy[saved]) {
-      setLang(saved);
-      document.documentElement.lang = saved;
-    }
-  }, []);
+    localStorage.setItem("kv-language", lang);
+    document.documentElement.lang = lang;
+  }, [lang]);
   const t = copy[lang];
   const ui = interfaceText[lang];
   const sourceArticle = articleBySlug[slug];
   const article = getLocalizedArticle(lang, slug);
+  const sources = sourcesForArticle(slug);
   const readingMinutes = sourceArticle.readingTime.match(/\d+/)?.[0] ?? "12";
   const readingTime = {
     en: `${readingMinutes} min read`, de: `${readingMinutes} Min. Lesezeit`, es: `${readingMinutes} min de lectura`,
@@ -62,16 +66,43 @@ export function ArticlePage({ slug }: { slug: ArticleSlug }) {
   const locale = { en: "en-US", de: "de-DE", es: "es-ES", fr: "fr-FR", it: "it-IT" }[lang];
   const updatedDate = new Intl.DateTimeFormat(locale, { day: "numeric", month: "long", year: "numeric", timeZone: "UTC" }).format(new Date("2026-08-31T00:00:00Z"));
   const change = (value: Lang) => {
-    setLang(value);
     localStorage.setItem("kv-language", value);
-    document.documentElement.lang = value;
+    router.push(localizedPath(pathname, value));
   };
+  const canonicalPath = localizedPath(`/articles/${slug}`, lang);
+  const articleUrl = `${baseUrl}${canonicalPath}`;
+  const schemas: Record<string, unknown>[] = [
+    {
+      "@context": "https://schema.org",
+      "@type": "Article",
+      headline: article.title,
+      description: article.description,
+      datePublished: "2026-08-31",
+      dateModified: "2026-08-31",
+      inLanguage: lang,
+      mainEntityOfPage: articleUrl,
+      url: articleUrl,
+      isAccessibleForFree: true,
+      author: { "@type": "Organization", name: "KakobuyVIP Store" },
+      publisher: { "@type": "Organization", name: "KakobuyVIP Store", url: `${baseUrl}/` },
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      itemListElement: [
+        { "@type": "ListItem", position: 1, name: ui.home, item: `${baseUrl}${localizedPath("/", lang) === "/" ? "" : localizedPath("/", lang)}` },
+        { "@type": "ListItem", position: 2, name: ui.articles, item: `${baseUrl}${localizedPath("/articles", lang)}` },
+        { "@type": "ListItem", position: 3, name: article.title, item: articleUrl },
+      ],
+    },
+  ];
 
   return <main className="site-shell article-detail">
+    <JsonLd data={schemas} />
     <div className="top-note"><span>{t.note}</span><span>EN · DE · ES · FR · IT</span></div>
     <header className="site-header">
-      <Link href="/" className="brand" aria-label={ui.homeAria}><Mark /></Link>
-      <nav aria-label={ui.primaryNavigation}>{t.nav.map((item, index) => <Link key={item} href={navHref[index]}>{item}</Link>)}</nav>
+      <Link href={localizedPath("/", lang)} className="brand" aria-label={ui.homeAria}><Mark /></Link>
+      <nav aria-label={ui.primaryNavigation}>{t.nav.map((item, index) => <Link key={item} href={localizedPath(navHref[index], lang)}>{item}</Link>)}</nav>
       <Select value={lang} onValueChange={value => change(value as Lang)}>
         <SelectTrigger className="language-select" aria-label={ui.selectLanguage}><SelectValue /></SelectTrigger>
         <SelectContent><SelectItem value="en">EN</SelectItem><SelectItem value="de">DE</SelectItem><SelectItem value="es">ES</SelectItem><SelectItem value="fr">FR</SelectItem><SelectItem value="it">IT</SelectItem></SelectContent>
@@ -80,7 +111,7 @@ export function ArticlePage({ slug }: { slug: ArticleSlug }) {
 
     <article>
       <header className="article-hero">
-        <Link href="/articles" className="back-link"><ArrowLeft size={16} /> {ui.articles}</Link>
+        <Link href={localizedPath("/articles", lang)} className="back-link"><ArrowLeft size={16} /> {ui.articles}</Link>
         <p className="article-kicker">{article.tag} · {ui.englishGuide}</p>
         <h1>{article.title}</h1>
         <p className="article-description">{article.description}</p>
@@ -110,8 +141,20 @@ export function ArticlePage({ slug }: { slug: ArticleSlug }) {
         <p>{article.sourceNote}</p>
         <a href="https://cnfansge.com/AllProducts">{t.browse} <ArrowUpRight size={17} /></a>
       </aside>
+
+      <section className="article-sources" aria-labelledby="source-list-title">
+        <div className="section-heading"><div><p>{sourceHeadings[lang][0]}</p><h2 id="source-list-title">{sourceHeadings[lang][1]}</h2></div></div>
+        <div className="source-grid">
+          {sources.map((source) => <article key={`${source.publisher}-${source.reference}`}>
+            <small>{source.publisher} · {source.checked}</small>
+            <h3>{source.title}</h3>
+            <code>{source.reference}</code>
+            <p>{source.scope[lang]}</p>
+          </article>)}
+        </div>
+      </section>
     </article>
 
-    <footer><div className="brand"><Mark /></div><p>{t.footer}</p><div><Link href="/spreadsheet">{ui.footerLinks[0]}</Link><Link href="/qc">{ui.footerLinks[1]}</Link><Link href="/shipping">{ui.footerLinks[2]}</Link><Link href="/articles">{ui.footerLinks[3]}</Link></div></footer>
+    <footer><div className="brand"><Mark /></div><p>{t.footer}</p><div><Link href={localizedPath("/spreadsheet", lang)}>{ui.footerLinks[0]}</Link><Link href={localizedPath("/qc", lang)}>{ui.footerLinks[1]}</Link><Link href={localizedPath("/shipping", lang)}>{ui.footerLinks[2]}</Link><Link href={localizedPath("/articles", lang)}>{ui.footerLinks[3]}</Link></div></footer>
   </main>;
 }
