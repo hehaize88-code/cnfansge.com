@@ -114,6 +114,14 @@ const sourceMap: Record<ProArticleKey, ProArticle["sources"]> = {
   ],
 };
 
+const verification: Record<Locale,string> = {
+  en:"Before moving on, record the input, the observed result, the check date and the decision it supports. This small audit note prevents a temporary platform value from being repeated later without destination, parcel or order context.",
+  de:"Vor dem nächsten Schritt Eingabe, beobachtetes Ergebnis, Prüfdatum und unterstützte Entscheidung notieren. Dieser kurze Prüfvermerk verhindert, dass ein vorübergehender Plattformwert später ohne Ziel-, Paket- oder Bestellkontext wiederholt wird.",
+  es:"Antes de continuar, registra la entrada, el resultado observado, la fecha y la decisión que respalda. Esta breve nota evita que un valor temporal se repita después sin contexto de destino, paquete o pedido.",
+  fr:"Avant de continuer, notez l’entrée, le résultat observé, la date et la décision soutenue. Cette courte trace évite qu’une valeur temporaire soit ensuite répétée sans contexte de destination, colis ou commande.",
+  it:"Prima di continuare, registra input, risultato osservato, data e decisione supportata. Questa breve nota impedisce che un valore temporaneo venga ripetuto in seguito senza contesto di destinazione, pacco o ordine.",
+};
+
 function build(locale: Locale, key: ProArticleKey): ProArticle {
   const m=meta[locale][key];
   const [a,b]=pairs[key];
@@ -121,7 +129,7 @@ function build(locale: Locale, key: ProArticleKey): ProArticle {
   const sections=steps.map(([title,body],index):[string,string[]]=>{
     const [n1,n2,n3]=notes[locale][index];
     const decision=index<4?decisions[locale][a]:decisions[locale][b];
-    return [title,[`${body} ${n1}`,`${decision.description} ${n2} ${decision.caution}`,`${n3} ${decision.source}. ${proHome[locale].liveNote}`]];
+    return [title,[`${body} ${n1}`,`${decision.description} ${n2} ${decision.caution}`,`${n3} ${decision.source}. ${proHome[locale].liveNote}`,`${verification[locale]} ${title}.`]];
   });
   return {...m,sections,sources:sourceMap[key]};
 }
