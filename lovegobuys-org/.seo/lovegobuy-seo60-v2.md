@@ -4,7 +4,7 @@
 
 ## Scope and integration
 
-This file governs only the LoveGoBuy extension inside the existing enabled automation `ACBuy Superbuy USFans LitBuy十七站60天`. It adds LoveGoBuy as the eighteenth site after LitBuy; it does not replace, reset, delay, reorder, or modify any rule, cursor, content sequence, completion record, or publication time belonging to the existing seventeen sites.
+This file governs only the LoveGoBuy extension inside the existing enabled automation `ACBuy Superbuy USFans LitBuy LoveGoBuy十八站60天`. It adds LoveGoBuy as the eighteenth site after LitBuy; it does not replace, reset, delay, reorder, or modify any rule, cursor, content sequence, completion record, or publication time belonging to the existing seventeen sites.
 
 - Domain/live: https://lovegobuys.org/
 - Platform: LoveGoBuy
