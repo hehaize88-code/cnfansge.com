@@ -1,6 +1,6 @@
 import type { Locale, PageKey } from "./site-data";
 
-type IndependentPage = Exclude<PageKey, "home" | "qcArticle" | "shippingArticle" | "storageArticle">;
+type IndependentPage = Exclude<PageKey, "home" | "qcArticle" | "shippingArticle" | "storageArticle" | "officialWebsiteArticle">;
 
 export const seoPageIntro: Record<Locale, Record<IndependentPage, [string, string]>> = {
   en: {
