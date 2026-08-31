@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import { SiteView } from "../site-view";
 import { copy, localeCodes, localPath, pagePaths, type Locale, type PageKey } from "../site-data";
-import { proArticleData as articleData } from "../pro-article-data";
+import { articleData } from "../article-data";
 import { seoPageIntro } from "../research-copy";
 import { decisions, decisionKeys, proHome, type DecisionKey } from "../pro-data";
 

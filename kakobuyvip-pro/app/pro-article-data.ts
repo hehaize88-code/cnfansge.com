@@ -20,9 +20,9 @@ const pairs: Record<ProArticleKey, [DecisionKey, DecisionKey]> = {
 
 const meta: Record<Locale, Record<ProArticleKey, Pick<ProArticle,"title"|"tag"|"lede"|"read"|"reviewed">>> = {
   en: {
-    shippingArticle:{title:"Kakobuy Shipping Calculator 2026: A Real Cost-Planning Method",tag:"Calculator Method",lede:"A decision-by-decision method for using Kakobuy’s official estimator, separating actual and volumetric weight, comparing eligible lines and recording the live rule set before parcel payment.",read:"15 min guide",reviewed:"Official sources reviewed 31 Aug 2026"},
-    storageArticle:{title:"Kakobuy Parcel Packing & Warehouse Status Guide 2026",tag:"Packing & Warehouse",lede:"How to consolidate compatible items, model packed dimensions, interpret warehouse stages and use the advertised storage window without confusing it with seller after-sales time.",read:"14 min guide",reviewed:"Official sources reviewed 31 Aug 2026"},
-    qcArticle:{title:"Kakobuy Returns and QC Photo Troubleshooting 2026",tag:"Returns & QC Help",lede:"A practical evidence workflow for separating a visible product mismatch from a missing angle, interface problem or seller-dependent after-sales request.",read:"14 min guide",reviewed:"Official sources reviewed 31 Aug 2026"},
+    shippingArticle:{title:"Kakobuy Shipping Calculator Guide 2026: Weight, Fees and Final Parcel Cost",tag:"Shipping Calculator",lede:"A fact-checked method for using Kakobuy’s official estimator, separating estimated inputs from final parcel measurements and comparing live routes before payment.",read:"15 min guide",reviewed:"Official sources reviewed 31 Aug 2026"},
+    storageArticle:{title:"Kakobuy Warehouse Status & 100-Day Storage Guide 2026",tag:"Warehouse & Storage",lede:"How to read seller-to-warehouse stages, inspect visible intake evidence, consolidate compatible items and use the advertised 100-day storage window without confusing it with seller after-sales time.",read:"14 min guide",reviewed:"Official sources reviewed 31 Aug 2026"},
+    qcArticle:{title:"Kakobuy Returns, 5-Day Exchange & QC Photo Guide 2026",tag:"Returns & QC Photos",lede:"A practical evidence workflow for separating a visible product mismatch from a missing angle, display problem, seller-backed return or post-delivery parcel claim.",read:"14 min guide",reviewed:"Official sources reviewed 31 Aug 2026"},
   },
   de: {
     shippingArticle:{title:"Kakobuy Versandkalkulator 2026: Methode für reale Kostenplanung",tag:"Kalkulator-Methode",lede:"So nutzen Sie den offiziellen Rechner, trennen Ist- und Volumengewicht, vergleichen geeignete Linien und sichern den Live-Regelstand vor der Paketzahlung.",read:"15-Minuten-Leitfaden",reviewed:"Offizielle Quellen geprüft am 31. Aug. 2026"},
@@ -103,14 +103,18 @@ const sourceMap: Record<ProArticleKey, ProArticle["sources"]> = {
   shippingArticle:[
     {label:"Kakobuy Shipping Fee Estimation",url:"https://www.kakobuy.com/tools/estimate"},
     {label:"Kakobuy Services & Fees",url:"https://www.kakobuy.com/service/help/question?id=63"},
+    {label:"Kakobuy total-cost help",url:"https://www.kakobuy.com/service/help/question?cid=35&id=74"},
   ],
   storageArticle:[
     {label:"Kakobuy service introduction — 100-day storage",url:"https://www.kakobuy.com/index/information?information_id=3"},
     {label:"Kakobuy Beginner’s Guide",url:"https://www.kakobuy.com/index/information?information_id=12"},
+    {label:"Kakobuy Package Photograph help",url:"https://www.kakobuy.com/service/help/question?cid=75&id=118"},
   ],
   qcArticle:[
     {label:"Kakobuy 5-Day Return/Exchange Guarantee",url:"https://www.kakobuy.com/service/help/question?id=51"},
     {label:"Kakobuy QC Image Notice, 10 May 2026",url:"https://www.kakobuy.com/tipdetail?id=49"},
+    {label:"Kakobuy warehouse inspection limits",url:"https://www.kakobuy.com/service/help/question?cid=35&id=48"},
+    {label:"Kakobuy abnormal-parcel receipt help",url:"https://www.kakobuy.com/service/help/question?id=54"},
   ],
 };
 
