@@ -5,6 +5,7 @@ import { copy, localeCodes, localPath, pagePaths, type Locale, type PageKey } fr
 import { articleData } from "../article-data";
 import { seoPageIntro } from "../research-copy";
 import { decisions, decisionKeys, proHome, type DecisionKey } from "../pro-data";
+import { orderIdentifiersArticleData } from "../order-identifiers-article";
 
 function resolve(raw: string[] | undefined): { locale:Locale; page:PageKey } | null {
   const segments=[...(raw||[])];
@@ -19,7 +20,7 @@ export async function generateMetadata({params}:{params:Promise<{segments?:strin
   const route=resolve((await params).segments);
   if(!route) return {};
   const {locale,page}=route;
-  const article=page.endsWith("Article")?articleData[locale][page as "qcArticle"|"shippingArticle"|"storageArticle"]:null;
+  const article=page==="orderIdentifiersArticle"?orderIdentifiersArticleData[locale]:page.endsWith("Article")?articleData[locale][page as "qcArticle"|"shippingArticle"|"storageArticle"]:null;
   const decision=decisionKeys.includes(page as DecisionKey)?decisions[locale][page as DecisionKey]:null;
   const independent=page==="home"||page.endsWith("Article")||decision?null:seoPageIntro[locale][page as keyof typeof seoPageIntro.en];
   const title=page==="home"?"Kakobuy Shipping Calculator, Warehouse & Returns Guide 2026":article?.title??decision?.title??independent?.[0]??copy[locale].pageIntro.articles[0];
