@@ -17,7 +17,7 @@ const routePaths = [[], ["finds"], ["categories"], ["guide"], ["qc"], ["shipping
 export function generateStaticParams() {
   return [
     ...languages.flatMap((lang) => routePaths.map((slug) => ({ lang, slug }))),
-    ...articleSlugs.map((articleSlug) => ({ lang: "en", slug: ["articles", articleSlug] })),
+    ...languages.flatMap((lang) => articleSlugs.map((articleSlug) => ({ lang, slug: ["articles", articleSlug] }))),
   ];
 }
 
@@ -31,10 +31,10 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
   const lang = rawLang;
   const c = copy[lang];
   const key = slug[0] ?? "home";
-  const article = lang === "en" && slug[0] === "articles" && slug[1] ? getArticle(slug[1]) : null;
+  const article = slug[0] === "articles" && slug[1] && slug.length === 2 ? getArticle(slug[1]) : null;
   const title = article?.title ?? (key === "home" ? "LoveGoBuy Spreadsheet 2026 — Finds, QC & Shipping" : c.nav[sectionSlugs.indexOf(key)] || "LoveGoBuy Guide");
   const description = article?.intro ?? (key === "home" ? c.heroText : topics[key as keyof typeof topics]?.[lang]?.intro ?? c.guidesText);
-  const canonical = absolutePath(lang, slug);
+  const canonical = article ? absolutePath("en", slug) : absolutePath(lang, slug);
   return {
     title,
     description,
@@ -44,7 +44,7 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
         ? { en: absolutePath("en", slug), "x-default": absolutePath("en", slug) }
         : Object.fromEntries(languages.map((item) => [item, absolutePath(item, slug)]).concat([["x-default", absolutePath("en", slug)]])),
     },
-    robots: { index: true, follow: true },
+    robots: { index: article ? lang === "en" : true, follow: true },
   };
 }
 
@@ -84,7 +84,7 @@ function ArticleCards({ lang, limit }: { lang: Lang; limit?: number }) {
   return (
     <div className="article-card-grid">
       {researchArticles.slice(0, limit).map((article, index) => (
-        <Link key={article.slug} href={`/en/articles/${article.slug}`} className={index === 0 ? "article-card featured" : "article-card"}>
+        <Link key={article.slug} href={`/${lang}/articles/${article.slug}`} className={index === 0 ? "article-card featured" : "article-card"}>
           <span>{String(index + 1).padStart(2, "0")} / {article.readingTime}</span>
           <h3>{article.title}</h3>
           <p>{article.deck}</p>
@@ -252,7 +252,7 @@ function Breadcrumb({ lang, label }: { lang: Lang; label: string }) {
   return <div className="breadcrumb"><Link href={`/${lang}`}>Home</Link><span>/</span><b>{label}</b></div>;
 }
 
-function TopicPage({ lang, topic, kind, sourceBasis }: { lang: Lang; topic: Topic; kind: string; sourceBasis?: string }) {
+function TopicPage({ lang, topic, kind, sourceBasis, contentLang }: { lang: Lang; topic: Topic; kind: string; sourceBasis?: string; contentLang?: string }) {
   const c = copy[lang];
   return (
     <main className="interior page-shell">
@@ -262,7 +262,7 @@ function TopicPage({ lang, topic, kind, sourceBasis }: { lang: Lang; topic: Topi
       {kind === "finds" && <ProductGrid lang={lang} />}
       <div className="article-layout">
         <aside><b>CHECKING RULE</b><p>Record what was checked, when it was checked and what remains unknown.</p><SearchBox lang={lang} /></aside>
-        <article className="prose">
+        <article className="prose" lang={contentLang}>
           {sourceBasis && <><p className="source-basis">{sourceBasis}</p><ArticleEvidence /></>}
           {topic.sections.map((section, index) => (
             <section key={section.h}><span>{String(index + 1).padStart(2, "0")}</span><h2>{section.h}</h2>{section.p.map((p) => <p key={p}>{p}</p>)}{section.bullets && <ul>{section.bullets.map((item) => <li key={item}><Check size={15} />{item}</li>)}</ul>}</section>
@@ -314,12 +314,12 @@ function ArticlesPage({ lang }: { lang: Lang }) {
   );
 }
 
-function ArticlePage({ article }: { article: NonNullable<ReturnType<typeof getArticle>> }) {
+function ArticlePage({ article, lang }: { article: NonNullable<ReturnType<typeof getArticle>>; lang: Lang }) {
   const schema = { "@context": "https://schema.org", "@type": "Article", headline: article.title, description: article.intro, datePublished: article.published, dateModified: article.modified, inLanguage: "en", mainEntityOfPage: absolutePath("en", ["articles", article.slug]), author: { "@type": "Organization", name: "LoveGoBuy Field Guide" } };
   return (
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schema).replace(/</g, "\\u003c") }} />
-      <TopicPage lang="en" topic={article} kind="article" sourceBasis={article.sourceBasis} />
+      <TopicPage lang={lang} topic={article} kind="article" sourceBasis={article.sourceBasis} contentLang="en" />
     </>
   );
 }
@@ -335,10 +335,10 @@ export default async function LocalizedPage({ params }: PageProps) {
   else if (key === "categories" && slug.length === 1) content = <CategoriesPage lang={lang} />;
   else if (key === "faq" && slug.length === 1) content = <FaqPage lang={lang} />;
   else if (key === "articles" && slug.length === 1) content = <ArticlesPage lang={lang} />;
-  else if (key === "articles" && slug[1] && slug.length === 2 && lang === "en") {
+  else if (key === "articles" && slug[1] && slug.length === 2) {
     const article = getArticle(slug[1]);
     if (!article) notFound();
-    content = <ArticlePage article={article} />;
+    content = <ArticlePage article={article} lang={lang} />;
   }
   else if ((["finds", "guide", "qc", "shipping"] as const).includes(key as "finds" | "guide" | "qc" | "shipping") && slug.length === 1) content = <TopicPage lang={lang} topic={topics[key as keyof typeof topics][lang]} kind={key} />;
   else notFound();

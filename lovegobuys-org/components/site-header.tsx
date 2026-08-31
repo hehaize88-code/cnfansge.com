@@ -10,10 +10,7 @@ import { copy, languageNames, languages, sectionSlugs, type Lang } from "@/lib/s
 export function SiteHeader({ lang }: { lang: Lang }) {
   const pathname = usePathname();
   const c = copy[lang];
-  const isEnglishArticle = /^\/en\/articles\/[^/]+$/.test(pathname);
-  const localeHref = (next: Lang) => isEnglishArticle && next !== "en"
-    ? `/${next}/articles`
-    : pathname.replace(/^\/(en|de|es|fr|it)(?=\/|$)/, `/${next}`);
+  const localeHref = (next: Lang) => pathname.replace(/^\/(en|de|es|fr|it)(?=\/|$)/, `/${next}`);
 
   const nav = sectionSlugs.map((slug, index) => ({ slug, label: c.nav[index] }));
 
