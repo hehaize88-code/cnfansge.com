@@ -224,6 +224,21 @@ main { overflow: hidden; }
 .article-body .source-notes p { font-family: inherit; font-size: 14px; line-height: 1.7; }
 .source-notes ul { margin: 20px 0 0; padding: 0; display: grid; gap: 8px; list-style: none; }
 .source-notes li { padding: 11px 13px; border-radius: 12px; background: white; color: #544a48; font-size: 12px; font-weight: 700; }
+.source-notes li a { color: var(--blue); text-decoration-thickness: 1px; text-underline-offset: 3px; }
+.source-notes li small { display: block; margin-top: 5px; color: var(--muted); font-size: 10px; font-weight: 500; line-height: 1.45; overflow-wrap: anywhere; }
+
+.core-research-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px; }
+.core-research details { border: 2px solid var(--ink); background: white; }
+.core-research summary { min-height: 96px; padding: 20px; display: grid; grid-template-columns: 34px 1fr auto; gap: 10px; align-items: start; cursor: pointer; list-style: none; }
+.core-research summary::-webkit-details-marker { display: none; }
+.core-research summary span { color: var(--rose); font: 800 10px ui-monospace, monospace; }
+.core-research summary strong { font-size: 19px; line-height: 1.15; }
+.core-research summary small { color: var(--blue); font-size: 9px; font-weight: 800; text-transform: uppercase; }
+.core-research details > p { margin: 0; padding: 0 20px 22px 64px; color: var(--muted); font-size: 15px; line-height: 1.72; }
+
+@media (min-width: 821px) {
+  .core-research details:not([open]) > p { display: block; }
+}
 .article-next { width: min(1420px, calc(100% - 40px)); margin: 0 auto 20px; padding: 42px clamp(25px, 5vw, 74px); display: flex; align-items: center; justify-content: space-between; gap: 30px; border-radius: 30px; background: var(--ink); color: white; }
 .article-next p { max-width: 650px; }
 .article-next a { padding: 14px 18px; display: flex; align-items: center; gap: 8px; border-radius: 14px; background: var(--rose); color: white; font-weight: 800; white-space: nowrap; }
@@ -726,6 +741,13 @@ footer { border: 2px solid var(--ink); border-radius: 0; background: var(--ink);
   .article-body section p { font-size: 15px; line-height: 1.72; }
   .article-body .source-notes { padding: 17px; border-radius: 15px; }
   .source-notes li { padding: 8px 9px; font-size: 9px; }
+  .source-notes li small { margin-top: 3px; font-size: 7px; }
+  .core-research-grid { grid-template-columns: 1fr; gap: 4px; }
+  .core-research details { box-shadow: 2px 2px 0 rgba(17,36,91,.14); }
+  .core-research summary { min-height: 0; padding: 8px; grid-template-columns: 20px 1fr auto; gap: 5px; }
+  .core-research summary span, .core-research summary small { font-size: 6.5px; }
+  .core-research summary strong { font-size: 11px; }
+  .core-research details > p { padding: 0 10px 10px 28px; font-size: 10px; line-height: 1.42; }
   .article-next { width: calc(100% - 16px); padding: 19px 16px; gap: 10px; border-radius: 17px; }
   .article-next p { margin: 0; font-size: 10px; line-height: 1.4; }
   .article-next a { padding: 9px 11px; font-size: 9px; }

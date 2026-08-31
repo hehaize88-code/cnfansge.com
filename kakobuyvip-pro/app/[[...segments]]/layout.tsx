@@ -10,9 +10,20 @@ export const metadata: Metadata = {
   description:
     "An independent Kakobuy shipping calculator, warehouse-status, parcel packing, returns and QC troubleshooting guide.",
   icons: {
-    icon: "/kakobuy.png",
-    shortcut: "/kakobuy.png",
+    icon: [
+      { url: "/favicon.svg", type: "image/svg+xml" },
+      { url: "/favicon-48.png", type: "image/png", sizes: "48x48" },
+      { url: "/favicon-96.png", type: "image/png", sizes: "96x96" },
+    ],
+    shortcut: "/favicon.ico",
+    apple: [{ url: "/app-icon-192.png", sizes: "192x192", type: "image/png" }],
   },
+  openGraph: {
+    type: "website",
+    siteName: "Kakobuy VIP Pro",
+    images: [{ url: "/og.png", width: 1200, height: 630, alt: "Kakobuy VIP Pro — Shipping, Warehouse and Parcel Guides" }],
+  },
+  twitter: { card: "summary_large_image", images: ["/og.png"] },
 };
 
 export default async function RootLayout({
