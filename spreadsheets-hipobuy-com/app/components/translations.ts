@@ -4,6 +4,10 @@ export type TranslationRow = Record<Lang, string>;
 const r = (en:string,de:string,fr:string,es:string,it:string):TranslationRow => ({en,de,fr,es,it});
 
 export const rows: TranslationRow[] = [
+  r("SEARCH METHOD / NEW","SUCHMETHODE / NEU","MÉTHODE DE RECHERCHE / NOUVEAU","MÉTODO DE BÚSQUEDA / NUEVO","METODO DI RICERCA / NUOVO"),
+  r("Turn a product idea into a precise Hipobuy spreadsheet query","Aus einer Produktidee eine präzise Hipobuy-Spreadsheet-Anfrage machen","Transformer une idée produit en requête précise pour le tableur Hipobuy","Convertir una idea de producto en una consulta precisa para la hoja Hipobuy","Trasformare un’idea prodotto in una query precisa per il foglio Hipobuy"),
+  r("Build a compact query, diagnose overloaded or empty results and preserve each single-term change.","Erstelle eine kurze Anfrage, diagnostiziere überladene oder leere Ergebnisse und sichere jede einzelne Wortänderung.","Construisez une requête courte, diagnostiquez les résultats surchargés ou vides et conservez chaque changement de terme.","Crea una consulta breve, diagnostica resultados saturados o vacíos y conserva cada cambio de término.","Crea una query breve, diagnostica risultati sovraccarichi o vuoti e conserva ogni singola modifica."),
+  r("Read the search-query guide →","Ratgeber zur Suchanfrage lesen →","Lire le guide de requête →","Leer la guía de consultas →","Leggi la guida alle query →"),
   // Global navigation, labels and footer
   r("Private review build · search indexing is disabled","Private Testversion · Suchindexierung ist deaktiviert","Version de contrôle privée · indexation désactivée","Versión privada de revisión · indexación desactivada","Versione privata di revisione · indicizzazione disattivata"),
   r("Choose language","Sprache wählen","Choisir la langue","Elegir idioma","Scegli lingua"),

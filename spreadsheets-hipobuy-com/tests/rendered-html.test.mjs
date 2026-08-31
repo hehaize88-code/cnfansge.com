@@ -8,6 +8,7 @@ const routeFiles = {
   "/finds/": "../out/finds/index.html",
   "/articles/": "../out/articles/index.html",
   "/articles/use-hipobuy-spreadsheet/": "../out/articles/use-hipobuy-spreadsheet/index.html",
+  "/articles/hipobuy-spreadsheet-search-query/": "../out/articles/hipobuy-spreadsheet-search-query/index.html",
   "/guide/": "../out/guide/index.html",
   "/qc/": "../out/qc/index.html",
   "/shipping/": "../out/shipping/index.html",
@@ -48,4 +49,5 @@ test("exports crawl-control files and structured data", async () => {
   assert.match(sitemap, /https:\/\/spreadsheets-hipobuy\.com\/articles\/use-hipobuy-spreadsheet\//i);
   assert.match(faq, /"@type":"FAQPage"/);
   assert.match(article, /"@type":"Article"/);
+  assert.match(sitemap, /https:\/\/spreadsheets-hipobuy\.com\/articles\/hipobuy-spreadsheet-search-query\//i);
 });

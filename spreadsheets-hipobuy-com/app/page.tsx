@@ -94,6 +94,15 @@ export default function Home() {
 
       <ProductExplorer />
 
+      <section className="contentSplit wrap">
+        <div className="editorialCard">
+          <span className="kicker">SEARCH METHOD / NEW</span>
+          <h2>Turn a product idea into a precise Hipobuy spreadsheet query</h2>
+          <p>Build a compact query, diagnose overloaded or empty results and preserve each single-term change.</p>
+          <a href="/articles/hipobuy-spreadsheet-search-query/">Read the search-query guide →</a>
+        </div>
+      </section>
+
       <section className="method wrap">
         <div className="sectionHead">
           <div><span className="kicker">THE CHECK METHOD</span><h2>Four checks before checkout</h2></div>
