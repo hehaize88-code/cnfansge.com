@@ -47,6 +47,22 @@ These five existing article intentions and slugs are baseline and must not be ov
 - /{lang}/articles/oopbuy-fees-returns-policy
 - /{lang}/articles/oopbuy-shipping-cost-planner
 
+### Audited remediation baseline added on 2026-09-01
+
+The user later authorized a one-time, site-wide SEO remediation after an external audit. The resulting deployed state supersedes the joining baseline wherever the two conflict. Future cycles must preserve this newer baseline:
+
+- homepage primary positioning is OOPBUY QC photo analysis and visual-evidence literacy, not the broad OOPBUY spreadsheet, fee, route, return, or beginner-guide intent;
+- the five legacy slugs remain live and keep all prior body content, but their visible titles and decks are narrowed toward evidence trails, QC interpretation, the actionable evidence window, and packing evidence to reduce sibling-site cannibalization;
+- Spreadsheet, Finds, Guide, QC, Shipping, and Articles retain their original modules and receive additive, fully translated decision content; do not remove, shorten, or replace that added depth;
+- German, Spanish, French, and Italian product labels, category labels, home evidence labels, article labels, table-of-contents labels, and long-article parity additions are part of the required multilingual baseline;
+- mobile typography has a readable floor: body and FAQ copy 15–16 px, product titles 14 px, secondary copy 11–12 px, and controls 11–14 px. Do not reintroduce 5–10 px text to make the page shorter;
+- product media uses local WebP copies while the original JPG files remain available; do not revert cards or the hero collage to the heavier JPG source when a WebP exists;
+- every section page has BreadcrumbList; Spreadsheet and Finds have ItemList; articles have BlogPosting image, mainEntityOfPage, publisher logo, and BreadcrumbList;
+- `/en` and `/en/` must permanently redirect to `/`; `www.oopbuyvip.pro/*` must permanently redirect to the same path on `https://oopbuyvip.pro/*`;
+- public static responses use the committed `_headers` cache policy and Cloudflare’s zone cache rule. After a successful deployment, purge the changed formal URLs or the whole oopbuyvip.pro zone cache before formal validation so old HTML is never mistaken for a failed release.
+
+The five slugs are still pre-C01 baseline content and may not be deleted or counted as new cycles. Their remediation titles are now part of the baseline and must not be reverted to the former near-duplicates used on oopbuyvip.org.
+
 Permitted changes are only the smallest additions required for the current article: new five-language article data and routes, a same-style Articles or homepage entry where the current architecture already provides one, strictly relevant internal links, persistent sitemap data, and matching metadata and structured data. Do not redesign, reorder, remove, shorten, rewrite, “improve,” or replace older content or shared visual components.
 
 ## 4. QVL positioning and keyword isolation

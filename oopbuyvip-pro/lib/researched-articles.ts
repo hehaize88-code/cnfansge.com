@@ -20,8 +20,8 @@ const officialSources = {
 
 const beginnerEnglish: Article = {
   slug: "oopbuy-beginner-guide-2026",
-  title: "OOPBUY beginner guide 2026: from product link to tracked parcel",
-  deck: "A fact-checked ordering workflow built around OOPBUY’s current tutorial, warehouse and aftersales pages.",
+  title: "OOPBUY visual evidence guide 2026: preserve proof from listing to parcel",
+  deck: "A fact-checked workflow for keeping listing, order, warehouse and parcel evidence connected without overclaiming what each source proves.",
   readTime: "11 min read",
   sources: [...officialSources.beginner],
   sections: [
@@ -63,7 +63,7 @@ const beginnerEnglish: Article = {
 
 const feesEnglish: Article = {
   slug: "oopbuy-fees-returns-policy",
-  title: "OOPBUY fees, returns and warehouse deadlines: what the official pages say",
+  title: "OOPBUY warehouse deadlines: protect the QC evidence window",
   deck: "A careful reading of the 8% agreement language, the service page, the 120-hour return window and 90-day storage rule.",
   readTime: "11 min read",
   sources: [...officialSources.fees],
@@ -107,20 +107,20 @@ const feesEnglish: Article = {
 function localizedArticle(locale: Exclude<Locale, "en">, kind: "beginner" | "fees"): Article {
   const data = {
     de: {
-      beginner: ["OOPBUY-Einsteigerleitfaden 2026: vom Produktlink bis zur Sendungsverfolgung", "Ein faktisch geprüfter Ablauf auf Basis der aktuellen Tutorial-, Lager- und Aftersales-Seiten.", ["Den zweistufigen Kauf verstehen", "Eine aktuelle Produktroute prüfen", "Mit klaren Angaben bestellen", "Bestellstatus als Belegkette lesen", "QC-Fotos rechtzeitig prüfen", "Rückgabe ist ein Antrag", "Das Paket nach Messdaten bauen", "Bezahlen, verfolgen und dokumentieren"]],
-      fees: ["OOPBUY-Gebühren, Rückgaben und Lagerfristen: Was die offiziellen Seiten sagen", "8%-Vertragstext, Serviceseite, 120-Stunden-Frist und 90-Tage-Lagerung gemeinsam gelesen.", ["Warum eine Überschrift Gebühren nicht erklärt", "Vollständige Kostenkarte", "Versandschätzung ist kein Endbetrag", "Die 120-Stunden-Frist", "90 Tage verlängern Aftersales nicht", "Eingeschränkte Waren verändern Kosten", "Bewertungen sind Signale", "Audit vor der Zahlung"]]
+      beginner: ["OOPBUY-Guide zu visuellen Belegen 2026: vom Angebot bis zum Paket", "Ein faktisch geprüfter Ablauf, der Angebot, Bestellung, Lager und Paket verbindet, ohne die Aussagekraft einer Quelle zu übertreiben.", ["Den zweistufigen Kauf verstehen", "Eine aktuelle Produktroute prüfen", "Mit klaren Angaben bestellen", "Bestellstatus als Belegkette lesen", "QC-Fotos rechtzeitig prüfen", "Rückgabe ist ein Antrag", "Das Paket nach Messdaten bauen", "Bezahlen, verfolgen und dokumentieren"]],
+      fees: ["OOPBUY-Lagerfristen: das QC-Belegfenster schützen", "8%-Vertragstext, Serviceseite, 120-Stunden-Frist und 90-Tage-Lagerung im Kontext einer rechtzeitigen Belegentscheidung.", ["Warum eine Überschrift Gebühren nicht erklärt", "Vollständige Kostenkarte", "Versandschätzung ist kein Endbetrag", "Die 120-Stunden-Frist", "90 Tage verlängern Aftersales nicht", "Eingeschränkte Waren verändern Kosten", "Bewertungen sind Signale", "Audit vor der Zahlung"]]
     },
     es: {
-      beginner: ["Guía OOPBUY 2026: del enlace del producto al seguimiento", "Un proceso verificado con las páginas actuales de tutorial, almacén y posventa.", ["Entender la compra en dos etapas", "Comprobar una ruta actual", "Pedir con instrucciones útiles", "Leer los estados como evidencias", "Revisar QC dentro del plazo", "La devolución es una solicitud", "Crear el paquete con medidas", "Pagar, seguir y cerrar el registro"]],
-      fees: ["Tarifas, devoluciones y plazos de OOPBUY: qué dicen las páginas oficiales", "Lectura conjunta del 8%, la página de servicio, las 120 horas y los 90 días.", ["Un titular no explica las tarifas", "Mapa completo de costes", "La estimación no es el total final", "El reloj de 120 horas", "90 días no amplían la posventa", "Las restricciones cambian el coste", "Las reseñas son señales", "Auditoría antes de pagar"]]
+      beginner: ["Guía de evidencia visual OOPBUY 2026: del anuncio al paquete", "Un proceso verificado que conecta anuncio, pedido, almacén y paquete sin exagerar lo que prueba cada fuente.", ["Entender la compra en dos etapas", "Comprobar una ruta actual", "Pedir con instrucciones útiles", "Leer los estados como evidencias", "Revisar QC dentro del plazo", "La devolución es una solicitud", "Crear el paquete con medidas", "Pagar, seguir y cerrar el registro"]],
+      fees: ["Plazos de almacén OOPBUY: protege la ventana de evidencia QC", "Lectura del 8%, servicios, 120 horas y 90 días dentro de una decisión de evidencia a tiempo.", ["Un titular no explica las tarifas", "Mapa completo de costes", "La estimación no es el total final", "El reloj de 120 horas", "90 días no amplían la posventa", "Las restricciones cambian el coste", "Las reseñas son señales", "Auditoría antes de pagar"]]
     },
     fr: {
-      beginner: ["Guide OOPBUY 2026 : du lien produit au suivi du colis", "Un parcours vérifié à partir des pages actuelles de tutoriel, entrepôt et après-vente.", ["Comprendre l’achat en deux étapes", "Vérifier une route actuelle", "Commander avec des instructions utiles", "Lire les statuts comme des preuves", "Contrôler les photos dans le délai", "Le retour reste une demande", "Construire le colis avec les mesures", "Payer, suivre et fermer le dossier"]],
-      fees: ["Frais, retours et délais OOPBUY : ce que disent les pages officielles", "Lecture croisée du texte à 8 %, de la page service, des 120 heures et des 90 jours.", ["Un slogan n’explique pas les frais", "Cartographier tous les coûts", "L’estimation n’est pas le total final", "Le délai de 120 heures", "90 jours ne prolongent pas le retour", "Les restrictions changent le coût", "Les avis sont des signaux", "Audit avant paiement"]]
+      beginner: ["Guide des preuves visuelles OOPBUY 2026 : de l’annonce au colis", "Un parcours vérifié reliant annonce, commande, entrepôt et colis sans exagérer ce que chaque source prouve.", ["Comprendre l’achat en deux étapes", "Vérifier une route actuelle", "Commander avec des instructions utiles", "Lire les statuts comme des preuves", "Contrôler les photos dans le délai", "Le retour reste une demande", "Construire le colis avec les mesures", "Payer, suivre et fermer le dossier"]],
+      fees: ["Délais d’entrepôt OOPBUY : protéger la fenêtre de preuve QC", "Lecture du texte à 8 %, des services, des 120 heures et des 90 jours pour une décision de preuve à temps.", ["Un slogan n’explique pas les frais", "Cartographier tous les coûts", "L’estimation n’est pas le total final", "Le délai de 120 heures", "90 jours ne prolongent pas le retour", "Les restrictions changent le coût", "Les avis sont des signaux", "Audit avant paiement"]]
     },
     it: {
-      beginner: ["Guida OOPBUY 2026: dal link prodotto al tracciamento", "Un flusso verificato sulle pagine attuali di tutorial, magazzino e post-vendita.", ["Capire l’acquisto in due fasi", "Verificare un percorso attuale", "Ordinare con istruzioni utili", "Leggere gli stati come prove", "Controllare il QC entro il termine", "Il reso è una richiesta", "Creare il pacco con misure", "Pagare, tracciare e chiudere il registro"]],
-      fees: ["Costi, resi e scadenze OOPBUY: cosa dicono le pagine ufficiali", "Lettura congiunta dell’8%, della pagina servizi, delle 120 ore e dei 90 giorni.", ["Un titolo non spiega i costi", "Mappa completa dei costi", "La stima non è il totale finale", "La finestra di 120 ore", "90 giorni non estendono il reso", "Le restrizioni cambiano il costo", "Le recensioni sono segnali", "Controllo prima del pagamento"]]
+      beginner: ["Guida alle prove visive OOPBUY 2026: dall’annuncio al pacco", "Un flusso verificato che collega annuncio, ordine, magazzino e pacco senza esagerare ciò che ogni fonte prova.", ["Capire l’acquisto in due fasi", "Verificare un percorso attuale", "Ordinare con istruzioni utili", "Leggere gli stati come prove", "Controllare il QC entro il termine", "Il reso è una richiesta", "Creare il pacco con misure", "Pagare, tracciare e chiudere il registro"]],
+      fees: ["Scadenze di magazzino OOPBUY: proteggi la finestra di evidenza QC", "Lettura dell’8%, dei servizi, delle 120 ore e dei 90 giorni per una decisione di evidenza tempestiva.", ["Un titolo non spiega i costi", "Mappa completa dei costi", "La stima non è il totale finale", "La finestra di 120 ore", "90 giorni non estendono il reso", "Le restrizioni cambiano il costo", "Le recensioni sono segnali", "Controllo prima del pagamento"]]
     }
   } as const;
   const selected = data[locale][kind];

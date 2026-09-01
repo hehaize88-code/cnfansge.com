@@ -13,10 +13,10 @@ export async function generateMetadata({ params }: { params: Promise<{ lang: str
   const t = copy[locale];
   return {
     metadataBase: new URL(SITE_URL),
-    title: { default: `OOPBUY VIP — ${t.products}, QC & ${t.nav.shipping}`, template: `%s | OOPBUY VIP` },
+    title: { default: t.sectionTitles.qc, template: `%s | OOPBUY VIP` },
     description: t.heroText,
     alternates: { canonical: `${SITE_URL}${homePath(locale)}`, languages: alternateUrls("home") },
-    openGraph: { type: "website", url: `${SITE_URL}${homePath(locale)}`, siteName: "OOPBUY VIP", title: `OOPBUY VIP — ${t.products}, QC & ${t.nav.shipping}`, description: t.heroText, locale: locale, images: [{ url: "/og.png", width: 1200, height: 630 }] },
+    openGraph: { type: "website", url: `${SITE_URL}${homePath(locale)}`, siteName: "OOPBUY VIP", title: t.sectionTitles.qc, description: t.heroText, locale: locale, images: [{ url: "/og.png", width: 1200, height: 630, alt: t.sectionTitles.qc }] },
     icons: { icon: "/favicon.svg" },
   };
 }
