@@ -20,12 +20,12 @@ function isValidPath(path: string) {
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { slug } = await params;
   const { lang, path } = resolve(slug);
-  if (!isValidPath(path) || !path) return {};
+  if (!isValidPath(path)) return {};
   const t = copy[lang];
   const articleSlug = path.startsWith("articles/") ? path.split("/")[1] : null;
   const article = articleSlug ? getArticle(lang, articleSlug) : null;
-  const title = article?.title ?? t.pageTitles[path];
-  const description = article?.dek ?? t.pageIntros[path];
+  const title = article?.title ?? (path ? t.pageTitles[path] : t.heroTitle);
+  const description = article?.dek ?? (path ? t.pageIntros[path] : t.heroText);
   const canonical = `${SITE_ORIGIN}${localizedPath(lang, path)}`;
   const alternateLanguages = Object.fromEntries(languages.map((item) => [item, `${SITE_ORIGIN}${localizedPath(item, path)}`]));
   return {
@@ -42,7 +42,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 export default async function RoutedPage({ params }: Props) {
   const { slug } = await params;
   const { lang, path } = resolve(slug);
-  if (!path || !isValidPath(path)) notFound();
+  if (!isValidPath(path)) notFound();
   const articleSlug = path.startsWith("articles/") ? path.split("/")[1] : null;
   const article = articleSlug ? getArticle(lang, articleSlug) : null;
   if (articleSlug && !article) notFound();
