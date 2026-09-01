@@ -2,9 +2,9 @@
 
 Multilingual OOPBuy spreadsheet, finds, QC, shipping and research guide for `oopbuyvip.org`.
 
-## Cloudflare deployment
+## Cloudflare Pages deployment
 
-- Worker name: `oopbuyvip-org`
+- Project name: `oopbuyvip-org`
 - Build command: `npm run build`
-- Deploy command: `npx wrangler deploy`
+- Build output: `out`
 - Root directory: `/oopbuyvip-org`

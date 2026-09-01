@@ -7,6 +7,16 @@ const SITE = "https://oopbuyvip.org";
 const validSections = navKeys.filter((key) => key !== "home");
 type Params = Promise<{ lang: string; slug?: string[] }>;
 
+export const dynamicParams = false;
+
+export function generateStaticParams(): { lang: string; slug?: string[] }[] {
+  return languages.flatMap((lang) => [
+    { lang, slug: [] },
+    ...validSections.map((section) => ({ lang, slug: [section] })),
+    ...articleSlugs.map((slug) => ({ lang, slug: ["articles", slug] })),
+  ]);
+}
+
 function isValid(lang: string, slug: string[]) {
   if (!languages.includes(lang as Language)) return false;
   if (slug.length === 0) return true;
