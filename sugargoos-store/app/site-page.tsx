@@ -187,7 +187,7 @@ function GuideCards({ lang }: { lang: Language }) {
   ];
   return (
     <section className="content-section">
-      <SectionHeading eyebrow={d.labels.library} title={t.guides} />
+      <SectionHeading eyebrow={d.labels.library} title={({ en: "QC, shipping and buying guides", de: "QC-, Versand- und Kaufratgeber", es: "Guías de QC, envío y compra", fr: "Guides QC, livraison et achat", it: "Guide QC, spedizione e acquisto" } as const)[lang]} />
       <div className="guide-card-grid">
         {cards.map(({ route, icon: Icon, kicker, title, text, tone }) => (
           <a className={`guide-card ${tone}`} href={localizedPath(lang, route)} key={route}><span className="guide-icon"><Icon size={25} aria-hidden="true" /></span><p>{kicker}</p><h3>{title}</h3><span>{text}</span><strong>{t.readGuide}<ArrowRight size={17} aria-hidden="true" /></strong></a>
@@ -203,7 +203,7 @@ function ArticleCards({ lang, limit }: { lang: Language; limit?: number }) {
   const articles = limit ? getArticles(lang).slice(0, limit) : getArticles(lang);
   return (
     <section className="content-section">
-      <SectionHeading eyebrow={d.labels.research} title={t.articles} action={<a className="text-link" href={localizedPath(lang, "articles")}>{t.viewAll}<ArrowRight size={16} /></a>} />
+      <SectionHeading eyebrow={d.labels.research} title={t.articles} action={<a className="text-link" href={localizedPath(lang, "articles")}>{({ en: "Browse all articles", de: "Alle Artikel", es: "Ver todos los artículos", fr: "Voir tous les articles", it: "Vedi tutti gli articoli" } as const)[lang]}<ArrowRight size={16} /></a>} />
       <div className="article-card-grid">
         {articles.map((article, index) => (
           <a href={localizedPath(lang, `articles/${article.slug}`)} className="article-card" key={article.slug}>
@@ -298,6 +298,15 @@ function ArticlesPage({ lang }: { lang: Language }) {
   return <><PageHeader eyebrow={d.labels.articles} title={t.pageTitles.articles} intro={t.pageIntros.articles} /><ArticleCards lang={lang} /><section className="content-section editorial-standard"><SectionHeading eyebrow={d.labels.editorial} title={d.editorialTitle} /><div>{d.editorialItems.map((item) => <span key={item.title}><strong>{item.title}</strong><small>{item.text}</small></span>)}</div></section></>;
 }
 
+const articleSources: Record<string, { label: string; href: string }[]> = {
+  "sugargoo-spreadsheet-guide-2026": [{ label: "Official buying workflow", href: "https://blog.sugargoo.com/understanding-how-to-buy-from-taobao-using-a-sugargoo-agent/" }, { label: "Official QC guide", href: "https://blog.sugargoo.com/sugargoo-quality-check-service-the-ultimate-qc-guide-for-overse-buyers/" }],
+  "how-to-read-sugargoo-qc-photos": [{ label: "Official QC guide", href: "https://blog.sugargoo.com/sugargoo-quality-check-service-the-ultimate-qc-guide-for-overse-buyers/" }, { label: "Official returns guide", href: "https://blog.sugargoo.com/taobao-1688-returns-guide/" }],
+  "sugargoo-shipping-cost-guide-2026": [{ label: "Official shipping-cost guidance", href: "https://blog.sugargoo.com/estimate-international-shipping-costs-sugargoo/" }],
+  "sugargoo-fees-cost-breakdown-2026": [{ label: "Sugargoo official guides", href: "https://blog.sugargoo.com/" }],
+  "sugargoo-review-2026": [{ label: "Sugargoo official guides", href: "https://blog.sugargoo.com/" }, { label: "Trustpilot public review profile", href: "https://www.trustpilot.com/review/sugargoo.com" }],
+  "sugargoo-returns-refunds-storage-guide": [{ label: "Official storage guide", href: "https://blog.sugargoo.com/how-long-does-sugargoo-keep-items-in-the-warehouse/" }, { label: "Official returns guide", href: "https://blog.sugargoo.com/taobao-1688-returns-guide/" }],
+};
+
 function ArticlePage({ lang, slug }: { lang: Language; slug: string }) {
   const article = getArticle(lang, slug);
   if (!article) return null;
@@ -305,7 +314,14 @@ function ArticlePage({ lang, slug }: { lang: Language; slug: string }) {
   const related = getArticles(lang).filter((item) => item.slug !== slug).slice(0, 3);
   const visualItems = lang === "en" ? article.visual.items : d.editorialItems.map((item) => ({ label: item.title, value: item.text, note: "" }));
   const dateLabel = new Intl.DateTimeFormat(lang, { year: "numeric", month: "long", day: "numeric", timeZone: "UTC" }).format(new Date("2026-09-01T00:00:00Z"));
-  return <article className="long-article"><header><p className="eyebrow">{article.label}</p><h1>{article.title}</h1><p>{article.dek}</p><div><span>{dateLabel}</span><span>{article.readTime}</span><span>{copy[lang].independent}</span></div></header><aside><Info size={18} /><p><strong>{d.articleSourcePrefix}:</strong> {lang === "en" ? article.sourceLine : d.sourceNote}</p></aside><section className="article-visual"><p className="eyebrow">{d.articleSnapshot}</p><h2>{lang === "en" ? article.visual.title : d.editorialTitle}</h2><div className="article-visual-grid">{visualItems.map((item) => <span className="article-visual-item" key={item.label}><small>{item.label}</small><strong>{item.value}</strong>{item.note && <em>{item.note}</em>}</span>)}</div></section><div className="article-body">{article.sections.map((section, index) => <section key={section.heading}><span>0{index + 1}</span><div><h2>{section.heading}</h2>{section.body.map((body) => <p key={body}>{body}</p>)}</div></section>)}</div><section className="related-articles"><p className="eyebrow">{d.relatedTitle}</p>{related.map((item, index) => <a key={item.slug} href={localizedPath(lang, `articles/${item.slug}`)}><span>0{index + 1}</span><strong>{item.title}</strong><ArrowRight size={17} /></a>)}</section><div className="article-cta"><h2>{d.ctaTitle}</h2><p>{d.ctaText}</p><a href={localizedPath(lang, "spreadsheet")}>{d.ctaLink}<ArrowRight size={18} /></a></div></article>;
+  return <article className="long-article">
+    <header><p className="eyebrow">{article.label}</p><h1>{article.title}</h1><p>{article.dek}</p><div><span>{dateLabel}</span><span>{article.readTime}</span><span>{copy[lang].independent}</span></div></header>
+    <aside><Info size={18} /><div><p><strong>{d.articleSourcePrefix}:</strong> {lang === "en" ? article.sourceLine : d.sourceNote}</p><nav aria-label="Sources checked">{(articleSources[slug] ?? []).map((source) => <a key={source.href} href={source.href} target="_blank" rel="noopener noreferrer">{source.label}<ArrowRight size={14} /></a>)}</nav></div></aside>
+    <section className="article-visual"><p className="eyebrow">{d.articleSnapshot}</p><h2>{lang === "en" ? article.visual.title : d.editorialTitle}</h2><div className="article-visual-grid">{visualItems.map((item) => <span className="article-visual-item" key={item.label}><small>{item.label}</small><strong>{item.value}</strong>{item.note && <em>{item.note}</em>}</span>)}</div></section>
+    <div className="article-body">{article.sections.map((section, index) => <section key={section.heading}><span>0{index + 1}</span><div><h2>{section.heading}</h2>{section.body.map((body) => <p key={body}>{body}</p>)}</div></section>)}</div>
+    <section className="related-articles"><p className="eyebrow">{d.relatedTitle}</p>{related.map((item, index) => <a key={item.slug} href={localizedPath(lang, `articles/${item.slug}`)}><span>0{index + 1}</span><strong>{item.title}</strong><ArrowRight size={17} /></a>)}</section>
+    <div className="article-cta"><h2>{d.ctaTitle}</h2><p>{d.ctaText}</p><a href={localizedPath(lang, "spreadsheet")}>{d.ctaLink}<ArrowRight size={18} /></a></div>
+  </article>;
 }
 
 export function SitePage({ lang, path = "" }: { lang: Language; path?: string }) {
