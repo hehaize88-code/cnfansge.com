@@ -1,0 +1,72 @@
+import type { ArticleSlug } from "@/lib/articles";
+import type { PageSlug } from "@/lib/page-content";
+import type { ResearchBasis } from "@/lib/research-basis";
+import type { Locale } from "@/lib/site-data";
+
+type NonEnglishLocale = Exclude<Locale, "en">;
+
+export const localizedPageResearchBasis: Record<NonEnglishLocale, Record<PageSlug, ResearchBasis>> = {
+  de: {
+    spreadsheet:{checked:"1. September 2026",sources:["Live-Prüfung von Ziel, Bild und Preiskennzeichnung auf cnfansge.com","Offizielle Sugargoo-Leitfäden zu Kaufablauf und DIY-Bestellung (2025–2026)","Offizielle Sugargoo-Leitfäden zu QC und Versandschätzung (2025)"]},
+    finds:{checked:"1. September 2026",sources:["Live-Prüfung von Produktwegen und Kategorien auf cnfansge.com","Offizielle Sugargoo-Hinweise zu Kauf, QC und eingeschränkten Artikeln","Manuelle Trennung von Angebotsaussagen, Lagerbelegen und Paketentscheidungen"]},
+    guide:{checked:"1. September 2026",sources:["Taobao mit einem Sugargoo-Agenten kaufen (offiziell, August 2025)","DIY-Bestellung auf Sugargoo verwenden (offiziell, September 2025)","Sugargoo-Weiterleitungsleitfaden für Taobao, JD und 1688 (offiziell, August 2025)"]},
+    qc:{checked:"1. September 2026",sources:["Der vollständige QC-Leitfaden für Käufer im Ausland (offiziell, August 2025)","Sugargoo QC für Taobao, JD und 1688 (offiziell, September 2025)","Offizielle Hinweise nennen fünf Standardfotos und kostenlose Wiederholung unklarer Bilder; aktuelle Bestelloberfläche bestätigen"]},
+    shipping:{checked:"1. September 2026",sources:["Internationale Versandkosten mit Sugargoo schätzen (offiziell, September 2025)","So funktioniert Paketzusammenlegung bei Sugargoo (offiziell, August 2025)","Leitfäden zu Vorversandsimulation und Versandbeschränkungen (offiziell, September 2025)"]},
+    faq:{checked:"1. September 2026",sources:["Offizieller Lagerleitfaden: 100 kostenlose Tage; Verlängerung mit 8 CNY je Auftrag und Monat, bis zu 180 Tage pro Kauf beschrieben (August 2025)","Sugargoo-Leitfaden zu Rückgaben und Erstattungen (offiziell, September 2025)","Sugargoo-Leitfaden zu Zahlungsarten (offiziell, August 2025); Verfügbarkeit im Checkout prüfen"]},
+    articles:{checked:"1. September 2026",sources:["Öffentliche Hilfe- und Blogmaterialien von Sugargoo","Aktuelle Live-Prüfungen bei veränderlichen Zahlen","Öffentliche Bewertungsdaten werden getrennt von offiziellen Plattformangaben gekennzeichnet"]}
+  },
+  es: {
+    spreadsheet:{checked:"1 de septiembre de 2026",sources:["Revisión activa de destino, imagen y etiqueta de precio en cnfansge.com","Guías oficiales de Sugargoo sobre compra y pedido DIY (2025–2026)","Guías oficiales de Sugargoo sobre QC y estimador de envío (2025)"]},
+    finds:{checked:"1 de septiembre de 2026",sources:["Revisión activa de rutas y categorías en cnfansge.com","Orientación oficial de Sugargoo sobre compra, QC y artículos restringidos","Separación manual de afirmaciones del anuncio, evidencia de almacén y decisiones de paquete"]},
+    guide:{checked:"1 de septiembre de 2026",sources:["Cómo comprar en Taobao con un agente Sugargoo (oficial, agosto de 2025)","Cómo usar el pedido DIY en Sugargoo (oficial, septiembre de 2025)","Guía de reenvío Sugargoo para Taobao, JD y 1688 (oficial, agosto de 2025)"]},
+    qc:{checked:"1 de septiembre de 2026",sources:["Guía completa de QC para compradores internacionales (oficial, agosto de 2025)","QC Sugargoo para Taobao, JD y 1688 (oficial, septiembre de 2025)","La orientación oficial menciona cinco fotos estándar y repetición gratuita de imágenes poco claras; confirmar el pedido activo"]},
+    shipping:{checked:"1 de septiembre de 2026",sources:["Estimación del coste de envío internacional con Sugargoo (oficial, septiembre de 2025)","Cómo funciona la consolidación de paquetes en Sugargoo (oficial, agosto de 2025)","Guías de simulación previa y restricciones de envío (oficial, septiembre de 2025)"]},
+    faq:{checked:"1 de septiembre de 2026",sources:["Guía oficial de almacén: 100 días gratis; extensión descrita a 8 CNY por pedido y mes, hasta 180 días por compra (agosto de 2025)","Guía Sugargoo de devoluciones y reembolsos (oficial, septiembre de 2025)","Guía Sugargoo de métodos de pago (oficial, agosto de 2025); confirmar disponibilidad al pagar"]},
+    articles:{checked:"1 de septiembre de 2026",sources:["Material público de ayuda y blog de Sugargoo","Comprobaciones activas para cualquier cifra variable","Los datos públicos de reseñas se etiquetan por separado de las afirmaciones oficiales"]}
+  },
+  fr: {
+    spreadsheet:{checked:"1er septembre 2026",sources:["Contrôle actif de la destination, de l’image et du prix sur cnfansge.com","Guides officiels Sugargoo sur l’achat et la commande DIY (2025–2026)","Guides officiels Sugargoo sur le QC et l’estimation d’expédition (2025)"]},
+    finds:{checked:"1er septembre 2026",sources:["Contrôle actif des routes et catégories sur cnfansge.com","Informations officielles Sugargoo sur achat, QC et articles restreints","Séparation manuelle des affirmations vendeur, preuves d’entrepôt et décisions colis"]},
+    guide:{checked:"1er septembre 2026",sources:["Acheter sur Taobao avec un agent Sugargoo (officiel, août 2025)","Utiliser la commande DIY sur Sugargoo (officiel, septembre 2025)","Guide de transfert Sugargoo pour Taobao, JD et 1688 (officiel, août 2025)"]},
+    qc:{checked:"1er septembre 2026",sources:["Guide QC complet pour acheteurs internationaux (officiel, août 2025)","QC Sugargoo pour Taobao, JD et 1688 (officiel, septembre 2025)","Les informations officielles citent cinq photos standard et la reprise gratuite d’images peu claires ; confirmer la commande active"]},
+    shipping:{checked:"1er septembre 2026",sources:["Estimer les frais d’expédition internationale avec Sugargoo (officiel, septembre 2025)","Fonctionnement du regroupement de colis Sugargoo (officiel, août 2025)","Guides de simulation avant envoi et de restrictions (officiel, septembre 2025)"]},
+    faq:{checked:"1er septembre 2026",sources:["Guide officiel de stockage : 100 jours gratuits ; prolongation décrite à 8 CNY par commande et mois, jusqu’à 180 jours par achat (août 2025)","Guide Sugargoo des retours et remboursements (officiel, septembre 2025)","Guide Sugargoo des moyens de paiement (officiel, août 2025) ; vérifier au paiement"]},
+    articles:{checked:"1er septembre 2026",sources:["Aide publique et articles de blog Sugargoo","Contrôles actifs pour toute valeur susceptible de changer","Les données publiques d’avis restent séparées des affirmations officielles"]}
+  },
+  it: {
+    spreadsheet:{checked:"1 settembre 2026",sources:["Controllo attivo di destinazione, immagine ed etichetta prezzo su cnfansge.com","Guide ufficiali Sugargoo su acquisto e ordine DIY (2025–2026)","Guide ufficiali Sugargoo su QC e stima di spedizione (2025)"]},
+    finds:{checked:"1 settembre 2026",sources:["Controllo attivo di percorsi e categorie su cnfansge.com","Indicazioni ufficiali Sugargoo su acquisto, QC e articoli limitati","Separazione manuale di affermazioni dell’inserzione, prove di magazzino e decisioni pacco"]},
+    guide:{checked:"1 settembre 2026",sources:["Comprare su Taobao con un agente Sugargoo (ufficiale, agosto 2025)","Usare l’ordine DIY su Sugargoo (ufficiale, settembre 2025)","Guida di inoltro Sugargoo per Taobao, JD e 1688 (ufficiale, agosto 2025)"]},
+    qc:{checked:"1 settembre 2026",sources:["Guida QC completa per acquirenti internazionali (ufficiale, agosto 2025)","QC Sugargoo per Taobao, JD e 1688 (ufficiale, settembre 2025)","Le indicazioni ufficiali citano cinque foto standard e ripetizione gratuita delle immagini poco chiare; confermare l’ordine attivo"]},
+    shipping:{checked:"1 settembre 2026",sources:["Stima dei costi internazionali con Sugargoo (ufficiale, settembre 2025)","Come funziona il consolidamento dei pacchi Sugargoo (ufficiale, agosto 2025)","Guide di simulazione pre-spedizione e restrizioni (ufficiale, settembre 2025)"]},
+    faq:{checked:"1 settembre 2026",sources:["Guida ufficiale al deposito: 100 giorni gratuiti; estensione descritta a 8 CNY per ordine e mese, fino a 180 giorni per acquisto (agosto 2025)","Guida Sugargoo a resi e rimborsi (ufficiale, settembre 2025)","Guida Sugargoo ai metodi di pagamento (ufficiale, agosto 2025); verificare al checkout"]},
+    articles:{checked:"1 settembre 2026",sources:["Materiale pubblico di assistenza e blog Sugargoo","Controlli attivi per ogni valore variabile","I dati pubblici delle recensioni restano separati dalle affermazioni ufficiali"]}
+  }
+};
+
+export const localizedArticleResearchBasis: Record<NonEnglishLocale, Record<ArticleSlug, ResearchBasis>> = {
+  de: {
+    "sugargoo-spreadsheet-guide-2026":{checked:"1. September 2026",sources:["Offizielle Sugargoo-Leitfäden zu Kaufablauf, DIY-Bestellung, QC und Versandschätzung","Aktuelle Produktwege, Bilder und Preiskennzeichnungen auf cnfansge.com","Routenstatus wird bewusst von Aussagen zu Verkäufer, Material und Lagerqualität getrennt"]},
+    "sugargoo-qc-photo-checklist":{checked:"1. September 2026",sources:["Offizielle Sugargoo-QC-Leitfäden vom August und September 2025","Öffentliche Hinweise beschreiben fünf Standardfotos und kostenlose Wiederholung unklarer Bilder","Aktueller Leistungsumfang und optionale Fotografie müssen in der Live-Bestellung bestätigt werden"]},
+    "sugargoo-shipping-weight-guide-2026":{checked:"1. September 2026",sources:["Offizielle Leitfäden zu Versandschätzer, Konsolidierung und Vorversandsimulation","Offizielle Hinweise zu eingeschränkten Artikeln und internationalem Versand","Kein Routenpreis, Divisor oder Lieferzeitraum wird als dauerhaft behandelt"]},
+    "sugargoo-review-2026":{checked:"1. September 2026",sources:["Offizielle Leitfäden zu Dienst, Kauf, QC, Lagerung, Versand und Erstattung","Öffentliches Trustpilot-Profil und Bewertungsverteilung, geprüft am 1. September 2026","Positive und negative Themen wurden gruppiert; einzelne Anschuldigungen gelten nicht als bestätigte Fakten"],metrics:[{label:"Trustpilot-Wert",value:"3.4 / 5"},{label:"Öffentliche Bewertungen",value:"641"},{label:"Anteil 5 Sterne",value:"60%"},{label:"Anteil 1 Stern",value:"19%"}]}
+  },
+  es: {
+    "sugargoo-spreadsheet-guide-2026":{checked:"1 de septiembre de 2026",sources:["Guías oficiales Sugargoo sobre compra, pedido DIY, QC y estimador","Rutas activas, imágenes y etiquetas de precio en cnfansge.com","El estado de la ruta se separa de afirmaciones sobre vendedor, material y calidad de almacén"]},
+    "sugargoo-qc-photo-checklist":{checked:"1 de septiembre de 2026",sources:["Guías oficiales de QC publicadas en agosto y septiembre de 2025","La orientación pública describe cinco fotos estándar y repetición gratuita de imágenes poco claras","El alcance actual y la fotografía opcional deben confirmarse en el pedido activo"]},
+    "sugargoo-shipping-weight-guide-2026":{checked:"1 de septiembre de 2026",sources:["Guías oficiales de estimación, consolidación y simulación previa","Orientación oficial sobre artículos restringidos y envío internacional","Ningún precio, divisor o plazo se trata como permanente"]},
+    "sugargoo-review-2026":{checked:"1 de septiembre de 2026",sources:["Guías oficiales de servicio, compra, QC, almacén, envío y reembolso","Perfil público de Trustpilot y distribución revisados el 1 de septiembre de 2026","Temas positivos y negativos agrupados; las acusaciones individuales no se trataron como hechos"],metrics:[{label:"Nota Trustpilot",value:"3.4 / 5"},{label:"Reseñas públicas",value:"641"},{label:"Proporción 5 estrellas",value:"60%"},{label:"Proporción 1 estrella",value:"19%"}]}
+  },
+  fr: {
+    "sugargoo-spreadsheet-guide-2026":{checked:"1er septembre 2026",sources:["Guides officiels Sugargoo sur achat, DIY, QC et estimation","Routes actives, images et prix indicatifs sur cnfansge.com","Le statut de route reste séparé des affirmations vendeur, matière et qualité d’entrepôt"]},
+    "sugargoo-qc-photo-checklist":{checked:"1er septembre 2026",sources:["Guides QC officiels publiés en août et septembre 2025","Les informations publiques décrivent cinq photos standard et la reprise gratuite des images peu claires","Le périmètre actuel et la photographie facultative doivent être confirmés dans la commande"]},
+    "sugargoo-shipping-weight-guide-2026":{checked:"1er septembre 2026",sources:["Guides officiels d’estimation, regroupement et simulation avant envoi","Informations officielles sur articles restreints et expédition internationale","Aucun tarif, diviseur ou délai n’est traité comme permanent"]},
+    "sugargoo-review-2026":{checked:"1er septembre 2026",sources:["Guides officiels de service, achat, QC, stockage, expédition et remboursement","Profil public Trustpilot et distribution vérifiés le 1er septembre 2026","Thèmes positifs et négatifs regroupés ; les allégations individuelles ne sont pas des faits vérifiés"],metrics:[{label:"Note Trustpilot",value:"3.4 / 5"},{label:"Avis publics",value:"641"},{label:"Part 5 étoiles",value:"60%"},{label:"Part 1 étoile",value:"19%"}]}
+  },
+  it: {
+    "sugargoo-spreadsheet-guide-2026":{checked:"1 settembre 2026",sources:["Guide ufficiali Sugargoo su acquisto, DIY, QC e stima","Percorsi attivi, immagini e prezzi indicativi su cnfansge.com","Lo stato del percorso resta separato da affermazioni su venditore, materiale e qualità di magazzino"]},
+    "sugargoo-qc-photo-checklist":{checked:"1 settembre 2026",sources:["Guide QC ufficiali pubblicate in agosto e settembre 2025","Le indicazioni pubbliche descrivono cinque foto standard e ripetizione gratuita delle immagini poco chiare","Ambito attuale e fotografia opzionale devono essere confermati nell’ordine"]},
+    "sugargoo-shipping-weight-guide-2026":{checked:"1 settembre 2026",sources:["Guide ufficiali su stima, consolidamento e simulazione pre-spedizione","Indicazioni ufficiali su articoli limitati e spedizione internazionale","Nessun prezzo, divisore o tempo viene trattato come permanente"]},
+    "sugargoo-review-2026":{checked:"1 settembre 2026",sources:["Guide ufficiali su servizio, acquisto, QC, deposito, spedizione e rimborso","Profilo pubblico Trustpilot e distribuzione controllati il 1 settembre 2026","Temi positivi e negativi raggruppati; le accuse individuali non sono trattate come fatti"],metrics:[{label:"Punteggio Trustpilot",value:"3.4 / 5"},{label:"Recensioni pubbliche",value:"641"},{label:"Quota 5 stelle",value:"60%"},{label:"Quota 1 stella",value:"19%"}]}
+  }
+};
