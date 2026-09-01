@@ -14,6 +14,7 @@ const fixed:Record<Language,string[]>={en:["FIELD CARD / 001","KEEP OR REMOVE?",
 export function HomePage({ lang }: { lang: Language }) {
   const t = ui[lang];
   const cards = articleCards[lang];
+  const evidenceLink={en:"Review the on-site product evidence table",de:"Produkt-Nachweistabelle auf dieser Website prüfen",es:"Revisar la tabla de pruebas de producto del sitio",fr:"Consulter le tableau de preuves produit du site",it:"Consulta la tabella delle prove prodotto del sito"}[lang];
   const tagMap:Record<string,Record<Language,string>>={Latest:{en:"Latest",de:"Neu",es:"Nuevo",fr:"Nouveau",it:"Nuovo"},Popular:{en:"Popular",de:"Beliebt",es:"Popular",fr:"Populaire",it:"Popolare"},"New route":{en:"New route",de:"Neue Route",es:"Ruta nueva",fr:"Nouveau lien",it:"Nuova rotta"},Value:{en:"Value",de:"Preiswert",es:"Valor",fr:"Bon prix",it:"Conveniente"}};
   return <main className="home-page">
     <SiteHeader lang={lang} />
@@ -31,9 +32,9 @@ export function HomePage({ lang }: { lang: Language }) {
         <div className="hero-proof">{t.board.map((item: string, i: number) => <span key={item}><b>0{i+1}</b>{item}</span>)}</div>
       </div>
       <aside className="hero-showcase" aria-label="Featured finds">
-        <a className="showcase-card showcase-main" href={products[0].href} target="_blank" rel="noopener noreferrer"><img src={products[0].image} alt={products[0].name} width="560" height="560" /><span>{tagMap[products[0].tag][lang]}</span><div><b>{products[0].name}</b><strong>{products[0].price}</strong></div></a>
-        <a className="showcase-card showcase-small first" href={products[1].href} target="_blank" rel="noopener noreferrer"><img src={products[1].image} alt={products[1].name} width="260" height="260" /><b>{products[1].name}</b></a>
-        <a className="showcase-card showcase-small second" href={products[2].href} target="_blank" rel="noopener noreferrer"><img src={products[2].image} alt={products[2].name} width="260" height="260" /><b>{products[2].name}</b></a>
+        <a className="showcase-card showcase-main" href={products[0].href} target="_blank" rel="noopener noreferrer"><img src={products[0].image} alt={products[0].name} width="560" height="560" fetchPriority="high" decoding="async" /><span>{tagMap[products[0].tag][lang]}</span><div><b>{products[0].name}</b><strong>{products[0].price}</strong></div></a>
+        <a className="showcase-card showcase-small first" href={products[1].href} target="_blank" rel="noopener noreferrer"><img src={products[1].image} alt={products[1].name} width="260" height="260" loading="lazy" decoding="async" /><b>{products[1].name}</b></a>
+        <a className="showcase-card showcase-small second" href={products[2].href} target="_blank" rel="noopener noreferrer"><img src={products[2].image} alt={products[2].name} width="260" height="260" loading="lazy" decoding="async" /><b>{products[2].name}</b></a>
         <a className="qc-orbit" href={`/${lang}/qc`}><b>QC</b><span>{t.check}</span><i>→</i></a>
       </aside>
     </section>
@@ -42,8 +43,8 @@ export function HomePage({ lang }: { lang: Language }) {
 
     <section className="finds section shell">
       <div className="section-heading"><div><span className="kicker">{t.findsKicker}</span><h2>{t.findsTitle}</h2></div><a href="https://cnfansge.com/AllProducts/" target="_blank" rel="noopener noreferrer">{t.browse} <span>↗</span></a></div>
-      <div className="product-grid">{products.map((product) => <a className="product-card" href={product.href} target="_blank" rel="noopener noreferrer" key={product.name}><div className="product-image"><img src={product.image} alt={product.name} width="480" height="480" loading="lazy" /><span>{tagMap[product.tag][lang]}</span></div><div className="product-data"><div><h3>{product.name}</h3><i>{t.inspect}</i></div><b>{product.price}</b></div></a>)}</div>
-      <p className="price-note">{t.priceNote}</p>
+      <div className="product-grid">{products.map((product) => <a className="product-card" href={product.href} target="_blank" rel="noopener noreferrer" key={product.name}><div className="product-image"><img src={product.image} alt={product.name} width="480" height="480" loading="lazy" decoding="async" /><span>{tagMap[product.tag][lang]}</span></div><div className="product-data"><div><h3>{product.name}</h3><i>{t.inspect}</i></div><b>{product.price}</b></div></a>)}</div>
+      <p className="price-note">{t.priceNote}</p><a className="internal-sheet-link" href={`/${lang}/spreadsheet`}>{evidenceLink} →</a>
     </section>
 
     <section className="service-section"><div className="service-grid shell">
