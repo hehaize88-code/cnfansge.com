@@ -22,7 +22,7 @@ export const germanArticles: Record<ArticleSlug, Article> = {
       ]},
       { heading: "Vor dem Preisvergleich immer die Live-Route öffnen", paragraphs: [
         "Verkäuferseiten ändern sich. Ein Tabellenpreis kann nur für die billigste Variante oder eine alte Aktion gelten. Prüfe Kanal, Artikel-ID, Farbe, Größe, Version und aktuelle Beschreibung.",
-        "Vergleiche nicht ausschließlich umgerechnete USD-Preise. Behalte den CNY-Betrag und das Prüfdatum. Die OOPBuy-Vereinbarung nennt derzeit eine Agent-Servicegebühr von 8 %, doch Checkout und aktuelle Bedingungen sind maßgeblich.",
+        "Vergleiche nicht ausschließlich umgerechnete USD-Preise. Behalte den CNY-Betrag und das Prüfdatum. Die am 1. September 2026 geprüften Gebührenangaben widersprechen sich: Die Vereinbarung bezieht 8 % auf Versandkosten, Service & Fees nennt keine weiteren Gebühren außerhalb der aufgeführten Kategorien und Google Play wirbt mit keiner Servicegebühr. Wende deshalb keinen festen Prozentsatz an, sondern prüfe Vertrag, Checkout und eine schriftliche Supportbestätigung.",
         "Eine gute Zeile enthält ID, Kategorie, exakte Option, Preis, sichtbaren Inlandsversand, Gewichtsquelle, Prüfdatum und Risikohinweis. So lässt sie sich später nachvollziehbar warten."
       ]},
       { heading: "Vor der Bestellung eine Gesamtkostenspanne bilden", paragraphs: [
@@ -140,12 +140,12 @@ export const germanArticles: Record<ArticleSlug, Article> = {
   "oopbuy-fees-total-cost": withSources("oopbuy-fees-total-cost", {
     eyebrow: "OOPBuy Gebühren",
     title: "OOPBuy Gebühren erklärt: Gesamtkosten vor dem Kauf kalkulieren",
-    description: "Produktpreis, veröffentlichte Agent-Gebühr, Inlandsversand, Rückgabe, Zahlung und internationale Fracht getrennt berechnen.",
+    description: "Produktpreis, widersprüchliche öffentliche Gebührenangaben, Inlandsversand, Rückgabe, Zahlung und internationale Fracht getrennt berechnen.",
     read: "12 Min. Lesezeit",
     updated: "1. September 2026",
     sections: [
-      { heading: "Mit der veröffentlichten Agent-Gebühr beginnen", paragraphs: [
-        "Die aktuelle OOPBuy-Nutzungsvereinbarung nennt 8 % des ausgewählten Warenkaufpreises als Agent-Servicegebühr. Der Live-Checkout bleibt wegen Änderungen und Aktionen maßgeblich.",
+      { heading: "Mit dem Widerspruch in den Gebührenangaben beginnen", paragraphs: [
+        "Die am 1. September 2026 geprüften öffentlichen OOPBuy-Angaben ergeben keine einheitliche Gebührenregel. Die Vereinbarung beschreibt 8 % der Versandkosten, Service & Fees nennt außerhalb der aufgeführten Kostenarten keine weiteren Gebühren und die aktuelle Google-Play-Beschreibung spricht von keiner Servicegebühr. Daraus darf keine feste Gebühr auf den Warenpreis abgeleitet werden.",
         "Trenne diese Gebühr von Zahlungsanbieter, Verkäuferlieferung, Lageroptionen und internationaler Fracht. Eine einzige Prozentzahl für alle Kosten ist irreführend.",
         "Notiere CNY-Quellpreis, genaue Option und Checkout-Betrag. Unterschiede können aus Inlandsversand, Service, Umrechnung oder Variantenpreis entstehen."
       ]},
@@ -177,7 +177,7 @@ export const germanArticles: Record<ArticleSlug, Article> = {
       { heading: "Zwei OOPBuy-Bestellungen fair vergleichen", paragraphs: [
         "Nutze dieselbe Währung und Kostengrenze: Lagerkosten, Paketkosten oder gelieferte Kosten. Ein reiner Produktpreis ist nicht mit einem vollständigen Endbetrag vergleichbar.",
         "Trenne feste und variable Kosten. Gemeinsame Fracht kann nach Gewicht, Volumenbeitrag oder Warenwert verteilt werden; die Methode muss offengelegt werden.",
-        "Datiere Quotes und Coupons, speichere Rückerstattungen als Korrektur und kennzeichne das Vertrauen in jede Zahl. Aktuelle 8 %, 5 CNY und Routenpreise sind Referenzen, keine ewigen Garantien.",
+        "Datiere Quotes und Coupons, speichere Rückerstattungen als Korrektur und kennzeichne das Vertrauen in jede Zahl. Die widersprüchlichen Gebührenangaben, 5 CNY und Routenpreise sind datierte Referenzen, keine ewigen Garantien.",
         "Bewahre Screenshots von Checkout und finalem Versandangebot auf, damit spätere Abweichungen anhand konkreter Belege statt aus der Erinnerung erklärt werden können.",
         "Aktualisiere das Arbeitsblatt bei Änderungen an Richtlinien oder Linien. Ein alter Vergleich bleibt als Verlauf nützlich, darf aber nicht als aktueller Preis erscheinen.",
         "Vergleiche am Ende den Betrag pro tatsächlich brauchbarem Artikel und halte fest, ob Steuern, Versicherung oder Aktionsrabatte bereits enthalten sind."
@@ -198,7 +198,7 @@ export const germanArticles: Record<ArticleSlug, Article> = {
       ]},
       { heading: "Was der offizielle OOPBuy-Ablauf anbietet", paragraphs: [
         "Die Anleitung beschreibt Produktlink, Kauf, Lagereingang, QC, Lagerung und Paketeinreichung. Die Schutzseite nennt Inspektion und 90 Tage kostenlose Lagerung.",
-        "Rückgaben sollen standardmäßig innerhalb von fünf Tagen nach Einlagerung beantragt werden; die Vereinbarung nennt aktuell 8 % Agent-Gebühr.",
+        "Rückgaben sollen standardmäßig innerhalb von fünf Tagen nach Einlagerung beantragt werden; bei den Gebühren widersprechen sich die aktuell veröffentlichten Quellen und müssen auf Vertrag-, Checkout- und Supportebene geklärt werden.",
         "Auch Grenzen sind veröffentlicht: eingeschränkte Inhalte, keine Zollgarantie und linienabhängige Entschädigung. Eine faire Bewertung muss Vorteile und Grenzen nennen."
       ]},
       { heading: "Trustpilot zeigt aktuell eine wichtige Warnung", paragraphs: [

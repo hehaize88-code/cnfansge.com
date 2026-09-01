@@ -16,7 +16,7 @@ export const frenchArticles: Record<ArticleSlug, Article> = {
       ]},
       { heading: "Toujours ouvrir la route active avant de comparer", paragraphs: [
         "Les pages vendeur évoluent. Le prix enregistré peut viser la variante la moins chère ou une ancienne promotion. Vérifiez le canal, l'identifiant, la couleur, la taille, la version et la description actuelle.",
-        "Ne comparez pas uniquement les conversions en dollars. Conservez le montant CNY et la date. L'accord OOPBuy indique actuellement 8 % de frais d'achat assisté, mais le checkout et les conditions en vigueur font foi.",
+        "Ne comparez pas uniquement les conversions en dollars. Conservez le montant CNY et la date. Les sources vérifiées le 1er septembre 2026 se contredisent : l'accord lie 8 % au coût d'expédition, Service & Fees n'annonce aucun autre frais hors des catégories indiquées et Google Play affirme qu'il n'y a pas de frais de service. N'appliquez pas un taux fixe ; confirmez accord, checkout et support par écrit.",
         "Une ligne utile contient l'ID, la catégorie, l'option exacte, le prix, la livraison locale visible, la source du poids, la date et une note de risque. Elle peut ainsi être auditée et mise à jour."
       ]},
       { heading: "Former une fourchette de coût total avant l'achat", paragraphs: [
@@ -127,10 +127,10 @@ export const frenchArticles: Record<ArticleSlug, Article> = {
   }),
   "oopbuy-fees-total-cost": withSources("oopbuy-fees-total-cost", {
     eyebrow: "Frais OOPBuy", title: "Frais OOPBuy : calculer le coût total avant d'acheter",
-    description: "Séparer prix, frais d'agent publiés, livraison locale, retour, paiement et fret international.", read: "12 min de lecture", updated: "1er septembre 2026",
+    description: "Séparer prix, déclarations publiques contradictoires sur les frais, livraison locale, retour, paiement et fret international.", read: "12 min de lecture", updated: "1er septembre 2026",
     sections: [
-      { heading: "Commencer par les frais d'agent publiés", paragraphs: [
-        "L'accord utilisateur actuel OOPBuy indique 8 % du prix d'achat sélectionné comme frais d'achat assisté. Le checkout en direct reste décisif en cas de changement ou promotion.",
+      { heading: "Commencer par le conflit entre les sources de frais", paragraphs: [
+        "Les documents publics OOPBuy vérifiés le 1er septembre 2026 ne donnent pas une règle unique. L'accord décrit 8 % du coût d'expédition, Service & Fees n'annonce aucun autre frais hors des catégories indiquées et la description Google Play actuelle affirme qu'il n'y a pas de frais de service. Il serait faux d'en déduire 8 % du prix du produit.",
         "Séparez ces frais du paiement, de la livraison vendeur, des services d'entrepôt et du fret international. Un pourcentage unique pour tout le coût est trompeur.",
         "Notez prix CNY, option exacte et montant du checkout. Un écart peut provenir de la livraison locale, du service, du change ou de la variante."
       ]},
@@ -162,7 +162,7 @@ export const frenchArticles: Record<ArticleSlug, Article> = {
       { heading: "Comparer équitablement deux commandes OOPBuy", paragraphs: [
         "Utilisez la même monnaie et la même frontière : coût à l'entrepôt, coût du colis ou coût livré. Ne comparez pas un prix produit à un total final.",
         "Séparez coûts fixes et variables. Répartissez le fret commun par poids, volume ou valeur et indiquez la méthode pour rendre le calcul reproductible.",
-        "Datez devis et coupons, enregistrez les remboursements comme ajustements et marquez le niveau de confiance. Les 8 %, 5 CNY et routes actuels ne sont pas des garanties éternelles.",
+        "Datez devis et coupons, enregistrez les remboursements comme ajustements et marquez le niveau de confiance. Les déclarations contradictoires sur les frais, les 5 CNY et les routes sont des références datées, pas des garanties éternelles.",
         "Conservez les captures du checkout et du devis final afin d'expliquer les écarts ultérieurs sans dépendre de votre mémoire.",
         "Actualisez la feuille lorsque politiques ou lignes changent : un ancien calcul reste un historique, pas un prix en vigueur.",
         "Terminez par le coût de chaque article réellement utilisable et précisez si taxes, assurance ou remises étaient déjà comprises."
@@ -180,7 +180,7 @@ export const frenchArticles: Record<ArticleSlug, Article> = {
       ]},
       { heading: "Ce que propose le parcours officiel OOPBuy", paragraphs: [
         "Le guide décrit lien produit, achat, entrée, QC, stockage et soumission du colis. La page de protection annonce inspection et 90 jours gratuits.",
-        "Les retours ordinaires sont annoncés sous cinq jours après l'entrée ; l'accord indique actuellement 8 % de frais d'agent.",
+        "Les retours ordinaires sont annoncés sous cinq jours après l'entrée ; les sources actuelles sur les frais se contredisent et doivent être confirmées dans l'accord, le checkout et une réponse écrite du support.",
         "Des limites sont aussi publiées : contenus restreints, absence de garantie douanière et indemnisation selon la ligne. Un avis juste cite avantages et limites."
       ]},
       { heading: "Trustpilot affiche actuellement un avertissement important", paragraphs: [

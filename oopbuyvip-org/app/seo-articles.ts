@@ -11,6 +11,9 @@ export type ArticleSlug = (typeof articleSlugs)[number];
 export type ArticleSource = {
   label: string;
   note: string;
+  kind?: "official" | "customer";
+  checked?: string;
+  reference?: string;
 };
 
 export type Article = {
@@ -26,21 +29,49 @@ export type Article = {
 const officialGuide = {
   label: "OOPBuy Beginner's Guide",
   note: "Official ordering, warehouse, parcel submission and storage workflow.",
+  kind: "official" as const,
+  checked: "1 September 2026",
+  reference: "m.oopbuy.com/pages/article-details/index?id=1739829963819945985",
 };
 
 const officialAgreement = {
   label: "OOPBuy User Registration Agreement",
-  note: "Official service scope, shopping-agent fee and user responsibilities.",
+  note: "Official service scope and responsibilities; its indexed text ties an 8% platform service fee to shipping cost.",
+  kind: "official" as const,
+  checked: "1 September 2026",
+  reference: "m.oopbuy.com/notice/1772892211576897537",
 };
 
 const officialReturns = {
   label: "OOPBuy Returns and Refunds",
   note: "Official return and exchange request window after warehouse stock-in.",
+  kind: "official" as const,
+  checked: "1 September 2026",
+  reference: "m.oopbuy.com/notice/1740656181012172801",
 };
 
 const officialEstimator = {
   label: "OOPBuy Shipping Estimation",
   note: "Official destination- and parcel-dependent route estimator.",
+  kind: "official" as const,
+  checked: "1 September 2026",
+  reference: "oopbuy.com · live shipping estimation tool",
+};
+
+const officialServiceFees = {
+  label: "OOPBuy Service & Fees",
+  note: "Official page saying no other charges apply beyond product, international shipping, customs clearance and selected value-added services.",
+  kind: "official" as const,
+  checked: "1 September 2026",
+  reference: "m.oopbuy.com/notice/1740653781924810754",
+};
+
+const officialGooglePlay = {
+  label: "OOPBuy Google Play listing",
+  note: "Current official app description says purchasing, warehousing and shipping are offered with no service fee.",
+  kind: "official" as const,
+  checked: "1 September 2026",
+  reference: "play.google.com/store/apps/details?id=com.oopbuy.oopbuy",
 };
 
 export const englishArticles: Record<ArticleSlug, Article> = {
@@ -63,14 +94,14 @@ export const englishArticles: Record<ArticleSlug, Article> = {
         heading: "Open the live item route before you compare prices",
         paragraphs: [
           "Seller pages change. A price visible in a spreadsheet may apply only to the cheapest option, an old promotion or a small accessory rather than the pictured product. Open the current route and match the channel, item ID, selected color, size, version and seller description. If a page redirects, shows a different item or removes the option you wanted, treat the spreadsheet entry as expired until it is reviewed again.",
-          "Do not compare products by converted USD price alone. Keep the original CNY amount visible and note when you checked it. Currency conversion, options and platform exchange-rate handling can all change the displayed total. OOPBuy's registration agreement currently describes a shopping-agent service fee calculated at 8% of the selected goods purchase price. Because terms can change, the live checkout and agreement should remain the final source rather than a static percentage copied forever into a spreadsheet.",
+          "Do not compare products by converted USD price alone. Keep the original CNY amount visible and note when you checked it. Currency conversion, options and platform exchange-rate handling can all change the displayed total. OOPBuy's public fee statements checked on 1 September 2026 conflict: the registration agreement ties an 8% platform service fee to shipping cost, Service & Fees says there are no other charges beyond its listed categories, and the current Google Play description says no service fee. A spreadsheet should flag that conflict and send the buyer back to the current agreement, live checkout and written support confirmation instead of applying one fixed percentage.",
           "A useful row contains a source ID, category, exact option, source price, stated domestic shipping if visible, weight clue, date checked and a short risk note. For example, a shoe with a rigid box deserves a packaging note; an electronic item needs voltage and connector checks; a garment needs a measurement plan. That context is more valuable than an unexplained score. It also makes future maintenance easier because an editor can see what needs to be rechecked."
         ],
       },
       {
         heading: "Build a total-cost range before placing the order",
         paragraphs: [
-          "The product price is only the first layer. A realistic plan can include the seller price, domestic delivery to the OOPBuy warehouse, the current shopping-agent fee, optional warehouse services, return or exchange costs, international freight, payment or currency-conversion effects and possible destination taxes. Not every order pays every layer, but ignoring them produces the familiar situation in which a cheap find becomes an expensive parcel.",
+          "The product price is only the first layer. A realistic plan can include the seller price, domestic delivery to the OOPBuy warehouse, every fee actually shown in the current checkout, optional warehouse services, return or exchange costs, international freight, payment or currency-conversion effects and possible destination taxes. Not every order pays every layer, but ignoring them produces the familiar situation in which a cheap find becomes an expensive parcel.",
           "Make a low and high estimate instead of pretending one number is exact. The low case can use the stated item weight and minimal packaging. The high case should allow for a heavier warehouse measurement, rigid packaging, volume-based charging or a less favorable route. OOPBuy provides an official shipping estimator, but its result depends on destination and parcel data. Before warehouse measurement, it is a planning tool rather than a guaranteed invoice.",
           "The biggest spreadsheet improvement is often a landed-cost column with a confidence label. Mark source prices as current, weights as seller-stated or warehouse-measured, and shipping as pre-order estimate or live parcel quote. This prevents unlike numbers from being treated as equally reliable. It also lets readers compare two items on total purchasing risk rather than choosing the lowest headline price."
         ],
@@ -100,7 +131,7 @@ export const englishArticles: Record<ArticleSlug, Article> = {
         ],
       },
     ],
-    sources: [officialGuide, officialAgreement, officialReturns, officialEstimator],
+    sources: [officialGuide, officialAgreement, officialServiceFees, officialGooglePlay, officialReturns, officialEstimator],
   },
   "oopbuy-qc-checklist": {
     eyebrow: "OOPBuy QC photos",
@@ -265,15 +296,15 @@ export const englishArticles: Record<ArticleSlug, Article> = {
   "oopbuy-fees-total-cost": {
     eyebrow: "OOPBuy fees",
     title: "OOPBuy Fees Explained: How to Estimate the Total Cost Before You Buy",
-    description: "A transparent model for OOPBuy product price, the published shopping-agent fee, domestic delivery, returns, payment conversion and international freight.",
+    description: "A transparent model for OOPBuy product price, conflicting public fee statements, domestic delivery, returns, payment conversion and international freight.",
     read: "12 min read",
     updated: "1 September 2026",
     sections: [
       {
-        heading: "Start with the published shopping-agent fee",
+        heading: "Start by acknowledging the published fee conflict",
         paragraphs: [
-          "OOPBuy's current User Registration Agreement states that the platform service fee for agent shopping is calculated at 8% of the purchase price of the selected goods, with exchange-rate considerations described in the same terms. That is a useful published reference, but the checkout remains the final amount because agreements, promotions, currency handling and eligible services can change.",
-          "A fee article should date this information rather than repeating 8% forever. It should also distinguish the platform's agent-shopping charge from payment-provider fees, seller delivery, warehouse options and international freight. Combining unrelated layers into one percentage produces misleading comparisons.",
+          "OOPBuy's public materials checked on 1 September 2026 do not present one consistent fee rule. The indexed User Registration Agreement describes an 8% platform service fee calculated from shipping cost. The official Service & Fees page says the platform charges no other fees beyond product fees, international shipping, customs clearance and any selected value-added services. The current official Google Play description goes further and says the service has no service fee. These statements cannot responsibly be collapsed into an 8% charge on the goods price.",
+          "Treat the discrepancy as a fact that needs verification, not as permission to choose the most convenient wording. Before payment, compare the current agreement with the live checkout and ask support to confirm the fee basis in writing if any charge is unclear. Record the date, selected service and exact line item. A future promotion, contract revision or account-specific display may change the result, so the amount shown for the actual transaction is stronger evidence than an undated article.",
           "Before placing an order, write down the source price in CNY, the selected option and the amount displayed at checkout. If the two differ, investigate whether the difference comes from domestic shipping, a service charge, exchange-rate handling or the option itself. Do not assume every difference is hidden commission."
         ],
       },
@@ -281,7 +312,7 @@ export const englishArticles: Record<ArticleSlug, Article> = {
         heading: "Domestic seller delivery is part of the product stage",
         paragraphs: [
           "Many marketplace listings charge delivery from the seller to the OOPBuy warehouse. This is separate from international shipping. Some sellers include domestic delivery, while others calculate it by item or destination. The live listing and checkout should show the current amount where available.",
-          "When comparing two sellers, add source price, domestic freight and the current agent fee before deciding which is cheaper. A slightly higher item price with lower domestic delivery can produce a lower warehouse cost. Availability and return cooperation may matter more than a small headline difference.",
+          "When comparing two sellers, add source price, domestic freight and only the service charges actually displayed for the current order before deciding which is cheaper. A slightly higher item price with lower domestic delivery can produce a lower warehouse cost. Availability and return cooperation may matter more than a small headline difference.",
           "Record the domestic amount separately in a spreadsheet. That makes later cost analysis possible and prevents it from being mistaken for international freight."
         ],
       },
@@ -312,7 +343,7 @@ export const englishArticles: Record<ArticleSlug, Article> = {
       {
         heading: "A complete OOPBuy cost formula",
         paragraphs: [
-          "Use this planning model: selected seller price plus domestic delivery plus the current shopping-agent fee plus payment or conversion effects plus optional warehouse services plus return or exchange costs if triggered plus international freight plus insurance plus possible destination charges. Not every order includes every line, but every line should be considered.",
+          "Use this planning model: selected seller price plus domestic delivery plus any service charge explicitly shown in the current checkout plus payment or conversion effects plus optional warehouse services plus return or exchange costs if triggered plus international freight plus insurance plus possible destination charges. Not every order includes every line, but every line should be considered.",
           "Calculate a confirmed subtotal and an estimated subtotal. Confirmed values come from the live seller page, checkout or warehouse record. Estimated values include pre-order shipping, future route availability and possible destination charges. Never add both a provisional estimate and its later final replacement.",
           "The best comparison is total cost per useful item, not simply shipping per kilogram. An item that fails QC, needs an exchange or creates excessive parcel volume can make a cheap haul less efficient. A transparent cost sheet helps readers decide before sunk costs take over."
         ],
@@ -325,12 +356,14 @@ export const englishArticles: Record<ArticleSlug, Article> = {
           "Date every quote and keep promotional discounts in their own field. A shipping coupon can improve one order without proving that the underlying route is generally cheaper. Likewise, a refund after final measurement should replace the provisional freight value instead of being counted as unrelated savings.",
           "Use a confidence column. Mark live checkout values as confirmed, seller weights as low confidence, warehouse weights as medium or high confidence, and customs charges as destination-dependent. This keeps estimated savings from being presented as cash already saved.",
           "A fair comparison also needs the same outcome. If one order was returned, another shipped without boxes and a third included insurance, their totals answer different questions. Keep failed-purchase costs visible rather than deleting them from the analysis. The cheapest successful order may not belong to the platform with the lowest advertised fee; seller quality, QC timing and route fit can matter more.",
-          "Review the formula immediately before payment. The published 8% agent-shopping fee, 5 CNY customer-responsible return or exchange service fee, payment methods and route prices are current references as of this article's update date, not permanent guarantees. Where the live checkout differs, the live amount should replace the article. Save that final breakdown with the order so a later refund or adjustment can be reconciled correctly."
+          "Review the formula immediately before payment. The conflicting public fee statements, the published 5 CNY customer-responsible return or exchange service fee, payment methods and route prices are dated references rather than permanent guarantees. Where the live checkout differs, preserve the discrepancy and use the transaction-specific amount after confirming it. Save that final breakdown with the order so a later refund or adjustment can be reconciled correctly."
         ],
       },
     ],
     sources: [
       officialAgreement,
+      officialServiceFees,
+      officialGooglePlay,
       {
         label: "OOPBuy Return and Exchange Service",
         note: "Official published return/exchange cost components and 5 CNY service fee.",
@@ -361,7 +394,7 @@ export const englishArticles: Record<ArticleSlug, Article> = {
         heading: "What the official OOPBuy workflow actually offers",
         paragraphs: [
           "OOPBuy's beginner guide describes pasting or selecting a marketplace product, purchasing it, waiting for warehouse intake, reviewing stored goods and submitting selected items as a package. The official platform-protection page advertises inspection after receipt and 90 days of free storage. Product pages also show estimated weights, dimensions or QC areas where available.",
-          "The published returns information says standard requests should be initiated within five days after stock-in. The registration agreement currently describes an 8% shopping-agent service fee. The shipping estimator asks for destination and parcel information rather than promising one global price. These are concrete features a reviewer can verify without relying on influencer claims.",
+          "The published returns information says standard requests should be initiated within five days after stock-in. The current public fee materials conflict, so a review should report the disagreement and rely on transaction-level confirmation rather than inventing one universal percentage. The shipping estimator asks for destination and parcel information rather than promising one global price. These are concrete features a reviewer can verify without relying on influencer claims.",
           "Important limits are also published. Prohibited-item and parcel agreements restrict certain contents, customs outcomes are not guaranteed, and compensation depends on route terms. A review that mentions only benefits while hiding these limits is incomplete."
         ],
       },
@@ -417,10 +450,16 @@ export const englishArticles: Record<ArticleSlug, Article> = {
       {
         label: "Trustpilot: OOPBuy",
         note: "Current review count, rating status, guideline warning and displayed review distribution.",
+        kind: "customer",
+        checked: "1 September 2026",
+        reference: "trustpilot.com/review/oopbuy.com",
       },
       {
         label: "Reddit: My OOPBuy Experience (Good and bad)",
         note: "A detailed self-reported purchase and delivery experience; anecdotal, not independently verified.",
+        kind: "customer",
+        checked: "1 September 2026",
+        reference: "Reddit · self-reported OOPBuy experience discussed in article",
       },
     ],
   },

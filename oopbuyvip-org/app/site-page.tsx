@@ -20,6 +20,7 @@ import {
   type ArticleSlug,
   type Language,
 } from "./content";
+import { ProductIndex } from "./product-index";
 
 const SITE = "https://oopbuyvip.org";
 const sourceBoundary = {
@@ -38,25 +39,55 @@ const sourceHeadings = {
   it: ["Fonti consultate", "Materiale ufficiale verificato il 1 settembre 2026. Condizioni e importi live possono cambiare."],
 } as const;
 
+const sourceKinds = {
+  en: { official: "Official source", customer: "Customer-report source", checked: "Checked" },
+  de: { official: "Offizielle Quelle", customer: "Kundenbericht", checked: "Geprüft" },
+  es: { official: "Fuente oficial", customer: "Informe de cliente", checked: "Revisado" },
+  fr: { official: "Source officielle", customer: "Témoignage client", checked: "Vérifié" },
+  it: { official: "Fonte ufficiale", customer: "Report cliente", checked: "Verificato" },
+} as const;
+
 const officialSources = {
-  guide: { label: "OOPBuy Beginner's Guide" },
-  guarantee: { label: "OOPBuy Platform Guarantee" },
-  returns: { label: "OOPBuy Returns and Refunds" },
-  agreement: { label: "OOPBuy User Registration Agreement" },
-  estimator: { label: "OOPBuy Shipping Estimation" },
-  restrictions: { label: "OOPBuy Prohibited and Restricted Items" },
+  guide: { label: "OOPBuy Beginner's Guide", kind: "official", reference: "m.oopbuy.com/pages/article-details/index?id=1739829963819945985" },
+  guarantee: { label: "OOPBuy Platform Guarantee", kind: "official", reference: "oopbuy.com · platform guarantee" },
+  returns: { label: "OOPBuy Returns and Refunds", kind: "official", reference: "m.oopbuy.com/notice/1740656181012172801" },
+  agreement: { label: "OOPBuy User Registration Agreement", kind: "official", reference: "m.oopbuy.com/notice/1772892211576897537" },
+  serviceFees: { label: "OOPBuy Service & Fees", kind: "official", reference: "m.oopbuy.com/notice/1740653781924810754" },
+  googlePlay: { label: "OOPBuy Google Play listing", kind: "official", reference: "play.google.com · com.oopbuy.oopbuy" },
+  estimator: { label: "OOPBuy Shipping Estimation", kind: "official", reference: "oopbuy.com · live shipping estimator" },
+  restrictions: { label: "OOPBuy Prohibited and Restricted Items", kind: "official", reference: "oopbuy.com · current restrictions" },
 } as const;
 
 const sectionSourceKeys: Record<string, (keyof typeof officialSources)[]> = {
-  spreadsheet: ["guide", "agreement", "estimator"],
+  spreadsheet: ["guide", "agreement", "serviceFees", "googlePlay", "estimator"],
   finds: ["guide", "guarantee", "estimator"],
   guide: ["guide", "agreement", "returns"],
   qc: ["guarantee", "returns", "guide"],
   shipping: ["estimator", "restrictions", "agreement"],
-  faq: ["guide", "returns", "agreement", "estimator"],
+  faq: ["guide", "returns", "agreement", "serviceFees", "googlePlay", "estimator"],
 };
 
+const findsNotes = {
+  en: { why: "Why included", whyBody: "A dated category route for comparison, not a product endorsement.", qc: "QC focus", qcBody: "Confirm the active option, size or model and visible condition after stock-in.", packing: "Packing note", packingBody: "Recheck dimensions and protective packaging after warehouse measurement." },
+  de: { why: "Warum aufgenommen", whyBody: "Eine datierte Kategorienroute zum Vergleich, keine Produktempfehlung.", qc: "QC-Fokus", qcBody: "Aktive Option, Größe oder Modell und sichtbaren Zustand nach Einlagerung prüfen.", packing: "Verpackung", packingBody: "Maße und Schutzverpackung nach Lagermessung erneut prüfen." },
+  es: { why: "Por qué se incluye", whyBody: "Una ruta de categoría fechada para comparar, no una recomendación.", qc: "Foco de QC", qcBody: "Confirma opción activa, talla o modelo y estado visible tras la entrada.", packing: "Embalaje", packingBody: "Revisa dimensiones y protección después de la medición del almacén." },
+  fr: { why: "Pourquoi ici", whyBody: "Une route de catégorie datée pour comparer, pas une recommandation.", qc: "Point QC", qcBody: "Confirmez option active, taille ou modèle et état visible après l'entrée.", packing: "Emballage", packingBody: "Revérifiez dimensions et protection après la mesure d'entrepôt." },
+  it: { why: "Perché incluso", whyBody: "Un percorso di categoria datato per il confronto, non una raccomandazione.", qc: "Focus QC", qcBody: "Conferma opzione attiva, taglia o modello e stato visibile dopo l'ingresso.", packing: "Imballaggio", packingBody: "Ricontrolla dimensioni e protezione dopo la misura di magazzino." },
+} as const;
+
 const navHref = (lang: Language, key: string) => key === "home" ? `/${lang}` : `/${lang}/${key}`;
+
+function Breadcrumbs({ items }: { items: { label: string; href: string }[] }) {
+  return <nav className="breadcrumbs" aria-label="Breadcrumb"><ol>{items.map((item, index) => <li key={item.href}>{index < items.length - 1 ? <a href={item.href}>{item.label}</a> : <span aria-current="page">{item.label}</span>}</li>)}</ol></nav>;
+}
+
+function breadcrumbSchema(items: { label: string; href: string }[]) {
+  return {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: items.map((item, index) => ({ "@type": "ListItem", position: index + 1, name: item.label, item: `${SITE}${item.href}` })),
+  };
+}
 
 function Logo({ lang }: { lang: Language }) {
   return (
@@ -121,8 +152,9 @@ function Categories({ lang }: { lang: Language }) {
   );
 }
 
-function Products({ lang, compact = false }: { lang: Language; compact?: boolean }) {
+function Products({ lang, compact = false, mode = "default" }: { lang: Language; compact?: boolean; mode?: "default" | "finds" }) {
   const t = copy[lang];
+  const notes = findsNotes[lang];
   const list = compact ? products.slice(0, 4) : products;
   return (
     <div className="product-grid">
@@ -140,6 +172,11 @@ function Products({ lang, compact = false }: { lang: Language; compact?: boolean
               <div><dt>{t.labels.sourcePrice}</dt><dd>{product.price}</dd></div>
               <div><dt>{t.labels.listedWeight}</dt><dd>{product.weight}</dd></div>
             </dl>
+            {mode === "finds" && <div className="finds-context">
+              <p><strong>{notes.why}</strong>{notes.whyBody}</p>
+              <p><strong>{notes.qc}</strong>{notes.qcBody}</p>
+              <p><strong>{notes.packing}</strong>{notes.packingBody}</p>
+            </div>}
             <a className="text-link" href={product.href} target="_blank" rel="noopener">{t.labels.open}<ArrowUpRight aria-hidden="true" /></a>
           </div>
         </article>
@@ -229,6 +266,8 @@ function SourcesPanel({ lang, section }: { lang: Language; section: string }) {
         {keys.map((key) => (
           <li key={key}>
             <span className="source-name">{officialSources[key].label}</span>
+            <span className="source-meta">{sourceKinds[lang].official} · {sourceKinds[lang].checked} 1 Sep 2026</span>
+            <code>{officialSources[key].reference}</code>
           </li>
         ))}
       </ul>
@@ -239,7 +278,7 @@ function SourcesPanel({ lang, section }: { lang: Language; section: string }) {
 function Home({ lang }: { lang: Language }) {
   const t = copy[lang];
   const faqSchema = { "@context": "https://schema.org", "@type": "FAQPage", mainEntity: t.faq.map(item => ({ "@type": "Question", name: item.q, acceptedAnswer: { "@type": "Answer", text: item.a } })) };
-  const siteSchema = { "@context": "https://schema.org", "@type": "WebSite", name: "OOPBUY VIP", url: `${SITE}/${lang}`, potentialAction: { "@type": "SearchAction", target: "https://cnfansge.com/search.html?keywords={search_term_string}&channelid=2&method=1", "query-input": "required name=search_term_string" } };
+  const siteSchema = { "@context": "https://schema.org", "@type": "WebSite", name: "OOPBUY VIP", url: `${SITE}/${lang}` };
   return (
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify([siteSchema, faqSchema]) }} />
@@ -248,6 +287,7 @@ function Home({ lang }: { lang: Language }) {
           <div className="hero-copy">
             <p className="eyebrow"><span className="live-dot" />{t.hero.kicker}</p>
             <h1>{t.hero.title}</h1>
+            <p className="hero-tagline">{t.hero.tagline}</p>
             <p className="hero-body">{t.hero.body}</p>
             <SearchBar lang={lang} />
             <div className="proof-line"><CheckCircle2 aria-hidden="true" />{t.hero.proof}</div>
@@ -306,8 +346,13 @@ function SectionPage({ lang, section }: { lang: Language; section: string }) {
   const isFaq = section === "faq";
   const isArticles = section === "articles";
   const iconMap = [ShieldCheck, PackageCheck, Truck];
+  const crumbs = [{ label: t.nav.home, href: `/${lang}` }, { label: page.title, href: `/${lang}/${section}` }];
+  const itemListSchema = isProducts ? { "@context": "https://schema.org", "@type": "ItemList", name: page.title, numberOfItems: products.length, itemListElement: products.map((product, index) => ({ "@type": "ListItem", position: index + 1, name: `${t.categories[product.category]} ${product.code}`, url: product.href })) } : null;
   return (
+    <>
+    <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(itemListSchema ? [breadcrumbSchema(crumbs), itemListSchema] : breadcrumbSchema(crumbs)) }} />
     <main>
+      <div className="section breadcrumb-section"><Breadcrumbs items={crumbs} /></div>
       <section className="page-hero section">
         <p className="eyebrow">OOPBUY VIP / {page.kicker}</p>
         <h1>{page.title}</h1>
@@ -316,7 +361,7 @@ function SectionPage({ lang, section }: { lang: Language; section: string }) {
       </section>
       {isProducts && <>
         <section className="section category-section"><Categories lang={lang} /></section>
-        <section className="section products-section"><Products lang={lang} /><div className="section-actions"><a className="button-link" href="https://cnfansge.com/AllProducts/" target="_blank" rel="noopener">{t.labels.viewAll}<ExternalLink aria-hidden="true" /></a><p>{t.labels.disclaimer}</p></div></section>
+        <section className="section products-section">{section === "spreadsheet" ? <ProductIndex lang={lang} rows={products} categories={t.categories} /> : <Products lang={lang} mode="finds" />}<div className="section-actions"><a className="button-link" href="https://cnfansge.com/AllProducts/" target="_blank" rel="noopener">{t.labels.viewAll}<ExternalLink aria-hidden="true" /></a><p>{t.labels.disclaimer}</p></div></section>
       </>}
       {!isFaq && !isArticles && <section className="section feature-section"><div className="feature-grid">{page.points.map((point, index) => { const Icon = iconMap[index] ?? ShieldCheck; return <article key={point.title}><Icon aria-hidden="true"/><span>0{index + 1}</span><h2>{point.title}</h2><p>{point.body}</p></article>; })}</div></section>}
       {section === "guide" && <Process lang={lang} />}
@@ -326,24 +371,27 @@ function SectionPage({ lang, section }: { lang: Language; section: string }) {
       {!isArticles && <SourcesPanel lang={lang} section={section} />}
       {!isArticles && <section className="section related-section"><div className="section-heading"><p className="eyebrow">RELATED / FIELD NOTES</p><h2>{t.page.articles.title}</h2></div><ArticleCards lang={lang} /></section>}
     </main>
+    </>
   );
 }
 
 function ArticlePage({ lang, slug }: { lang: Language; slug: ArticleSlug }) {
   const t = copy[lang];
   const article = t.articles[slug];
-  const articleSchema = { "@context": "https://schema.org", "@type": "Article", headline: article.title, description: article.description, datePublished: "2026-09-01", dateModified: "2026-09-01", author: { "@type": "Organization", name: "OOPBUY VIP Research Desk" }, mainEntityOfPage: `${SITE}/${lang}/articles/${slug}`, citation: article.sources?.map(source => source.label) ?? [] };
+  const crumbs = [{ label: t.nav.home, href: `/${lang}` }, { label: t.nav.articles, href: `/${lang}/articles` }, { label: article.title, href: `/${lang}/articles/${slug}` }];
+  const articleSchema = { "@context": "https://schema.org", "@type": "Article", headline: article.title, description: article.description, datePublished: "2026-09-01", dateModified: "2026-09-01", author: { "@type": "Organization", name: "OOPBUY VIP Research Desk" }, mainEntityOfPage: `${SITE}/${lang}/articles/${slug}`, citation: article.sources?.map(source => source.reference ? `${source.label} — ${source.reference}` : source.label) ?? [] };
   return (
     <>
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify([articleSchema, breadcrumbSchema(crumbs)]) }} />
       <main className="article-page">
+        <div className="section breadcrumb-section"><Breadcrumbs items={crumbs} /></div>
         <header className="article-hero section">
           <div><p className="eyebrow">{article.eyebrow} / {article.read}</p><h1>{article.title}</h1><p>{article.description}</p>{article.updated && <small className="article-updated">Updated {article.updated}</small>}</div>
           <aside><ShieldCheck aria-hidden="true"/><strong>{t.labels.independently}</strong><p>{t.hero.proof}</p></aside>
         </header>
         <article className="article-body section">
           {article.sections.map((section, index) => <section key={section.heading}><span>0{index + 1}</span><div><h2>{section.heading}</h2>{section.paragraphs.map((paragraph, p) => <p key={p}>{paragraph}</p>)}</div></section>)}
-          {!!article.sources?.length && <section className="article-sources"><span>↗</span><div><h2>{sourceHeadings[lang][0]}</h2><p className="source-intro">{sourceHeadings[lang][1]}</p><ul>{article.sources.map((source) => <li key={source.label}><strong className="source-name">{source.label}</strong><p>{source.note}</p></li>)}</ul></div></section>}
+          {!!article.sources?.length && <section className="article-sources"><span>↗</span><div><h2>{sourceHeadings[lang][0]}</h2><p className="source-intro">{sourceHeadings[lang][1]}</p><ul>{article.sources.map((source) => { const kind = source.kind ?? (/Trustpilot|Reddit|customer/i.test(source.label) ? "customer" : "official"); return <li key={source.label}><strong className="source-name">{source.label}</strong><span className="source-meta">{sourceKinds[lang][kind]} · {sourceKinds[lang].checked} {source.checked ?? "1 Sep 2026"}</span><p>{source.note}</p>{source.reference && <code>{source.reference}</code>}</li>; })}</ul></div></section>}
           <div className="source-note"><strong>{sourceBoundary[lang][0]}</strong><p>{t.labels.disclaimer} {sourceBoundary[lang][1]}</p></div>
         </article>
         <section className="section related-section"><div className="section-heading"><p className="eyebrow">NEXT / FIELD NOTES</p><h2>{t.page.articles.title}</h2></div><ArticleCards lang={lang} /></section>

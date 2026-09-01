@@ -16,7 +16,7 @@ export const italianArticles: Record<ArticleSlug, Article> = {
       ]},
       { heading: "Aprire sempre il percorso attivo prima del confronto", paragraphs: [
         "Le pagine dei venditori cambiano. Il prezzo nel foglio può riferirsi alla variante più economica o a una vecchia promozione. Verifica canale, ID, colore, taglia, versione e descrizione corrente.",
-        "Non confrontare solo le conversioni in USD. Conserva l'importo CNY e la data. L'accordo OOPBuy indica attualmente una commissione di acquisto assistito dell'8%, ma valgono checkout e termini live.",
+        "Non confrontare solo le conversioni in USD. Conserva importo CNY e data. Le fonti verificate il 1 settembre 2026 sono in conflitto: l'accordo collega l'8% al costo di spedizione, Service & Fees non indica altri addebiti oltre alle categorie elencate e Google Play dichiara nessuna commissione di servizio. Non applicare una percentuale fissa; conferma accordo, checkout e supporto per iscritto.",
         "Una riga utile contiene ID, categoria, opzione esatta, prezzo, trasporto locale visibile, fonte del peso, data e nota di rischio. Così può essere mantenuta e verificata."
       ]},
       { heading: "Creare una fascia di costo totale prima dell'ordine", paragraphs: [
@@ -127,10 +127,10 @@ export const italianArticles: Record<ArticleSlug, Article> = {
   }),
   "oopbuy-fees-total-cost": withSources("oopbuy-fees-total-cost", {
     eyebrow: "Commissioni OOPBuy", title: "Commissioni OOPBuy: calcolare il costo totale prima dell'acquisto",
-    description: "Separare prezzo, commissione agente pubblicata, trasporto locale, reso, pagamento e spedizione internazionale.", read: "12 min di lettura", updated: "1 settembre 2026",
+    description: "Separare prezzo, dichiarazioni pubbliche contrastanti sulle commissioni, trasporto locale, reso, pagamento e spedizione internazionale.", read: "12 min di lettura", updated: "1 settembre 2026",
     sections: [
-      { heading: "Partire dalla commissione agente pubblicata", paragraphs: [
-        "L'accordo utente attuale OOPBuy indica l'8% del prezzo di acquisto selezionato come commissione di acquisto assistito. Il checkout live resta decisivo con cambi o promozioni.",
+      { heading: "Partire dal conflitto tra le fonti sulle commissioni", paragraphs: [
+        "I materiali pubblici OOPBuy verificati il 1 settembre 2026 non offrono una regola unica. L'accordo descrive l'8% del costo di spedizione, Service & Fees non indica altri addebiti oltre alle categorie elencate e la descrizione Google Play attuale dichiara nessuna commissione di servizio. Non è corretto trasformare questi dati nell'8% del prezzo del prodotto.",
         "Separala dal provider di pagamento, consegna venditore, servizi di magazzino e trasporto internazionale. Un'unica percentuale per tutto il costo è fuorviante.",
         "Annota prezzo CNY, opzione esatta e importo al checkout. Le differenze possono derivare da trasporto locale, servizio, cambio o variante."
       ]},
@@ -162,7 +162,7 @@ export const italianArticles: Record<ArticleSlug, Article> = {
       { heading: "Confrontare equamente due ordini OOPBuy", paragraphs: [
         "Usa la stessa valuta e lo stesso confine: costo in magazzino, costo del pacco o costo consegnato. Non confrontare prezzo articolo e totale finale.",
         "Separa costi fissi e variabili. Ripartisci il trasporto comune per peso, volume o valore e dichiara il metodo per rendere il calcolo ripetibile.",
-        "Data preventivi e coupon, registra rimborsi come rettifiche e indica l'affidabilità. L'8%, i 5 CNY e le rotte attuali sono riferimenti, non garanzie eterne.",
+        "Data preventivi e coupon, registra rimborsi come rettifiche e indica l'affidabilità. Le dichiarazioni contrastanti sulle commissioni, i 5 CNY e le rotte attuali sono riferimenti datati, non garanzie eterne.",
         "Conserva screenshot del checkout e del preventivo finale per spiegare differenze successive senza affidarti alla memoria.",
         "Aggiorna il foglio quando cambiano politiche o linee: un vecchio calcolo resta uno storico, non un prezzo corrente.",
         "Concludi con il costo per articolo realmente utilizzabile e specifica se tasse, assicurazione o sconti erano già inclusi."
@@ -180,7 +180,7 @@ export const italianArticles: Record<ArticleSlug, Article> = {
       ]},
       { heading: "Cosa offre il flusso ufficiale OOPBuy", paragraphs: [
         "La guida descrive link prodotto, acquisto, ingresso, QC, stoccaggio e invio del pacco. La pagina di protezione indica ispezione e 90 giorni gratuiti.",
-        "I resi ordinari sono pubblicati entro cinque giorni dall'ingresso; l'accordo indica attualmente una commissione agente dell'8%.",
+        "I resi ordinari sono pubblicati entro cinque giorni dall'ingresso; le fonti attuali sulle commissioni sono in conflitto e vanno confermate nell'accordo, nel checkout e con una risposta scritta del supporto.",
         "Sono pubblicati anche limiti: articoli ristretti, nessuna garanzia doganale e risarcimento per linea. Una recensione equa cita vantaggi e limiti."
       ]},
       { heading: "Trustpilot mostra ora un avviso importante", paragraphs: [
