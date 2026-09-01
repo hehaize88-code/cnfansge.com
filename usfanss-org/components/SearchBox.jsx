@@ -8,12 +8,15 @@ export default function SearchBox({ placeholder, button, compact = false }) {
   function submit(event) {
     event.preventDefault();
     if (!query.trim()) return;
-    window.location.href = `https://cnfansge.com/search.php?q=${encodeURIComponent(query.trim())}`;
+    const keywords = encodeURIComponent(query.trim());
+    window.location.href = `https://cnfansge.com/search.html?keywords=${keywords}&channelid=2`;
   }
 
   return (
     <form className={`search-box ${compact ? "compact" : ""}`} onSubmit={submit}>
       <input
+        name="keywords"
+        type="search"
         value={query}
         onChange={(event) => setQuery(event.target.value)}
         placeholder={placeholder}

@@ -63,6 +63,12 @@ export default function Catalog({ labels, limit }) {
                   <span>{labels.approx}</span>
                   <b aria-hidden="true">↗</b>
                 </div>
+                {!limit && (
+                  <div className="product-audit">
+                    <span>{labels.verified}</span>
+                    <p><strong>{labels.qcNote}:</strong> {labels.qcTips[products.indexOf(product) % labels.qcTips.length]}</p>
+                  </div>
+                )}
               </div>
             </a>
           </article>

@@ -17,7 +17,10 @@ async function htmlFiles(directory) {
 
 for (const file of await htmlFiles(outputRoot)) {
   const relative = file.slice(outputRoot.length + 1).replaceAll("\\", "/");
-  const language = relative.split("/")[0];
+  const firstSegment = relative.split("/")[0];
+  const language = firstSegment.endsWith(".html")
+    ? firstSegment.slice(0, -".html".length)
+    : firstSegment;
   if (!languages.has(language)) continue;
   const html = await readFile(file, "utf8");
   const normalized = html

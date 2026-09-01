@@ -93,6 +93,10 @@ button, input, select { font: inherit; }
 .product-meta strong { color: var(--navy); font-size: 20px; }
 .product-meta span { color: var(--muted); font-size: 8px; }
 .product-meta b { color: var(--orange); font-size: 17px; }
+.product-audit { margin-top: 9px; padding-top: 8px; border-top: 1px solid #e3e0d9; }
+.product-audit span { color: var(--muted); font-size: 10px; font-weight: 800; }
+.product-audit p { margin: 5px 0 0; color: #40465b; font-size: 11px; line-height: 1.4; }
+.product-audit strong { color: var(--orange); }
 .empty-state { padding: 24px; border: 1px dashed var(--line); border-radius: 8px; text-align: center; }
 
 .process-section { padding-top: 32px; }
@@ -231,130 +235,133 @@ footer p { max-width: 700px; color: var(--muted); line-height: 1.6; }
 }
 
 @media (max-width: 600px) {
-  .research-bar { min-height: 20px; padding: 4px 12px; font-size: 6px; letter-spacing: .07em; }
+  .research-bar { min-height: 24px; padding: 5px 12px; font-size: 10px; letter-spacing: .04em; }
   .research-bar span:last-child { text-align: right; }
   .topbar, .hero, .content-section, .long-article, footer { width: calc(100% - 24px); }
   .topbar { min-height: 54px; gap: 7px; }
   .wordmark img { width: 116px; }
   .header-actions { gap: 5px; }
-  .mobile-menu summary, .language-picker select { padding: 6px 7px; font-size: 8px; }
+  .mobile-menu summary, .language-picker select { min-height: 34px; padding: 6px 8px; font-size: 11px; }
   .language-picker select { padding-right: 21px; }
 
   .hero { min-height: 0; padding: 18px 0 24px; gap: 16px; }
   .hero h1, .inner-hero h1, .long-article h1 { font-size: 34px; line-height: .96; }
-  .hero-copy > p { margin-top: 10px; font-size: 12px; line-height: 1.38; }
-  .eyebrow { margin-bottom: 6px; font-size: 7px; }
+  .hero-copy > p { margin-top: 10px; font-size: 14px; line-height: 1.42; }
+  .eyebrow { margin-bottom: 6px; font-size: 10px; }
   .search-box { margin-top: 12px; grid-template-columns: minmax(0,1fr) auto; box-shadow: 3px 3px 0 var(--orange); }
-  .search-box input { padding: 9px; font-size: 9px; }
-  .search-box button { max-width: 115px; padding: 0 8px; font-size: 7px; }
+  .search-box input { padding: 10px; font-size: 16px; }
+  .search-box button { max-width: 130px; padding: 0 10px; font-size: 11px; }
   .hero-notes { margin-top: 10px; gap: 4px; }
-  .hero-notes span { padding: 4px 5px; font-size: 6px; }
+  .hero-notes span { padding: 4px 5px; font-size: 10px; }
   .hero-visual { padding: 8px; box-shadow: 5px 5px 0 var(--orange); }
   .showcase-head { min-height: 25px; }
-  .showcase-head span { font-size: 8px; }
-  .showcase-head b { font-size: 6px; }
+  .showcase-head span { font-size: 11px; }
+  .showcase-head b { font-size: 10px; }
   .showcase-products { grid-template-columns: repeat(2,minmax(0,1fr)); gap: 4px; }
   .showcase-product { padding: 4px; }
   .showcase-product:nth-child(n) { display: grid; }
-  .showcase-product img { height: clamp(72px, 20vw, 96px); aspect-ratio: auto; object-position: center; }
-  .showcase-product span { margin-top: 3px; font-size: 5px; }
-  .showcase-product strong { margin: 2px 0 3px; font-size: 8px; }
-  .showcase-product b { font-size: 11px; }
+  .showcase-product img { height: clamp(70px, 19vw, 88px); aspect-ratio: auto; object-position: center; }
+  .showcase-product span { margin-top: 3px; font-size: 10px; }
+  .showcase-product strong { margin: 2px 0 3px; font-size: 12px; }
+  .showcase-product b { font-size: 13px; }
   .showcase-audit { margin-top: 5px; gap: 3px; }
   .scan-card { padding: 5px; gap: 1px; }
-  .scan-card span { font-size: 5px; }
-  .scan-card strong { font-size: 6px; }
-  .scan-card b { display: block; padding: 1px 2px; font-size: 4px; }
+  .scan-card span { font-size: 10px; }
+  .scan-card strong { font-size: 11px; }
+  .scan-card b { display: block; padding: 2px 3px; font-size: 10px; }
 
   .content-section { padding: 24px 0; }
   .section-head { margin-bottom: 12px; align-items: flex-start; gap: 7px; }
   .section-head h2, .qc-strip h2 { font-size: 25px; }
-  .section-head p { margin: 5px 0 0; font-size: 10px; line-height: 1.35; }
-  .text-link { padding: 6px; font-size: 7px; white-space: nowrap; }
+  .section-head p { margin: 5px 0 0; font-size: 14px; line-height: 1.4; }
+  .text-link { padding: 7px; font-size: 11px; white-space: nowrap; }
   .product-grid { gap: 5px; }
   .product-card { border-radius: 6px; }
-  .product-image-wrap { height: clamp(94px, 26vw, 118px); aspect-ratio: auto; }
+  .product-image-wrap { height: clamp(82px, 23vw, 104px); aspect-ratio: auto; }
   .product-image-wrap img { position: absolute; inset: 0; object-position: center; }
   .product-copy { padding: 6px; }
-  .product-category { font-size: 5px; }
-  .product-copy h3 { min-height: 23px; margin: 3px 0 5px; font-size: 9px; line-height: 1.25; }
+  .product-category { font-size: 10px; }
+  .product-copy h3 { min-height: 30px; margin: 4px 0 6px; font-size: 12px; line-height: 1.25; }
   .product-meta { padding-top: 4px; gap: 2px; }
-  .product-meta strong { font-size: 12px; }
-  .product-meta span { font-size: 5px; }
-  .product-meta b { font-size: 10px; }
-  .qc-pill { top: 4px; left: 4px; padding: 3px 4px; font-size: 5px; }
+  .product-meta strong { font-size: 14px; }
+  .product-meta span { font-size: 10px; }
+  .product-meta b { font-size: 12px; }
+  .product-audit { margin-top: 6px; padding-top: 6px; }
+  .product-audit span, .product-audit p { font-size: 11px; }
+  .qc-pill { top: 4px; left: 4px; padding: 3px 4px; font-size: 10px; }
   .catalog-tools { margin-bottom: 12px; gap: 6px; }
-  .catalog-tools > input { padding: 9px; font-size: 9px; }
+  .catalog-tools > input { padding: 10px; font-size: 16px; }
   .filter-row { gap: 4px; }
-  .filter-row button { padding: 4px 6px; font-size: 6px; }
+  .filter-row button { min-height: 30px; padding: 5px 7px; font-size: 11px; }
 
   .process-section { padding-top: 16px; }
   .steps-grid { gap: 5px; }
-  .steps-grid article { min-height: 112px; padding: 8px; }
-  .steps-grid span { font-size: 7px; }
+  .steps-grid article { min-height: 148px; padding: 10px; }
+  .steps-grid span { font-size: 10px; }
   .steps-grid h3 { margin-bottom: 4px; font-size: 15px; }
-  .steps-grid p { font-size: 8px; line-height: 1.3; }
+  .steps-grid p { font-size: 13px; line-height: 1.4; }
   .qc-strip { padding: 24px 12px; grid-template-columns: minmax(0,.85fr) minmax(0,1.15fr); align-items: start; gap: 10px; }
-  .qc-strip p { font-size: 9px; line-height: 1.35; }
+  .qc-strip p { font-size: 13px; line-height: 1.4; }
   .qc-strip ol { grid-template-columns: 1fr 1fr; }
-  .qc-strip li { padding: 8px 3px; font-size: 8px; }
-  .qc-strip li span { margin-right: 5px; font-size: 6px; }
-  .button-link { margin-top: 5px; padding: 6px 8px; font-size: 7px; }
+  .qc-strip li { padding: 9px 4px; font-size: 12px; }
+  .qc-strip li span { margin-right: 5px; font-size: 10px; }
+  .button-link { margin-top: 6px; padding: 7px 9px; font-size: 11px; }
 
   .article-grid { grid-template-columns: repeat(2,minmax(0,1fr)); gap: 6px; }
-  .article-card { min-height: 154px; padding: 9px; border-top-width: 3px; }
-  .article-card > span { font-size: 5px; }
+  .article-card { min-height: 220px; padding: 10px; border-top-width: 3px; }
+  .article-card > span { font-size: 10px; }
   .article-card h3 { margin: 13px 0 5px; font-size: 15px; }
-  .article-card p { font-size: 7px; line-height: 1.35; }
-  .article-card b { padding-top: 6px; font-size: 6px; }
+  .article-card p { font-size: 13px; line-height: 1.4; }
+  .article-card b { padding-top: 7px; font-size: 11px; }
   .faq-list details { padding: 9px 0; }
-  .faq-list summary, .faq-list.large summary { font-size: 11px; }
-  .faq-list details p { font-size: 8px; line-height: 1.4; }
+  .faq-list summary, .faq-list.large summary { font-size: 14px; }
+  .faq-list details p { font-size: 14px; line-height: 1.5; }
   .fact-panel { padding-bottom: 16px; }
   .fact-grid { gap: 6px; }
   .fact-card { min-height: 148px; padding: 9px; }
-  .fact-card span { font-size: 6px; }
+  .fact-card span { font-size: 10px; }
   .fact-card strong { margin: 13px 0 6px; font-size: 15px; }
-  .fact-card p { font-size: 7px; line-height: 1.4; }
-  .source-note { margin-top: 10px; padding: 7px 8px; font-size: 7px; }
+  .fact-card p { font-size: 13px; line-height: 1.45; }
+  .source-note { margin-top: 10px; padding: 8px 9px; font-size: 11px; }
   .research-panel, .catalog-page { padding-top: 16px; }
   .research-grid { gap: 6px; }
   .research-card { padding: 11px; }
   .research-card h2 { margin: 13px 0 7px; font-size: 18px; }
-  .research-card p { font-size: 11px; line-height: 1.5; }
+  .research-card p { font-size: 14px; line-height: 1.55; }
 
   .inner-hero { padding: 36px 12px 28px; }
-  .inner-hero p { margin-top: 10px; font-size: 11px; line-height: 1.45; }
+  .inner-hero p { margin-top: 10px; font-size: 14px; line-height: 1.5; }
   .guide-rail article { padding: 16px 0; grid-template-columns: 40px 1fr; }
   .guide-rail article > span { font-size: 18px; }
   .guide-rail h2 { font-size: 19px; }
-  .guide-rail p { font-size: 9px; line-height: 1.5; }
+  .guide-rail p { font-size: 14px; line-height: 1.55; }
   .qc-board { gap: 6px; }
-  .qc-board article { min-height: 142px; padding: 8px; }
+  .qc-board article { min-height: 190px; padding: 10px; }
   .qc-board h2 { margin: 16px 0 5px; font-size: 14px; }
-  .qc-board p { font-size: 7px; line-height: 1.45; }
+  .qc-board p { font-size: 13px; line-height: 1.5; }
   .shipping-layout > div:first-child h2 { font-size: 24px; }
-  .shipping-layout > div:first-child p { font-size: 9px; line-height: 1.5; }
+  .shipping-layout > div:first-child p { font-size: 14px; line-height: 1.55; }
   .calculator { padding: 10px; }
   .calculator-fields { gap: 5px; }
-  .calculator-fields input { padding: 7px; font-size: 10px; }
-  .calculator-result { margin-top: 10px; padding: 8px; font-size: 7px; }
+  .calculator-fields input { padding: 7px; font-size: 14px; }
+  .calculator-fields label span { font-size: 11px; }
+  .calculator-result { margin-top: 10px; padding: 8px; font-size: 12px; }
   .calculator-result strong { font-size: 12px; }
 
   .long-article { padding: 30px 0; }
   .long-article header { padding: 14px; }
-  .long-article header > p { font-size: 12px; line-height: 1.45; }
-  .long-article header > div span { font-size: 6px; }
+  .long-article header > p { font-size: 14px; line-height: 1.5; }
+  .long-article header > div span { font-size: 10px; }
   .article-visual { margin-top: 10px; padding: 9px; }
-  .article-visual figcaption { margin-bottom: 6px; font-size: 7px; }
+  .article-visual figcaption { margin-bottom: 6px; font-size: 11px; }
   .article-visual > div { grid-template-columns: 1fr; gap: 5px; }
-  .visual-row { padding: 7px; grid-template-columns: minmax(68px,.65fr) 1.35fr; gap: 7px; font-size: 8px; }
+  .visual-row { padding: 8px; grid-template-columns: minmax(78px,.65fr) 1.35fr; gap: 7px; font-size: 12px; }
   .article-body { padding-top: 20px; }
-  .article-body aside { position: static; display: grid; grid-template-columns: repeat(2,minmax(0,1fr)); gap: 4px 8px; padding: 9px; background: var(--surface); border-radius: 7px; font-size: 7px; }
+  .article-body aside { position: static; display: grid; grid-template-columns: repeat(2,minmax(0,1fr)); gap: 5px 8px; padding: 9px; background: var(--surface); border-radius: 7px; font-size: 11px; }
   .article-body aside strong { grid-column: 1/-1; margin-bottom: 2px; }
   .article-body section { margin-bottom: 18px; padding: 0 0 18px 26px; }
   .article-body h2 { font-size: 20px; }
-  .article-body p { font-size: 14px; line-height: 1.6; }
+  .article-body p { font-size: 16px; line-height: 1.65; }
   footer { min-height: 105px; margin-top: 10px; padding: 18px 0; gap: 9px; }
   .footer-brand { gap: 4px; }
   .footer-brand img { width: 100px; }

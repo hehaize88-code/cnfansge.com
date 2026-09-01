@@ -41,7 +41,21 @@ export async function generateMetadata({ params }) {
         ["x-default", `${base}/en${path}`],
       ]),
     },
-    openGraph: { title, description, type: slug?.[1] ? "article" : "website", url: `${base}/${lang}${path}` },
+    openGraph: {
+      title,
+      description,
+      type: slug?.[1] ? "article" : "website",
+      url: `${base}/${lang}${path}`,
+      siteName: "USFans Buyer Research",
+      locale: lang,
+      images: [{ url: `${base}/usfans.png`, width: 375, height: 123, alt: "USFans" }],
+    },
+    twitter: {
+      card: "summary_large_image",
+      title,
+      description,
+      images: [`${base}/usfans.png`],
+    },
   };
 }
 
@@ -55,6 +69,34 @@ export function generateStaticParams() {
 
 function JsonLd({ data }) {
   return <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(data) }} />;
+}
+
+function productItemList(name) {
+  return {
+    "@context": "https://schema.org",
+    "@type": "ItemList",
+    name,
+    numberOfItems: products.length,
+    itemListElement: products.map((product, index) => ({
+      "@type": "ListItem",
+      position: index + 1,
+      name: product.name,
+      url: product.href,
+    })),
+  };
+}
+
+function breadcrumbSchema(language, items) {
+  return {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: items.map(([name, path], index) => ({
+      "@type": "ListItem",
+      position: index + 1,
+      name,
+      item: `${base}/${language}${path}`,
+    })),
+  };
 }
 
 function SectionHead({ eyebrow, title, text, link, linkText }) {
@@ -83,10 +125,10 @@ function ArticleCards({ language, content }) {
 
 function Home({ language, content }) {
   const faqSchema = { "@context":"https://schema.org", "@type":"FAQPage", mainEntity: content.faqItems.map(([name,text])=>({"@type":"Question",name,acceptedAnswer:{"@type":"Answer",text}})) };
-  const itemSchema = { "@context":"https://schema.org", "@type":"ItemList", name:"USFans spreadsheet preview finds", numberOfItems:products.length, itemListElement:products.map((p,i)=>({"@type":"ListItem",position:i+1,name:p.name,url:p.href})) };
+  const itemSchema = productItemList("USFans buyer research preview");
   return (
     <>
-      <JsonLd data={[faqSchema, itemSchema, {"@context":"https://schema.org","@type":"WebSite",name:"USFans Field",url:`${base}/${language}`,potentialAction:{"@type":"SearchAction",target:"https://cnfansge.com/search.php?q={search_term_string}","query-input":"required name=search_term_string"}}]} />
+      <JsonLd data={[faqSchema, itemSchema, {"@context":"https://schema.org","@type":"WebSite",name:"USFans Buyer Research",url:`${base}/${language}`,potentialAction:{"@type":"SearchAction",target:{"@type":"EntryPoint",urlTemplate:"https://cnfansge.com/search.html?keywords={search_term_string}&channelid=2"},"query-input":"required name=search_term_string"}}]} />
       <section className="hero">
         <div className="hero-copy">
           <span className="eyebrow">{content.label}</span>
@@ -98,7 +140,7 @@ function Home({ language, content }) {
         <div className="hero-visual">
           <div className="showcase-head">
             <span>{content.browse}</span>
-            <b>LIVE · 16</b>
+            <b>LIVE · {products.length}</b>
           </div>
           <div className="showcase-products">
             {products.slice(0,4).map((product)=><a href={product.href} className="showcase-product" key={product.href} aria-label={`${content.catalog.open}: ${product.name}`}>
@@ -155,7 +197,7 @@ function ResearchBlocks({ items }) {
 }
 
 function SpreadsheetPage({ content, research }) {
-  return <><PageHero code={content.pageCodes.spreadsheet} title={content.pageTitles.spreadsheet} text={content.pageIntros.spreadsheet}/><FactGrid research={research}/><ResearchBlocks items={research.spreadsheet}/><section className="content-section catalog-page"><Catalog labels={content.catalog}/></section></>;
+  return <><JsonLd data={productItemList(content.pageTitles.spreadsheet)}/><PageHero code={content.pageCodes.spreadsheet} title={content.pageTitles.spreadsheet} text={content.pageIntros.spreadsheet}/><FactGrid research={research}/><ResearchBlocks items={research.spreadsheet}/><section className="content-section catalog-page"><Catalog labels={content.catalog}/></section></>;
 }
 
 function FindsPage({ content, research }) {
@@ -163,11 +205,11 @@ function FindsPage({ content, research }) {
 }
 
 function GuidePage({ content, research }) {
-  return <><PageHero code={content.pageCodes.guide} title={content.pageTitles.guide} text={content.pageIntros.guide}/><FactGrid research={research}/><section className="content-section"><div className="guide-rail">{content.steps.map(([n,t,x])=><article key={n}><span>{n}</span><div><h2>{t}</h2><p>{x}</p><p>{content.faqItems[Math.min(Number(n)-1,3)][1]}</p></div></article>)}</div></section><ResearchBlocks items={research.guide}/></>;
+  return <><PageHero code={content.pageCodes.guide} title={content.pageTitles.guide} text={content.pageIntros.guide}/><FactGrid research={research}/><section className="content-section"><div className="guide-rail">{content.steps.map(([n,t,x], index)=><article key={n}><span>{n}</span><div><h2>{t}</h2><p>{x}</p><p>{content.guideDetails[index]}</p></div></article>)}</div></section><ResearchBlocks items={research.guide}/></>;
 }
 
 function QCPage({ content, research }) {
-  return <><PageHero code={content.pageCodes.qc} title={content.pageTitles.qc} text={content.pageIntros.qc}/><section className="content-section"><div className="qc-board">{content.qcItems.map((item,index)=><article key={item}><span>{String(index+1).padStart(2,"0")}</span><h2>{item}</h2><p>{content.faqItems[2][1]} {content.steps[2][2]}</p></article>)}</div></section><ResearchBlocks items={research.qc}/></>;
+  return <><PageHero code={content.pageCodes.qc} title={content.pageTitles.qc} text={content.pageIntros.qc}/><section className="content-section"><div className="qc-board">{content.qcItems.map((item,index)=><article key={item}><span>{String(index+1).padStart(2,"0")}</span><h2>{item}</h2><p>{content.qcDetails[index]}</p></article>)}</div></section><ResearchBlocks items={research.qc}/></>;
 }
 
 function ShippingPage({ content, research }) {
@@ -191,7 +233,9 @@ function ArticleVisual({ visual }) {
 
 function ArticlePage({ language, article, content }) {
   const url = `${base}/${language}/articles/${article.slug}`;
-  return <><JsonLd data={{"@context":"https://schema.org","@type":"Article",headline:article.title,description:article.dek,datePublished:"2026-09-01",dateModified:"2026-09-01",inLanguage:language,wordCount:article.sections.map(([,body])=>body.split(/\s+/).length).reduce((a,b)=>a+b,0),mainEntityOfPage:url,author:{"@type":"Organization",name:"USFans Field Research Desk"},publisher:{"@type":"Organization",name:"USFans Field"}}}/><article className="long-article"><header><span className="eyebrow">{content.articleEyebrow}</span><h1>{article.title}</h1><p>{article.dek}</p><div>{content.articleMeta.map((item)=><span key={item}>{item}</span>)}</div></header><ArticleVisual visual={article.visual}/><p className="source-note article-source">{article.sourceNote}</p><div className="article-body"><aside><strong>{content.articleToc}</strong>{article.sections.map(([heading],index)=><a href={`#section-${index+1}`} key={heading}>{heading}</a>)}</aside><div>{article.sections.map(([heading,body],index)=><section id={`section-${index+1}`} key={heading}><span>{String(index+1).padStart(2,"0")}</span><h2>{heading}</h2><p>{body}</p></section>)}</div></div></article></>;
+  const articleSchema = {"@context":"https://schema.org","@type":"Article",headline:article.title,description:article.dek,datePublished:"2026-09-01",dateModified:"2026-09-01",inLanguage:language,image:`${base}/usfans.png`,wordCount:article.sections.map(([,body])=>body.split(/\s+/).length).reduce((a,b)=>a+b,0),mainEntityOfPage:url,author:{"@type":"Organization",name:"USFans Field Research Desk"},publisher:{"@type":"Organization",name:"USFans Buyer Research",logo:{"@type":"ImageObject",url:`${base}/usfans.png`}}};
+  const breadcrumbs = breadcrumbSchema(language, [[content.homeLabel,""],[content.pageTitles.articles,"/articles"],[article.title,`/articles/${article.slug}`]]);
+  return <><JsonLd data={[articleSchema,breadcrumbs]}/><article className="long-article"><header><span className="eyebrow">{content.articleEyebrow}</span><h1>{article.title}</h1><p>{article.dek}</p><div>{content.articleMeta.map((item)=><span key={item}>{item}</span>)}</div></header><ArticleVisual visual={article.visual}/><p className="source-note article-source">{article.sourceNote}</p><div className="article-body"><aside><strong>{content.articleToc}</strong>{article.sections.map(([heading],index)=><a href={`#section-${index+1}`} key={heading}>{heading}</a>)}</aside><div>{article.sections.map(([heading,body],index)=><section id={`section-${index+1}`} key={heading}><span>{String(index+1).padStart(2,"0")}</span><h2>{heading}</h2><p>{body}</p></section>)}</div></div></article></>;
 }
 
 export default async function DynamicPage({ params }) {
