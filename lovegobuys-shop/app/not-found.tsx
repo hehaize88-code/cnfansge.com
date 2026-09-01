@@ -1,0 +1,1 @@
+export default function NotFound(){return <main className="not-found"><div><span className="brand-mark">L/G</span><p>FIELD NOTE / 404</p><h1>This route left the shortlist.</h1><p>The page does not exist. Return to the guide or open the current product directory.</p><a className="ink-button" href="/en">Back to the guide</a></div></main>}
