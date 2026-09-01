@@ -14,6 +14,15 @@ export const metadata: Metadata = {
     icon: "/lovegobuy-logo.png",
     shortcut: "/lovegobuy-logo.png",
   },
+  openGraph: {
+    type: "website",
+    siteName: "LoveGoBuy Field Guide",
+    images: [{ url: "/lovegobuy-logo.png", width: 512, height: 164, alt: "LoveGoBuy Field Guide" }],
+  },
+  twitter: {
+    card: "summary_large_image",
+    images: ["/lovegobuy-logo.png"],
+  },
 };
 
 export default function RootLayout({

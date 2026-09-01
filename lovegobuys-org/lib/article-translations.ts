@@ -9,7 +9,7 @@ export type ArticleTranslation = Pick<Topic, "title" | "intro" | "sections"> & {
 export const articleTranslations: Record<Exclude<Lang, "en">, Record<string, ArticleTranslation>> = {
   "de": {
     "lovegobuy-spreadsheet-research-workflow": {
-      "title": "Artikel: So verwenden Sie eine LoveGoBuy-Tabelle von der Suche bis zur Auswahlliste",
+      "title": "So verwenden Sie eine LoveGoBuy-Tabelle von der Suche bis zur Auswahlliste",
       "intro": "Die Aufgabe eines Spreadsheets besteht darin, Unsicherheit zu reduzieren. Verwenden Sie diesen wiederholbaren Workflow, um von einem breiten Anfrage zu einem kleinen Kreis von Kandidaten zu gelangen, die später noch einmal überprüft werden können.",
       "deck": "Ein Wartung-vor-Ordnung-Verfahren zur Umwandlung von Produktwegen in eine kurze Liste, die noch einmal überprüft werden kann, bevor bestellt wird.",
       "sourceBasis": "Forschungsgrundlage: die Live- LoveGoBuy-Suche und -Kontoablauf, aktuelle Produktseitenbeschriftungen, der Versandkostenrechner, und die Zielortprüfungen im Produktindex. Geprüft am 31. August 2026.",
@@ -658,7 +658,7 @@ export const articleTranslations: Record<Exclude<Lang, "en">, Record<string, Art
   },
   "es": {
     "lovegobuy-spreadsheet-research-workflow": {
-      "title": "Artículos: Cómo usar una hoja de cálculo de LoveGoBuy desde la búsqueda hasta la lista de candidatos",
+      "title": "Cómo usar una hoja de cálculo de LoveGoBuy desde la búsqueda hasta la lista de candidatos",
       "intro": "El trabajo de una hoja de cálculo es reducir la incertidumbre. Utiliza este flujo de trabajo repetible para pasar de una consulta amplia a un pequeño grupo de candidatos que puedan ser revisados nuevamente más adelante.",
       "deck": "Un método de mantenimiento prioritario para convertir las rutas de productos en una lista corta que se puede revisar nuevamente antes de realizar un pedido.",
       "sourceBasis": "Bases de investigación: el flujo de búsqueda y cuenta en vivo de LoveGoBuy, las etiquetas de la página de producto actual, el estimador de envío y las comprobaciones de destino en el índice de productos. Verificado el 31 de agosto de 2026.",
@@ -1307,7 +1307,7 @@ export const articleTranslations: Record<Exclude<Lang, "en">, Record<string, Art
   },
   "fr": {
     "lovegobuy-spreadsheet-research-workflow": {
-      "title": "Articles : comment utiliser une feuille de calcul LoveGoBuy, de la recherche à la sélection",
+      "title": "Comment utiliser une feuille de calcul LoveGoBuy, de la recherche à la sélection",
       "intro": "Le travail d'un tableur est de réduire l'incertitude. Utilisez ce flux de travail répétitif pour passer d'une question large à un petit groupe de candidats qui peuvent être vérifiés à nouveau plus tard.",
       "deck": "Une méthode de maintenance avant tout pour transformer les itinéraires de produits en une liste de sélection courte pouvant être vérifiée à nouveau avant la commande.",
       "sourceBasis": "Bases de recherche : le flux de recherche et de compte en direct LoveGoBuy, les étiquettes de page produit actuelles, l'estimateur de livraison et les vérifications de destination dans l'index de produit. Vérifié le 31 août 2026.",
@@ -1956,7 +1956,7 @@ export const articleTranslations: Record<Exclude<Lang, "en">, Record<string, Art
   },
   "it": {
     "lovegobuy-spreadsheet-research-workflow": {
-      "title": "Articoli: come usare un foglio di calcolo LoveGoBuy dalla ricerca alla selezione",
+      "title": "Come usare un foglio di calcolo LoveGoBuy dalla ricerca alla selezione",
       "intro": "Il compito di un foglio elettronico è ridurre l'incertezza. Utilizza questo workflow ripetibile per passare da una domanda ampia a un piccolo gruppo di candidati che possono essere verificati nuovamente in un secondo momento.",
       "deck": "Un metodo di manutenzione prioritaria per trasformare le rotte dei prodotti in una lista corta da verificare nuovamente prima di effettuare un ordine.",
       "sourceBasis": "Basi di ricerca: il flusso di lavoro di ricerca e account in tempo reale di LoveGoBuy, le etichette della pagina prodotto corrente, il calcolatore di spedizione e le verifiche di destinazione nell'indice prodotto. Verificato il 31 agosto 2026.",
@@ -2604,4 +2604,3 @@ export const articleTranslations: Record<Exclude<Lang, "en">, Record<string, Art
     }
   }
 };
-

@@ -15,6 +15,7 @@ const checked = "31 August 2026";
 
 const spreadsheet: ResearchArticle = {
   ...longArticle("en"),
+  title: "How to use a LoveGoBuy spreadsheet from search to shortlist",
   slug: longArticleSlug,
   deck: "A maintenance-first method for turning product routes into a shortlist that can be checked again before ordering.",
   readingTime: "9 min",

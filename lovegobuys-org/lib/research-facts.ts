@@ -11,7 +11,7 @@ export const researchFacts: Record<Lang, Record<PageKind, FactSet>> = {
     qc: { label: "Current official wording", facts: ["Product-page snippets currently state that 3–8 high-definition QC photos are provided.", "Actual angles and usefulness can vary by item.", "Photos show visible condition; they do not prove authenticity or durability."], note: "Photo count is a dated platform statement, not a permanent universal promise." },
     shipping: { label: "Estimator facts", facts: ["The official estimator asks for destination and parcel inputs.", "Its indexed guidance says dimensions can matter as much as weight.", "It references rehearsal-parcel service and warns about restricted goods."], note: "Routes, rules and prices must be rechecked at parcel submission." },
     faq: { label: "Answering standard", facts: ["Official facts come from current platform pages.", "Prices and timeframes are treated as changing data.", "User reports are labelled as experiences, not policy."], note: "Research checked 31 August 2026." },
-    articles: { label: "Editorial evidence", facts: ["Official pages support workflow facts.", "Trustpilot and Reddit are used only for dated user-feedback themes.", "No review anecdote is presented as a guaranteed outcome."], note: "Five English long-form articles; each targets a different search intent." },
+    articles: { label: "Editorial evidence", facts: ["Official pages support workflow facts.", "Trustpilot and Reddit are used only for dated user-feedback themes.", "No review anecdote is presented as a guaranteed outcome."], note: "Five complete long-form articles; each targets a different search intent." },
   },
   de: {
     finds: { label: "Offizieller Ablauf geprüft", facts: ["Die Live-Oberfläche unterstützt Suche per Name, Link und Foto.", "LoveGoBuy nennt Taobao, 1688 und Weidian.", "Ein Suchtreffer beweist keine aktuelle Variantenübereinstimmung."], note: "Offizielle Seiten und Zielrouten am 31. August 2026 geprüft." },
@@ -20,7 +20,7 @@ export const researchFacts: Record<Lang, Record<PageKind, FactSet>> = {
     qc: { label: "Aktuelle offizielle Angabe", facts: ["Produkt-Snippets nennen derzeit 3–8 hochauflösende QC-Fotos.", "Winkel und Nutzen können je Artikel variieren.", "Fotos zeigen Sichtbares, nicht Echtheit oder Haltbarkeit."], note: "Die Fotozahl ist eine datierte Angabe, kein dauerhaftes Versprechen." },
     shipping: { label: "Fakten zum Rechner", facts: ["Der Rechner nutzt Ziel und Paketdaten.", "Maße können laut offizieller Angabe so wichtig wie Gewicht sein.", "Probelauf und Warenbeschränkungen werden genannt."], note: "Routen, Regeln und Preise beim Paket erneut prüfen." },
     faq: { label: "Antwortstandard", facts: ["Plattformfakten stammen aus aktuellen offiziellen Seiten.", "Preise und Zeiten gelten als veränderlich.", "Nutzerberichte sind Erfahrungen, keine Richtlinie."], note: "Recherche am 31. August 2026 geprüft." },
-    articles: { label: "Belegstandard", facts: ["Offizielle Seiten belegen den Ablauf.", "Trustpilot und Reddit liefern nur datierte Erfahrungsthemen.", "Keine Anekdote wird als garantiertes Ergebnis dargestellt."], note: "Fünf englische Langartikel mit getrennten Suchintentionen." },
+    articles: { label: "Belegstandard", facts: ["Offizielle Seiten belegen den Ablauf.", "Trustpilot und Reddit liefern nur datierte Erfahrungsthemen.", "Keine Anekdote wird als garantiertes Ergebnis dargestellt."], note: "Fünf vollständige deutsche Langartikel mit getrennten Suchintentionen." },
   },
   es: {
     finds: { label: "Proceso oficial comprobado", facts: ["La interfaz permite buscar por nombre, enlace y foto.", "LoveGoBuy menciona Taobao, 1688 y Weidian.", "Un resultado no prueba que la variante siga coincidiendo."], note: "Páginas oficiales y rutas revisadas el 31 de agosto de 2026." },
@@ -29,7 +29,7 @@ export const researchFacts: Record<Lang, Record<PageKind, FactSet>> = {
     qc: { label: "Texto oficial actual", facts: ["Las fichas indican actualmente 3–8 fotos QC en alta definición.", "Los ángulos y su utilidad varían según el artículo.", "Las fotos no prueban autenticidad ni duración."], note: "La cantidad es un dato fechado, no una promesa permanente." },
     shipping: { label: "Datos del estimador", facts: ["El estimador usa destino y datos del paquete.", "Las dimensiones pueden importar tanto como el peso.", "Menciona ensayo del paquete y restricciones."], note: "Rutas, reglas y precios deben revisarse al enviar." },
     faq: { label: "Criterio de respuesta", facts: ["Los hechos proceden de páginas oficiales actuales.", "Precios y plazos son datos variables.", "Las opiniones se marcan como experiencias."], note: "Investigación revisada el 31 de agosto de 2026." },
-    articles: { label: "Evidencia editorial", facts: ["Las páginas oficiales sustentan el proceso.", "Trustpilot y Reddit solo aportan temas fechados.", "Ninguna experiencia se presenta como garantía."], note: "Cinco artículos extensos en inglés con intenciones distintas." },
+    articles: { label: "Evidencia editorial", facts: ["Las páginas oficiales sustentan el proceso.", "Trustpilot y Reddit solo aportan temas fechados.", "Ninguna experiencia se presenta como garantía."], note: "Cinco artículos extensos completos en español con intenciones distintas." },
   },
   fr: {
     finds: { label: "Parcours officiel vérifié", facts: ["L’interface permet la recherche par nom, lien et photo.", "LoveGoBuy cite Taobao, 1688 et Weidian.", "Un résultat ne prouve pas que l’option correspond encore."], note: "Pages officielles et routes vérifiées le 31 août 2026." },
@@ -38,7 +38,7 @@ export const researchFacts: Record<Lang, Record<PageKind, FactSet>> = {
     qc: { label: "Formulation officielle actuelle", facts: ["Les fiches annoncent actuellement 3–8 photos QC haute définition.", "Angles et utilité varient selon l’article.", "Les photos ne prouvent ni authenticité ni durabilité."], note: "Le nombre est daté, pas une promesse permanente." },
     shipping: { label: "Faits sur l’estimateur", facts: ["L’estimateur utilise destination et données du colis.", "Les dimensions peuvent compter autant que le poids.", "Il mentionne répétition du colis et restrictions."], note: "Routes, règles et prix sont à revérifier lors du colis." },
     faq: { label: "Norme de réponse", facts: ["Les faits viennent des pages officielles actuelles.", "Prix et délais restent variables.", "Les avis sont signalés comme expériences."], note: "Recherche vérifiée le 31 août 2026." },
-    articles: { label: "Preuves éditoriales", facts: ["Les pages officielles étayent le parcours.", "Trustpilot et Reddit servent aux thèmes datés.", "Aucun témoignage n’est présenté comme garantie."], note: "Cinq articles longs en anglais, chacun sur une intention." },
+    articles: { label: "Preuves éditoriales", facts: ["Les pages officielles étayent le parcours.", "Trustpilot et Reddit servent aux thèmes datés.", "Aucun témoignage n’est présenté comme garantie."], note: "Cinq articles longs et complets en français, chacun sur une intention." },
   },
   it: {
     finds: { label: "Processo ufficiale verificato", facts: ["L’interfaccia cerca per nome, link e foto.", "LoveGoBuy cita Taobao, 1688 e Weidian.", "Un risultato non prova che la variante coincida ancora."], note: "Pagine ufficiali e percorsi verificati il 31 agosto 2026." },
@@ -47,7 +47,7 @@ export const researchFacts: Record<Lang, Record<PageKind, FactSet>> = {
     qc: { label: "Testo ufficiale attuale", facts: ["Le schede indicano oggi 3–8 foto QC ad alta definizione.", "Angoli e utilità variano per articolo.", "Le foto non provano autenticità o durata."], note: "Il numero è un dato datato, non una promessa permanente." },
     shipping: { label: "Dati dello stimatore", facts: ["Lo stimatore usa destinazione e dati del pacco.", "Le dimensioni possono contare quanto il peso.", "Cita prova del pacco e restrizioni."], note: "Rotte, regole e prezzi vanno ricontrollati all’invio." },
     faq: { label: "Criterio delle risposte", facts: ["I fatti provengono da pagine ufficiali aggiornate.", "Prezzi e tempi sono dati variabili.", "Le recensioni sono indicate come esperienze."], note: "Ricerca verificata il 31 agosto 2026." },
-    articles: { label: "Prove editoriali", facts: ["Le pagine ufficiali sostengono il processo.", "Trustpilot e Reddit danno solo temi datati.", "Nessuna esperienza è presentata come garanzia."], note: "Cinque articoli lunghi in inglese con intenti distinti." },
+    articles: { label: "Prove editoriali", facts: ["Le pagine ufficiali sostengono il processo.", "Trustpilot e Reddit danno solo temi datati.", "Nessuna esperienza è presentata come garanzia."], note: "Cinque articoli lunghi e completi in italiano con intenti distinti." },
   },
 };
 

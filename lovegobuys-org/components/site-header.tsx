@@ -5,11 +5,12 @@ import { usePathname } from "next/navigation";
 import { ArrowUpRight, Menu } from "lucide-react";
 import { Sheet, SheetContent, SheetTitle, SheetTrigger } from "@/components/ui/sheet";
 import { Button } from "@/components/ui/button";
-import { copy, languageNames, languages, sectionSlugs, type Lang } from "@/lib/site-data";
+import { copy, interfaceCopy, languageNames, languages, sectionSlugs, type Lang } from "@/lib/site-data";
 
 export function SiteHeader({ lang }: { lang: Lang }) {
   const pathname = usePathname();
   const c = copy[lang];
+  const ui = interfaceCopy[lang];
   const localeHref = (next: Lang) => pathname.replace(/^\/(en|de|es|fr|it)(?=\/|$)/, `/${next}`);
 
   const nav = sectionSlugs.map((slug, index) => ({ slug, label: c.nav[index] }));
@@ -17,11 +18,11 @@ export function SiteHeader({ lang }: { lang: Lang }) {
   return (
     <header className="site-header">
       <div className="header-inner">
-        <Link href={`/${lang}`} className="brand" aria-label="LoveGoBuy Field Guide home">
+        <Link href={`/${lang}`} className="brand" aria-label={`LoveGoBuy Field Guide · ${ui.home}`}>
           <img src="/lovegobuy-logo.png" alt="LoveGoBuy" width="200" height="37" />
         </Link>
 
-        <nav className="desktop-nav" aria-label="Primary navigation">
+        <nav className="desktop-nav" aria-label={ui.primaryNavigation}>
           {nav.map((item) => <Link key={item.slug} href={`/${lang}/${item.slug}`}>{item.label}</Link>)}
         </nav>
 
@@ -36,12 +37,12 @@ export function SiteHeader({ lang }: { lang: Lang }) {
           </a>
           <Sheet>
             <SheetTrigger asChild>
-              <Button className="menu-button" size="icon" variant="outline" aria-label="Open menu"><Menu /></Button>
+              <Button className="menu-button" size="icon" variant="outline" aria-label={ui.primaryNavigation}><Menu /></Button>
             </SheetTrigger>
             <SheetContent side="right" className="mobile-panel">
               <SheetTitle className="mobile-title"><img src="/lovegobuy-logo.png" alt="LoveGoBuy" width="200" height="37" /></SheetTitle>
-              <nav className="mobile-nav" aria-label="Mobile navigation">
-                <Link href={`/${lang}`}>Home</Link>
+              <nav className="mobile-nav" aria-label={ui.primaryNavigation}>
+                <Link href={`/${lang}`}>{ui.home}</Link>
                 {nav.map((item) => <Link key={item.slug} href={`/${lang}/${item.slug}`}>{item.label}</Link>)}
               </nav>
               <div className="mobile-language-list">

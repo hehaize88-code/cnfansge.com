@@ -252,6 +252,97 @@ export const copy: Record<Lang, Copy> = {
   },
 };
 
+type InterfaceCopy = {
+  home: string;
+  primaryNavigation: string;
+  footerNavigation: string;
+  productSource: string;
+  productChecklist: string;
+  researchCard: string;
+  liveRoute: string;
+  matchFirst: string;
+  titleOptionImage: string;
+  sourceMatch: string;
+  usefulQc: string;
+  packedWeight: string;
+  boardNote: string;
+  currentShoePreview: string;
+  routeEvidence: string;
+  routeEvidenceText: string;
+  fieldNote: string;
+  checkingRule: string;
+  checkingRuleText: string;
+  categoryDesk: string;
+  directAnswers: string;
+  longForm: string;
+  sourceAware: string;
+  relatedArticles: string;
+  sectionFinds: string;
+  sectionCategories: string;
+  sectionMethod: string;
+  sectionGuides: string;
+  sectionResearch: string;
+  productRoute: string;
+};
+
+export const interfaceCopy: Record<Lang, InterfaceCopy> = {
+  en: {
+    home: "Home", primaryNavigation: "Primary navigation", footerNavigation: "Footer navigation", productSource: "Product source",
+    productChecklist: "Product research checklist", researchCard: "RESEARCH CARD / 01", liveRoute: "LIVE ROUTE", matchFirst: "Match first",
+    titleOptionImage: "title · option · image", sourceMatch: "Source match", usefulQc: "Useful QC", packedWeight: "Packed weight",
+    boardNote: "Keep a row only when you can explain why it survives the checks.", currentShoePreview: "Current shoe route preview",
+    routeEvidence: "Live product route examples", routeEvidenceText: "Three topic-matched image-to-destination checks from the product index.",
+    fieldNote: "FIELD NOTE", checkingRule: "CHECKING RULE", checkingRuleText: "Record what was checked, when it was checked and what remains unknown.",
+    categoryDesk: "CATEGORY DESK / 08 LANES", directAnswers: "DIRECT ANSWERS / UPDATED 2026", longForm: "LONG-FORM", sourceAware: "SOURCE-AWARE",
+    relatedArticles: "Related research", sectionFinds: "01 / FINDS", sectionCategories: "02 / CATEGORIES", sectionMethod: "03 / METHOD",
+    sectionGuides: "04 / GUIDES", sectionResearch: "05 / RESEARCH", productRoute: "product route",
+  },
+  de: {
+    home: "Startseite", primaryNavigation: "Hauptnavigation", footerNavigation: "Fußnavigation", productSource: "Produktquelle",
+    productChecklist: "Prüfliste für die Produktrecherche", researchCard: "RECHERCHEKARTE / 01", liveRoute: "LIVE-ROUTE", matchFirst: "Zuerst abgleichen",
+    titleOptionImage: "Titel · Variante · Bild", sourceMatch: "Quelle stimmt", usefulQc: "Nützliche QC", packedWeight: "Packgewicht",
+    boardNote: "Behalte eine Zeile nur, wenn du erklären kannst, warum sie alle Prüfungen besteht.", currentShoePreview: "Vorschau der aktuellen Schuhroute",
+    routeEvidence: "Beispiele aktueller Produktrouten", routeEvidenceText: "Drei thematisch passende Prüfungen von Bild und Zielseite aus dem Produktindex.",
+    fieldNote: "PRAXISNOTIZ", checkingRule: "PRÜFREGEL", checkingRuleText: "Notiere, was wann geprüft wurde und was noch unbekannt ist.",
+    categoryDesk: "KATEGORIE-DESK / 08 WEGE", directAnswers: "DIREKTE ANTWORTEN / AKTUALISIERT 2026", longForm: "LANGFORM", sourceAware: "QUELLENBEWUSST",
+    relatedArticles: "Verwandte Recherchen", sectionFinds: "01 / FUNDE", sectionCategories: "02 / KATEGORIEN", sectionMethod: "03 / METHODE",
+    sectionGuides: "04 / LEITFÄDEN", sectionResearch: "05 / RECHERCHE", productRoute: "Produktroute",
+  },
+  es: {
+    home: "Inicio", primaryNavigation: "Navegación principal", footerNavigation: "Navegación del pie", productSource: "Fuente del producto",
+    productChecklist: "Lista de control para investigar productos", researchCard: "FICHA DE INVESTIGACIÓN / 01", liveRoute: "RUTA ACTIVA", matchFirst: "Comprueba primero",
+    titleOptionImage: "título · opción · imagen", sourceMatch: "Fuente correcta", usefulQc: "QC útil", packedWeight: "Peso embalado",
+    boardNote: "Conserva una fila solo si puedes explicar por qué supera los controles.", currentShoePreview: "Vista previa de la ruta de calzado actual",
+    routeEvidence: "Ejemplos de rutas de producto activas", routeEvidenceText: "Tres comprobaciones temáticas exactas entre imagen y destino del índice.",
+    fieldNote: "NOTA DE CAMPO", checkingRule: "REGLA DE CONTROL", checkingRuleText: "Anota qué se comprobó, cuándo y qué sigue sin conocerse.",
+    categoryDesk: "MESA DE CATEGORÍAS / 08 RUTAS", directAnswers: "RESPUESTAS DIRECTAS / ACTUALIZADO 2026", longForm: "FORMATO LARGO", sourceAware: "CON FUENTES",
+    relatedArticles: "Investigación relacionada", sectionFinds: "01 / HALLAZGOS", sectionCategories: "02 / CATEGORÍAS", sectionMethod: "03 / MÉTODO",
+    sectionGuides: "04 / GUÍAS", sectionResearch: "05 / INVESTIGACIÓN", productRoute: "ruta de producto",
+  },
+  fr: {
+    home: "Accueil", primaryNavigation: "Navigation principale", footerNavigation: "Navigation du pied de page", productSource: "Source produit",
+    productChecklist: "Liste de contrôle de recherche produit", researchCard: "FICHE DE RECHERCHE / 01", liveRoute: "ROUTE ACTIVE", matchFirst: "Comparer d’abord",
+    titleOptionImage: "titre · option · image", sourceMatch: "Source conforme", usefulQc: "QC utile", packedWeight: "Poids emballé",
+    boardNote: "Ne gardez une ligne que si vous pouvez expliquer pourquoi elle passe les contrôles.", currentShoePreview: "Aperçu de la route chaussures actuelle",
+    routeEvidence: "Exemples de routes produit actives", routeEvidenceText: "Trois contrôles thématiques exacts entre image et destination dans l’index.",
+    fieldNote: "NOTE DE TERRAIN", checkingRule: "RÈGLE DE CONTRÔLE", checkingRuleText: "Notez ce qui a été vérifié, à quelle date et ce qui reste inconnu.",
+    categoryDesk: "BUREAU CATÉGORIES / 08 ROUTES", directAnswers: "RÉPONSES DIRECTES / MISE À JOUR 2026", longForm: "FORMAT LONG", sourceAware: "AVEC SOURCES",
+    relatedArticles: "Recherches associées", sectionFinds: "01 / TROUVAILLES", sectionCategories: "02 / CATÉGORIES", sectionMethod: "03 / MÉTHODE",
+    sectionGuides: "04 / GUIDES", sectionResearch: "05 / RECHERCHE", productRoute: "route produit",
+  },
+  it: {
+    home: "Home", primaryNavigation: "Navigazione principale", footerNavigation: "Navigazione del piè di pagina", productSource: "Fonte prodotto",
+    productChecklist: "Lista di controllo per la ricerca prodotti", researchCard: "SCHEDA DI RICERCA / 01", liveRoute: "PERCORSO ATTIVO", matchFirst: "Verifica prima",
+    titleOptionImage: "titolo · opzione · immagine", sourceMatch: "Fonte corretta", usefulQc: "QC utile", packedWeight: "Peso imballato",
+    boardNote: "Mantieni una riga solo se sai spiegare perché supera i controlli.", currentShoePreview: "Anteprima del percorso scarpe attuale",
+    routeEvidence: "Esempi di percorsi prodotto attivi", routeEvidenceText: "Tre verifiche tematiche esatte tra immagine e destinazione nell’indice.",
+    fieldNote: "NOTA PRATICA", checkingRule: "REGOLA DI CONTROLLO", checkingRuleText: "Registra cosa è stato verificato, quando e cosa resta sconosciuto.",
+    categoryDesk: "DESK CATEGORIE / 08 PERCORSI", directAnswers: "RISPOSTE DIRETTE / AGGIORNATO 2026", longForm: "FORMATO LUNGO", sourceAware: "CON FONTI",
+    relatedArticles: "Ricerche correlate", sectionFinds: "01 / PRODOTTI", sectionCategories: "02 / CATEGORIE", sectionMethod: "03 / METODO",
+    sectionGuides: "04 / GUIDE", sectionResearch: "05 / RICERCA", productRoute: "percorso prodotto",
+  },
+};
+
 export const products = [
   { name: "Shoe route 7729748283", category: "Shoes", price: "$14.70", weight: "673 g", image: "https://cnfansge.com/uploads/allimg/20260415/1-260415150J2P3.jpg", href: "https://cnfansge.com/AllProducts/6127.html" },
   { name: "Hoodie route 7668645904", category: "Hoodies", price: "$14.60", weight: "949 g", image: "https://cnfansge.com/uploads/allimg/20260421/1-260421155341E1.jpg", href: "https://cnfansge.com/AllProducts/6182.html" },
@@ -262,6 +353,39 @@ export const products = [
   { name: "Jersey route 7641464690-A", category: "Jerseys", price: "$19.50", weight: "670 g", image: "https://cnfansge.com/uploads/allimg/20260422/1-2604222250014B.jpg", href: "https://cnfansge.com/AllProducts/6679.html" },
   { name: "Jersey route 7641464690-B", category: "Jerseys", price: "$19.50", weight: "847 g", image: "https://cnfansge.com/uploads/allimg/20260422/1-260422224959349.jpg", href: "https://cnfansge.com/AllProducts/6677.html" },
 ];
+
+export const productCopy: Record<Lang, { name: string; category: string }[]> = {
+  en: [
+    { name: "Shoe route 7729748283", category: "Shoes" }, { name: "Hoodie route 7668645904", category: "Hoodies" },
+    { name: "T-shirt route 7669150943", category: "T-shirts" }, { name: "Jacket route 7675240560", category: "Jackets" },
+    { name: "Sweatshirt route 7755101935", category: "Sweatshirts" }, { name: "Bottoms route 7755051257", category: "Pants / shorts" },
+    { name: "Jersey route 7641464690-A", category: "Jerseys" }, { name: "Jersey route 7641464690-B", category: "Jerseys" },
+  ],
+  de: [
+    { name: "Schuhroute 7729748283", category: "Schuhe" }, { name: "Hoodie-Route 7668645904", category: "Hoodies" },
+    { name: "T-Shirt-Route 7669150943", category: "T-Shirts" }, { name: "Jackenroute 7675240560", category: "Jacken" },
+    { name: "Sweatshirt-Route 7755101935", category: "Sweatshirts" }, { name: "Hosenroute 7755051257", category: "Hosen / Shorts" },
+    { name: "Trikotroute 7641464690-A", category: "Trikots" }, { name: "Trikotroute 7641464690-B", category: "Trikots" },
+  ],
+  es: [
+    { name: "Ruta de calzado 7729748283", category: "Calzado" }, { name: "Ruta de sudadera 7668645904", category: "Sudaderas" },
+    { name: "Ruta de camiseta 7669150943", category: "Camisetas" }, { name: "Ruta de chaqueta 7675240560", category: "Chaquetas" },
+    { name: "Ruta de sudadera 7755101935", category: "Sudaderas" }, { name: "Ruta de pantalones 7755051257", category: "Pantalones / shorts" },
+    { name: "Ruta de camiseta deportiva 7641464690-A", category: "Camisetas deportivas" }, { name: "Ruta de camiseta deportiva 7641464690-B", category: "Camisetas deportivas" },
+  ],
+  fr: [
+    { name: "Route chaussures 7729748283", category: "Chaussures" }, { name: "Route hoodie 7668645904", category: "Hoodies" },
+    { name: "Route T-shirt 7669150943", category: "T-shirts" }, { name: "Route veste 7675240560", category: "Vestes" },
+    { name: "Route sweat 7755101935", category: "Sweats" }, { name: "Route bas 7755051257", category: "Pantalons / shorts" },
+    { name: "Route maillot 7641464690-A", category: "Maillots" }, { name: "Route maillot 7641464690-B", category: "Maillots" },
+  ],
+  it: [
+    { name: "Percorso scarpe 7729748283", category: "Scarpe" }, { name: "Percorso felpa 7668645904", category: "Felpe" },
+    { name: "Percorso T-shirt 7669150943", category: "T-shirt" }, { name: "Percorso giacca 7675240560", category: "Giacche" },
+    { name: "Percorso sweatshirt 7755101935", category: "Sweatshirt" }, { name: "Percorso pantaloni 7755051257", category: "Pantaloni / shorts" },
+    { name: "Percorso maglia 7641464690-A", category: "Maglie" }, { name: "Percorso maglia 7641464690-B", category: "Maglie" },
+  ],
+};
 
 export const categories = [
   { icon: "01", href: "https://cnfansge.com/shoes/", name: { en: "Shoes", de: "Schuhe", es: "Zapatillas", fr: "Chaussures", it: "Scarpe" }, check: { en: "profile · sole · size", de: "Profil · Sohle · Größe", es: "perfil · suela · talla", fr: "profil · semelle · pointure", it: "profilo · suola · taglia" } },
