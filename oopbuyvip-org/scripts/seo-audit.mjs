@@ -56,7 +56,8 @@ for (const slug of articleSlugs) {
   for (const lang of languages) {
     const html = await readFile(new URL(`./${lang}/articles/${slug}.html`, root), "utf8");
     const body = html.match(/<article class="article-body section">([\s\S]*?)<\/article>/)?.[1] ?? "";
-    const words = textContent(body).split(/\s+/).filter(Boolean).length;
+    const editorialBody = body.split('<section class="article-sources">')[0];
+    const words = textContent(editorialBody).split(/\s+/).filter(Boolean).length;
     assert(words >= 1200, `/${lang}/articles/${slug}: only ${words} words`);
     if (lang === "en") assert(words <= 1800, `/en/articles/${slug}: ${words} words exceeds 1800`);
   }
