@@ -260,6 +260,9 @@ tbody tr:last-child td { border-bottom: 0; }
 .long-article header > div span { padding: 7px 10px; border: 1px solid var(--line); border-radius: 999px; background: white; color: var(--muted); font-size: .68rem; font-weight: 800; }
 .long-article > aside { margin: 45px 0 16px; padding: 15px 17px; display: flex; gap: 10px; border-radius: 14px; color: var(--blue-deep); background: var(--blue-pale); }
 .long-article > aside p { margin: 0; font-size: .74rem; }
+.long-article > aside > div { min-width: 0; }
+.long-article > aside nav { margin-top: 8px; display: flex; flex-wrap: wrap; gap: 7px; }
+.long-article > aside nav a { padding: 6px 9px; display: inline-flex; align-items: center; gap: 5px; border-radius: 9px; color: var(--blue-deep); background: white; font-size: .7rem; font-weight: 800; }
 .article-visual { margin: 18px 0 30px; padding: 26px; border: 1px solid var(--line); border-radius: var(--radius-lg); background: white; }
 .article-visual h2 { margin: 5px 0 20px; font-size: 1.7rem; letter-spacing: -.045em; }
 .article-visual-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 9px; }
@@ -452,6 +455,20 @@ tbody tr:last-child td { border-bottom: 0; }
   .footer-brand { grid-column: 1 / 3; }
   .footer-grid > div:last-child { display: none; }
   .footer-disclaimer { margin-top: 30px; }
+}
+
+/* Keep the compact composition readable: spacing and image height provide the
+   density, while customer-facing copy stays above mobile accessibility floors. */
+@media (max-width: 800px) {
+  .hero-text, .section-heading > div > p:last-child:not(.eyebrow), .page-intro,
+  .article-card > div > span, .process-grid p, .guide-card > span:not(.guide-icon),
+  .fact-grid p, .faq-list details > p, .prose-preview article p { font-size: .875rem; }
+  .category-card small, .product-category, .product-card-footer small,
+  .price-disclosure, .guide-card > p, .guide-card > strong, .article-card p,
+  .article-card strong, .text-link, .eyebrow, .hero-metrics { font-size: .72rem; }
+  .product-card h3, .process-grid h3, .fact-grid h3, .faq-list summary { font-size: .875rem; }
+  .article-body p { font-size: .875rem; line-height: 1.75; }
+  .gallery-note { font-size: .7rem; }
 }
 
 @media (max-width: 430px) {
