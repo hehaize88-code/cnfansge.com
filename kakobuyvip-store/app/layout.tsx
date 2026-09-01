@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Script from "next/script";
 import { JsonLd } from "@/components/JsonLd";
 import { languageAlternates } from "@/components/seo-data";
 import "./globals.css";
@@ -25,6 +26,11 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning>
       <body>
+        <Script src="https://www.googletagmanager.com/gtag/js?id=G-BE0ZJNGLKL" strategy="afterInteractive" />
+        <Script id="google-analytics" strategy="afterInteractive">{`window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag("js", new Date());
+gtag("config", "G-BE0ZJNGLKL");`}</Script>
         <script dangerouslySetInnerHTML={{ __html: "document.documentElement.lang=(location.pathname.match(/^\\/(de|es|fr|it)(?:\\/|$)/)||[])[1]||'en'" }} />
         <JsonLd data={{
           "@context": "https://schema.org",
