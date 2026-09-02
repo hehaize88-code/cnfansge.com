@@ -1,0 +1,24 @@
+{
+  "name": "sugargoos-uk",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vinext build && node scripts/export-static.mjs",
+    "build:server": "vinext build",
+    "start": "vinext start"
+  },
+  "dependencies": {
+    "react": "19.2.8",
+    "react-dom": "19.2.8",
+    "vinext": "1.0.0-beta.8"
+  },
+  "devDependencies": {
+    "@cloudflare/vite-plugin": "^1.54.2",
+    "@vinext/cloudflare": "^1.0.0-beta.6",
+    "@cloudflare/vite-plugin": "^1.54.2",
+    "@vinext/cloudflare": "^1.0.0-beta.6",
+    "@vitejs/plugin-rsc": "0.5.34"
+  }
+}
