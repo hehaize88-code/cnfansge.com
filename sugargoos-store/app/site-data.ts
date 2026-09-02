@@ -172,6 +172,7 @@ export const routes = [
   "shipping",
   "faq",
   "articles",
+  "articles/build-reliable-sugargoo-spreadsheet-fields-dates-evidence",
   "articles/sugargoo-spreadsheet-guide-2026",
   "articles/how-to-read-sugargoo-qc-photos",
   "articles/sugargoo-shipping-cost-guide-2026",

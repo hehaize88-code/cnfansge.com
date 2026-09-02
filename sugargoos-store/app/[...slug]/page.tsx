@@ -49,16 +49,28 @@ export default async function RoutedPage({ params }: Props) {
   const jsonLd = article
     ? {
         "@context": "https://schema.org",
-        "@type": "Article",
-        headline: article.title,
-        description: article.dek,
-        datePublished: "2026-09-01",
-        dateModified: "2026-09-01",
-        wordCount: article.sections.flatMap((section) => section.body).join(" ").trim().split(/\s+/).length,
-        inLanguage: lang,
-        mainEntityOfPage: `${SITE_ORIGIN}${localizedPath(lang, path)}`,
-        author: { "@type": "Organization", name: "Sugar Scout" },
-        publisher: { "@type": "Organization", name: "Sugar Scout" },
+        "@graph": [
+          {
+            "@type": "Article",
+            headline: article.title,
+            description: article.dek,
+            datePublished: articleSlug === "build-reliable-sugargoo-spreadsheet-fields-dates-evidence" ? "2026-09-02" : "2026-09-01",
+            dateModified: articleSlug === "build-reliable-sugargoo-spreadsheet-fields-dates-evidence" ? "2026-09-02" : "2026-09-01",
+            wordCount: article.sections.flatMap((section) => section.body).join(" ").trim().split(/\s+/).length,
+            inLanguage: lang,
+            mainEntityOfPage: `${SITE_ORIGIN}${localizedPath(lang, path)}`,
+            author: { "@type": "Organization", name: "Sugar Scout" },
+            publisher: { "@type": "Organization", name: "Sugar Scout" },
+          },
+          {
+            "@type": "BreadcrumbList",
+            itemListElement: [
+              { "@type": "ListItem", position: 1, name: "Home", item: `${SITE_ORIGIN}${localizedPath(lang)}` },
+              { "@type": "ListItem", position: 2, name: copy[lang].pageTitles.articles, item: `${SITE_ORIGIN}${localizedPath(lang, "articles")}` },
+              { "@type": "ListItem", position: 3, name: article.title, item: `${SITE_ORIGIN}${localizedPath(lang, path)}` },
+            ],
+          },
+        ],
       }
     : {
         "@context": "https://schema.org",

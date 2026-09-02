@@ -313,7 +313,7 @@ function ArticlePage({ lang, slug }: { lang: Language; slug: string }) {
   const d = detailCopy[lang];
   const related = getArticles(lang).filter((item) => item.slug !== slug).slice(0, 3);
   const visualItems = lang === "en" ? article.visual.items : d.editorialItems.map((item) => ({ label: item.title, value: item.text, note: "" }));
-  const dateLabel = new Intl.DateTimeFormat(lang, { year: "numeric", month: "long", day: "numeric", timeZone: "UTC" }).format(new Date("2026-09-01T00:00:00Z"));
+  const dateLabel = article.published;
   return <article className="long-article">
     <header><p className="eyebrow">{article.label}</p><h1>{article.title}</h1><p>{article.dek}</p><div><span>{dateLabel}</span><span>{article.readTime}</span><span>{copy[lang].independent}</span></div></header>
     <aside><Info size={18} /><div><p><strong>{d.articleSourcePrefix}:</strong> {lang === "en" ? article.sourceLine : d.sourceNote}</p><nav aria-label="Sources checked">{(articleSources[slug] ?? []).map((source) => <a key={source.href} href={source.href} target="_blank" rel="noopener noreferrer">{source.label}<ArrowRight size={14} /></a>)}</nav></div></aside>

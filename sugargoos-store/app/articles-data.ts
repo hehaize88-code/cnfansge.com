@@ -1,4 +1,5 @@
 import type { Language } from "./site-data";
+import { spreadsheetMaintenanceArticles } from "./spreadsheet-maintenance-article";
 
 export type ArticleSection = { heading: string; body: string[] };
 export type Article = {
@@ -1336,6 +1337,7 @@ const localizedArticleText: Record<Exclude<Language, "en">, Record<string, Local
 };
 
 const articlePriority = [
+  "build-reliable-sugargoo-spreadsheet-fields-dates-evidence",
   "sugargoo-spreadsheet-guide-2026",
   "sugargoo-shipping-cost-guide-2026",
   "sugargoo-fees-cost-breakdown-2026",
@@ -1345,7 +1347,7 @@ const articlePriority = [
 ];
 
 export function getArticles(lang: Language): Article[] {
-  const localized = lang === "en" ? englishArticles : englishArticles.map((article) => localizedArticleShell(lang, article));
+  const localized = lang === "en" ? [...englishArticles, spreadsheetMaintenanceArticles.en] : [...englishArticles.map((article) => localizedArticleShell(lang, article)), spreadsheetMaintenanceArticles[lang]];
   return articlePriority.map((slug) => localized.find((article) => article.slug === slug)!).filter(Boolean);
 }
 
