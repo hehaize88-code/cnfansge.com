@@ -4,25 +4,25 @@ import { languages } from "../../lib/data";
 export const metadata = {
   metadataBase: new URL("https://usfanss.shop"),
   title: {
-    default: "USFans Spreadsheet 2026 | Finds, QC & Shipping Guide",
+    default: "USFans Parcel Planner 2026 | QC, Weight & Shipping Decisions",
     template: "%s | USFans Index"
   },
   description:
-    "An independent USFans spreadsheet with curated product routes, QC guidance, sizing research and international shipping planning.",
+    "Independent USFans parcel research covering product routes, warehouse QC evidence, chargeable weight, packaging and international shipping decisions.",
   applicationName: "USFans Index",
   robots: { index: true, follow: true },
   openGraph: {
     type: "website",
-    title: "USFans Spreadsheet 2026",
-    description: "Curated finds, QC guidance and a clearer route from product research to parcel planning.",
+    title: "USFans Parcel Planner 2026",
+    description: "Product routes, QC evidence, chargeable weight and international parcel decisions.",
     siteName: "USFans Index",
-    images: [{ url: "/og-cover.svg", width: 1200, height: 630, alt: "USFans Index" }]
+    images: [{ url: "/og-cover.png", width: 1200, height: 630, alt: "USFans Parcel Planner" }]
   },
   twitter: {
     card: "summary_large_image",
-    title: "USFans Spreadsheet 2026",
-    description: "Curated finds, QC guidance and international shipping research.",
-    images: ["/og-cover.svg"]
+    title: "USFans Parcel Planner 2026",
+    description: "Product routes, QC evidence, chargeable weight and international parcel decisions.",
+    images: ["/og-cover.png"]
   }
 };
 

@@ -16,6 +16,10 @@ import { localizedArticles, localizedSupplements, localizedClosingNotes } from "
 
 const destinationSearch = "https://cnfansge.com/search.html";
 const finalBase = "https://usfanss.shop";
+const officialSources = [
+  { key: "help", href: "https://www.usfans.com/help" },
+  { key: "product", href: "https://www.usfans.com/product/1/976460554537" }
+];
 
 export function generateStaticParams() {
   return languages.flatMap((lang) =>
@@ -42,14 +46,14 @@ export async function generateMetadata({ params }) {
   const articleCard = articleSlug ? articleCards.find((item) => item.slug === articleSlug) : null;
   const article = articleCard ? t.articleTitles[articleCard.contentKey] : null;
   const titleMap = {
-    home: "USFans Spreadsheet 2026 — Finds, QC & Shipping",
-    spreadsheet: intro?.[0],
-    finds: intro?.[0],
-    guide: intro?.[0],
-    qc: intro?.[0],
-    shipping: intro?.[0],
-    faq: intro?.[0],
-    articles: intro?.[0],
+    home: t.seoTitles.home,
+    spreadsheet: t.seoTitles.spreadsheet,
+    finds: t.seoTitles.finds,
+    guide: t.seoTitles.guide,
+    qc: t.seoTitles.qc,
+    shipping: t.seoTitles.shipping,
+    faq: t.seoTitles.faq,
+    articles: t.seoTitles.articles,
     article: article?.[0]
   };
   const description = article?.[1] || intro?.[2] || t.hero.body;
@@ -70,7 +74,15 @@ export async function generateMetadata({ params }) {
       title: titleMap[pageKey],
       description,
       url: `${finalBase}${canonicalPath}`,
-      locale: t.locale
+      locale: t.locale,
+      siteName: "USFans Index",
+      images: [{ url: "/og-cover.png", width: 1200, height: 630, alt: t.seoTitles.home }]
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: titleMap[pageKey],
+      description,
+      images: ["/og-cover.png"]
     }
   };
 }
@@ -248,6 +260,36 @@ function PageHero({ intro, number }) {
   );
 }
 
+function CorePageNote({ note }) {
+  if (!note) return null;
+  return <div className="core-page-note"><p className="eyebrow"><span></span>{note[0]}</p><h2>{note[1]}</h2><p>{note[2]}</p><p>{note[3]}</p></div>;
+}
+
+function OfficialSources({ t }) {
+  return (
+    <aside className="source-card official-sources">
+      <strong>{t.common.sourcesChecked}</strong>
+      <p>{t.common.checkedOn}</p>
+      <ul>
+        {officialSources.map((source) => (
+          <li key={source.key}><a href={source.href} target="_blank" rel="nofollow noopener noreferrer">{source.key === "help" ? t.common.officialHelpCenter : t.common.officialProductNotice} <Arrow diagonal /></a></li>
+        ))}
+      </ul>
+    </aside>
+  );
+}
+
+function ArticleEvidenceVisual({ visual }) {
+  if (!visual) return null;
+  return (
+    <figure className="article-evidence-visual">
+      <div className="evidence-visual-heading"><span>{visual[0]}</span><strong>01—04</strong></div>
+      <div className="evidence-visual-grid">{visual[2].map((label, index) => <div key={label}><span>0{index + 1}</span><strong>{label}</strong></div>)}</div>
+      <figcaption>{visual[1]}</figcaption>
+    </figure>
+  );
+}
+
 function HomePage({ lang, t }) {
   return (
     <>
@@ -286,6 +328,7 @@ function SpreadsheetPage({ lang, t }) {
       <PageHero intro={t.pageIntro.spreadsheet} number="01" />
       <FactStrip items={t.coreFacts.guide} />
       <section className="section-shell split-intro"><div><h2>{t.hero.briefTitle}</h2><p>{t.hero.briefBody}</p></div><SearchForm t={t} compact /></section>
+      <section className="section-shell core-note-shell"><CorePageNote note={t.corePageNotes.spreadsheet} /></section>
       <section className="section-shell"><CategoryGrid t={t} /></section>
       <section className="section-shell"><MethodGrid t={t} /></section>
       <section className="section-shell products-section"><SectionHeading eyebrow={t.home.productsEyebrow} title={t.home.productsTitle} /><ProductGrid t={t} limit={8} /><Link className="button primary centered" href={internalPath(lang, "finds")}>{t.common.viewAll}<Arrow /></Link></section>
@@ -299,6 +342,7 @@ function FindsPage({ t }) {
       <JsonLd data={{ "@context": "https://schema.org", "@type": "ItemList", numberOfItems: products.length, itemListElement: products.map((product, index) => ({ "@type": "ListItem", position: index + 1, name: product.title, url: product.href })) }} />
       <PageHero intro={t.pageIntro.finds} number="02" />
       <section className="section-shell finds-toolbar"><SearchForm t={t} compact /><p>{t.common.cnyNote}</p></section>
+      <section className="section-shell core-note-shell"><CorePageNote note={t.corePageNotes.finds} /></section>
       <section className="section-shell products-section"><ProductGrid t={t} /></section>
     </>
   );
@@ -313,15 +357,15 @@ function FactStrip({ items }) {
 }
 
 function GuidePage({ t }) {
-  return <><PageHero intro={t.pageIntro.guide} number="03" /><FactStrip items={t.coreFacts.guide} /><section className="section-shell prose-shell"><NumberedContent items={t.guideSteps} /><aside className="source-card"><strong>{t.common.updated}</strong><p>{t.common.sourceNote}</p></aside></section><section className="section-shell marketplace-section"><SectionHeading eyebrow="TAOBAO · WEIDIAN · 1688" title={t.articleTitles["taobao-weidian-1688"][0]} /><div className="marketplace-grid">{t.marketplaces.map(([title, body]) => <article key={title}><h3>{title}</h3><p>{body}</p></article>)}</div></section></>;
+  return <><PageHero intro={t.pageIntro.guide} number="03" /><FactStrip items={t.coreFacts.guide} /><section className="section-shell core-note-shell"><CorePageNote note={t.corePageNotes.guide} /></section><section className="section-shell prose-shell"><NumberedContent items={t.guideSteps} /><OfficialSources t={t} /></section><section className="section-shell marketplace-section"><SectionHeading eyebrow="TAOBAO · WEIDIAN · 1688" title={t.articleTitles["taobao-weidian-1688"][0]} /><div className="marketplace-grid">{t.marketplaces.map(([title, body]) => <article key={title}><h3>{title}</h3><p>{body}</p></article>)}</div></section></>;
 }
 
 function QcPage({ t }) {
-  return <><PageHero intro={t.pageIntro.qc} number="04" /><FactStrip items={t.coreFacts.qc} /><section className="section-shell prose-shell"><NumberedContent items={t.qcPoints} /><aside className="callout"><span>QC ≠ CERTIFICATE</span><p>{t.qcPoints[7][1]}</p></aside></section></>;
+  return <><PageHero intro={t.pageIntro.qc} number="04" /><FactStrip items={t.coreFacts.qc} /><section className="section-shell core-note-shell"><CorePageNote note={t.corePageNotes.qc} /></section><section className="section-shell prose-shell"><NumberedContent items={t.qcPoints} /><div className="prose-asides"><aside className="callout"><span>QC ≠ CERTIFICATE</span><p>{t.qcPoints[7][1]}</p></aside><OfficialSources t={t} /></div></section></>;
 }
 
 function ShippingPage({ t }) {
-  return <><PageHero intro={t.pageIntro.shipping} number="05" /><FactStrip items={t.coreFacts.shipping} /><section className="section-shell shipping-formula"><div><small>CHARGEABLE WEIGHT</small><strong>max(actual, volumetric)</strong></div><p>{t.shippingPoints[1][1]}</p></section><section className="section-shell prose-shell"><NumberedContent items={t.shippingPoints} /><aside className="source-card"><strong>{t.common.updated}</strong><p>{t.common.sourceNote}</p></aside></section></>;
+  return <><PageHero intro={t.pageIntro.shipping} number="05" /><FactStrip items={t.coreFacts.shipping} /><section className="section-shell shipping-formula"><div><small>CHARGEABLE WEIGHT</small><strong>max(actual, volumetric)</strong></div><p>{t.shippingPoints[1][1]}</p></section><section className="section-shell core-note-shell"><CorePageNote note={t.corePageNotes.shipping} /></section><section className="section-shell prose-shell"><NumberedContent items={t.shippingPoints} /><OfficialSources t={t} /></section></>;
 }
 
 function FaqPage({ t }) {
@@ -329,7 +373,7 @@ function FaqPage({ t }) {
 }
 
 function ArticlesPage({ lang, t }) {
-  return <><PageHero intro={t.pageIntro.articles} number="07" /><section className="section-shell articles-page"><ArticleGrid lang={lang} t={t} /></section></>;
+  return <><PageHero intro={t.pageIntro.articles} number="07" /><section className="section-shell articles-page"><CorePageNote note={t.corePageNotes.articles} /><ArticleGrid lang={lang} t={t} /></section></>;
 }
 
 function ArticlePage({ lang, slug, t }) {
@@ -364,13 +408,14 @@ function ArticlePage({ lang, slug, t }) {
   if (contentKey === "taobao-weidian-1688") { primary = t.marketplaces; secondary = t.guideSteps.slice(0, 3); }
   return (
     <>
-      <JsonLd data={{ "@context": "https://schema.org", "@type": "Article", headline: title, description, datePublished: "2026-09-02", dateModified: "2026-09-02", inLanguage: lang, wordCount: researchedWordCount, citation: researched ? researched.sourceLabel : t.common.sourceNote, mainEntityOfPage: `${finalBase}${internalPath(lang, `articles/${slug}`)}`, publisher: { "@type": "Organization", name: "USFans Index" } }} />
+      <JsonLd data={{ "@context": "https://schema.org", "@type": "Article", headline: title, description, datePublished: "2026-09-02", dateModified: "2026-09-02", inLanguage: lang, wordCount: researchedWordCount, citation: officialSources.map((source) => source.href), mainEntityOfPage: `${finalBase}${internalPath(lang, `articles/${slug}`)}`, publisher: { "@type": "Organization", name: "USFans Index" } }} />
       <article className="long-article">
         <header><p className="eyebrow"><span></span>{article.number} · {article.read}</p><h1>{title}</h1><p>{description}</p></header>
         <div className="article-body">
           {researched ? <>
             <aside className="research-note"><span>{t.common.updated}</span><p>{researched.sourceLabel}</p></aside>
-            <figure className="article-figure"><a href={articleImage.href} target="_blank" rel="noreferrer"><img src={articleImage.image} alt={`${title} — ${articleImage.title}`} width="900" height="900" loading="eager" /></a><figcaption>{t.common.articleImageCaption}</figcaption></figure>
+            <OfficialSources t={t} />
+            {t.articleVisuals[slug] ? <ArticleEvidenceVisual visual={t.articleVisuals[slug]} /> : <figure className="article-figure"><a href={articleImage.href} target="_blank" rel="noreferrer"><img src={articleImage.image} alt={`${title} — ${articleImage.title}`} width="900" height="900" loading="eager" /></a><figcaption>{t.common.articleImageCaption}</figcaption></figure>}
             {researched.sections.map((section, index) => <section key={section.heading} className="researched-section"><span>{String(index + 1).padStart(2, "0")}</span><div><h2>{section.heading}</h2>{section.paragraphs.map((paragraph) => <p key={paragraph}>{paragraph}</p>)}</div></section>)}
             <section><h2>{t.articleLabels.limitations}</h2><p>{t.common.cnyNote}</p><p>{t.common.disclaimer}</p></section>
           </> : <>
