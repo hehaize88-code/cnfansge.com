@@ -99,13 +99,30 @@ export function homeMetadata(lang: Lang): Metadata {
 export function articleMetadata(slug: ArticleSlug, lang: Lang): Metadata {
   const article = getLocalizedArticle(lang, slug);
   const pathname = `/articles/${slug}`;
-  return {
+  const canonical = localizedPath(pathname, lang);
+  const metadata: Metadata = {
     title: `${article.title} | KakobuyVIP`,
     description: article.description,
     keywords: [articleByIntent[slug], "Kakobuy guide", "Kakobuy finds"],
     other: { "content-language": lang },
-    alternates: { canonical: localizedPath(pathname, lang), languages: languageAlternates(pathname) },
+    alternates: { canonical, languages: languageAlternates(pathname) },
   };
+
+  if (slug === "kakobuy-usa-pre-order-readiness-checklist") {
+    metadata.openGraph = {
+      type: "article",
+      url: canonical,
+      title: article.title,
+      description: article.description,
+      siteName: "KakobuyVIP",
+      locale: { en: "en_US", de: "de_DE", es: "es_ES", fr: "fr_FR", it: "it_IT" }[lang],
+      alternateLocale: languages.filter((language) => language !== lang).map((language) => ({ en: "en_US", de: "de_DE", es: "es_ES", fr: "fr_FR", it: "it_IT" })[language]),
+      publishedTime: "2026-09-02T00:00:00+08:00",
+      modifiedTime: "2026-09-02T00:00:00+08:00",
+    };
+  }
+
+  return metadata;
 }
 
 const articleByIntent: Record<ArticleSlug, string> = {
