@@ -1,7 +1,8 @@
 import { localizedArticleExpansions, splitArticleExpansion } from "@/lib/localized-article-expansions";
+import { qvlC01Articles } from "@/lib/qvl-c01";
 
 type Locale = "en" | "de" | "es" | "fr" | "it";
-type Article = { slug: string; title: string; deck: string; readTime: string; sections: { heading: string; paragraphs: string[] }[]; sources?: { label: string; href: string }[] };
+type Article = { slug: string; title: string; deck: string; readTime: string; published?: string; sourceNote?: string; related?: { label: string; kind: "qc" | "article"; slug?: string }[]; sections: { heading: string; paragraphs: string[] }[]; sources?: { label: string; href: string }[] };
 
 const officialSources = {
   beginner: [
@@ -147,9 +148,9 @@ function localizedArticle(locale: Exclude<Locale, "en">, kind: "beginner" | "fee
 }
 
 export const researchedArticles: Record<Locale, Article[]> = {
-  en: [beginnerEnglish, feesEnglish],
-  de: [localizedArticle("de", "beginner"), localizedArticle("de", "fees")],
-  es: [localizedArticle("es", "beginner"), localizedArticle("es", "fees")],
-  fr: [localizedArticle("fr", "beginner"), localizedArticle("fr", "fees")],
-  it: [localizedArticle("it", "beginner"), localizedArticle("it", "fees")],
+  en: [beginnerEnglish, feesEnglish, qvlC01Articles.en],
+  de: [localizedArticle("de", "beginner"), localizedArticle("de", "fees"), qvlC01Articles.de],
+  es: [localizedArticle("es", "beginner"), localizedArticle("es", "fees"), qvlC01Articles.es],
+  fr: [localizedArticle("fr", "beginner"), localizedArticle("fr", "fees"), qvlC01Articles.fr],
+  it: [localizedArticle("it", "beginner"), localizedArticle("it", "fees"), qvlC01Articles.it],
 };

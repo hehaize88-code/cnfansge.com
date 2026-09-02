@@ -218,7 +218,7 @@ export const faqByLocale: Record<Locale, { q: string; a: string }[]> = {
   ],
 };
 
-export type Article = { slug: string; title: string; deck: string; readTime: string; sections: { heading: string; paragraphs: string[] }[]; sources?: { label: string; href: string }[] };
+export type Article = { slug: string; title: string; deck: string; readTime: string; published?: string; sourceNote?: string; related?: { label: string; kind: "qc" | "article"; slug?: string }[]; sections: { heading: string; paragraphs: string[] }[]; sources?: { label: string; href: string }[] };
 
 const sharedArticleBodies: Record<Locale, Record<string, { headings: string[]; paragraphs: string[][] }>> = {
   en: {
@@ -466,8 +466,8 @@ export function getArticles(locale: Locale): Article[] {
     const body = sharedArticleBodies[locale][meta.slug] || sharedArticleBodies.en[meta.slug];
     return { ...meta, sections: body.headings.map((heading, index) => ({ heading, paragraphs: locale === "en" ? [...body.paragraphs[index], englishArticleAdditions[meta.slug][index]] : [...body.paragraphs[index], ...splitArticleExpansion(localizedArticleExpansions[locale][meta.slug][index])] })) };
   });
-  const [beginner, fees] = researchedArticles[locale];
-  const articles = [beginner, existing[0], existing[1], fees, existing[2]];
+  const [beginner, fees, qvlC01] = researchedArticles[locale];
+  const articles = [qvlC01, beginner, existing[0], existing[1], fees, existing[2]];
   if (locale === "en") return articles;
   return articles.map((article) => {
     const additions = localizedArticleParity[locale][article.slug] || [];
