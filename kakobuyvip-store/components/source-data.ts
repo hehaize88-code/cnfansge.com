@@ -88,6 +88,45 @@ const sources = {
       it: "Esperienze pubbliche individuali usate per individuare domande, non risultati generali.",
     },
   },
+  cbpPurchases: {
+    publisher: "U.S. Customs and Border Protection",
+    title: "Internet Purchases",
+    reference: "/trade/basic-import-export/internet-purchases",
+    checked: "2026-09-02",
+    scope: {
+      en: "Buyer responsibility, prohibited and restricted merchandise, other-agency requirements and import-document questions.",
+      de: "Verantwortung des Käufers, verbotene und beschränkte Waren, andere Behörden und Importdokumente.",
+      es: "Responsabilidad del comprador, mercancías prohibidas o restringidas, otras agencias y documentos.",
+      fr: "Responsabilité de l’acheteur, marchandises interdites ou restreintes, autres agences et documents.",
+      it: "Responsabilità dell’acquirente, merci vietate o limitate, altre agenzie e documenti.",
+    },
+  },
+  cbpLowValue: {
+    publisher: "U.S. Customs and Border Protection",
+    title: "CBP modernizes low-value shipment processing",
+    reference: "/newsroom/national-media-release/cbp-modernizes-low-value-shipment-processing",
+    checked: "2026-09-02",
+    scope: {
+      en: "Current 2026 low-value processing context; the article does not publish a universal duty-free threshold.",
+      de: "Aktueller Kontext 2026 für niedrigwertige Sendungen; keine universelle Zollfreigrenze.",
+      es: "Contexto actual de 2026 para envíos de bajo valor; no se publica un umbral universal.",
+      fr: "Contexte 2026 des envois de faible valeur ; aucun seuil universel n’est publié.",
+      it: "Contesto 2026 per spedizioni di basso valore; nessuna soglia universale viene pubblicata.",
+    },
+  },
+  usitcHts: {
+    publisher: "U.S. International Trade Commission",
+    title: "Harmonized Tariff Schedule",
+    reference: "/harmonized_tariff_information",
+    checked: "2026-09-02",
+    scope: {
+      en: "Current tariff schedule and revision context for classification research, not a binding ruling for an unknown product.",
+      de: "Aktueller Zolltarif und Revisionskontext für Recherche, keine verbindliche Einstufung unbekannter Ware.",
+      es: "Arancel vigente y revisión para investigar clasificación, no una decisión vinculante sobre producto desconocido.",
+      fr: "Tarif et révision actuels pour la recherche, pas un classement contraignant d’un produit inconnu.",
+      it: "Tariffa e revisione correnti per la ricerca, non una classificazione vincolante di un prodotto ignoto.",
+    },
+  },
 } satisfies Record<string, SourceReference>;
 
 const sourceKeysByArticle: Record<ArticleSlug, (keyof typeof sources)[]> = {
@@ -98,6 +137,7 @@ const sourceKeysByArticle: Record<ArticleSlug, (keyof typeof sources)[]> = {
   "kakobuy-warehouse-storage-guide": ["service", "returns"],
   "kakobuy-return-exchange-guide": ["returns", "service"],
   "kakobuy-review-2026": ["service", "costs", "returns", "estimate", "trustpilot", "reddit"],
+  "kakobuy-usa-pre-order-readiness-checklist": ["service", "cbpPurchases", "cbpLowValue", "usitcHts"],
 };
 
 export const sourceHeadings: Record<Lang, [string, string]> = {
@@ -111,4 +151,3 @@ export const sourceHeadings: Record<Lang, [string, string]> = {
 export function sourcesForArticle(slug: ArticleSlug) {
   return sourceKeysByArticle[slug].map((key) => sources[key]);
 }
-

@@ -172,7 +172,7 @@ export const productsByLang = Object.fromEntries(
 
 const articleRoutes = [
   "/articles/how-to-use-kakobuy", "/articles/qc-photo-checklist", "/articles/actual-vs-volumetric-weight", "/articles/kakobuy-fees-explained",
-  "/articles/kakobuy-warehouse-storage-guide", "/articles/kakobuy-return-exchange-guide", "/articles/kakobuy-review-2026",
+  "/articles/kakobuy-warehouse-storage-guide", "/articles/kakobuy-return-exchange-guide", "/articles/kakobuy-review-2026", "/articles/kakobuy-usa-pre-order-readiness-checklist",
 ];
 
 const localizedArticleLabels: Record<Lang, [string, string, string][]> = {
@@ -184,6 +184,7 @@ const localizedArticleLabels: Record<Lang, [string, string, string][]> = {
     ["WAREHOUSE", "Kakobuy warehouse: QC, 100-day storage and consolidation", "Use the official storage window to organize seller arrivals, after-sale decisions and parcel groups."],
     ["RETURNS", "Kakobuy return and exchange guide", "Understand the five-day guarantee, evidence, domestic freight responsibility and exchange timing."],
     ["REVIEW", "Kakobuy review 2026: official features and user reports", "A balanced review that separates official policies from Trustpilot and Reddit anecdotes."],
+    ["US GUIDE", "Kakobuy USA guide 2026: pre-order readiness", "Check address, product identity, current import sources and last-mile evidence before ordering for the United States."],
   ],
   de: [
     ["EINSTIEG", "Kakobuy nutzen: vom Produktlink zum internationalen Paket", "Der vollständige Ablauf beim Einkaufsagenten: Bestellung, Lager-QC, Aufbewahrung, Rückgabe, Verpackung und Versand."],
@@ -193,6 +194,7 @@ const localizedArticleLabels: Record<Lang, [string, string, string][]> = {
     ["LAGER", "Kakobuy-Lager: QC, 100 Tage Aufbewahrung und Bündelung", "Das offizielle Lagerfenster nutzen, um Verkäuferankünfte, Reklamationen und Paketgruppen zu organisieren."],
     ["RÜCKGABE", "Kakobuy-Ratgeber für Rückgabe und Umtausch", "Fünf-Tage-Garantie, Belege, Inlandsfracht und Umtauschdauer verstehen."],
     ["BEWERTUNG", "Kakobuy-Bewertung 2026: offizielle Funktionen und Nutzerberichte", "Eine ausgewogene Bewertung, die Richtlinien von Trustpilot- und Reddit-Erfahrungen trennt."],
+    ["USA-RATGEBER", "Kakobuy USA 2026: Bereitschaft vor der Bestellung", "Adresse, Warenidentität, aktuelle Importquellen und letzte Meile vor der Bestellung prüfen."],
   ],
   es: [
     ["PRINCIPIANTES", "Cómo usar Kakobuy: del enlace al paquete internacional", "El proceso completo del agente de compra: pedido, QC en almacén, almacenamiento, devoluciones, embalaje y envío."],
@@ -202,6 +204,7 @@ const localizedArticleLabels: Record<Lang, [string, string, string][]> = {
     ["ALMACÉN", "Almacén Kakobuy: QC, 100 días y consolidación", "Usa el plazo oficial para organizar llegadas, decisiones posventa y grupos de paquetes."],
     ["DEVOLUCIONES", "Guía de devoluciones y cambios de Kakobuy", "Entiende la garantía de cinco días, las pruebas, el transporte nacional y el plazo del cambio."],
     ["RESEÑA", "Reseña de Kakobuy 2026: funciones oficiales e informes de usuarios", "Una reseña equilibrada que separa las políticas oficiales de las experiencias en Trustpilot y Reddit."],
+    ["GUÍA EE. UU.", "Guía Kakobuy USA 2026: preparación previa", "Comprueba dirección, identidad, fuentes de importación actuales y última milla antes de pedir."],
   ],
   fr: [
     ["DÉBUTANT", "Comment utiliser Kakobuy : du lien produit au colis international", "Le parcours complet de l’agent d’achat : commande, QC en entrepôt, stockage, retours, emballage et expédition."],
@@ -211,6 +214,7 @@ const localizedArticleLabels: Record<Lang, [string, string, string][]> = {
     ["ENTREPÔT", "Entrepôt Kakobuy : QC, 100 jours de stockage et regroupement", "Utilisez la période officielle pour organiser les arrivées, décisions après-vente et groupes de colis."],
     ["RETOURS", "Guide Kakobuy des retours et échanges", "Comprenez la garantie de cinq jours, les preuves, le fret national et le délai d’échange."],
     ["AVIS", "Avis Kakobuy 2026 : fonctions officielles et témoignages", "Un avis équilibré qui distingue les règles officielles des expériences Trustpilot et Reddit."],
+    ["GUIDE USA", "Guide Kakobuy USA 2026 : préparation avant commande", "Vérifiez adresse, identité, sources d’importation actuelles et dernier kilomètre avant l’achat."],
   ],
   it: [
     ["PRINCIPIANTI", "Come usare Kakobuy: dal link al pacco internazionale", "Il percorso completo dell’agente d’acquisto: ordine, QC in magazzino, deposito, resi, imballaggio e spedizione."],
@@ -220,6 +224,7 @@ const localizedArticleLabels: Record<Lang, [string, string, string][]> = {
     ["MAGAZZINO", "Magazzino Kakobuy: QC, 100 giorni e consolidamento", "Usa il periodo ufficiale per organizzare arrivi, decisioni post-vendita e gruppi di pacchi."],
     ["RESI", "Guida Kakobuy a resi e cambi", "Comprendi garanzia di cinque giorni, prove, trasporto nazionale e tempi del cambio."],
     ["RECENSIONE", "Recensione Kakobuy 2026: funzioni ufficiali e segnalazioni utenti", "Una recensione equilibrata che separa le regole ufficiali dalle esperienze su Trustpilot e Reddit."],
+    ["GUIDA USA", "Guida Kakobuy USA 2026: preparazione prima dell’ordine", "Controlla indirizzo, identità, fonti d’importazione correnti e ultimo miglio prima di acquistare."],
   ],
 };
 

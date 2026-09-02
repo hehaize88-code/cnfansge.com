@@ -116,4 +116,5 @@ const articleByIntent: Record<ArticleSlug, string> = {
   "kakobuy-warehouse-storage-guide": "Kakobuy warehouse",
   "kakobuy-return-exchange-guide": "Kakobuy return policy",
   "kakobuy-review-2026": "Kakobuy review 2026",
+  "kakobuy-usa-pre-order-readiness-checklist": "Kakobuy USA guide 2026",
 };

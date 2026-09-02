@@ -2,9 +2,10 @@ import type { ArticleRecord, ArticleSlug } from "./article-data";
 import { articleBySlug } from "./article-data";
 import type { Lang } from "./site-data";
 import { articleExpansions } from "./article-expansions";
+import { usaArticleTranslations } from "./usa-readiness-article";
 
 export type LocalizedArticle = Pick<ArticleRecord, "tag" | "title" | "description" | "sourceNote" | "sections" | "takeaways">;
-type ArticleTranslations = Record<ArticleSlug, LocalizedArticle>;
+type ArticleTranslations = Partial<Record<ArticleSlug, LocalizedArticle>>;
 
 const de: ArticleTranslations = {
   "how-to-use-kakobuy": {
@@ -538,7 +539,8 @@ const en = articleBySlug as ArticleTranslations;
 export const localizedArticles: Record<Lang, ArticleTranslations> = { en, de, es, fr, it };
 
 export function getLocalizedArticle(lang: Lang, slug: ArticleSlug): LocalizedArticle {
-  const article = localizedArticles[lang][slug];
+  if (slug === "kakobuy-usa-pre-order-readiness-checklist") return usaArticleTranslations[lang];
+  const article = localizedArticles[lang][slug]!;
   const expansions = articleExpansions[lang][slug] ?? [];
   if (!expansions.length) return article;
   return {

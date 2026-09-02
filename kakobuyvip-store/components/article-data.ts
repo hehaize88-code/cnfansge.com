@@ -1,3 +1,5 @@
+import { usaArticleTranslations } from "./usa-readiness-article";
+
 export type ArticleSlug =
   | "how-to-use-kakobuy"
   | "qc-photo-checklist"
@@ -5,7 +7,8 @@ export type ArticleSlug =
   | "kakobuy-fees-explained"
   | "kakobuy-warehouse-storage-guide"
   | "kakobuy-return-exchange-guide"
-  | "kakobuy-review-2026";
+  | "kakobuy-review-2026"
+  | "kakobuy-usa-pre-order-readiness-checklist";
 
 export type ArticleRecord = {
   slug: ArticleSlug;
@@ -417,6 +420,13 @@ export const articleRecords: ArticleRecord[] = [
       "Shipping comparisons need destination, line, weight, dimensions and date.",
       "A small, documented first order is more informative than a universal verdict."
     ]
+  },
+  {
+    slug: "kakobuy-usa-pre-order-readiness-checklist",
+    ...usaArticleTranslations.en,
+    primaryKeyword: "Kakobuy USA guide 2026",
+    readingTime: "15 min read",
+    updated: "September 2, 2026"
   }
 ];
 

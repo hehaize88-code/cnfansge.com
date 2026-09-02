@@ -9,9 +9,10 @@ const sections = ["spreadsheet", "finds", "guide", "qc", "shipping", "faq", "art
 const updated = new Date("2026-08-31T00:00:00.000Z");
 
 function entry(pathname: string, lang: (typeof languages)[number], priority: number, frequency: "weekly" | "monthly"): MetadataRoute.Sitemap[number] {
+  const lastModified = pathname.includes("kakobuy-usa-pre-order-readiness-checklist") ? new Date("2026-09-02T00:00:00.000Z") : updated;
   return {
     url: `${baseUrl}${localizedPath(pathname, lang) === "/" ? "" : localizedPath(pathname, lang)}`,
-    lastModified: updated,
+    lastModified,
     changeFrequency: frequency,
     priority,
     alternates: {
@@ -27,4 +28,3 @@ export default function sitemap(): MetadataRoute.Sitemap {
     ...articleSlugs.map((slug) => entry(`/articles/${slug}`, lang, 0.75, "monthly")),
   ]);
 }
-
