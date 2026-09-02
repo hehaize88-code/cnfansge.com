@@ -5,7 +5,7 @@ import { decisionKeys, type DecisionKey } from "./pro-data";
 export default function sitemap():MetadataRoute.Sitemap {
   return localeCodes.flatMap(locale=>(Object.keys(pagePaths) as PageKey[]).map(page=>({
     url:`https://kakobuyvip.pro${localPath(locale,page)==="/"?"":localPath(locale,page)}`,
-    lastModified:new Date("2026-08-31"),
+    lastModified:new Date(page==="orderTimelineArticle"?"2026-09-02":"2026-08-31"),
     changeFrequency:page==="home"||page==="finds"?"weekly" as const:"monthly" as const,
     priority: page === "home"
       ? 1
