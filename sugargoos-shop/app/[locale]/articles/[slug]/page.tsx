@@ -13,8 +13,11 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
   const { locale, slug } = await params;
   if (!isLocale(locale) || !isArticleSlug(slug)) return {};
   const article = articles[locale][slug];
-  const languages = Object.fromEntries(locales.map((item) => [item, `https://sugargoos.shop/${item}/articles/${slug}/`]));
-  return { title: article.title, description: article.description, alternates: { canonical: `/${locale}/articles/${slug}/`, languages: { ...languages, "x-default": `https://sugargoos.shop/en/articles/${slug}/` } }, openGraph: { type:"article", title:article.title, description:article.description, images:[] }, twitter:{ card:"summary", title:article.title, description:article.description, images:[] } };
+  const isOrderStatusGuide = slug === "sugargoo-order-status-purchased-shipped-received-stored";
+  const suffix = isOrderStatusGuide ? "" : "/";
+  const canonical = `https://sugargoos.shop/${locale}/articles/${slug}${suffix}`;
+  const languages = Object.fromEntries(locales.map((item) => [item, `https://sugargoos.shop/${item}/articles/${slug}${suffix}`]));
+  return { title: article.title, description: article.description, alternates: { canonical, languages: { ...languages, "x-default": `https://sugargoos.shop/en/articles/${slug}${suffix}` } }, openGraph: { type:"article", url:canonical, title:article.title, description:article.description, images:[] }, twitter:{ card:"summary", title:article.title, description:article.description, images:[] } };
 }
 
 export default async function ArticlePage({ params }: { params: Promise<{ locale: string; slug: string }> }) {
@@ -37,7 +40,10 @@ export default async function ArticlePage({ params }: { params: Promise<{ locale
     it:["Punteggio Trustpilot","Recensioni pubbliche","Quota 5 stelle","Quota 1 stella"],
   }[locale];
   const publishedDates = {"sugargoo-spreadsheet-guide-2026":"2026-09-01","sugargoo-qc-photo-checklist":"2026-08-29","sugargoo-shipping-weight-guide-2026":"2026-08-31","sugargoo-review-2026":"2026-09-01","sugargoo-order-status-purchased-shipped-received-stored":"2026-09-02"};
-  const schema = {"@context":"https://schema.org","@type":"Article",headline:article.title,description:article.description,datePublished:publishedDates[slug],dateModified:slug === "sugargoo-order-status-purchased-shipped-received-stored" ? "2026-09-02" : "2026-09-01",author:{"@type":"Organization",name:"Sugargoo Find Desk"},publisher:{"@type":"Organization",name:"Sugargoo Find Desk"},inLanguage:locale,isAccessibleForFree:true};
+  const articleSchema = {"@type":"Article",headline:article.title,description:article.description,datePublished:publishedDates[slug],dateModified:slug === "sugargoo-order-status-purchased-shipped-received-stored" ? "2026-09-02" : "2026-09-01",author:{"@type":"Organization",name:"Sugargoo Find Desk"},publisher:{"@type":"Organization",name:"Sugargoo Find Desk"},inLanguage:locale,isAccessibleForFree:true};
+  const schema = slug === "sugargoo-order-status-purchased-shipped-received-stored"
+    ? {"@context":"https://schema.org","@graph":[articleSchema,{"@type":"BreadcrumbList",itemListElement:[{"@type":"ListItem",position:1,name:"Home",item:`https://sugargoos.shop/${locale}`},{"@type":"ListItem",position:2,name:labels.back,item:`https://sugargoos.shop/${locale}/articles`},{"@type":"ListItem",position:3,name:article.title,item:`https://sugargoos.shop/${locale}/articles/${slug}`}]}]}
+    : {"@context":"https://schema.org",...articleSchema};
   return (
     <main className="article-page page-width">
       <Link className="back-link" href={`/${locale}/articles/`}><ArrowLeft/>{labels.back}</Link>
