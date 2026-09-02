@@ -58,6 +58,28 @@ export const archivedProducts = products.filter((product) => !featuredProductIds
 
 export const articles = [
   {
+    slug: "sugargoo-shoes-qc-shape-stitching-soles-size",
+    label: "SHOES QC FIELD NOTE",
+    read: "14 min",
+    image: "/og/qc-photo-checklist.png",
+    datePublished: "2026-09-02",
+    dateModified: "2026-09-02",
+    title: {
+      en: "Sugargoo Shoes QC: Shape, Stitching, Soles and Size Evidence",
+      de: "Sugargoo Schuhe QC: Form, Nähte, Sohlen und Größenbelege",
+      es: "QC de zapatos Sugargoo: forma, costuras, suelas y talla",
+      fr: "QC chaussures Sugargoo : forme, coutures, semelles et taille",
+      it: "QC scarpe Sugargoo: forma, cuciture, suole e taglia"
+    },
+    summary: {
+      en: "A category-specific photo review for pair identity, symmetry, joins, sole condition, measurements and included accessories.",
+      de: "Kategoriebezogene Fotoprüfung von Paaridentität, Symmetrie, Verbindungen, Sohlen, Maßen und Zubehör.",
+      es: "Revisión fotográfica específica de identidad, simetría, uniones, suelas, medidas y accesorios.",
+      fr: "Contrôle photo ciblé : identité, symétrie, jonctions, semelles, mesures et accessoires.",
+      it: "Revisione fotografica per identità, simmetria, giunzioni, suole, misure e accessori."
+    }
+  },
+  {
     slug: "sugargoo-uk-buying-guide-2026",
     label: "UK STARTER GUIDE",
     read: "12 min",

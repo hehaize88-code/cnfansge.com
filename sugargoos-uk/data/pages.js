@@ -4,8 +4,15 @@ import { esArticles } from "./articles-es";
 import { frArticles } from "./articles-fr";
 import { itArticles } from "./articles-it";
 import { articleChecklists } from "./article-checklists";
+import { shoesQcArticles } from "./shoes-qc-articles";
 
-const localizedArticles = { en: researchedArticles, de: deArticles, es: esArticles, fr: frArticles, it: itArticles };
+const localizedArticles = {
+  en: { ...researchedArticles, "sugargoo-shoes-qc-shape-stitching-soles-size": shoesQcArticles.en },
+  de: { ...deArticles, "sugargoo-shoes-qc-shape-stitching-soles-size": shoesQcArticles.de },
+  es: { ...esArticles, "sugargoo-shoes-qc-shape-stitching-soles-size": shoesQcArticles.es },
+  fr: { ...frArticles, "sugargoo-shoes-qc-shape-stitching-soles-size": shoesQcArticles.fr },
+  it: { ...itArticles, "sugargoo-shoes-qc-shape-stitching-soles-size": shoesQcArticles.it }
+};
 
 export const pageCopy = {
   en: {
