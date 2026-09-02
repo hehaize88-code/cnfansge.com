@@ -5,6 +5,7 @@ shipping, FAQ and evidence-led article site at `https://sugargoos.uk/`.
 
 - Repository directory: `sugargoos-uk/`
 - Cloudflare Pages project: `sugargoos-uk`
+- Primary domain: `sugargoos.uk` (`www` redirects to the apex domain)
 - Production branch: `main`
 - Cloudflare root directory: `/sugargoos-uk`
 - Build command: `npm run build`
