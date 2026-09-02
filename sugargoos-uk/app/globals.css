@@ -106,6 +106,15 @@ button, input, select { font: inherit; }
 .product-bottom a { width: 32px; height: 32px; display: grid; place-items: center; background: var(--orange); border-radius: 50%; font-weight: 900; }
 .empty-state { padding: 40px; border: 1px dashed currentColor; text-align: center; }
 .center-action { display: flex; justify-content: center; margin-top: 34px; }
+.route-archive { margin-top: 74px; padding-top: 54px; border-top: 1px solid var(--ink); }
+.route-archive-grid { display: grid; grid-template-columns: repeat(3, 1fr); border-top: 1px solid var(--ink); border-left: 1px solid var(--ink); }
+.route-archive-grid article { min-width: 0; display: grid; grid-template-columns: 1fr auto 34px; gap: 12px; align-items: center; padding: 14px; border-right: 1px solid var(--ink); border-bottom: 1px solid var(--ink); background: var(--paper); }
+.route-archive-grid article > div { min-width: 0; display: grid; }
+.route-archive-grid article span { color: var(--muted); font-size: 11px; font-weight: 800; text-transform: uppercase; }
+.route-archive-grid article strong { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; font: 600 15px/1.25 Georgia, serif; }
+.route-archive-grid article > p { margin: 0; font-size: 14px; font-weight: 850; white-space: nowrap; }
+.route-archive-grid article small { color: var(--muted); font-size: 10px; font-weight: 700; }
+.route-archive-grid article > a { width: 30px; height: 30px; display: grid; place-items: center; background: var(--orange); border-radius: 50%; font-weight: 900; }
 
 .workflow-grid { display: grid; grid-template-columns: repeat(4, 1fr); border: 1px solid var(--ink); }
 .workflow-grid article { min-height: 235px; padding: 24px; border-right: 1px solid var(--ink); }
@@ -161,6 +170,15 @@ button, input, select { font: inherit; }
 .source-cta { margin-bottom: 90px; padding: 28px; display: flex; align-items: center; justify-content: space-between; gap: 30px; background: var(--lime); border: 1px solid var(--ink); box-shadow: 9px 9px 0 var(--ink); }
 .source-cta h2 { font-size: 42px; }
 .source-cta p:not(.eyebrow) { margin: 6px 0 0; }
+.category-evidence { margin-bottom: 56px; display: grid; grid-template-columns: 1.35fr .65fr; gap: 54px; align-items: start; padding-block: 66px; border-top: 1px solid var(--ink); }
+.category-evidence-copy h2 { max-width: 780px; margin: 0 0 26px; font: 500 clamp(34px, 4vw, 58px)/1 Georgia, serif; letter-spacing: -.035em; }
+.category-evidence-copy > p:not(.eyebrow) { max-width: 760px; margin: 0 0 18px; color: #405357; font-size: 16px; line-height: 1.75; }
+.category-evidence aside { padding: 22px; border: 1px solid var(--ink); background: var(--lime); box-shadow: 7px 7px 0 var(--ink); }
+.category-evidence aside ol { margin: 0; padding: 0; list-style: none; border-top: 1px solid var(--ink); }
+.category-evidence aside li { display: grid; grid-template-columns: 38px 1fr; gap: 10px; padding: 13px 0; border-bottom: 1px solid rgba(16,42,45,.28); }
+.category-evidence aside li:last-child { border-bottom: 0; }
+.category-evidence aside li span { color: var(--orange); font: 650 20px Georgia, serif; }
+.category-evidence aside li p { margin: 0; font-size: 13px; line-height: 1.5; }
 
 .guide-layout { display: grid; grid-template-columns: 270px 1fr; gap: 70px; align-items: start; }
 .guide-layout aside { position: sticky; top: 116px; }
@@ -179,6 +197,10 @@ button, input, select { font: inherit; }
 .evidence-panel li:nth-child(odd) { border-right: 1px solid var(--ink); }
 .evidence-panel li:nth-last-child(-n+2) { border-bottom: 0; }
 .evidence-panel li::before { content: "✓"; position: absolute; left: 14px; color: var(--orange); font-weight: 950; }
+.research-sources { margin: -15px 0 54px; padding: 18px 22px; display: flex; flex-wrap: wrap; align-items: center; gap: 10px; border: 1px solid var(--ink); background: var(--paper); }
+.research-sources .eyebrow { width: 100%; margin-bottom: 2px; }
+.research-sources a { padding: 8px 10px; border: 1px solid var(--ink); font-size: 12px; font-weight: 800; }
+.research-sources a:hover { background: var(--lime); }
 
 .longform { padding-block: 92px; }
 .longform > header { max-width: 1080px; margin-bottom: 62px; }
@@ -223,6 +245,8 @@ button, input, select { font: inherit; }
   .category-grid { grid-template-columns: repeat(2, 1fr); }
   .product-grid { grid-template-columns: repeat(3, 1fr); }
   .dimension-grid { grid-template-columns: repeat(3, 1fr); }
+  .route-archive-grid { grid-template-columns: repeat(2, 1fr); }
+  .category-evidence { grid-template-columns: 1fr; }
 }
 
 @media (max-width: 760px) {
@@ -235,66 +259,73 @@ button, input, select { font: inherit; }
 
   .hero { min-height: auto; grid-template-columns: 1fr; gap: 24px; padding-block: 35px 32px; }
   .hero-copy h1 { max-width: 580px; font-size: clamp(43px, 13vw, 66px); }
-  .hero-intro { margin: 16px 0; font-size: 13px; line-height: 1.45; }
+  .hero-intro { margin: 16px 0; font-size: 15px; line-height: 1.5; }
   .hero-buttons { margin: 16px 0; }
-  .button { min-height: 40px; padding: 9px 12px; font-size: 9px; }
+  .button { min-height: 40px; padding: 9px 12px; font-size: 12px; }
   .catalogue-search { grid-template-columns: 1fr auto; padding: 4px; box-shadow: 4px 4px 0 var(--orange); }
-  .catalogue-search input { min-height: 38px; padding: 6px 8px; font-size: 11px; }
-  .catalogue-search button { max-width: 116px; padding: 6px 8px; font-size: 8px; }
+  .catalogue-search input { min-height: 40px; padding: 7px 9px; font-size: 14px; }
+  .catalogue-search button { max-width: 132px; padding: 7px 9px; font-size: 12px; }
   .hero-collage { min-height: 290px; order: -1; width: 82%; margin-inline: auto; }
   .collage-label { width: 74px; top: -8px; }
-  .collage-label span { font-size: 6px; }
+  .collage-label span { font-size: 12px; }
   .collage-label strong { font-size: 14px; }
 
   .metric-strip { grid-template-columns: repeat(2, 1fr); }
   .metric-strip div { min-height: 58px; padding: 11px 12px; border-bottom: 1px solid rgba(255,255,255,.14); }
   .metric-strip span { font-size: 18px; }
-  .metric-strip strong { font-size: 8px; }
+  .metric-strip strong { font-size: 12px; }
 
   .section { padding-block: 48px; }
   .section-heading, .section-heading.split { display: block; margin-bottom: 22px; }
   .section-heading h2, .shipping-lab h2 { font-size: clamp(32px, 10vw, 46px); }
-  .section-heading > p, .section-heading.split > p { margin-top: 12px; font-size: 11px; }
-  .eyebrow { margin-bottom: 9px; font-size: 8px; }
+  .section-heading > p, .section-heading.split > p { margin-top: 12px; font-size: 14px; line-height: 1.5; }
+  .eyebrow { margin-bottom: 9px; font-size: 12px; }
   .category-grid { gap: 8px; }
   .category-card > img { aspect-ratio: 1.06; }
   .category-overlay { bottom: 49px; padding: 32px 9px 9px; }
   .category-overlay span { font-size: 19px; }
   .category-overlay h3 { font-size: 18px; }
-  .category-overlay p { font-size: 7px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
-  .category-actions { min-height: 49px; grid-template-columns: 1fr; }
-  .category-actions a { padding: 5px; font-size: 7px; }
-  .category-actions a + a { display: none; }
+  .category-overlay p { font-size: 12px; line-height: 1.25; white-space: normal; overflow: visible; }
+  .category-actions { min-height: 49px; grid-template-columns: 1fr 1.2fr; }
+  .category-actions a { display: grid; padding: 6px 4px; font-size: 12px; line-height: 1.15; }
+  .category-actions a + a { display: grid; }
 
   .product-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 8px; }
   .product-card-body { padding: 9px; }
-  .route-pill { left: 5px; bottom: 5px; padding: 4px 5px; font-size: 6px; }
+  .route-pill { left: 5px; bottom: 5px; padding: 4px 5px; font-size: 11px; letter-spacing: .03em; }
   .product-tags { min-height: 16px; }
-  .product-tags span { padding: 2px 4px; font-size: 6px; }
-  .product-card h3 { min-height: 33px; margin: 6px 0 8px; font-size: 13px; }
+  .product-tags span { padding: 2px 4px; font-size: 11px; }
+  .product-card h3 { min-height: 36px; margin: 6px 0 8px; font-size: 14px; }
   .product-bottom { padding-top: 7px; }
-  .product-bottom p { font-size: 13px; }
-  .product-bottom small { font-size: 6px; }
-  .product-bottom a { width: 25px; height: 25px; font-size: 10px; }
+  .product-bottom p { font-size: 15px; }
+  .product-bottom small { font-size: 11px; }
+  .product-bottom a { width: 30px; height: 30px; font-size: 12px; }
   .filter-bar { grid-template-columns: 1fr; margin-bottom: 16px; }
   .filter-tabs { display: grid; grid-template-columns: repeat(4, 1fr); gap: 4px; }
-  .filter-tabs button { min-height: 31px; padding: 5px 2px; font-size: 7px; }
-  .mini-search input { min-height: 35px; font-size: 10px; }
+  .filter-tabs button { min-height: 36px; padding: 6px 3px; font-size: 12px; }
+  .mini-search input { min-height: 40px; font-size: 14px; }
+  .route-archive { margin-top: 48px; padding-top: 38px; }
+  .route-archive-grid { grid-template-columns: 1fr; }
+  .route-archive-grid article { grid-template-columns: 1fr auto 34px; padding: 12px; }
+  .route-archive-grid article span { font-size: 12px; }
+  .route-archive-grid article strong { font-size: 16px; white-space: normal; }
+  .route-archive-grid article > p { font-size: 14px; }
+  .route-archive-grid article small { font-size: 11px; }
 
   .workflow-grid { grid-template-columns: repeat(2, 1fr); }
   .workflow-grid article { min-height: 150px; padding: 13px; border-bottom: 1px solid var(--ink); }
   .workflow-grid article:nth-child(2) { border-right: 0; }
   .workflow-grid span { font-size: 24px; }
   .workflow-grid h3 { margin: 16px 0 5px; font-size: 17px; }
-  .workflow-grid p { font-size: 9px; }
+  .workflow-grid p { font-size: 14px; line-height: 1.45; }
   .lab-grid { grid-template-columns: 1fr; gap: 22px; }
-  .lab-grid > div:first-child > p:not(.eyebrow) { font-size: 11px; }
+  .lab-grid > div:first-child > p:not(.eyebrow) { font-size: 15px; line-height: 1.5; }
   .weight-card { padding: 12px; box-shadow: 6px 6px 0 var(--ink); }
   .dimension-grid { grid-template-columns: repeat(3, 1fr); gap: 5px; }
-  .dimension-grid label span { font-size: 6px; }
-  .dimension-grid input, .dimension-grid select { height: 38px; padding: 6px; font-size: 10px; }
+  .dimension-grid label span { font-size: 12px; }
+  .dimension-grid input, .dimension-grid select { height: 42px; padding: 7px; font-size: 14px; }
   .weight-results div { padding: 9px; }
-  .weight-results span { font-size: 6px; }
+  .weight-results span { font-size: 12px; }
   .weight-results strong { font-size: 20px; }
 
   .article-grid { grid-template-columns: repeat(2, 1fr); gap: 8px; }
@@ -302,52 +333,64 @@ button, input, select { font: inherit; }
   .article-card:last-child { grid-column: 1 / -1; min-height: 210px; }
   .article-index { font-size: 29px; }
   .article-card h3 { margin: 12px 0 7px; font-size: 17px; }
-  .article-card > p:not(.eyebrow) { font-size: 9px; }
-  .article-card > a { font-size: 8px; }
+  .article-card > p:not(.eyebrow) { font-size: 14px; line-height: 1.45; }
+  .article-card > a { font-size: 12px; }
 
   .faq-section { display: block; }
   .faq-list summary { min-height: 55px; grid-template-columns: 28px 1fr 18px; font-size: 13px; }
-  .faq-list details p { margin: 0 0 16px 38px; font-size: 9px; }
+  .faq-list details p { margin: 0 0 16px 38px; font-size: 14px; line-height: 1.5; }
   .page-hero { padding-block: 50px 38px; }
   .page-hero h1 { font-size: clamp(43px, 13vw, 62px); }
-  .page-hero > p:not(.eyebrow) { margin-top: 16px; font-size: 12px; }
-  .fact-row span { font-size: 6px; }
+  .page-hero > p:not(.eyebrow) { margin-top: 16px; font-size: 16px; line-height: 1.5; }
+  .fact-row span { font-size: 12px; }
   .source-cta { margin-bottom: 48px; padding: 16px; }
   .source-cta h2 { font-size: 29px; }
 
   .guide-layout { grid-template-columns: 1fr; gap: 30px; }
-  .guide-layout aside { display: none; }
+  .guide-layout aside { display: block; position: static; }
+  .guide-layout aside > div { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 0 12px; padding: 14px; }
+  .guide-layout aside .eyebrow { grid-column: 1 / -1; }
+  .guide-layout aside a { font-size: 12px; }
   .guide-sections article { padding: 0 0 34px 45px; }
   .guide-sections article > span { left: -19px; width: 38px; height: 38px; font-size: 15px; }
   .guide-sections h2 { font-size: 24px; }
-  .guide-sections article p { font-size: 11px; }
+  .guide-sections article p { font-size: 16px; line-height: 1.6; }
   .inline-tool { margin-left: 0; padding: 12px; }
 
   .longform { padding-block: 52px; }
   .longform h1 { font-size: clamp(42px, 13vw, 62px); }
-  .article-deck { margin: 18px 0; font-size: 13px; }
-  .article-meta span { font-size: 6px; }
+  .article-deck { margin: 18px 0; font-size: 16px; line-height: 1.5; }
+  .article-meta span { font-size: 12px; }
   .article-body .lead { padding: 16px; font-size: 16px; }
   .evidence-panel { padding: 14px; box-shadow: 4px 4px 0 var(--ink); }
   .evidence-panel ul { grid-template-columns: 1fr; }
-  .evidence-panel li, .evidence-panel li:nth-child(odd), .evidence-panel li:nth-last-child(-n+2) { min-height: 58px; border-right: 0; border-bottom: 1px solid var(--ink); font-size: 10px; }
+  .evidence-panel li, .evidence-panel li:nth-child(odd), .evidence-panel li:nth-last-child(-n+2) { min-height: 58px; border-right: 0; border-bottom: 1px solid var(--ink); font-size: 14px; }
   .evidence-panel li:last-child { border-bottom: 0; }
   .article-body section { padding: 30px 0 20px; }
   .section-number { font-size: 28px; }
   .article-body h2 { margin: 5px 0 10px; font-size: 26px; }
-  .article-body section p, .closing { font-size: 12px; }
+  .article-body section p, .closing { font-size: 16px; line-height: 1.72; }
   .article-checklist { padding: 16px; box-shadow: 4px 4px 0 var(--orange); }
   .article-checklist h2 { font-size: 25px; }
   .article-checklist li { grid-template-columns: 34px 1fr; gap: 8px; }
-  .article-checklist li p { font-size: 11px; }
+  .article-checklist li p { font-size: 14px; }
+
+  .research-sources { margin: -8px 0 38px; padding: 14px; }
+  .research-sources a { width: 100%; font-size: 12px; }
+  .category-evidence { margin-bottom: 38px; gap: 30px; padding-block: 46px; }
+  .category-evidence-copy h2 { margin-bottom: 20px; font-size: 32px; }
+  .category-evidence-copy > p:not(.eyebrow) { font-size: 16px; line-height: 1.7; }
+  .category-evidence aside { padding: 16px; box-shadow: 4px 4px 0 var(--ink); }
+  .category-evidence aside li p { font-size: 14px; }
 
   .footer-grid { grid-template-columns: 1fr; gap: 28px; }
-  .footer-brand p { font-size: 9px; }
+  .footer-brand p { font-size: 12px; }
+  .footer-grid > div:not(:first-child) a, .footer-grid > div:not(:first-child) p:not(.eyebrow) { font-size: 12px; }
 
   /* Mobile homepage: all modules remain present, but the index is kept to roughly 3–5 viewports. */
   .home-page .hero { gap: 10px; padding-block: 12px 14px; }
   .home-page .hero-copy h1 { font-size: clamp(31px, 9.5vw, 40px); line-height: .94; }
-  .home-page .hero-intro { margin: 8px 0; font-size: 12px; line-height: 1.35; }
+  .home-page .hero-intro { margin: 8px 0; font-size: 14px; line-height: 1.4; }
   .home-page .hero-buttons { gap: 6px; margin: 8px 0; }
   .home-page .button { min-height: 34px; padding: 7px 9px; font-size: 12px; }
   .home-page .catalogue-search { box-shadow: 3px 3px 0 var(--orange); }
@@ -386,7 +429,7 @@ button, input, select { font: inherit; }
   .home-page .section-heading h2,
   .home-page .shipping-lab h2 { font-size: clamp(25px, 7.8vw, 34px); line-height: .98; }
   .home-page .section-heading > p,
-  .home-page .section-heading.split > p { margin-top: 7px; font-size: 12px; line-height: 1.35; }
+  .home-page .section-heading.split > p { margin-top: 7px; font-size: 14px; line-height: 1.4; }
   .home-page .eyebrow { margin-bottom: 6px; font-size: 12px; letter-spacing: .1em; }
 
   .home-page .category-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 6px; }
@@ -445,7 +488,7 @@ button, input, select { font: inherit; }
   .home-page .faq-section { gap: 0; }
   .home-page .faq-section .section-heading { margin-bottom: 8px; }
   .home-page .faq-list summary { min-height: 42px; grid-template-columns: 24px 1fr 18px; gap: 6px; font-size: 14px; line-height: 1.15; }
-  .home-page .faq-list details p { margin: 0 0 12px 30px; font-size: 12px; line-height: 1.35; }
+  .home-page .faq-list details p { margin: 0 0 12px 30px; font-size: 14px; line-height: 1.45; }
 }
 
 @media (max-width: 380px) {

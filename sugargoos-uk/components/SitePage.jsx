@@ -1,15 +1,24 @@
 import ProductExplorer from "./ProductExplorer";
 import WeightCalculator from "./WeightCalculator";
 import { articleBody, pageCopy, pageFacts } from "../data/pages";
-import { articles, categories, languageNames, languages, products, routeFor, translations } from "../data/site";
+import { categoryGuides } from "../data/category-guides";
+import { archivedProducts, articles, categories, featuredProducts, languageNames, languages, products, routeFor, translations } from "../data/site";
 
 const siteUrl = "https://sugargoos.uk";
 const editorialLabels = {
-  en: { research: "RESEARCH SNAPSHOT / 02.09.2026", onPage: "ON THIS PAGE", official: "Official workflow research", checked: "Checked 02.09.2026", interpretation: "Independent UK interpretation", independent: "Independent guide", updated: "Updated 2 Sep 2026", decision: "DECISION CHECK", numbers: "TRY THE NUMBERS", index: "INDEX", status: "STATUS", preview: "Published guide: indexable / live domain" },
-  de: { research: "RECHERCHESTAND / 02.09.2026", onPage: "AUF DIESER SEITE", official: "Offizielle Ablaufrecherche", checked: "Geprüft am 02.09.2026", interpretation: "Unabhängige UK-Einordnung", independent: "Unabhängiger Leitfaden", updated: "Aktualisiert am 2. Sep. 2026", decision: "ENTSCHEIDUNGSPRÜFUNG", numbers: "ZAHLEN TESTEN", index: "ÜBERSICHT", status: "STATUS", preview: "Veröffentlichter Leitfaden / Live-Domain" },
-  es: { research: "RESUMEN DE INVESTIGACIÓN / 02.09.2026", onPage: "EN ESTA PÁGINA", official: "Investigación del proceso oficial", checked: "Revisado el 02.09.2026", interpretation: "Interpretación UK independiente", independent: "Guía independiente", updated: "Actualizado el 2 sep. 2026", decision: "CONTROL DE DECISIÓN", numbers: "PRUEBA LOS NÚMEROS", index: "ÍNDICE", status: "ESTADO", preview: "Guía publicada / dominio activo" },
-  fr: { research: "ÉTAT DE LA RECHERCHE / 02.09.2026", onPage: "SUR CETTE PAGE", official: "Recherche sur le parcours officiel", checked: "Vérifié le 02.09.2026", interpretation: "Interprétation UK indépendante", independent: "Guide indépendant", updated: "Mis à jour le 2 sept. 2026", decision: "CONTRÔLE DE DÉCISION", numbers: "TESTER LES CHIFFRES", index: "INDEX", status: "STATUT", preview: "Guide publié / domaine actif" },
-  it: { research: "STATO DELLA RICERCA / 02.09.2026", onPage: "IN QUESTA PAGINA", official: "Ricerca sul flusso ufficiale", checked: "Verificato il 02.09.2026", interpretation: "Interpretazione UK indipendente", independent: "Guida indipendente", updated: "Aggiornato il 2 set. 2026", decision: "CONTROLLO DECISIONALE", numbers: "PROVA I NUMERI", index: "INDICE", status: "STATO", preview: "Guida pubblicata / dominio attivo" }
+  en: { research: "RESEARCH SNAPSHOT / 02.09.2026", onPage: "ON THIS PAGE", official: "Official workflow research", checked: "Checked 02.09.2026", interpretation: "Independent UK interpretation", independent: "Independent guide", updated: "Updated 2 Sep 2026", decision: "DECISION CHECK", numbers: "TRY THE NUMBERS", index: "INDEX", status: "STATUS", preview: "Published guide: indexable / live domain", sources: "OFFICIAL FACT SOURCES", latest: "LATEST 12 EDITOR PICKS", archive: "CHECKED ROUTE ARCHIVE", archiveText: "The remaining 12 checked routes stay available here as a compact archive, so no product route has been removed while this page keeps a distinct editorial intent.", categoryCheck: "CATEGORY EVIDENCE CHECK" },
+  de: { research: "RECHERCHESTAND / 02.09.2026", onPage: "AUF DIESER SEITE", official: "Offizielle Ablaufrecherche", checked: "Geprüft am 02.09.2026", interpretation: "Unabhängige UK-Einordnung", independent: "Unabhängiger Leitfaden", updated: "Aktualisiert am 2. Sep. 2026", decision: "ENTSCHEIDUNGSPRÜFUNG", numbers: "ZAHLEN TESTEN", index: "ÜBERSICHT", status: "STATUS", preview: "Veröffentlichter Leitfaden / Live-Domain", sources: "OFFIZIELLE FAKTENQUELLEN", latest: "12 AKTUELLE REDAKTIONSTIPPS", archive: "GEPRÜFTES ROUTENARCHIV", archiveText: "Die übrigen 12 geprüften Routen bleiben als kompaktes Archiv verfügbar. Keine Produktroute wurde entfernt, während die Seite einen eigenen redaktionellen Suchzweck erhält.", categoryCheck: "KATEGORIE-BELEGPRÜFUNG" },
+  es: { research: "RESUMEN DE INVESTIGACIÓN / 02.09.2026", onPage: "EN ESTA PÁGINA", official: "Investigación del proceso oficial", checked: "Revisado el 02.09.2026", interpretation: "Interpretación UK independiente", independent: "Guía independiente", updated: "Actualizado el 2 sep. 2026", decision: "CONTROL DE DECISIÓN", numbers: "PRUEBA LOS NÚMEROS", index: "ÍNDICE", status: "ESTADO", preview: "Guía publicada / dominio activo", sources: "FUENTES OFICIALES", latest: "12 SELECCIONES ACTUALES", archive: "ARCHIVO DE RUTAS REVISADAS", archiveText: "Las otras 12 rutas siguen disponibles en este archivo compacto. No se elimina ningún producto y la página conserva una intención editorial distinta.", categoryCheck: "CONTROL DE PRUEBAS POR CATEGORÍA" },
+  fr: { research: "ÉTAT DE LA RECHERCHE / 02.09.2026", onPage: "SUR CETTE PAGE", official: "Recherche sur le parcours officiel", checked: "Vérifié le 02.09.2026", interpretation: "Interprétation UK indépendante", independent: "Guide indépendant", updated: "Mis à jour le 2 sept. 2026", decision: "CONTRÔLE DE DÉCISION", numbers: "TESTER LES CHIFFRES", index: "INDEX", status: "STATUT", preview: "Guide publié / domaine actif", sources: "SOURCES OFFICIELLES", latest: "12 CHOIX ACTUELS", archive: "ARCHIVE DES ROUTES VÉRIFIÉES", archiveText: "Les 12 autres routes restent accessibles dans cette archive compacte. Aucun produit n’est supprimé et la page garde une intention éditoriale distincte.", categoryCheck: "CONTRÔLE DES PREUVES PAR CATÉGORIE" },
+  it: { research: "STATO DELLA RICERCA / 02.09.2026", onPage: "IN QUESTA PAGINA", official: "Ricerca sul flusso ufficiale", checked: "Verificato il 02.09.2026", interpretation: "Interpretazione UK indipendente", independent: "Guida indipendente", updated: "Aggiornato il 2 set. 2026", decision: "CONTROLLO DECISIONALE", numbers: "PROVA I NUMERI", index: "INDICE", status: "STATO", preview: "Guida pubblicata / dominio attivo", sources: "FONTI UFFICIALI", latest: "12 SCELTE ATTUALI", archive: "ARCHIVIO ROTTE CONTROLLATE", archiveText: "Le altre 12 rotte restano disponibili in questo archivio compatto. Nessun prodotto viene rimosso e la pagina mantiene un intento editoriale distinto.", categoryCheck: "CONTROLLO PROVE PER CATEGORIA" }
+};
+
+const officialSources = {
+  guide: [
+    ["Sugargoo warehouse storage periods", "https://blog.sugargoo.com/how-long-does-sugargoo-keep-items-in-the-warehouse/"],
+    ["Sugargoo QC service guide", "https://blog.sugargoo.com/sugargoo-quality-check-service-the-ultimate-qc-guide-for-overseas-buyers/"]
+  ],
+  qc: [["Sugargoo QC service guide", "https://blog.sugargoo.com/sugargoo-quality-check-service-the-ultimate-qc-guide-for-overseas-buyers/"]]
 };
 
 function Header({ lang, slug, t }) {
@@ -59,6 +68,39 @@ function EvidencePanel({ facts, note, lang = "en" }) {
       {note && <p className="evidence-note">{note}</p>}
       <ul>{facts.map((fact) => <li key={fact}>{fact}</li>)}</ul>
     </aside>
+  );
+}
+
+function ResearchSources({ type, lang }) {
+  const sources = officialSources[type];
+  if (!sources) return null;
+  const labels = editorialLabels[lang] || editorialLabels.en;
+  return <div className="research-sources"><p className="eyebrow">{labels.sources}</p>{sources.map(([label, href]) => <a key={href} href={href} target="_blank" rel="noopener noreferrer">{label} ↗</a>)}</div>;
+}
+
+function RouteArchive({ lang, t }) {
+  const labels = editorialLabels[lang] || editorialLabels.en;
+  return (
+    <section className="route-archive" aria-labelledby="route-archive-title">
+      <SectionHeading kicker={labels.archive} title={labels.archive} text={labels.archiveText} split />
+      <div className="route-archive-grid">
+        {archivedProducts.map((product) => {
+          const category = categories.find((item) => item.slug === product.category);
+          return <article key={product.id}><div><span>{category?.label || product.category}</span><strong>{product.title}</strong></div><p>${product.usd.toFixed(2)} <small>{t.approx}</small></p><a href={product.source} target="_blank" rel="nofollow sponsored noopener" aria-label={`${t.openListing}: ${product.title}`}>↗</a></article>;
+        })}
+      </div>
+    </section>
+  );
+}
+
+function CategoryEvidence({ lang, category }) {
+  const labels = editorialLabels[lang] || editorialLabels.en;
+  const guide = categoryGuides[lang]?.[category.slug] || categoryGuides.en[category.slug];
+  return (
+    <section className="category-evidence shell" aria-labelledby="category-evidence-title">
+      <div className="category-evidence-copy"><p className="eyebrow">{guide.kicker}</p><h2 id="category-evidence-title">{guide.title}</h2>{guide.paragraphs.map((paragraph) => <p key={paragraph}>{paragraph}</p>)}</div>
+      <aside><p className="eyebrow">{labels.categoryCheck}</p><ol>{guide.checklist.map((item, index) => <li key={item}><span>{String(index + 1).padStart(2, "0")}</span><p>{item}</p></li>)}</ol></aside>
+    </section>
   );
 }
 
@@ -182,18 +224,21 @@ function HomePage({ lang, t }) {
 }
 
 function ProductPage({ lang, t, category }) {
-  const filtered = category ? products.filter((product) => product.category === category.slug) : products;
+  const filtered = category ? products.filter((product) => product.category === category.slug) : featuredProducts;
   const title = category ? `Sugargoo ${category.label} / UK lane` : t.findsTitle;
   const kicker = category ? `CATEGORY ${category.icon}` : t.findsKicker;
+  const labels = editorialLabels[lang] || editorialLabels.en;
   return (
     <main>
       <section className="page-hero shell">
-        <p className="eyebrow">{kicker}</p><h1>{title}</h1><p>{t.findsText}</p>
+        <p className="eyebrow">{category ? kicker : labels.latest}</p><h1>{title}</h1><p>{t.findsText}</p>
         <SearchPanel t={t} />
       </section>
       <section className="section shell products-page">
-        <ProductExplorer items={products} categories={categories} copy={{ ...t, searchPlaceholder: t.searchPlaceholder }} initialCategory={category?.slug || "all"} />
+        <ProductExplorer items={filtered} categories={category ? [category] : categories} copy={{ ...t, searchPlaceholder: t.searchPlaceholder }} initialCategory={category?.slug || "all"} />
+        {!category && <RouteArchive lang={lang} t={t} />}
       </section>
+      {category && <CategoryEvidence lang={lang} category={category} />}
       {category && <section className="source-cta shell"><div><p className="eyebrow">SOURCE CATALOGUE</p><h2>{category.label}</h2><p>{category.note}</p></div><a className="button primary" href={category.source} target="_blank" rel="nofollow sponsored noopener">{t.openCategory} ↗</a></section>}
     </main>
   );
@@ -210,6 +255,7 @@ function GuidePage({ lang, t, type }) {
         <aside><div><p className="eyebrow">{labels.onPage}</p>{copy.sections.map(([title], index) => <a key={title} href={`#step-${index + 1}`}>0{index + 1} / {title}</a>)}</div></aside>
         <div className="guide-sections">
           <EvidencePanel facts={facts} lang={lang} />
+          <ResearchSources type={type} lang={lang} />
           {copy.sections.map(([title, text], index) => <article id={`step-${index + 1}`} key={title}><span>0{index + 1}</span><h2>{title}</h2><p>{text}</p></article>)}
           {type === "shipping" && <div className="inline-tool"><p className="eyebrow">INTERACTIVE CHECK</p><WeightCalculator lang={lang} /></div>}
         </div>
@@ -280,8 +326,11 @@ function StructuredData({ lang, slug, t }) {
     { "@type": "BreadcrumbList", itemListElement: [{ "@type": "ListItem", position: 1, name: "Home", item: `${siteUrl}/${lang}` }, ...slug.map((part, index) => ({ "@type": "ListItem", position: index + 2, name: part.replaceAll("-", " "), item: `${siteUrl}${routeFor(lang, slug.slice(0, index + 1))}` }))] }
   ];
   if (!slug.length || slug[0] === "faq") graph.push({ "@type": "FAQPage", mainEntity: t.faq.map(([q, a]) => ({ "@type": "Question", name: q, acceptedAnswer: { "@type": "Answer", text: a } })) });
-  if (slug[0] === "spreadsheet" || slug[0] === "finds") graph.push({ "@type": "ItemList", numberOfItems: products.length, itemListElement: products.map((p, index) => ({ "@type": "ListItem", position: index + 1, name: p.title, url: p.source })) });
-  if (article) graph.push({ "@type": "Article", headline: article.title[lang], description: article.summary[lang], datePublished: "2026-09-02", dateModified: "2026-09-02", inLanguage: lang, mainEntityOfPage: `${siteUrl}${path}`, author: { "@id": `${siteUrl}/#publisher` }, publisher: { "@id": `${siteUrl}/#publisher` } });
+  if (slug[0] === "spreadsheet" || slug[0] === "finds") {
+    const listProducts = slug[0] === "finds" ? featuredProducts : products;
+    graph.push({ "@type": "ItemList", numberOfItems: listProducts.length, itemListElement: listProducts.map((p, index) => ({ "@type": "ListItem", position: index + 1, name: p.title, url: p.source })) });
+  }
+  if (article) graph.push({ "@type": "Article", headline: article.title[lang], description: article.summary[lang], image: `${siteUrl}${article.image}`, datePublished: article.datePublished, dateModified: article.dateModified, inLanguage: lang, mainEntityOfPage: `${siteUrl}${path}`, author: { "@id": `${siteUrl}/#publisher` }, publisher: { "@id": `${siteUrl}/#publisher` } });
   return <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({ "@context": "https://schema.org", "@graph": graph }) }} />;
 }
 

@@ -5,7 +5,7 @@ export const frArticles = {
     takeaways: [
       "Vérifier la fiche exacte et active avant paiement ; une carte de tableur n’est qu’un chemin de découverte.",
       "Le guide QC publié par Sugargoo indique que cinq photos de base sont normalement fournies après l’arrivée.",
-      "Le guide de stockage actuellement publié indique 100 jours gratuits, mais le dossier actif de la commande reste prioritaire.",
+      "Le guide de stockage publié distingue 100 jours pour les achats et 30 jours pour les commandes de revente; le dossier actif reste prioritaire.",
       "Former et soumettre le colis après avoir terminé les retours et obtenu les dimensions emballées."
     ],
     sections: [
@@ -40,7 +40,7 @@ export const frArticles = {
       {
         title: "Utiliser le stockage comme temps de planification, pas comme objectif",
         paragraphs: [
-          "Le guide de stockage actuellement publié par Sugargoo indique 100 jours gratuits. Cela aide à réunir des achats arrivant à des dates différentes, mais ne justifie pas une attente indéfinie. Chaque commande peut avoir sa propre horloge et les prolongations ou dépassements peuvent relever de conditions qu’il faut vérifier dans le compte.",
+          "Le guide de stockage publié par Sugargoo distingue les commandes : 100 jours gratuits pour les achats et 30 jours pour la revente. Cela aide à réunir des achats arrivant à des dates différentes, mais ne justifie pas une attente indéfinie. Chaque commande a sa propre horloge et les prolongations ou dépassements peuvent relever de conditions qu’il faut vérifier dans le compte.",
           "Une méthode pratique consiste à affecter les articles à un colis prévu et à fixer une date de décision. Quand le dernier arrive, résolvez QC et retours, puis passez à la simulation ou à la soumission. La consolidation peut retirer des emballages extérieurs doublés et réunir plusieurs commandes, mais un grand colis n’est pas automatiquement moins cher ni plus sûr. Limites de poids et de dimensions, restrictions et calcul du poids facturable changent la réponse. Planifiez depuis le colis final : ce qui exige une protection, ce qui est optionnel et ce qui peut utiliser la même route."
         ]
       },

@@ -1,5 +1,5 @@
 import SitePage from "../../../components/SitePage";
-import { languages, localPaths, pageMeta } from "../../../data/site";
+import { articles, languages, localPaths, pageMeta } from "../../../data/site";
 import { notFound } from "next/navigation";
 
 export const dynamicParams = false;
@@ -17,6 +17,9 @@ export async function generateMetadata({ params }) {
   if (!languages.includes(lang) || !knownPath) notFound();
   const key = cleanSlug.join("/") || "home";
   const meta = pageMeta(lang, key);
+  const article = key.startsWith("articles/") ? articles.find((item) => `articles/${item.slug}` === key) : null;
+  const imagePath = article?.image || "/og/sugargoo-uk.png";
+  const imageUrl = `https://sugargoos.uk${imagePath}`;
   const path = cleanSlug.length ? `/${lang}/${cleanSlug.join("/")}` : `/${lang}`;
   const alternates = Object.fromEntries(
     languages.map((locale) => [locale, `https://sugargoos.uk/${locale}${cleanSlug.length ? `/${cleanSlug.join("/")}` : ""}`])
@@ -33,8 +36,10 @@ export async function generateMetadata({ params }) {
       type: key.startsWith("articles/") ? "article" : "website",
       url: `https://sugargoos.uk${path}`,
       siteName: "Sugargoo UK Finds",
-      locale: lang
-    }
+      locale: lang,
+      images: [{ url: imageUrl, width: 1200, height: 630, alt: meta.title }]
+    },
+    twitter: { card: "summary_large_image", title: meta.title, description: meta.description, images: [imageUrl] }
   };
 }
 

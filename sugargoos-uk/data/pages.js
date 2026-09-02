@@ -73,27 +73,27 @@ export const pageCopy = {
 
 export const pageFacts = {
   en: {
-    guide: ["5 basic QC photos normally provided", "100-day free storage currently published", "Consolidation combines warehouse orders", "Live order and route terms take priority"],
+    guide: ["5 basic QC photos normally provided", "100 days for purchasing orders; 30 days for resell orders", "Consolidation combines warehouse orders", "Live order and route terms take priority"],
     qc: ["Five basic photos normally provided", "Measurements may need a targeted request", "QC covers visible evidence only", "Returns depend on order stage and seller terms"],
     shipping: ["Packed dimensions affect route estimates", "No universal volumetric divisor", "Consolidation is optional, not automatically cheaper", "Prices and delivery estimates can change"]
   },
   de: {
-    guide: ["Normalerweise 5 QC-Basisfotos", "Aktuell 100 Tage kostenlose Lagerung veröffentlicht", "Konsolidierung verbindet Lagerbestellungen", "Live-Bestell- und Routenbedingungen sind maßgeblich"],
+    guide: ["Normalerweise 5 QC-Basisfotos", "100 Tage für Einkaufs-, 30 Tage für Resell-Bestellungen", "Konsolidierung verbindet Lagerbestellungen", "Live-Bestell- und Routenbedingungen sind maßgeblich"],
     qc: ["Normalerweise fünf Basisfotos", "Maße können ein gezieltes Foto erfordern", "QC bewertet nur sichtbare Belege", "Rückgabe hängt von Phase und Verkäufer ab"],
     shipping: ["Packmaße beeinflussen die Schätzung", "Kein universeller Volumendivisor", "Konsolidierung ist nicht automatisch günstiger", "Preise und Laufzeiten können sich ändern"]
   },
   es: {
-    guide: ["Normalmente 5 fotos QC básicas", "100 días de almacenaje gratuito publicados", "La consolidación une pedidos de almacén", "Mandan las condiciones actuales del pedido y la ruta"],
+    guide: ["Normalmente 5 fotos QC básicas", "100 días para compras; 30 días para pedidos de reventa", "La consolidación une pedidos de almacén", "Mandan las condiciones actuales del pedido y la ruta"],
     qc: ["Normalmente cinco fotos básicas", "Las medidas pueden requerir una foto específica", "QC solo cubre pruebas visibles", "La devolución depende de la fase y del vendedor"],
     shipping: ["Las medidas embaladas afectan a la estimación", "No existe un divisor volumétrico universal", "Consolidar no siempre sale más barato", "Precios y plazos pueden cambiar"]
   },
   fr: {
-    guide: ["Normalement 5 photos QC de base", "100 jours de stockage gratuit actuellement publiés", "La consolidation réunit les commandes en entrepôt", "Les conditions actives de commande et de route priment"],
+    guide: ["Normalement 5 photos QC de base", "100 jours pour les achats; 30 jours pour la revente", "La consolidation réunit les commandes en entrepôt", "Les conditions actives de commande et de route priment"],
     qc: ["Normalement cinq photos de base", "Une mesure peut exiger une photo ciblée", "Le QC couvre uniquement les preuves visibles", "Le retour dépend de l’étape et du vendeur"],
     shipping: ["Les dimensions emballées influencent l’estimation", "Aucun diviseur volumétrique universel", "Consolider n’est pas toujours moins cher", "Prix et délais peuvent changer"]
   },
   it: {
-    guide: ["Normalmente 5 foto QC di base", "Attualmente pubblicati 100 giorni di deposito gratuito", "Il consolidamento unisce gli ordini in magazzino", "Prevalgono i termini attuali di ordine e rotta"],
+    guide: ["Normalmente 5 foto QC di base", "100 giorni per acquisti; 30 giorni per ordini di rivendita", "Il consolidamento unisce gli ordini in magazzino", "Prevalgono i termini attuali di ordine e rotta"],
     qc: ["Normalmente cinque foto di base", "Le misure possono richiedere una foto mirata", "Il QC copre solo prove visibili", "Il reso dipende dalla fase e dal venditore"],
     shipping: ["Le misure imballate influenzano la stima", "Nessun divisore volumetrico universale", "Consolidare non è sempre più economico", "Prezzi e tempi possono cambiare"]
   }

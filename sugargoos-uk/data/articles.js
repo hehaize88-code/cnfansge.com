@@ -5,7 +5,7 @@ export const researchedArticles = {
     takeaways: [
       "Check the exact live listing before paying; a spreadsheet card is only a discovery route.",
       "Sugargoo’s published guidance says five basic QC photos are normally supplied after warehouse arrival.",
-      "The current published storage guide states a 100-day free warehouse period, but the order page remains the live record.",
+      "The published storage guide distinguishes order types: 100 days for purchasing orders and 30 days for resell orders; the order page remains the live record.",
       "Build and submit a parcel only after return decisions are finished and packed dimensions are available."
     ],
     sections: [
@@ -40,7 +40,7 @@ export const researchedArticles = {
       {
         title: "Use the warehouse period as planning time, not a deadline target",
         paragraphs: [
-          "Sugargoo’s current published storage guide states a 100-day free storage period. That is useful for combining purchases that arrive on different dates, but it should not encourage indefinite waiting. Each order can have its own storage clock, and extensions or overdue handling may carry current terms that need to be checked in the account.",
+          "Sugargoo’s published storage guide distinguishes order types: purchasing orders receive 100 days of free storage, while resell orders receive 30 days. That can help with combining purchases that arrive on different dates, but it should not encourage indefinite waiting. Each order has its own storage clock, and extensions or overdue handling may carry current terms that need to be checked in the account.",
           "A practical approach is to group items into one intended parcel and give the group a decision date. When the final item arrives, resolve QC and return questions, then move to rehearsal or parcel submission. Consolidation can remove duplicated outer packaging and combine multiple warehouse orders, yet a larger parcel is not automatically cheaper or safer. Route weight limits, dimension limits, item restrictions and the way chargeable weight is calculated can all change the answer. Plan from the parcel backwards: what needs protection, what packaging is optional, and which items are eligible for the same route?"
         ]
       },

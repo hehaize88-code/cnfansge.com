@@ -5,7 +5,7 @@ export const deArticles = {
     takeaways: [
       "Vor der Zahlung immer das genaue Live-Angebot prüfen; eine Tabellenkarte ist nur ein Wegweiser.",
       "Laut veröffentlichter Sugargoo-Anleitung werden nach Lagereingang normalerweise fünf QC-Basisfotos bereitgestellt.",
-      "Der aktuell veröffentlichte Lagerleitfaden nennt 100 Tage kostenlose Lagerung; maßgeblich bleibt die Live-Bestellseite.",
+      "Der veröffentlichte Lagerleitfaden nennt 100 Tage für Einkaufsbestellungen und 30 Tage für Resell-Bestellungen; maßgeblich bleibt die Live-Bestellseite.",
       "Ein Paket erst aufbauen und absenden, wenn Rückgabeentscheidungen abgeschlossen und Packmaße verfügbar sind."
     ],
     sections: [
@@ -40,7 +40,7 @@ export const deArticles = {
       {
         title: "Die Lagerzeit als Planungsfenster nutzen, nicht als Zielmarke",
         paragraphs: [
-          "Der aktuell veröffentlichte Sugargoo-Lagerleitfaden nennt 100 Tage kostenlose Lagerung. Das erleichtert das Zusammenführen von Käufen mit unterschiedlichen Ankunftszeiten, sollte aber kein Grund für unbegrenztes Warten sein. Für jede Bestellung kann eine eigene Lageruhr laufen; Verlängerungen oder überfällige Lagerung können aktuellen Bedingungen unterliegen, die im Konto geprüft werden müssen.",
+          "Der veröffentlichte Sugargoo-Lagerleitfaden unterscheidet Bestellarten: Einkaufsbestellungen erhalten 100 Tage, Resell-Bestellungen 30 Tage kostenlose Lagerung. Das erleichtert das Zusammenführen von Käufen mit unterschiedlichen Ankunftszeiten, sollte aber kein Grund für unbegrenztes Warten sein. Für jede Bestellung läuft eine eigene Lageruhr; Verlängerungen oder überfällige Lagerung können aktuellen Bedingungen unterliegen, die im Konto geprüft werden müssen.",
           "Sinnvoll ist es, Artikel einem geplanten Paket zuzuordnen und für diese Gruppe ein Entscheidungsdatum festzulegen. Trifft der letzte Artikel ein, werden QC- und Rückgabefragen gelöst und anschließend Simulation oder Paketeinreichung gestartet. Konsolidierung kann doppelte Außenverpackung entfernen und mehrere Lagerbestellungen verbinden. Ein größeres Paket ist jedoch nicht automatisch günstiger oder sicherer. Gewichts- und Maßgrenzen, Warenbeschränkungen und die Berechnung des Abrechnungsgewichts können die Antwort verändern. Planen Sie vom fertigen Paket rückwärts: Was braucht Schutz, welche Verpackung ist optional und welche Artikel dürfen dieselbe Route nutzen?"
         ]
       },

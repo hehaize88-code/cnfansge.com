@@ -5,7 +5,7 @@ export const itArticles = {
     takeaways: [
       "Controlla la scheda esatta e attiva prima di pagare; una card del foglio è solo un percorso di scoperta.",
       "La guida QC pubblicata da Sugargoo indica che normalmente vengono fornite cinque foto di base dopo l’arrivo.",
-      "La guida di deposito attualmente pubblicata indica 100 giorni gratuiti, ma prevale il record attivo dell’ordine.",
+      "La guida di deposito distingue 100 giorni per gli acquisti e 30 giorni per gli ordini di rivendita; prevale il record attivo.",
       "Crea e invia il pacco solo dopo aver chiuso i resi e ottenuto le misure imballate."
     ],
     sections: [
@@ -40,7 +40,7 @@ export const itArticles = {
       {
         title: "Usa il deposito come tempo di pianificazione, non come obiettivo",
         paragraphs: [
-          "La guida di deposito attualmente pubblicata da Sugargoo indica 100 giorni gratuiti. È utile per combinare acquisti che arrivano in date diverse, ma non dovrebbe incoraggiare un’attesa indefinita. Ogni ordine può avere un proprio contatore e proroghe o scadenze possono essere soggette a condizioni correnti da controllare nell’account.",
+          "La guida di deposito pubblicata da Sugargoo distingue i tipi di ordine: 100 giorni gratuiti per gli acquisti e 30 giorni per gli ordini di rivendita. È utile per combinare acquisti che arrivano in date diverse, ma non dovrebbe incoraggiare un’attesa indefinita. Ogni ordine ha un proprio contatore e proroghe o scadenze possono essere soggette a condizioni correnti da controllare nell’account.",
           "Un approccio pratico consiste nell’assegnare gli articoli a un pacco previsto e fissare una data di decisione. Quando arriva l’ultimo, risolvi QC e resi, quindi passa a simulazione o invio. Il consolidamento può rimuovere imballaggi esterni duplicati e unire ordini, ma un pacco più grande non è automaticamente più economico o sicuro. Limiti, restrizioni e calcolo del peso fatturabile possono cambiare la risposta. Pianifica dal pacco finale all’indietro: cosa richiede protezione, cosa è opzionale e quali prodotti possono usare la stessa rotta."
         ]
       },

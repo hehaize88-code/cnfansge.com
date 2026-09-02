@@ -52,11 +52,18 @@ export const products = [
   { id: "2660", title: "Monogram Chain Bracelet", category: "accessories", cny: 144, image: asset("2660"), source: source("2660"), tags: ["Jewellery", "Statement"] }
 ].map((product) => ({ ...product, usd: Number((product.cny * 0.1488).toFixed(2)) }));
 
+export const featuredProductIds = ["2586", "5869", "5084", "3418", "3300", "1180", "4129", "593", "4802", "6033", "891", "155"];
+export const featuredProducts = featuredProductIds.map((id) => products.find((product) => product.id === id)).filter(Boolean);
+export const archivedProducts = products.filter((product) => !featuredProductIds.includes(product.id));
+
 export const articles = [
   {
     slug: "sugargoo-uk-buying-guide-2026",
     label: "UK STARTER GUIDE",
     read: "12 min",
+    image: "/og/buying-workflow.png",
+    datePublished: "2026-09-02",
+    dateModified: "2026-09-02",
     title: {
       en: "Sugargoo UK Buying Guide 2026: From Product Link to Delivery",
       de: "Sugargoo UK Einkaufsleitfaden 2026: Vom Produktlink bis zur Zustellung",
@@ -76,6 +83,9 @@ export const articles = [
     slug: "how-to-read-qc-photos",
     label: "QC FIELD NOTE",
     read: "9 min",
+    image: "/og/qc-photo-checklist.png",
+    datePublished: "2026-09-02",
+    dateModified: "2026-09-02",
     title: {
       en: "How to Read Sugargoo QC Photos Before You Ship",
       de: "Sugargoo-QC-Fotos vor dem Versand richtig lesen",
@@ -95,6 +105,9 @@ export const articles = [
     slug: "reduce-volumetric-weight",
     label: "SHIPPING LAB",
     read: "8 min",
+    image: "/og/parcel-weight-lab.png",
+    datePublished: "2026-09-02",
+    dateModified: "2026-09-02",
     title: {
       en: "Actual vs Volumetric Weight: A UK Parcel Planning Guide",
       de: "Tatsächliches vs. Volumengewicht: UK-Paketplanung",
@@ -141,12 +154,12 @@ export const translations = {
       ["Why is the site UK-focused?", "UK buyers need a clear path from product discovery to parcel size, route restrictions and final delivery decisions. The content is organised around that journey."],
       ["Where do product buttons go?", "Every product button opens the matching source listing in the main catalogue. The site does not route products to unrelated agent platforms."],
       ["How many Sugargoo QC photos are included?", "Sugargoo’s published QC guidance says five basic photos are normally provided after warehouse arrival. Request a targeted extra photo or measurement when the standard views cannot answer a specific question."],
-      ["How long is free warehouse storage?", "Sugargoo’s current published storage guide states 100 days. Check the live order record for its own storage clock, extension terms and any later policy update."],
+      ["How long is free warehouse storage?", "Sugargoo’s published storage guide distinguishes order types: 100 days for purchasing orders and 30 days for resell orders. Check the live order record for its own storage clock, extension terms and any later policy update."],
       ["Is volumetric weight always used?", "No. The route determines how actual weight, volume, divisors and billing increments are applied. Enter finished packed dimensions and use the live route result."],
       ["Can every warehouse item be returned?", "No. Eligibility depends on the order stage, seller conditions, product type and applicable return window. Return freight or other deductions may apply."]
     ],
     footer: "Independent product-discovery and educational resource. Not affiliated with Sugargoo or the brands shown. Product availability and route rules can change.",
-    updated: "Research and route check: 1 September 2026"
+    updated: "Research and route check: 2 September 2026"
   },
   de: {
     locale: "UK-Ausgabe", preview: "UNABHÄNGIGE UK-RECHERCHE — LIVE-ROUTEN, QC- UND VERSANDHINWEISE",
@@ -159,8 +172,8 @@ export const translations = {
     flowKicker: "VIER PRÜFUNGEN", flowTitle: "Ruhiger ein UK-Paket zusammenstellen.", flow: [["01","Auswählen","Bild, Varianten und Quellangebot vor dem Kauf vergleichen."],["02","Lager","Auf Eingang und Erfassung warten, bevor das Paket geplant wird."],["03","QC-Entscheidung","Den erhaltenen Artikel prüfen, nicht nur Verkäuferbilder."],["04","Für UK packen","Routenlimits, Abrechnungsgewicht und Hinweise vergleichen."]],
     toolKicker: "VERSANDLABOR", toolTitle: "Volumengewicht vor der Einreichung testen.", toolText: "Verpackte Maße eingeben, den Routendivisor wählen und mit dem Ist-Gewicht vergleichen. Entscheidend bleiben die Regeln der gewählten Route.",
     articlesKicker: "PRAXISNOTIZEN", articlesTitle: "Lesestoff zu den Entscheidungen, die Käufer wirklich treffen.", readArticle: "Praxisnotiz lesen",
-    faqKicker: "KLARE ANTWORTEN", faqTitle: "Was diese UK-Tabelle leistet — und was nicht.", faq: [["Ist dies die offizielle Sugargoo-Website?","Nein. Dies ist ein unabhängiger Katalog und Leitfaden. Er verwaltet kein Guthaben, keine Bestellungen und keinen Plattform-Support."],["Sind die USD-Preise endgültig?","Nein. Es sind gerundete Referenzwerte. Optionen, Inlandslieferung, Gebühren und internationaler Versand kommen getrennt hinzu."],["Garantiert eine Produktkarte Qualität?","Nein. Sie dient der Entdeckung. Prüfen Sie Live-Angebot, Lagerfotos, Maße und Rückgabemöglichkeit."],["Warum UK-Fokus?","UK-Käufer brauchen einen klaren Weg von der Produktsuche bis zu Paketgröße, Routenregeln und Zustellung."],["Wohin führen Produktbuttons?","Jeder Button öffnet das passende Angebot im Hauptkatalog, niemals eine zufällige Agentenplattform."],["Wie viele Sugargoo-QC-Fotos sind enthalten?","Laut veröffentlichter QC-Anleitung werden nach Lagereingang normalerweise fünf Basisfotos bereitgestellt. Bei einer konkreten Frage ein gezieltes Zusatzfoto oder Maß anfordern."],["Wie lange ist die Lagerung kostenlos?","Der aktuell veröffentlichte Leitfaden nennt 100 Tage. Maßgeblich bleiben die Lageruhr der Bestellung und die aktuellen Verlängerungsbedingungen."],["Wird immer Volumengewicht berechnet?","Nein. Die Route bestimmt Ist-Gewicht, Volumen, Divisor und Abrechnungsschritte. Fertige Packmaße eingeben und das Live-Ergebnis nutzen."],["Kann jeder Lagerartikel zurückgegeben werden?","Nein. Bestellphase, Verkäuferbedingungen, Produktart und Rückgabefrist entscheiden. Rückversand oder Abzüge können anfallen."]],
-    footer: "Unabhängige Produktentdeckung und Information. Keine Verbindung zu Sugargoo oder den gezeigten Marken. Bestand und Routenregeln können sich ändern.", updated: "Recherche und Routenprüfung: 1. September 2026"
+    faqKicker: "KLARE ANTWORTEN", faqTitle: "Was diese UK-Tabelle leistet — und was nicht.", faq: [["Ist dies die offizielle Sugargoo-Website?","Nein. Dies ist ein unabhängiger Katalog und Leitfaden. Er verwaltet kein Guthaben, keine Bestellungen und keinen Plattform-Support."],["Sind die USD-Preise endgültig?","Nein. Es sind gerundete Referenzwerte. Optionen, Inlandslieferung, Gebühren und internationaler Versand kommen getrennt hinzu."],["Garantiert eine Produktkarte Qualität?","Nein. Sie dient der Entdeckung. Prüfen Sie Live-Angebot, Lagerfotos, Maße und Rückgabemöglichkeit."],["Warum UK-Fokus?","UK-Käufer brauchen einen klaren Weg von der Produktsuche bis zu Paketgröße, Routenregeln und Zustellung."],["Wohin führen Produktbuttons?","Jeder Button öffnet das passende Angebot im Hauptkatalog, niemals eine zufällige Agentenplattform."],["Wie viele Sugargoo-QC-Fotos sind enthalten?","Laut veröffentlichter QC-Anleitung werden nach Lagereingang normalerweise fünf Basisfotos bereitgestellt. Bei einer konkreten Frage ein gezieltes Zusatzfoto oder Maß anfordern."],["Wie lange ist die Lagerung kostenlos?","Der veröffentlichte Lagerleitfaden unterscheidet Bestellarten: 100 Tage für Einkaufsbestellungen und 30 Tage für Resell-Bestellungen. Maßgeblich bleiben Bestelluhr und aktuelle Verlängerungsbedingungen."],["Wird immer Volumengewicht berechnet?","Nein. Die Route bestimmt Ist-Gewicht, Volumen, Divisor und Abrechnungsschritte. Fertige Packmaße eingeben und das Live-Ergebnis nutzen."],["Kann jeder Lagerartikel zurückgegeben werden?","Nein. Bestellphase, Verkäuferbedingungen, Produktart und Rückgabefrist entscheiden. Rückversand oder Abzüge können anfallen."]],
+    footer: "Unabhängige Produktentdeckung und Information. Keine Verbindung zu Sugargoo oder den gezeigten Marken. Bestand und Routenregeln können sich ändern.", updated: "Recherche und Routenprüfung: 2. September 2026"
   },
   es: {
     locale: "Edición UK", preview: "EDICIÓN UK INDEPENDIENTE — RUTAS, QC Y NOTAS DE ENVÍO ACTUALES",
@@ -173,8 +186,8 @@ export const translations = {
     flowKicker: "CICLO DE CUATRO CONTROLES", flowTitle: "Una forma más tranquila de preparar un paquete UK.", flow: [["01","Selecciona","Compara imagen, opciones y anuncio de origen antes de comprar."],["02","Almacén","Espera a que el artículo sea recibido y registrado."],["03","Decisión QC","Revisa el artículo recibido, no solo las fotos del vendedor."],["04","Prepara para UK","Compara límites, peso facturable y notas de ruta."]],
     toolKicker: "LABORATORIO DE ENVÍO", toolTitle: "Prueba el peso volumétrico antes de enviar.", toolText: "Introduce las medidas embaladas, elige el divisor de la ruta y compara con el peso real. Las reglas del transportista mandan.",
     articlesKicker: "NOTAS DE CAMPO", articlesTitle: "Lecturas útiles centradas en decisiones reales.", readArticle: "Leer nota",
-    faqKicker: "RESPUESTAS CLARAS", faqTitle: "Qué hace esta hoja UK y qué no hace.", faq: [["¿Es la web oficial de Sugargoo?","No. Es un catálogo y guía independiente. No procesa pedidos, saldo ni soporte de plataforma."],["¿Los precios USD son finales?","No. Son referencias redondeadas. Opciones, envío nacional, servicios y envío internacional se calculan aparte."],["¿Una tarjeta garantiza calidad?","No. Es una ruta de descubrimiento. Revisa anuncio actual, fotos de almacén, medidas y devolución."],["¿Por qué enfoque UK?","Los compradores UK necesitan una ruta clara entre descubrimiento, tamaño del paquete, restricciones y entrega."],["¿Dónde llevan los botones?","Cada botón abre el anuncio correspondiente en el catálogo principal; nunca una plataforma no relacionada."],["¿Cuántas fotos QC incluye Sugargoo?","La guía QC publicada indica normalmente cinco fotos básicas tras la llegada al almacén. Pide una foto o medida específica si falta una prueba concreta."],["¿Cuánto dura el almacenaje gratuito?","La guía publicada actualmente indica 100 días. Comprueba el reloj del pedido y las condiciones vigentes de ampliación."],["¿Siempre se usa el peso volumétrico?","No. Cada ruta define peso real, volumen, divisor y escalones. Introduce las medidas embaladas y usa el resultado actual."],["¿Se puede devolver cualquier artículo del almacén?","No. Depende de la fase, condiciones del vendedor, tipo de producto y plazo aplicable. Puede haber portes o deducciones."]],
-    footer: "Recurso independiente de descubrimiento y educación. Sin afiliación con Sugargoo ni las marcas mostradas. El stock y las reglas pueden cambiar.", updated: "Investigación y rutas revisadas: 1 de septiembre de 2026"
+    faqKicker: "RESPUESTAS CLARAS", faqTitle: "Qué hace esta hoja UK y qué no hace.", faq: [["¿Es la web oficial de Sugargoo?","No. Es un catálogo y guía independiente. No procesa pedidos, saldo ni soporte de plataforma."],["¿Los precios USD son finales?","No. Son referencias redondeadas. Opciones, envío nacional, servicios y envío internacional se calculan aparte."],["¿Una tarjeta garantiza calidad?","No. Es una ruta de descubrimiento. Revisa anuncio actual, fotos de almacén, medidas y devolución."],["¿Por qué enfoque UK?","Los compradores UK necesitan una ruta clara entre descubrimiento, tamaño del paquete, restricciones y entrega."],["¿Dónde llevan los botones?","Cada botón abre el anuncio correspondiente en el catálogo principal; nunca una plataforma no relacionada."],["¿Cuántas fotos QC incluye Sugargoo?","La guía QC publicada indica normalmente cinco fotos básicas tras la llegada al almacén. Pide una foto o medida específica si falta una prueba concreta."],["¿Cuánto dura el almacenaje gratuito?","La guía de almacenaje distingue tipos: 100 días para pedidos de compra y 30 días para pedidos de reventa. Comprueba el contador del pedido y las condiciones vigentes de ampliación."],["¿Siempre se usa el peso volumétrico?","No. Cada ruta define peso real, volumen, divisor y escalones. Introduce las medidas embaladas y usa el resultado actual."],["¿Se puede devolver cualquier artículo del almacén?","No. Depende de la fase, condiciones del vendedor, tipo de producto y plazo aplicable. Puede haber portes o deducciones."]],
+    footer: "Recurso independiente de descubrimiento y educación. Sin afiliación con Sugargoo ni las marcas mostradas. El stock y las reglas pueden cambiar.", updated: "Investigación y rutas revisadas: 2 de septiembre de 2026"
   },
   fr: {
     locale: "Édition UK", preview: "ÉDITION UK INDÉPENDANTE — ROUTES, QC ET NOTES D’EXPÉDITION ACTUELLES",
@@ -187,8 +200,8 @@ export const translations = {
     flowKicker: "BOUCLE EN QUATRE CONTRÔLES", flowTitle: "Préparer un colis UK plus sereinement.", flow: [["01","Sélectionner","Comparer image, options et fiche source avant achat."],["02","Entrepôt","Attendre la réception et l’enregistrement avant de planifier."],["03","Décision QC","Contrôler l’article reçu, pas seulement les photos vendeur."],["04","Emballer pour UK","Comparer limites, poids facturable et notes de route."]],
     toolKicker: "LABO D’EXPÉDITION", toolTitle: "Testez le poids volumétrique avant soumission.", toolText: "Saisissez les dimensions emballées, choisissez le diviseur de la route et comparez avec le poids réel. Les règles du transporteur restent prioritaires.",
     articlesKicker: "NOTES DE TERRAIN", articlesTitle: "Des lectures basées sur les vraies décisions d’achat.", readArticle: "Lire la note",
-    faqKicker: "RÉPONSES DIRECTES", faqTitle: "Ce que fait ce tableur UK — et ses limites.", faq: [["Est-ce le site officiel Sugargoo ?","Non. C’est un catalogue et guide indépendant. Il ne gère ni solde, ni commande, ni support plateforme."],["Les prix USD sont-ils définitifs ?","Non. Ce sont des conversions indicatives. Options, livraison locale, services et expédition internationale sont séparés."],["Une carte garantit-elle la qualité ?","Non. Elle aide à découvrir. Contrôlez fiche actuelle, photos d’entrepôt, mesures et retour."],["Pourquoi un angle UK ?","Les acheteurs UK ont besoin d’un parcours clair entre produit, taille du colis, restrictions et livraison."],["Où vont les boutons produit ?","Chaque bouton ouvre la fiche correspondante du catalogue principal, jamais une plateforme sans rapport."],["Combien de photos QC Sugargoo sont incluses ?","Le guide QC publié indique normalement cinq photos de base après l’arrivée. Demandez une photo ou mesure ciblée pour une question précise."],["Combien de temps le stockage est-il gratuit ?","Le guide actuellement publié indique 100 jours. Vérifiez l’horloge de la commande et les conditions d’extension en vigueur."],["Le poids volumétrique est-il toujours utilisé ?","Non. Chaque route fixe poids réel, volume, diviseur et paliers. Saisissez les dimensions emballées et utilisez le résultat actif."],["Tout article en entrepôt peut-il être retourné ?","Non. L’étape, les conditions vendeur, le type de produit et le délai applicable comptent. Des frais peuvent être déduits."]],
-    footer: "Ressource indépendante de découverte et d’information. Sans affiliation avec Sugargoo ni les marques montrées. Stock et règles peuvent changer.", updated: "Recherche et vérification des routes : 1er septembre 2026"
+    faqKicker: "RÉPONSES DIRECTES", faqTitle: "Ce que fait ce tableur UK — et ses limites.", faq: [["Est-ce le site officiel Sugargoo ?","Non. C’est un catalogue et guide indépendant. Il ne gère ni solde, ni commande, ni support plateforme."],["Les prix USD sont-ils définitifs ?","Non. Ce sont des conversions indicatives. Options, livraison locale, services et expédition internationale sont séparés."],["Une carte garantit-elle la qualité ?","Non. Elle aide à découvrir. Contrôlez fiche actuelle, photos d’entrepôt, mesures et retour."],["Pourquoi un angle UK ?","Les acheteurs UK ont besoin d’un parcours clair entre produit, taille du colis, restrictions et livraison."],["Où vont les boutons produit ?","Chaque bouton ouvre la fiche correspondante du catalogue principal, jamais une plateforme sans rapport."],["Combien de photos QC Sugargoo sont incluses ?","Le guide QC publié indique normalement cinq photos de base après l’arrivée. Demandez une photo ou mesure ciblée pour une question précise."],["Combien de temps le stockage est-il gratuit ?","Le guide de stockage distingue les commandes : 100 jours pour les achats et 30 jours pour la revente. Vérifiez l’horloge active et les conditions d’extension."],["Le poids volumétrique est-il toujours utilisé ?","Non. Chaque route fixe poids réel, volume, diviseur et paliers. Saisissez les dimensions emballées et utilisez le résultat actif."],["Tout article en entrepôt peut-il être retourné ?","Non. L’étape, les conditions vendeur, le type de produit et le délai applicable comptent. Des frais peuvent être déduits."]],
+    footer: "Ressource indépendante de découverte et d’information. Sans affiliation avec Sugargoo ni les marques montrées. Stock et règles peuvent changer.", updated: "Recherche et vérification des routes : 2 septembre 2026"
   },
   it: {
     locale: "Edizione UK", preview: "EDIZIONE UK INDIPENDENTE — PERCORSI, QC E NOTE DI SPEDIZIONE ATTUALI",
@@ -201,8 +214,8 @@ export const translations = {
     flowKicker: "CICLO DI QUATTRO CONTROLLI", flowTitle: "Preparare un pacco UK con più calma.", flow: [["01","Seleziona","Confronta immagine, opzioni e scheda sorgente prima di acquistare."],["02","Magazzino","Attendi ricezione e registrazione prima di pianificare il pacco."],["03","Decisione QC","Controlla l’articolo ricevuto, non solo le foto del venditore."],["04","Imballa per UK","Confronta limiti, peso fatturabile e note della rotta."]],
     toolKicker: "LABORATORIO SPEDIZIONI", toolTitle: "Prova il peso volumetrico prima dell’invio.", toolText: "Inserisci le misure imballate, scegli il divisore della rotta e confronta con il peso reale. Le regole del vettore restano decisive.",
     articlesKicker: "NOTE SUL CAMPO", articlesTitle: "Letture utili basate sulle decisioni reali.", readArticle: "Leggi la nota",
-    faqKicker: "RISPOSTE DIRETTE", faqTitle: "Cosa fa questo foglio UK — e cosa non fa.", faq: [["È il sito ufficiale Sugargoo?","No. È un catalogo e una guida indipendente. Non gestisce fondi, ordini o assistenza della piattaforma."],["I prezzi USD sono finali?","No. Sono conversioni indicative. Opzioni, consegna interna, servizi e spedizione internazionale sono separati."],["Una scheda garantisce la qualità?","No. È un percorso di scoperta. Controlla scheda attuale, foto di magazzino, misure e reso."],["Perché il focus UK?","Gli acquirenti UK hanno bisogno di un percorso chiaro tra prodotto, dimensioni del pacco, restrizioni e consegna."],["Dove portano i pulsanti?","Ogni pulsante apre la scheda corrispondente nel catalogo principale, mai piattaforme non correlate."],["Quante foto QC include Sugargoo?","La guida QC pubblicata indica normalmente cinque foto di base dopo l’arrivo. Chiedi una foto o misura mirata per una domanda specifica."],["Per quanto tempo il deposito è gratuito?","La guida attualmente pubblicata indica 100 giorni. Controlla il timer dell’ordine e le condizioni di estensione attuali."],["Si usa sempre il peso volumetrico?","No. Ogni rotta definisce peso reale, volume, divisore e scaglioni. Inserisci le misure imballate e usa il risultato attuale."],["Ogni articolo in magazzino può essere restituito?","No. Dipende da fase, condizioni del venditore, tipo di prodotto e finestra applicabile. Possono esserci costi o detrazioni."]],
-    footer: "Risorsa indipendente per scoperta e informazione. Nessuna affiliazione con Sugargoo o i marchi mostrati. Disponibilità e regole possono cambiare.", updated: "Ricerca e percorsi controllati: 1 settembre 2026"
+    faqKicker: "RISPOSTE DIRETTE", faqTitle: "Cosa fa questo foglio UK — e cosa non fa.", faq: [["È il sito ufficiale Sugargoo?","No. È un catalogo e una guida indipendente. Non gestisce fondi, ordini o assistenza della piattaforma."],["I prezzi USD sono finali?","No. Sono conversioni indicative. Opzioni, consegna interna, servizi e spedizione internazionale sono separati."],["Una scheda garantisce la qualità?","No. È un percorso di scoperta. Controlla scheda attuale, foto di magazzino, misure e reso."],["Perché il focus UK?","Gli acquirenti UK hanno bisogno di un percorso chiaro tra prodotto, dimensioni del pacco, restrizioni e consegna."],["Dove portano i pulsanti?","Ogni pulsante apre la scheda corrispondente nel catalogo principale, mai piattaforme non correlate."],["Quante foto QC include Sugargoo?","La guida QC pubblicata indica normalmente cinque foto di base dopo l’arrivo. Chiedi una foto o misura mirata per una domanda specifica."],["Per quanto tempo il deposito è gratuito?","La guida di deposito distingue i tipi di ordine: 100 giorni per acquisti e 30 giorni per ordini di rivendita. Controlla il timer attivo e le condizioni di proroga."],["Si usa sempre il peso volumetrico?","No. Ogni rotta definisce peso reale, volume, divisore e scaglioni. Inserisci le misure imballate e usa il risultato attuale."],["Ogni articolo in magazzino può essere restituito?","No. Dipende da fase, condizioni del venditore, tipo di prodotto e finestra applicabile. Possono esserci costi o detrazioni."]],
+    footer: "Risorsa indipendente per scoperta e informazione. Nessuna affiliazione con Sugargoo o i marchi mostrati. Disponibilità e regole possono cambiare.", updated: "Ricerca e percorsi controllati: 2 settembre 2026"
   }
 };
 
@@ -214,39 +227,148 @@ export const localPaths = [
 ];
 
 const metaTitles = {
-  en: { home: "Sugargoo UK Spreadsheet 2026 — Finds, QC & Shipping Guide", spreadsheet: "Sugargoo UK Spreadsheet — 24 Checked Product Finds", finds: "Sugargoo UK Finds — Shoes, Hoodies, Jackets & More", guide: "How to Use Sugargoo in the UK — Independent Buying Guide", qc: "Sugargoo QC Guide — Photo Checklist Before Shipping", shipping: "Sugargoo UK Shipping Guide — Weight, Packing & Route Checks", faq: "Sugargoo UK FAQ — Spreadsheet, QC and Shipping Answers", articles: "Sugargoo UK Guides and Field Notes" },
-  de: { home: "Sugargoo UK Tabelle 2026 — Funde, QC und Versand", spreadsheet: "Sugargoo UK Tabelle — 24 geprüfte Produktfunde", finds: "Sugargoo UK Funde — Schuhe, Hoodies, Jacken und mehr", guide: "Sugargoo in UK nutzen — Unabhängiger Einkaufsleitfaden", qc: "Sugargoo QC-Leitfaden — Fotocheck vor dem Versand", shipping: "Sugargoo UK Versand — Gewicht, Packen und Routen", faq: "Sugargoo UK FAQ — Tabelle, QC und Versand", articles: "Sugargoo UK Leitfäden und Praxisnotizen" },
-  es: { home: "Spreadsheet Sugargoo UK 2026 — Hallazgos, QC y envío", spreadsheet: "Spreadsheet Sugargoo UK — 24 hallazgos revisados", finds: "Hallazgos Sugargoo UK — Zapatillas, sudaderas y más", guide: "Cómo usar Sugargoo en UK — Guía independiente", qc: "Guía QC de Sugargoo — Fotos antes del envío", shipping: "Envío Sugargoo UK — Peso, embalaje y rutas", faq: "Preguntas Sugargoo UK — Spreadsheet, QC y envío", articles: "Guías y notas prácticas de Sugargoo UK" },
-  fr: { home: "Tableur Sugargoo UK 2026 — Trouvailles, QC et livraison", spreadsheet: "Tableur Sugargoo UK — 24 trouvailles vérifiées", finds: "Trouvailles Sugargoo UK — Chaussures, sweats et plus", guide: "Utiliser Sugargoo au Royaume-Uni — Guide indépendant", qc: "Guide QC Sugargoo — Photos avant l’expédition", shipping: "Livraison Sugargoo UK — Poids, emballage et routes", faq: "FAQ Sugargoo UK — Tableur, QC et livraison", articles: "Guides et notes pratiques Sugargoo UK" },
-  it: { home: "Foglio Sugargoo UK 2026 — Prodotti, QC e spedizione", spreadsheet: "Foglio Sugargoo UK — 24 prodotti controllati", finds: "Prodotti Sugargoo UK — Scarpe, felpe, giacche e altro", guide: "Come usare Sugargoo in UK — Guida indipendente", qc: "Guida QC Sugargoo — Foto prima della spedizione", shipping: "Spedizione Sugargoo UK — Peso, imballo e rotte", faq: "FAQ Sugargoo UK — Foglio, QC e spedizione", articles: "Guide e note pratiche Sugargoo UK" }
+  en: { home: "Sugargoo UK 2026 — Checked Routes, QC Evidence & Parcel Tools", spreadsheet: "Sugargoo UK Product Route Directory — 24 Checked Listings", finds: "Latest Sugargoo UK Finds — 12 Editor Picks & Route Archive", guide: "Sugargoo UK Workflow Map — Six Buying Checkpoints", qc: "Sugargoo QC Evidence Checklist — Photos & Measurements", shipping: "Sugargoo Chargeable Weight Calculator — UK Route Checks", faq: "Sugargoo UK FAQ — Verified Workflow and QC Answers", articles: "Sugargoo UK Evidence Guides and Field Notes" },
+  de: { home: "Sugargoo UK 2026 — Geprüfte Routen, QC-Belege und Pakettools", spreadsheet: "Sugargoo UK Routenverzeichnis — 24 geprüfte Angebote", finds: "Neue Sugargoo UK-Funde — 12 Tipps und Routenarchiv", guide: "Sugargoo UK Ablaufkarte — Sechs Kaufprüfungen", qc: "Sugargoo QC-Belegcheck — Fotos und Maße", shipping: "Sugargoo Abrechnungsgewicht — UK-Routenprüfung", faq: "Sugargoo UK FAQ — Geprüfte Ablauf- und QC-Antworten", articles: "Sugargoo UK Belegleitfäden und Praxisnotizen" },
+  es: { home: "Sugargoo UK 2026 — Rutas revisadas, pruebas QC y herramientas", spreadsheet: "Directorio Sugargoo UK — 24 anuncios revisados", finds: "Nuevos hallazgos Sugargoo UK — 12 favoritos y archivo", guide: "Mapa del proceso Sugargoo UK — Seis controles", qc: "Checklist de pruebas QC Sugargoo — Fotos y medidas", shipping: "Peso facturable Sugargoo — Controles de ruta UK", faq: "FAQ Sugargoo UK — Respuestas verificadas de proceso y QC", articles: "Guías de pruebas y notas Sugargoo UK" },
+  fr: { home: "Sugargoo UK 2026 — Routes vérifiées, preuves QC et outils colis", spreadsheet: "Répertoire Sugargoo UK — 24 fiches vérifiées", finds: "Nouvelles trouvailles Sugargoo UK — 12 choix et archives", guide: "Carte du parcours Sugargoo UK — Six contrôles", qc: "Checklist des preuves QC Sugargoo — Photos et mesures", shipping: "Poids facturable Sugargoo — Contrôles de route UK", faq: "FAQ Sugargoo UK — Réponses vérifiées sur parcours et QC", articles: "Guides de preuves et notes Sugargoo UK" },
+  it: { home: "Sugargoo UK 2026 — Rotte verificate, prove QC e strumenti pacco", spreadsheet: "Elenco rotte Sugargoo UK — 24 schede controllate", finds: "Nuovi prodotti Sugargoo UK — 12 scelte e archivio", guide: "Mappa del flusso Sugargoo UK — Sei controlli", qc: "Checklist prove QC Sugargoo — Foto e misure", shipping: "Peso fatturabile Sugargoo — Controlli rotta UK", faq: "FAQ Sugargoo UK — Risposte verificate su flusso e QC", articles: "Guide di prova e note Sugargoo UK" }
 };
 
 const metaDescriptions = {
-  en: "Independent Sugargoo UK guide with checked product routes, warehouse QC facts, parcel planning and current-verification advice.",
-  de: "Unabhängiger Sugargoo-UK-Leitfaden mit geprüften Produktrouten, QC-Fakten, Paketplanung und Hinweisen zur Live-Prüfung.",
-  es: "Guía independiente de Sugargoo UK con rutas revisadas, datos QC, planificación del paquete y controles actuales.",
-  fr: "Guide indépendant Sugargoo UK avec routes vérifiées, faits QC, préparation du colis et contrôles à jour.",
-  it: "Guida indipendente Sugargoo UK con percorsi controllati, dati QC, pianificazione del pacco e verifiche aggiornate."
+  en: {
+    home: "Independent UK research with 24 checked catalogue routes, category-level QC evidence, five-photo guidance and a chargeable-weight planning tool.",
+    spreadsheet: "Browse all 24 checked UK catalogue routes by six categories, with exact source links, reference prices and a clear hand-off to the live listing.",
+    finds: "See 12 current editor picks first, then use the separate route archive for the remaining checked items without duplicating the full directory view.",
+    guide: "Follow six buying checkpoints from source verification to warehouse evidence and parcel submission, with official storage and QC facts clearly sourced.",
+    qc: "Use a fixed warehouse-photo review order for identity, shape, construction, measurements and packaging before choosing keep, exchange or return.",
+    shipping: "Compare actual and volumetric weight, test the route divisor and review packing, restrictions and current UK parcel terms before submission.",
+    faq: "Find evidence-based answers on five basic QC photos, 100- or 30-day storage by order type, returns, pricing and chargeable weight.",
+    articles: "Read long-form field notes on the buying workflow, warehouse-photo decisions and actual versus volumetric weight for UK parcel planning."
+  },
+  de: {
+    home: "Unabhängige UK-Recherche mit 24 geprüften Routen, kategoriespezifischen QC-Belegen, Fünf-Foto-Hinweisen und Paketgewicht-Tool.",
+    spreadsheet: "Alle 24 geprüften UK-Katalogrouten in sechs Kategorien mit exakten Quelllinks, Richtpreisen und direktem Übergang zum Live-Angebot.",
+    finds: "Zuerst 12 aktuelle Redaktionstipps, danach ein getrenntes Archiv der übrigen geprüften Routen ohne Kopie der vollständigen Verzeichnisansicht.",
+    guide: "Sechs Kaufprüfungen von der Quelle bis zur Paketeinreichung, mit klar belegten offiziellen Angaben zu Lagerdauer und QC-Fotos.",
+    qc: "Lagerfotos fest nach Identität, Form, Verarbeitung, Maßen und Verpackung prüfen, bevor Behalten, Tausch oder Rückgabe entschieden wird.",
+    shipping: "Ist- und Volumengewicht vergleichen, Routendivisor testen und Packen, Grenzen sowie aktuelle UK-Bedingungen vor Einreichung prüfen.",
+    faq: "Belegte Antworten zu fünf QC-Basisfotos, 100 oder 30 Lagertagen je Bestellart, Rückgabe, Preisen und Abrechnungsgewicht.",
+    articles: "Ausführliche Praxisnotizen zu Kaufablauf, Lagerfoto-Entscheidungen und Ist- gegenüber Volumengewicht für UK-Pakete."
+  },
+  es: {
+    home: "Investigación UK independiente con 24 rutas revisadas, pruebas QC por categoría, guía de cinco fotos y herramienta de peso facturable.",
+    spreadsheet: "Consulta las 24 rutas UK en seis categorías con enlaces exactos, precios orientativos y acceso directo al anuncio activo.",
+    finds: "Mira primero 12 selecciones actuales y usa después el archivo separado para los demás artículos sin duplicar el directorio completo.",
+    guide: "Sigue seis controles desde la fuente hasta el paquete, con datos oficiales claramente citados sobre almacenaje y fotos QC.",
+    qc: "Revisa identidad, forma, construcción, medidas y embalaje en un orden fijo antes de conservar, cambiar o devolver.",
+    shipping: "Compara peso real y volumétrico, prueba el divisor y revisa embalaje, límites y condiciones UK activas antes de enviar.",
+    faq: "Respuestas basadas en pruebas sobre cinco fotos QC, 100 o 30 días según pedido, devoluciones, precios y peso facturable.",
+    articles: "Notas extensas sobre flujo de compra, decisiones con fotos de almacén y peso real frente a volumétrico para paquetes UK."
+  },
+  fr: {
+    home: "Recherche UK indépendante avec 24 routes vérifiées, preuves QC par catégorie, guide des cinq photos et outil de poids facturable.",
+    spreadsheet: "Parcourez 24 routes UK en six catégories avec liens exacts, prix indicatifs et passage direct à la fiche active.",
+    finds: "Consultez d’abord 12 choix actuels, puis l’archive séparée des autres routes sans recopier le répertoire complet.",
+    guide: "Suivez six contrôles de la source au colis, avec faits officiels clairement cités sur stockage et photos QC.",
+    qc: "Contrôlez identité, forme, construction, mesures et emballage dans un ordre fixe avant de garder, échanger ou retourner.",
+    shipping: "Comparez poids réel et volumétrique, testez le diviseur et vérifiez emballage, limites et conditions UK actives.",
+    faq: "Réponses fondées sur cinq photos QC, stockage de 100 ou 30 jours selon la commande, retours, prix et poids facturable.",
+    articles: "Notes longues sur le parcours d’achat, les décisions par photos d’entrepôt et le poids réel ou volumétrique des colis UK."
+  },
+  it: {
+    home: "Ricerca UK indipendente con 24 rotte controllate, prove QC per categoria, guida alle cinque foto e strumento di peso fatturabile.",
+    spreadsheet: "Consulta 24 rotte UK in sei categorie con link esatti, prezzi indicativi e passaggio diretto alla scheda attiva.",
+    finds: "Guarda prima 12 scelte attuali, poi usa l’archivio separato per gli altri articoli senza duplicare l’elenco completo.",
+    guide: "Segui sei controlli dalla fonte al pacco, con dati ufficiali chiaramente citati su deposito e foto QC.",
+    qc: "Controlla identità, forma, costruzione, misure e imballo in ordine fisso prima di tenere, cambiare o rendere.",
+    shipping: "Confronta peso reale e volumetrico, prova il divisore e verifica imballo, limiti e condizioni UK attive.",
+    faq: "Risposte basate su cinque foto QC, 100 o 30 giorni secondo l’ordine, resi, prezzi e peso fatturabile.",
+    articles: "Note estese su flusso d’acquisto, decisioni con foto di magazzino e peso reale o volumetrico per pacchi UK."
+  }
 };
 
 const categoryMeta = {
-  en: (label) => `Sugargoo ${label} Spreadsheet — UK Finds`,
-  de: (label) => `Sugargoo ${label} Tabelle — UK-Funde`,
-  es: (label) => `Spreadsheet Sugargoo ${label} — Hallazgos UK`,
-  fr: (label) => `Tableur Sugargoo ${label} — Trouvailles UK`,
-  it: (label) => `Foglio Sugargoo ${label} — Prodotti UK`
+  en: (label) => `Sugargoo ${label} QC Evidence — 4 Checked UK Routes`,
+  de: (label) => `Sugargoo ${label} QC-Belege — 4 geprüfte UK-Routen`,
+  es: (label) => `Pruebas QC Sugargoo ${label} — 4 rutas UK`,
+  fr: (label) => `Preuves QC Sugargoo ${label} — 4 routes UK`,
+  it: (label) => `Prove QC Sugargoo ${label} — 4 rotte UK`
 };
+
+const categoryDescriptions = {
+  en: (label) => `Review four checked Sugargoo ${label} routes with category-specific evidence for identity, measurements, construction and packing.`,
+  de: (label) => `Vier geprüfte Sugargoo-${label}-Routen mit kategoriespezifischen Belegen zu Identität, Maßen, Verarbeitung und Verpackung.`,
+  es: (label) => `Revisa cuatro rutas Sugargoo ${label} con pruebas específicas de identidad, medidas, construcción y embalaje.`,
+  fr: (label) => `Contrôlez quatre routes Sugargoo ${label} avec preuves propres à l’identité, aux mesures, à la construction et à l’emballage.`,
+  it: (label) => `Controlla quattro rotte Sugargoo ${label} con prove specifiche su identità, misure, costruzione e imballo.`
+};
+
+const articleDescriptionSuffix = {
+  en: " Includes a practical evidence checklist for UK buyers.",
+  de: " Mit praktischer Beleg-Checkliste für UK-Käufer.",
+  es: " Incluye una checklist práctica para compradores UK.",
+  fr: " Avec une checklist pratique pour les acheteurs UK.",
+  it: " Con una checklist pratica per gli acquirenti UK."
+};
+
+const descriptionTails = {
+  en: [" Updated 2 Sep 2026.", " Checked 2 September 2026.", " Facts and route links were checked on 2 September 2026."],
+  de: [" Stand: 2. Sep. 2026.", " Geprüft am 2. September 2026.", " Fakten und Routenlinks wurden am 2. September 2026 geprüft."],
+  es: [" Revisado 02.09.2026.", " Actualizado: 2 sep. 2026.", " Revisado el 2 de septiembre de 2026.", " Datos y rutas verificados el 2 de septiembre de 2026."],
+  fr: [" Mis à jour : 2 sept. 2026.", " Vérifié le 2 septembre 2026.", " Faits et routes vérifiés le 2 septembre 2026."],
+  it: [" Aggiornato: 2 set. 2026.", " Verificato il 2 settembre 2026.", " Dati e rotte verificati il 2 settembre 2026."]
+};
+
+function boundedDescription(text, lang) {
+  let description = text.trim();
+  const length = (value) => [...value].length;
+  if (length(description) < 140) {
+    const tails = descriptionTails[lang] || descriptionTails.en;
+    const fitting = tails.find((tail) => length(description + tail) >= 140 && length(description + tail) <= 160);
+    description += fitting || tails[tails.length - 1];
+  }
+  if (length(description) <= 160) return description;
+  const clipped = [...description].slice(0, 159).join("");
+  const boundary = clipped.lastIndexOf(" ");
+  return `${clipped.slice(0, boundary >= 140 ? boundary : 159).replace(/[,:;–—-]+$/u, "")}.`;
+}
 
 export function pageMeta(lang, key) {
   const article = key.startsWith("articles/") ? articles.find((item) => `articles/${item.slug}` === key) : null;
   const category = key.startsWith("category/") ? categories.find((item) => `category/${item.slug}` === key) : null;
   const titles = metaTitles[lang] || metaTitles.en;
   const title = article?.title?.[lang] || (category ? (categoryMeta[lang] || categoryMeta.en)(category.label) : titles[key] || titles.home);
-  const baseDescription = metaDescriptions[lang] || metaDescriptions.en;
+  const descriptions = metaDescriptions[lang] || metaDescriptions.en;
+  const description = article
+    ? `${article.summary?.[lang] || article.summary.en}${articleDescriptionSuffix[lang] || articleDescriptionSuffix.en}`
+    : category
+      ? (categoryDescriptions[lang] || categoryDescriptions.en)(category.label)
+      : descriptions[key] || descriptions.home;
   return {
     title,
-    description: article?.summary?.[lang] || `${title}. ${baseDescription}`
+    description: boundedDescription(description, lang)
   };
+}
+
+export const pageLastModified = {
+  home: "2026-09-02T06:00:00Z",
+  spreadsheet: "2026-09-01T00:00:00Z",
+  finds: "2026-09-02T06:00:00Z",
+  guide: "2026-09-02T06:00:00Z",
+  qc: "2026-09-02T06:00:00Z",
+  shipping: "2026-09-02T06:00:00Z",
+  faq: "2026-09-02T06:00:00Z",
+  articles: "2026-09-02T06:00:00Z"
+};
+
+export function lastModifiedForPath(parts = []) {
+  const key = parts.join("/") || "home";
+  if (key.startsWith("articles/")) {
+    const article = articles.find((item) => `articles/${item.slug}` === key);
+    return `${article?.dateModified || "2026-09-02"}T00:00:00Z`;
+  }
+  if (key.startsWith("category/")) return "2026-09-02T06:00:00Z";
+  return pageLastModified[key] || pageLastModified.home;
 }
 
 export function routeFor(lang, parts = []) {

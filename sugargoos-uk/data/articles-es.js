@@ -5,7 +5,7 @@ export const esArticles = {
     takeaways: [
       "Comprueba el anuncio exacto y activo antes de pagar; una tarjeta del spreadsheet solo sirve para descubrirlo.",
       "La guía publicada por Sugargoo indica que normalmente se proporcionan cinco fotos QC básicas tras la llegada al almacén.",
-      "La guía de almacenaje actualmente publicada indica 100 días gratuitos, aunque el registro activo del pedido es el que manda.",
+      "La guía de almacenaje publicada distingue tipos: 100 días para pedidos de compra y 30 días para pedidos de reventa; manda el registro activo.",
       "Forma y envía el paquete solo después de cerrar las devoluciones y disponer de las medidas embaladas."
     ],
     sections: [
@@ -40,7 +40,7 @@ export const esArticles = {
       {
         title: "Utiliza el periodo de almacén para planificar, no como meta de espera",
         paragraphs: [
-          "La guía de almacenaje publicada actualmente por Sugargoo indica 100 días gratuitos. Esto resulta útil para combinar compras que llegan en fechas distintas, pero no debería fomentar una espera indefinida. Cada pedido puede tener su propio contador y las ampliaciones o el almacenaje vencido pueden estar sujetos a condiciones vigentes que deben comprobarse en la cuenta.",
+          "La guía de almacenaje publicada por Sugargoo distingue tipos de pedido: 100 días gratuitos para pedidos de compra y 30 días para pedidos de reventa. Esto resulta útil para combinar compras que llegan en fechas distintas, pero no debería fomentar una espera indefinida. Cada pedido tiene su propio contador y las ampliaciones o el almacenaje vencido pueden estar sujetos a condiciones vigentes que deben comprobarse en la cuenta.",
           "Una práctica razonable es asignar los artículos a un paquete previsto y fijar una fecha de decisión para el grupo. Cuando llega el último producto, se resuelven QC y devoluciones y se pasa a ensayo o envío. Consolidar puede retirar embalajes exteriores duplicados y combinar pedidos, pero un paquete mayor no es automáticamente más barato ni más seguro. Límites de peso, medidas, restricciones y cálculo del peso facturable pueden cambiar la respuesta. Planifica desde el paquete final hacia atrás: qué necesita protección, qué embalaje es opcional y qué artículos pueden utilizar la misma ruta."
         ]
       },
