@@ -21,7 +21,7 @@ export default async function ArticlePage({ params }: { params: Promise<{ locale
   const { locale, slug } = await params;
   if (!isLocale(locale) || !isArticleSlug(slug)) notFound();
   const article = articles[locale][slug];
-  const research = locale === "en" ? articleResearchBasis[slug] : localizedArticleResearchBasis[locale][slug];
+  const research = locale === "en" ? articleResearchBasis[slug] : (localizedArticleResearchBasis[locale][slug] ?? articleResearchBasis[slug]);
   const labels = {
     en:{back:"All articles",contents:"In this guide",catalog:"Check the live catalog",independent:"Independent editorial guide",basis:"Research basis",checked:"Fact check"},
     de:{back:"Alle Artikel",contents:"In diesem Leitfaden",catalog:"Live-Katalog prüfen",independent:"Unabhängiger redaktioneller Leitfaden",basis:"Recherchebasis",checked:"Geprüft"},
@@ -36,8 +36,8 @@ export default async function ArticlePage({ params }: { params: Promise<{ locale
     fr:["Note Trustpilot","Avis publics","Part 5 étoiles","Part 1 étoile"],
     it:["Punteggio Trustpilot","Recensioni pubbliche","Quota 5 stelle","Quota 1 stella"],
   }[locale];
-  const publishedDates = {"sugargoo-spreadsheet-guide-2026":"2026-09-01","sugargoo-qc-photo-checklist":"2026-08-29","sugargoo-shipping-weight-guide-2026":"2026-08-31","sugargoo-review-2026":"2026-09-01"};
-  const schema = {"@context":"https://schema.org","@type":"Article",headline:article.title,description:article.description,datePublished:publishedDates[slug],dateModified:"2026-09-01",author:{"@type":"Organization",name:"Sugargoo Find Desk"},publisher:{"@type":"Organization",name:"Sugargoo Find Desk"},inLanguage:locale,isAccessibleForFree:true};
+  const publishedDates = {"sugargoo-spreadsheet-guide-2026":"2026-09-01","sugargoo-qc-photo-checklist":"2026-08-29","sugargoo-shipping-weight-guide-2026":"2026-08-31","sugargoo-review-2026":"2026-09-01","sugargoo-order-status-purchased-shipped-received-stored":"2026-09-02"};
+  const schema = {"@context":"https://schema.org","@type":"Article",headline:article.title,description:article.description,datePublished:publishedDates[slug],dateModified:slug === "sugargoo-order-status-purchased-shipped-received-stored" ? "2026-09-02" : "2026-09-01",author:{"@type":"Organization",name:"Sugargoo Find Desk"},publisher:{"@type":"Organization",name:"Sugargoo Find Desk"},inLanguage:locale,isAccessibleForFree:true};
   return (
     <main className="article-page page-width">
       <Link className="back-link" href={`/${locale}/articles/`}><ArrowLeft/>{labels.back}</Link>

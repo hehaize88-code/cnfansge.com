@@ -44,7 +44,7 @@ export const localizedPageResearchBasis: Record<NonEnglishLocale, Record<PageSlu
   }
 };
 
-export const localizedArticleResearchBasis: Record<NonEnglishLocale, Record<ArticleSlug, ResearchBasis>> = {
+export const localizedArticleResearchBasis: Record<NonEnglishLocale, Partial<Record<ArticleSlug, ResearchBasis>>> = {
   de: {
     "sugargoo-spreadsheet-guide-2026":{checked:"1. September 2026",sources:["Offizielle Sugargoo-Leitfäden zu Kaufablauf, DIY-Bestellung, QC und Versandschätzung","Aktuelle Produktwege, Bilder und Preiskennzeichnungen auf cnfansge.com","Routenstatus wird bewusst von Aussagen zu Verkäufer, Material und Lagerqualität getrennt"]},
     "sugargoo-qc-photo-checklist":{checked:"1. September 2026",sources:["Offizielle Sugargoo-QC-Leitfäden vom August und September 2025","Öffentliche Hinweise beschreiben fünf Standardfotos und kostenlose Wiederholung unklarer Bilder","Aktueller Leistungsumfang und optionale Fotografie müssen in der Live-Bestellung bestätigt werden"]},

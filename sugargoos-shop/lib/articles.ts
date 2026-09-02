@@ -1,12 +1,14 @@
 import { Locale } from "@/lib/site-data";
 import { extraArticles } from "@/lib/articles-extra";
 import { fullLocalizedArticles } from "@/lib/articles-full";
+import { orderStatusArticles } from "@/lib/order-status-article";
 
 export const articleSlugs = [
   "sugargoo-spreadsheet-guide-2026",
   "sugargoo-qc-photo-checklist",
   "sugargoo-shipping-weight-guide-2026",
   "sugargoo-review-2026",
+  "sugargoo-order-status-purchased-shipped-received-stored",
 ] as const;
 export type ArticleSlug = (typeof articleSlugs)[number];
 export function isArticleSlug(value: string): value is ArticleSlug { return articleSlugs.includes(value as ArticleSlug); }
@@ -96,6 +98,10 @@ export const articles: Record<Locale, Record<ArticleSlug, Article>> = {
   } as Record<ArticleSlug, Article>,
   de: {} as Record<ArticleSlug, Article>, es: {} as Record<ArticleSlug, Article>, fr: {} as Record<ArticleSlug, Article>, it: {} as Record<ArticleSlug, Article>,
 };
+
+for (const locale of Object.keys(orderStatusArticles) as Locale[]) {
+  articles[locale]["sugargoo-order-status-purchased-shipped-received-stored"] = orderStatusArticles[locale] as Article;
+}
 
 function localizedArticle(locale: Locale, shipping: {title:string; description:string; category:string; readTime:string; published:string; sections:{heading:string; paragraphs:string[]}[]}, qc: {title:string; description:string; category:string; readTime:string; published:string; sections:{heading:string; paragraphs:string[]}[]}) {
   articles[locale]["sugargoo-shipping-weight-guide-2026"] = shipping;

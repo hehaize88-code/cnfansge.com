@@ -105,4 +105,12 @@ export const articleResearchBasis: Record<ArticleSlug, ResearchBasis> = {
       { label: "One-star share", value: "19%" },
     ],
   },
+  "sugargoo-order-status-purchased-shipped-received-stored": {
+    checked: "September 2, 2026",
+    sources: [
+      "Sugargoo official step-by-step ordering guide (August 2025)",
+      "Sugargoo official QC guidance for warehouse arrivals (August 2025)",
+      "Sugargoo official tracking guidance (September 2025); live labels and instructions must be rechecked",
+    ],
+  },
 };
