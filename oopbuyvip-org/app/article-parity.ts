@@ -3,7 +3,7 @@ import type { Article, ArticleSlug } from "./seo-articles";
 export type ParityLanguage = "en" | "de" | "es" | "fr" | "it";
 type ExtraSection = Article["sections"][number];
 
-const paritySections: Record<ParityLanguage, Record<ArticleSlug, ExtraSection>> = {
+const paritySections: Record<ParityLanguage, Partial<Record<ArticleSlug, ExtraSection>>> = {
   en: {
     "oopbuy-spreadsheet-guide": { heading: "A maintenance audit you can repeat every two weeks", paragraphs: [
       "Take a dated snapshot before editing the list, then reopen each current route in a clean browser session. Compare item ID, option names, seller price, domestic delivery and the image used in the row. Mark a field changed only when the live page shows evidence; a missing page should become paused, not silently replaced by a similar product.",
@@ -189,6 +189,6 @@ const paritySections: Record<ParityLanguage, Record<ArticleSlug, ExtraSection>> 
 export function addParitySections(language: ParityLanguage, articles: Record<ArticleSlug, Article>): Record<ArticleSlug, Article> {
   return Object.fromEntries(Object.entries(articles).map(([slug, article]) => [slug, {
     ...article,
-    sections: [...article.sections, paritySections[language][slug as ArticleSlug]],
+    sections: paritySections[language][slug as ArticleSlug] ? [...article.sections, paritySections[language][slug as ArticleSlug]!] : article.sections,
   }])) as Record<ArticleSlug, Article>;
 }

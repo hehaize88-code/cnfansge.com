@@ -4,6 +4,7 @@ export const articleSlugs = [
   "oopbuy-shipping-planning",
   "oopbuy-fees-total-cost",
   "is-oopbuy-legit-review",
+  "oopbuy-order-status-interface-guide",
 ] as const;
 
 export type ArticleSlug = (typeof articleSlugs)[number];
@@ -22,6 +23,7 @@ export type Article = {
   description: string;
   read: string;
   updated: string;
+  published?: string;
   sections: { heading: string; paragraphs: string[] }[];
   sources: ArticleSource[];
 };
@@ -461,6 +463,63 @@ export const englishArticles: Record<ArticleSlug, Article> = {
         checked: "1 September 2026",
         reference: "Reddit · self-reported OOPBuy experience discussed in article",
       },
+    ],
+  },
+  "oopbuy-order-status-interface-guide": {
+    eyebrow: "OOPBuy order status",
+    title: "How to Read OOPBuy Order Statuses: A Verified Interface Guide",
+    description: "Read OOPBuy order statuses as a dated evidence chain, identify the object and responsible stage, and escalate only with a complete record.",
+    read: "13 min read",
+    updated: "3 September 2026",
+    published: "2026-09-03",
+    sections: [
+      { heading: "Start with the object, not the status word", paragraphs: [
+        "An OOPBuy order status is useful only when it is attached to the correct object. The purchase order, seller’s domestic parcel, warehouse item, submitted international parcel and refund record can each have a different state at the same moment. Before interpreting a label, save the order number, item ID, selected variant and the page where the label appears. This prevents a carrier event from being mistaken for warehouse intake or a warehouse event from being mistaken for an international shipment.",
+        "OOPBuy currently publishes a dedicated description of purchasing-order statuses and a separate Beginner’s Guide for the broader workflow. Read those pages as a map, then confirm the wording in the live account. Interface labels can be translated, shortened or changed. If the account uses a term that is not in the public explanation, record the exact label and do not replace it with a familiar term from an old screenshot.",
+        "Create one evidence row for every state change: object, displayed status, first-seen time, last-checked time, source screen, related tracking number, amount if relevant and the next action shown. That row is more useful than a screenshot alone because it preserves context. A status is evidence of what the interface displayed at a time; it is not proof of the hidden cause or a guaranteed completion date."
+      ]},
+      { heading: "Read the purchase stage as a chain of responsibility", paragraphs: [
+        "The first chain runs from submission and payment through agent purchasing, seller acceptance and seller dispatch. Separate a payment problem from a purchasing delay. A payment record can show that money moved while the purchase order still requires review. Likewise, a purchasing status can show that the order was placed without proving that the seller has dispatched the selected item. Save the transaction record and purchase state separately.",
+        "When the order is described as purchased, the seller generally controls the next physical movement. OOPBuy’s current after-sales guide specifically uses the status “Purchased” when explaining how to open after-sales from the order page. That does not mean every purchased order is eligible for the same remedy. Seller rules, product conditions and the current button shown on the order still matter, so the live action controls should be preserved with the label.",
+        "For a delay, ask one closed question: which stage has not produced its expected next evidence? If there is no purchasing confirmation, investigate the order stage. If purchase is confirmed but there is no domestic dispatch reference, the open question concerns seller dispatch. If tracking says delivered but the warehouse item is not yet available, the open question concerns receiving and intake. This wording gives support a narrow case instead of a general complaint."
+      ]},
+      { heading: "Do not call a domestic delivery warehouse storage", paragraphs: [
+        "A seller-side tracking event and an OOPBuy warehouse status describe different systems. A domestic carrier may mark a shipment delivered to the warehouse address before staff match the parcel to an order, count the contents, inspect the visible item and publish the warehouse record. Record the domestic tracking number, delivery event and warehouse status on separate lines. The time between them is an intake interval, not automatically a lost item.",
+        "OOPBuy’s current Beginner’s Guide says that goods are inspected and photographed after they arrive at the warehouse. Its Inspection Information page says the visible check includes quantity, color, size, other specifications and appearance for damage. Those statements define a warehouse checkpoint; they do not prove that every hidden quality, material or function has been tested. The stored record should therefore be read together with the visible evidence, not as a certificate of quality.",
+        "If identity is unclear after intake, preserve the ordered variant, seller dispatch data, received quantity, visible label and warehouse photographs. Do not edit the original order field to match what arrived. Keep expected and observed values side by side. That distinction becomes essential if the next step is extra evidence, return, exchange or approval for parcel planning."
+      ]},
+      { heading: "Separate stored status from the after-sales decision clock", paragraphs: [
+        "A stored or stocked-in status confirms a warehouse stage, but it also starts time-sensitive work. OOPBuy’s current Returns and Refunds information says the standard five-day or 120-hour period is calculated from the next full hour after the order changes to stocked in. The newer return-and-exchange notice uses “Stored in Warehouse” for the same operational checkpoint. Because wording can vary, save the exact live status and timestamp before calculating any deadline.",
+        "A timely request is not an approval guarantee. The current return information distinguishes seller or product eligibility, responsibility, domestic shipping and service effects. Keep two fields: submission deadline and eligibility evidence. If the item is wrong or visibly damaged, attach the option record and relevant photos. If the issue is preference, record that accurately instead of describing it as seller fault.",
+        "Warehouse storage is a different clock. Current OOPBuy storage information describes a normal 90-day storage period calculated from a received or stored status. That longer period supports consolidation but does not extend the shorter standard return decision window. Put both dates in the record so “still in storage” is never confused with “still easy to return.”"
+      ]},
+      { heading: "Use a status-to-evidence table for every order", paragraphs: [
+        "Build a table with five columns: current object, exact interface status, evidence available now, evidence still missing and next responsible party. At payment, the evidence may be a transaction reference while the missing item is purchase confirmation. At seller dispatch, the evidence may be a domestic tracking number while the missing item is warehouse intake. At storage, the evidence is the warehouse item record while the next responsibility belongs to the buyer’s QC and after-sales decision.",
+        "Add a confidence field. Mark a state confirmed when the live account and its related reference agree. Mark it provisional when only one screen or an unlinked tracking event is visible. Mark it conflicting when two account pages disagree. A conflict should be captured with timestamps and URLs; it should not be resolved by choosing the label that makes the order look further advanced.",
+        "This table also prevents duplicate support requests. If a case already has a ticket or after-sales reference, add new evidence to the same timeline unless the live interface instructs otherwise. Record the last response, the question still unanswered and the date for the next check. Repeated messages without new evidence can obscure the original issue instead of making it easier to investigate."
+      ]},
+      { heading: "Escalate by last verified event, not by anxiety", paragraphs: [
+        "Before contacting support, identify the last event that you can verify and the next event that is absent. Write: order paid at this time, purchasing confirmation not shown; or seller tracking delivered at this time, warehouse intake not shown. Include the order reference, exact product option, relevant tracking or transaction reference and two screenshots with timestamps. Avoid guessing that the seller, warehouse or carrier lost the item unless the evidence supports that conclusion.",
+        "Use the action route that belongs to the current object. OOPBuy’s current after-sales guide directs purchased orders to the After-sale control on the Order page. Other states may show different controls or require customer service. Follow the current interface rather than a copied path. Save the submission confirmation, selected reason, attached files and any deadline shown after submission.",
+        "Set a review time based on the response or interface instruction, not an invented universal service level. If no time is published, record when you will check again without claiming that silence proves failure. If the status changes, append the event and reassess responsibility. A support request is successful when it makes the missing transition easy to investigate, even before a final outcome is known."
+      ]},
+      { heading: "Worked example: one order, three simultaneous states", paragraphs: [
+        "Imagine a buyer ordered two shirts from one listing and a bag from another. The shirts show purchased, their seller parcel has a domestic tracking number, and the bag already shows stored. These are not contradictory. They are three objects at different points: the shirt purchase orders, the shirt seller parcel and the bag warehouse item. The buyer should not wait for one global order status because no single label describes the entire set.",
+        "For the shirts, the record should preserve each selected size and quantity, the purchased timestamp and domestic tracking events. For the bag, the record should preserve stock-in time, expected option, received quantity and QC evidence. The buyer can review the bag’s return decision now while continuing to monitor shirt dispatch. Combining those tasks into one “haul pending” label would hide the time-sensitive decision.",
+        "The example uses no claimed customer or real order. It illustrates the method: split the workflow by object, retain timestamps and attach the next action to the party that controls it. That method stays useful when labels change because it depends on evidence transitions rather than memorizing a colorful progress bar."
+      ]},
+      { heading: "Final order-status checklist", paragraphs: [
+        "Before interpreting any label, confirm the page, order number, item ID and selected option. Copy the exact status without translating it yourself. Record first-seen and last-checked times. Link payment, domestic tracking, warehouse evidence, after-sales and refund references only when the interface shows that relationship. Mark missing data as unknown and conflicting screens as conflicting.",
+        "Before acting, identify the responsible stage and missing next event. Review warehouse evidence promptly, calculate the current return decision deadline from the live status, and keep storage timing separate. Use the button or support route currently attached to the order. Save the request and response in the same record instead of replacing the earlier state.",
+        "A verified OOPBuy order status guide cannot promise when a seller, warehouse or carrier will complete the next step. It can show exactly where the order stands, what evidence supports that conclusion and what information is needed next. That is the difference between reading a status and guessing from it."
+      ]},
+    ],
+    sources: [
+      { label: "OOPBuy purchasing-order status descriptions", note: "Official descriptions for current purchasing and parcel-related status labels.", kind: "official", checked: "3 September 2026", reference: "m.oopbuy.com/notice/1775409280679739393" },
+      { ...officialGuide, checked: "3 September 2026" },
+      { label: "OOPBuy Inspection Information", note: "Official scope for visible warehouse checks of quantity, color, size, specifications and appearance damage.", kind: "official", checked: "3 September 2026", reference: "m.oopbuy.com/notice/1740664942636404738" },
+      { label: "OOPBuy How to apply for aftersales", note: "Official instruction connecting a Purchased order to the current order-page after-sales action.", kind: "official", checked: "3 September 2026", reference: "m.oopbuy.com/notice/1772884667429093377" },
+      { ...officialReturns, checked: "3 September 2026" },
     ],
   },
 };

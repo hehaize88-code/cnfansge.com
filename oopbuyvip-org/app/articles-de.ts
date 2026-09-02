@@ -229,4 +229,54 @@ export const germanArticles: Record<ArticleSlug, Article> = {
       ]},
     ],
   }),
+  "oopbuy-order-status-interface-guide": withSources("oopbuy-order-status-interface-guide", {
+    eyebrow: "OOPBuy-Bestellstatus",
+    title: "OOPBuy-Bestellstatus richtig lesen: Verifizierter Interface-Leitfaden",
+    description: "OOPBuy-Status als datierte Belegkette lesen, Objekt und zuständige Stufe erkennen und mit einem vollständigen Datensatz eskalieren.",
+    read: "13 Min. Lesezeit",
+    updated: "3. September 2026",
+    published: "2026-09-03",
+    sections: [
+      { heading: "Mit dem Objekt beginnen, nicht mit dem Statuswort", paragraphs: [
+        "Ein OOPBuy-Status ist nur zusammen mit dem richtigen Objekt aussagekräftig. Kaufauftrag, Inlandsendung des Verkäufers, Lagerartikel, internationales Paket und Erstattung können gleichzeitig verschiedene Zustände haben. Sichere vor der Deutung Bestellnummer, Artikel-ID, gewählte Variante und die Seite, auf der das Label erscheint. So wird ein Carrier-Ereignis nicht mit Lagereingang und ein Lagerereignis nicht mit internationalem Versand verwechselt.",
+        "OOPBuy veröffentlicht aktuell eine eigene Erklärung der Kaufstatus und einen separaten Einsteigerleitfaden für den Gesamtprozess. Nutze diese Quellen als Karte und bestätige danach die Formulierung im Live-Konto. Labels können übersetzt, verkürzt oder geändert werden. Fehlt ein Begriff in der öffentlichen Erklärung, wird er wörtlich gespeichert und nicht durch einen bekannten Ausdruck aus einem alten Screenshot ersetzt.",
+        "Lege für jede Änderung eine Zeile an: Objekt, angezeigter Status, zuerst gesehen, zuletzt geprüft, Quellseite, Trackingnummer, relevanter Betrag und angezeigte nächste Aktion. Diese Zeile bewahrt den Kontext besser als ein einzelner Screenshot. Ein Status beweist die Anzeige zu einem Zeitpunkt, nicht die verborgene Ursache oder ein garantiertes Abschlussdatum."
+      ]},
+      { heading: "Die Kaufstufe als Verantwortungskette lesen", paragraphs: [
+        "Die erste Kette führt von Einreichung und Zahlung über Agentenkauf, Verkäuferannahme und Verkäufer­versand. Trenne Zahlungsproblem und Kaufverzögerung. Ein Zahlungsbeleg kann Geldbewegung zeigen, obwohl der Auftrag noch geprüft wird. Ein Kaufstatus kann die Bestellung bestätigen, ohne den Versand der gewählten Ware zu beweisen. Speichere Transaktion und Kaufstatus getrennt.",
+        "Beim Status Purchased kontrolliert normalerweise der Verkäufer die nächste physische Bewegung. OOPBuys aktueller After-Sales-Leitfaden verwendet genau diesen Status für die Aktion After-sale auf der Bestellseite. Das garantiert nicht dieselbe Lösung für jeden Auftrag. Verkäuferregeln, Produktzustand und die aktuell sichtbare Schaltfläche bleiben maßgeblich und gehören zum Beleg.",
+        "Frage bei Verzögerung: Welche Stufe hat den erwarteten nächsten Beleg nicht erzeugt? Ohne Kaufbestätigung liegt die Frage im Auftrag. Bei Kauf ohne Inlands-Tracking geht es um Verkäufer­versand. Zeigt Tracking Zustellung, aber noch keinen Lagerartikel, geht es um Wareneingang. Diese enge Formulierung hilft dem Support mehr als eine allgemeine Beschwerde."
+      ]},
+      { heading: "Inlandszustellung nicht als Einlagerung bezeichnen", paragraphs: [
+        "Verkäufer-Tracking und OOPBuy-Lagerstatus stammen aus unterschiedlichen Systemen. Ein Inlandsdienst kann die Lieferung an die Lageradresse markieren, bevor Mitarbeitende das Paket zuordnen, Menge zählen, Sichtprüfung durchführen und den Lagerdatensatz veröffentlichen. Notiere Tracking, Zustellung und Lagerstatus separat. Die Zeit dazwischen ist ein Aufnahmeintervall und nicht automatisch ein verlorener Artikel.",
+        "Der aktuelle Einsteigerleitfaden beschreibt Prüfung und Fotos nach Ankunft. Inspection Information nennt Menge, Farbe, Größe, weitere Spezifikationen und sichtbare Schäden. Das definiert einen Lagerkontrollpunkt, aber keinen Test verborgener Qualität, Materialien oder Funktionen. Der gespeicherte Status muss deshalb zusammen mit den sichtbaren Belegen gelesen werden.",
+        "Bei unklarer Identität sichere bestellte Variante, Verkäufer­versand, erhaltene Menge, sichtbares Etikett und Lagerbilder. Ändere nicht das ursprüngliche Bestellfeld passend zur erhaltenen Ware. Erwartet und beobachtet bleiben nebeneinander, besonders wenn Zusatzbeleg, Rückgabe, Umtausch oder Paketfreigabe folgen."
+      ]},
+      { heading: "Einlagerung und After-Sales-Frist trennen", paragraphs: [
+        "Stored oder Stocked in bestätigt die Lagerstufe und startet zugleich zeitkritische Arbeit. Die aktuelle Rückgabeinformation berechnet fünf Tage beziehungsweise 120 Stunden ab der nächsten vollen Stunde nach Stocked in; eine neuere Mitteilung verwendet Stored in Warehouse. Speichere wegen unterschiedlicher Formulierungen das Live-Label und seinen Zeitstempel, bevor du eine Frist berechnest.",
+        "Eine rechtzeitige Anfrage garantiert keine Genehmigung. Verkäufer- und Produktregeln, Verantwortung, Inlandsversand und Servicefolgen bleiben getrennt. Führe deshalb Einreichfrist und Berechtigungsbeleg als zwei Felder. Bei falscher oder sichtbar beschädigter Ware kommen Option und Fotos hinzu; eine Präferenzänderung darf nicht als Verkäuferfehler beschrieben werden.",
+        "Lagerdauer ist eine andere Uhr. Aktuelle OOPBuy-Information nennt für normale Lagerung 90 Tage ab Received beziehungsweise Stored. Diese Zeit hilft bei Konsolidierung, verlängert aber nicht die kürzere Standard-Rückgabeentscheidung. Notiere beide Daten, damit noch eingelagert niemals mit noch leicht rückgabefähig verwechselt wird."
+      ]},
+      { heading: "Für jeden Auftrag eine Status-Beleg-Tabelle führen", paragraphs: [
+        "Nutze fünf Spalten: aktuelles Objekt, exakter Interface-Status, jetzt verfügbare Belege, fehlende Belege und nächste zuständige Partei. Bei Zahlung kann die Transaktionsreferenz vorhanden und Kaufbestätigung offen sein. Beim Verkäufer­versand kann Inlands-Tracking vorhanden und Lagereingang offen sein. Bei Einlagerung liegt der nächste Schritt bei QC und After-Sales-Entscheidung des Käufers.",
+        "Ergänze Vertrauen: bestätigt, wenn Konto und Referenz übereinstimmen; vorläufig, wenn nur eine Ansicht oder ein unverbundenes Tracking sichtbar ist; widersprüchlich, wenn Kontoseiten abweichen. Sichere einen Konflikt mit Zeitstempeln und URLs. Wähle nicht einfach das Label, das den Auftrag weiter fortgeschritten erscheinen lässt.",
+        "Die Tabelle verhindert doppelte Supportfälle. Existiert Ticket oder After-Sales-Referenz, ergänze neue Belege in derselben Zeitleiste, sofern die Oberfläche nichts anderes verlangt. Notiere letzte Antwort, offene Frage und nächstes Prüfdatum. Wiederholte Nachrichten ohne neue Information können den ursprünglichen Fall verdecken."
+      ]},
+      { heading: "Nach dem letzten verifizierten Ereignis eskalieren", paragraphs: [
+        "Nenne vor Supportkontakt das letzte bestätigte und das nächste fehlende Ereignis: bezahlt zu dieser Zeit, Kaufbestätigung fehlt; oder Verkäufer-Tracking zugestellt zu dieser Zeit, Lagereingang fehlt. Ergänze Referenz, Variante, Tracking oder Zahlung und zwei datierte Screenshots. Behaupte keinen Verlust durch Verkäufer, Lager oder Carrier ohne entsprechenden Beleg.",
+        "Nutze die Aktion des aktuellen Objekts. Der offizielle Leitfaden verweist Purchased-Aufträge auf After-sale der Bestellseite; andere Zustände können andere Schaltflächen oder Kundenservice verlangen. Folge der Live-Oberfläche, speichere Bestätigung, Grund, Anhänge und jede angezeigte Frist.",
+        "Lege die nächste Prüfung nach veröffentlichter Antwort oder Interface-Hinweis fest, nicht nach einer erfundenen universellen Servicezeit. Gibt es keine Frist, dokumentiere den Kontrolltermin ohne Schweigen als Fehler zu bezeichnen. Bei Statusänderung wird das Ereignis angehängt und die Verantwortung neu bewertet."
+      ]},
+      { heading: "Beispiel: ein Einkauf, drei gleichzeitige Zustände", paragraphs: [
+        "Angenommen, zwei Hemden stammen aus einem Angebot und eine Tasche aus einem anderen. Die Hemden zeigen Purchased, ihr Verkäuferpaket hat Inlands-Tracking und die Tasche ist bereits Stored. Das widerspricht sich nicht: Kaufaufträge, Verkäuferpaket und Lagerartikel stehen an verschiedenen Punkten. Ein globales Label kann die Gruppe nicht korrekt beschreiben.",
+        "Für die Hemden werden Größe, Menge, Kaufzeit und Tracking gesichert. Für die Tasche werden Einlagerungszeit, erwartete Option, erhaltene Menge und QC-Belege gesichert. Die Rückgabeentscheidung der Tasche kann sofort geprüft werden, während der Hemdenversand weiter beobachtet wird. Ein Sammelstatus Haul pending würde die zeitkritische Aufgabe verbergen.",
+        "Das Beispiel beschreibt keinen echten Kunden oder Auftrag. Es zeigt die Methode: Workflow nach Objekt teilen, Zeitstempel behalten und nächste Aktion der kontrollierenden Partei zuweisen. Das bleibt selbst bei neuen Labelnamen nützlich, weil Belegübergänge wichtiger sind als ein farbiger Fortschrittsbalken."
+      ]},
+      { heading: "Abschließende Status-Checkliste", paragraphs: [
+        "Vor jeder Deutung Seite, Bestellnummer, Artikel-ID und Option bestätigen. Status wörtlich kopieren, zuerst gesehen und zuletzt geprüft notieren. Zahlung, Inlands-Tracking, Lager, After-Sales und Erstattung nur verknüpfen, wenn die Oberfläche die Beziehung zeigt. Fehlendes bleibt unbekannt, Abweichendes widersprüchlich.",
+        "Vor dem Handeln zuständige Stufe und fehlendes Folgeereignis bestimmen. Lagerbelege schnell prüfen, Rückgabefrist aus dem Live-Status berechnen und von Lagerdauer trennen. Die aktuell am Auftrag gezeigte Aktion nutzen und Anfrage sowie Antwort im selben Datensatz fortschreiben.",
+        "Ein verifizierter OOPBuy-Statusleitfaden verspricht nicht, wann Verkäufer, Lager oder Carrier den nächsten Schritt erledigen. Er zeigt, wo der Auftrag steht, welche Belege das stützen und welche Information als Nächstes fehlt. Das ist der Unterschied zwischen Status lesen und Status erraten. Prüfe den Datensatz außerdem vor jeder neuen Nachricht auf personenbezogene Angaben: Adresse, Zahlung und private Kommunikation gehören nicht in öffentliche Posts. Für den Support bleiben sie nur dort sichtbar, wo sie zur Untersuchung erforderlich sind. Nach Abschluss wird das Ergebnis als neues Ereignis ergänzt, nicht rückwirkend in ältere Zeilen geschrieben. So bleibt erkennbar, ob die Lösung durch Verkäuferbestätigung, Lagerprüfung, Rückgabe, Erstattung oder späteren Versand entstand. Diese saubere Historie verbessert auch die nächste Bestellung, ohne aus einem einzelnen Fall eine allgemeine Leistungsquote abzuleiten. Bewahre die ursprünglichen Zeitstempel unverändert auf und kennzeichne jede spätere redaktionelle Notiz mit ihrem eigenen Datum."
+      ]},
+    ],
+  }),
 };

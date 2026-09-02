@@ -104,6 +104,7 @@ export const articleSlugs = [
   "oopbuy-shipping-planning",
   "oopbuy-fees-total-cost",
   "is-oopbuy-legit-review",
+  "oopbuy-order-status-interface-guide",
 ] as const;
 export type ArticleSlug = (typeof articleSlugs)[number];
 
@@ -113,6 +114,7 @@ type Article = {
   description: string;
   read: string;
   updated?: string;
+  published?: string;
   sections: { heading: string; paragraphs: string[] }[];
   sources?: { label: string; note: string; kind?: "official" | "customer"; checked?: string; reference?: string }[];
 };

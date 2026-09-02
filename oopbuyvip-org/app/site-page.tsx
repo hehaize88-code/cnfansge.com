@@ -39,6 +39,14 @@ const sourceHeadings = {
   it: ["Fonti consultate", "Materiale ufficiale verificato il 1 settembre 2026. Condizioni e importi live possono cambiare."],
 } as const;
 
+const currentSourceIntro = {
+  en: "Official material checked on 3 September 2026. Live labels, actions and policies can change.",
+  de: "Offizielle Unterlagen geprüft am 3. September 2026. Live-Labels, Aktionen und Regeln können sich ändern.",
+  es: "Material oficial revisado el 3 de septiembre de 2026. Las etiquetas, acciones y políticas pueden cambiar.",
+  fr: "Documents officiels vérifiés le 3 septembre 2026. Les libellés, actions et règles peuvent évoluer.",
+  it: "Materiale ufficiale verificato il 3 settembre 2026. Etichette, azioni e regole live possono cambiare.",
+} as const;
+
 const sourceKinds = {
   en: { official: "Official source", customer: "Customer-report source", checked: "Checked" },
   de: { official: "Offizielle Quelle", customer: "Kundenbericht", checked: "Geprüft" },
@@ -379,7 +387,9 @@ function ArticlePage({ lang, slug }: { lang: Language; slug: ArticleSlug }) {
   const t = copy[lang];
   const article = t.articles[slug];
   const crumbs = [{ label: t.nav.home, href: `/${lang}` }, { label: t.nav.articles, href: `/${lang}/articles` }, { label: article.title, href: `/${lang}/articles/${slug}` }];
-  const articleSchema = { "@context": "https://schema.org", "@type": "Article", headline: article.title, description: article.description, datePublished: "2026-09-01", dateModified: "2026-09-01", author: { "@type": "Organization", name: "OOPBUY VIP Research Desk" }, mainEntityOfPage: `${SITE}/${lang}/articles/${slug}`, citation: article.sources?.map(source => source.reference ? `${source.label} — ${source.reference}` : source.label) ?? [] };
+  const published = article.published ?? "2026-09-01";
+  const sourceIntro = slug === "oopbuy-order-status-interface-guide" ? currentSourceIntro[lang] : sourceHeadings[lang][1];
+  const articleSchema = { "@context": "https://schema.org", "@type": "Article", headline: article.title, description: article.description, datePublished: published, dateModified: published, author: { "@type": "Organization", name: "OOPBUY VIP Research Desk" }, mainEntityOfPage: `${SITE}/${lang}/articles/${slug}`, citation: article.sources?.map(source => source.reference ? `${source.label} — ${source.reference}` : source.label) ?? [] };
   return (
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify([articleSchema, breadcrumbSchema(crumbs)]) }} />
@@ -391,7 +401,7 @@ function ArticlePage({ lang, slug }: { lang: Language; slug: ArticleSlug }) {
         </header>
         <article className="article-body section">
           {article.sections.map((section, index) => <section key={section.heading}><span>0{index + 1}</span><div><h2>{section.heading}</h2>{section.paragraphs.map((paragraph, p) => <p key={p}>{paragraph}</p>)}</div></section>)}
-          {!!article.sources?.length && <section className="article-sources"><span>↗</span><div><h2>{sourceHeadings[lang][0]}</h2><p className="source-intro">{sourceHeadings[lang][1]}</p><ul>{article.sources.map((source) => { const kind = source.kind ?? (/Trustpilot|Reddit|customer/i.test(source.label) ? "customer" : "official"); return <li key={source.label}><strong className="source-name">{source.label}</strong><span className="source-meta">{sourceKinds[lang][kind]} · {sourceKinds[lang].checked} {source.checked ?? "1 Sep 2026"}</span><p>{source.note}</p>{source.reference && <code>{source.reference}</code>}</li>; })}</ul></div></section>}
+          {!!article.sources?.length && <section className="article-sources"><span>↗</span><div><h2>{sourceHeadings[lang][0]}</h2><p className="source-intro">{sourceIntro}</p><ul>{article.sources.map((source) => { const kind = source.kind ?? (/Trustpilot|Reddit|customer/i.test(source.label) ? "customer" : "official"); return <li key={source.label}><strong className="source-name">{source.label}</strong><span className="source-meta">{sourceKinds[lang][kind]} · {sourceKinds[lang].checked} {source.checked ?? "1 Sep 2026"}</span><p>{source.note}</p>{source.reference && <code>{source.reference}</code>}</li>; })}</ul></div></section>}
           <div className="source-note"><strong>{sourceBoundary[lang][0]}</strong><p>{t.labels.disclaimer} {sourceBoundary[lang][1]}</p></div>
         </article>
         <section className="section related-section"><div className="section-heading"><p className="eyebrow">NEXT / FIELD NOTES</p><h2>{t.page.articles.title}</h2></div><ArticleCards lang={lang} /></section>

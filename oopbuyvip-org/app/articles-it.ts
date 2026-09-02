@@ -211,4 +211,54 @@ export const italianArticles: Record<ArticleSlug, Article> = {
       ]},
     ],
   }),
+  "oopbuy-order-status-interface-guide": withSources("oopbuy-order-status-interface-guide", {
+    eyebrow: "Stato ordine OOPBuy",
+    title: "Come leggere gli stati dell’ordine OOPBuy: guida verificata all’interfaccia",
+    description: "Interpreta gli stati come una catena di prove datata, identifica oggetto e fase responsabile e segnala con un fascicolo completo.",
+    read: "13 min di lettura",
+    updated: "3 settembre 2026",
+    published: "2026-09-03",
+    sections: [
+      { heading: "Partire dall’oggetto, non dalla parola di stato", paragraphs: [
+        "Uno stato OOPBuy è utile solo se associato all’oggetto giusto. Ordine di acquisto, pacco nazionale del venditore, articolo in magazzino, pacco internazionale e rimborso possono avere stati diversi nello stesso momento. Prima di interpretare salva numero d’ordine, ID, variante e pagina del label, evitando di confondere evento del vettore, ingresso in magazzino e spedizione internazionale.",
+        "OOPBuy pubblica una descrizione degli stati di acquisto e una Beginner’s Guide per il flusso completo. Usale come mappa, poi conferma il testo nell’account live. Le etichette possono essere tradotte, abbreviate o cambiate. Se una parola non compare nella spiegazione pubblica, copiala esattamente invece di sostituirla con un termine di un vecchio screenshot.",
+        "Crea una riga per ogni modifica: oggetto, stato visualizzato, prima comparsa, ultimo controllo, schermata origine, tracking collegato, importo se pertinente e azione successiva. La riga conserva più contesto di una foto isolata. Lo stato dimostra ciò che l’interfaccia mostrava, non la causa nascosta o una data garantita."
+      ]},
+      { heading: "Leggere l’acquisto come catena di responsabilità", paragraphs: [
+        "La prima catena va da invio e pagamento all’acquisto dell’agente, accettazione e partenza del venditore. Separa problema di pagamento e ritardo di acquisto. Una transazione può esistere mentre l’ordine richiede controllo; Purchased non dimostra che il venditore abbia spedito la variante. Salva transazione e stato separatamente.",
+        "Con Purchased il venditore controlla normalmente il movimento fisico successivo. La guida post-vendita usa questo stato per l’azione After-sale nella pagina Order. Non garantisce lo stesso rimedio a tutti: regole del venditore, condizioni del prodotto e pulsante live restano decisivi. Archivia l’azione visibile insieme al label.",
+        "Per un ritardo chiedi quale fase non abbia prodotto la prova successiva. Senza conferma di acquisto, indaga l’ordine. Con acquisto ma senza tracking nazionale, indaga la partenza del venditore. Con tracking consegnato ma senza articolo, indaga ricezione e registrazione. È una domanda più utile di una lamentela generica."
+      ]},
+      { heading: "Non chiamare stoccaggio una consegna nazionale", paragraphs: [
+        "Tracking del venditore e stato di magazzino appartengono a sistemi distinti. Il vettore può segnare consegnato prima che il personale associ il pacco, conti, ispezioni e pubblichi l’articolo. Registra tracking, consegna e stato su righe diverse. L’intervallo è lavorazione in ingresso e non prova automaticamente uno smarrimento.",
+        "La guida colloca ispezione e foto dopo l’arrivo. Inspection Information include quantità, colore, taglia, specifiche e danni visibili. È un controllo di magazzino, non un test di qualità nascosta, materiali o funzioni. Leggi lo stato insieme alle prove visive e non come certificato.",
+        "Se l’identità è incerta, conserva variante ordinata, spedizione, quantità ricevuta, etichetta e foto. Non modificare l’ordine originale per adattarlo all’articolo arrivato. Atteso e osservato restano affiancati prima di prova extra, reso, cambio o approvazione per il pacco."
+      ]},
+      { heading: "Separare stato in magazzino e orologio post-vendita", paragraphs: [
+        "Stored o Stocked in conferma il magazzino e avvia un’attività urgente. Le informazioni attuali calcolano cinque giorni o 120 ore dall’ora piena successiva a Stocked in; un avviso più nuovo usa Stored in Warehouse. Poiché la dicitura varia, salva label live e timestamp prima di calcolare.",
+        "Una richiesta puntuale non garantisce approvazione. Idoneità di venditore e prodotto, responsabilità, trasporto nazionale e servizi restano distinti. Mantieni due campi: scadenza e prova di idoneità. Per articolo errato o danneggiato allega variante e foto; un cambio di preferenza non diventa colpa del venditore.",
+        "Lo stoccaggio ha un altro orologio. OOPBuy indica normalmente 90 giorni da Received o Stored. Aiuta a consolidare ma non prolunga la decisione standard di reso. Scrivi entrambe le date per non confondere ancora in magazzino con ancora facilmente restituibile."
+      ]},
+      { heading: "Usare una tabella stato-prova per ogni ordine", paragraphs: [
+        "Crea cinque colonne: oggetto, stato esatto, prova disponibile, prova mancante e prossimo responsabile. Al pagamento può esserci la transazione ma non l’acquisto; alla partenza può esserci tracking ma non ingresso; in magazzino esiste l’articolo e il passo successivo è QC e decisione post-vendita del cliente.",
+        "Aggiungi confidenza: confermato quando account e riferimento coincidono; provvisorio con una sola schermata o tracking non collegato; in conflitto quando due pagine differiscono. Salva orari e URL senza scegliere il label che fa sembrare l’ordine più avanzato.",
+        "La tabella evita richieste duplicate. Se esiste ticket o riferimento post-vendita, aggiungi la nuova prova alla stessa cronologia salvo diversa istruzione. Registra ultima risposta, domanda aperta e prossimo controllo. Messaggi ripetuti senza dati nuovi possono nascondere il problema originale."
+      ]},
+      { heading: "Segnalare dall’ultimo evento verificato", paragraphs: [
+        "Prima del supporto identifica ultimo evento provato e successivo assente: pagamento a quest’ora, manca conferma di acquisto; oppure tracking consegnato, manca ingresso. Aggiungi riferimento, opzione, tracking o pagamento e screenshot datati. Non attribuire una perdita a venditore, magazzino o vettore senza prova.",
+        "Usa il percorso dell’oggetto corrente. La guida ufficiale invia gli ordini Purchased ad After-sale nella pagina Order; altri stati possono mostrare azioni diverse o assistenza. Segui l’interfaccia live e salva conferma, motivo, allegati e scadenza mostrata.",
+        "Fissa il controllo successivo dalla risposta o istruzione pubblicata, non da un livello di servizio inventato. Se manca un tempo, annota quando ricontrollare senza trattare il silenzio come fallimento. A ogni cambio aggiungi l’evento e rivaluta chi controlla il passo."
+      ]},
+      { heading: "Esempio: un acquisto, tre stati simultanei", paragraphs: [
+        "Immagina due camicie da un’offerta e una borsa da un’altra. Le camicie mostrano Purchased, il pacco venditore ha tracking nazionale e la borsa è già Stored. Non è contraddizione: ordini di acquisto, pacco del venditore e articolo in magazzino sono in punti diversi. Un solo stato globale non descrive tutto.",
+        "Per le camicie salva taglia, quantità, ora di acquisto e tracking. Per la borsa salva ingresso, opzione attesa, quantità e QC. Puoi valutare subito il reso della borsa mentre continui a seguire le camicie. Un generico haul pending nasconderebbe la decisione urgente.",
+        "L’esempio non usa un cliente o ordine reale. Mostra il metodo: dividere per oggetto, conservare orari e assegnare l’azione a chi controlla la fase. Funziona anche se cambiano i nomi, perché segue transizioni provate e non una barra colorata."
+      ]},
+      { heading: "Checklist finale degli stati", paragraphs: [
+        "Conferma pagina, ordine, ID e opzione prima di interpretare. Copia il label esatto, prima comparsa e ultimo controllo. Collega pagamento, tracking, magazzino, post-vendita e rimborso solo se l’account mostra il legame. Segna assente come sconosciuto e difforme come conflitto.",
+        "Prima di agire identifica fase responsabile ed evento successivo mancante. Esamina presto le prove di magazzino, calcola il reso dallo stato live e separalo dallo stoccaggio. Usa l’azione corrente e conserva richiesta e risposta nello stesso fascicolo.",
+        "Una guida verificata non promette quando venditore, magazzino o vettore completeranno il passo. Mostra dove si trova l’ordine, quali prove sostengono la conclusione e quale dato manca. È la differenza tra leggere uno stato e indovinarlo. Prima di inviare un nuovo messaggio controlla anche i dati personali: indirizzo, pagamento e conversazioni private non devono finire in post pubblici. Per il supporto restano visibili solo nel canale necessario all’indagine. Alla chiusura aggiungi l’esito come nuovo evento senza riscrivere le righe precedenti. La cronologia mostrerà se la soluzione è arrivata da conferma del venditore, verifica del magazzino, reso, rimborso o spedizione successiva. Questo registro migliora l’ordine seguente senza trasformare un singolo caso in una percentuale generale di prestazione. Conserva invariati i timestamp originali e data separatamente ogni nota editoriale aggiunta in seguito, così la sequenza rimane verificabile anche dopo la chiusura del caso."
+      ]},
+    ],
+  }),
 };

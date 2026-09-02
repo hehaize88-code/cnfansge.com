@@ -229,4 +229,54 @@ export const spanishArticles: Record<ArticleSlug, Article> = {
       ]},
     ],
   }),
+  "oopbuy-order-status-interface-guide": withSources("oopbuy-order-status-interface-guide", {
+    eyebrow: "Estado del pedido OOPBuy",
+    title: "Cómo leer los estados de pedido de OOPBuy: guía verificada de la interfaz",
+    description: "Interpreta cada estado como una cadena de pruebas fechada, identifica el objeto y la etapa responsable y escala con un registro completo.",
+    read: "13 min de lectura",
+    updated: "3 de septiembre de 2026",
+    published: "2026-09-03",
+    sections: [
+      { heading: "Empezar por el objeto, no por la palabra de estado", paragraphs: [
+        "Un estado de OOPBuy solo sirve si está unido al objeto correcto. El pedido de compra, el paquete nacional del vendedor, el artículo de almacén, el paquete internacional y el reembolso pueden tener estados distintos a la vez. Antes de interpretar la etiqueta, guarda número de pedido, ID, variante elegida y página donde aparece. Así no confundirás un evento del transportista con la entrada de almacén.",
+        "OOPBuy publica una descripción específica de estados de compra y una Guía para principiantes del flujo completo. Úsalas como mapa y confirma después el texto de la cuenta activa. Las etiquetas pueden traducirse, abreviarse o cambiar. Si una palabra de la cuenta no figura en la explicación pública, cópiala exactamente y no la sustituyas por otra de una captura antigua.",
+        "Crea una fila por cambio: objeto, estado mostrado, primera vez visto, última revisión, pantalla fuente, seguimiento relacionado, importe si procede y siguiente acción. La fila conserva mejor el contexto que una captura aislada. El estado prueba lo que mostraba la interfaz, no la causa oculta ni una fecha garantizada de finalización."
+      ]},
+      { heading: "Leer la compra como una cadena de responsabilidad", paragraphs: [
+        "La primera cadena va desde envío y pago del pedido hasta compra por el agente, aceptación y despacho del vendedor. Separa un problema de pago de un retraso de compra. Un registro bancario puede mostrar movimiento de dinero mientras la orden aún requiere revisión; Purchased no demuestra por sí solo que el vendedor haya enviado la variante. Conserva transacción y estado por separado.",
+        "Cuando aparece Purchased, normalmente el vendedor controla el siguiente movimiento físico. La guía actual de posventa usa ese estado para indicar el botón After-sale en la página Order. Eso no concede el mismo remedio a todos los pedidos: siguen importando reglas del vendedor, producto y control que muestre la cuenta. Guarda la acción visible junto con la etiqueta.",
+        "Ante un retraso pregunta qué etapa no generó su siguiente prueba. Sin confirmación de compra, investiga el pedido. Con compra pero sin referencia nacional, investiga el despacho del vendedor. Con entrega nacional pero sin artículo de almacén, investiga recepción y registro. Esta formulación estrecha resulta más útil que una queja general."
+      ]},
+      { heading: "No llamar almacenamiento a una entrega nacional", paragraphs: [
+        "El seguimiento del vendedor y el estado de almacén proceden de sistemas diferentes. Un transportista nacional puede marcar entrega antes de que el personal asocie el paquete, cuente, inspeccione y publique el artículo. Registra seguimiento, entrega y estado de almacén en líneas separadas. El intervalo entre ambos no demuestra automáticamente una pérdida.",
+        "La Guía para principiantes dice que la inspección y las fotos llegan tras la recepción. Inspection Information incluye cantidad, color, talla, otras especificaciones y daños visibles. Es un control de almacén, no una prueba de calidad oculta, material o funcionamiento. Lee el estado almacenado junto con la evidencia visible y no como un certificado.",
+        "Si la identidad es dudosa, conserva variante pedida, datos de despacho, cantidad recibida, etiqueta y fotos. No cambies el campo original para que coincida con lo recibido. Mantén esperado y observado uno al lado del otro, sobre todo si después pedirás prueba extra, devolución, cambio o aprobación para paquete."
+      ]},
+      { heading: "Separar almacenamiento y reloj de posventa", paragraphs: [
+        "Stored o Stocked in confirma la etapa de almacén y activa una tarea urgente. La información actual de devoluciones calcula cinco días o 120 horas desde la hora completa siguiente a Stocked in; un aviso más nuevo usa Stored in Warehouse. Como el texto puede variar, guarda la etiqueta activa y su marca temporal antes de calcular el plazo.",
+        "Presentar a tiempo no garantiza aprobación. Elegibilidad del vendedor y producto, responsabilidad, transporte nacional y servicios siguen siendo factores distintos. Registra por separado fecha límite y prueba de elegibilidad. Si llegó mal o dañado, adjunta opción y fotos; si cambiaste de preferencia, no lo describas como culpa del vendedor.",
+        "El almacenamiento usa otro reloj. OOPBuy publica un período normal de 90 días desde Received o Stored. Sirve para consolidar, pero no amplía la decisión ordinaria de devolución. Coloca ambas fechas en el expediente para no confundir sigue almacenado con sigue siendo fácil devolverlo."
+      ]},
+      { heading: "Usar una tabla de estado y evidencia para cada pedido", paragraphs: [
+        "Crea cinco columnas: objeto, estado exacto, prueba disponible, prueba ausente y siguiente responsable. Al pagar puede existir la transacción y faltar la compra. Tras despacho puede existir seguimiento nacional y faltar la entrada. En almacén existe el artículo y el siguiente paso pertenece al comprador: QC y decisión de posventa.",
+        "Añade confianza: confirmado cuando cuenta y referencia coinciden; provisional cuando solo hay una pantalla o seguimiento sin enlace; contradictorio cuando dos páginas difieren. Conserva conflicto, horas y URLs sin elegir la etiqueta que parezca más avanzada.",
+        "La tabla evita duplicar solicitudes. Si ya hay ticket o referencia de posventa, añade la nueva prueba a la misma cronología salvo que la interfaz diga otra cosa. Anota última respuesta, pregunta pendiente y fecha de revisión. Mensajes repetidos sin datos nuevos pueden ocultar el problema original."
+      ]},
+      { heading: "Escalar desde el último evento verificado", paragraphs: [
+        "Antes de contactar soporte identifica el último evento demostrado y el siguiente ausente: pago a tal hora, falta confirmación de compra; o seguimiento entregado, falta entrada de almacén. Incluye referencia, opción, seguimiento o pago y capturas con fecha. No atribuyas una pérdida al vendedor, almacén o transportista sin prueba.",
+        "Usa la vía correspondiente al objeto actual. La guía oficial dirige los pedidos Purchased a After-sale en Order; otros estados pueden mostrar botones distintos o atención al cliente. Sigue la interfaz activa y guarda confirmación, motivo, archivos y cualquier plazo que aparezca.",
+        "Fija la próxima revisión según la respuesta o instrucción publicada, no según un nivel de servicio inventado. Si no existe plazo, anota cuándo comprobarás de nuevo sin presentar el silencio como fracaso. Cuando cambie el estado, añade el evento y reevalúa quién controla el paso."
+      ]},
+      { heading: "Ejemplo: un pedido, tres estados simultáneos", paragraphs: [
+        "Imagina dos camisas de un anuncio y un bolso de otro. Las camisas muestran Purchased, su paquete del vendedor tiene seguimiento nacional y el bolso ya figura Stored. No hay contradicción: pedidos de compra, paquete nacional y artículo de almacén están en puntos distintos. Una sola etiqueta global no puede describir el conjunto.",
+        "Para las camisas guarda talla, cantidad, hora de compra y seguimiento. Para el bolso guarda entrada, opción esperada, cantidad y QC. Puedes revisar ya el plazo de devolución del bolso mientras sigues el despacho de las camisas. Un estado general haul pending ocultaría la decisión urgente.",
+        "No se trata de un cliente o pedido real. Ilustra el método: dividir por objeto, conservar horas y asignar la siguiente acción a quien controla la etapa. Funciona aunque cambien los nombres porque depende de transiciones demostradas y no de memorizar una barra de progreso."
+      ]},
+      { heading: "Lista final para estados de pedido", paragraphs: [
+        "Confirma página, pedido, ID y opción antes de interpretar. Copia la etiqueta exacta, primera aparición y última revisión. Relaciona pago, seguimiento, almacén, posventa y reembolso solo si la cuenta muestra ese vínculo. Marca como desconocido lo ausente y como contradictorio lo que no coincide.",
+        "Antes de actuar identifica etapa responsable y siguiente evento faltante. Revisa el almacén pronto, calcula el plazo de devolución desde el estado activo y sepáralo del almacenamiento. Usa el botón actual y conserva solicitud y respuesta en el mismo expediente.",
+        "Una guía verificada no promete cuándo vendedor, almacén o transportista completarán el siguiente paso. Explica dónde está el pedido, qué evidencia lo respalda y qué dato falta. Esa es la diferencia entre leer un estado y adivinar a partir de él."
+      ]},
+    ],
+  }),
 };

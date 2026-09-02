@@ -211,4 +211,54 @@ export const frenchArticles: Record<ArticleSlug, Article> = {
       ]},
     ],
   }),
+  "oopbuy-order-status-interface-guide": withSources("oopbuy-order-status-interface-guide", {
+    eyebrow: "Statut de commande OOPBuy",
+    title: "Lire les statuts de commande OOPBuy : guide vérifié de l’interface",
+    description: "Interprétez chaque statut comme une chaîne de preuves datée, identifiez l’objet et l’étape responsable, puis transmettez un dossier complet.",
+    read: "13 min de lecture",
+    updated: "3 septembre 2026",
+    published: "2026-09-03",
+    sections: [
+      { heading: "Commencer par l’objet, pas par le mot de statut", paragraphs: [
+        "Un statut OOPBuy n’a de sens que s’il est rattaché au bon objet. Commande d’achat, colis domestique du vendeur, article d’entrepôt, colis international et remboursement peuvent avoir des états différents au même moment. Avant toute interprétation, conservez numéro de commande, ID, variante et page où apparaît l’étiquette, afin de ne pas confondre transporteur, entrée en stock et expédition internationale.",
+        "OOPBuy publie actuellement une description des statuts d’achat et un Guide du débutant pour le parcours complet. Utilisez-les comme carte, puis confirmez les termes dans le compte actif. Les étiquettes peuvent être traduites, abrégées ou modifiées. Si un terme n’apparaît pas dans l’explication publique, copiez-le exactement au lieu de le remplacer par un ancien libellé familier.",
+        "Créez une ligne à chaque changement : objet, statut affiché, première observation, dernière vérification, écran source, suivi lié, montant éventuel et prochaine action visible. Cette ligne préserve mieux le contexte qu’une capture seule. Le statut prouve un affichage daté, pas la cause cachée ni une date garantie d’achèvement."
+      ]},
+      { heading: "Lire l’achat comme une chaîne de responsabilités", paragraphs: [
+        "La première chaîne va de la soumission et du paiement à l’achat par l’agent, l’acceptation puis l’envoi du vendeur. Distinguez paiement et retard d’achat. Une transaction peut exister alors que la commande demande encore une vérification ; Purchased ne prouve pas que le vendeur a déjà expédié la bonne variante. Archivez transaction et statut séparément.",
+        "Au statut Purchased, le vendeur contrôle généralement le prochain mouvement physique. Le guide après-vente actuel emploie ce statut pour le bouton After-sale sur la page Order. Cela ne garantit pas le même recours pour tous : règles vendeur, produit et action visible dans le compte comptent encore. Sauvegardez le bouton avec le statut.",
+        "En cas de retard, demandez quelle étape n’a pas produit la preuve suivante. Sans confirmation d’achat, examinez la commande. Avec achat mais sans suivi domestique, examinez l’envoi vendeur. Avec livraison domestique mais sans article en stock, examinez réception et enregistrement. Cette question précise aide davantage qu’une plainte générale."
+      ]},
+      { heading: "Ne pas appeler stockage une livraison domestique", paragraphs: [
+        "Le suivi vendeur et le statut d’entrepôt viennent de systèmes différents. Un transporteur peut signaler une livraison avant que le personnel associe le colis, compte, inspecte et publie l’article. Notez suivi, livraison et statut d’entrepôt séparément. L’intervalle correspond à la réception interne et ne prouve pas automatiquement une perte.",
+        "Le Guide du débutant situe inspection et photos après l’arrivée. Inspection Information couvre quantité, couleur, taille, spécifications et dommages visibles. C’est un point de contrôle, pas un test des qualités cachées, matières ou fonctions. Le statut stocké doit être lu avec les images et non comme un certificat.",
+        "Si l’identité reste incertaine, gardez variante commandée, expédition vendeur, quantité reçue, étiquette et photos. Ne modifiez pas la commande originale pour l’adapter à ce qui est arrivé. Attendu et observé restent côte à côte avant photo supplémentaire, retour, échange ou accord pour colis."
+      ]},
+      { heading: "Séparer stockage et délai après-vente", paragraphs: [
+        "Stored ou Stocked in confirme l’entrepôt et déclenche une tâche urgente. L’information actuelle calcule cinq jours ou 120 heures à partir de l’heure pleine suivant Stocked in ; un avis plus récent utilise Stored in Warehouse. Comme les mots varient, enregistrez l’étiquette active et son heure avant de calculer.",
+        "Une demande à temps ne garantit pas l’acceptation. Éligibilité du vendeur et du produit, responsabilité, transport domestique et frais restent distincts. Conservez deux champs : limite de soumission et preuve d’éligibilité. Pour une erreur ou un dommage visible, joignez variante et images ; un changement de préférence ne doit pas devenir faute vendeur.",
+        "Le stockage a une autre horloge. OOPBuy annonce normalement 90 jours depuis Received ou Stored. Cette durée facilite la consolidation, mais n’allonge pas la décision standard de retour. Notez les deux dates pour ne jamais confondre encore stocké et encore facilement retournable."
+      ]},
+      { heading: "Tenir une table statut-preuve pour chaque commande", paragraphs: [
+        "Utilisez cinq colonnes : objet, statut exact, preuve disponible, preuve manquante et prochain responsable. Au paiement, la transaction peut être présente et l’achat absent. Après l’envoi vendeur, le suivi existe mais l’entrée manque. En stock, l’article existe et la prochaine responsabilité appartient au contrôle QC et à la décision après-vente du client.",
+        "Ajoutez un niveau de confiance : confirmé lorsque compte et référence concordent ; provisoire avec un seul écran ou un suivi non relié ; contradictoire lorsque deux pages diffèrent. Conservez heures et URLs sans choisir l’étiquette qui donne l’impression du progrès le plus avancé.",
+        "La table évite les demandes en double. S’il existe un ticket ou une référence après-vente, ajoutez la nouvelle preuve à la même chronologie sauf instruction contraire. Notez dernière réponse, question ouverte et prochaine vérification. Des messages répétés sans information nouvelle peuvent masquer l’incident initial."
+      ]},
+      { heading: "Transmettre depuis le dernier événement vérifié", paragraphs: [
+        "Avant le support, identifiez le dernier événement prouvé et le suivant absent : paiement à telle heure, confirmation d’achat absente ; ou suivi livré, entrée d’entrepôt absente. Ajoutez référence, option, suivi ou paiement et captures datées. N’attribuez pas une perte au vendeur, à l’entrepôt ou au transporteur sans preuve.",
+        "Utilisez la voie correspondant à l’objet. Le guide officiel dirige les commandes Purchased vers After-sale dans Order ; d’autres états peuvent afficher une autre action ou le service client. Suivez l’interface actuelle et sauvegardez confirmation, motif, pièces jointes et délai affiché.",
+        "Fixez la prochaine vérification d’après la réponse ou l’instruction publiée, jamais selon un délai universel inventé. Sans délai, notez quand contrôler de nouveau sans traiter le silence comme une preuve d’échec. À chaque changement, ajoutez l’événement et réévaluez la responsabilité."
+      ]},
+      { heading: "Exemple : une commande, trois états simultanés", paragraphs: [
+        "Imaginez deux chemises d’une annonce et un sac d’une autre. Les chemises sont Purchased, leur colis vendeur a un suivi domestique et le sac est déjà Stored. Il n’y a pas de contradiction : commandes d’achat, colis vendeur et article d’entrepôt sont à des étapes différentes. Aucun statut global ne décrit correctement l’ensemble.",
+        "Pour les chemises, conservez taille, quantité, heure d’achat et suivi. Pour le sac, gardez heure d’entrée, option attendue, quantité et QC. Vous pouvez examiner le délai de retour du sac tout en suivant l’envoi des chemises. Une étiquette générale haul pending cacherait l’action urgente.",
+        "L’exemple n’est ni un vrai client ni une vraie commande. Il illustre la méthode : diviser par objet, conserver les heures et affecter l’action à la partie qui contrôle l’étape. Elle reste utile lorsque les noms changent, car elle suit des transitions prouvées plutôt qu’une barre de progression."
+      ]},
+      { heading: "Liste finale des statuts", paragraphs: [
+        "Confirmez page, commande, ID et option avant d’interpréter. Copiez le statut exact, première apparition et dernière vérification. Reliez paiement, suivi, entrepôt, après-vente et remboursement uniquement si le compte montre le lien. Marquez les absences comme inconnues et les divergences comme contradictoires.",
+        "Avant d’agir, identifiez étape responsable et événement suivant manquant. Examinez vite les preuves d’entrepôt, calculez le délai de retour depuis le statut actif et séparez-le du stockage. Utilisez l’action visible et conservez demande et réponse dans le même dossier.",
+        "Un guide vérifié ne promet pas quand vendeur, entrepôt ou transporteur terminera l’étape suivante. Il montre où se trouve la commande, quelles preuves soutiennent cette conclusion et quelle donnée manque. C’est la différence entre lire un statut et le deviner."
+      ]},
+    ],
+  }),
 };

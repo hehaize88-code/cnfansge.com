@@ -3,7 +3,7 @@ import { join } from "node:path";
 
 const root = new URL("../out/", import.meta.url);
 const languages = ["en", "de", "es", "fr", "it"];
-const articleSlugs = ["oopbuy-spreadsheet-guide", "oopbuy-qc-checklist", "oopbuy-shipping-planning", "oopbuy-fees-total-cost", "is-oopbuy-legit-review"];
+const articleSlugs = ["oopbuy-spreadsheet-guide", "oopbuy-qc-checklist", "oopbuy-shipping-planning", "oopbuy-fees-total-cost", "is-oopbuy-legit-review", "oopbuy-order-status-interface-guide"];
 const allowedOutboundHosts = new Set(["oopbuyvip.org", "www.oopbuyvip.org", "cnfansge.com", "www.cnfansge.com"]);
 const failures = [];
 
@@ -22,7 +22,7 @@ function textContent(html) {
 
 const sitemap = await readFile(new URL("./sitemap.xml", root), "utf8");
 const urls = [...sitemap.matchAll(/<loc>([^<]+)<\/loc>/g)].map((match) => match[1]);
-assert(urls.length === 65, `Expected 65 sitemap URLs, found ${urls.length}`);
+assert(urls.length === 70, `Expected 70 sitemap URLs, found ${urls.length}`);
 
 for (const url of urls) {
   const path = new URL(url).pathname;
@@ -68,4 +68,4 @@ if (failures.length) {
   process.exit(1);
 }
 
-console.log(`SEO audit passed: ${urls.length} URLs, 5 languages, 25 long-form articles, approved outbound hosts only.`);
+console.log(`SEO audit passed: ${urls.length} URLs, 5 languages, 30 long-form articles, approved outbound hosts only.`);
