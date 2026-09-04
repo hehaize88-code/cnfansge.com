@@ -108,7 +108,8 @@ export function articleMetadata(slug: ArticleSlug, lang: Lang): Metadata {
     alternates: { canonical, languages: languageAlternates(pathname) },
   };
 
-  if (slug === "kakobuy-usa-pre-order-readiness-checklist") {
+  if (slug === "kakobuy-usa-pre-order-readiness-checklist" || slug === "kakobuy-us-delivery-address-format") {
+    const publishedTime = slug === "kakobuy-us-delivery-address-format" ? "2026-09-04T00:00:00+08:00" : "2026-09-02T00:00:00+08:00";
     metadata.openGraph = {
       type: "article",
       url: canonical,
@@ -117,8 +118,8 @@ export function articleMetadata(slug: ArticleSlug, lang: Lang): Metadata {
       siteName: "KakobuyVIP",
       locale: { en: "en_US", de: "de_DE", es: "es_ES", fr: "fr_FR", it: "it_IT" }[lang],
       alternateLocale: languages.filter((language) => language !== lang).map((language) => ({ en: "en_US", de: "de_DE", es: "es_ES", fr: "fr_FR", it: "it_IT" })[language]),
-      publishedTime: "2026-09-02T00:00:00+08:00",
-      modifiedTime: "2026-09-02T00:00:00+08:00",
+      publishedTime,
+      modifiedTime: publishedTime,
     };
   }
 
@@ -134,4 +135,5 @@ const articleByIntent: Record<ArticleSlug, string> = {
   "kakobuy-return-exchange-guide": "Kakobuy return policy",
   "kakobuy-review-2026": "Kakobuy review 2026",
   "kakobuy-usa-pre-order-readiness-checklist": "Kakobuy USA guide 2026",
+  "kakobuy-us-delivery-address-format": "Kakobuy US delivery address",
 };

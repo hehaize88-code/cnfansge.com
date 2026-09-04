@@ -127,6 +127,22 @@ const sources = {
       it: "Tariffa e revisione correnti per la ricerca, non una classificazione vincolante di un prodotto ignoto.",
     },
   },
+  kakobuyParcelFlow: {
+    publisher: "Kakobuy", title: "Purchasing and parcel-submission process", reference: "/index/information?information_id=12 · information_id 12", checked: "2026-09-04",
+    scope: { en:"Address and logistics selection at parcel submission after warehouse receipt.", de:"Adress- und Logistikauswahl bei der Paketeinreichung nach Lagereingang.", es:"Selección de dirección y logística al presentar el paquete tras llegar al almacén.", fr:"Choix de l'adresse et de la logistique au dépôt du colis après réception en entrepôt.", it:"Scelta di indirizzo e logistica alla presentazione del pacco dopo il magazzino." },
+  },
+  uspsAddressing: {
+    publisher: "United States Postal Service", title: "Addressing mailpieces", reference: "/s/article/Addressing-Mailpieces", checked: "2026-09-04",
+    scope: { en:"Recipient, delivery-address and city/state/ZIP line structure.", de:"Struktur für Empfänger, Lieferadresse sowie Stadt/Staat/ZIP.", es:"Estructura de destinatario, dirección y ciudad/estado/ZIP.", fr:"Structure destinataire, adresse et ville/État/ZIP.", it:"Struttura destinatario, indirizzo e città/stato/ZIP." },
+  },
+  uspsUnits: {
+    publisher: "United States Postal Service", title: "Publication 28: Secondary Address Unit Designators", reference: "/text/pub28/28c2_003.htm", checked: "2026-09-04",
+    scope: { en:"Approved apartment, suite, unit, building and floor designators.", de:"Zulässige Bezeichnungen für Apartment, Suite, Einheit, Gebäude und Etage.", es:"Designadores aprobados de apartamento, suite, unidad, edificio y planta.", fr:"Indicateurs approuvés d'appartement, suite, unité, bâtiment et étage.", it:"Designatori approvati per appartamento, suite, unità, edificio e piano." },
+  },
+  uspsZip: {
+    publisher: "United States Postal Service", title: "ZIP Code Lookup", reference: "tools.usps.com/zip-code-lookup.htm", checked: "2026-09-04",
+    scope: { en:"Current USPS address standardization and ZIP/ZIP+4 lookup.", de:"Aktuelle USPS-Standardisierung und ZIP-/ZIP+4-Suche.", es:"Estandarización USPS y consulta ZIP/ZIP+4 actuales.", fr:"Normalisation USPS et recherche ZIP/ZIP+4 actuelles.", it:"Standardizzazione USPS e ricerca ZIP/ZIP+4 correnti." },
+  },
 } satisfies Record<string, SourceReference>;
 
 const sourceKeysByArticle: Record<ArticleSlug, (keyof typeof sources)[]> = {
@@ -138,6 +154,7 @@ const sourceKeysByArticle: Record<ArticleSlug, (keyof typeof sources)[]> = {
   "kakobuy-return-exchange-guide": ["returns", "service"],
   "kakobuy-review-2026": ["service", "costs", "returns", "estimate", "trustpilot", "reddit"],
   "kakobuy-usa-pre-order-readiness-checklist": ["service", "cbpPurchases", "cbpLowValue", "usitcHts"],
+  "kakobuy-us-delivery-address-format": ["kakobuyParcelFlow", "uspsAddressing", "uspsUnits", "uspsZip"],
 };
 
 export const sourceHeadings: Record<Lang, [string, string]> = {

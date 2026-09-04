@@ -64,7 +64,7 @@ export function ArticlePage({ slug, initialLang = "en" }: { slug: ArticleSlug; i
     fr: `${readingMinutes} min de lecture`, it: `${readingMinutes} min di lettura`,
   }[lang];
   const locale = { en: "en-US", de: "de-DE", es: "es-ES", fr: "fr-FR", it: "it-IT" }[lang];
-  const articleDate = slug === "kakobuy-usa-pre-order-readiness-checklist" ? "2026-09-02" : "2026-08-31";
+  const articleDate = slug === "kakobuy-us-delivery-address-format" ? "2026-09-04" : slug === "kakobuy-usa-pre-order-readiness-checklist" ? "2026-09-02" : "2026-08-31";
   const updatedDate = new Intl.DateTimeFormat(locale, { day: "numeric", month: "long", year: "numeric", timeZone: "UTC" }).format(new Date(`${articleDate}T00:00:00Z`));
   const change = (value: Lang) => {
     localStorage.setItem("kv-language", value);

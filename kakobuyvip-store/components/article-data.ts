@@ -1,4 +1,5 @@
 import { usaArticleTranslations } from "./usa-readiness-article";
+import { usaAddressArticleTranslations } from "./usa-address-article";
 
 export type ArticleSlug =
   | "how-to-use-kakobuy"
@@ -8,7 +9,8 @@ export type ArticleSlug =
   | "kakobuy-warehouse-storage-guide"
   | "kakobuy-return-exchange-guide"
   | "kakobuy-review-2026"
-  | "kakobuy-usa-pre-order-readiness-checklist";
+  | "kakobuy-usa-pre-order-readiness-checklist"
+  | "kakobuy-us-delivery-address-format";
 
 export type ArticleRecord = {
   slug: ArticleSlug;
@@ -427,6 +429,13 @@ export const articleRecords: ArticleRecord[] = [
     primaryKeyword: "Kakobuy USA guide 2026",
     readingTime: "15 min read",
     updated: "September 2, 2026"
+  },
+  {
+    slug: "kakobuy-us-delivery-address-format",
+    ...usaAddressArticleTranslations.en,
+    primaryKeyword: "Kakobuy US delivery address",
+    readingTime: "14 min read",
+    updated: "September 4, 2026"
   }
 ];
 

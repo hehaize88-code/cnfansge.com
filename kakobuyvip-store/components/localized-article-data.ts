@@ -3,6 +3,7 @@ import { articleBySlug } from "./article-data";
 import type { Lang } from "./site-data";
 import { articleExpansions } from "./article-expansions";
 import { usaArticleTranslations } from "./usa-readiness-article";
+import { usaAddressArticleTranslations } from "./usa-address-article";
 
 export type LocalizedArticle = Pick<ArticleRecord, "tag" | "title" | "description" | "sourceNote" | "sections" | "takeaways">;
 type ArticleTranslations = Partial<Record<ArticleSlug, LocalizedArticle>>;
@@ -540,6 +541,7 @@ export const localizedArticles: Record<Lang, ArticleTranslations> = { en, de, es
 
 export function getLocalizedArticle(lang: Lang, slug: ArticleSlug): LocalizedArticle {
   if (slug === "kakobuy-usa-pre-order-readiness-checklist") return usaArticleTranslations[lang];
+  if (slug === "kakobuy-us-delivery-address-format") return usaAddressArticleTranslations[lang];
   const article = localizedArticles[lang][slug]!;
   const expansions = articleExpansions[lang][slug] ?? [];
   if (!expansions.length) return article;

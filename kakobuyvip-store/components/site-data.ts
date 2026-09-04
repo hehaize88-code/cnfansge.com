@@ -183,4 +183,5 @@ export const articles = [
   ["RETURNS", "Kakobuy return and exchange guide", "Understand the five-day guarantee, evidence, domestic freight responsibility and exchange timing.", "/articles/kakobuy-return-exchange-guide"],
   ["REVIEW", "Kakobuy review 2026: official features and user reports", "A balanced review that separates official policies from Trustpilot and Reddit anecdotes.", "/articles/kakobuy-review-2026"],
   ["US GUIDE", "Kakobuy USA guide 2026: pre-order readiness", "Check address, product identity, current import sources and last-mile evidence before ordering for the United States.", "/articles/kakobuy-usa-pre-order-readiness-checklist"],
+  ["US ADDRESS", "Format a US delivery address for a Kakobuy parcel", "Check recipient, street, unit, city, state, ZIP Code and the final private label preview.", "/articles/kakobuy-us-delivery-address-format"],
 ];
