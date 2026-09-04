@@ -7,6 +7,7 @@ import { seoPageIntro } from "../research-copy";
 import { decisions, decisionKeys, proHome, type DecisionKey } from "../pro-data";
 import { orderIdentifiersArticleData } from "../order-identifiers-article";
 import { orderTimelineArticleData } from "../order-timeline-article";
+import { sellerHandoffArticleData } from "../seller-handoff-article";
 
 function resolve(raw: string[] | undefined): { locale:Locale; page:PageKey } | null {
   const segments=[...(raw||[])];
@@ -30,13 +31,14 @@ const conciseArticleTitles:Partial<Record<PageKey,string>>={
   storageArticle:"Kakobuy Warehouse Status & Parcel Packing Guide",
   orderIdentifiersArticle:"Kakobuy Order vs Parcel vs Tracking Number Guide",
   orderTimelineArticle:"Kakobuy Order Timeline: Minimum Record Fields",
+  sellerHandoffArticle:"Kakobuy Purchased vs Seller Sent: First Handoff",
 };
 
 export async function generateMetadata({params}:{params:Promise<{segments?:string[]}>}):Promise<Metadata> {
   const route=resolve((await params).segments);
   if(!route) return {};
   const {locale,page}=route;
-  const article=page==="orderIdentifiersArticle"?orderIdentifiersArticleData[locale]:page==="orderTimelineArticle"?orderTimelineArticleData[locale]:page.endsWith("Article")?articleData[locale][page as "qcArticle"|"shippingArticle"|"storageArticle"]:null;
+  const article=page==="orderIdentifiersArticle"?orderIdentifiersArticleData[locale]:page==="orderTimelineArticle"?orderTimelineArticleData[locale]:page==="sellerHandoffArticle"?sellerHandoffArticleData[locale]:page.endsWith("Article")?articleData[locale][page as "qcArticle"|"shippingArticle"|"storageArticle"]:null;
   const decision=decisionKeys.includes(page as DecisionKey)?decisions[locale][page as DecisionKey]:null;
   const independent=page==="home"||page.endsWith("Article")||decision?null:seoPageIntro[locale][page as keyof typeof seoPageIntro.en];
   const rawTitle=page==="home"?"Kakobuy Shipping Calculator & Warehouse Guide":article?.title??decision?.title??independent?.[0]??copy[locale].pageIntro.articles[0];
