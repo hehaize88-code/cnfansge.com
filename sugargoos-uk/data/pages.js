@@ -5,13 +5,14 @@ import { frArticles } from "./articles-fr";
 import { itArticles } from "./articles-it";
 import { articleChecklists } from "./article-checklists";
 import { shoesQcArticles } from "./shoes-qc-articles";
+import { sneakerQcArticles } from "./sneaker-qc-articles";
 
 const localizedArticles = {
-  en: { ...researchedArticles, "sugargoo-shoes-qc-shape-stitching-soles-size": shoesQcArticles.en },
-  de: { ...deArticles, "sugargoo-shoes-qc-shape-stitching-soles-size": shoesQcArticles.de },
-  es: { ...esArticles, "sugargoo-shoes-qc-shape-stitching-soles-size": shoesQcArticles.es },
-  fr: { ...frArticles, "sugargoo-shoes-qc-shape-stitching-soles-size": shoesQcArticles.fr },
-  it: { ...itArticles, "sugargoo-shoes-qc-shape-stitching-soles-size": shoesQcArticles.it }
+  en: { ...researchedArticles, "sugargoo-shoes-qc-shape-stitching-soles-size": shoesQcArticles.en, "sugargoo-sneaker-qc-labels-insole-outsole-measurements": sneakerQcArticles.en },
+  de: { ...deArticles, "sugargoo-shoes-qc-shape-stitching-soles-size": shoesQcArticles.de, "sugargoo-sneaker-qc-labels-insole-outsole-measurements": sneakerQcArticles.de },
+  es: { ...esArticles, "sugargoo-shoes-qc-shape-stitching-soles-size": shoesQcArticles.es, "sugargoo-sneaker-qc-labels-insole-outsole-measurements": sneakerQcArticles.es },
+  fr: { ...frArticles, "sugargoo-shoes-qc-shape-stitching-soles-size": shoesQcArticles.fr, "sugargoo-sneaker-qc-labels-insole-outsole-measurements": sneakerQcArticles.fr },
+  it: { ...itArticles, "sugargoo-shoes-qc-shape-stitching-soles-size": shoesQcArticles.it, "sugargoo-sneaker-qc-labels-insole-outsole-measurements": sneakerQcArticles.it }
 };
 
 export const pageCopy = {

@@ -58,6 +58,28 @@ export const archivedProducts = products.filter((product) => !featuredProductIds
 
 export const articles = [
   {
+    slug: "sugargoo-sneaker-qc-labels-insole-outsole-measurements",
+    label: "SNEAKER MEASUREMENT NOTE",
+    read: "13 min",
+    image: "/og/qc-photo-checklist.png",
+    datePublished: "2026-09-06",
+    dateModified: "2026-09-06",
+    title: {
+      en: "Sugargoo Sneaker QC: Labels, Insole and Outsole Measurements",
+      de: "Sugargoo Sneaker-QC: Etiketten, Einlege- und Außensohlenmaße",
+      es: "QC de sneakers Sugargoo: etiquetas, plantilla y suela",
+      fr: "QC sneakers Sugargoo : étiquettes et mesures des semelles",
+      it: "QC sneaker Sugargoo: etichette, soletta e suola"
+    },
+    summary: {
+      en: "A measurement protocol for readable size labels, removable insoles, outsole endpoints, pair consistency and evidence confidence.",
+      de: "Ein Messprotokoll für Größenetiketten, Einlegesohlen, Außensohlen-Endpunkte, Paarkonsistenz und Belegsicherheit.",
+      es: "Un protocolo para etiquetas legibles, plantillas, extremos de suela, consistencia del par y confianza en la prueba.",
+      fr: "Un protocole pour étiquettes lisibles, semelles, extrémités, cohérence de paire et confiance des preuves.",
+      it: "Un protocollo per etichette leggibili, solette, estremi della suola, coerenza del paio e fiducia nelle prove."
+    }
+  },
+  {
     slug: "sugargoo-shoes-qc-shape-stitching-soles-size",
     label: "SHOES QC FIELD NOTE",
     read: "14 min",
@@ -373,14 +395,14 @@ export function pageMeta(lang, key) {
 }
 
 export const pageLastModified = {
-  home: "2026-09-02T06:00:00Z",
+  home: "2026-09-06T07:40:00Z",
   spreadsheet: "2026-09-01T00:00:00Z",
   finds: "2026-09-02T06:00:00Z",
   guide: "2026-09-02T06:00:00Z",
   qc: "2026-09-02T06:00:00Z",
   shipping: "2026-09-02T06:00:00Z",
   faq: "2026-09-02T06:00:00Z",
-  articles: "2026-09-02T06:00:00Z"
+  articles: "2026-09-06T07:40:00Z"
 };
 
 export function lastModifiedForPath(parts = []) {
