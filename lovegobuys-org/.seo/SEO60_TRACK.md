@@ -2,12 +2,12 @@
 
 - Current cursor: C01
 - Status: pending
-- Last checked: 2026-09-01
+- Last checked: 2026-09-07
 - Article: not created
 - Production: not advanced
 
 ## Current blocker
 
-The current LoveGoBuy official site placed the controlled browser in a repeated Cloudflare security-verification loop on 2026-09-01. Public search exposed only the client-rendered shell, not enough current order, payment, warehouse, or support fields to support C01 without assumptions. Under the control file, C01 remains pending and no public article may be drafted or published until the official source is directly verifiable.
+The LoveGoBuy official homepage and account-shell pages became discoverable on 2026-09-07, including the public order-status labels and warehouse entry. However, the decisive C01 fields—source identity, selected variant, item price and submitted-order evidence—remain behind the live account/order interface and were not directly verifiable from current public official pages. The control file forbids filling those operational fields from memory or snippets. C01 remains pending and no unsupported public article was created.
 
 This private file must not enter the static build, sitemap, robots, article hub, public links, structured data, or rendered output.
