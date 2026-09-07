@@ -2,22 +2,19 @@
 
 - Cursor: LB C01
 - Status: pending
-- Last checked: 2026-09-01
+- Last checked: 2026-09-07
 - Article: not created
 - Production: not advanced
 
 ## Current blocker
 
-The production site uses same-URL client-side language switching, while the root layout statically emits `html lang="en"` and the article routes do not expose language-specific canonical/hreflang states. The LB control file requires complete EN/DE/ES/FR/IT parity with matching HTML lang, canonical, reciprocal hreflang plus x-default, but also forbids changing the existing language, canonical, or hreflang baseline. C01 therefore remains pending until those control requirements are reconciled or the immutable baseline already satisfies them on production.
+Current LitBuy public pages were rechecked on 2026-09-07 and expose enough operational context for a future C01 order-record article. The production site still uses same-URL client-side language switching, while the root document emits one static language state and the article architecture does not expose five independent canonical/hreflang states. The control file requires complete EN/DE/ES/FR/IT parity with matching HTML lang, self-canonical and reciprocal hreflang plus x-default, but also protects the existing language/canonical baseline from change. C01 therefore remains pending; no partial public article was created.
 
-## Research checked on 2026-09-01
+## Research checked on 2026-09-07
 
-- LitBuy homepage, including Fill&buy, Forwarding Orders, service and policy navigation
-- Current public service descriptions for direct purchasing, forwarding, QC/inspection and storage
-- Current storage statement: up to 120 days, first 90 days free
-- LitBuy Fill&buy and current order-entry interface
-- LitBuy refund, returns/exchanges, prohibited-items and shipping-policy links
-
-The official public interface exposed enough current operational context for a future C01 order-record article, but the mandatory multilingual production gate remains incompatible with the immutable language/canonical baseline. No public article was created.
+- LitBuy official homepage
+- Current official common-questions and help entry points
+- Current official product-detail option fields visible in public search
+- Current public app descriptions for ordering, warehouse QC, consolidation and parcel tracking
 
 This private file must not enter the static build, sitemap, robots, article hub, public links, or rendered output.
