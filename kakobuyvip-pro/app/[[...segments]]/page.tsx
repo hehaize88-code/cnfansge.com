@@ -47,7 +47,7 @@ export async function generateMetadata({params}:{params:Promise<{segments?:strin
   const description=compact(rawDescription,155);
   const languages=Object.fromEntries(localeCodes.map((l)=>[l,localPath(l,page)]));
   const socialImage={url:"/og.png",width:1200,height:630,alt:"Kakobuy VIP Pro — Shipping, Warehouse and Parcel Guides"};
-  return {title:{absolute:title},description,alternates:{canonical:localPath(locale,page),languages:{...languages,"x-default":localPath("en",page)}},openGraph:{title,description,type:page.endsWith("Article")?"article":"website",images:[socialImage]},twitter:{card:"summary_large_image",title,description,images:["/og.png"]}};
+  return {title:{absolute:title},description,alternates:{canonical:localPath(locale,page),languages:{...languages,"x-default":localPath("en",page)}},openGraph:{title,description,url:localPath(locale,page),type:page.endsWith("Article")?"article":"website",images:[socialImage]},twitter:{card:"summary_large_image",title,description,images:["/og.png"]}};
 }
 
 export default async function Page({params}:{params:Promise<{segments?:string[]}>}) {
