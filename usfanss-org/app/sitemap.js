@@ -6,7 +6,7 @@ export default function sitemap() {
   return languages.flatMap((language) =>
     routePaths.map((path) => ({
       url: `https://usfanss.org/${language}${path}`,
-      lastModified: new Date(path.includes("usfans-warehouse-evidence-gap-map") ? "2026-09-07T00:00:00.000Z" : "2026-09-01T00:00:00.000Z"),
+      lastModified: new Date(path.includes("usfans-warehouse-photo-angle-map") ? "2026-09-09T00:00:00.000Z" : path.includes("usfans-warehouse-evidence-gap-map") ? "2026-09-07T00:00:00.000Z" : "2026-09-01T00:00:00.000Z"),
       changeFrequency: path.includes("articles/") ? "monthly" : "weekly",
       priority: path === "" ? 1 : path === "/spreadsheet" ? 0.9 : 0.7,
       alternates: {

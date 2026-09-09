@@ -2,6 +2,7 @@ import { getArticleResearch } from "./articleResearch.js";
 import { getArticleParity } from "./articleParity.js";
 import { getFaqParity } from "./faqParity.js";
 import { getUveArticle, uveArticleBlueprint } from "./uveArticle.js";
+import { getUveAngleArticle, uveAngleArticleBlueprint } from "./uveAngleArticle.js";
 
 export const languages = ["en", "de", "es", "fr", "it"];
 
@@ -339,6 +340,7 @@ export const articleBlueprints = [
     topics: ["scope","official","reviews","cost","risk","verdict"],
   },
   uveArticleBlueprint,
+  uveAngleArticleBlueprint,
 ];
 
 const articleSections = {
@@ -495,6 +497,7 @@ export function getArticle(slug, language) {
   const blueprint = articleBlueprints.find((item) => item.slug === slug);
   if (!blueprint) return null;
   if (slug === uveArticleBlueprint.slug) return getUveArticle(language);
+  if (slug === uveAngleArticleBlueprint.slug) return getUveAngleArticle(language);
   const activeLanguage = articleSections[language] ? language : "en";
   const research = getArticleResearch(activeLanguage, slug);
   const sections = [
