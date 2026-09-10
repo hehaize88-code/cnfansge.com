@@ -103,13 +103,15 @@ export function articleMetadata(slug: ArticleSlug, lang: Lang): Metadata {
   const metadata: Metadata = {
     title: `${article.title} | KakobuyVIP`,
     description: article.description,
-    keywords: [articleByIntent[slug], "Kakobuy guide", "Kakobuy finds"],
+    keywords: slug === "kakobuy-apartment-suite-unit-zip4-checks"
+      ? [articleByIntent[slug], "Kakobuy ZIP+4 check", "Kakobuy suite address", "Kakobuy unit number"]
+      : [articleByIntent[slug], "Kakobuy guide", "Kakobuy finds"],
     other: { "content-language": lang },
     alternates: { canonical, languages: languageAlternates(pathname) },
   };
 
-  if (slug === "kakobuy-usa-pre-order-readiness-checklist" || slug === "kakobuy-us-delivery-address-format") {
-    const publishedTime = slug === "kakobuy-us-delivery-address-format" ? "2026-09-04T00:00:00+08:00" : "2026-09-02T00:00:00+08:00";
+  if (slug === "kakobuy-usa-pre-order-readiness-checklist" || slug === "kakobuy-us-delivery-address-format" || slug === "kakobuy-apartment-suite-unit-zip4-checks") {
+    const publishedTime = slug === "kakobuy-apartment-suite-unit-zip4-checks" ? "2026-09-10T00:00:00+08:00" : slug === "kakobuy-us-delivery-address-format" ? "2026-09-04T00:00:00+08:00" : "2026-09-02T00:00:00+08:00";
     metadata.openGraph = {
       type: "article",
       url: canonical,
@@ -136,4 +138,5 @@ const articleByIntent: Record<ArticleSlug, string> = {
   "kakobuy-review-2026": "Kakobuy review 2026",
   "kakobuy-usa-pre-order-readiness-checklist": "Kakobuy USA guide 2026",
   "kakobuy-us-delivery-address-format": "Kakobuy US delivery address",
+  "kakobuy-apartment-suite-unit-zip4-checks": "Kakobuy apartment address",
 };

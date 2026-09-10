@@ -172,7 +172,7 @@ export const productsByLang = Object.fromEntries(
 
 const articleRoutes = [
   "/articles/how-to-use-kakobuy", "/articles/qc-photo-checklist", "/articles/actual-vs-volumetric-weight", "/articles/kakobuy-fees-explained",
-  "/articles/kakobuy-warehouse-storage-guide", "/articles/kakobuy-return-exchange-guide", "/articles/kakobuy-review-2026", "/articles/kakobuy-usa-pre-order-readiness-checklist", "/articles/kakobuy-us-delivery-address-format",
+  "/articles/kakobuy-warehouse-storage-guide", "/articles/kakobuy-return-exchange-guide", "/articles/kakobuy-review-2026", "/articles/kakobuy-usa-pre-order-readiness-checklist", "/articles/kakobuy-us-delivery-address-format", "/articles/kakobuy-apartment-suite-unit-zip4-checks",
 ];
 
 const localizedArticleLabels: Record<Lang, [string, string, string][]> = {
@@ -186,6 +186,7 @@ const localizedArticleLabels: Record<Lang, [string, string, string][]> = {
     ["REVIEW", "Kakobuy review 2026: official features and user reports", "A balanced review that separates official policies from Trustpilot and Reddit anecdotes."],
     ["US GUIDE", "Kakobuy USA guide 2026: pre-order readiness", "Check address, product identity, current import sources and last-mile evidence before ordering for the United States."],
     ["US ADDRESS", "Format a US delivery address for a Kakobuy parcel", "Check recipient, street, unit, city, state, ZIP Code and the final private label preview."],
+    ["US ADDRESS", "Apartment, suite, unit and ZIP+4 checks", "Verify the secondary-unit label, exact number and current USPS ZIP+4 before international dispatch."],
   ],
   de: [
     ["EINSTIEG", "Kakobuy nutzen: vom Produktlink zum internationalen Paket", "Der vollständige Ablauf beim Einkaufsagenten: Bestellung, Lager-QC, Aufbewahrung, Rückgabe, Verpackung und Versand."],
@@ -197,6 +198,7 @@ const localizedArticleLabels: Record<Lang, [string, string, string][]> = {
     ["BEWERTUNG", "Kakobuy-Bewertung 2026: offizielle Funktionen und Nutzerberichte", "Eine ausgewogene Bewertung, die Richtlinien von Trustpilot- und Reddit-Erfahrungen trennt."],
     ["USA-RATGEBER", "Kakobuy USA 2026: Bereitschaft vor der Bestellung", "Adresse, Warenidentität, aktuelle Importquellen und letzte Meile vor der Bestellung prüfen."],
     ["US-ADRESSE", "US-Lieferadresse für ein Kakobuy-Paket formatieren", "Empfänger, Straße, Einheit, Stadt, Staat, ZIP und private Etikettenvorschau prüfen."],
+    ["US-ADRESSE", "Apartment, Suite, Einheit und ZIP+4 prüfen", "Zusatzbezeichnung, genaue Nummer und aktuellen USPS ZIP+4 vor dem internationalen Versand prüfen."],
   ],
   es: [
     ["PRINCIPIANTES", "Cómo usar Kakobuy: del enlace al paquete internacional", "El proceso completo del agente de compra: pedido, QC en almacén, almacenamiento, devoluciones, embalaje y envío."],
@@ -208,6 +210,7 @@ const localizedArticleLabels: Record<Lang, [string, string, string][]> = {
     ["RESEÑA", "Reseña de Kakobuy 2026: funciones oficiales e informes de usuarios", "Una reseña equilibrada que separa las políticas oficiales de las experiencias en Trustpilot y Reddit."],
     ["GUÍA EE. UU.", "Guía Kakobuy USA 2026: preparación previa", "Comprueba dirección, identidad, fuentes de importación actuales y última milla antes de pedir."],
     ["DIRECCIÓN EE. UU.", "Formatear una dirección de entrega para Kakobuy", "Comprueba destinatario, calle, unidad, ciudad, estado, ZIP y la vista privada de la etiqueta."],
+    ["DIRECCIÓN EE. UU.", "Comprobar apartamento, suite, unidad y ZIP+4", "Verifica el designador secundario, el número exacto y el ZIP+4 actual antes del envío internacional."],
   ],
   fr: [
     ["DÉBUTANT", "Comment utiliser Kakobuy : du lien produit au colis international", "Le parcours complet de l’agent d’achat : commande, QC en entrepôt, stockage, retours, emballage et expédition."],
@@ -219,6 +222,7 @@ const localizedArticleLabels: Record<Lang, [string, string, string][]> = {
     ["AVIS", "Avis Kakobuy 2026 : fonctions officielles et témoignages", "Un avis équilibré qui distingue les règles officielles des expériences Trustpilot et Reddit."],
     ["GUIDE USA", "Guide Kakobuy USA 2026 : préparation avant commande", "Vérifiez adresse, identité, sources d'importation actuelles et dernier kilomètre avant l'achat."],
     ["ADRESSE USA", "Formater une adresse de livraison pour Kakobuy", "Vérifiez destinataire, rue, unité, ville, État, ZIP et l'aperçu privé de l'étiquette."],
+    ["ADRESSE USA", "Vérifier appartement, suite, unité et ZIP+4", "Contrôlez l'indicateur secondaire, le numéro exact et le ZIP+4 USPS actuel avant l'expédition."],
   ],
   it: [
     ["PRINCIPIANTI", "Come usare Kakobuy: dal link al pacco internazionale", "Il percorso completo dell’agente d’acquisto: ordine, QC in magazzino, deposito, resi, imballaggio e spedizione."],
@@ -230,6 +234,7 @@ const localizedArticleLabels: Record<Lang, [string, string, string][]> = {
     ["RECENSIONE", "Recensione Kakobuy 2026: funzioni ufficiali e segnalazioni utenti", "Una recensione equilibrata che separa le regole ufficiali dalle esperienze su Trustpilot e Reddit."],
     ["GUIDA USA", "Guida Kakobuy USA 2026: preparazione prima dell'ordine", "Controlla indirizzo, identità, fonti d'importazione correnti e ultimo miglio prima di acquistare."],
     ["INDIRIZZO USA", "Formattare un indirizzo di consegna per Kakobuy", "Controlla destinatario, via, unità, città, stato, ZIP e anteprima privata dell'etichetta."],
+    ["INDIRIZZO USA", "Verificare appartamento, suite, unità e ZIP+4", "Controlla il designatore secondario, il numero esatto e lo ZIP+4 USPS attuale prima della spedizione."],
   ],
 };
 

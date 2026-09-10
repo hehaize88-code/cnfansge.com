@@ -1,5 +1,6 @@
 import { usaArticleTranslations } from "./usa-readiness-article";
 import { usaAddressArticleTranslations } from "./usa-address-article";
+import { usaUnitZip4ArticleTranslations } from "./usa-unit-zip4-article";
 
 export type ArticleSlug =
   | "how-to-use-kakobuy"
@@ -10,7 +11,8 @@ export type ArticleSlug =
   | "kakobuy-return-exchange-guide"
   | "kakobuy-review-2026"
   | "kakobuy-usa-pre-order-readiness-checklist"
-  | "kakobuy-us-delivery-address-format";
+  | "kakobuy-us-delivery-address-format"
+  | "kakobuy-apartment-suite-unit-zip4-checks";
 
 export type ArticleRecord = {
   slug: ArticleSlug;
@@ -436,6 +438,13 @@ export const articleRecords: ArticleRecord[] = [
     primaryKeyword: "Kakobuy US delivery address",
     readingTime: "14 min read",
     updated: "September 4, 2026"
+  },
+  {
+    slug: "kakobuy-apartment-suite-unit-zip4-checks",
+    ...usaUnitZip4ArticleTranslations.en,
+    primaryKeyword: "Kakobuy apartment address",
+    readingTime: "14 min read",
+    updated: "September 10, 2026"
   }
 ];
 

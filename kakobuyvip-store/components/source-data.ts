@@ -143,6 +143,18 @@ const sources = {
     publisher: "United States Postal Service", title: "ZIP Code Lookup", reference: "tools.usps.com/zip-code-lookup.htm", checked: "2026-09-04",
     scope: { en:"Current USPS address standardization and ZIP/ZIP+4 lookup.", de:"Aktuelle USPS-Standardisierung und ZIP-/ZIP+4-Suche.", es:"Estandarización USPS y consulta ZIP/ZIP+4 actuales.", fr:"Normalisation USPS et recherche ZIP/ZIP+4 actuelles.", it:"Standardizzazione USPS e ricerca ZIP/ZIP+4 correnti." },
   },
+  kakobuyParcelFlowSep10: {
+    publisher: "Kakobuy", title: "Purchasing and parcel-submission process", reference: "/index/information?information_id=12 · information_id 12", checked: "2026-09-10",
+    scope: { en:"Address and logistics selection at parcel submission after warehouse receipt.", de:"Adress- und Logistikauswahl bei der Paketeinreichung nach Lagereingang.", es:"Selección de dirección y logística al presentar el paquete tras llegar al almacén.", fr:"Choix de l'adresse et de la logistique au dépôt du colis après réception en entrepôt.", it:"Scelta di indirizzo e logistica alla presentazione del pacco dopo il magazzino." },
+  },
+  uspsUnitsSep10: {
+    publisher: "United States Postal Service", title: "Publication 28: Secondary Address Unit Designators", reference: "/text/pub28/28c2_003.htm", checked: "2026-09-10",
+    scope: { en:"Approved apartment, suite, unit, building and floor designators and placement rules.", de:"Zulässige Bezeichnungen und Positionierungsregeln für Apartment, Suite, Einheit, Gebäude und Etage.", es:"Designadores aprobados y reglas de posición para apartamento, suite, unidad, edificio y planta.", fr:"Indicateurs approuvés et règles de position pour appartement, suite, unité, bâtiment et étage.", it:"Designatori approvati e regole di posizione per appartamento, suite, unità, edificio e piano." },
+  },
+  uspsZipSep10: {
+    publisher: "United States Postal Service", title: "ZIP Code Lookup", reference: "tools.usps.com/zip-code-lookup.htm", checked: "2026-09-10",
+    scope: { en:"Current USPS address standardization and ZIP/ZIP+4 lookup; lookup results do not prove residency.", de:"Aktuelle USPS-Standardisierung und ZIP-/ZIP+4-Suche; Ergebnisse belegen keinen Wohnsitz.", es:"Estandarización USPS y consulta ZIP/ZIP+4 actuales; el resultado no prueba residencia.", fr:"Normalisation USPS et recherche ZIP/ZIP+4 actuelles ; le résultat ne prouve pas la résidence.", it:"Standardizzazione USPS e ricerca ZIP/ZIP+4 correnti; il risultato non prova la residenza." },
+  },
 } satisfies Record<string, SourceReference>;
 
 const sourceKeysByArticle: Record<ArticleSlug, (keyof typeof sources)[]> = {
@@ -155,6 +167,7 @@ const sourceKeysByArticle: Record<ArticleSlug, (keyof typeof sources)[]> = {
   "kakobuy-review-2026": ["service", "costs", "returns", "estimate", "trustpilot", "reddit"],
   "kakobuy-usa-pre-order-readiness-checklist": ["service", "cbpPurchases", "cbpLowValue", "usitcHts"],
   "kakobuy-us-delivery-address-format": ["kakobuyParcelFlow", "uspsAddressing", "uspsUnits", "uspsZip"],
+  "kakobuy-apartment-suite-unit-zip4-checks": ["kakobuyParcelFlowSep10", "uspsUnitsSep10", "uspsZipSep10"],
 };
 
 export const sourceHeadings: Record<Lang, [string, string]> = {

@@ -184,4 +184,5 @@ export const articles = [
   ["REVIEW", "Kakobuy review 2026: official features and user reports", "A balanced review that separates official policies from Trustpilot and Reddit anecdotes.", "/articles/kakobuy-review-2026"],
   ["US GUIDE", "Kakobuy USA guide 2026: pre-order readiness", "Check address, product identity, current import sources and last-mile evidence before ordering for the United States.", "/articles/kakobuy-usa-pre-order-readiness-checklist"],
   ["US ADDRESS", "Format a US delivery address for a Kakobuy parcel", "Check recipient, street, unit, city, state, ZIP Code and the final private label preview.", "/articles/kakobuy-us-delivery-address-format"],
+  ["US ADDRESS", "Apartment, suite, unit and ZIP+4 checks", "Verify the secondary-unit designator, exact number and current USPS ZIP+4 before international dispatch.", "/articles/kakobuy-apartment-suite-unit-zip4-checks"],
 ];
