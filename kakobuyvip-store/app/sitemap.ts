@@ -9,7 +9,7 @@ const sections = ["spreadsheet", "finds", "guide", "qc", "shipping", "faq", "art
 const updated = new Date("2026-08-31T00:00:00.000Z");
 
 function entry(pathname: string, lang: (typeof languages)[number], priority: number, frequency: "weekly" | "monthly"): MetadataRoute.Sitemap[number] {
-  const lastModified = pathname.includes("kakobuy-apartment-suite-unit-zip4-checks") ? new Date("2026-09-10T00:00:00.000Z") : pathname.includes("kakobuy-us-delivery-address-format") ? new Date("2026-09-04T00:00:00.000Z") : pathname.includes("kakobuy-usa-pre-order-readiness-checklist") ? new Date("2026-09-02T00:00:00.000Z") : updated;
+  const lastModified = pathname.includes("kakobuy-billing-address-vs-delivery-address") ? new Date("2026-09-12T00:00:00.000Z") : pathname.includes("kakobuy-apartment-suite-unit-zip4-checks") ? new Date("2026-09-10T00:00:00.000Z") : pathname.includes("kakobuy-us-delivery-address-format") ? new Date("2026-09-04T00:00:00.000Z") : pathname.includes("kakobuy-usa-pre-order-readiness-checklist") ? new Date("2026-09-02T00:00:00.000Z") : updated;
   return {
     url: `${baseUrl}${localizedPath(pathname, lang) === "/" ? "" : localizedPath(pathname, lang)}`,
     lastModified,

@@ -155,6 +155,18 @@ const sources = {
     publisher: "United States Postal Service", title: "ZIP Code Lookup", reference: "tools.usps.com/zip-code-lookup.htm", checked: "2026-09-10",
     scope: { en:"Current USPS address standardization and ZIP/ZIP+4 lookup; lookup results do not prove residency.", de:"Aktuelle USPS-Standardisierung und ZIP-/ZIP+4-Suche; Ergebnisse belegen keinen Wohnsitz.", es:"Estandarización USPS y consulta ZIP/ZIP+4 actuales; el resultado no prueba residencia.", fr:"Normalisation USPS et recherche ZIP/ZIP+4 actuelles ; le résultat ne prouve pas la résidence.", it:"Standardizzazione USPS e ricerca ZIP/ZIP+4 correnti; il risultato non prova la residenza." },
   },
+  kakobuyParcelFlowSep12: {
+    publisher: "Kakobuy", title: "Purchasing and parcel-submission process", reference: "/index/information?information_id=12 · information_id 12", checked: "2026-09-12",
+    scope: { en:"Public sequence places destination and logistics selection at parcel submission after warehouse receipt; the JavaScript-only public shell did not expose every live form field.", de:"Die öffentliche Reihenfolge setzt Ziel- und Logistikauswahl nach Lagereingang an; die JavaScript-Hülle zeigte nicht jedes Live-Feld.", es:"La secuencia pública sitúa destino y logística tras la recepción; la interfaz JavaScript no mostró todos los campos vivos.", fr:"Le parcours public place destination et logistique après réception; l’enveloppe JavaScript n’exposait pas tous les champs en direct.", it:"La sequenza pubblica colloca destinazione e logistica dopo la ricezione; la shell JavaScript non mostrava ogni campo live." },
+  },
+  uspsPublication28Sep12: {
+    publisher: "United States Postal Service", title: "Publication 28: Postal Addressing Standards", reference: "pe.usps.com/text/pub28/welcome.htm", checked: "2026-09-12",
+    scope: { en:"Current postal structure for recipient, delivery-address and city/state/ZIP lines, including directionals, suffixes and secondary units.", de:"Aktuelle Poststruktur für Empfänger, Lieferzeile und Ort/Staat/ZIP einschließlich Richtungen, Suffixen und Einheiten.", es:"Estructura postal actual para destinatario, entrega y ciudad/estado/ZIP, con orientaciones, sufijos y unidades.", fr:"Structure postale actuelle du destinataire, de la livraison et ville/État/ZIP, avec directions, suffixes et unités.", it:"Struttura postale corrente per destinatario, consegna e città/stato/ZIP, con direzioni, suffissi e unità." },
+  },
+  adyenAvsSep12: {
+    publisher: "Adyen", title: "Address Verification System (AVS)", reference: "docs.adyen.com/risk-management/avs", checked: "2026-09-12",
+    scope: { en:"Processor documentation describes comparing submitted billing-address information with issuer records; availability and result handling depend on the payment flow.", de:"Die Prozessordokumentation beschreibt den Vergleich eingereichter Rechnungsdaten mit Ausstellerdaten; Verfügbarkeit und Auswertung hängen vom Zahlungsablauf ab.", es:"La documentación del procesador describe comparar facturación con registros del emisor; disponibilidad y uso dependen del flujo.", fr:"La documentation du prestataire décrit la comparaison de la facturation avec l’émetteur; disponibilité et traitement dépendent du flux.", it:"La documentazione del processore descrive il confronto tra fatturazione e record dell’emittente; disponibilità e uso dipendono dal flusso." },
+  },
 } satisfies Record<string, SourceReference>;
 
 const sourceKeysByArticle: Record<ArticleSlug, (keyof typeof sources)[]> = {
@@ -168,6 +180,7 @@ const sourceKeysByArticle: Record<ArticleSlug, (keyof typeof sources)[]> = {
   "kakobuy-usa-pre-order-readiness-checklist": ["service", "cbpPurchases", "cbpLowValue", "usitcHts"],
   "kakobuy-us-delivery-address-format": ["kakobuyParcelFlow", "uspsAddressing", "uspsUnits", "uspsZip"],
   "kakobuy-apartment-suite-unit-zip4-checks": ["kakobuyParcelFlowSep10", "uspsUnitsSep10", "uspsZipSep10"],
+  "kakobuy-billing-address-vs-delivery-address": ["kakobuyParcelFlowSep12", "uspsPublication28Sep12", "adyenAvsSep12"],
 };
 
 export const sourceHeadings: Record<Lang, [string, string]> = {

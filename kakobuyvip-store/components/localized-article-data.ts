@@ -5,6 +5,7 @@ import { articleExpansions } from "./article-expansions";
 import { usaArticleTranslations } from "./usa-readiness-article";
 import { usaAddressArticleTranslations } from "./usa-address-article";
 import { usaUnitZip4ArticleTranslations } from "./usa-unit-zip4-article";
+import { usaBillingDeliveryArticleTranslations } from "./usa-billing-delivery-article";
 
 export type LocalizedArticle = Pick<ArticleRecord, "tag" | "title" | "description" | "sourceNote" | "sections" | "takeaways">;
 type ArticleTranslations = Partial<Record<ArticleSlug, LocalizedArticle>>;
@@ -544,6 +545,7 @@ export function getLocalizedArticle(lang: Lang, slug: ArticleSlug): LocalizedArt
   if (slug === "kakobuy-usa-pre-order-readiness-checklist") return usaArticleTranslations[lang];
   if (slug === "kakobuy-us-delivery-address-format") return usaAddressArticleTranslations[lang];
   if (slug === "kakobuy-apartment-suite-unit-zip4-checks") return usaUnitZip4ArticleTranslations[lang];
+  if (slug === "kakobuy-billing-address-vs-delivery-address") return usaBillingDeliveryArticleTranslations[lang];
   const article = localizedArticles[lang][slug]!;
   const expansions = articleExpansions[lang][slug] ?? [];
   if (!expansions.length) return article;
