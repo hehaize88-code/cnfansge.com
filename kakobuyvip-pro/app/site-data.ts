@@ -21,7 +21,8 @@ export type PageKey =
   | "orderIdentifiersArticle"
   | "orderTimelineArticle"
   | "sellerHandoffArticle"
-  | "domesticReceiptArticle";
+  | "domesticReceiptArticle"
+  | "warehouseIntakeArticle";
 
 export const pagePaths: Record<PageKey, string> = {
   home: "", spreadsheet: "spreadsheet", finds: "finds", guide: "guide", qc: "qc", shipping: "shipping", faq: "faq", articles: "articles",
@@ -31,6 +32,7 @@ export const pagePaths: Record<PageKey, string> = {
   orderTimelineArticle: "articles/kakobuy-order-timeline-minimum-fields",
   sellerHandoffArticle: "articles/kakobuy-purchased-vs-seller-sent-handoff",
   domesticReceiptArticle: "articles/kakobuy-seller-sent-warehouse-received-record",
+  warehouseIntakeArticle: "articles/kakobuy-warehouse-received-vs-stored-intake-checklist",
 };
 export function localPath(locale: Locale, page: PageKey) {
   const a = locale === "en" ? "" : `/${locale}`;
