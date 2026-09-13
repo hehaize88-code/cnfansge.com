@@ -2,9 +2,20 @@
 
 - Track: UVE — USFans Warehouse Visual Evidence
 - Current cursor: C04
-- Status: C01–C03 completed; C04 pending
-- Last checked: 2026-09-11
-- Production: C03 formally verified
+- Status: C01–C03 completed; C04 published but formal validation pending
+- Last checked: 2026-09-13
+- Production: C04 content is live; cursor not advanced because the required www-to-apex redirect failed
+
+## Pending formal validation
+
+- C04 — USFans Measurement Photos: Read Reference Points, Scale and Uncertainty
+  - Production URLs are live for EN/DE/ES/FR/IT at `/articles/usfans-warehouse-measurement-photo-evidence`
+  - Visible English article-body count: 1,293 words
+  - Five localized routes, matching eight-section structure, localized evidence ladder, self-canonical, reciprocal hreflang plus x-default, Article and BreadcrumbList verified
+  - Home and Articles discovery entries, 80-URL sitemap, robots, C03 and baseline QC article, core QC page, CSS/JavaScript and genuine random-path 404 verified
+  - Formal gate failed on 2026-09-13 because `https://www.usfanss.org/` served the complete requested path with HTTP 200 instead of permanently redirecting it to the apex domain
+  - The www/apex and Worker behavior are protected baseline and were not changed as part of this article-only cycle
+  - Content commit chain: 4bde6a5a2e868e88c26d56c37e77bf664dc87f47, 59f64ddd5f30d57bde7037c84dcec6d44e21a421
 
 ## Completed
 
@@ -55,6 +66,6 @@
 
 ## Next
 
-C04 — Interpret USFans Measurement Photos: Reference Points, Scale and Uncertainty. Re-open current USFans official guidance and permitted active USFans sites before drafting; permanently stopped sibling sites remain untouched.
+C04 — Re-verify the required full-path www-to-apex redirect and all production baselines. Do not create C05 or advance the cursor until C04 passes every formal-domain check; permanently stopped sibling sites remain untouched.
 
 This private file must not enter the static build, sitemap, robots, article hub, navigation, public links, structured data, or rendered output.
