@@ -1,5 +1,7 @@
 # vinext-starter
 
+> Publication note: automated article updates are disabled for spreadsheet-superbuys.com; releases for this site are reviewed and published manually.
+
 A clean full-stack starter running on
 [vinext](https://github.com/cloudflare/vinext), with optional Cloudflare D1 and
 Drizzle support.
