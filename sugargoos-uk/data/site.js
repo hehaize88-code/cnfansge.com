@@ -58,6 +58,28 @@ export const archivedProducts = products.filter((product) => !featuredProductIds
 
 export const articles = [
   {
+    slug: "sugargoo-leather-qc-lighting-visible-defects",
+    label: "MATERIAL LIGHTING NOTE",
+    read: "15 min",
+    image: "/og/qc-photo-checklist.png",
+    datePublished: "2026-09-14",
+    dateModified: "2026-09-14",
+    title: {
+      en: "Sugargoo Leather QC Photos: Lighting vs Visible Defects",
+      de: "Sugargoo Leder-QC: Licht, Reflexe und sichtbare Mängel",
+      es: "QC de cuero Sugargoo: luz, reflejos y defectos visibles",
+      fr: "QC cuir Sugargoo : lumière, reflets et défauts visibles",
+      it: "QC pelle Sugargoo: luce, riflessi e difetti visibili"
+    },
+    summary: {
+      en: "A controlled photo-review method for separating lighting, reflections and nap direction from repeatable marks on smooth, suede-style and glossy surfaces.",
+      de: "Eine kontrollierte Fotoprüfung, die Licht, Reflexe und Florrichtung von wiederholbaren Merkmalen auf glatten, veloursartigen und glänzenden Flächen trennt.",
+      es: "Un método fotográfico controlado para separar luz, reflejos y dirección del pelo de marcas repetibles en superficies lisas, afelpadas y brillantes.",
+      fr: "Une méthode photo contrôlée pour séparer lumière, reflets et sens du poil des marques répétables sur surfaces lisses, veloutées et brillantes.",
+      it: "Un metodo fotografico controllato per distinguere luce, riflessi e direzione del pelo da segni ripetibili su superfici lisce, scamosciate e lucide."
+    }
+  },
+  {
     slug: "sugargoo-sneaker-qc-labels-insole-outsole-measurements",
     label: "SNEAKER MEASUREMENT NOTE",
     read: "13 min",
@@ -395,14 +417,14 @@ export function pageMeta(lang, key) {
 }
 
 export const pageLastModified = {
-  home: "2026-09-06T07:40:00Z",
+  home: "2026-09-14T07:45:00Z",
   spreadsheet: "2026-09-01T00:00:00Z",
   finds: "2026-09-02T06:00:00Z",
   guide: "2026-09-02T06:00:00Z",
   qc: "2026-09-02T06:00:00Z",
   shipping: "2026-09-02T06:00:00Z",
   faq: "2026-09-02T06:00:00Z",
-  articles: "2026-09-06T07:40:00Z"
+  articles: "2026-09-14T07:45:00Z"
 };
 
 export function lastModifiedForPath(parts = []) {
