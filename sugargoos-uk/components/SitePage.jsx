@@ -60,11 +60,11 @@ function SectionHeading({ kicker, title, text, split = false }) {
   );
 }
 
-function EvidencePanel({ facts, note, lang = "en" }) {
+function EvidencePanel({ facts, note, lang = "en", label }) {
   const labels = editorialLabels[lang] || editorialLabels.en;
   return (
     <aside className="evidence-panel" aria-label="Research facts">
-      <p className="eyebrow">{labels.research}</p>
+      <p className="eyebrow">{label || labels.research}</p>
       {note && <p className="evidence-note">{note}</p>}
       <ul>{facts.map((fact) => <li key={fact}>{fact}</li>)}</ul>
     </aside>
@@ -285,10 +285,10 @@ function ArticlePage({ lang, t, article }) {
   return (
     <main>
       <article className="longform shell">
-        <header><p className="eyebrow">{article.label} / {article.read}</p><h1>{article.title[lang]}</h1><p className="article-deck">{article.summary[lang]}</p><div className="article-meta"><span>{labels.independent}</span><span>{labels.updated}</span><span>{lang.toUpperCase()}</span></div></header>
+        <header><p className="eyebrow">{article.label} / {article.read}</p><h1>{article.title[lang]}</h1><p className="article-deck">{article.summary[lang]}</p><div className="article-meta"><span>{labels.independent}</span><span>{article.updatedLabel?.[lang] || labels.updated}</span><span>{lang.toUpperCase()}</span></div></header>
         <div className="article-body">
           <p className="lead">{body.opening}</p>
-          <EvidencePanel facts={body.takeaways} note={body.sourceNote} lang={lang} />
+          <EvidencePanel facts={body.takeaways} note={body.sourceNote} lang={lang} label={article.researchLabel?.[lang]} />
           {body.sections.map(({ title, paragraphs }, index) => <section key={title}><span className="section-number">{String(index + 1).padStart(2, "0")}</span><h2>{title}</h2>{paragraphs.map((text) => <p key={text}>{text}</p>)}</section>)}
           {body.checklist && <aside className="article-checklist"><p className="eyebrow">{labels.decision}</p><h2>{body.checklist.title}</h2><ol>{body.checklist.items.map((item, index) => <li key={item}><span>{String(index + 1).padStart(2, "0")}</span><p>{item}</p></li>)}</ol></aside>}
           {article.slug === "reduce-volumetric-weight" && <div className="inline-tool"><p className="eyebrow">{labels.numbers}</p><WeightCalculator lang={lang} /></div>}

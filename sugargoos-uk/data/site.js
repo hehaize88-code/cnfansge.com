@@ -64,6 +64,20 @@ export const articles = [
     image: "/og/qc-photo-checklist.png",
     datePublished: "2026-09-14",
     dateModified: "2026-09-14",
+    researchLabel: {
+      en: "RESEARCH SNAPSHOT / 14.09.2026",
+      de: "RECHERCHESTAND / 14.09.2026",
+      es: "RESUMEN DE INVESTIGACIÓN / 14.09.2026",
+      fr: "ÉTAT DE LA RECHERCHE / 14.09.2026",
+      it: "STATO DELLA RICERCA / 14.09.2026"
+    },
+    updatedLabel: {
+      en: "Updated 14 Sep 2026",
+      de: "Aktualisiert am 14. Sep. 2026",
+      es: "Actualizado el 14 sep. 2026",
+      fr: "Mis à jour le 14 sept. 2026",
+      it: "Aggiornato il 14 set. 2026"
+    },
     title: {
       en: "Sugargoo Leather QC Photos: Lighting vs Visible Defects",
       de: "Sugargoo Leder-QC: Licht, Reflexe und sichtbare Mängel",
