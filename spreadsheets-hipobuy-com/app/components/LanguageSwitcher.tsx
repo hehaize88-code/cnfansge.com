@@ -59,6 +59,8 @@ export default function LanguageSwitcher(){
     const initial=saved&&labels[saved]?saved:"en";
     activeLanguage.current=initial;
     scan(document.body);
+    // The persisted UI preference and hydrated menu state are restored together.
+    // eslint-disable-next-line react-hooks/set-state-in-effect
     setLang(initial);
     setReady(true);
     const observer=new MutationObserver(mutations=>mutations.forEach(m=>m.addedNodes.forEach(scan)));

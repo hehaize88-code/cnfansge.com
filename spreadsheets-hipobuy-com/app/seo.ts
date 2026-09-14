@@ -35,7 +35,7 @@ export function pageMetadata({
       title,
       description,
       url: canonical,
-      siteName: "Hipobuy Spreadsheet",
+      siteName: "HipoBuy Spreadsheet",
       type,
       images: [{ url: image, width: image === DEFAULT_IMAGE ? 1200 : 1024, height: image === DEFAULT_IMAGE ? 630 : 500, alt: title }],
     },

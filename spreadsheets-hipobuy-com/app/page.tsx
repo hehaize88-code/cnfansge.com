@@ -1,10 +1,11 @@
 import ProductExplorer from "./components/ProductExplorer";
 import JsonLd from "./components/JsonLd";
 import { pageMetadata, SITE_URL } from "./seo";
+import Link from "next/link";
 
 export const metadata = pageMetadata({
-  title: "Hipobuy Spreadsheet Search 2026 | Checked Finds & Guides",
-  description: "Search checked Hipobuy spreadsheet rows, open exact product pages and use practical query, QC and parcel-planning guides.",
+  title: "HipoBuy Spreadsheet 2026: Product Links, QC & Finds",
+  description: "Search HipoBuy spreadsheet product links for shoes, hoodies, jerseys and jackets. Check live listings, sizes, QC photos and shipping inputs.",
   path: "/",
 });
 
@@ -12,28 +13,28 @@ const homeSchema = [
   {
     "@context": "https://schema.org",
     "@type": "WebSite",
-    name: "Hipobuy Spreadsheet",
+    name: "HipoBuy Spreadsheet",
     url: SITE_URL,
-    description: "Independent Hipobuy spreadsheet search and buyer-education resource.",
+    description: "Independent HipoBuy spreadsheet search and buyer-education resource.",
   },
   {
     "@context": "https://schema.org",
     "@type": "Organization",
-    name: "Hipobuy Spreadsheet",
+    name: "HipoBuy Spreadsheet",
     url: SITE_URL,
     logo: `${SITE_URL}/hipobuy-logo.png`,
   },
 ];
 
 const categories = [
-  ["Shoes", "58+", "https://cnfansge.com/shoes/"],
-  ["Hoodies", "55+", "https://cnfansge.com/hoodies-sweaters/"],
-  ["T-Shirts", "60+", "https://cnfansge.com/t-shirts/"],
-  ["Jerseys", "55+", "https://cnfansge.com/jersey/"],
-  ["Jackets", "50+", "https://cnfansge.com/jackets/"],
-  ["Accessories", "50+", "https://cnfansge.com/accessories/"],
-  ["Headwear", "50+", "https://cnfansge.com/headwear/"],
-  ["Electronics", "40+", "https://cnfansge.com/electronics/"],
+  ["Shoes", "58+", "https://cnfanssp.com/shoes/"],
+  ["Hoodies", "55+", "https://cnfanssp.com/hoodies-sweaters/"],
+  ["T-Shirts", "60+", "https://cnfanssp.com/t-shirts/"],
+  ["Jerseys", "55+", "https://cnfanssp.com/jersey/"],
+  ["Jackets", "50+", "https://cnfanssp.com/jackets/"],
+  ["Accessories", "50+", "https://cnfanssp.com/accessories/"],
+  ["Headwear", "50+", "https://cnfanssp.com/headwear/"],
+  ["Electronics", "40+", "https://cnfanssp.com/electronics/"],
 ];
 
 const checks = [
@@ -50,12 +51,12 @@ export default function Home() {
       <section className="hero wrap">
         <div className="heroCopy">
           <div className="eyebrow"><span /> Independent Hipobuy product research</div>
-          <h1>Find the listing.<br /><em>Check it properly.</em></h1>
+          <h1>HipoBuy Spreadsheet:<br /><em>Find Products and Check QC</em></h1>
           <p className="heroText">
             A cleaner Hipobuy spreadsheet experience built around searchable rows,
             exact product pages and practical QC notes—not a wall of copied links.
           </p>
-          <form className="searchBox" action="https://cnfansge.com/search.html" method="get" target="_blank">
+          <form className="searchBox" action="https://cnfanssp.com/search.html" method="get" target="_blank">
             <label htmlFor="hero-search" className="srOnly">Search product finds</label>
             <span aria-hidden="true">⌕</span>
             <input type="hidden" name="channelid" value="2" />
@@ -77,7 +78,7 @@ export default function Home() {
             <li><span>2</span><div><b>Verify</b><small>Open the exact listing and read options.</small></div></li>
             <li><span>3</span><div><b>Inspect</b><small>Use warehouse photos before approval.</small></div></li>
           </ol>
-          <a className="routeButton" href="/guide/">Open the full buyer guide →</a>
+          <Link className="routeButton" href="/guide/">Open the full buyer guide →</Link>
         </aside>
       </section>
 
@@ -99,7 +100,7 @@ export default function Home() {
           <span className="kicker">SEARCH METHOD / NEW</span>
           <h2>Turn a product idea into a precise Hipobuy spreadsheet query</h2>
           <p>Build a compact query, diagnose overloaded or empty results and preserve each single-term change.</p>
-          <a href="/articles/hipobuy-spreadsheet-search-query/">Read the search-query guide →</a>
+          <Link href="/articles/hipobuy-spreadsheet-search-query/">Read the search-query guide →</Link>
         </div>
       </section>
 
@@ -127,7 +128,7 @@ export default function Home() {
             <article><b>5 <span>days</span></b><span>Fastest advertised delivery, route dependent</span></article>
             <article><b>24/7</b><span>Purchasing assistance stated by the platform</span></article>
           </div>
-          <p className="factNote">Checked 25 August 2026. Shipping availability, speed and cost vary by destination, item type and parcel dimensions.</p>
+          <p className="factNote">Official app statements checked 14 September 2026. Shipping availability, speed and cost vary by destination, item type and parcel dimensions.</p>
         </div>
       </section>
 
@@ -136,14 +137,14 @@ export default function Home() {
           <span className="kicker">EDITORIAL / 01</span>
           <h2>How to use a Hipobuy spreadsheet without buying blind</h2>
           <p>A practical walkthrough for reading product rows, checking listing options, reviewing QC photos and preparing a parcel decision.</p>
-          <a href="/articles/use-hipobuy-spreadsheet/">Read the complete guide →</a>
+          <Link href="/articles/use-hipobuy-spreadsheet/">Read the complete guide →</Link>
         </div>
         <div className="faqPreview">
           <span className="kicker">QUICK ANSWERS</span>
           <details open><summary>Is this the official Hipobuy website?</summary><p>No. It is an independent product-discovery and buyer-education resource.</p></details>
           <details><summary>Are product prices guaranteed?</summary><p>No. USD values are references converted from the last observed source price. Confirm the live listing before payment.</p></details>
           <details><summary>Does a listing mean the item passed QC?</summary><p>No. A listing only helps discovery. Your own warehouse photos and measurements are the approval evidence.</p></details>
-          <a href="/faq/">View all questions →</a>
+          <Link href="/faq/">View all questions →</Link>
         </div>
       </section>
     </>

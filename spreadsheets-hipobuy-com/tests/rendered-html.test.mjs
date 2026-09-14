@@ -9,6 +9,13 @@ const routeFiles = {
   "/articles/": "../out/articles/index.html",
   "/articles/use-hipobuy-spreadsheet/": "../out/articles/use-hipobuy-spreadsheet/index.html",
   "/articles/hipobuy-spreadsheet-search-query/": "../out/articles/hipobuy-spreadsheet-search-query/index.html",
+  "/articles/hipobuy-spreadsheet-shoes/": "../out/articles/hipobuy-spreadsheet-shoes/index.html",
+  "/articles/hipobuy-links-not-working/": "../out/articles/hipobuy-links-not-working/index.html",
+  "/articles/hipobuy-qc-photos-product-id-color-size/": "../out/articles/hipobuy-qc-photos-product-id-color-size/index.html",
+  "/articles/hipobuy-spreadsheet-hoodies/": "../out/articles/hipobuy-spreadsheet-hoodies/index.html",
+  "/articles/hipobuy-spreadsheet-jerseys/": "../out/articles/hipobuy-spreadsheet-jerseys/index.html",
+  "/articles/hipobuy-spreadsheet-price-delivered-cost/": "../out/articles/hipobuy-spreadsheet-price-delivered-cost/index.html",
+  "/articles/hipobuy-spreadsheet-jackets/": "../out/articles/hipobuy-spreadsheet-jackets/index.html",
   "/guide/": "../out/guide/index.html",
   "/qc/": "../out/qc/index.html",
   "/shipping/": "../out/shipping/index.html",
@@ -50,4 +57,20 @@ test("exports crawl-control files and structured data", async () => {
   assert.match(faq, /"@type":"FAQPage"/);
   assert.match(article, /"@type":"Article"/);
   assert.match(sitemap, /https:\/\/spreadsheets-hipobuy\.com\/articles\/hipobuy-spreadsheet-search-query\//i);
+  assert.match(sitemap, /https:\/\/spreadsheets-hipobuy\.com\/articles\/hipobuy-spreadsheet-shoes\//i);
+  assert.match(sitemap, /https:\/\/spreadsheets-hipobuy\.com\/articles\/hipobuy-spreadsheet-jackets\//i);
+});
+
+test("new editorial routes contain article schema and substantial original copy", async () => {
+  const newRoutes = Object.entries(routeFiles).filter(([route]) =>
+    ["shoes", "links-not-working", "qc-photos", "hoodies", "jerseys", "price-delivered-cost", "jackets"].some(part => route.includes(part))
+  );
+  assert.equal(newRoutes.length, 7);
+  for (const [route, file] of newRoutes) {
+    const html = await readFile(new URL(file, import.meta.url), "utf8");
+    const text = html.replace(/<script[\s\S]*?<\/script>/gi, " ").replace(/<style[\s\S]*?<\/style>/gi, " ").replace(/<[^>]+>/g, " ").replace(/&[a-z#0-9]+;/gi, " ");
+    const words = text.trim().split(/\s+/).length;
+    assert.match(html, /"@type":"Article"/, route);
+    assert.ok(words >= 1200, `${route} has only ${words} rendered words`);
+  }
 });

@@ -3,11 +3,11 @@
 import { useMemo, useState } from "react";
 
 const products = [
-  { name: "Sweatshirts-1", category: "Hoodies", price: "$23.47", source: "¥169", checked: "Today", image: "https://cnfansge.com/uploads/allimg/20260506/1-260506103535537.webp", url: "https://cnfansge.com/AllProducts/6681.html" },
-  { name: "Pants/Shorts-1", category: "Pants", price: "$26.25", source: "¥189", checked: "Today", image: "https://cnfansge.com/uploads/allimg/20260506/1-26050610331M37.webp", url: "https://cnfansge.com/AllProducts/6680.html" },
-  { name: "Jersey-55", category: "Jerseys", price: "$18.19", source: "¥131", checked: "Today", image: "https://cnfansge.com/uploads/allimg/20260422/1-2604222250014B.jpg", url: "https://cnfansge.com/AllProducts/6679.html" },
-  { name: "Jersey-54", category: "Jerseys", price: "$18.19", source: "¥131", checked: "Today", image: "https://cnfansge.com/uploads/allimg/20260422/1-260422225000a6.jpg", url: "https://cnfansge.com/AllProducts/6678.html" },
-  { name: "Jersey-53", category: "Jerseys", price: "$18.19", source: "¥131", checked: "Today", image: "https://cnfansge.com/uploads/allimg/20260422/1-260422224959349.jpg", url: "https://cnfansge.com/AllProducts/6677.html" },
+  { name: "Hoodie-60", category: "Hoodies", price: "¥118", source: "CNY", checked: "14 Sep", image: "https://cnfanssp.com/uploads/allimg/20260429/1-2604291534502K.jpg", url: "https://cnfanssp.com/AllProducts/6127.html" },
+  { name: "Hoodie-59", category: "Hoodies", price: "¥98", source: "CNY", checked: "14 Sep", image: "https://cnfanssp.com/uploads/allimg/20260429/1-260429153450138.jpg", url: "https://cnfanssp.com/AllProducts/6126.html" },
+  { name: "Jersey-60", category: "Jerseys", price: "¥99", source: "CNY", checked: "14 Sep", image: "https://cnfanssp.com/uploads/allimg/20260430/1-26043021142K50.jpg", url: "https://cnfanssp.com/AllProducts/6667.html" },
+  { name: "Jersey-59", category: "Jerseys", price: "¥99", source: "CNY", checked: "14 Sep", image: "https://cnfanssp.com/uploads/allimg/20260430/1-260430211425539.jpg", url: "https://cnfanssp.com/AllProducts/6666.html" },
+  { name: "Jersey-58", category: "Jerseys", price: "¥99", source: "CNY", checked: "14 Sep", image: "https://cnfanssp.com/uploads/allimg/20260430/1-260430211423422.jpg", url: "https://cnfanssp.com/AllProducts/6665.html" },
 ];
 
 export default function ProductExplorer() {
@@ -23,11 +23,11 @@ export default function ProductExplorer() {
       </div>
       <div className="filterBar">
         <label><span>⌕</span><input value={query} onChange={e => setQuery(e.target.value)} placeholder="Filter these checked rows" /></label>
-        <div>{["All", "Hoodies", "Pants", "Jerseys"].map(x => <button className={category === x ? "active" : ""} onClick={() => setCategory(x)} key={x}>{x}</button>)}</div>
+        <div>{["All", "Hoodies", "Jerseys"].map(x => <button className={category === x ? "active" : ""} onClick={() => { setCategory(x); (window as Window & { gtag?: (...args: unknown[]) => void }).gtag?.("event", "category_filter", { category: x, page_path: window.location.pathname }); }} key={x}>{x}</button>)}</div>
         <span className="resultCount"><b>{filtered.length}</b> <span>results</span></span>
       </div>
       <div className="productGrid">
-        {filtered.map((p, i) => (
+        {filtered.map(p => (
           <article className="productCard" key={p.url}>
             <a href={p.url} target="_blank" rel="noreferrer" className="productImage">
               <img src={p.image} alt={p.name} width={600} height={600} loading="lazy" decoding="async" />
@@ -39,8 +39,8 @@ export default function ProductExplorer() {
           </article>
         ))}
       </div>
-      {filtered.length === 0 && <div className="emptyState"><b>No checked rows match yet.</b><span>Search the complete main index instead.</span><a href="https://cnfansge.com/AllProducts/" target="_blank" rel="noreferrer">Open all products ↗</a></div>}
-      <div className="explorerFooter"><span>Need more choices?</span><a href="https://cnfansge.com/AllProducts/" target="_blank" rel="noreferrer">Browse the complete product index ↗</a></div>
+      {filtered.length === 0 && <div className="emptyState"><b>No checked rows match yet.</b><span>Search the complete main index instead.</span><a href="https://cnfanssp.com/AllProducts/" target="_blank" rel="noreferrer">Open all products ↗</a></div>}
+      <div className="explorerFooter"><span>Need more choices?</span><a href="https://cnfanssp.com/AllProducts/" target="_blank" rel="noreferrer">Browse the complete product index ↗</a></div>
     </section>
   );
 }

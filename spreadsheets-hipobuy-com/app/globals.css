@@ -99,7 +99,7 @@ footer{background:var(--ink);color:#dce6e2;padding:55px 0 20px}.footerGrid{displ
   .sectionHead p{font-size:8px;line-height:1.35}
   .filterBar{gap:4px;padding:4px;margin-bottom:7px;border-radius:8px}
   .filterBar label{height:29px;padding:0 6px;border-radius:5px}.filterBar label span{font-size:9px}.filterBar input{font-size:8px}
-  .filterBar div{gap:2px}.filterBar button{padding:5px 2px;font-size:7px;border-radius:4px}
+  .filterBar div{gap:2px;grid-template-columns:repeat(3,1fr)}.filterBar button{padding:5px 2px;font-size:7px;border-radius:4px}
   .resultCount{display:inline;font-size:7px;padding:0;text-align:right}
   .productGrid{grid-template-columns:repeat(3,1fr);gap:5px}
   .productCard{padding:4px;border-radius:7px}.productImage{aspect-ratio:1/.88;border-radius:5px}
@@ -151,3 +151,5 @@ footer{background:var(--ink);color:#dce6e2;padding:55px 0 20px}.footerGrid{displ
   .articleLayout aside{position:static;display:grid;grid-template-columns:repeat(3,1fr);gap:5px;padding:8px;background:var(--cream);border:1px solid var(--line)}
   .articleLayout aside b{grid-column:1/-1;margin:0;font-size:8px}.articleLayout aside a{font-size:8px;line-height:1.2}
 }
+
+.calloutLine{display:block}

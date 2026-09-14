@@ -7,9 +7,9 @@ type Copy = { title:string; lead:string; checked:string; contents:string; intro:
 
 const copy: Record<Lang, Copy> = {
   en: {
-    title:"Turn a Product Idea Into a Precise Hipobuy Spreadsheet Search Query",
+    title:"HipoBuy Spreadsheet Search: Build Better Product Queries",
     lead:"Translate a shopping need into observable category, construction and identifier terms, then change one variable at a time so every result set can be reproduced and corrected.",
-    checked:"Checked 31 August 2026",
+    checked:"Updated 14 September 2026",
     contents:"In this guide",
     intro:[
       "A precise Hipobuy spreadsheet search query begins before the search box. Write what the product must do, which features can be observed on a listing and which conditions would make you reject a result. This prevents a vague style idea from turning into a long trail of unrelated links.",
@@ -100,6 +100,8 @@ export default function QueryArticle(){
   const [lang,setLang]=useState<Lang>("en");
   useEffect(()=>{
     const saved=localStorage.getItem("hipobuy-language") as Lang|null;
+    // The persisted UI preference is intentionally restored after hydration.
+    // eslint-disable-next-line react-hooks/set-state-in-effect
     if(saved&&copy[saved])setLang(saved);
     const change=(event:Event)=>{const next=(event as CustomEvent<Lang>).detail;if(copy[next])setLang(next)};
     window.addEventListener("hipobuy-language-change",change);return()=>window.removeEventListener("hipobuy-language-change",change);
