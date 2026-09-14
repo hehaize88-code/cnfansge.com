@@ -2,8 +2,8 @@ import type { Metadata } from "next";
 import { GuidePage } from "../guide-page";
 
 export const metadata: Metadata = {
-  title: "Superbuy Shipping Cost Guide: Estimate Total Cost (2026)",
-  description: "Understand Superbuy shipping cost, estimated deposits, final carrier settlement, parcel weight, packaging and route selection.",
+  title: "Superbuy Shipping Calculator: Estimate Cost in 2026",
+  description: "Use the Superbuy shipping calculator correctly: estimate packed weight, compare eligible routes and understand deposit versus final carrier settlement.",
   keywords: ["superbuy shipping cost", "superbuy shipping calculator", "superbuy international shipping", "superbuy volumetric weight"],
   alternates: { canonical: "/shipping-cost/" },
 };
@@ -11,7 +11,7 @@ export const metadata: Metadata = {
 export default function ShippingPage() {
   return <GuidePage
     eyebrow="SHIPPING · COST PLANNING"
-    title="Plan Superbuy shipping without inventing a final price"
+    title="Superbuy shipping calculator: estimate cost without inventing a final price"
     pagePath="/shipping-cost/"
     intro="Superbuy shipping cost is determined by the completed parcel, destination and available route—not by a product-card number. Build the estimate in layers, then reconcile it with the carrier-confirmed parcel."
     readMinutes={12}

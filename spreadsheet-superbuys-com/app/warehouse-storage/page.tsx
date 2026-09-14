@@ -2,16 +2,16 @@ import type { Metadata } from "next";
 import { GuidePage } from "../guide-page";
 
 export const metadata: Metadata = {
-  title: "Superbuy Warehouse Storage & Parcel Consolidation Guide (2026)",
-  description: "Use Superbuy's published 90-day free storage window to inspect items, resolve issues and build a deliberate parcel consolidation plan.",
-  keywords: ["superbuy warehouse storage", "superbuy 90 day storage", "superbuy parcel consolidation", "superbuy warehouse guide"],
+  title: "Superbuy Warehouse Storage Time: 90-Day Guide",
+  description: "Understand Superbuy warehouse storage time and use the published 90-day free window for QC, returns and parcel consolidation planning.",
+  keywords: ["superbuy warehouse storage", "superbuy 90 day storage", "how to add storage days superbuy", "superbuy parcel consolidation", "superbuy warehouse guide"],
   alternates: { canonical: "/warehouse-storage/" },
 };
 
 export default function WarehousePage() {
   return <GuidePage
     eyebrow="WAREHOUSE · CONSOLIDATION"
-    title="Use the warehouse window to make better parcel decisions"
+    title="Superbuy warehouse storage time: use the 90-day window well"
     pagePath="/warehouse-storage/"
     intro="Superbuy currently publishes a 90-day free storage period for items. The real advantage is not simply waiting: it is using warehouse time to inspect arrivals, resolve problems and compare complete-parcel options."
     readMinutes={12}
@@ -32,7 +32,7 @@ export default function WarehousePage() {
         heading: "What the 90-day warehouse window means",
         body: [
           "Superbuy’s official user guidance currently states that it provides 90 days of free storage for items after warehouse arrival. The guide explicitly connects that period with buying additional products and sending stored items together. This turns the warehouse into a planning stage between domestic purchasing and international parcel submission.",
-          "Use the published 90 days as a current service fact, not a permanent promise or a reason to ignore the account. Superbuy’s fee page provides additional detail about storage after the free period and optional extension services, but terms and charges can change. The item-level deadline shown in your own warehouse account is the date that should control your action.",
+          "Use the published 90 days as a current service fact, not a permanent promise or a reason to ignore the account. If you need to add storage days in Superbuy, check the item-level deadline and the current extension option in your warehouse account; the fee page describes storage after the free period and optional extension services, but terms and charges can change. The date shown for the actual item should control your action.",
           "Create an arrival list with the order number, warehouse date, displayed deadline, QC status and intended parcel group. If you are collecting several items, use the earliest deadline as the working boundary. Set a personal deadline well before it so there is time to resolve a defect, wait for a seller response or change the parcel plan without rushing.",
         ],
         points: ["Record each warehouse arrival date.", "Use the account’s item-specific deadline.", "Plan around the earliest deadline in a group.", "Set an earlier date for QC and after-sales decisions."],

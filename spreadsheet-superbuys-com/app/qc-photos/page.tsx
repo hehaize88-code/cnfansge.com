@@ -2,16 +2,16 @@ import type { Metadata } from "next";
 import { GuidePage } from "../guide-page";
 
 export const metadata: Metadata = {
-  title: "Superbuy QC Photos Guide: What to Check Before Shipping (2026)",
-  description: "A practical Superbuy QC photo checklist for clothing, shoes and accessories, including photo limits and when to request a closer view.",
-  keywords: ["superbuy qc photos", "superbuy quality check", "superbuy warehouse inspection", "how to check superbuy qc"],
+  title: "Superbuy QC Checker: Photo Checklist Before Shipping",
+  description: "Use this Superbuy QC checker and photo checklist for clothing, shoes and accessories, including photo limits and targeted measurement requests.",
+  keywords: ["superbuy qc checker", "superbuy qc photos", "superbuy quality check", "superbuy warehouse inspection", "how to check superbuy qc"],
   alternates: { canonical: "/qc-photos/" },
 };
 
 export default function QcPage() {
   return <GuidePage
     eyebrow="QUALITY CONTROL · CHECKLIST"
-    title="Read Superbuy QC photos like evidence—not a promise"
+    title="Superbuy QC checker: read warehouse photos as evidence"
     pagePath="/qc-photos/"
     intro="Superbuy warehouse photos can answer specific visual questions before international shipping. They are most useful when you compare them with the original order and understand what a photograph cannot prove."
     readMinutes={12}

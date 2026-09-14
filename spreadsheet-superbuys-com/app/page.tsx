@@ -3,22 +3,22 @@ import Link from "next/link";
 import { ArrowIcon, CategoryGrid, Footer, Header, ProductGrid, SearchBox } from "./components";
 
 export const metadata: Metadata = {
-  title: "Superbuy Spreadsheet Link Checker & Live Product Index 2026",
-  description: "Verify current Superbuy spreadsheet destinations, browse the live product index and recheck listing, option and seller details before ordering.",
+  title: "Superbuy Spreadsheet 2026: Live Links, Finds & QC Guide",
+  description: "Browse the Superbuy spreadsheet 2026, check live product links and use independent fee, QC photo, warehouse and shipping guides before ordering.",
   alternates: { canonical: "/" },
   robots: { index: true, follow: true },
   openGraph: {
-    title: "Superbuy Spreadsheet Link Checker & Live Product Index 2026",
-    description: "Check current product destinations before ordering, then use practical QC, warehouse and shipping guides.",
+    title: "Superbuy Spreadsheet 2026: Live Links, Finds & QC Guide",
+    description: "Check current product destinations, then use practical fee, QC, warehouse and shipping guides.",
     type: "website",
     url: "/",
-    siteName: "Superbuy Spreadsheet Link Checker",
+    siteName: "Superbuy Spreadsheet",
     images: [{ url: "/og.png", width: 1200, height: 630, alt: "Superbuy spreadsheet link checker and live product index" }],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Superbuy Spreadsheet Link Checker & Live Product Index 2026",
-    description: "Check current product destinations before ordering.",
+    title: "Superbuy Spreadsheet 2026: Live Links, Finds & QC Guide",
+    description: "Check current Superbuy spreadsheet destinations before ordering.",
     images: ["/og.png"],
   },
 };
@@ -31,16 +31,16 @@ const guideCards = [
 ];
 
 const articleCards = [
-  { title: "How to Use a Superbuy Spreadsheet Without Skipping the Checks", copy: "A step-by-step workflow from product discovery to warehouse review and parcel submission.", href: "/how-to-use/", topic: "Beginner guide", time: "8 min read" },
-  { title: "Superbuy QC Photos: A Practical Inspection Checklist", copy: "Visible details to examine, questions to ask and the limits of warehouse photography.", href: "/qc-photos/", topic: "Quality control", time: "7 min read" },
-  { title: "Superbuy Shipping Cost: Estimate vs. Final Freight", copy: "Why item price, local delivery, packaging and international freight must be budgeted separately.", href: "/shipping-cost/", topic: "Shipping", time: "8 min read" },
+  { title: "Superbuy Fees Explained: Service Fees and Shipping Charges", copy: "See which cost belongs to the seller, optional services or the final international parcel.", href: "/articles/superbuy-fees-explained/", topic: "Fees", time: "13 min read" },
+  { title: "Superbuy Spreadsheet vs Reddit and Google Sheets", copy: "A practical trust test for current destinations, variants, seller details and saved evidence.", href: "/articles/superbuy-spreadsheet-vs-reddit-google-sheets/", topic: "Link trust", time: "12 min read" },
+  { title: "Superbuy Product Search: Photos, Links and Item Numbers", copy: "Turn a screenshot or identifier into a verified source listing before placing an order.", href: "/articles/superbuy-image-search-item-number/", topic: "Product search", time: "12 min read" },
 ];
 
 export default function Home() {
   const websiteSchema = {
     "@context": "https://schema.org",
     "@type": "WebSite",
-    name: "Superbuy Spreadsheet Link Checker",
+    name: "Superbuy Spreadsheet",
     url: "https://spreadsheet-superbuys.com/",
     description: "An independent link-verification index and buyer guide.",
     potentialAction: {
@@ -55,9 +55,9 @@ export default function Home() {
       <Header />
       <main>
         <section className="hero wrap">
-          <span className="hero-label" data-i18n="updated">Independent link verification index · Checked 25 August 2026</span>
-          <h1 data-i18n="title">Verify Superbuy spreadsheet links before ordering.</h1>
-          <p className="hero-lede" data-i18n="intro">Browse by category, open the current destination and recheck the listing, available options and seller details before placing an order.</p>
+          <span className="hero-label">Independent link verification index · Checked 14 September 2026</span>
+          <h1 data-i18n="title">Superbuy Spreadsheet 2026: check live links before ordering.</h1>
+          <p className="hero-lede" data-i18n="intro">Browse Superbuy finds by category, open the current destination and verify the listing, selected option, seller details and price before placing an order.</p>
           <SearchBox />
           <div className="hero-links">
             <a href="https://cnfansge.com/AllProducts/" target="_blank" rel="noopener noreferrer"><span data-i18n="all">View all products</span> <ArrowIcon /></a>

@@ -22,7 +22,7 @@ export function Header() {
           <Link href="/articles/" data-i18n="articles">SEO Articles</Link>
           <Link href="/faq/" data-i18n="faq">FAQ</Link>
         </nav>
-        <div className="nav-actions"><LanguageSwitcher /><a className="nav-cta" href="https://cnfansge.com/AllProducts/" target="_blank" rel="noopener noreferrer"><span data-i18n="open">Open index</span> <ArrowIcon /></a></div>
+        <div className="nav-actions"><LanguageSwitcher /><a className="nav-cta" data-track="header_catalog_click" href="https://cnfansge.com/AllProducts/" target="_blank" rel="noopener noreferrer"><span data-i18n="open">Open index</span> <ArrowIcon /></a></div>
       </div>
     </header>
   );

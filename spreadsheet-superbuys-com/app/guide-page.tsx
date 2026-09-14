@@ -23,7 +23,7 @@ export function GuidePage({
   title,
   intro,
   pagePath,
-  updated = "25 August 2026",
+  updated = "14 September 2026",
   readMinutes = 11,
   takeaways,
   sources,
@@ -49,7 +49,7 @@ export function GuidePage({
     headline: title,
     description: intro,
     datePublished: "2026-08-25",
-    dateModified: "2026-08-25",
+    dateModified: "2026-09-14",
     author: { "@type": "Organization", name: "Superbuy Spreadsheet Editorial" },
     image: ["https://spreadsheet-superbuys.com/og.png"],
     publisher: {
@@ -65,10 +65,20 @@ export function GuidePage({
     },
     mainEntityOfPage: pageUrl,
   };
+  const breadcrumbSchema = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: [
+      { "@type": "ListItem", position: 1, name: "Home", item: "https://spreadsheet-superbuys.com/" },
+      { "@type": "ListItem", position: 2, name: "Superbuy guides", item: "https://spreadsheet-superbuys.com/articles/" },
+      { "@type": "ListItem", position: 3, name: title, item: pageUrl },
+    ],
+  };
   const visual = guideVisuals[pageKey];
   return (
     <div className="site-shell">
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
       <Header />
       <main className="article-main">
         <header className="article-hero wrap">
@@ -81,7 +91,7 @@ export function GuidePage({
           <aside className="article-aside">
             <b data-i18n="inGuide">IN THIS GUIDE</b>
             {sections.map((section, index) => <a href={`#section-${index + 1}`} key={section.heading}><span>0{index + 1}</span><span data-i18n={`${pageKey}Section${index + 1}`}>{section.heading}</span></a>)}
-            <a className="aside-cta" href="https://cnfansge.com/AllProducts/" target="_blank" rel="noopener noreferrer"><span data-i18n="openProductIndex">Open product index</span> <ArrowIcon /></a>
+            <a className="aside-cta" data-track="guide_catalog_click" href="https://cnfansge.com/AllProducts/" target="_blank" rel="noopener noreferrer"><span data-i18n="openProductIndex">Open product index</span> <ArrowIcon /></a>
           </aside>
           <article className="article-body">
             <div className="truth-note"><b data-i18n="verificationTitle">Verification note</b><p data-i18n="verificationCopy">Service details below are based on Superbuy’s public English guidance. Product links and availability are checked separately in the linked catalog. Neither source should be treated as a permanent price or availability guarantee.</p></div>
