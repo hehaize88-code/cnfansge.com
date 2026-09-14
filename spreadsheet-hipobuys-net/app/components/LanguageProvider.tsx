@@ -215,11 +215,14 @@ export function LanguageProvider({children}:{children:React.ReactNode}) {
   const [lang,setLangState]=useState<Lang>("en");
   const [ready,setReady]=useState(false);
   useEffect(()=>{
-    const saved=localStorage.getItem("hipo-language") as Lang|null;
-    const browserLanguage=navigator.language.split("-")[0] as Lang;
-    if(saved&&dictionaries[saved]) setLangState(saved);
-    else if(dictionaries[browserLanguage]) setLangState(browserLanguage);
-    setReady(true);
+    const frame=requestAnimationFrame(()=>{
+      const saved=localStorage.getItem("hipo-language") as Lang|null;
+      const browserLanguage=navigator.language.split("-")[0] as Lang;
+      if(saved&&dictionaries[saved]) setLangState(saved);
+      else if(dictionaries[browserLanguage]) setLangState(browserLanguage);
+      setReady(true);
+    });
+    return ()=>cancelAnimationFrame(frame);
   },[]);
   useEffect(()=>{
     if(!ready) return;

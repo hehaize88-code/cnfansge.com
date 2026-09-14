@@ -30,12 +30,25 @@ export default async function ArticlePage({ params }: { params: Promise<{ slug: 
   const { slug } = await params;
   const article = getArticle(slug);
   if (!article) notFound();
-  const schema = {
-    "@context": "https://schema.org", "@type": "Article", headline: article.title, description: article.description,
-    datePublished: article.published, dateModified: article.updated, author: { "@type": "Organization", name: "Hipo Index" },
-    publisher: { "@type": "Organization", name: "Hipo Index" }, mainEntityOfPage: `https://spreadsheet-hipobuys.net/articles/${article.slug}/`,
-    image: article.image ? [article.image] : undefined
-  };
+  const articleIndex = articles.findIndex((item) => item.slug === article.slug);
+  const relatedArticles = [1, 2, 3].map((offset) => articles[(articleIndex + offset) % articles.length]);
+  const pageUrl = `https://spreadsheet-hipobuys.net/articles/${article.slug}/`;
+  const schema = { "@context": "https://schema.org", "@graph": [
+    {
+      "@type": "Article", headline: article.title, description: article.description,
+      datePublished: article.published, dateModified: article.updated, author: { "@type": "Organization", name: "Hipo Index" },
+      publisher: { "@type": "Organization", name: "Hipo Index" }, mainEntityOfPage: pageUrl,
+      image: article.image ? [article.image] : undefined
+    },
+    {
+      "@type": "BreadcrumbList",
+      itemListElement: [
+        { "@type": "ListItem", position: 1, name: "Home", item: "https://spreadsheet-hipobuys.net/" },
+        { "@type": "ListItem", position: 2, name: "Articles", item: "https://spreadsheet-hipobuys.net/articles/" },
+        { "@type": "ListItem", position: 3, name: article.title, item: pageUrl }
+      ]
+    }
+  ] };
 
   return <GuideLayout kicker={article.kicker} title={article.title} intro={article.summary}>
     <article className="long-article">
@@ -45,8 +58,9 @@ export default async function ArticlePage({ params }: { params: Promise<{ slug: 
         <div className="article-prose">
           {article.image ? <figure><img src={article.image} alt={article.imageAlt || ""} width="1100" height="720" /><figcaption>{article.imageCaption}</figcaption></figure> : <div className="shipping-equation"><span>Delivered cost</span><strong>item + domestic delivery + services + international parcel + import costs</strong></div>}
           {article.sections.map((section) => <section id={anchor(section.heading)} key={section.heading}><h2>{section.heading}</h2>{section.paragraphs.map((paragraph) => <p key={paragraph}>{paragraph}</p>)}{section.bullets ? <ul>{section.bullets.map((item) => <li key={item}>{item}</li>)}</ul> : null}</section>)}
-          <section className="article-sources"><p className="section-kicker">Sources checked · 25 August 2026</p><h2>Research notes</h2><p>Sources support specific platform facts or identify recurring buyer questions. Community reports are not treated as official terms or guaranteed outcomes.</p><ul>{article.sources.map((source) => <li key={source.label}><strong>{source.label}</strong><span>{source.note}</span></li>)}</ul></section>
-          <div className="article-next"><div><p className="section-kicker">Continue checking</p><h2>Use the guide, then verify the live listing.</h2></div><div><Link href="/articles/">All articles</Link><a href="https://cnfansge.com/AllProducts/">Browse current catalog ↗</a></div></div>
+          <section className="article-sources"><p className="section-kicker">Sources checked · {article.updated}</p><h2>Research notes</h2><p>Sources support specific platform facts or identify recurring buyer questions. Community reports are not treated as official terms or guaranteed outcomes.</p><ul>{article.sources.map((source) => <li key={source.label}><strong>{source.label}</strong><span>{source.note}</span></li>)}</ul></section>
+          <section className="related-articles"><p className="section-kicker">Keep planning</p><h2>Related Hipobuy guides</h2><div>{relatedArticles.map((related) => <Link href={`/articles/${related.slug}/`} key={related.slug}><span>{related.kicker}</span><strong>{related.title}</strong><b>Read guide →</b></Link>)}</div></section>
+          <div className="article-next"><div><p className="section-kicker">Continue checking</p><h2>Use the guide, then verify the live listing.</h2></div><div><Link href="/articles/">All articles</Link><a href="https://www.hipobuys.net/">Browse current catalog ↗</a></div></div>
         </div>
       </div>
     </article>

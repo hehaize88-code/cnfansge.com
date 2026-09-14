@@ -15,9 +15,10 @@ export const metadata: Metadata = {
 
 const websiteSchema = {
   "@context": "https://schema.org", "@type": "WebSite", name: "Hipo Index", url: "https://spreadsheet-hipobuys.net/", description: "Independent Hipobuy spreadsheet and buyer education resource.",
-  potentialAction: { "@type": "SearchAction", target: "https://cnfansge.com/search.html?channelid=2&keywords={search_term_string}", "query-input": "required name=search_term_string" },
+  potentialAction: { "@type": "SearchAction", target: "https://www.hipobuys.net/?s={search_term_string}", "query-input": "required name=search_term_string" },
 };
 
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
-  return <html lang="en"><body><script async src="https://www.googletagmanager.com/gtag/js?id=G-D14KS48G0Q" /><script dangerouslySetInnerHTML={{ __html: "window.dataLayer = window.dataLayer || []; function gtag(){dataLayer.push(arguments);} gtag('js', new Date()); gtag('config', 'G-D14KS48G0Q');" }} /><LanguageProvider>{children}</LanguageProvider><script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(websiteSchema) }} /></body></html>;
+  const analytics = "window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag('js',new Date());gtag('config','G-D14KS48G0Q');document.addEventListener('click',function(e){var a=e.target&&e.target.closest?e.target.closest('a'):null;if(!a)return;var u=new URL(a.href,location.href);if(u.origin!==location.origin){gtag('event','outbound_product_click',{link_url:u.href,link_text:(a.textContent||'').trim().slice(0,100)})}else if(u.pathname.indexOf('/articles/')===0){gtag('event','article_click',{link_url:u.href,link_text:(a.textContent||'').trim().slice(0,100)})}});document.addEventListener('submit',function(e){if(e.target&&e.target.matches&&e.target.matches('.clean-search'))gtag('event','spreadsheet_search')});";
+  return <html lang="en"><body><script async src="https://www.googletagmanager.com/gtag/js?id=G-D14KS48G0Q" /><script dangerouslySetInnerHTML={{ __html: analytics }} /><LanguageProvider>{children}</LanguageProvider><script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(websiteSchema) }} /></body></html>;
 }

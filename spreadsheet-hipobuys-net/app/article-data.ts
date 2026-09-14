@@ -1,3 +1,5 @@
+import { newArticles } from "./seo-articles-2026";
+
 export type ArticleSection = {
   heading: string;
   paragraphs: string[];
@@ -21,17 +23,17 @@ export type Article = {
   sources: { label: string; note: string }[];
 };
 
-export const articles: Article[] = [
+const coreArticles: Article[] = [
   {
     slug: "how-to-use-hipobuy-spreadsheet",
-    title: "How to Use a Hipobuy Spreadsheet Without Buying Blind",
-    description: "A practical 2026 workflow for using a Hipobuy spreadsheet: verify the source listing, estimate delivered cost, review QC photos and choose shipping deliberately.",
+    title: "Hipobuy Spreadsheet 2026: Search, Verify and Buy More Carefully",
+    description: "Use a Hipobuy spreadsheet in 2026 to search current finds, verify source listings, review QC photos and calculate delivered cost before shipping.",
     kicker: "Start here · Spreadsheet workflow",
     published: "2026-08-25",
-    updated: "2026-08-25",
+    updated: "2026-09-14",
     readTime: "10 min read",
     keyword: "hipobuy spreadsheet",
-    summary: "A spreadsheet is useful for discovery, but the real decision happens after you check the current listing, warehouse evidence and delivered cost. This guide puts those checks in the right order.",
+    summary: "A Hipobuy spreadsheet, Hipo Buy spreadsheet or Hippo Buy spreadsheet is a discovery index—not a permanent product guarantee. This updated guide puts listing checks, warehouse evidence and delivered-cost planning in the right order.",
     image: "https://cnfansge.com/uploads/allimg/20260415/1-260415150J2P3.jpg",
     imageAlt: "Warehouse-style product photo used as a Hipobuy spreadsheet example",
     imageCaption: "A catalog image is a starting point, not proof that the current seller, variant or batch is unchanged.",
@@ -132,7 +134,7 @@ export const articles: Article[] = [
     description: "Learn how to inspect Hipobuy QC photos for order matching, measurements, construction and visible defects—and understand what photos cannot prove.",
     kicker: "Warehouse check · QC photos",
     published: "2026-08-25",
-    updated: "2026-08-25",
+    updated: "2026-09-14",
     readTime: "11 min read",
     keyword: "hipobuy qc photos",
     summary: "QC photos are most valuable when you use a repeatable checklist. This guide separates visible evidence from assumptions and explains when an extra photo is worth requesting.",
@@ -242,11 +244,11 @@ export const articles: Article[] = [
   },
   {
     slug: "hipobuy-shipping-cost-guide",
-    title: "Hipobuy Shipping Cost: How to Estimate the Real Delivered Price",
-    description: "A 2026 guide to Hipobuy shipping estimates, actual versus volumetric weight, consolidation, packing choices, route comparison and delivered-cost planning.",
+    title: "Hipobuy Shipping Cost 2026: Calculate the Real Delivered Price",
+    description: "Calculate Hipobuy shipping cost in 2026 using actual and volumetric weight, price-per-kilogram comparisons, packing choices and destination checks.",
     kicker: "Parcel planning · Shipping cost",
     published: "2026-08-25",
-    updated: "2026-08-25",
+    updated: "2026-09-14",
     readTime: "12 min read",
     keyword: "hipobuy shipping cost",
     summary: "The product price is only the first payment. Learn how parcel dimensions, chargeable weight, packing and destination rules shape the amount you actually pay.",
@@ -352,6 +354,8 @@ export const articles: Article[] = [
     ]
   }
 ];
+
+export const articles: Article[] = [...coreArticles, ...newArticles];
 
 export function getArticle(slug: string) {
   return articles.find((article) => article.slug === slug);
