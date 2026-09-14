@@ -16,7 +16,7 @@ export default function AnalyticsEvents() {
       const url = new URL(anchor.href, window.location.href);
       const label = anchor.textContent?.trim().replace(/\s+/g, " ").slice(0, 80) || "unlabelled";
 
-      if (url.hostname === "cnfanssp.com") {
+      if (url.hostname === "cnfansge.com") {
         send("main_index_click", { link_url: url.href, link_text: label, page_path: window.location.pathname });
       } else if (url.origin === window.location.origin && url.pathname.startsWith("/articles/")) {
         send("article_click", { article_path: url.pathname, link_text: label, page_path: window.location.pathname });

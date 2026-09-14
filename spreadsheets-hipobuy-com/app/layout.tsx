@@ -44,7 +44,7 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
             <nav aria-label="Primary navigation">{nav.map(([label, href]) => <Link key={href} href={href}>{label}</Link>)}</nav>
             <div className="headerActions">
               <LanguageSwitcher />
-              <a className="openIndex" href="https://cnfanssp.com/AllProducts/" target="_blank" rel="noreferrer">Open index ↗</a>
+              <a className="openIndex" href="https://cnfansge.com/AllProducts/" target="_blank" rel="noreferrer">Open index ↗</a>
             </div>
           </div>
         </header>

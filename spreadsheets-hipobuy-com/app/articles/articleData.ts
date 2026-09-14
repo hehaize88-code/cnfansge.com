@@ -69,7 +69,7 @@ export const articles: ArticleRecord[] = [
     ],
     nextTitle: "Browse shoe listings with the checklist ready",
     nextCopy: "Open the shoe category, shortlist several live pages and keep sizing separate from QC.",
-    nextHref: "https://cnfanssp.com/shoes/",
+    nextHref: "https://cnfansge.com/shoes/",
     nextLabel: "Open shoes"
   },
   {
@@ -219,7 +219,7 @@ export const articles: ArticleRecord[] = [
     ],
     nextTitle: "Browse hoodie listings",
     nextCopy: "Shortlist live pages, save each chart and compare the same measurement points.",
-    nextHref: "https://cnfanssp.com/hoodies-sweaters/",
+    nextHref: "https://cnfansge.com/hoodies-sweaters/",
     nextLabel: "Open hoodies"
   },
   {
@@ -269,7 +269,7 @@ export const articles: ArticleRecord[] = [
     ],
     nextTitle: "Browse jersey listings",
     nextCopy: "Compare live versions and charts before adding names, numbers or badge options.",
-    nextHref: "https://cnfanssp.com/jersey/",
+    nextHref: "https://cnfansge.com/jersey/",
     nextLabel: "Open jerseys"
   },
   {
@@ -369,7 +369,7 @@ export const articles: ArticleRecord[] = [
     ],
     nextTitle: "Browse jacket listings",
     nextCopy: "Compare exact versions and measurement charts before evaluating material claims or parcel cost.",
-    nextHref: "https://cnfanssp.com/jackets/",
+    nextHref: "https://cnfansge.com/jackets/",
     nextLabel: "Open jackets"
   }
 ];

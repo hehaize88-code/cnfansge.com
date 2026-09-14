@@ -74,3 +74,19 @@ test("new editorial routes contain article schema and substantial original copy"
     assert.ok(words >= 1200, `${route} has only ${words} rendered words`);
   }
 });
+
+test("all product discovery routes stay bound to cnfansge.com", async () => {
+  for (const [route, file] of Object.entries(routeFiles)) {
+    const html = await readFile(new URL(file, import.meta.url), "utf8");
+    assert.doesNotMatch(html, /cnfanssp\.com/i, route);
+  }
+  const [home, finds, shoeArticle] = await Promise.all([
+    readFile(new URL("../out/index.html", import.meta.url), "utf8"),
+    readFile(new URL("../out/finds/index.html", import.meta.url), "utf8"),
+    readFile(new URL("../out/articles/hipobuy-spreadsheet-shoes/index.html", import.meta.url), "utf8"),
+  ]);
+  assert.match(home, /https:\/\/cnfansge\.com\/search\.html/i);
+  assert.match(home, /https:\/\/cnfansge\.com\/AllProducts\/6681\.html/i);
+  assert.match(finds, /https:\/\/cnfansge\.com\/shoes\//i);
+  assert.match(shoeArticle, /https:\/\/cnfansge\.com\/shoes\//i);
+});

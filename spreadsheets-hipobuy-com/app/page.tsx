@@ -27,14 +27,14 @@ const homeSchema = [
 ];
 
 const categories = [
-  ["Shoes", "58+", "https://cnfanssp.com/shoes/"],
-  ["Hoodies", "55+", "https://cnfanssp.com/hoodies-sweaters/"],
-  ["T-Shirts", "60+", "https://cnfanssp.com/t-shirts/"],
-  ["Jerseys", "55+", "https://cnfanssp.com/jersey/"],
-  ["Jackets", "50+", "https://cnfanssp.com/jackets/"],
-  ["Accessories", "50+", "https://cnfanssp.com/accessories/"],
-  ["Headwear", "50+", "https://cnfanssp.com/headwear/"],
-  ["Electronics", "40+", "https://cnfanssp.com/electronics/"],
+  ["Shoes", "58+", "https://cnfansge.com/shoes/"],
+  ["Hoodies", "55+", "https://cnfansge.com/hoodies-sweaters/"],
+  ["T-Shirts", "60+", "https://cnfansge.com/t-shirts/"],
+  ["Jerseys", "55+", "https://cnfansge.com/jersey/"],
+  ["Jackets", "50+", "https://cnfansge.com/jackets/"],
+  ["Accessories", "50+", "https://cnfansge.com/accessories/"],
+  ["Headwear", "50+", "https://cnfansge.com/headwear/"],
+  ["Electronics", "40+", "https://cnfansge.com/electronics/"],
 ];
 
 const checks = [
@@ -56,7 +56,7 @@ export default function Home() {
             A cleaner Hipobuy spreadsheet experience built around searchable rows,
             exact product pages and practical QC notes—not a wall of copied links.
           </p>
-          <form className="searchBox" action="https://cnfanssp.com/search.html" method="get" target="_blank">
+          <form className="searchBox" action="https://cnfansge.com/search.html" method="get" target="_blank">
             <label htmlFor="hero-search" className="srOnly">Search product finds</label>
             <span aria-hidden="true">⌕</span>
             <input type="hidden" name="channelid" value="2" />
