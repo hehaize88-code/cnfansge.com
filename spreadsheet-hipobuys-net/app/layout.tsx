@@ -15,7 +15,7 @@ export const metadata: Metadata = {
 
 const websiteSchema = {
   "@context": "https://schema.org", "@type": "WebSite", name: "Hipo Index", url: "https://spreadsheet-hipobuys.net/", description: "Independent Hipobuy spreadsheet and buyer education resource.",
-  potentialAction: { "@type": "SearchAction", target: "https://www.hipobuys.net/?s={search_term_string}", "query-input": "required name=search_term_string" },
+  potentialAction: { "@type": "SearchAction", target: "https://cnfansge.com/search.html?channelid=2&keywords={search_term_string}", "query-input": "required name=search_term_string" },
 };
 
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {

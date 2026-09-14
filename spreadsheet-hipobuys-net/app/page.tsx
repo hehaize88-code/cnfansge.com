@@ -6,7 +6,7 @@ import { categories, products } from "./data";
 import { LanguageSwitcher } from "./components/LanguageProvider";
 import { articles } from "./article-data";
 
-const mainSite = "https://www.hipobuys.net";
+const mainSite = "https://cnfansge.com";
 
 export default function Home() {
   const [query, setQuery] = useState("");
@@ -26,14 +26,14 @@ export default function Home() {
   function searchMainSite(event: React.FormEvent<HTMLFormElement>) {
     event.preventDefault();
     const term = query.trim();
-    window.location.href = term ? `${mainSite}/?s=${encodeURIComponent(term)}` : `${mainSite}/`;
+    window.location.href = term ? `${mainSite}/search.html?channelid=2&keywords=${encodeURIComponent(term)}` : `${mainSite}/AllProducts/`;
   }
 
   return <main>
     <header className="site-header">
       <Link className="brand logo-brand" href="/" aria-label="Hipobuy guide home"><img src="/hipobuy-logo.png" alt="Hipobuy" width="220" height="52" /></Link>
       <nav className="desktop-nav" aria-label="Primary navigation"><Link href="/spreadsheet/">Spreadsheet</Link><Link href="/qc/">QC</Link><Link href="/shipping/">Shipping</Link><Link href="/guides/">Guides</Link><Link href="/articles/">Articles</Link><Link href="/faq/">FAQ</Link></nav>
-      <div className="header-actions"><LanguageSwitcher/><a className="header-cta" href={`${mainSite}/`}>Browse products <span>↗</span></a></div>
+      <div className="header-actions"><LanguageSwitcher/><a className="header-cta" href={`${mainSite}/AllProducts/`}>Browse products <span>↗</span></a></div>
     </header>
 
     <section className="clean-hero">
@@ -62,10 +62,10 @@ export default function Home() {
 
       {visible.length ? <div className="clean-product-grid">{visible.map((product) => <article className="clean-product-card" key={product.id}>
         <a href={product.url} className="clean-product-image"><img src={product.image} alt={product.name} width="600" height="600" loading="lazy"/><span>Checked 14 Sep</span></a>
-        <div className="clean-product-copy"><p>{product.category} · #{product.id}</p><h3><a href={product.url}>{product.name}</a></h3><a href={product.url} className="clean-product-link">Search catalog <span>↗</span></a></div>
-      </article>)}</div> : <div className="empty-state"><h3>No preview rows match “{query}”.</h3><p>Try another term or search the complete catalog.</p><a href={`${mainSite}/?s=${encodeURIComponent(query)}`}>Search full catalog ↗</a></div>}
+        <div className="clean-product-copy"><p>{product.category} · #{product.id}</p><h3><a href={product.url}>{product.name}</a></h3><a href={product.url} className="clean-product-link">Open listing <span>↗</span></a></div>
+      </article>)}</div> : <div className="empty-state"><h3>No preview rows match “{query}”.</h3><p>Try another term or search the complete catalog.</p><a href={`${mainSite}/search.html?channelid=2&keywords=${encodeURIComponent(query)}`}>Search full catalog ↗</a></div>}
 
-      <div className="catalog-footer"><span>Showing {visible.length} curated preview rows</span><a href={`${mainSite}/`}>View complete catalog <span>↗</span></a></div>
+      <div className="catalog-footer"><span>Showing {visible.length} curated preview rows</span><a href={`${mainSite}/AllProducts/`}>View complete catalog <span>↗</span></a></div>
     </section>
 
     <section className="clean-guides">

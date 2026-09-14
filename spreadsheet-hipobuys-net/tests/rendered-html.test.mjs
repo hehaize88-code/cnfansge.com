@@ -25,13 +25,19 @@ test("publishes ten indexable long-form guides", async () => {
   }
 });
 
-test("keeps catalog exits on the Hipobuys main site", async () => {
+test("keeps catalog exits on the cnfansge.com main site", async () => {
   const pages = ["index.html", "spreadsheet/index.html", "shipping/index.html", "faq/index.html"];
   for (const page of pages) {
     const html = await readFile(new URL(`../out/${page}`, import.meta.url), "utf8");
-    assert.doesNotMatch(html, /href="https:\/\/cnfansge\.com/i);
-    assert.match(html, /href="https:\/\/www\.hipobuys\.net/i);
+    assert.doesNotMatch(html, /href="https:\/\/www\.hipobuys\.net/i);
+    assert.match(html, /href="https:\/\/cnfansge\.com/i);
   }
+  const homepage = await readFile(new URL("../out/index.html", import.meta.url), "utf8");
+  const productSource = await readFile(new URL("../app/data.ts", import.meta.url), "utf8");
+  for (const id of ["6127", "6126", "6682", "6227", "607", "6328", "6401", "6416", "6679", "6559", "6678", "6624"]) {
+    assert.match(productSource, new RegExp(`url: "https://cnfansge\\.com/AllProducts/${id}\\.html"`));
+  }
+  assert.match(homepage, /search\.html\?channelid=2(?:&|&amp;)keywords=/);
 });
 
 test("exports the full sitemap and analytics events", async () => {

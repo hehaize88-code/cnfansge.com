@@ -25,7 +25,7 @@ const faqs = [
 export default function FAQPage() {
   const schema = { "@context":"https://schema.org", "@type":"FAQPage", mainEntity:faqs.map(([q,a])=>({"@type":"Question",name:q,acceptedAnswer:{"@type":"Answer",text:a}})) };
   return <GuideLayout kicker="Buyer questions" title="Clear answers, with the uncertainty left visible." intro="The goal is to help you make a better check—not to turn changing platform terms, seller listings or shipping estimates into guarantees." accent="lime">
-    <section className="full-faq"><div className="faq-list">{faqs.map(([q,a],i)=><details key={q} open={i===0}><summary><span>{String(i+1).padStart(2,"0")}</span>{q}</summary><p>{a}</p></details>)}</div><aside><p className="section-kicker">Still searching?</p><h2>Open the complete product index.</h2><p>Search by product name or browse the matching category, then verify the live source listing.</p><a href="https://www.hipobuys.net/">Browse catalog ↗</a></aside></section>
+    <section className="full-faq"><div className="faq-list">{faqs.map(([q,a],i)=><details key={q} open={i===0}><summary><span>{String(i+1).padStart(2,"0")}</span>{q}</summary><p>{a}</p></details>)}</div><aside><p className="section-kicker">Still searching?</p><h2>Open the complete product index.</h2><p>Search by product name or browse the matching category, then verify the live source listing.</p><a href="https://cnfansge.com/AllProducts/">Browse catalog ↗</a></aside></section>
     <script type="application/ld+json" dangerouslySetInnerHTML={{__html:JSON.stringify(schema)}} />
   </GuideLayout>;
 }
