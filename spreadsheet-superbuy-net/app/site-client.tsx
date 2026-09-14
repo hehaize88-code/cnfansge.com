@@ -10,7 +10,7 @@ import { fullTranslations } from "./full-translations";
 type PageKey = "home"|"spreadsheet"|"finds"|"guide"|"qc"|"shipping"|"articles"|"faq"|"article";
 type Lang = "en"|"de"|"fr"|"es"|"it";
 type T = Record<string, any>;
-const destination = "https://cnfanssp.com";
+const destination = "https://cnfansge.com";
 const date = "14 Sep 2026";
 
 const products = [
