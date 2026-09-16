@@ -58,6 +58,42 @@ export const archivedProducts = products.filter((product) => !featuredProductIds
 
 export const articles = [
   {
+    slug: "sugargoo-shoe-qc-box-laces-accessory-completeness",
+    label: "SHOE SET INVENTORY NOTE",
+    read: "14 min",
+    image: "/og/qc-photo-checklist.png",
+    datePublished: "2026-09-16",
+    dateModified: "2026-09-16",
+    researchLabel: {
+      en: "RESEARCH SNAPSHOT / 16.09.2026",
+      de: "RECHERCHESTAND / 16.09.2026",
+      es: "RESUMEN DE INVESTIGACIÓN / 16.09.2026",
+      fr: "ÉTAT DE LA RECHERCHE / 16.09.2026",
+      it: "STATO DELLA RICERCA / 16.09.2026"
+    },
+    updatedLabel: {
+      en: "Updated 16 Sep 2026",
+      de: "Aktualisiert am 16. Sep. 2026",
+      es: "Actualizado el 16 sep. 2026",
+      fr: "Mis à jour le 16 sept. 2026",
+      it: "Aggiornato il 16 set. 2026"
+    },
+    title: {
+      en: "Sugargoo Shoe QC: Box, Laces and Accessory Completeness",
+      de: "Sugargoo Schuh-QC: Karton, Senkel und Zubehör vollständig prüfen",
+      es: "QC de calzado Sugargoo: caja, cordones y accesorios completos",
+      fr: "QC chaussures Sugargoo : boîte, lacets et accessoires complets",
+      it: "QC scarpe Sugargoo: scatola, lacci e accessori completi"
+    },
+    summary: {
+      en: "An item-by-item method for verifying an ordered shoe box, installed and spare laces, bags, cards, tags and detachable accessories without making quality claims.",
+      de: "Eine Einzelmethode zur Prüfung von bestelltem Karton, eingesetzten und losen Senkeln, Beuteln, Karten, Tags und abnehmbarem Zubehör ohne Qualitätsbehauptung.",
+      es: "Un método pieza por pieza para comprobar caja, cordones, bolsas, tarjetas, etiquetas y accesorios desmontables sin afirmar calidad.",
+      fr: "Une méthode pièce par pièce pour vérifier boîte, lacets, sacs, cartes, étiquettes et accessoires amovibles sans prétention de qualité.",
+      it: "Un metodo pezzo per pezzo per verificare scatola, lacci, sacche, carte, cartellini e accessori removibili senza affermazioni di qualità."
+    }
+  },
+  {
     slug: "sugargoo-leather-qc-lighting-visible-defects",
     label: "MATERIAL LIGHTING NOTE",
     read: "15 min",
@@ -431,14 +467,14 @@ export function pageMeta(lang, key) {
 }
 
 export const pageLastModified = {
-  home: "2026-09-14T07:45:00Z",
+  home: "2026-09-16T08:22:00Z",
   spreadsheet: "2026-09-01T00:00:00Z",
   finds: "2026-09-02T06:00:00Z",
   guide: "2026-09-02T06:00:00Z",
   qc: "2026-09-02T06:00:00Z",
   shipping: "2026-09-02T06:00:00Z",
   faq: "2026-09-02T06:00:00Z",
-  articles: "2026-09-14T07:45:00Z"
+  articles: "2026-09-16T08:22:00Z"
 };
 
 export function lastModifiedForPath(parts = []) {

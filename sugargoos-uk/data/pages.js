@@ -7,13 +7,14 @@ import { articleChecklists } from "./article-checklists";
 import { shoesQcArticles } from "./shoes-qc-articles";
 import { sneakerQcArticles } from "./sneaker-qc-articles";
 import { leatherQcArticles } from "./leather-qc-articles";
+import { shoeAccessoryQcArticles } from "./shoe-accessory-qc-articles";
 
 const localizedArticles = {
-  en: { ...researchedArticles, "sugargoo-shoes-qc-shape-stitching-soles-size": shoesQcArticles.en, "sugargoo-sneaker-qc-labels-insole-outsole-measurements": sneakerQcArticles.en, "sugargoo-leather-qc-lighting-visible-defects": leatherQcArticles.en },
-  de: { ...deArticles, "sugargoo-shoes-qc-shape-stitching-soles-size": shoesQcArticles.de, "sugargoo-sneaker-qc-labels-insole-outsole-measurements": sneakerQcArticles.de, "sugargoo-leather-qc-lighting-visible-defects": leatherQcArticles.de },
-  es: { ...esArticles, "sugargoo-shoes-qc-shape-stitching-soles-size": shoesQcArticles.es, "sugargoo-sneaker-qc-labels-insole-outsole-measurements": sneakerQcArticles.es, "sugargoo-leather-qc-lighting-visible-defects": leatherQcArticles.es },
-  fr: { ...frArticles, "sugargoo-shoes-qc-shape-stitching-soles-size": shoesQcArticles.fr, "sugargoo-sneaker-qc-labels-insole-outsole-measurements": sneakerQcArticles.fr, "sugargoo-leather-qc-lighting-visible-defects": leatherQcArticles.fr },
-  it: { ...itArticles, "sugargoo-shoes-qc-shape-stitching-soles-size": shoesQcArticles.it, "sugargoo-sneaker-qc-labels-insole-outsole-measurements": sneakerQcArticles.it, "sugargoo-leather-qc-lighting-visible-defects": leatherQcArticles.it }
+  en: { ...researchedArticles, "sugargoo-shoes-qc-shape-stitching-soles-size": shoesQcArticles.en, "sugargoo-sneaker-qc-labels-insole-outsole-measurements": sneakerQcArticles.en, "sugargoo-leather-qc-lighting-visible-defects": leatherQcArticles.en, "sugargoo-shoe-qc-box-laces-accessory-completeness": shoeAccessoryQcArticles.en },
+  de: { ...deArticles, "sugargoo-shoes-qc-shape-stitching-soles-size": shoesQcArticles.de, "sugargoo-sneaker-qc-labels-insole-outsole-measurements": sneakerQcArticles.de, "sugargoo-leather-qc-lighting-visible-defects": leatherQcArticles.de, "sugargoo-shoe-qc-box-laces-accessory-completeness": shoeAccessoryQcArticles.de },
+  es: { ...esArticles, "sugargoo-shoes-qc-shape-stitching-soles-size": shoesQcArticles.es, "sugargoo-sneaker-qc-labels-insole-outsole-measurements": sneakerQcArticles.es, "sugargoo-leather-qc-lighting-visible-defects": leatherQcArticles.es, "sugargoo-shoe-qc-box-laces-accessory-completeness": shoeAccessoryQcArticles.es },
+  fr: { ...frArticles, "sugargoo-shoes-qc-shape-stitching-soles-size": shoesQcArticles.fr, "sugargoo-sneaker-qc-labels-insole-outsole-measurements": sneakerQcArticles.fr, "sugargoo-leather-qc-lighting-visible-defects": leatherQcArticles.fr, "sugargoo-shoe-qc-box-laces-accessory-completeness": shoeAccessoryQcArticles.fr },
+  it: { ...itArticles, "sugargoo-shoes-qc-shape-stitching-soles-size": shoesQcArticles.it, "sugargoo-sneaker-qc-labels-insole-outsole-measurements": sneakerQcArticles.it, "sugargoo-leather-qc-lighting-visible-defects": leatherQcArticles.it, "sugargoo-shoe-qc-box-laces-accessory-completeness": shoeAccessoryQcArticles.it }
 };
 
 export const pageCopy = {
