@@ -62,21 +62,21 @@ export const articles = [
     label: "SHOE SET INVENTORY NOTE",
     read: "14 min",
     image: "/og/qc-photo-checklist.png",
-    datePublished: "2026-09-16",
-    dateModified: "2026-09-16",
+    datePublished: "2026-09-17",
+    dateModified: "2026-09-18",
     researchLabel: {
-      en: "RESEARCH SNAPSHOT / 16.09.2026",
-      de: "RECHERCHESTAND / 16.09.2026",
-      es: "RESUMEN DE INVESTIGACIÓN / 16.09.2026",
-      fr: "ÉTAT DE LA RECHERCHE / 16.09.2026",
-      it: "STATO DELLA RICERCA / 16.09.2026"
+      en: "RESEARCH SNAPSHOT / 18.09.2026",
+      de: "RECHERCHESTAND / 18.09.2026",
+      es: "RESUMEN DE INVESTIGACIÓN / 18.09.2026",
+      fr: "ÉTAT DE LA RECHERCHE / 18.09.2026",
+      it: "STATO DELLA RICERCA / 18.09.2026"
     },
     updatedLabel: {
-      en: "Updated 16 Sep 2026",
-      de: "Aktualisiert am 16. Sep. 2026",
-      es: "Actualizado el 16 sep. 2026",
-      fr: "Mis à jour le 16 sept. 2026",
-      it: "Aggiornato il 16 set. 2026"
+      en: "Updated 18 Sep 2026",
+      de: "Aktualisiert am 18. Sep. 2026",
+      es: "Actualizado el 18 sep. 2026",
+      fr: "Mis à jour le 18 sept. 2026",
+      it: "Aggiornato il 18 set. 2026"
     },
     title: {
       en: "Sugargoo Shoe QC: Box, Laces and Accessory Completeness",
