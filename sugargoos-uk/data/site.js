@@ -467,14 +467,14 @@ export function pageMeta(lang, key) {
 }
 
 export const pageLastModified = {
-  home: "2026-09-16T08:22:00Z",
+  home: "2026-09-17T19:38:00Z",
   spreadsheet: "2026-09-01T00:00:00Z",
   finds: "2026-09-02T06:00:00Z",
   guide: "2026-09-02T06:00:00Z",
   qc: "2026-09-02T06:00:00Z",
   shipping: "2026-09-02T06:00:00Z",
   faq: "2026-09-02T06:00:00Z",
-  articles: "2026-09-16T08:22:00Z"
+  articles: "2026-09-17T19:38:00Z"
 };
 
 export function lastModifiedForPath(parts = []) {
