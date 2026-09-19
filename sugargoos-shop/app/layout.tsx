@@ -10,7 +10,17 @@ export const metadata: Metadata = {
   },
   description:
     "An independent Sugargoo spreadsheet with current product routes, practical QC checks, shipping guidance and clearly labeled reference prices.",
-  robots: { index: false, follow: false },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+      "max-video-preview": -1,
+    },
+  },
   openGraph: {
     type: "website",
     title: "Sugargoo Find Desk",
