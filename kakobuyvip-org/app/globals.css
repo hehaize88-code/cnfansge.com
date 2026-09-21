@@ -205,6 +205,8 @@ main { overflow: hidden; }
 .article-body .source-notes p { font-family: inherit; font-size: 14px; line-height: 1.7; }
 .source-notes ul { margin: 20px 0 0; padding: 0; display: grid; gap: 8px; list-style: none; }
 .source-notes li { padding: 11px 13px; border-radius: 12px; background: white; color: #544a48; font-size: 12px; font-weight: 700; }
+.source-notes li a { display: flex; align-items: center; justify-content: space-between; gap: 10px; color: inherit; }
+.source-notes li a:hover { color: var(--rose); }
 .article-next { width: min(1420px, calc(100% - 40px)); margin: 0 auto 20px; padding: 42px clamp(25px, 5vw, 74px); display: flex; align-items: center; justify-content: space-between; gap: 30px; border-radius: 30px; background: var(--ink); color: white; }
 .article-next p { max-width: 650px; }
 .article-next a { padding: 14px 18px; display: flex; align-items: center; gap: 8px; border-radius: 14px; background: var(--rose); color: white; font-weight: 800; white-space: nowrap; }

@@ -1,6 +1,6 @@
 import type { Locale, PageKey } from "./site-data";
 
-type IndependentPage = Exclude<PageKey, "home" | "qcArticle" | "shippingArticle" | "storageArticle" | "officialWebsiteArticle">;
+type IndependentPage = Exclude<PageKey, "home" | "qcArticle" | "shippingArticle" | "storageArticle" | "officialWebsiteArticle" | "legitArticle" | "reviewsArticle" | "safeArticle" | "scamClaimsArticle" | "helpCenterArticle" | "copycatArticle" | "policyTrackerArticle">;
 
 export const seoPageIntro: Record<Locale, Record<IndependentPage, [string, string]>> = {
   en: {
@@ -10,7 +10,7 @@ export const seoPageIntro: Record<Locale, Record<IndependentPage, [string, strin
     qc: ["Kakobuy QC Photo Guide", "Use a repeatable inspection method for identity, shape, construction and decision-critical evidence before the parcel leaves the warehouse."],
     shipping: ["Kakobuy Shipping Calculator and Weight Guide", "Compare live routes with realistic weight and dimensions, understand volumetric billing, and separate platform services from destination taxes."],
     faq: ["Kakobuy Fees, Storage and Returns FAQ", "Clear, dated answers based on Kakobuy's public help pages, with variable fees and policies described as snapshots rather than guarantees."],
-    articles: ["Kakobuy Guides and Research", "Long-form, source-checked guides covering the Kakobuy spreadsheet, QC photos, shipping cost, 100-day storage and seller returns."],
+    articles: ["Kakobuy Reviews and Evidence Guides", "Source-checked research on the official site, legitimacy, reviews, safety, policy changes, QC and parcel decisions."],
   },
   de: {
     spreadsheet: ["Kakobuy Spreadsheet 2026", "Geprüfte Produktwege mit passenden Bildern, Preisen und Zielen – plus klare Hinweise, was vor der Bestellung noch geprüft werden muss."],
@@ -19,7 +19,7 @@ export const seoPageIntro: Record<Locale, Record<IndependentPage, [string, strin
     qc: ["Kakobuy QC-Foto-Leitfaden", "Identität, Form, Verarbeitung und entscheidende Belege vor dem Versand systematisch prüfen."],
     shipping: ["Kakobuy Versandkosten- und Gewichtsleitfaden", "Live-Linien mit realistischen Maßen vergleichen, Volumengewicht verstehen und Plattformdienste von Einfuhrabgaben trennen."],
     faq: ["Kakobuy Gebühren, Lagerung und Rückgaben", "Datierte Antworten aus öffentlichen Kakobuy-Hilfeseiten; variable Regeln werden nicht als Garantien dargestellt."],
-    articles: ["Kakobuy Leitfäden und Recherche", "Ausführliche, quellengeprüfte Beiträge zu Spreadsheet, QC, Versand, 100 Tagen Lagerung und Verkäufer-Rückgaben."],
+    articles: ["Kakobuy Erfahrungen und Quellenleitfäden", "Quellengeprüfte Recherche zu offizieller Website, Seriosität, Sicherheit, Richtlinien, QC und Paketentscheidungen."],
   },
   es: {
     spreadsheet: ["Hoja Kakobuy 2026", "Índice revisado que mantiene alineados imagen, precio y destino y explica qué verificar antes de pedir."],
@@ -28,7 +28,7 @@ export const seoPageIntro: Record<Locale, Record<IndependentPage, [string, strin
     qc: ["Guía de fotos QC de Kakobuy", "Método repetible para identidad, forma, construcción y evidencia decisiva antes del envío."],
     shipping: ["Calculadora y guía de peso Kakobuy", "Compara rutas con peso y medidas realistas, entiende el volumétrico y separa servicios de impuestos de destino."],
     faq: ["Comisiones, almacén y devoluciones Kakobuy", "Respuestas fechadas basadas en la ayuda pública, sin convertir términos variables en garantías."],
-    articles: ["Guías e investigación Kakobuy", "Artículos extensos y revisados sobre hoja, QC, envío, 100 días de almacén y devoluciones del vendedor."],
+    articles: ["Opiniones y guías con evidencia Kakobuy", "Investigación verificada sobre web oficial, legitimidad, seguridad, políticas, QC y decisiones de paquete."],
   },
   fr: {
     spreadsheet: ["Tableur Kakobuy 2026", "Index vérifié où image, prix et destination restent alignés, avec les contrôles à faire avant commande."],
@@ -37,7 +37,7 @@ export const seoPageIntro: Record<Locale, Record<IndependentPage, [string, strin
     qc: ["Guide des photos QC Kakobuy", "Méthode répétable pour identité, forme, fabrication et preuve décisive avant expédition."],
     shipping: ["Calculateur et guide de poids Kakobuy", "Comparez les lignes avec poids et dimensions réalistes et séparez services de plateforme et taxes de destination."],
     faq: ["Frais, stockage et retours Kakobuy", "Réponses datées issues des pages d'aide publiques, sans transformer des conditions variables en garanties."],
-    articles: ["Guides et recherches Kakobuy", "Articles longs et vérifiés sur le tableur, le QC, la livraison, les 100 jours de stockage et les retours vendeur."],
+    articles: ["Avis Kakobuy et guides étayés", "Recherche vérifiée sur le site officiel, la légitimité, la sécurité, les politiques, le QC et les colis."],
   },
   it: {
     spreadsheet: ["Foglio Kakobuy 2026", "Indice verificato che mantiene allineati immagine, prezzo e destinazione e indica cosa controllare prima dell'ordine."],
@@ -46,7 +46,7 @@ export const seoPageIntro: Record<Locale, Record<IndependentPage, [string, strin
     qc: ["Guida alle foto QC Kakobuy", "Metodo ripetibile per identità, forma, costruzione e prova decisiva prima della spedizione."],
     shipping: ["Calcolatore e guida peso Kakobuy", "Confronta linee con peso e misure realistiche e separa servizi di piattaforma e tasse di destinazione."],
     faq: ["Costi, deposito e resi Kakobuy", "Risposte datate basate sulle pagine pubbliche, senza trasformare termini variabili in garanzie."],
-    articles: ["Guide e ricerche Kakobuy", "Articoli lunghi verificati su foglio, QC, spedizione, 100 giorni di deposito e resi del venditore."],
+    articles: ["Recensioni Kakobuy e guide basate su prove", "Ricerca verificata su sito ufficiale, affidabilità, sicurezza, politiche, QC e decisioni sul pacco."],
   },
 };
 

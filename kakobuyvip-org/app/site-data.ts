@@ -1,10 +1,11 @@
 export const localeCodes = ["en", "de", "es", "fr", "it"] as const;
 export type Locale = (typeof localeCodes)[number];
-export type PageKey = "home" | "spreadsheet" | "finds" | "guide" | "qc" | "shipping" | "faq" | "articles" | "qcArticle" | "shippingArticle" | "storageArticle" | "officialWebsiteArticle";
+export type PageKey = "home" | "spreadsheet" | "finds" | "guide" | "qc" | "shipping" | "faq" | "articles" | "qcArticle" | "shippingArticle" | "storageArticle" | "officialWebsiteArticle" | "legitArticle" | "reviewsArticle" | "safeArticle" | "scamClaimsArticle" | "helpCenterArticle" | "copycatArticle" | "policyTrackerArticle";
 
 export const pagePaths: Record<PageKey, string> = {
   home: "", spreadsheet: "spreadsheet", finds: "finds", guide: "guide", qc: "qc", shipping: "shipping", faq: "faq", articles: "articles",
   qcArticle: "articles/kakobuy-spreadsheet-qc-checklist", shippingArticle: "articles/kakobuy-shipping-weight-guide", storageArticle: "articles/kakobuy-storage-return-guide", officialWebsiteArticle: "articles/kakobuy-official-website-domain-check",
+  legitArticle: "articles/is-kakobuy-legit-evidence-check", reviewsArticle: "articles/kakobuy-reviews-evidence-report", safeArticle: "articles/is-kakobuy-safe-risk-check", scamClaimsArticle: "articles/kakobuy-scam-claims-investigation", helpCenterArticle: "articles/kakobuy-help-center-source-guide", copycatArticle: "articles/kakobuy-copycat-sites-domain-warning", policyTrackerArticle: "articles/kakobuy-policy-change-tracker",
 };
 export function localPath(locale: Locale, page: PageKey) {
   const a = locale === "en" ? "" : `/${locale}`;
@@ -23,7 +24,7 @@ export const categories = [
   ["Headwear", "https://cnfansge.com/headwear/"], ["Accessories", "https://cnfansge.com/accessories/"], ["Jerseys", "https://cnfansge.com/jersey/"], ["All products", "https://cnfansge.com/AllProducts/"],
 ] as const;
 
-type PageIntro = Record<Exclude<PageKey,"home"|"qcArticle"|"shippingArticle"|"storageArticle"|"officialWebsiteArticle">,[string,string]>;
+type PageIntro = Record<Exclude<PageKey,"home"|"qcArticle"|"shippingArticle"|"storageArticle"|"officialWebsiteArticle"|"legitArticle"|"reviewsArticle"|"safeArticle"|"scamClaimsArticle"|"helpCenterArticle"|"copycatArticle"|"policyTrackerArticle">,[string,string]>;
 export type Copy = {
   language:string; nav:string[]; badge:string; hero:string; heroBody:string; search:string; placeholder:string; browse:string; verified:string; updated:string; priceNote:string; open:string;
   categories:string; categoriesBody:string; featured:string; featuredBody:string; qcSignals:string; qcItems:string[]; learn:string; resourceTitle:string; resourceBody:string;

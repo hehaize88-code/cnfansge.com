@@ -5,9 +5,17 @@ import LocaleSwitcher from "./locale-switcher";
 import { categories, copy, localPath, products, type Locale, type PageKey } from "./site-data";
 import { articleData } from "./article-data";
 import { officialWebsiteArticleData } from "./official-website-article";
+import { trustArticleData, type TrustArticleKey } from "./trust-articles";
 import { officialFaqs, seoPageIntro } from "./research-copy";
 
 const navKeys: PageKey[] = ["spreadsheet","finds","guide","qc","shipping","faq","articles"];
+const homeResearch:Record<Locale,[string,string]>={
+  en:["Kakobuy, checked against the source.","Independent Kakobuy reviews, official-site checks and dated evidence guides—alongside traceable product routes, QC methods and realistic parcel planning."],
+  de:["Kakobuy, an den Quellen geprüft.","Unabhängige Kakobuy-Erfahrungen, Prüfung der offiziellen Website und datierte Leitfäden – ergänzt durch nachvollziehbare Produktwege, QC und Paketplanung."],
+  es:["Kakobuy, contrastado con las fuentes.","Opiniones independientes, control de la web oficial y guías con fecha, junto a rutas de producto rastreables, QC y planificación del paquete."],
+  fr:["Kakobuy, vérifié à la source.","Avis indépendants, contrôle du site officiel et guides datés, avec routes produit traçables, méthode QC et planification du colis."],
+  it:["Kakobuy, verificato alla fonte.","Recensioni indipendenti, controllo del sito ufficiale e guide datate, insieme a percorsi prodotto tracciabili, QC e pianificazione del pacco."],
+};
 
 function Header({ locale, page }: { locale:Locale; page:PageKey }) {
   const c = copy[locale];
@@ -46,6 +54,7 @@ function Categories({ locale }: {locale:Locale}) {
 
 function Home({ locale }: {locale:Locale}) {
   const c=copy[locale];
+  const [homeTitle,homeBody]=homeResearch[locale];
   const schema={"@context":"https://schema.org","@type":"WebSite",name:"Kakobuy VIP",url:"https://kakobuyvip.org",potentialAction:{"@type":"SearchAction",target:"https://cnfansge.com/search.html?keywords={search_term_string}","query-input":"required name=search_term_string"}};
   const faqSchema={"@context":"https://schema.org","@type":"FAQPage",mainEntity:officialFaqs[locale].map(([q,a])=>({"@type":"Question",name:q,acceptedAnswer:{"@type":"Answer",text:a}}))};
   return <>
@@ -53,7 +62,7 @@ function Home({ locale }: {locale:Locale}) {
     <script type="application/ld+json" dangerouslySetInnerHTML={{__html:JSON.stringify(faqSchema)}}/>
     <main>
       <section className="hero">
-        <div className="hero-copy"><p className="status"><span/> {c.badge}</p><h1>{c.hero}</h1><p className="lede">{c.heroBody}</p><SearchBox locale={locale}/><div className="hero-meta"><span><ShieldCheck size={16}/>{c.verified}</span><span>{c.updated}</span></div></div>
+        <div className="hero-copy"><p className="status"><span/> {c.badge}</p><h1>{homeTitle}</h1><p className="lede">{homeBody}</p><SearchBox locale={locale}/><div className="hero-meta"><span><ShieldCheck size={16}/>{c.verified}</span><span>{c.updated}</span></div></div>
         <div className="hero-board"><div className="board-orbit orbit-one">QC</div><div className="board-orbit orbit-two">LIVE</div><a href={products[0].href} target="_blank" rel="noreferrer"><div className="board-head"><span>FEATURED FIND</span><strong>01 / 04</strong></div><img src={products[0].image} alt="Featured shoes" width="720" height="720"/><div className="board-caption"><small>LINK &amp; IMAGE CHECKED</small><b>{products[0].name}</b><span>{products[0].price}</span></div></a><div className="board-note"><ShieldCheck size={18}/><span>{c.verified}</span></div></div>
       </section>
       <section className="section"><div className="section-head"><div><p className="eyebrow">LIVE SAMPLE / 04</p><h2>{c.featured}</h2></div><p>{c.featuredBody}</p></div><ProductGrid locale={locale}/><p className="price-note">{c.priceNote}</p></section>
@@ -90,7 +99,8 @@ const shippingCopy:Record<Locale,{formula:string;cards:Array<[string,string]>}>=
   it:{formula:"Peso volumetrico = lunghezza × larghezza × altezza ÷ divisore",cards:[["Peso reale","Peso sulla bilancia del pacco imballato."],["Peso volumetrico","Calcolo dello spazio che può incidere su scarpe o giacche voluminose."],["Consolidamento","Riduce imballaggi doppi, ma una scatola grande aumenta il volume."],["Linee idonee","Materiale, valore e destinazione determinano le rotte disponibili."]]}
 };
 
-function PageHero({locale,page}:{locale:Locale;page:Exclude<PageKey,"home"|"qcArticle"|"shippingArticle"|"storageArticle"|"officialWebsiteArticle">}) { const [title,body]=seoPageIntro[locale][page]; return <section className="page-hero"><p className="eyebrow">KAKOBUY VIP / {page.toUpperCase()}</p><h1>{title}</h1><p>{body}</p></section>; }
+type SectionPageKey=Extract<PageKey,"spreadsheet"|"finds"|"guide"|"qc"|"shipping"|"faq"|"articles">;
+function PageHero({locale,page}:{locale:Locale;page:SectionPageKey}) { const [title,body]=seoPageIntro[locale][page]; return <section className="page-hero"><p className="eyebrow">KAKOBUY VIP / {page.toUpperCase()}</p><h1>{title}</h1><p>{body}</p></section>; }
 
 function SpreadsheetPage({locale}:{locale:Locale}) { const c=copy[locale]; return <main><PageHero locale={locale} page="spreadsheet"/><section className="section"><div className="method-grid"><div><span>01</span><h3>{c.verified}</h3><p>{c.categoriesBody}</p></div><div><span>02</span><h3>{c.updated}</h3><p>{c.priceNote}</p></div><div><span>03</span><h3>Exact destinations</h3><p>No copied carts, alternate agents or hidden redirect chains.</p></div></div><ProductGrid locale={locale} all/><Categories locale={locale}/></section></main>; }
 function FindsPage({locale}:{locale:Locale}) { const c=copy[locale]; return <main><PageHero locale={locale} page="finds"/><section className="section"><SearchBox locale={locale}/><div className="spacer"/><ProductGrid locale={locale} all/><p className="price-note">{c.priceNote}</p></section></main>; }
@@ -101,10 +111,12 @@ function ShippingPage({locale}:{locale:Locale}) { const s=shippingCopy[locale]; 
 function Faq({locale,compact=false}:{locale:Locale;compact?:boolean}) { const c=copy[locale]; const list=compact?officialFaqs[locale].slice(0,3):officialFaqs[locale]; return <section className={`section faq-section ${compact?"compact":""}`}><div><p className="eyebrow">FAQ / {String(list.length).padStart(2,"0")}</p><h2>{c.faqTitle}</h2></div><div>{list.map(([q,a],i)=><details key={q} open={!compact&&i===0}><summary><span>{String(i+1).padStart(2,"0")}</span>{q}</summary><p>{a}</p></details>)}</div></section>; }
 function FAQPage({locale}:{locale:Locale}) { const c=copy[locale]; const schema={"@context":"https://schema.org","@type":"FAQPage",mainEntity:officialFaqs[locale].map(([q,a])=>({"@type":"Question",name:q,acceptedAnswer:{"@type":"Answer",text:a}}))}; return <main><script type="application/ld+json" dangerouslySetInnerHTML={{__html:JSON.stringify(schema)}}/><PageHero locale={locale} page="faq"/><Faq locale={locale}/><section className="section callout"><strong>Independent by design</strong><p>{c.disclaimer}</p></section></main>; }
 
-type ArticlePageKey=Extract<PageKey,"qcArticle"|"shippingArticle"|"storageArticle"|"officialWebsiteArticle">;
-const articleKeys:ArticlePageKey[]=["qcArticle","shippingArticle","storageArticle","officialWebsiteArticle"];
+type ArticlePageKey=Extract<PageKey,"qcArticle"|"shippingArticle"|"storageArticle"|"officialWebsiteArticle">|TrustArticleKey;
+const articleKeys:ArticlePageKey[]=["officialWebsiteArticle","legitArticle","reviewsArticle","safeArticle","scamClaimsArticle","helpCenterArticle","copycatArticle","policyTrackerArticle","qcArticle","shippingArticle","storageArticle"];
 function getArticle(locale:Locale,page:ArticlePageKey) {
-  return page==="officialWebsiteArticle"?officialWebsiteArticleData[locale]:articleData[locale][page];
+  if(page==="officialWebsiteArticle") return officialWebsiteArticleData[locale];
+  if(page in trustArticleData[locale]) return trustArticleData[locale][page as TrustArticleKey];
+  return articleData[locale][page as "qcArticle"|"shippingArticle"|"storageArticle"];
 }
 const articleUi:Record<Locale,{latest:string;standard:string;basis:string;sources:string;sourceNote:string;visual:string}>={
   en:{latest:"Latest Kakobuy research",standard:"Research standard",basis:"Research basis",sources:"Official Kakobuy pages checked",sourceNote:"Platform terms, fees, routes and notices can change. We reviewed these source pages on the date shown above and describe variable figures as snapshots, not guarantees.",visual:"A listing image is a reference point, not warehouse QC evidence. Confirm the ordered variant against the live order record and warehouse views."},
@@ -114,20 +126,19 @@ const articleUi:Record<Locale,{latest:string;standard:string;basis:string;source
   it:{latest:"Ricerche Kakobuy recenti",standard:"Standard di ricerca",basis:"Base della ricerca",sources:"Pagine ufficiali Kakobuy verificate",sourceNote:"Termini, costi, linee e avvisi possono cambiare. I valori variabili sono istantanee datate, non garanzie.",visual:"L'immagine dell'inserzione è un riferimento, non una prova QC. Confronta variante ordinata, dati e foto di magazzino."}
 };
 function ArticleHighlights({locale}:{locale:Locale}) {
-  return <section className="section article-highlights"><div className="section-head"><div><p className="eyebrow">SEO GUIDES / 04</p><h2>{articleUi[locale].latest}</h2></div><p>{seoPageIntro[locale].articles[1]}</p></div><div className="article-grid">{articleKeys.map((key,i)=>{const a=getArticle(locale,key);return <Link href={localPath(locale,key)} key={key}><span>{a.tag} / 0{i+1}</span><h2>{a.title}</h2><p>{a.lede}</p><b>{a.read}<ArrowRight size={16}/></b></Link>})}</div></section>;
+  return <section className="section article-highlights"><div className="section-head"><div><p className="eyebrow">RESEARCH / 11</p><h2>{articleUi[locale].latest}</h2></div><p>{seoPageIntro[locale].articles[1]}</p></div><div className="article-grid">{articleKeys.slice(0,6).map((key,i)=>{const a=getArticle(locale,key);return <Link href={localPath(locale,key)} key={key}><span>{a.tag} / {String(i+1).padStart(2,"0")}</span><h2>{a.title}</h2><p>{a.lede}</p><b>{a.read}<ArrowRight size={16}/></b></Link>})}</div><Link className="text-link" href={localPath(locale,"articles")}>{copy[locale].pageIntro.articles[0]}<ArrowRight size={16}/></Link></section>;
 }
 function ArticlesPage({locale}:{locale:Locale}) { return <main><PageHero locale={locale} page="articles"/><section className="section article-grid">{articleKeys.map((key,i)=>{const a=getArticle(locale,key);return <Link href={localPath(locale,key)} key={key}><span>{a.tag} / 0{i+1}</span><h2>{a.title}</h2><p>{a.lede}</p><b>{a.read}<ArrowRight size={16}/></b></Link>})}</section></main>; }
 
 function ArticlePage({locale,page}:{locale:Locale;page:ArticlePageKey}) {
   const a=getArticle(locale,page); const canonical=`https://kakobuyvip.org${localPath(locale,page)==="/"?"":localPath(locale,page)}`;
   const wordCount=a.sections.flatMap(([,paras])=>paras).join(" ").trim().split(/\s+/).length;
-  const date=page==="officialWebsiteArticle"?"2026-08-31":"2026-08-29";
+  const date=page==="officialWebsiteArticle"||page in trustArticleData[locale]?"2026-09-21":"2026-08-29";
   const articleSchema={"@type":"Article",headline:a.title,description:a.lede,datePublished:date,dateModified:date,mainEntityOfPage:canonical,wordCount,citation:a.sources.map(source=>source.url),author:{"@type":"Organization",name:"Kakobuy VIP Editorial Desk"},publisher:{"@type":"Organization",name:"Kakobuy VIP"}};
   const breadcrumbSchema={"@type":"BreadcrumbList",itemListElement:[{"@type":"ListItem",position:1,name:"Home",item:`https://kakobuyvip.org${localPath(locale,"home")}`},{"@type":"ListItem",position:2,name:copy[locale].pageIntro.articles[0],item:`https://kakobuyvip.org${localPath(locale,"articles")}`},{"@type":"ListItem",position:3,name:a.title,item:canonical}]};
-  const faqs=page==="officialWebsiteArticle"?officialWebsiteArticleData[locale].faqs:null;
-  const graph=[articleSchema,breadcrumbSchema,...(faqs?[{"@type":"FAQPage",mainEntity:faqs.map(([q,answer])=>({"@type":"Question",name:q,acceptedAnswer:{"@type":"Answer",text:answer}}))}]:[])];
+  const graph=[articleSchema,breadcrumbSchema];
   const schema={"@context":"https://schema.org","@graph":graph};
-  return <main><script type="application/ld+json" dangerouslySetInnerHTML={{__html:JSON.stringify(schema)}}/><article className="field-article"><header><p className="eyebrow">{a.tag} / FIELD NOTE</p><h1>{a.title}</h1><p>{a.lede}</p><span>{a.read} · {a.reviewed}</span></header>{page==="qcArticle"&&<figure className="article-visual"><img src={products[0].image} alt={products[0].name} width="1200" height="780"/><figcaption>{articleUi[locale].visual}</figcaption></figure>}<div className="article-body"><aside><Box/><strong>{articleUi[locale].standard}</strong><p>{copy[locale].disclaimer}</p><small>{a.reviewed}</small></aside><div>{a.sections.map(([title,paras],i)=><section key={title}><span>0{i+1}</span><h2>{title}</h2>{paras.map(p=><p key={p}>{p}</p>)}</section>)}{faqs&&<section className="source-notes"><span>FAQ / 04</span><h2>FAQ</h2>{faqs.map(([q,answer])=><div key={q}><h3>{q}</h3><p>{answer}</p></div>)}</section>}<section className="source-notes"><span>{articleUi[locale].basis}</span><h2>{articleUi[locale].sources}</h2><p>{articleUi[locale].sourceNote}</p><ul>{a.sources.map(source=><li key={source.url}>{source.label}</li>)}</ul></section></div></div><div className="article-next"><p>{copy[locale].resourceBody}</p><Link href={localPath(locale,"articles")}>{copy[locale].pageIntro.articles[0]}<ArrowRight size={17}/></Link></div></article></main>;
+  return <main><script type="application/ld+json" dangerouslySetInnerHTML={{__html:JSON.stringify(schema)}}/><article className="field-article"><header><p className="eyebrow">{a.tag} / FIELD NOTE</p><h1>{a.title}</h1><p>{a.lede}</p><span>{a.read} · {a.reviewed}</span></header>{page==="qcArticle"&&<figure className="article-visual"><img src={products[0].image} alt={products[0].name} width="1200" height="780"/><figcaption>{articleUi[locale].visual}</figcaption></figure>}<div className="article-body"><aside><Box/><strong>{articleUi[locale].standard}</strong><p>{copy[locale].disclaimer}</p><small>{a.reviewed}</small></aside><div>{a.sections.map(([title,paras],i)=><section key={title}><span>{String(i+1).padStart(2,"0")}</span><h2>{title}</h2>{paras.map(p=><p key={p}>{p}</p>)}</section>)}<section className="source-notes"><span>{articleUi[locale].basis}</span><h2>{articleUi[locale].sources}</h2><p>{articleUi[locale].sourceNote}</p><ul>{a.sources.map(source=><li key={source.url}><a href={source.url} target="_blank" rel="noreferrer">{source.label}<ExternalLink size={12}/></a></li>)}</ul></section></div></div><div className="article-next"><p>{copy[locale].resourceBody}</p><Link href={localPath(locale,"articles")}>{copy[locale].pageIntro.articles[0]}<ArrowRight size={17}/></Link></div></article></main>;
 }
 
 export function SiteView({locale,page}:{locale:Locale;page:PageKey}) {
