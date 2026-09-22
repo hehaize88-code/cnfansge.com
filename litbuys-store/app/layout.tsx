@@ -4,9 +4,9 @@ import "./globals.css";
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://litbuys.store"),
-  title: "LitBuys Store — LitBuy Spreadsheet, Finds & QC Guides",
+  title: "LitBuy Spreadsheet 2026: Finds, QC & Shipping",
   description:
-    "Browse LitBuy product finds, matched product routes, QC guidance and shipping explainers before opening the final listing.",
+    "Browse the LitBuy spreadsheet, matched product finds, QC photo guides and shipping advice. Compare routes, sizing and parcel weight before ordering.",
   icons: {
     icon: "/litbuy.png",
     shortcut: "/litbuy.png",
@@ -17,8 +17,8 @@ export const metadata: Metadata = {
     type: "website",
     url: "https://litbuys.store",
     siteName: "LitBuys Store",
-    title: "LitBuys Store — Spreadsheet, Finds & QC Guides",
-    description: "Matched product routes, LitBuy spreadsheet records, QC guidance and shipping explainers.",
+    title: "LitBuy Spreadsheet 2026: Finds, QC & Shipping",
+    description: "Matched LitBuy product routes, spreadsheet records, QC photo guidance, warehouse help and shipping explainers.",
   },
 };
 

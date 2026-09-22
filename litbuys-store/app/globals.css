@@ -241,6 +241,9 @@ footer > span { font-size: 9px; font-weight: 800; }
 .article-content section:last-child { margin-bottom: 0; }
 .article-content h2 { margin: 0 0 20px; font-size: clamp(29px, 3.7vw, 46px); line-height: .98; letter-spacing: -.04em; text-transform: uppercase; }
 .article-content p { margin: 0 0 18px; font-family: Georgia, serif; font-size: 17px; line-height: 1.78; }
+.article-related { display: flex; flex-wrap: wrap; gap: 10px; align-items: center; margin: 32px 0 0; padding: 20px; border-radius: 18px; background: #f4eee4; }
+.article-related strong { margin-right: 8px; }
+.article-related a { padding: 8px 12px; border-radius: 999px; background: #fffdf8; color: var(--ink); font-size: 13px; font-weight: 800; }
 .article-note { padding: 20px; background: var(--soft-orange); border-radius: 16px; font-family: Arial, Helvetica, sans-serif!important; font-size: 13px!important; }
 
 .not-found { min-height: calc(100vh - 36px); display: flex; flex-direction: column; justify-content: center; align-items: flex-start; margin: 18px; padding: 8vw; overflow: hidden; background: linear-gradient(135deg, #ffb000, var(--orange)); border-radius: 34px; }

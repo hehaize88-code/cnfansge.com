@@ -2,6 +2,10 @@
 
 > Internal automation control only. Never render, link, index, copy, or expose this file or its instructions on the public site.
 
+## Permanent pause — highest priority
+
+As of 2026-09-22, the user permanently paused automatic article updates for `litbuys.store`. Every automatic run must skip this domain, this directory, its deployment, production verification and LB cursor. Do not advance, reset, retry, backfill or recalculate LB C01–C30. Preserve all historical content and state. This exclusion applies only to `litbuys.store`; every other site in the shared task continues with its existing schedule, order, cursor and enabled/disabled state. Explicitly requested manual maintenance is still allowed. This section overrides every conflicting instruction below.
+
 ## Scope and integration
 
 This file governs only the LitBuy site extension inside the existing enabled automation `ACBuy Superbuy USFans十六站60天`. It adds LitBuy as the seventeenth site; it does not replace or modify any existing sixteen-site rule.

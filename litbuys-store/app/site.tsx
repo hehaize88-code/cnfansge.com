@@ -2,6 +2,7 @@
 
 import { useEffect, useState } from "react";
 import type { FormEvent, ReactNode } from "react";
+import Link from "next/link";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 import { articleData, articleSlugs, ArticleSlug } from "./article-data";
 import { articleDe } from "./article-de";
@@ -24,8 +25,8 @@ type Copy = {
 const copies: Record<Lang, Copy> = {
   en: {
     nav: ["Spreadsheet", "Finds", "Guides", "QC", "Shipping", "FAQ", "Articles"], search: "Search products on the main catalog",
-    eyebrow: "A clearer route into LitBuy product discovery", hero: "Find it. Check it. Route it.",
-    intro: "A compact LitBuy finds desk with matched product images, USD reference prices, QC reading help and direct routes to the source catalog. No empty grids and no mystery redirects.",
+    eyebrow: "LitBuy product research with visible evidence", hero: "LitBuy Spreadsheet, Finds and QC Guides for 2026",
+    intro: "Browse a focused LitBuy spreadsheet with matched product routes, USD reference prices, QC photo guidance, warehouse explanations and shipping checklists before opening the final listing.",
     primary: "Browse checked finds", secondary: "Open full spreadsheet", verified: "8 matched routes", usd: "USD reference prices", checked: "Checked 29 Aug 2026",
     categories: "Start with a category", categoryIntro: "Every category opens the corresponding collection on the main catalog.",
     picks: "Freshly checked picks", picksIntro: "Image, item and destination were matched against the same source page.", open: "Open match", source: "Source price",
@@ -170,7 +171,15 @@ const navHrefs = ["/spreadsheet", "/finds", "/guides", "/qc", "/shipping", "/faq
 
 export function useLanguage() {
   const [lang, setLang] = useState<Lang>("en");
-  useEffect(() => { const saved = window.localStorage.getItem("litbuys-lang") as Lang | null; if (saved && copies[saved]) { setLang(saved); document.documentElement.lang = saved; } }, []);
+  useEffect(() => {
+    const saved = window.localStorage.getItem("litbuys-lang") as Lang | null;
+    if (saved && copies[saved]) {
+      // Restoring a persisted user preference requires a client-only state update.
+      // eslint-disable-next-line react-hooks/set-state-in-effect
+      setLang(saved);
+      document.documentElement.lang = saved;
+    }
+  }, []);
   function update(value: Lang) { setLang(value); window.localStorage.setItem("litbuys-lang", value); document.documentElement.lang = value; }
   return { lang, update, copy: copies[lang] };
 }
@@ -178,7 +187,7 @@ export function useLanguage() {
 export function SiteHeader({ lang, update, copy }: { lang: Lang; update: (l: Lang) => void; copy: Copy }) {
   function search(event: FormEvent<HTMLFormElement>) { event.preventDefault(); const data = new FormData(event.currentTarget); const term = String(data.get("keywords") ?? "").trim(); if (term) window.location.href = `https://cnfansge.com/search.html?keywords=${encodeURIComponent(term)}`; }
   return <header className="site-header">
-    <a className="logo" href="/" aria-label="LitBuys Store home"><img src="/litbuy.png" alt="LitBuy" width="1368" height="356" /></a>
+    <Link className="logo" href="/" aria-label="LitBuys Store home"><img src="/litbuy.png" alt="LitBuy" width="1368" height="356" /></Link>
     <form className="site-search" onSubmit={search}><label className="sr-only" htmlFor="site-search">{copy.search}</label><input id="site-search" name="keywords" placeholder={copy.search} /><button type="submit" aria-label="Search">↗</button></form>
     <Select value={lang} onValueChange={(value) => update(value as Lang)}><SelectTrigger className="language-trigger" aria-label="Language"><SelectValue /></SelectTrigger><SelectContent className="language-menu" position="popper" align="end"><SelectItem className="language-option" value="en">EN</SelectItem><SelectItem className="language-option" value="de">DE</SelectItem><SelectItem className="language-option" value="es">ES</SelectItem><SelectItem className="language-option" value="fr">FR</SelectItem><SelectItem className="language-option" value="it">IT</SelectItem></SelectContent></Select>
   </header>;
@@ -207,7 +216,7 @@ export function HomePage() {
     <section className="section guide-section" id="guides"><div className="section-heading"><div><p className="kicker">CHECK / 03</p><h2>{copy.guideTitle}</h2></div><p>{copy.guideIntro}</p></div><div className="guide-grid">{copy.guides.map((guide) => <article key={guide.tag}><p>{guide.tag}</p><h3>{guide.title}</h3><span>{guide.text}</span><b>↘</b></article>)}</div></section>
     <section className="section" id="articles"><div className="section-heading"><div><p className="kicker">READ / 04</p><h2>{copy.articles}</h2></div><p>{copy.articleIntro}</p></div><div className="article-grid">{copy.articleCards.map((article, index) => <article key={article.title}><span>0{index + 1}</span><h3>{article.title}</h3><p>{article.text}</p><a href={`/articles/${articleSlugs[index]}`}>{copy.nav[6]} ↗</a></article>)}</div></section>
     <section className="section faq-section" id="faq"><div><p className="kicker">FAQ / 05</p><h2>{copy.faq}</h2></div><div className="faq-list">{copy.faqs.map((item, index) => <details key={item.q} open={index === 0}><summary>{item.q}<span>＋</span></summary><p>{item.a}</p></details>)}</div></section>
-    <footer><a className="logo footer-logo" href="/"><img src="/litbuy.png" alt="LitBuy" width="1368" height="356" /></a><p>{copy.disclaimer}</p><span>© 2026 litbuys.store</span></footer>
+    <footer><Link className="logo footer-logo" href="/"><img src="/litbuy.png" alt="LitBuy" width="1368" height="356" /></Link><p>{copy.disclaimer}</p><span>© 2026 litbuys.store</span></footer>
   </main>;
 }
 
@@ -404,7 +413,7 @@ function PageIntro({ label, title, intro }: { label: string; title: string; intr
 }
 
 function StandardShell({ children, lang, update, copy }: { children: ReactNode; lang: Lang; update: (l: Lang) => void; copy: Copy }) {
-  return <main><SiteHeader lang={lang} update={update} copy={copy} /><TopicNav copy={copy} />{children}<footer><a className="logo footer-logo" href="/"><img src="/litbuy.png" alt="LitBuy" width="1368" height="356" /></a><p>{copy.disclaimer}</p><span>© 2026 litbuys.store</span></footer></main>;
+  return <main><SiteHeader lang={lang} update={update} copy={copy} /><TopicNav copy={copy} />{children}<footer><Link className="logo footer-logo" href="/"><img src="/litbuy.png" alt="LitBuy" width="1368" height="356" /></Link><p>{copy.disclaimer}</p><span>© 2026 litbuys.store</span></footer></main>;
 }
 
 function ResearchSection({ page }: { page: PageKey }) {
@@ -430,12 +439,16 @@ export function SubPage({ page }: { page: PageKey }) {
     {page === "qc" && <section className="section"><div className="checklist-grid">{inner.qcChecks.map((item,index) => <article key={item.title}><span>{String(index+1).padStart(2,"0")}</span><div><h2>{item.title}</h2><p>{item.text}</p></div></article>)}</div></section>}
     {page === "shipping" && <><section className="formula-section"><p>VOLUMETRIC WEIGHT</p><div><b>L × W × H</b><span>÷ ROUTE DIVISOR</span></div><small>{inner.priceNote}</small></section><section className="section"><div className="shipping-grid">{inner.shipping.map((item,index) => <article key={item.title}><span>0{index+1}</span><h2>{item.title}</h2><p>{item.text}</p></article>)}</div></section></>}
     {page === "faq" && <section className="section faq-section"><div><p className="kicker">FAQ / COMPLETE</p><h2>{copy.faq}</h2></div><div className="faq-list">{[...copy.faqs,...inner.extraFaq].map((item,index) => <details key={item.q} open={index===0}><summary>{item.q}<span>＋</span></summary><p>{item.a}</p></details>)}</div></section>}
-    {page === "articles" && <section className="section"><div className="article-grid">{copy.articleCards.map((article,index) => <article key={article.title}><span>0{index+1}</span><h3>{article.title}</h3><p>{article.text}</p><a href={`/articles/${articleSlugs[index]}`}>{inner.detail} ↗</a></article>)}</div></section>}
+    {page === "articles" && <section className="section"><div className="article-grid">{articleSlugs.map((slug,index) => {
+      const localized = copy.articleCards[index];
+      const article = localized ?? { title: articleData[slug].en.title, text: articleData[slug].en.deck };
+      return <article key={slug}><span>{String(index+1).padStart(2,"0")}</span><h3>{article.title}</h3><p>{article.text}</p><a href={`/articles/${slug}`}>{inner.detail} ↗</a></article>;
+    })}</div></section>}
     <ResearchSection page={page} />
   </StandardShell>;
 }
 
-const articleEvidence: Record<ArticleSlug, { title: string; columns: string[]; rows: string[][] }> = {
+const articleEvidence: Partial<Record<ArticleSlug, { title: string; columns: string[]; rows: string[][] }>> = {
   "litbuy-spreadsheet-guide": {
     title: "A row is only as strong as its evidence chain",
     columns: ["Field", "What it proves", "What to recheck"],
@@ -456,32 +469,40 @@ const articleEvidence: Record<ArticleSlug, { title: string; columns: string[]; r
     columns: ["Evidence source", "Useful for", "Important limit"],
     rows: [["LitBuy policy pages", "Published process and rules", "Policies can change"], ["Trustpilot reviews", "Recurring customer themes", "Rating unavailable after guideline breach"], ["App Store reviews", "App and workflow experiences", "Aggregate mixes different problems"], ["Your live quote", "Current route and parcel decision", "Only applies to your inputs"]],
   },
+  "litbuy-spreadsheet-2026": { title: "A spreadsheet record needs a checkable identity", columns: ["Check", "Evidence", "Decision"], rows: [["Source route", "URL and product ID", "Continue only if they match"], ["Option", "Color, size and quantity", "Reject ambiguous starting prices"], ["Freshness", "Live page and checked date", "Mark changed or dead records"]] },
+  "litbuy-warehouse-city-guide": { title: "Warehouse events are separate handoffs", columns: ["Event", "What it shows", "Next check"], rows: [["Carrier delivered", "Domestic delivery event", "Warehouse intake"], ["Received", "Parcel matched at facility", "Identity and quantity"], ["Stored", "Item available for planning", "QC and deadline"]] },
+  "litbuy-shipping-guide": { title: "Shipping decisions use different inputs", columns: ["Input", "Meaning", "Risk"], rows: [["Actual weight", "Packed scale weight", "Packing may change"], ["Volumetric weight", "Space converted by route rule", "Dimensions and divisor"], ["Chargeable weight", "Billing result", "Increments and rounding"]] },
+  "litbuy-qc-photos-guide": { title: "Visible evidence has firm limits", columns: ["QC can show", "QC cannot certify", "Action"], rows: [["Identity and quantity", "Authenticity", "Match order and labels"], ["Visible shape and marks", "Hidden construction", "Request one targeted view"], ["Displayed measurement", "Future fit", "Compare with an owned item"]] },
+  "litbuy-order-status-guide": { title: "Read order status by custody", columns: ["Status", "Current stage", "Missing evidence"], rows: [["Purchased", "Buying stage", "Seller dispatch"], ["Seller sent", "Domestic carrier", "Movement and delivery"], ["Stored", "Warehouse inventory", "QC and parcel decision"]] },
+  "litbuy-spreadsheet-shoes": { title: "A shoe find needs more than a thumbnail", columns: ["Stage", "Primary check", "Common mistake"], rows: [["Listing", "ID, option and size method", "Trusting a model name"], ["QC", "Pair shape, labels and measure", "Treating photos as authentication"], ["Parcel", "Box, protection and volume", "Removing structure automatically"]] },
+  "litbuy-shipping-usa": { title: "A US-bound parcel crosses several systems", columns: ["Stage", "Evidence", "Buyer check"], rows: [["Submission", "Contents, line and address", "Save exact inputs"], ["International transit", "Origin tracking", "Watch physical handoffs"], ["US delivery", "Destination carrier", "Check customs and last mile"]] },
+  "litbuy-cost-workflow-checklist": { title: "Review each stage on its own evidence", columns: ["Stage", "Useful evidence", "Limit"], rows: [["Purchase", "Source ID and selected option", "Seller behavior can change"], ["Warehouse", "QC images and stored deadline", "Visible evidence only"], ["Shipping", "Packed measurements and live quote", "Transit is estimated"]] },
 };
 
 export function ArticlePage({ slug }: { slug: ArticleSlug }) {
   const { lang, update, copy } = useLanguage();
   const fullTranslations = { de: articleDe, es: articleEs, fr: articleFr, it: articleIt };
-  const article = lang === "en" || slug === "litbuy-review-2026" ? articleData[slug][lang] : fullTranslations[lang][slug] ?? articleData[slug][lang];
+  const article = lang === "en" ? articleData[slug].en : fullTranslations[lang]?.[slug] ?? articleData[slug][lang] ?? articleData[slug].en;
+  const isNew = articleSlugs.indexOf(slug) >= 4;
+  const published = isNew ? "2026-09-22" : "2026-08-29";
+  const evidence = articleEvidence[slug] ?? { title: "Evidence before action", columns: ["Stage", "Check", "Decision"], rows: [["Listing", "Identity and option", "Shortlist"], ["Warehouse", "Visible evidence", "Accept or clarify"], ["Parcel", "Weight, route and address", "Submit"]] };
   const schema = {
     "@context": "https://schema.org",
-    "@type": "Article",
-    headline: article.title,
-    description: article.deck,
-    datePublished: "2026-08-29",
-    dateModified: "2026-08-29",
-    author: { "@type": "Organization", name: "LitBuys Store" },
-    publisher: { "@type": "Organization", name: "LitBuys Store" },
-    mainEntityOfPage: `https://litbuys.store/articles/${slug}`,
+    "@graph": [
+      { "@type": "Article", headline: article.title, description: article.deck, datePublished: published, dateModified: "2026-09-22", author: { "@type": "Organization", name: "LitBuys Store" }, publisher: { "@type": "Organization", name: "LitBuys Store" }, mainEntityOfPage: `https://litbuys.store/articles/${slug}` },
+      { "@type": "BreadcrumbList", itemListElement: [{ "@type": "ListItem", position: 1, name: "Home", item: "https://litbuys.store/" }, { "@type": "ListItem", position: 2, name: "Articles", item: "https://litbuys.store/articles/" }, { "@type": "ListItem", position: 3, name: article.title, item: `https://litbuys.store/articles/${slug}/` }] }
+    ]
   };
   return <StandardShell lang={lang} update={update} copy={copy}>
     <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }} />
     <article className="article-page">
-      <header className="article-head"><p className="kicker">FIELD NOTE / LITBUYS</p><h1>{article.title}</h1><p>{article.deck}</p><div className="article-meta"><span>{article.readTime}</span><span>Updated 29 Aug 2026</span><span>Independent guide</span></div></header>
-      <figure className="evidence-table"><figcaption>{articleEvidence[slug].title}</figcaption><div><table><thead><tr>{articleEvidence[slug].columns.map((column) => <th key={column}>{column}</th>)}</tr></thead><tbody>{articleEvidence[slug].rows.map((row) => <tr key={row[0]}>{row.map((cell) => <td key={cell}>{cell}</td>)}</tr>)}</tbody></table></div></figure>
+      <header className="article-head"><p className="kicker">FIELD NOTE / LITBUYS</p><h1>{article.title}</h1><p>{article.deck}</p><div className="article-meta"><span>{article.readTime}</span><span>Updated 22 Sep 2026</span><span>Independent guide</span></div></header>
+      <figure className="evidence-table"><figcaption>{evidence.title}</figcaption><div><table><thead><tr>{evidence.columns.map((column) => <th key={column}>{column}</th>)}</tr></thead><tbody>{evidence.rows.map((row) => <tr key={row[0]}>{row.map((cell) => <td key={cell}>{cell}</td>)}</tr>)}</tbody></table></div></figure>
       <div className="article-body">
         <nav className="article-toc" aria-label="Article sections">{article.sections.map((section,index) => <a href={`#section-${index+1}`} key={section.heading}><span>0{index+1}</span> {section.heading}</a>)}</nav>
         <div className="article-content">{article.sections.map((section,index) => <section id={`section-${index+1}`} key={section.heading}><p className="kicker">SECTION / 0{index+1}</p><h2>{section.heading}</h2>{section.paragraphs.map((paragraph,pIndex) => <p key={pIndex}>{paragraph}</p>)}</section>)}</div>
       </div>
+      <nav className="article-related" aria-label="Related LitBuy guides"><strong>Continue your research</strong><Link href="/spreadsheet">LitBuy spreadsheet</Link><Link href="/qc">QC checklist</Link><Link href="/shipping">Shipping planner</Link><Link href="/articles">All LitBuy articles</Link></nav>
     </article>
   </StandardShell>;
 }

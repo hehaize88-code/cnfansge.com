@@ -1,3 +1,5 @@
+import { newArticles, newArticleSlugs } from "./article-new";
+
 export type ArticleLang = "en" | "de" | "es" | "fr" | "it";
 
 export const articleSlugs = [
@@ -5,6 +7,7 @@ export const articleSlugs = [
   "litbuy-qc-photo-checklist",
   "litbuy-shipping-weight-guide",
   "litbuy-review-2026",
+  ...newArticleSlugs,
 ] as const;
 
 export type ArticleSlug = (typeof articleSlugs)[number];
@@ -73,7 +76,7 @@ const reviewArticle: ArticleContent = {
   ]
 };
 
-export const articleData: Record<ArticleSlug, Record<ArticleLang, ArticleContent>> = {
+export const articleData: Record<ArticleSlug, Partial<Record<ArticleLang, ArticleContent>> & { en: ArticleContent }> = {
   "litbuy-spreadsheet-guide": {
     en: {
       title: "How to use a LitBuy spreadsheet without losing the original listing",
@@ -431,4 +434,5 @@ export const articleData: Record<ArticleSlug, Record<ArticleLang, ArticleContent
     fr: reviewArticle,
     it: reviewArticle,
   },
+  ...Object.fromEntries(Object.entries(newArticles).map(([slug, article]) => [slug, { en: article }])) as Record<(typeof newArticleSlugs)[number], { en: ArticleContent }>,
 };
