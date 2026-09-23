@@ -75,14 +75,14 @@ export function sectionMetadata(section: SectionKey, lang: Lang): Metadata {
 
 export function homeMetadata(lang: Lang): Metadata {
   const titles: Record<Lang, string> = {
-    en: "Latest Kakobuy Finds & Product Routes 2026",
+    en: "Kakobuy Spreadsheet & Finds 2026 | Product Links and QC Guides",
     de: "Aktuelle Kakobuy-Funde und Produktrouten 2026",
     es: "Últimos hallazgos y rutas Kakobuy 2026",
     fr: "Dernières sélections et liens Kakobuy 2026",
     it: "Ultimi prodotti e percorsi Kakobuy 2026",
   };
   const descriptions: Record<Lang, string> = {
-    en: "Browse recently added Kakobuy finds, focused categories, matching product images, current routes and practical QC checks.",
+    en: "Browse Kakobuy spreadsheet categories, product finds and current item links. Compare listing images, options and warehouse QC checks before choosing a route.",
     de: "Neue Kakobuy-Funde, klare Kategorien, passende Produktbilder, aktuelle Routen und praktische QC-Prüfungen.",
     es: "Consulta hallazgos Kakobuy recientes, categorías claras, imágenes correspondientes, rutas actuales y controles QC.",
     fr: "Découvrez les sélections Kakobuy récentes, catégories ciblées, images correspondantes, liens actuels et contrôles QC.",
