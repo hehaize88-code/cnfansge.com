@@ -1,4 +1,6 @@
 import type { ArticleRecord, ArticleSlug } from "./article-data";
+import { newFindsArticles, type NewFindsSlug } from "./new-finds-articles";
+import { newFindsArticle } from "./new-finds-localized";
 import { articleBySlug } from "./article-data";
 import type { Lang } from "./site-data";
 import { articleExpansions } from "./article-expansions";
@@ -542,6 +544,7 @@ const en = articleBySlug as ArticleTranslations;
 export const localizedArticles: Record<Lang, ArticleTranslations> = { en, de, es, fr, it };
 
 export function getLocalizedArticle(lang: Lang, slug: ArticleSlug): LocalizedArticle {
+  if (slug in newFindsArticles) return newFindsArticle(lang, slug as NewFindsSlug);
   if (slug === "kakobuy-usa-pre-order-readiness-checklist") return usaArticleTranslations[lang];
   if (slug === "kakobuy-us-delivery-address-format") return usaAddressArticleTranslations[lang];
   if (slug === "kakobuy-apartment-suite-unit-zip4-checks") return usaUnitZip4ArticleTranslations[lang];

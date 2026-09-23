@@ -1,4 +1,5 @@
 import type { Lang } from "./site-data";
+import { newFindsCards } from "./new-finds-localized";
 
 export type CategoryItem = [name: string, description: string, href: string];
 export type ProductItem = [name: string, category: string, price: string, image: string, href: string];
@@ -244,7 +245,10 @@ const localizedArticleLabels: Record<Lang, [string, string, string][]> = {
 };
 
 export const articlesByLang = Object.fromEntries(
-  (Object.keys(localizedArticleLabels) as Lang[]).map((lang) => [lang, localizedArticleLabels[lang].map(([tag, title, description], index) => [tag, title, description, articleRoutes[index]] as ArticleCardItem)])
+  (Object.keys(localizedArticleLabels) as Lang[]).map((lang) => [lang, [
+    ...localizedArticleLabels[lang].map(([tag, title, description], index) => [tag, title, description, articleRoutes[index]] as ArticleCardItem),
+    ...newFindsCards(lang).map((card) => [...card] as ArticleCardItem),
+  ]])
 ) as Record<Lang, ArticleCardItem[]>;
 
 export const localizedArticleBySlug = (lang: Lang, slug: string) => articlesByLang[lang].find(([, , , href]) => href.endsWith(`/${slug}`));

@@ -142,4 +142,10 @@ const articleByIntent: Record<ArticleSlug, string> = {
   "kakobuy-us-delivery-address-format": "Kakobuy US delivery address",
   "kakobuy-apartment-suite-unit-zip4-checks": "Kakobuy apartment address",
   "kakobuy-billing-address-vs-delivery-address": "Kakobuy billing address vs delivery address",
+  "check-kakobuy-product-links": "Kakobuy product link",
+  "kakobuy-shoes-spreadsheet-checks": "Kakobuy shoes spreadsheet",
+  "kakobuy-hoodie-size-qc-guide": "Kakobuy hoodie spreadsheet",
+  "kakobuy-jersey-listing-measurements": "Kakobuy jersey spreadsheet",
+  "kakobuy-weidian-taobao-links": "Kakobuy Weidian and Taobao links",
+  "kakobuy-product-link-not-working": "Kakobuy link not working",
 };

@@ -1,3 +1,5 @@
+import { newFindsArticles, newFindsSlugs } from "./new-finds-articles";
+
 export type Lang = "en" | "de" | "es" | "fr" | "it";
 
 type Copy = {
@@ -185,4 +187,6 @@ export const articles = [
   ["US GUIDE", "Kakobuy USA guide 2026: pre-order readiness", "Check address, product identity, current import sources and last-mile evidence before ordering for the United States.", "/articles/kakobuy-usa-pre-order-readiness-checklist"],
   ["US ADDRESS", "Format a US delivery address for a Kakobuy parcel", "Check recipient, street, unit, city, state, ZIP Code and the final private label preview.", "/articles/kakobuy-us-delivery-address-format"],
   ["US ADDRESS", "Apartment, suite, unit and ZIP+4 checks", "Verify the secondary-unit designator, exact number and current USPS ZIP+4 before international dispatch.", "/articles/kakobuy-apartment-suite-unit-zip4-checks"],
+  ["US ADDRESS", "Billing address vs delivery address for Kakobuy", "Check payment billing details separately from the final parcel destination.", "/articles/kakobuy-billing-address-vs-delivery-address"],
+  ...newFindsSlugs.map((slug) => [newFindsArticles[slug].tag, newFindsArticles[slug].title, newFindsArticles[slug].description, `/articles/${slug}`]),
 ];

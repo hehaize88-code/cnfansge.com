@@ -181,6 +181,12 @@ const sourceKeysByArticle: Record<ArticleSlug, (keyof typeof sources)[]> = {
   "kakobuy-us-delivery-address-format": ["kakobuyParcelFlow", "uspsAddressing", "uspsUnits", "uspsZip"],
   "kakobuy-apartment-suite-unit-zip4-checks": ["kakobuyParcelFlowSep10", "uspsUnitsSep10", "uspsZipSep10"],
   "kakobuy-billing-address-vs-delivery-address": ["kakobuyParcelFlowSep12", "uspsPublication28Sep12", "adyenAvsSep12"],
+  "check-kakobuy-product-links": ["service"],
+  "kakobuy-shoes-spreadsheet-checks": ["service"],
+  "kakobuy-hoodie-size-qc-guide": ["service"],
+  "kakobuy-jersey-listing-measurements": ["service", "returns"],
+  "kakobuy-weidian-taobao-links": ["service"],
+  "kakobuy-product-link-not-working": ["service"],
 };
 
 export const sourceHeadings: Record<Lang, [string, string]> = {

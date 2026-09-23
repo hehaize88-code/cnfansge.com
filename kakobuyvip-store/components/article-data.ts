@@ -2,6 +2,9 @@ import { usaArticleTranslations } from "./usa-readiness-article";
 import { usaAddressArticleTranslations } from "./usa-address-article";
 import { usaUnitZip4ArticleTranslations } from "./usa-unit-zip4-article";
 import { usaBillingDeliveryArticleTranslations } from "./usa-billing-delivery-article";
+import { newFindsArticles, newFindsSlugs, type NewFindsSlug } from "./new-finds-articles";
+import { newFindsAddenda } from "./new-finds-addenda";
+import { newFindsFinalNotes } from "./new-finds-final-notes";
 
 export type ArticleSlug =
   | "how-to-use-kakobuy"
@@ -14,7 +17,8 @@ export type ArticleSlug =
   | "kakobuy-usa-pre-order-readiness-checklist"
   | "kakobuy-us-delivery-address-format"
   | "kakobuy-apartment-suite-unit-zip4-checks"
-  | "kakobuy-billing-address-vs-delivery-address";
+  | "kakobuy-billing-address-vs-delivery-address"
+  | NewFindsSlug;
 
 export type ArticleRecord = {
   slug: ArticleSlug;
@@ -454,7 +458,19 @@ export const articleRecords: ArticleRecord[] = [
     primaryKeyword: "Kakobuy billing address vs delivery address",
     readingTime: "15 min read",
     updated: "September 12, 2026"
-  }
+  },
+  ...newFindsSlugs.map((slug): ArticleRecord => ({
+    slug,
+    ...newFindsArticles[slug],
+    sections: [
+      ...newFindsArticles[slug].sections,
+      ...newFindsAddenda[slug],
+      ...(newFindsFinalNotes[slug] ? [newFindsFinalNotes[slug]] : []),
+    ],
+    primaryKeyword: newFindsArticles[slug].title,
+    readingTime: "14 min read",
+    updated: "September 23, 2026",
+  }))
 ];
 
 export const articleBySlug = Object.fromEntries(
