@@ -2,8 +2,9 @@ import type { Language } from "./site-content";
 import { localizedArticleExtras } from "./article-localized-extras";
 import { localizedArticleExpansions } from "./article-localized-expansions";
 import { localizedArticleFourths, localizedArticleSeconds } from "./article-localized-seconds";
+import newArticles from "./new-article-en.json";
 
-export type Article = { title: string; deck: string; read: string; sections: { title: string; paragraphs: string[]; bullets?: string[] }[]; sources: { label: string; href: string }[] };
+export type Article = { title: string; deck: string; read: string; dateModified?: string; sections: { title: string; paragraphs: string[]; bullets?: string[] }[]; sources: { label: string; href: string }[] };
 
 const spreadsheetEn: Article = {
   title: "How to use a LoveGoBuy spreadsheet without saving weak links",
@@ -50,7 +51,7 @@ const shippingEn: Article = {
 };
 
 const localizedMeta: Record<Exclude<Language,"en">,Record<string,[string,string,string]>> = {
-  de:{"lovegobuy-spreadsheet-guide":["LoveGoBuy-Spreadsheet nutzen, ohne schwache Links zu speichern","Methode vom Suchergebnis zur begründeten Auswahlliste.","16 Minuten · geprüft 1. Sep. 2026"],"lovegobuy-qc-photo-guide":["LoveGoBuy QC-Fotos in drei Durchgängen lesen","Variante, Verarbeitung und Maße systematisch prüfen.","15 Minuten · geprüft 1. Sep. 2026"],"lovegobuy-shipping-weight":["LoveGoBuy Versandgewicht: Waage, Volumen und Abrechnung","Paketplanung mit Gewicht, Maßen und Routeneignung.","15 Minuten · geprüft 1. Sep. 2026"]},
+  de:{"lovegobuy-spreadsheet-guide":["LoveGoBuy-Spreadsheet nutzen, ohne schwache Links zu speichern","Methode vom Suchergebnis zur begründeten Auswahlliste.","16 Minuten · geprüft 1. Sep. 2026"],"lovegobuy-qc-photo-guide":["LoveGoBuy QC-Fotos in drei Durchgängen lesen","Variante, Verarbeitung und Maße systematisch prüfen.","15 Minuten · geprüft 1. Sep. 2026"],"lovegobuy-shipping-weight":["LoveGoBuy Volumengewicht berechnen: Formel und Paketmaße","Länge × Breite × Höhe ÷ 6000 als Beispiel; die aktuelle Route im offiziellen Rechner prüfen.","15 Minuten · geprüft 1. Sep. 2026"]},
   es:{"lovegobuy-spreadsheet-guide":["Usar una hoja LoveGoBuy sin guardar enlaces débiles","Método desde la búsqueda hasta una lista corta explicable.","16 minutos · revisado 1 sep 2026"],"lovegobuy-qc-photo-guide":["Fotos QC de LoveGoBuy en tres pasos","Confirma variante, construcción y medidas.","15 minutos · revisado 1 sep 2026"],"lovegobuy-shipping-weight":["Peso de envío LoveGoBuy: real, volumétrico y facturable","Planifica con peso, dimensiones y elegibilidad.","15 minutos · revisado 1 sep 2026"]},
   fr:{"lovegobuy-spreadsheet-guide":["Utiliser une feuille LoveGoBuy sans garder les liens faibles","Méthode de la recherche à une présélection justifiable.","16 minutes · vérifié 1 sept. 2026"],"lovegobuy-qc-photo-guide":["Lire les photos QC LoveGoBuy en trois étapes","Confirmer variante, fabrication et mesures.","15 minutes · vérifié 1 sept. 2026"],"lovegobuy-shipping-weight":["Poids d’expédition LoveGoBuy : réel, volumétrique et facturable","Planifier avec poids, dimensions et éligibilité.","15 minutes · vérifié 1 sept. 2026"]},
   it:{"lovegobuy-spreadsheet-guide":["Usare un foglio LoveGoBuy senza salvare link deboli","Metodo dalla ricerca a una lista breve spiegabile.","16 minuti · verificato 1 set 2026"],"lovegobuy-qc-photo-guide":["Leggere le foto QC LoveGoBuy in tre passaggi","Confermare variante, costruzione e misure.","15 minuti · verificato 1 set 2026"],"lovegobuy-shipping-weight":["Peso di spedizione LoveGoBuy: reale, volumetrico e fatturabile","Pianificare con peso, misure e idoneità.","15 minuti · verificato 1 set 2026"]},
@@ -215,9 +216,11 @@ const localizedBullets: Record<Exclude<Language,"en">,Record<string,string[]>>={
 const englishArticles: Record<string,Article> = {"lovegobuy-spreadsheet-guide":spreadsheetEn,"lovegobuy-qc-photo-guide":qcEn,"lovegobuy-shipping-weight":shippingEn};
 
 export function getArticle(lang: Language, slug: string): Article | null {
+  const fresh=(newArticles as Record<string,{title:string;deck:string;sections:Article["sections"]}>)[slug];
+  if(fresh) return lang==="en" ? {...fresh,read:"12 minute read · published 24 Sep 2026",dateModified:"2026-09-24",sources:[{label:"LoveGoBuy official product search",href:"https://www.lovegobuy.com/"},{label:"LoveGoBuy official warehouse",href:"https://www.lovegobuy.com/warehouse/index"},{label:"Product directory for comparing live routes",href:"https://cnfansge.com/AllProducts/"}]} : null;
   const base=englishArticles[slug]; if(!base) return null; if(lang==="en") return base;
   const meta=localizedMeta[lang][slug]; const titles=sectionTitles[lang][slug]; const bodies=localizedBodies[lang][slug]; const seconds=localizedArticleSeconds[lang][slug]; const extras=localizedArticleExtras[lang][slug]; const expansions=localizedArticleExpansions[lang][slug];
-  return { title:meta[0], deck:meta[1], read:meta[2], sources:base.sources, sections:base.sections.map((section,i)=>{
+  return { title:meta[0], deck:meta[1], read:meta[2], dateModified:lang==="de"&&slug==="lovegobuy-shipping-weight"?"2026-09-24":undefined, sources:base.sources, sections:base.sections.map((section,i)=>{
     const paragraphs = section.paragraphs.length === 2
       ? [bodies[i] + expansions.bodies[i], extras[i] + expansions.extras[i]]
       : [bodies[i] + expansions.bodies[i], seconds[i], extras[i] + expansions.extras[i]];

@@ -6,5 +6,5 @@ const pageLastModified:Record<string,string>={"":"2026-09-01",spreadsheet:"2026-
 const articleLastModified:Record<string,string>={"lovegobuy-spreadsheet-guide":"2026-09-01","lovegobuy-qc-photo-guide":"2026-09-01","lovegobuy-shipping-weight":"2026-09-01"};
 export default function sitemap(): MetadataRoute.Sitemap {
   const pages=["","spreadsheet","finds","guide","qc","shipping","faq","articles"];
-  return languages.flatMap(lang=>[...pages.map(page=>({url:`${base}/${lang}${page?`/${page}`:""}`,lastModified:new Date(pageLastModified[page])})),...articleSlugs.map(slug=>({url:`${base}/${lang}/articles/${slug}`,lastModified:new Date(articleLastModified[slug])}))]);
+  return languages.flatMap(lang=>[...pages.map(page=>({url:`${base}/${lang}${page?`/${page}`:""}`,lastModified:new Date(lang==="en"&&["","articles"].includes(page)?"2026-09-24":pageLastModified[page])})),...articleSlugs.slice(0,lang==="en"?articleSlugs.length:3).map(slug=>({url:`${base}/${lang}/articles/${slug}`,lastModified:new Date(lang==="de"&&slug==="lovegobuy-shipping-weight"?"2026-09-24":articleLastModified[slug]??"2026-09-24")}))]);
 }

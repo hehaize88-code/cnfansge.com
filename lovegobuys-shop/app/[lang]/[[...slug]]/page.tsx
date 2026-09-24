@@ -22,15 +22,14 @@ export const dynamicParams=false;
 
 export function generateStaticParams(){
   const pages=[[],["spreadsheet"],["finds"],["guide"],["qc"],["shipping"],["faq"],["articles"]];
-  const articles=articleSlugs.map(slug=>["articles",slug]);
-  return languages.flatMap(lang=>[...pages,...articles].map(slug=>({lang,slug})));
+  return languages.flatMap(lang=>[...pages,...articleSlugs.slice(0,lang==="en"?articleSlugs.length:3).map(slug=>["articles",slug])].map(slug=>({lang,slug})));
 }
 
 export async function generateMetadata({params}:{params:Promise<Params>}):Promise<Metadata>{
   const {lang,slug=[]}=await params; if(!isLanguage(lang)) return {};
   const path=slug.join("/"); const article=slug[0]==="articles"&&slug[1]?getArticle(lang,slug[1]):null; const copy=slug.length===1?pageCopy[lang][slug[0]]:null;
   const title=article?.title??copy?.title??homeMetadata[lang].title; const description=article?.deck??copy?.deck??homeMetadata[lang].description;
-  const suffix=path?`/${path}`:""; const alternateLanguages=Object.fromEntries(languages.map(code=>[code,`/${code}${suffix}`]));
+  const suffix=path?`/${path}`:""; const availableLanguages=article&&articleSlugs.indexOf(slug[1])>=3?["en"]:languages; const alternateLanguages=Object.fromEntries(availableLanguages.map(code=>[code,`/${code}${suffix}`]));
   return {title,description,robots:{index:true,follow:true},alternates:{canonical:`/${lang}${suffix}`,languages:{...alternateLanguages,"x-default":`/en${suffix}`}}};
 }
 
