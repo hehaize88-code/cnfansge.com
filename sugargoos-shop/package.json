@@ -13,7 +13,8 @@
     "deploy:dry": "npm run build && wrangler deploy --dry-run",
     "test": "npm run build && node --test tests/*.test.mjs",
     "lint": "eslint . --ignore-pattern dist --ignore-pattern .next",
-    "db:generate": "drizzle-kit generate"
+    "db:generate": "drizzle-kit generate",
+    "postbuild": "node scripts/use-built-wrangler.mjs"
   },
   "dependencies": {
     "@base-ui/react": "^1.7.0",
@@ -61,5 +62,5 @@
     "wrangler": "4.92.0"
   },
   "type": "module",
-  "displayName": "Sugargoo Finds \u2014 Spreadsheet, QC & Shipping Guides"
+  "displayName": "Sugargoo Finds — Spreadsheet, QC & Shipping Guides"
 }
