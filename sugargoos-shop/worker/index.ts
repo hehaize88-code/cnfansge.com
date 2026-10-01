@@ -100,7 +100,7 @@ const worker = {
 
     const edgeCache = (caches as CacheStorage & { default: Cache }).default;
     const versionedUrl = new URL(url);
-    versionedUrl.searchParams.set("__site_version", "2026-10-01-editorial");
+    versionedUrl.searchParams.set("__site_version", "2026-10-01-editorial-2");
     const cacheKey = new Request(versionedUrl.toString(), { method: "GET" });
     const cached = await edgeCache.match(cacheKey);
     if (cached) return cacheableHtml(cached, "HIT");
