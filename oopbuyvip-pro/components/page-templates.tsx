@@ -58,7 +58,7 @@ export function HomePage({ locale }: { locale: Locale }) {
         <FaqList locale={locale} limit={4} />
       </section>
 
-      <section className="article-band"><div className="shell"><div className="section-head"><div><p className="kicker">{t.nav.articles}</p><h2>{t.articlesTitle}</h2><p>{t.articlesIntro}</p></div><Link className="text-link" href={sectionPath(locale, "articles")}>{t.nav.articles}<ArrowRight /></Link></div><ArticleGrid locale={locale} articles={articles} /></div></section>
+      <section className="article-band"><div className="shell"><div className="section-head"><div><p className="kicker">{t.nav.articles}</p><h2>{t.articlesTitle}</h2><p>{t.articlesIntro}</p></div><Link className="text-link" href={sectionPath(locale, "articles")}>{t.nav.articles}<ArrowRight /></Link></div><ArticleGrid locale={locale} articles={articles.slice(0, 6)} /></div></section>
     </main>
   );
 }
@@ -73,7 +73,7 @@ export function ArticleGrid({ locale, articles }: { locale: Locale; articles: Ar
     "oopbuy-fees-returns-policy": { label: labels.fees, className: "thumb-fees", Icon: RotateCcw },
     "oopbuy-shipping-cost-planner": { label: labels.shipping, className: "thumb-shipping", Icon: Ruler },
   } as const;
-  return <div className="article-grid">{articles.map((article) => { const visual = visuals[article.slug as keyof typeof visuals] || visuals["oopbuy-beginner-guide-2026"]; const Icon = visual.Icon; return <Link href={articlePath(locale, article.slug)} className="article-card" key={article.slug}><div className={`article-thumb ${visual.className}`}><span>{visual.label}</span><Icon /></div><div className="article-copy"><span>{article.readTime} · {t.updated}</span><h3>{article.title}</h3><p>{article.deck}</p><b>{t.read}<ArrowRight /></b></div></Link>; })}</div>;
+  return <div className="article-grid">{articles.map((article) => { const visual = visuals[article.slug as keyof typeof visuals] || visuals["oopbuy-beginner-guide-2026"]; const Icon = visual.Icon; return <Link href={articlePath(locale, article.slug)} className="article-card" key={article.slug}><div className={`article-thumb ${visual.className}`}><span>{visual.label}</span><Icon /></div><div className="article-copy"><span>{article.readTime} · {article.modified || article.published || t.updated}</span><h3>{article.title}</h3><p>{article.deck}</p><b>{t.read}<ArrowRight /></b></div></Link>; })}</div>;
 }
 
 export function SectionPage({ locale, section }: { locale: Locale; section: Section }) {
@@ -175,7 +175,7 @@ export function ArticlePage({ locale, article }: { locale: Locale; article: Arti
   const t = copy[locale];
   const articleUrl = `${SITE_URL}${articlePath(locale, article.slug)}`;
   const published = article.published || "2026-09-01";
-  const articleLd = { "@context": "https://schema.org", "@type": "BlogPosting", headline: article.title, description: article.deck, inLanguage: locale, image: { "@type": "ImageObject", url: `${SITE_URL}/og.png`, width: 1200, height: 630 }, mainEntityOfPage: { "@type": "WebPage", "@id": articleUrl }, dateModified: published, datePublished: published, author: { "@type": "Organization", name: "OOPBUY VIP Research Desk" }, publisher: { "@type": "Organization", name: "OOPBUY VIP", logo: { "@type": "ImageObject", url: `${SITE_URL}/oopbuy-logo.png` } } };
+  const articleLd = { "@context": "https://schema.org", "@type": "BlogPosting", headline: article.title, description: article.deck, inLanguage: locale, image: { "@type": "ImageObject", url: `${SITE_URL}/og.png`, width: 1200, height: 630 }, mainEntityOfPage: { "@type": "WebPage", "@id": articleUrl }, dateModified: article.modified || published, datePublished: published, author: { "@type": "Organization", name: "OOPBUY VIP Research Desk" }, publisher: { "@type": "Organization", name: "OOPBUY VIP", logo: { "@type": "ImageObject", url: `${SITE_URL}/oopbuy-logo.png` } } };
   const breadcrumbLd = { "@context": "https://schema.org", "@type": "BreadcrumbList", itemListElement: [
     { "@type": "ListItem", position: 1, name: "OOPBUY VIP", item: `${SITE_URL}${homePath(locale)}` },
     { "@type": "ListItem", position: 2, name: t.nav.articles, item: `${SITE_URL}${sectionPath(locale, "articles")}` },

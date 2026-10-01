@@ -1,3 +1,7 @@
+# Manual override — 1 October 2026
+
+Automatic article updates for oopbuyvip.pro are permanently stopped at the user’s request. Skip this site in all automated runs without changing any other site’s state, schedule, cursor or content. Existing history remains intact. Explicitly requested manual maintenance is authorized and is not limited to one article per run. Resume automatic updates only on the user’s explicit instruction. This override takes precedence over conflicting instructions below.
+
 # oopbuyvip.pro — SEO60 V2 Authority File
 
 This private control file is mandatory for the existing “OOPBuy三站60天” automation after oopbuyvip.pro is added as its fourth site. It must never be rendered, linked, indexed, copied, or summarized on the public website.

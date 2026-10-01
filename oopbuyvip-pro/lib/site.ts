@@ -1,6 +1,7 @@
 import { researchedArticles } from "@/lib/researched-articles";
 import { localizedArticleExpansions, splitArticleExpansion } from "@/lib/localized-article-expansions";
 import { localizedArticleParity } from "@/lib/localized-article-parity";
+import { newQcArticles, articleSeoUpdates } from "@/lib/qc-articles-20261001";
 
 export const SITE_URL = "https://oopbuyvip.pro";
 export const DESTINATION = "https://cnfansge.com";
@@ -66,7 +67,7 @@ export const copy: Record<Locale, Copy> = {
   en: {
     nav: { spreadsheet: "Spreadsheet", finds: "Finds", guide: "Guide", qc: "QC", shipping: "Shipping", faq: "FAQ", articles: "Articles" },
     eyebrow: "Independent OOPBUY research desk",
-    heroTitle: "Read the evidence. Mark the unknowns. Decide with confidence.",
+    heroTitle: "OOPBuy QC photos: check the details before shipping.",
     heroText: "An independent OOPBUY QC photo analysis hub for interpreting visible warehouse evidence without guessing beyond the image.",
     searchPlaceholder: "Search shoes, hoodie, jersey…",
     searchButton: "Search all products",
@@ -100,7 +101,7 @@ export const copy: Record<Locale, Copy> = {
   de: {
     nav: { spreadsheet: "Tabelle", finds: "Funde", guide: "Anleitung", qc: "QC", shipping: "Versand", faq: "FAQ", articles: "Artikel" },
     eyebrow: "Unabhängige OOPBUY-Recherche",
-    heroTitle: "Belege lesen. Unbekanntes markieren. Sicherer entscheiden.",
+    heroTitle: "OOPBuy-QC-Fotos: Details vor dem Versand prüfen.",
     heroText: "Ein unabhängiges Zentrum zur Analyse von OOPBUY-QC-Fotos, das sichtbare Lagerbelege interpretiert, ohne über das Bild hinaus zu raten.",
     searchPlaceholder: "Schuhe, Hoodie, Trikot suchen…", searchButton: "Alle Produkte durchsuchen", liveSheet: "Tabelle öffnen", products: "Ausgewählte Funde",
     productIntro: "Acht Zielseiten wurden am 1. September 2026 geprüft. Die Preise sind ungefähre Umrechnungen nur für das Produkt, ohne Inlands- oder internationalen Versand.", all: "Alle", route: "Produkt öffnen", approx: "Ca. USD",
@@ -113,7 +114,7 @@ export const copy: Record<Locale, Copy> = {
   },
   es: {
     nav: { spreadsheet: "Hoja", finds: "Hallazgos", guide: "Guía", qc: "QC", shipping: "Envío", faq: "FAQ", articles: "Artículos" },
-    eyebrow: "Mesa independiente de investigación OOPBUY", heroTitle: "Lee la evidencia. Marca lo desconocido. Decide con confianza.", heroText: "Un centro independiente de análisis de fotos QC de OOPBUY para interpretar evidencia visible del almacén sin adivinar más allá de la imagen.",
+    eyebrow: "Mesa independiente de investigación OOPBUY", heroTitle: "Fotos QC de OOPBuy: revisa los detalles antes del envío.", heroText: "Un centro independiente de análisis de fotos QC de OOPBUY para interpretar evidencia visible del almacén sin adivinar más allá de la imagen.",
     searchPlaceholder: "Buscar zapatillas, sudadera, camiseta…", searchButton: "Buscar todos los productos", liveSheet: "Abrir la hoja", products: "Hallazgos seleccionados", productIntro: "Ocho rutas verificadas con el catálogo de destino el 1 de septiembre de 2026. Los precios son conversiones aproximadas solo del producto, antes del envío nacional o internacional.", all: "Todo", route: "Abrir producto", approx: "USD aprox.",
     categories: "Explorar categorías", categoryIntro: "Ve directamente a la sección correcta del catálogo. Cada destino se abre en una pestaña nueva.", method: "Un proceso de compra más sereno", methodTitle: "Tres controles antes de enviar el paquete", methodSteps: ["Selecciona", "Inspecciona", "Planifica"], methodBodies: ["Compara imagen, título, precio y ruta del vendedor antes de añadir un producto.", "Usa las fotos de almacén para revisar el artículo recibido y anota cualquier problema visible a tiempo.", "Calcula peso y volumen embalados; compara rutas por coste total y restricciones, no solo por la tarifa inicial."],
     faqTitle: "Respuestas rápidas y claras", faqIntro: "Notas prácticas del proceso oficial, separadas de nuestra selección independiente.", articlesTitle: "Guías de decisión", articlesIntro: "Métodos detallados para conservar referencias, interpretar fotos QC y tomar decisiones defendibles.", read: "Leer guía", updated: "Revisado el 1 sep 2026", disclosure: "Recurso independiente. No operado por OOPBUY ni afiliado a la empresa. La disponibilidad y los precios pueden cambiar.", footer: "Hecho para investigar, no para comprar por impulso.", sourceNote: "Datos del proceso verificados en el Centro de Ayuda de OOPBUY el 1 de septiembre de 2026.", noResults: "Aún no hay coincidencia seleccionada. Busca en el catálogo completo.", reset: "Borrar filtros",
@@ -123,7 +124,7 @@ export const copy: Record<Locale, Copy> = {
   },
   fr: {
     nav: { spreadsheet: "Tableau", finds: "Sélection", guide: "Guide", qc: "QC", shipping: "Livraison", faq: "FAQ", articles: "Articles" },
-    eyebrow: "Bureau de recherche OOPBUY indépendant", heroTitle: "Lisez la preuve. Notez l’inconnu. Décidez avec confiance.", heroText: "Un centre indépendant d’analyse des photos QC OOPBUY pour interpréter les preuves visibles sans dépasser ce que montre l’image.",
+    eyebrow: "Bureau de recherche OOPBUY indépendant", heroTitle: "Photos QC OOPBuy : vérifiez les détails avant l’envoi.", heroText: "Un centre indépendant d’analyse des photos QC OOPBUY pour interpréter les preuves visibles sans dépasser ce que montre l’image.",
     searchPlaceholder: "Rechercher chaussures, hoodie, maillot…", searchButton: "Rechercher tous les produits", liveSheet: "Ouvrir le tableau", products: "Sélection actuelle", productIntro: "Huit routes vérifiées dans le catalogue cible le 1er septembre 2026. Prix indicatifs du produit seul, avant livraison nationale ou internationale.", all: "Tout", route: "Ouvrir le produit", approx: "USD env.",
     categories: "Par catégorie", categoryIntro: "Accédez directement à la bonne section du catalogue. Chaque destination s’ouvre dans un nouvel onglet.", method: "Un achat plus posé", methodTitle: "Trois contrôles avant l’envoi", methodSteps: ["Sélectionner", "Inspecter", "Planifier"], methodBodies: ["Comparez l’image, le titre, le prix et la route vendeur avant l’ajout au panier.", "Utilisez les photos d’entrepôt pour contrôler l’article reçu et notez les défauts visibles à temps.", "Estimez poids et volume emballés, puis comparez coût total, restrictions et service."],
     faqTitle: "Des réponses nettes", faqIntro: "Des notes pratiques issues du parcours officiel, distinctes de notre sélection indépendante.", articlesTitle: "Guides de décision", articlesIntro: "Des méthodes détaillées pour conserver les références, interpréter les photos QC et prendre une décision défendable.", read: "Lire le guide", updated: "Vérifié le 1 sept. 2026", disclosure: "Ressource indépendante, ni exploitée par OOPBUY ni affiliée à l’entreprise. Disponibilité et prix peuvent changer.", footer: "Conçu pour la recherche, pas pour les achats impulsifs.", sourceNote: "Informations de processus vérifiées dans le centre d’aide OOPBUY le 1er septembre 2026.", noResults: "Aucun résultat sélectionné. Recherchez plutôt dans le catalogue complet.", reset: "Effacer les filtres",
@@ -133,7 +134,7 @@ export const copy: Record<Locale, Copy> = {
   },
   it: {
     nav: { spreadsheet: "Foglio", finds: "Selezione", guide: "Guida", qc: "QC", shipping: "Spedizione", faq: "FAQ", articles: "Articoli" },
-    eyebrow: "Ricerca OOPBUY indipendente", heroTitle: "Leggi le prove. Segna le incognite. Decidi con fiducia.", heroText: "Un centro indipendente di analisi delle foto QC OOPBUY per interpretare le prove visibili senza immaginare ciò che l’immagine non mostra.",
+    eyebrow: "Ricerca OOPBUY indipendente", heroTitle: "Foto QC OOPBuy: controlla i dettagli prima della spedizione.", heroText: "Un centro indipendente di analisi delle foto QC OOPBUY per interpretare le prove visibili senza immaginare ciò che l’immagine non mostra.",
     searchPlaceholder: "Cerca scarpe, felpa, maglia…", searchButton: "Cerca tutti i prodotti", liveSheet: "Apri il foglio", products: "Selezione curata", productIntro: "Otto percorsi verificati nel catalogo di destinazione il 1° settembre 2026. Prezzi indicativi del solo prodotto, prima della spedizione nazionale o internazionale.", all: "Tutti", route: "Apri prodotto", approx: "USD circa",
     categories: "Esplora per categoria", categoryIntro: "Vai direttamente alla sezione corretta del catalogo. Ogni destinazione si apre in una nuova scheda.", method: "Un acquisto più ragionato", methodTitle: "Tre controlli prima di spedire il pacco", methodSteps: ["Seleziona", "Controlla", "Pianifica"], methodBodies: ["Confronta immagine, titolo, prezzo e percorso del venditore prima di aggiungere al carrello.", "Usa le foto del magazzino per controllare l’articolo ricevuto e annota subito i problemi visibili.", "Stima peso e volume imballati, poi confronta costo totale, restrizioni e servizio."],
     faqTitle: "Risposte rapide e chiare", faqIntro: "Note pratiche basate sul flusso ufficiale, separate dalla nostra selezione indipendente.", articlesTitle: "Guide decisionali", articlesIntro: "Metodi dettagliati per conservare i riferimenti, interpretare le foto QC e prendere decisioni difendibili.", read: "Leggi la guida", updated: "Verificato il 1 set 2026", disclosure: "Risorsa indipendente. Non gestita da OOPBUY né affiliata all’azienda. Disponibilità e prezzi possono cambiare.", footer: "Pensato per la ricerca, non per gli acquisti impulsivi.", sourceNote: "Informazioni sul processo verificate nel Centro assistenza OOPBUY il 1° settembre 2026.", noResults: "Nessun risultato selezionato. Cerca invece nell’intero catalogo.", reset: "Azzera filtri",
@@ -218,7 +219,7 @@ export const faqByLocale: Record<Locale, { q: string; a: string }[]> = {
   ],
 };
 
-export type Article = { slug: string; title: string; deck: string; readTime: string; published?: string; sourceNote?: string; related?: { label: string; kind: "qc" | "article"; slug?: string }[]; sections: { heading: string; paragraphs: string[] }[]; sources?: { label: string; href: string }[] };
+export type Article = { slug: string; title: string; deck: string; readTime: string; published?: string; modified?: string; sourceNote?: string; related?: { label: string; kind: "qc" | "article"; slug?: string }[]; sections: { heading: string; paragraphs: string[] }[]; sources?: { label: string; href: string }[] };
 
 const sharedArticleBodies: Record<Locale, Record<string, { headings: string[]; paragraphs: string[][] }>> = {
   en: {
@@ -467,7 +468,8 @@ export function getArticles(locale: Locale): Article[] {
     return { ...meta, sections: body.headings.map((heading, index) => ({ heading, paragraphs: locale === "en" ? [...body.paragraphs[index], englishArticleAdditions[meta.slug][index]] : [...body.paragraphs[index], ...splitArticleExpansion(localizedArticleExpansions[locale][meta.slug][index])] })) };
   });
   const [beginner, fees, qvlC01] = researchedArticles[locale];
-  const articles = [qvlC01, beginner, existing[0], existing[1], fees, existing[2]];
+  const previous = [qvlC01, beginner, existing[0], existing[1], fees, existing[2]].map(article => ({ ...article, ...articleSeoUpdates[locale][article.slug] }));
+  const articles = [...newQcArticles[locale], ...previous];
   if (locale === "en") return articles;
   return articles.map((article) => {
     const additions = localizedArticleParity[locale][article.slug] || [];
