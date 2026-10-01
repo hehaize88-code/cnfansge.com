@@ -66,7 +66,7 @@ export const pageResearchBasis: Record<PageSlug, ResearchBasis> = {
   },
 };
 
-export const articleResearchBasis: Record<ArticleSlug, ResearchBasis> = {
+export const articleResearchBasis: Partial<Record<ArticleSlug, ResearchBasis>> = {
   "sugargoo-spreadsheet-guide-2026": {
     checked: "September 1, 2026",
     sources: [

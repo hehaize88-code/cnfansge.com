@@ -90,7 +90,7 @@ function wordCount(value) {
 
 test("keeps every translated SEO article complete", async () => {
   const { articles, articleSlugs } = await vite.ssrLoadModule("/lib/articles.ts");
-  const locales = ["de", "es", "fr", "it"];
+  const locales = ["en", "de", "es", "fr", "it"];
 
   for (const locale of locales) {
     for (const slug of articleSlugs) {

@@ -1,21 +1,26 @@
-import { Locale } from "@/lib/site-data";
+import { legacyArticleUpdates } from "@/lib/legacy-article-update";
+import { Locale, locales } from "@/lib/site-data";
 import { extraArticles } from "@/lib/articles-extra";
 import { fullLocalizedArticles } from "@/lib/articles-full";
 import { orderStatusArticles } from "@/lib/order-status-article";
 
-export const articleSlugs = [
+import { octoberArticles, octoberSlugs } from "@/lib/articles-october";
+
+export const legacyArticleSlugs = [
   "sugargoo-spreadsheet-guide-2026",
   "sugargoo-qc-photo-checklist",
   "sugargoo-shipping-weight-guide-2026",
   "sugargoo-review-2026",
   "sugargoo-order-status-purchased-shipped-received-stored",
 ] as const;
+export const articleSlugs = [...octoberSlugs, ...legacyArticleSlugs] as const;
+export type LegacyArticleSlug = (typeof legacyArticleSlugs)[number];
 export type ArticleSlug = (typeof articleSlugs)[number];
 export function isArticleSlug(value: string): value is ArticleSlug { return articleSlugs.includes(value as ArticleSlug); }
 
-export type Article = { title: string; description: string; category: string; readTime: string; published: string; sections: { heading: string; paragraphs: string[] }[] };
+export type Article = { title: string; description: string; category: string; readTime: string; published: string; publishedISO?: string; modifiedISO?: string; research?: { checked: string; sources: string[]; metrics?: { label: string; value: string }[] }; related?: string[]; sections: { heading: string; paragraphs: string[] }[] };
 
-export const articles: Record<Locale, Record<ArticleSlug, Article>> = {
+const baseArticles: Record<Locale, Record<LegacyArticleSlug, Article>> = {
   en: {
     "sugargoo-shipping-weight-guide-2026": {
       title: "Sugargoo Shipping in 2026: Actual Weight, Volumetric Weight and Better Parcel Decisions",
@@ -95,17 +100,17 @@ export const articles: Record<Locale, Record<ArticleSlug, Article>> = {
         ]},
       ],
     },
-  } as Record<ArticleSlug, Article>,
-  de: {} as Record<ArticleSlug, Article>, es: {} as Record<ArticleSlug, Article>, fr: {} as Record<ArticleSlug, Article>, it: {} as Record<ArticleSlug, Article>,
+  } as Record<LegacyArticleSlug, Article>,
+  de: {} as Record<LegacyArticleSlug, Article>, es: {} as Record<LegacyArticleSlug, Article>, fr: {} as Record<LegacyArticleSlug, Article>, it: {} as Record<LegacyArticleSlug, Article>,
 };
 
 for (const locale of Object.keys(orderStatusArticles) as Locale[]) {
-  articles[locale]["sugargoo-order-status-purchased-shipped-received-stored"] = orderStatusArticles[locale] as Article;
+  baseArticles[locale]["sugargoo-order-status-purchased-shipped-received-stored"] = { ...orderStatusArticles[locale], sections: orderStatusArticles[locale].sections.map((section) => ({ ...section, paragraphs: [...section.paragraphs] })) };
 }
 
 function localizedArticle(locale: Locale, shipping: {title:string; description:string; category:string; readTime:string; published:string; sections:{heading:string; paragraphs:string[]}[]}, qc: {title:string; description:string; category:string; readTime:string; published:string; sections:{heading:string; paragraphs:string[]}[]}) {
-  articles[locale]["sugargoo-shipping-weight-guide-2026"] = shipping;
-  articles[locale]["sugargoo-qc-photo-checklist"] = qc;
+  baseArticles[locale]["sugargoo-shipping-weight-guide-2026"] = shipping;
+  baseArticles[locale]["sugargoo-qc-photo-checklist"] = qc;
 }
 
 localizedArticle("de",
@@ -202,9 +207,19 @@ localizedArticle("it",
 );
 
 for (const locale of Object.keys(extraArticles) as Locale[]) {
-  Object.assign(articles[locale], extraArticles[locale]);
+  Object.assign(baseArticles[locale], extraArticles[locale]);
 }
 
 for (const locale of ["de", "es", "fr", "it"] as const) {
-  Object.assign(articles[locale], fullLocalizedArticles[locale]);
+  Object.assign(baseArticles[locale], fullLocalizedArticles[locale]);
 }
+
+for (const locale of locales) {
+  for (const slug of legacyArticleSlugs) {
+    const update = legacyArticleUpdates[locale];
+    baseArticles[locale][slug].sections.push({ heading: update.heading, paragraphs: [update.paragraphs[slug]] });
+    baseArticles[locale][slug].modifiedISO = "2026-10-01";
+  }
+}
+
+export const articles = Object.fromEntries(locales.map((locale) => [locale, { ...baseArticles[locale], ...octoberArticles[locale] }])) as Record<Locale, Record<ArticleSlug, Article>>;

@@ -14,6 +14,7 @@
     "test": "npm run build && node --test tests/*.test.mjs",
     "lint": "eslint . --ignore-pattern dist --ignore-pattern .next",
     "db:generate": "drizzle-kit generate",
+    "cf:types": "wrangler types",
     "postbuild": "node scripts/use-built-wrangler.mjs"
   },
   "dependencies": {

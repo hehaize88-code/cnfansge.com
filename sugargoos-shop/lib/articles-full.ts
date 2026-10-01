@@ -1,10 +1,10 @@
-import type { Article, ArticleSlug } from "@/lib/articles";
+import type { Article, LegacyArticleSlug } from "@/lib/articles";
 import type { Locale } from "@/lib/site-data";
 import { spanishArticles } from "@/lib/articles-full-es";
 import { frenchArticles } from "@/lib/articles-full-fr";
 import { italianArticles } from "@/lib/articles-full-it";
 
-type LocalizedArticleSet = Record<ArticleSlug, Article>;
+type LocalizedArticleSet = Record<Exclude<LegacyArticleSlug, "sugargoo-order-status-purchased-shipped-received-stored">, Article>;
 
 export const fullLocalizedArticles: Partial<Record<Locale, LocalizedArticleSet>> = {
   de: {

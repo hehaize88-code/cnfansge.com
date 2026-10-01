@@ -22,7 +22,7 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
     it:"Sugargoo Spreadsheet 2026 — Selezioni, QC e spedizione",
   } as const;
   return {
-    title: titles[locale],
+    title: { absolute: titles[locale] },
     description: homeCopy[locale].intro,
     alternates: { canonical: `/${locale}/`, languages: { ...languages, "x-default": "https://sugargoos.shop/en/" } },
     openGraph: { title: titles[locale], description: homeCopy[locale].intro, images:[] },

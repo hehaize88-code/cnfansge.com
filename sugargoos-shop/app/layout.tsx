@@ -51,7 +51,17 @@ export default function RootLayout({
         <Script id="google-analytics" strategy="afterInteractive">{`window.dataLayer = window.dataLayer || [];
 function gtag(){dataLayer.push(arguments);}
 gtag("js", new Date());
-gtag("config", "G-C3FNCR5MLG");`}</Script>
+gtag("config", "G-C3FNCR5MLG");
+document.addEventListener("click", function(event) {
+  var anchor = event.target instanceof Element ? event.target.closest("a[href]") : null;
+  if (!anchor) return;
+  var destination = new URL(anchor.href, window.location.href);
+  if (destination.hostname === "cnfansge.com" || destination.hostname === "www.cnfansge.com") {
+    gtag("event", "catalog_click", { link_path: destination.pathname, page_path: window.location.pathname });
+  } else if (destination.origin === window.location.origin && /\\/articles\\/[^/]+/.test(destination.pathname)) {
+    gtag("event", "article_open", { article_path: destination.pathname, page_path: window.location.pathname });
+  }
+});`}</Script>
         {children}
       </body>
     </html>

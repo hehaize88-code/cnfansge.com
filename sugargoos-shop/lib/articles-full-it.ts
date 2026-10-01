@@ -1,6 +1,6 @@
-import type { Article, ArticleSlug } from "@/lib/articles";
+import type { Article, LegacyArticleSlug } from "@/lib/articles";
 
-export const italianArticles: Record<ArticleSlug, Article> = {
+export const italianArticles: Record<Exclude<LegacyArticleSlug, "sugargoo-order-status-purchased-shipped-received-stored">, Article> = {
   "sugargoo-spreadsheet-guide-2026": {
     title:"Sugargoo Spreadsheet 2026: trovare, controllare e pianificare un ordine",
     description:"Un flusso verificato per usare i link Sugargoo senza confondere percorso attivo, inserzione del venditore, QC di magazzino e preventivo di spedizione.",

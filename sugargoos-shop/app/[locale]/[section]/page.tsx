@@ -28,7 +28,7 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
   const { locale, section } = await params;
   if (!isLocale(locale) || !isPageSlug(section)) return {};
   const content = pageContent[locale][section];
-  return { title: seoTitles[locale][section], description: content.intro, alternates: { canonical: `/${locale}/${section}/`, languages: { ...alternates(section), "x-default": `https://sugargoos.shop/en/${section}/` } } };
+  return { title: { absolute: seoTitles[locale][section] }, description: content.intro, alternates: { canonical: `/${locale}/${section}/`, languages: { ...alternates(section), "x-default": `https://sugargoos.shop/en/${section}/` } } };
 }
 
 export default async function SectionPage({ params }: { params: Promise<{ locale: string; section: string }> }) {
