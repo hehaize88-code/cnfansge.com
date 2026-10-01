@@ -39,14 +39,6 @@ const sourceHeadings = {
   it: ["Fonti consultate", "Materiale ufficiale verificato il 1 settembre 2026. Condizioni e importi live possono cambiare."],
 } as const;
 
-const currentSourceIntro = {
-  en: "Official material checked on 3 September 2026. Live labels, actions and policies can change.",
-  de: "Offizielle Unterlagen geprüft am 3. September 2026. Live-Labels, Aktionen und Regeln können sich ändern.",
-  es: "Material oficial revisado el 3 de septiembre de 2026. Las etiquetas, acciones y políticas pueden cambiar.",
-  fr: "Documents officiels vérifiés le 3 septembre 2026. Les libellés, actions et règles peuvent évoluer.",
-  it: "Materiale ufficiale verificato il 3 settembre 2026. Etichette, azioni e regole live possono cambiare.",
-} as const;
-
 const sourceKinds = {
   en: { official: "Official source", customer: "Customer-report source", checked: "Checked" },
   de: { official: "Offizielle Quelle", customer: "Kundenbericht", checked: "Geprüft" },
@@ -203,7 +195,7 @@ function Process({ lang }: { lang: Language }) {
       </div>
       <div className="process-grid">
         {t.process.steps.map((step, index) => (
-          <article key={step.title}><span>0{index + 1}</span><h3>{step.title}</h3><p>{step.body}</p></article>
+          <article key={step.title}><span>{String(index + 1).padStart(2, "0")}</span><h3>{step.title}</h3><p>{step.body}</p></article>
         ))}
       </div>
     </section>
@@ -233,8 +225,8 @@ function ArticleCards({ lang }: { lang: Language }) {
       {articleSlugs.map((slug, index) => {
         const article = t.articles[slug];
         return (
-          <article key={slug} className={`article-card tone-${index + 1}`}>
-            <div className="article-index">0{index + 1}</div>
+          <article key={slug} className={`article-card tone-${(index % 6) + 1}`}>
+            <div className="article-index">{String(index + 1).padStart(2, "0")}</div>
             <p className="eyebrow">{article.eyebrow}</p>
             <h3>{article.title}</h3>
             <p>{article.description}</p>
@@ -252,7 +244,7 @@ function FAQ({ lang }: { lang: Language }) {
     <div className="faq-list">
       {t.faq.map((item, index) => (
         <details key={item.q} open={index === 0}>
-          <summary><span>0{index + 1}</span>{item.q}</summary>
+          <summary><span>{String(index + 1).padStart(2, "0")}</span>{item.q}</summary>
           <p>{item.a}</p>
         </details>
       ))}
@@ -371,7 +363,7 @@ function SectionPage({ lang, section }: { lang: Language; section: string }) {
         <section className="section category-section"><Categories lang={lang} /></section>
         <section className="section products-section">{section === "spreadsheet" ? <ProductIndex lang={lang} rows={products} categories={t.categories} /> : <Products lang={lang} mode="finds" />}<div className="section-actions"><a className="button-link" href="https://cnfansge.com/AllProducts/" target="_blank" rel="noopener">{t.labels.viewAll}<ExternalLink aria-hidden="true" /></a><p>{t.labels.disclaimer}</p></div></section>
       </>}
-      {!isFaq && !isArticles && <section className="section feature-section"><div className="feature-grid">{page.points.map((point, index) => { const Icon = iconMap[index] ?? ShieldCheck; return <article key={point.title}><Icon aria-hidden="true"/><span>0{index + 1}</span><h2>{point.title}</h2><p>{point.body}</p></article>; })}</div></section>}
+      {!isFaq && !isArticles && <section className="section feature-section"><div className="feature-grid">{page.points.map((point, index) => { const Icon = iconMap[index] ?? ShieldCheck; return <article key={point.title}><Icon aria-hidden="true"/><span>{String(index + 1).padStart(2, "0")}</span><h2>{point.title}</h2><p>{point.body}</p></article>; })}</div></section>}
       {section === "guide" && <Process lang={lang} />}
       {section === "shipping" && <Facts lang={lang} />}
       {isFaq && <section className="section faq-section"><FAQ lang={lang} /></section>}
@@ -383,24 +375,34 @@ function SectionPage({ lang, section }: { lang: Language; section: string }) {
   );
 }
 
+const updateLabels: Record<Language, string> = { en: "Updated", de: "Aktualisiert", es: "Actualizado", fr: "Mis à jour", it: "Aggiornato" };
+const sourceDateNotes: Record<Language, string> = {
+  en: "Source observations belong to the check dates shown below. A later editorial update does not imply that every earlier review or policy observation was checked again. Current order terms and account instructions govern each transaction.",
+  de: "Die Quellenbeobachtungen gelten für die unten angegebenen Prüfzeitpunkte. Eine spätere redaktionelle Aktualisierung bedeutet nicht, dass jede frühere Bewertung oder Richtlinienbeobachtung erneut geprüft wurde. Für die jeweilige Transaktion gelten die aktuellen Bedingungen und Kontoanweisungen.",
+  es: "Las observaciones de las fuentes corresponden a las fechas de comprobación indicadas. Una actualización editorial posterior no significa que se hayan revisado de nuevo todas las reseñas o políticas anteriores. Cada operación depende de las condiciones e instrucciones actuales de la cuenta.",
+  fr: "Les observations des sources correspondent aux dates de vérification indiquées. Une mise à jour éditoriale ultérieure ne signifie pas que chaque ancien avis ou constat sur les règles a été vérifié à nouveau. Les conditions et instructions actuelles du compte régissent chaque transaction.",
+  it: "Le osservazioni delle fonti si riferiscono alle date di verifica indicate. Un aggiornamento editoriale successivo non implica una nuova verifica di tutte le precedenti recensioni o regole. Per ogni operazione valgono le condizioni e le istruzioni attuali dell'account.",
+};
+
 function ArticlePage({ lang, slug }: { lang: Language; slug: ArticleSlug }) {
   const t = copy[lang];
   const article = t.articles[slug];
   const crumbs = [{ label: t.nav.home, href: `/${lang}` }, { label: t.nav.articles, href: `/${lang}/articles` }, { label: article.title, href: `/${lang}/articles/${slug}` }];
   const published = article.published ?? "2026-09-01";
-  const sourceIntro = slug === "oopbuy-order-status-interface-guide" ? currentSourceIntro[lang] : sourceHeadings[lang][1];
-  const articleSchema = { "@context": "https://schema.org", "@type": "Article", headline: article.title, description: article.description, datePublished: published, dateModified: published, author: { "@type": "Organization", name: "OOPBUY VIP Research Desk" }, mainEntityOfPage: `${SITE}/${lang}/articles/${slug}`, citation: article.sources?.map(source => source.reference ? `${source.label} — ${source.reference}` : source.label) ?? [] };
+  const sourceIntro = sourceDateNotes[lang];
+  const articleSchema = { "@context": "https://schema.org", "@type": "Article", headline: article.title, description: article.description, datePublished: published, dateModified: article.modified ?? published, inLanguage: lang, author: { "@type": "Organization", name: "OOPBUY VIP Research Desk" }, mainEntityOfPage: `${SITE}/${lang}/articles/${slug}`, citation: article.sources?.map(source => source.reference ? `${source.label} — ${source.reference}` : source.label) ?? [] };
   return (
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify([articleSchema, breadcrumbSchema(crumbs)]) }} />
       <main className="article-page">
         <div className="section breadcrumb-section"><Breadcrumbs items={crumbs} /></div>
         <header className="article-hero section">
-          <div><p className="eyebrow">{article.eyebrow} / {article.read}</p><h1>{article.title}</h1><p>{article.description}</p>{article.updated && <small className="article-updated">Updated {article.updated}</small>}</div>
-          <aside><ShieldCheck aria-hidden="true"/><strong>{t.labels.independently}</strong><p>{t.hero.proof}</p></aside>
+          <div><p className="eyebrow">{article.eyebrow} / {article.read}</p><h1>{article.title}</h1><p>{article.description}</p>{article.updated && <small className="article-updated">{updateLabels[lang]} {article.updated}</small>}</div>
+          <aside><ShieldCheck aria-hidden="true"/><strong>{t.labels.independently}</strong><p>{article.description}</p></aside>
         </header>
         <article className="article-body section">
-          {article.sections.map((section, index) => <section key={section.heading}><span>0{index + 1}</span><div><h2>{section.heading}</h2>{section.paragraphs.map((paragraph, p) => <p key={p}>{paragraph}</p>)}</div></section>)}
+          {article.sections.map((section, index) => <section key={section.heading}><span>{String(index + 1).padStart(2, "0")}</span><div><h2>{section.heading}</h2>{section.paragraphs.map((paragraph, p) => <p key={p}>{paragraph}</p>)}</div></section>)}
+          {!!article.related?.length && <section><span>↗</span><div><h2>{t.nav.articles}</h2><ul>{article.related.filter((related) => related !== slug && articleSlugs.includes(related as ArticleSlug)).map((related) => <li key={related}><a href={`/${lang}/articles/${related}`}>{t.articles[related as ArticleSlug].title}</a></li>)}</ul></div></section>}
           {!!article.sources?.length && <section className="article-sources"><span>↗</span><div><h2>{sourceHeadings[lang][0]}</h2><p className="source-intro">{sourceIntro}</p><ul>{article.sources.map((source) => { const kind = source.kind ?? (/Trustpilot|Reddit|customer/i.test(source.label) ? "customer" : "official"); return <li key={source.label}><strong className="source-name">{source.label}</strong><span className="source-meta">{sourceKinds[lang][kind]} · {sourceKinds[lang].checked} {source.checked ?? "1 Sep 2026"}</span><p>{source.note}</p>{source.reference && <code>{source.reference}</code>}</li>; })}</ul></div></section>}
           <div className="source-note"><strong>{sourceBoundary[lang][0]}</strong><p>{t.labels.disclaimer} {sourceBoundary[lang][1]}</p></div>
         </article>
@@ -429,3 +431,4 @@ export function SitePage({ lang, segments = [] }: { lang: Language; segments?: s
     </div>
   );
 }
+

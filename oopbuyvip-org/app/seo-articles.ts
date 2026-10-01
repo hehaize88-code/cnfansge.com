@@ -24,6 +24,8 @@ export type Article = {
   read: string;
   updated: string;
   published?: string;
+  modified?: string;
+  related?: string[];
   sections: { heading: string; paragraphs: string[] }[];
   sources: ArticleSource[];
 };

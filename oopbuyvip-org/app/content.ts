@@ -4,6 +4,7 @@ import { spanishArticles } from "./articles-es";
 import { frenchArticles } from "./articles-fr";
 import { italianArticles } from "./articles-it";
 import { addParitySections } from "./article-parity";
+import { articleLibrary, newArticleSlugs } from "./article-library";
 
 export const languages = ["en", "de", "es", "fr", "it"] as const;
 export type Language = (typeof languages)[number];
@@ -105,6 +106,7 @@ export const articleSlugs = [
   "oopbuy-fees-total-cost",
   "is-oopbuy-legit-review",
   "oopbuy-order-status-interface-guide",
+  ...newArticleSlugs,
 ] as const;
 export type ArticleSlug = (typeof articleSlugs)[number];
 
@@ -115,6 +117,8 @@ type Article = {
   read: string;
   updated?: string;
   published?: string;
+  modified?: string;
+  related?: string[];
   sections: { heading: string; paragraphs: string[] }[];
   sources?: { label: string; note: string; kind?: "official" | "customer"; checked?: string; reference?: string }[];
 };
@@ -223,11 +227,11 @@ function translatedArticles(lang: Exclude<Language, "en">): Record<ArticleSlug, 
   }])) as unknown as Record<ArticleSlug, Article>;
 }
 
-sharedArticles.en = addParitySections("en", englishArticles);
-sharedArticles.de = addParitySections("de", germanArticles);
-sharedArticles.es = addParitySections("es", spanishArticles);
-sharedArticles.fr = addParitySections("fr", frenchArticles);
-sharedArticles.it = addParitySections("it", italianArticles);
+sharedArticles.en = articleLibrary("en", addParitySections("en", englishArticles));
+sharedArticles.de = articleLibrary("de", addParitySections("de", germanArticles));
+sharedArticles.es = articleLibrary("es", addParitySections("es", spanishArticles));
+sharedArticles.fr = articleLibrary("fr", addParitySections("fr", frenchArticles));
+sharedArticles.it = articleLibrary("it", addParitySections("it", italianArticles));
 
 const makeCopy = (lang: Language, data: Omit<Copy, "articles">): Copy => ({ ...data, articles: sharedArticles[lang] as Record<ArticleSlug, Article> });
 

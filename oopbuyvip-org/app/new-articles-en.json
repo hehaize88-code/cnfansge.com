@@ -1,0 +1,685 @@
+{
+  "oopbuy-payment-pending": {
+    "title": "OOPBuy Payment Pending: Check Before Paying Again",
+    "eyebrow": "OOPBuy payment pending",
+    "description": "Resolve an OOPBuy payment mismatch by checking the provider record, wallet credit and order separately before attempting another payment.",
+    "read": "9 min read",
+    "updated": "1 October 2026",
+    "published": "2026-10-01",
+    "modified": "2026-10-01",
+    "sections": [
+      {
+        "heading": "Start by separating the three payment records",
+        "paragraphs": [
+          "If an OOPBuy payment appears pending, do not immediately pay again. First compare the payment provider's transaction, any OOPBuy wallet movement and the payment state of the particular order. These are related records, but they are not interchangeable. A provider receipt can exist before a corresponding account credit is visible, and a wallet credit can exist without the intended order being paid. Identify which connection is missing before changing the transaction or creating another attempt.",
+          "Begin with the object you intended to pay for. Was this a wallet top-up, a product order or a parcel payment? Write that purpose at the top of your notes alongside the amount and currency. A freight payment should be investigated against a parcel reference rather than an unrelated product order. Keeping the purpose explicit prevents a support conversation from drifting between different records that happen to have similar amounts. This guide is a troubleshooting method, not a promise that every pending transaction has the same cause."
+        ]
+      },
+      {
+        "heading": "Check what the payment provider actually recorded",
+        "paragraphs": [
+          "Open the provider record through your own payment account. Copy the transaction reference, amount, currency, time and exact status. Distinguish a completed transaction from an authorization, a processing notice or a failed attempt according to that provider's current explanation. An available-balance reduction alone is not enough to identify which of those events occurred. If the provider has a receipt or downloadable confirmation, keep an original copy and record when you retrieved it.",
+          "Next, compare the time zone and displayed currency with your OOPBuy record. Two screens can describe the same transaction using different local times or currency presentations. Do not call the amounts inconsistent until you have checked that context. Keep conversion or provider charges separate from the intended platform credit. Do not share a full card number, password or security code in screenshots. The useful evidence is the reference and relevant transaction detail, with unrelated account information removed."
+        ]
+      },
+      {
+        "heading": "Reconcile wallet credit with the intended order",
+        "paragraphs": [
+          "OOPBuy publishes separate account-recharge instructions, and its after-sales help describes refunds to the account balance. These are account-level money records. A recharge receipt should therefore be checked separately from the intended order's payment state. Locate the matching account credit, then inspect whether the specific order is paid. If the current interface requires another action, follow that instruction only after verifying the original transaction. Do not treat the existence of a provider receipt as proof that every later purchasing step is complete.",
+          "If a wallet history is available, locate the entry that matches the top-up purpose, transaction time and amount. Record the balance credit and any separate order debit. If no history is available, capture the current balance and ask support to identify the matching credit; do not manufacture a missing ledger entry from memory. Then open the exact order and record its payment state. A credited wallet paired with an unpaid order calls for a different investigation from a provider payment with no visible wallet credit."
+        ]
+      },
+      {
+        "heading": "Choose the next action from the mismatch",
+        "paragraphs": [
+          "For a provider failure with no matching platform credit, check whether the provider still holds an authorization before trying again. For a completed provider payment with no account credit, preserve the reference and request a reconciliation. For a credited wallet with an unpaid order, inspect the current order payment control and available balance. For an order marked paid, investigate purchasing separately; paying again does not make the seller dispatch faster. These branches narrow the issue without assigning blame prematurely.",
+          "If the same screen gives contradictory signals, capture both rather than refreshing until one disappears. Record the exact order number, the last successful action and the next event you expected. A duplicate attempt can create a second transaction requiring its own refund or investigation. Use a new payment only when the first attempt's state is understood and the current platform or provider instructions support the action. Do not treat a disabled button as proof that the original payment failed."
+        ]
+      },
+      {
+        "heading": "Build a concise payment reconciliation request",
+        "paragraphs": [
+          "Prepare four items for the platform's current support route: the order or top-up purpose, the provider transaction reference, the relevant account screenshot and the mismatch you want checked. State the amount and currency on each side. Ask whether the provider transaction has been matched to your account, and whether it has been assigned to the intended order. That question is more useful than asking why the whole haul has not moved when the unresolved event is still payment recognition.",
+          "Keep provider and platform conversations distinct. The provider can explain its own authorization or settlement record; platform support can investigate wallet credit and order allocation. Save each response with its date and the reference it concerns. If an agent asks for additional evidence, supply the missing item within the existing case whenever possible. Do not post transaction screenshots publicly to obtain informal help. A payment trace belongs in the appropriate private support channel, not in a product review or social discussion."
+        ]
+      },
+      {
+        "heading": "Work through a hypothetical top-up mismatch",
+        "paragraphs": [
+          "Imagine a buyer who intended to top up, then pay for a jacket order. The provider shows a completed transaction, the wallet shows a matching credit, and the jacket remains unpaid. The confirmed event is recharge. The missing event is payment allocation to the jacket order. The buyer checks the available balance, confirms the exact jacket option and examines the current order payment action. Repeating the top-up would increase the wallet amount without necessarily addressing the missing order action.",
+          "Now change one detail: the provider shows completion but there is no matching wallet entry. The buyer stops before submitting another payment and asks support to trace the provider reference. If the provider instead shows a pending authorization, the buyer asks the provider what that state means for this attempt. These are illustrative scenarios, not reported customer cases. Their purpose is to show that a small change in evidence can change the correct next step even when every screen is casually described as payment pending."
+        ]
+      },
+      {
+        "heading": "Close the case only when both sides reconcile",
+        "paragraphs": [
+          "A resolved payment case should connect the original attempt to a visible outcome: account credit, order payment, reversal or refund. Record the resolution reference and final amount. If a second attempt was made, reconcile that one separately rather than assuming the first outcome applies to both. Preserve the original screenshots and append the resolution. This makes it possible to explain an adjustment later without replacing the initial evidence or confusing a refund with a fresh deposit.",
+          "Before continuing, confirm the intended product option and quantity again. A payment problem can distract from an unrelated selection error, especially when several orders are open. Keep the payment evidence separate from seller dispatch and warehouse intake. Published timing statements, payment methods and account controls can change, so follow the current transaction instructions rather than a universal waiting period copied from another buyer. Once payment is confirmed, the next useful check is the purchasing stage, not another payment attempt."
+        ]
+      },
+      {
+        "heading": "Keep duplicate attempts distinguishable",
+        "paragraphs": [
+          "If you have already made more than one attempt, assign a separate line to each reference rather than merging the amounts. Note which attempt is completed, which is pending and which is linked to the order. Ask support to reconcile each unresolved reference independently. An order marked paid can still leave a second top-up or authorization to investigate. Clear separation prevents a legitimate first payment from being mistaken for an unexplained second charge.",
+          "Before accepting a resolution, compare the final order payment with the number of provider transactions. Keep any reversal or credit attached to the attempt it resolves. A simple record of purpose, reference, amount, currency and outcome is sufficient; it does not need unrelated bank history. Once every attempt has a defined state, you can continue the order without carrying an invisible duplicate into a later refund discussion."
+        ]
+      }
+    ],
+    "sources": [
+      {
+        "label": "OOPBuy Top up",
+        "note": "Official distinction between recharge and shopping-agent order payment.",
+        "kind": "official",
+        "checked": "1 October 2026",
+        "reference": "oopbuy.com/notice/1740660085586235394"
+      },
+      {
+        "label": "OOPBuy How to apply for aftersales",
+        "note": "Official descriptions of refunds to the account balance.",
+        "kind": "official",
+        "checked": "1 October 2026",
+        "reference": "oopbuy.com/notice/1772884667429093377"
+      }
+    ],
+    "related": [
+      "oopbuy-order-status-interface-guide",
+      "oopbuy-purchasing-delay",
+      "oopbuy-refund-status"
+    ]
+  },
+  "oopbuy-purchasing-delay": {
+    "title": "OOPBuy Purchasing Delay: Find the Blocked Stage",
+    "eyebrow": "OOPBuy purchasing delay",
+    "description": "Separate unpaid orders, agent purchasing and seller dispatch, then request an update using the missing event rather than an assumed delivery deadline.",
+    "read": "9 min read",
+    "updated": "1 October 2026",
+    "published": "2026-10-01",
+    "modified": "2026-10-01",
+    "sections": [
+      {
+        "heading": "Find the last completed purchase event",
+        "paragraphs": [
+          "An OOPBuy purchasing delay needs a stage-specific check. Start with the last event the account actually confirms: order created, payment allocated, purchase processed or seller dispatch recorded. A product in the cart has not necessarily become an order, and a paid order has not necessarily been dispatched by the seller. The most useful question is which expected next event is missing. That question directs attention to a particular order instead of treating every incomplete item as one delayed haul.",
+          "Open the exact order rather than relying on the overview screen. Record its reference, product link, selected size or variant, quantity and exact status. Note when you first saw that status and when you last checked it. A screenshot taken today cannot prove that the status has been unchanged for several days unless an earlier record supports that statement. When several items were paid together, investigate each one individually because seller availability and dispatch can differ within the same group."
+        ]
+      },
+      {
+        "heading": "Separate payment recognition from purchasing",
+        "paragraphs": [
+          "Check whether the order itself is paid before investigating procurement. A payment provider receipt or account recharge should be matched to the intended order, not treated as automatic purchasing confirmation. If the mismatch is financial, resolve it through the payment record first. If the order is paid but the purchasing event is absent, collect the order details and any message requesting clarification. Repeated payment attempts do not resolve a missing variant choice or an unanswered stock question.",
+          "Read the order messages before sending a delay complaint. Look for a request concerning size, color, price difference, quantity, stock or the product source. Do not assume a request exists simply because the order has not progressed; mark it unknown if no message is visible. When clarification is requested, answer the specific point using the product option you actually want. A vague instruction to buy anything similar can introduce a new mismatch that is harder to fix after the seller dispatches."
+        ]
+      },
+      {
+        "heading": "Use the current status to identify the responsible stage",
+        "paragraphs": [
+          "The official OOPBuy after-sales instructions distinguish Process Pending, Processing, Purchased and Seller Sent when describing available cancellation or after-sales actions. Those labels refer to different purchasing stages. The available remedy changes with the current order state and whether a purchase or seller dispatch has occurred. Copy the exact label from your account and inspect its current action controls. Do not infer that cancellation remains automatic after the seller has accepted or sent the order.",
+          "When purchasing is confirmed but seller dispatch is missing, narrow the request to dispatch confirmation. Ask whether a domestic tracking reference exists and whether it is associated with this specific order. When purchasing confirmation itself is missing, ask what prevents the order from being placed. Distinguishing these questions avoids blaming the warehouse for an item that has not yet left the seller. It also prevents a domestic tracking number from being confused with the international parcel number created much later."
+        ]
+      },
+      {
+        "heading": "Check the ordered option before authorizing changes",
+        "paragraphs": [
+          "Review the saved option against the current seller listing if it remains available. Check whether the intended item is a standard listing, a pre-order, a customized product or a bundle with multiple pieces. These details can affect what clarification is needed, but they do not establish a delay cause by themselves. If the listing changes, keep the earlier order selection as the baseline. Do not edit your notes to make the original request appear identical to the newly displayed listing.",
+          "For an unavailable option, decide what substitutions you would actually accept before replying. Specify the size, color and version rather than authorizing a broad replacement. If you prefer cancellation, use the current account route and request confirmation of the result. A cancellation request is not the same as cancellation acceptance, and acceptance is not the same as a completed refund. Keep those outcomes separate so that a procurement problem does not disappear from your record while the financial result remains unresolved."
+        ]
+      },
+      {
+        "heading": "Send an update request that can be investigated",
+        "paragraphs": [
+          "A useful purchasing-delay message includes the order reference, selected option, payment confirmation, exact status and the last relevant message. State the missing event in one sentence. For example, explain that payment is confirmed but purchasing confirmation is absent, or that purchasing is confirmed but no seller dispatch reference is visible. These are example descriptions, not claims about a real customer's order. Ask for the unresolved stage and the next action required from you rather than demanding a date the evidence cannot support.",
+          "If support provides a check-back time, record it with the response and time zone. If no time is given, choose a personal review reminder without presenting it as a platform service commitment. Follow up with new evidence or a clearly unanswered question. Repeatedly opening separate tickets can fragment the same order history. Preserve the original conversation and add the next event to it whenever the interface allows. Keep unrelated orders out of the same case unless support specifically asks to combine them."
+        ]
+      },
+      {
+        "heading": "Audit a mixed order without holding up every item",
+        "paragraphs": [
+          "Consider a hypothetical group containing a hoodie, a bag and shoes. The hoodie is stored, the bag is purchased without a dispatch reference, and the shoes need option clarification. There are three different tasks: review hoodie evidence, ask about bag dispatch and answer the shoe option request. Waiting for the whole group to reach one shared status hides those tasks. In particular, a stored item's return decision should not be postponed merely because another seller has not dispatched.",
+          "Create one line per item with its last verified event, missing event and next action. Add a separate column for any warehouse decision deadline once the item is stored. This record helps you decide whether to wait, request clarification, seek cancellation or continue planning approved items. It does not promise that splitting a group is always cheaper or available. Parcel decisions belong to the current shipping options after items are ready; the immediate job is to resolve each purchase-stage uncertainty correctly."
+        ]
+      },
+      {
+        "heading": "Measure progress through confirmed transitions",
+        "paragraphs": [
+          "The next useful event is a verifiable transition, not simply a reassuring message. Purchasing confirmation, seller dispatch, a matched domestic tracking reference or accepted cancellation can each move the case forward. Save the event with its timestamp and reference. If a status changes without the expected supporting record, note that gap and ask for the missing detail. The goal is to understand the stage sufficiently to choose your next action, rather than to collect screenshots of every refresh.",
+          "Keep expectations bounded by the selected product and current platform information. Do not apply one buyer's procurement time to every seller, and do not count weekend or holiday assumptions as verified explanations for your case. Equally, do not wait indefinitely when the account shows a request you can answer now. A disciplined purchasing-delay check ends with a specific task and a dated follow-up point. Once seller delivery is confirmed, switch to warehouse receiving checks instead of continuing to describe the issue as purchasing."
+        ]
+      },
+      {
+        "heading": "Keep the seller promise separate from the platform event",
+        "paragraphs": [
+          "If the listing or seller message gives a dispatch expectation, save the wording and date with the selected option. Distinguish that seller statement from a platform purchasing confirmation. A listing estimate is not proof that the seller has accepted this particular order. Ask whether the promised event has occurred and what evidence supports it. If no expectation is available, describe the missing event honestly instead of inventing a dispatch deadline from another product.",
+          "When a seller changes the expected option or availability, record the change before deciding whether to continue. Confirm what you authorize and what should happen to the original order. This keeps a substitution, cancellation or later purchase from being confused with progress on the first request. The next status check should refer to the accepted instruction and its reference, while the earlier selection remains available if the outcome needs to be reviewed."
+        ]
+      }
+    ],
+    "sources": [
+      {
+        "label": "OOPBuy How to apply for aftersales",
+        "note": "Official distinction between purchasing stages and their available actions.",
+        "kind": "official",
+        "checked": "1 October 2026",
+        "reference": "oopbuy.com/notice/1772884667429093377"
+      }
+    ],
+    "related": [
+      "oopbuy-payment-pending",
+      "oopbuy-warehouse-not-stored",
+      "oopbuy-order-status-interface-guide"
+    ]
+  },
+  "oopbuy-warehouse-not-stored": {
+    "title": "OOPBuy Delivered but Not Stored: Warehouse Checks",
+    "eyebrow": "OOPBuy warehouse receiving",
+    "description": "Check a seller parcel marked delivered without a stored OOPBuy item by matching domestic tracking, order identity and warehouse receiving evidence.",
+    "read": "9 min read",
+    "updated": "1 October 2026",
+    "published": "2026-10-01",
+    "modified": "2026-10-01",
+    "sections": [
+      {
+        "heading": "Delivery and warehouse storage are separate checkpoints",
+        "paragraphs": [
+          "A seller parcel marked delivered does not automatically mean the item is ready in your OOPBuy warehouse. Domestic delivery records the carrier's event; warehouse receiving involves identifying the parcel and its contents and connecting them with your order. Start by checking both records separately. Copy the domestic tracking reference and delivery event, then open the corresponding OOPBuy order to see whether receiving or storage is shown. This distinction matters because an apparent delay can be a missing intake connection rather than a failed purchase or an international shipping problem.",
+          "Do not use the international parcel screen to investigate a seller shipment that has not been stored. The relevant objects are the purchasing order, the seller's domestic shipment and the warehouse item. Write all available references beside one another and mark which relationships are actually confirmed. If the seller has given several tracking references, do not assume the first belongs to every item. A multi-piece purchase can have multiple deliveries, and a single delivery can contain more than one ordered product."
+        ]
+      },
+      {
+        "heading": "Match the domestic shipment to the order",
+        "paragraphs": [
+          "Compare the seller dispatch record with the item you ordered. Check the seller name, product option, quantity and tracking reference. If the product page is unavailable, preserve the option description already recorded in your order. A tracking page that shows delivery is useful only after you know that its reference belongs to the relevant shipment. Avoid combining unrelated carrier screenshots merely because they were created on the same day or show the same destination city.",
+          "Read the delivery event carefully. Record its location description, timestamp and time zone without translating an ambiguous phrase into a stronger claim. A scan at a collection point, a delivery attempt or an event relating to another package may require clarification. If the record provides delivery evidence, save the relevant detail privately. Do not publish warehouse addresses, signatures or names from delivery records. For support, use the minimum detail needed to match the shipment and confirm the recorded destination."
+        ]
+      },
+      {
+        "heading": "Understand what receiving inspection does",
+        "paragraphs": [
+          "OOPBuy's official Inspection Information describes receiving, checking packages for prohibited items, weighing and storage. It also describes checks of quantity, color, size and other specifications. Those are warehouse operations beyond a domestic carrier's delivery scan. The same page says severely damaged outer packaging or packages that fail receiving requirements may be rejected or returned. A delivery event therefore should be read together with the account's receiving information, not used as proof that inspection and storage have finished.",
+          "If the order shows a receiving exception, preserve the exact explanation. Do not assume the warehouse rejected a parcel when the screen merely lacks a stored item. Ask whether the shipment has been matched, whether it was accepted and whether any action is needed. The official inspection information also describes limits on certain checks, so a stored status should not be expanded into an authenticity or functional-testing guarantee. Receiving solves item identity and intake questions; deeper product-quality questions need their own evidence."
+        ]
+      },
+      {
+        "heading": "Check for partial receipt and unmatched items",
+        "paragraphs": [
+          "Count the expected units separately from the units visible in the warehouse. A pair of shoes, a two-piece clothing set and two separately ordered shirts have different expected quantities. Record the listing unit and selected quantity before reporting an item missing. If several warehouse records are visible, compare their photographs, labels and item references to the same expected list. Do not count packaging accessories as ordered products unless they were explicitly included in the order.",
+          "For a partial receipt, build a short map of expected item, associated seller shipment, warehouse record and unresolved quantity. This prevents a second domestic parcel from being mistaken for a warehouse loss. It also helps identify a parcel that arrived without enough information to match it. Where the relationship is unclear, ask support to verify it instead of inventing a tracking-to-item association. A precise partial-receipt question is easier to investigate than a complaint that the entire order has disappeared."
+        ]
+      },
+      {
+        "heading": "Prepare the warehouse receiving request",
+        "paragraphs": [
+          "Provide the order reference, domestic tracking number, recorded delivery time, seller dispatch evidence and the current account state. Ask whether the domestic shipment has been received and matched to this order. If it was rejected or returned, request the recorded reason and the next step. If it was accepted but not matched, ask what identifying information is missing. This sequence follows the available evidence without claiming that a fixed intake time applies to every shipment.",
+          "Use one timeline for the case. Start with seller dispatch, add the carrier event and then record any warehouse response. Attach clear screenshots with the relevant references visible. Keep unrelated item records out of the request unless they help identify the package contents. If the warehouse asks the seller for additional dispatch information, record that request and the eventual response. Do not repeatedly create new cases with different summaries of the same facts; contradictory descriptions can make a straightforward match harder."
+        ]
+      },
+      {
+        "heading": "Handle an illustrative split shipment",
+        "paragraphs": [
+          "Imagine an order for a jacket and trousers. One domestic tracking number shows delivery, the jacket is stored, and the trousers are absent. The buyer first checks whether the seller sent both items together. If the order messages contain a second tracking reference for the trousers, the missing warehouse item may still be in domestic transit. If the seller confirms both were packed together, the next request is a contents reconciliation for that received shipment. The same visible absence leads to different questions depending on dispatch evidence.",
+          "In this hypothetical example, the buyer records the jacket warehouse reference and its receiving date while investigating the trousers. The jacket's QC and return decision proceed independently. Waiting for the missing trousers should not erase a deadline attached to the jacket. If the trousers later arrive, their own stock-in time is recorded. This approach avoids treating a mixed order as one clock and prevents an unresolved receiving question from delaying decisions that are already available for another item."
+        ]
+      },
+      {
+        "heading": "Move from receiving uncertainty to an item decision",
+        "paragraphs": [
+          "After storage appears, confirm that the item identity, option and quantity match the order. Check the photographs promptly and record any mismatch before approving international shipment. Capture the stock-in time because a return decision window and a storage period serve different purposes. A long storage allowance does not make a time-sensitive return request equally long. Where an item is marked restricted or unsuitable for transport, ask for the current permitted action instead of assuming it can be added to any parcel.",
+          "The receiving case is complete when you can connect the seller shipment to a clear outcome: matched warehouse item, confirmed partial receipt, documented rejection or a defined investigation. Save that outcome and any resulting after-sales reference. Do not equate a support acknowledgment with a completed intake. If the issue remains open, state exactly what is unknown and when you will check again. The record should make the missing transition visible without pretending to know what happened inside a package you have not seen."
+        ]
+      },
+      {
+        "heading": "A practical receiving record to keep",
+        "paragraphs": [
+          "Use a small record containing the seller order, product option, expected units, domestic tracking reference, delivery time, warehouse item reference and confirmed units. Keep blank fields explicitly unknown. Add an exception note only when the carrier, seller or platform actually records an exception. This format is useful even when the interface changes because it describes relationships between objects rather than relying on the color or position of a progress bar.",
+          "When the record is updated, append the new event and preserve the earlier state. If support corrects an incorrect tracking association, note the correction with its date rather than silently replacing the old reference. Before sharing the record, remove addresses and unrelated payment information. A concise receiving audit should answer what arrived, which order it belongs to and what remains unresolved. It should not become a public archive of personal delivery data or a claim that every warehouse delay has the same explanation."
+        ]
+      }
+    ],
+    "sources": [
+      {
+        "label": "OOPBuy Inspection Information",
+        "note": "Official receiving, inspection and storage scope, including rejection and check limitations.",
+        "kind": "official",
+        "checked": "1 October 2026",
+        "reference": "oopbuy.com/notice/1740664942636404738"
+      }
+    ],
+    "related": [
+      "oopbuy-purchasing-delay",
+      "oopbuy-wrong-item-warehouse",
+      "oopbuy-qc-checklist"
+    ]
+  },
+  "oopbuy-wrong-item-warehouse": {
+    "title": "OOPBuy Wrong Size or Color: Check Warehouse Evidence",
+    "eyebrow": "OOPBuy wrong item at warehouse",
+    "description": "Compare the ordered option with OOPBuy warehouse photos, distinguish a selection mistake from a received-item mismatch and document a remedy request.",
+    "read": "9 min read",
+    "updated": "1 October 2026",
+    "published": "2026-10-01",
+    "modified": "2026-10-01",
+    "sections": [
+      {
+        "heading": "Stop the parcel decision and compare expected with received",
+        "paragraphs": [
+          "If an OOPBuy warehouse item looks like the wrong size, color or quantity, compare it with the recorded order option before approving shipment. Keep the expected specification and received evidence side by side. A product photograph on a spreadsheet is not the baseline for the selected option; the relevant baseline is what your actual order requested. Identifying that baseline first helps distinguish a seller mismatch, your own selection mistake, a misleading photograph and an uncertainty that needs another view.",
+          "Preserve the original selection, any purchasing clarification and the warehouse photos. Do not rewrite the option field to match what arrived. Note the stock-in time and check the current return route promptly. A mismatch can be time-sensitive even while other items are still in purchasing or transit. This guide helps organize a decision; it does not promise that every disagreement qualifies for a free return, that the seller will approve an exchange or that a photo proves the underlying material."
+        ]
+      },
+      {
+        "heading": "Confirm the ordered variant rather than the hero image",
+        "paragraphs": [
+          "Read the order's size, color, version and quantity exactly as saved. If a listing contains several products under one title, preserve the selected option name or code. The hero image may show a premium version, a different color or an entire set while the chosen option represents a single piece. Check any message that changed the selection during purchasing. The final confirmed instruction is relevant, but keep the earlier instruction too so the change can be explained accurately.",
+          "For quantity, distinguish the seller's unit from the number you ordered. One unit may mean a pair, a pack or a single component. If the order description is ambiguous, ask for clarification rather than counting visible pieces against an assumed unit. For size, separate the label on the item from its actual measurements and fit. A label mismatch and a garment that fits differently from your expectation are different problems and need different evidence. Neither should be hidden behind a general claim that the item is wrong."
+        ]
+      },
+      {
+        "heading": "Read warehouse photographs within their limits",
+        "paragraphs": [
+          "OOPBuy's Inspection Information describes checks of quantity, color, size and other specifications, while also listing limits including color difference, size error and usage effects. That wording should not be treated as a guarantee that photographs establish exact color reproduction or personal fit. A visible label can support a size-label comparison; a ruler photo can support a particular measurement. Lighting, perspective and the measurement method still affect what a photo can demonstrate.",
+          "When the suspected mismatch is not clear, request a targeted view through the current available service. Specify the item reference and the detail needed: a readable size label, both sides of a color label, all pieces together or a measurement with defined endpoints. Do not assume that an extra photograph is free or that a functional test is offered. Confirm availability and any charge before authorizing it. A narrow evidence request reduces ambiguity more effectively than asking for many unspecified pictures."
+        ]
+      },
+      {
+        "heading": "Classify the discrepancy without assigning blame early",
+        "paragraphs": [
+          "Create three fields: ordered specification, observed specification and unresolved question. If the order says medium and the received label says large, the discrepancy is directly visible. If both labels say medium but you expect a different fit, compare the relevant measurement with the size chart and its stated tolerance if any. If the photo looks blue while the order says black, seek better lighting or a label before declaring a confirmed color error. Mark the conclusion provisional when the evidence remains weak.",
+          "Review responsibility separately from remedy. OOPBuy's published returns information distinguishes customer-selection reasons from wrong products sent by sellers and other issues. Describe what happened factually rather than choosing the reason that seems most likely to avoid a charge. If you selected the wrong size, record that. If the seller sent a different option, attach the comparison. Honest classification gives the seller and platform a clearer basis for deciding what action and costs apply."
+        ]
+      },
+      {
+        "heading": "Choose between clarification, return and exchange",
+        "paragraphs": [
+          "Clarification is appropriate when the evidence cannot yet establish a mismatch. A return request may be appropriate when the received item does not match the order or you no longer want it, subject to the current conditions. An exchange adds a new purchasing and domestic-shipping sequence; check the correct replacement option and whether you can accept the extra uncertainty. Do not assume that an exchanged item will arrive before the rest of a planned haul or that the replacement will pass QC automatically.",
+          "Preserve tags, packaging and included accessories while checking the remedy. Published return eligibility can depend on resale condition and category-specific requirements. Ask before requesting irreversible packaging changes or combining the disputed item into a parcel. International shipment introduces another stage and can make the practical return route more complicated. If you decide to keep the item, make that decision explicitly and record the remaining limitation rather than allowing a deadline to expire without a deliberate choice."
+        ]
+      },
+      {
+        "heading": "Write a mismatch request with one clear comparison",
+        "paragraphs": [
+          "Start with the order and warehouse item references. State the expected specification, the observed specification and the evidence showing the difference. Attach the saved option and the relevant warehouse view. Ask for confirmation of the discrepancy and the available remedy before any international parcel is dispatched. If the problem concerns a missing piece, identify the expected set contents and the number visible. Avoid sending a large photo collection without pointing to the exact detail that supports your request.",
+          "Keep the requested outcome clear: verify the label, request return approval or confirm an exchange to a named option. Do not combine a factual mismatch with an unrelated complaint about shipping prices. Save the selected reason, submission time and response. If a return is approved, record the return shipment and later refund outcome separately. Approval to send an item back is an operational step; it does not itself prove that the seller has received it or that money has returned to your balance."
+        ]
+      },
+      {
+        "heading": "Work through a hypothetical hoodie size case",
+        "paragraphs": [
+          "Suppose a buyer ordered a hoodie in size medium and the warehouse label clearly shows large. The buyer saves the medium order selection and large label photo, then asks for the available remedy. That is a visible option mismatch. In a second scenario, the label is medium but the chest measurement is larger than expected. The buyer compares the correct seller chart, checks where the ruler starts and ends, and asks for a repeated measurement if the first photograph is ambiguous.",
+          "The second scenario may concern fit preference, chart accuracy or measurement uncertainty rather than a wrong label. A third scenario could involve a revised option confirmed in a purchasing message. The record must include that change rather than treating the original cart choice as the final instruction. These examples are illustrative and do not describe actual customers. They show why a careful comparison should come before a charge allegation, a refund expectation or an instruction to replace the item."
+        ]
+      },
+      {
+        "heading": "Approve the next step only after the discrepancy is resolved",
+        "paragraphs": [
+          "Before approving shipment, confirm the final item reference, option, quantity and decision. If a replacement arrives, review its own evidence and stock-in time rather than copying the old item's approval. If you keep the original, record why the remaining difference is acceptable. If you return it, track the physical return and the financial result until both are clear. Each choice should be tied to the item that actually moved through the warehouse.",
+          "A useful mismatch record remains short: what was ordered, what arrived, what evidence confirms the difference and what action was accepted. Preserve the original photos and add any new view without erasing the first. Keep personal account data private. The method cannot guarantee seller agreement, free shipping or a particular refund time. It can prevent an avoidable mistake: approving an uncertain item for a parcel before the evidence and available remedy have been checked."
+        ]
+      }
+    ],
+    "sources": [
+      {
+        "label": "OOPBuy Inspection Information",
+        "note": "Official inspection scope and limits on visual and product checks.",
+        "kind": "official",
+        "checked": "1 October 2026",
+        "reference": "oopbuy.com/notice/1740664942636404738"
+      },
+      {
+        "label": "OOPBuy Returns and Refunds",
+        "note": "Official eligibility and responsibility distinctions for return requests.",
+        "kind": "official",
+        "checked": "1 October 2026",
+        "reference": "oopbuy.com/notice/1740656181012172801"
+      }
+    ],
+    "related": [
+      "oopbuy-return-exchange-before-shipping",
+      "oopbuy-qc-checklist",
+      "oopbuy-support-request"
+    ]
+  },
+  "oopbuy-return-exchange-before-shipping": {
+    "title": "OOPBuy Returns Before Shipping: Deadline and Evidence",
+    "eyebrow": "OOPBuy returns and exchanges",
+    "description": "Review OOPBuy return eligibility, the stock-in deadline, packaging and seller approval before an item enters an international parcel.",
+    "read": "9 min read",
+    "updated": "1 October 2026",
+    "published": "2026-10-01",
+    "modified": "2026-10-01",
+    "sections": [
+      {
+        "heading": "Check the return decision while the item is still accessible",
+        "paragraphs": [
+          "An OOPBuy return before international shipping starts with four checks: the item's stock-in time, its current return eligibility, the condition of its packaging and the evidence supporting your reason. Do these checks promptly after warehouse photos become available. A warehouse item can still be stored while its standard return window has ended. Do not wait for the rest of a haul merely because you prefer making all decisions together. The useful action is to identify the affected item and preserve the current available remedy.",
+          "Return, exchange and cancellation are different requests. Cancellation concerns an order that may not yet have reached the warehouse. Return concerns sending a received item back to the seller. Exchange also involves a replacement option and another delivery sequence. Check the action attached to the current order state rather than applying one button path to every situation. This article concerns a warehouse-stage decision; it does not offer a universal right to return any item or a promise that seller approval will follow."
+        ]
+      },
+      {
+        "heading": "Use the stock-in timestamp for the standard window",
+        "paragraphs": [
+          "The published OOPBuy Returns and Refunds page describes a standard five-day request period after stock-in, calculated from the next hour after the status changes to Stocked in, and states five days as 120 hours. Record the exact live status and timestamp before planning your request. Do not start the count from the date you happened to open the photos. If the account shows a deadline that appears inconsistent with the published explanation, save both and ask support to clarify the applicable deadline immediately.",
+          "Treat the deadline as a submission check, not a seller-approval guarantee. The same policy attaches conditions to eligibility and explains that seller agreement is required. A request made in time can still involve questions about category, condition, responsibility or costs. Keep the submission confirmation and timestamp. If a button is unavailable while you believe the window is open, contact the current support route with the recorded stock-in time instead of assuming a saved draft counts as a submitted request."
+        ]
+      },
+      {
+        "heading": "Preserve resale condition while checking eligibility",
+        "paragraphs": [
+          "Read the conditions for the actual product category. The official returns page lists exclusions and special packaging requirements, and refers to seller-supported returns and resale condition. Before removing tags, seals, accessories or original packaging, consider whether that change affects the request you are evaluating. A packaging instruction intended to reduce parcel volume can conflict with preserving return condition. Clarify the remedy first, then authorize packing changes for items you have chosen to keep.",
+          "Do not assume a customized, sealed or otherwise restricted category follows the same standard route as ordinary clothing. Equally, do not conclude that an ineligible standard return means a documented wrong-item problem should be ignored. Ask what remedy is available for the actual reason and evidence. Preserve the product option, photos and relevant seller terms. State the limitation accurately: the platform can facilitate communication, but a published process should not be read as unconditional acceptance by every seller."
+        ]
+      },
+      {
+        "heading": "Choose the reason that matches the facts",
+        "paragraphs": [
+          "Separate preference from an observable mismatch. A buyer who ordered the wrong size needs a different explanation from a seller who sent a different size. A garment that looks different under warehouse lighting may need another photo before a color error is established. A missing component needs an expected-contents comparison. Describe the discrepancy concretely and attach the evidence that supports it. Selecting an inaccurate reason to pursue a lower charge can undermine the case and make the investigation less clear.",
+          "Ask for the cost breakdown relevant to the current request. Product amount, original domestic shipping, return shipping and any service charge should be distinguished. A seller's free outbound delivery does not necessarily make a return free. Do not rely on a fixed deduction copied from an old article or another buyer. The applicable charge can depend on the reason, seller position and current account conditions. Keep the written explanation so that the later refund can be compared with what was accepted."
+        ]
+      },
+      {
+        "heading": "Submit one clear remedy request",
+        "paragraphs": [
+          "Include the order reference, warehouse item reference, selected option, stock-in time, reason and requested remedy. Attach the relevant order selection and warehouse evidence. For an exchange, identify the exact replacement size, color and version. A request for a better item is too vague to authorize a replacement purchase. For a return, ask which condition and charge apply before assuming the full purchase amount will be returned. Follow the current order action or support instruction, then save the submission confirmation.",
+          "Track request, approval and physical return separately. The official after-sales guidance explains that approved returns proceed through seller receipt and refund before the account result is completed. If the request is merely acknowledged, do not record it as approved. If approval is given, retain the return tracking reference and any warehouse dispatch record. Keep one case timeline rather than mixing the return with a different item's purchasing delay. Each event should identify the item and the next unresolved step."
+        ]
+      },
+      {
+        "heading": "Decide whether an exchange meets your actual needs",
+        "paragraphs": [
+          "An exchange is useful only if the replacement resolves the original problem and you can accept the additional workflow. Confirm the correct option, expected product contents and any seller condition before authorizing it. A replacement will need its own receiving and photo review. Do not assume a correct size label proves the right measurements, or that the original packaging and freight quote will remain unchanged after the replacement arrives. Keep the replacement linked to the first item's after-sales reference.",
+          "For a deadline-sensitive purchase, compare an exchange with a return and a later separate order without inventing a delivery date for either. The official after-sales page publishes indicative process times, but seller confirmation and domestic movements remain relevant. Use current case updates rather than turning those statements into a guarantee. If the seller proposes a substitute, review the actual option before accepting. A quick replacement that changes the product's specifications may create a second problem rather than solve the first."
+        ]
+      },
+      {
+        "heading": "Follow an illustrative return timeline",
+        "paragraphs": [
+          "Imagine a buyer receives warehouse photos of shoes with a label that differs from the ordered option. The buyer records stock-in, preserves tags and packaging, submits the mismatch evidence and requests a return before the current deadline. The first milestone is submission. The second is seller approval. The third is dispatch of the returned item. Seller receipt, seller refund and the account credit follow as separate milestones. The example is hypothetical and does not claim a real customer outcome.",
+          "If the seller asks for a clearer label photograph, the buyer adds it to the existing request and keeps the original submission time. If the seller disputes responsibility, the buyer asks for the specific reason and charge rather than assuming approval has been withdrawn or a fee has been waived. If the item has already entered an international parcel, the buyer asks whether it can still be removed at that stage. They do not interpret a warehouse return article as permission to cancel a dispatched international shipment automatically."
+        ]
+      },
+      {
+        "heading": "Finish with a physical and financial reconciliation",
+        "paragraphs": [
+          "Close a return only when the item outcome and money outcome are both understood. Record whether the seller accepted the returned item, what amount was refunded, what charges remained and where the credit appeared. If the money goes to a platform balance, do not label it as money received in your bank account. If an exchange completes, review the replacement and record its own decision. Keep any disputed difference visible until it is explained.",
+          "The practical checklist is short: confirm the item, preserve condition, record stock-in, check eligibility, choose an accurate reason, submit through the current route and follow the accepted result. Those steps help you act while options are still available. They do not promise free return freight, full reimbursement or a universal completion time. A clear record is especially valuable when policy wording and the account interface use different status labels, because the actual timestamps and accepted actions remain traceable."
+        ]
+      }
+    ],
+    "sources": [
+      {
+        "label": "OOPBuy Returns and Refunds",
+        "note": "Official standard request window, eligibility, packaging requirements and cost conditions.",
+        "kind": "official",
+        "checked": "1 October 2026",
+        "reference": "oopbuy.com/notice/1740656181012172801"
+      },
+      {
+        "label": "OOPBuy How to apply for aftersales",
+        "note": "Official return and exchange workflow, seller confirmation and balance refund stages.",
+        "kind": "official",
+        "checked": "1 October 2026",
+        "reference": "oopbuy.com/notice/1772884667429093377"
+      }
+    ],
+    "related": [
+      "oopbuy-wrong-item-warehouse",
+      "oopbuy-refund-status",
+      "oopbuy-support-request"
+    ]
+  },
+  "oopbuy-refund-status": {
+    "title": "OOPBuy Refund Status: Balance Credit or Bank Refund",
+    "eyebrow": "OOPBuy refund status",
+    "description": "Trace an OOPBuy refund from request and seller confirmation to account credit or bank processing, keeping amounts and destinations separate.",
+    "read": "9 min read",
+    "updated": "1 October 2026",
+    "published": "2026-10-01",
+    "modified": "2026-10-01",
+    "sections": [
+      {
+        "heading": "Identify the refund destination before counting days",
+        "paragraphs": [
+          "An OOPBuy refund-status check starts with the destination of the money. Are you waiting for a seller refund, an OOPBuy balance credit, or a refund or withdrawal to an external payment account? Those events are not interchangeable. A seller agreeing to refund does not prove the platform has received the money, and a balance credit does not prove a bank has posted it. Write the expected destination beside the relevant request reference before interpreting a status or deciding that a deadline has passed.",
+          "Open the original order, after-sales request and any available balance record. Match them by reference and amount rather than by proximity on a screen. Several refunds can appear close together, especially after a mixed order is cancelled or returned. Do not assign one credit to the largest order simply because the amount looks plausible. Keep original currency, displayed credit currency and any conversion context separate. The purpose is to trace one money movement from its initiating event to its actual destination."
+        ]
+      },
+      {
+        "heading": "Separate request, approval and seller settlement",
+        "paragraphs": [
+          "The first stage is submission of a refund or cancellation request. Save the selected reason, submission time and reference. The next stage may be platform processing or seller confirmation, depending on the order's current state. A returned warehouse item can add physical dispatch and seller receipt before financial settlement. Record which of those events is confirmed and which is still missing. Do not label a request completed simply because support acknowledged that it was received.",
+          "OOPBuy's official after-sales page explains different refund paths for different order statuses and describes several outcomes as credits to the account balance. Its return workflow connects the later balance refund to seller receipt and refund. That makes the current order stage important when investigating the missing event. A request concerning an unpurchased order should not be compared with a returned item still travelling to the seller. Preserve the current response rather than applying another buyer's waiting time to your case."
+        ]
+      },
+      {
+        "heading": "Check the account credit as its own event",
+        "paragraphs": [
+          "When a balance refund is confirmed, look for the corresponding account entry. Compare the credit amount with the accepted refund explanation and original order amount. Retained shipping or service charges should be recorded separately rather than hidden in a rounded total. If the expected and observed amounts differ, request the calculation for the difference. A partial credit can be a defined adjustment or an unresolved mismatch; the ledger alone may not explain which.",
+          "If the order shows a refund outcome but you cannot find the balance movement, provide both records to support. State that the order event is visible and the matching credit is missing or unclear. Ask for the credit reference and destination. Avoid starting a new order to test whether the balance changed. That creates a second financial event without clarifying the first. If funds were already used for another purchase, record the subsequent debit so the refund does not appear to have vanished from the current balance."
+        ]
+      },
+      {
+        "heading": "Distinguish bank processing from a wallet refund",
+        "paragraphs": [
+          "The published Returns and Refunds page also discusses bank-card processing after refund confirmation and says the time depends on the bank. Read that statement alongside the after-sales page's account-balance wording rather than combining both into a single guarantee. Check whether your actual request concerns a wallet credit or an external refund. Ask support to confirm the applicable destination when it is unclear. The date of the first cancellation request is not automatically the date an external refund was initiated.",
+          "For an external refund, keep the platform confirmation, initiation date, amount, currency and any trace reference supplied. Check the provider's current transaction explanation through your own account. A card refund, authorization release and bank transfer can appear differently and should not be treated as identical. If the provider cannot identify a claimed refund, ask what reference it needs and request that reference from the platform. Do not share passwords, full card details or security codes while attempting to reconcile a refund."
+        ]
+      },
+      {
+        "heading": "Build a refund ledger for multiple items",
+        "paragraphs": [
+          "Use one row per refund source. Include order reference, reason, accepted amount, retained charges, expected destination, latest confirmed stage and credit reference. Add a separate row if a freight adjustment or balance withdrawal is involved. This keeps product returns from being mixed with parcel adjustments. Do not sum provisional approvals as money received. A useful total should distinguish requested, approved and actually credited amounts, with unresolved differences visibly marked rather than silently deducted.",
+          "For a returned set, check whether the refund covers every component or only part of the order. For a cancelled option, check whether another option remained purchased. Preserve the original quantity and the seller's accepted outcome. If the order was paid using existing balance, a later wallet credit should not be described as a refund to the payment method used for an earlier unrelated top-up. Linking every event to its source prevents misleading conclusions about where the money should appear."
+        ]
+      },
+      {
+        "heading": "Ask for the missing refund event",
+        "paragraphs": [
+          "A focused support request names the order, after-sales reference, accepted outcome and unresolved financial event. If a return shipment reached the seller but seller refund is unconfirmed, ask about that settlement. If seller refund is confirmed but platform credit is absent, ask for balance reconciliation. If an external refund is confirmed but the provider has no matching entry, ask for the initiation reference and destination. Each question concerns a different point in the chain and should include the evidence already available.",
+          "Retain the response and any stated next check. Avoid presenting a general article's indicative time as a contractual deadline for your transaction. If two official explanations appear inconsistent, quote only the relevant destination or stage and ask which applies to this request. Record the answer in writing. A follow-up is stronger when it identifies the unanswered question and includes a new event, such as seller receipt, than when it repeats that the entire platform is slow without a case reference."
+        ]
+      },
+      {
+        "heading": "Work through a hypothetical balance reconciliation",
+        "paragraphs": [
+          "Imagine two cancelled orders and one returned warehouse item. A balance credit matches one cancellation, the second cancellation is still being confirmed, and the returned item is in domestic transit to the seller. There is one completed account-credit event and two unresolved processes. Treating all three as a single overdue bank refund would conceal those differences. The buyer records each source separately and asks about the next missing event for that particular request.",
+          "If the completed credit is immediately used for a new order, the current balance may look unchanged. The ledger then needs both the credit and the new debit. This example is illustrative, not a reported customer transaction. It demonstrates why a balance snapshot cannot, by itself, prove that a refund never arrived. The final result should be supported by the sequence of transactions and their references, not inferred from one account total viewed after other spending occurred."
+        ]
+      },
+      {
+        "heading": "Close the refund with an explained amount and destination",
+        "paragraphs": [
+          "Record the final credit or provider outcome, its date and the related reference. Compare the result with the accepted refund amount and keep any disputed charge open until explained. A resolution note should say where the money arrived, not simply refunded. If the result is a balance credit, say balance credit. If an external provider confirms receipt, identify that event separately. Preserve the earlier request and approval records so the full chain remains understandable.",
+          "This method cannot guarantee a particular bank processing time, seller response or withdrawal option. It helps you ask the right question at the right stage and avoid waiting for the wrong destination. Before escalating, confirm the object, amount, current stage and next missing event. That short reconciliation often reveals whether you need seller-settlement information, a platform credit reference or an external provider trace. Those are actionable requests that a general complaint about refund speed does not provide."
+        ]
+      }
+    ],
+    "sources": [
+      {
+        "label": "OOPBuy How to apply for aftersales",
+        "note": "Official order-stage refund paths and account-balance outcomes.",
+        "kind": "official",
+        "checked": "1 October 2026",
+        "reference": "oopbuy.com/notice/1772884667429093377"
+      },
+      {
+        "label": "OOPBuy Returns and Refunds",
+        "note": "Official return conditions and bank-processing wording; destination must be verified for each request.",
+        "kind": "official",
+        "checked": "1 October 2026",
+        "reference": "oopbuy.com/notice/1740656181012172801"
+      }
+    ],
+    "related": [
+      "oopbuy-return-exchange-before-shipping",
+      "oopbuy-payment-pending",
+      "oopbuy-support-request"
+    ]
+  },
+  "oopbuy-tracking-not-updating": {
+    "title": "OOPBuy Tracking Not Updating: Diagnose the Last Scan",
+    "eyebrow": "OOPBuy tracking not updating",
+    "description": "Investigate stalled OOPBuy tracking by checking the parcel reference, last physical scan, carrier handoff and any action request before escalating.",
+    "read": "9 min read",
+    "updated": "1 October 2026",
+    "published": "2026-10-01",
+    "modified": "2026-10-01",
+    "sections": [
+      {
+        "heading": "Identify the parcel and the last verified event",
+        "paragraphs": [
+          "When OOPBuy tracking is not updating, begin with the correct international parcel reference and its last recorded event. Do not mix the seller's domestic shipment number with the later parcel sent to your destination. Record the selected route, tracking number, last event text, event time and the page where it appears. A parcel label, a dispatch message and a physical carrier scan can describe different checkpoints. The missing update becomes easier to investigate once you know which checkpoint is actually confirmed.",
+          "Open the current parcel record rather than relying on a saved search result. OOPBuy's official tracking instructions direct users to the Parcel area and Tracking Details after shipment. Use that record as the starting point, then compare any carrier reference shown there. Do not assume an external tracking page belongs to your parcel merely because a copied number produces a result. Confirm the relationship in the account or through support before treating that result as evidence about the shipment."
+        ]
+      },
+      {
+        "heading": "Distinguish a created reference from a physical scan",
+        "paragraphs": [
+          "Copy the exact event wording. A notice that shipment information has been received should not be rewritten as a physical departure unless the carrier explains it that way. Likewise, a warehouse dispatch record should not be expanded into arrival at the destination. Read each system's event in context and mark what it can actually establish. If the meaning is unclear, ask the platform or carrier to explain the specific label instead of borrowing a definition from another shipping route.",
+          "Keep event time separate from the time you checked the page. Some systems display an older event after it is transmitted later, and screens may use different time zones. A newer page timestamp is not necessarily a newer physical movement. Record both where available. Do not assume that no visible scan proves no movement, but do not assume unrecorded movement occurred either. The honest conclusion is that the next event is not visible in the records you have checked."
+        ]
+      },
+      {
+        "heading": "Check whether a handoff introduces another reference",
+        "paragraphs": [
+          "Inspect the parcel record for a carrier name, a local delivery number or a handoff note. If a second reference is explicitly associated with the same parcel, record it with the first. Compare the last event on both records without merging them into an invented continuous timeline. A local carrier may show only its own segment, and an origin record may stop showing useful detail after a handoff. The association matters more than finding a tracking website that gives a reassuring message.",
+          "If no local reference is supplied, ask whether one is available for the chosen route. Do not guess a carrier from the destination country or generate possible number formats. For a record that shows a handoff but no later event, ask whether the handoff is confirmed and which party can investigate the next movement. That focused request distinguishes a visibility gap from a documented exception. It avoids alleging loss before the responsible service has identified the missing stage."
+        ]
+      },
+      {
+        "heading": "Read action requests before estimating a delay",
+        "paragraphs": [
+          "Look for an explicit request concerning delivery instructions, address clarification, customs information or collection. Preserve the exact wording and use the verified service's own contact route to clarify it. Do not treat every customs-related event as a demand for payment, and do not follow an unrelated message just because you are expecting a parcel. Match any request with the account reference and current carrier record. If the requested action cannot be confirmed, ask for verification before providing personal information.",
+          "An actual exception deserves its own record: what was requested, who requested it, the stated deadline and your response. Do not replace that record with a general estimate of how many days international shipping usually takes. A failed delivery attempt, collection instruction or address issue can require an action even when the shipment remains within an indicative transit range. Conversely, the absence of an action notice does not prove that no issue exists. Keep the unresolved stage visible and ask about it directly."
+        ]
+      },
+      {
+        "heading": "Build a compact tracking timeline",
+        "paragraphs": [
+          "Use a timeline with event time, observed time, source, exact wording and reference. Start with parcel submission and dispatch, then add confirmed tracking events. Keep quoted labels short and retain the original screenshots privately. If two pages disagree, show both with their retrieval times. Do not resolve the disagreement by selecting the page with the most advanced status. Ask which record is current and whether the different systems describe separate segments of the same journey.",
+          "Include the selected route and destination country, but do not publish the full delivery address or private tracking number. For a support request, share those details only when required by the current investigation. If insurance or compensation is relevant, check the terms for the selected service and save the policy evidence. A tracking gap alone does not establish eligibility for a claim or a payout. Keep logistics diagnosis and financial remedy as connected but separate tasks."
+        ]
+      },
+      {
+        "heading": "Escalate the last missing transition",
+        "paragraphs": [
+          "A useful tracking request states the parcel reference, selected route, last confirmed event and the next event that is absent. Ask whether dispatch or handoff has been verified and which service can investigate the gap. If the record shows a specific exception, ask about that exception rather than requesting a generic delivery estimate. Attach the account tracking view and the relevant carrier view. Make the unanswered question obvious so support does not have to infer it from a long collection of screenshots.",
+          "Use a current route-specific instruction or written case response when setting the next check. Do not turn a broad delivery estimate into a universal loss threshold. Save any investigation reference and follow up in the same case with new evidence. If support supplies a new local number, verify its association before adding it to the timeline. If the parcel reaches delivery, keep that event separate from whether every item inside is present and undamaged. Delivery and parcel-content checks answer different questions."
+        ]
+      },
+      {
+        "heading": "Compare two illustrative tracking gaps",
+        "paragraphs": [
+          "In a hypothetical first case, the account shows dispatch, but the carrier page shows only information received. The buyer asks whether the parcel's physical handover has been confirmed. In a second case, an origin scan is followed by a documented local-carrier handoff, but the origin page stops updating. The buyer checks the associated local reference and asks about that segment. Both cases may be described casually as tracking stuck, yet the missing evidence sits at a different point in the journey.",
+          "A third case might show a delivery attempt and a verified collection instruction. The next task is then to confirm the collection requirements rather than simply wait for more scans. These examples are illustrative, not customer reports and not route guarantees. They show why a useful tracking guide should lead to a specific evidence check. Guessing a delivery date from an unrelated haul or claiming a parcel is lost from one silent screen does not solve the actual uncertainty."
+        ]
+      },
+      {
+        "heading": "Close the tracking investigation with a verifiable outcome",
+        "paragraphs": [
+          "Record the event that resolves the gap: a confirmed handover, a new carrier scan, a corrected reference, delivery or a documented investigation outcome. Keep any open action or claim separate if it remains unresolved. If the parcel is delivered, retain the packaging until you have checked the contents and recorded any visible damage. A logistics investigation can finish while a missing-item or damage case still needs attention. The final note should make that boundary clear.",
+          "Before the next order, keep the method rather than memorizing a claimed normal delay. Match the parcel, copy the last event, distinguish information from movement, verify handoffs and act on confirmed instructions. Those checks remain useful when routes or interface labels change. They do not promise that every gap is harmless or that support can locate a parcel immediately. They give you a precise starting point for investigation and a record that can support the next decision."
+        ]
+      }
+    ],
+    "sources": [
+      {
+        "label": "OOPBuy How to track my parcel",
+        "note": "Official account route for opening parcel tracking details after shipment.",
+        "kind": "official",
+        "checked": "1 October 2026",
+        "reference": "oopbuy.com/notice/1772883184688103426"
+      }
+    ],
+    "related": [
+      "oopbuy-support-request",
+      "oopbuy-order-status-interface-guide",
+      "oopbuy-shipping-planning"
+    ]
+  },
+  "oopbuy-support-request": {
+    "title": "OOPBuy Support Request: Send the Right Evidence",
+    "eyebrow": "OOPBuy support and after-sales",
+    "description": "Prepare an OOPBuy support request with the correct order or parcel, a short timeline, relevant evidence and a clear next action to investigate.",
+    "read": "9 min read",
+    "updated": "1 October 2026",
+    "published": "2026-10-01",
+    "modified": "2026-10-01",
+    "sections": [
+      {
+        "heading": "Name one problem and the object it belongs to",
+        "paragraphs": [
+          "An effective OOPBuy support request identifies the order, warehouse item, parcel or payment event that needs investigation. Start with that reference and one sentence describing the problem. A request about an unpaid order should not be framed as a lost international parcel. A missing warehouse item should not be investigated using another item's tracking number. Choosing the correct object narrows both the evidence and the action you need, even when several problems occur within the same haul.",
+          "This is a method for preparing your own support request, not a promise of a faster response or a particular outcome. Do not send a message on someone else's account or include unrelated buyers' records. Use the current action shown on your order or the platform's current support route. If the account displays an after-sales control, preserve its submission confirmation. A draft, an unsent attachment or a message in an unrelated channel should not be recorded as a completed formal request."
+        ]
+      },
+      {
+        "heading": "Choose evidence for the question you are asking",
+        "paragraphs": [
+          "For a payment mismatch, keep the transaction reference and matching account or order state. For purchasing, keep the selected option and the missing procurement or dispatch event. For warehouse receiving, keep domestic tracking and the current item record. For a wrong variant, pair the saved option with the relevant photo. For tracking, show the parcel's last event and any associated carrier record. These evidence sets differ because each problem concerns a different transition in the workflow.",
+          "Avoid attaching every screenshot you have collected. A small set with clear references can be more useful than dozens of unlabelled images. Explain what each attachment shows and why it matters. Keep an original copy of the evidence and use a clearly marked crop for the relevant detail when needed. Do not alter labels, amounts or timestamps to make the case appear stronger. If the evidence is ambiguous, state the ambiguity and ask for the specific missing view or record."
+        ]
+      },
+      {
+        "heading": "Write a timeline of verified events",
+        "paragraphs": [
+          "List the few events needed to explain the problem in order: what was requested, what was confirmed, what changed and what remains absent. Add the displayed time zone when it matters. Separate event time from the date you captured a screenshot. If you do not know when a status first appeared, do not infer it from the age of the order. A short accurate timeline helps distinguish a current unresolved action from an old issue that has already changed stages.",
+          "Keep facts and interpretations separate. The fact may be that seller tracking shows delivery while no stored item is visible. The interpretation that the warehouse lost it is not established by that pair of records alone. The fact may be that a return request was submitted; approval and refund are later events. Use precise descriptions so the investigator can confirm the missing relationship. If a previous response is relevant, include its reference and the unresolved question rather than paraphrasing it as a guarantee."
+        ]
+      },
+      {
+        "heading": "Ask for an action that fits the current stage",
+        "paragraphs": [
+          "OOPBuy's after-sales guidance distinguishes available actions by order status, and its returns information attaches conditions to warehouse-stage requests. Check those current controls before asking for a remedy. An unpurchased order, a seller-sent item and a stored item do not necessarily use the same cancellation or return process. If the interface and published explanation appear inconsistent, capture both and ask which route applies to the specific order. Do not assume a general help article overrides the current state of your transaction.",
+          "Choose one clear requested action: confirm payment allocation, identify the missing shipment match, verify a variant discrepancy, explain the return conditions or provide a refund trace. If you want an exchange, name the replacement option. If you want a charge explanation, ask for the relevant calculation. A request to fix everything gives support no clear completion criterion. A specific question makes it possible to judge whether the reply actually resolved the uncertainty or merely acknowledged the message."
+        ]
+      },
+      {
+        "heading": "Keep sensitive details within the appropriate private route",
+        "paragraphs": [
+          "Redact unrelated address, phone, account and payment details before sharing screenshots outside the account's support process. Never include a password, full card number or security code in an ordinary case message. The necessary evidence depends on the issue: an order reference and visible option can establish a variant comparison without a payment receipt, while a payment trace may need the provider reference. Share the minimum information needed for the actual investigation rather than using the same large attachment set for every problem.",
+          "A public discussion can describe the issue in general terms without exposing a full transaction record. Do not publish private staff conversations or another customer's information merely to seek faster attention. If a message arrives through an unfamiliar channel, verify its relationship to the current platform case before supplying more information. Expected support contact does not make every request authentic. Keep the official case reference and the channel where you submitted it so later replies can be matched to the right investigation."
+        ]
+      },
+      {
+        "heading": "Use a factual example rather than an accusation",
+        "paragraphs": [
+          "Consider a hypothetical warehouse mismatch request. The buyer identifies the order, states that the saved option is medium, attaches a readable large size label and asks for verification and the available return or exchange route. The buyer also records the stock-in time and preserves packaging. That request gives the investigator a comparison, a current stage and a requested outcome. It does not assert that every product from the seller is wrong or promise that no return charges will apply.",
+          "For a hypothetical refund case, the buyer identifies the accepted return and says the account credit is not visible. The request asks for the refund stage, destination and credit reference. It does not describe the issue as a bank delay without evidence that a bank refund was initiated. These examples illustrate wording principles and are not messages from actual customers. Your own request should use your verified facts, not copy invented dates or amounts from a sample and present them as real."
+        ]
+      },
+      {
+        "heading": "Follow up with the unanswered question and new evidence",
+        "paragraphs": [
+          "After submitting, save the confirmation, reference and any stated next step. If support asks for one missing item, provide it in the same case when possible. If a reply does not address the question, point to that question directly and explain what remains unresolved. A new tracking event or clearer photo should be added with its date. Repeating the entire story in several unrelated tickets can fragment the record and create conflicting instructions for the same order.",
+          "Distinguish acknowledgment from investigation and investigation from accepted remedy. Record the stage the response actually confirms. If no response time is published or supplied, choose your own reminder without claiming it is a platform deadline. A time-sensitive return decision may need prompt use of the current formal action rather than waiting for an informal conversation. Save both records if they are separate. Do not assume one message preserves every available deadline or that a support acknowledgment extends a published request window."
+        ]
+      },
+      {
+        "heading": "Define completion before archiving the case",
+        "paragraphs": [
+          "A case can be closed when the requested relationship or outcome is clear: the payment is matched, the item is identified, the correct option is confirmed, the return action is accepted or the refund destination is reconciled. If a remedy introduces another stage, keep that stage open. Approval of a return does not prove seller receipt, and seller receipt does not prove account credit. Keep those milestones visible until the original question and its resulting action are both understood.",
+          "Before archiving, note the final answer, date, reference and any remaining limitation. Preserve originals and remove unnecessary personal data from a shareable summary. The strongest support request is not the longest or most forceful; it is the one that lets an investigator identify the object, compare the evidence and answer the exact missing question. This approach also improves future orders because the record explains what happened without converting one case into an unsupported claim about overall platform performance."
+        ]
+      }
+    ],
+    "sources": [
+      {
+        "label": "OOPBuy How to apply for aftersales",
+        "note": "Official order-stage action routes used to select the correct remedy request.",
+        "kind": "official",
+        "checked": "1 October 2026",
+        "reference": "oopbuy.com/notice/1772884667429093377"
+      },
+      {
+        "label": "OOPBuy Returns and Refunds",
+        "note": "Official warehouse-stage eligibility and request conditions.",
+        "kind": "official",
+        "checked": "1 October 2026",
+        "reference": "oopbuy.com/notice/1740656181012172801"
+      }
+    ],
+    "related": [
+      "oopbuy-wrong-item-warehouse",
+      "oopbuy-refund-status",
+      "oopbuy-tracking-not-updating"
+    ]
+  }
+}

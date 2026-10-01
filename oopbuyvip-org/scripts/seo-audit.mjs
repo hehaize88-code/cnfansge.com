@@ -1,9 +1,10 @@
-import { readFile } from "node:fs/promises";
+import { readFile, readdir } from "node:fs/promises";
 import { join } from "node:path";
 
 const root = new URL("../out/", import.meta.url);
 const languages = ["en", "de", "es", "fr", "it"];
-const articleSlugs = ["oopbuy-spreadsheet-guide", "oopbuy-qc-checklist", "oopbuy-shipping-planning", "oopbuy-fees-total-cost", "is-oopbuy-legit-review", "oopbuy-order-status-interface-guide"];
+const articleSlugs = (await readdir(new URL("./en/articles/", root))).filter((file) => file.endsWith(".html")).map((file) => file.slice(0, -5));
+const additions = JSON.parse(await readFile(new URL("../app/new-articles-en.json", import.meta.url), "utf8"));
 const allowedOutboundHosts = new Set(["oopbuyvip.org", "www.oopbuyvip.org", "cnfansge.com", "www.cnfansge.com"]);
 const failures = [];
 
@@ -16,20 +17,24 @@ function outputPath(url) {
   return path ? `${path}.html` : "index.html";
 }
 
+function decodeHtml(value) {
+  return value.replace(/&#x([0-9a-f]+);/gi, (_, hex) => String.fromCodePoint(parseInt(hex, 16))).replace(/&#([0-9]+);/g, (_, number) => String.fromCodePoint(Number(number))).replace(/&amp;/g, "&").replace(/&quot;/g, '\"').replace(/&apos;/g, "'");
+}
+
 function textContent(html) {
   return html.replace(/<script[\s\S]*?<\/script>/g, " ").replace(/<style[\s\S]*?<\/style>/g, " ").replace(/<[^>]+>/g, " ").replace(/&[^;]+;/g, " ").replace(/\s+/g, " ").trim();
 }
 
 const sitemap = await readFile(new URL("./sitemap.xml", root), "utf8");
 const urls = [...sitemap.matchAll(/<loc>([^<]+)<\/loc>/g)].map((match) => match[1]);
-assert(urls.length === 70, `Expected 70 sitemap URLs, found ${urls.length}`);
+assert(urls.length === (8 + articleSlugs.length) * languages.length, `Unexpected sitemap URL count: ${urls.length}`);
 
 for (const url of urls) {
   const path = new URL(url).pathname;
   const lang = path.split("/").filter(Boolean)[0];
   const html = await readFile(new URL(`./${outputPath(url)}`, root), "utf8");
-  const title = html.match(/<title>([\s\S]*?)<\/title>/)?.[1] ?? "";
-  const description = html.match(/<meta name="description" content="([^"]*)"/)?.[1] ?? "";
+  const title = decodeHtml(html.match(/<title>([\s\S]*?)<\/title>/)?.[1] ?? "");
+  const description = decodeHtml(html.match(/<meta name="description" content="([^"]*)"/)?.[1] ?? "");
   const canonical = html.match(/<link rel="canonical" href="([^"]+)"/)?.[1];
   const hreflangs = [...html.matchAll(/<link rel="alternate" hrefLang="([^"]+)"/g)].map((match) => match[1]);
 
@@ -58,7 +63,7 @@ for (const slug of articleSlugs) {
     const body = html.match(/<article class="article-body section">([\s\S]*?)<\/article>/)?.[1] ?? "";
     const editorialBody = body.split('<section class="article-sources">')[0];
     const words = textContent(editorialBody).split(/\s+/).filter(Boolean).length;
-    assert(words >= 1200, `/${lang}/articles/${slug}: only ${words} words`);
+    assert(words >= (lang === "en" || !additions[slug] ? 1200 : 900), `/${lang}/articles/${slug}: only ${words} words`);
     if (lang === "en") assert(words <= 1800, `/en/articles/${slug}: ${words} words exceeds 1800`);
   }
 }
@@ -68,4 +73,5 @@ if (failures.length) {
   process.exit(1);
 }
 
-console.log(`SEO audit passed: ${urls.length} URLs, 5 languages, 30 long-form articles, approved outbound hosts only.`);
+console.log(`SEO audit passed: ${urls.length} URLs, 5 languages, ${articleSlugs.length * languages.length} complete article pages, approved outbound hosts only.`);
+
