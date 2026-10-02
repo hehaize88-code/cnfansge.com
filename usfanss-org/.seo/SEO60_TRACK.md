@@ -1,3 +1,9 @@
+# Automatic publication stopped — 2026-10-02
+
+Owner request: disable usfanss.org only. Shared automation ID `6a6b6ea9479c81918d0530e21c327ad5` now skips this site; enabled state, recurrence and all other sites are preserved. Manual SEO release is separate from the historical C04 cursor below.
+
+---
+
 # usfanss.org SEO60 Progress
 
 - Track: UVE — USFans Warehouse Visual Evidence

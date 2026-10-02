@@ -1,3 +1,11 @@
+# Automation disabled for usfanss.org — 2026-10-02
+
+The owner explicitly stopped automatic article updates for this site. Skip this site entirely in the shared automation: no automatic research, articles, deployment, or cursor advancement. Preserve every other site and the shared schedule. Do not resume without a new owner instruction.
+
+The same owner separately authorized this manual SEO/content improvement, production deployment and six new article topics. The restrictions below describe the archived automatic track and do not limit that explicit manual request. Preserve existing commercial destinations and five-language completeness. Historical C04 remains pending; this manual release does not advance any automatic cycle.
+
+---
+
 # usfanss.org — SEO60 V2 UVE Authority File
 
 > Private automation control. Never render, link, index, expose, summarize, or copy this file into the public website.

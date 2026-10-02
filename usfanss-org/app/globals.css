@@ -367,3 +367,12 @@ footer p { max-width: 700px; color: var(--muted); line-height: 1.6; }
   .footer-brand img { width: 100px; }
 }
 .article-related{display:flex;flex-wrap:wrap;gap:.65rem;margin:1rem 0 1.6rem}.article-related a{display:inline-flex;align-items:center;gap:.35rem;padding:.68rem .82rem;border:1px solid var(--line);color:inherit;text-decoration:none;font-weight:700}.article-related a:hover{border-color:var(--ink)}
+
+/* Category references in long-form guides. */
+.article-examples{margin:24px 0 36px;padding:24px;border:1px solid #dce2e4;border-radius:12px;}
+.article-examples h2{margin:0 0 12px;font-size:1.3rem;}
+.article-examples p{line-height:1.7;max-width:80ch;}
+.article-examples ul{list-style:none;padding:0;margin:18px 0 0;}
+.article-examples li{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;padding:12px 0;border-top:1px solid #dce2e4;}
+.article-examples a{font-weight:650;overflow-wrap:anywhere;}
+.article-examples li span{font-variant-numeric:tabular-nums;}

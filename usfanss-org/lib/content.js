@@ -1,3 +1,6 @@
+import { editorialBlueprints, getEditorialArticle } from "./editorial/index.js";
+import { siteCopy } from "./editorial/site-copy.js";
+import { improveArticle } from "./editorial/updates.js";
 import { getArticleResearch } from "./articleResearch.js";
 import { getArticleParity } from "./articleParity.js";
 import { getFaqParity } from "./faqParity.js";
@@ -317,6 +320,7 @@ const pageDetailCopy = {
 };
 
 export const articleBlueprints = [
+  ...editorialBlueprints,
   {
     slug: "usfans-spreadsheet-guide-2026",
     title: { en:"USFans Spreadsheet 2026: Find and Verify Product Links",de:"USFans-Tabelle 2026: Produktlinks finden und prüfen",es:"USFans Spreadsheet 2026: encontrar y verificar enlaces",fr:"Tableur USFans 2026 : trouver et vérifier les liens",it:"Foglio USFans 2026: trovare e verificare i link" },
@@ -486,18 +490,20 @@ export function getContent(language) {
   return {
     ...base,
     ...detail,
+    ...siteCopy[activeLanguage],
+    scanCards: base.scanCards.map((card,index) => index === 0 ? [card[0],card[1],siteCopy[activeLanguage].snapshot] : card),
     faqItems,
     catalog: {
       ...base.catalog,
       categoryMap: { ...base.catalog.categoryMap, ...detail.categoryMap },
-      verified: detail.verified,
+      verified: siteCopy[activeLanguage].catalogVerified,
       qcNote: detail.qcNote,
       qcTips: detail.qcTips,
     },
   };
 }
 
-export function getArticle(slug, language) {
+function getBaseArticle(slug, language) {
   const blueprint = articleBlueprints.find((item) => item.slug === slug);
   if (!blueprint) return null;
   if (slug === uveArticleBlueprint.slug) return getUveArticle(language);
@@ -521,6 +527,18 @@ export function getArticle(slug, language) {
     sourceNote: research.sourceNote,
     visual: research.visual,
   };
+}
+
+export function getArticle(slug, language) {
+  const activeLanguage = languages.includes(language) ? language : "en";
+  const article = getEditorialArticle(slug, activeLanguage) || getBaseArticle(slug, activeLanguage);
+  if (!article) return null;
+  const improved = improveArticle(article, activeLanguage, articleBlueprints);
+  const labels = getContent(activeLanguage);
+  return {...improved, related: improved.related?.map(([label,path]) => {
+    const destination = articleBlueprints.find(item => path === `/articles/${item.slug}`);
+    return [destination?.title[activeLanguage] || labels.nav[path.slice(1)] || label, path];
+  })};
 }
 
 export const routePaths = [

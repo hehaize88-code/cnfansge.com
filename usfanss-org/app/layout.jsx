@@ -3,6 +3,7 @@ import "./globals.css";
 export const metadata = {
   metadataBase: new URL("https://usfanss.org"),
   title: "USFans Buyer Research 2026 | QC Evidence & Shipping Tools",
+  icons: { icon: "/usfans.png" },
   description:
     "An independent USFans spreadsheet field guide with categorized finds, USD prices, QC checklists, sizing research and shipping tools.",
   robots:

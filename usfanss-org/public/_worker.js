@@ -19,6 +19,12 @@ export default {
       });
     }
 
-    return env.ASSETS.fetch(request);
+    const response = await env.ASSETS.fetch(request);
+    const headers = new Headers(response.headers);
+    headers.set("X-USFanss-Release", "2026-10-02-editorial");
+    if (headers.get("Content-Type")?.includes("text/html") || ["/sitemap.xml", "/robots.txt"].includes(url.pathname)) {
+      headers.set("Cache-Control", "public, max-age=0, must-revalidate");
+    }
+    return new Response(response.body, { status: response.status, statusText: response.statusText, headers });
   },
 };

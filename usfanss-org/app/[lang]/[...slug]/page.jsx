@@ -108,12 +108,12 @@ function SectionHead({ eyebrow, title, text, link, linkText }) {
   );
 }
 
-function ArticleCards({ language, content }) {
+function ArticleCards({ language, content, limit }) {
   return (
     <div className="article-grid">
-      {articleBlueprints.map((article, index) => (
+      {articleBlueprints.slice(0, limit).map((article, index) => (
         <Link href={`/${language}/articles/${article.slug}`} className="article-card" key={article.slug}>
-          <span>0{index + 1} · {index % 2 ? content.articleKinds[1] : content.articleKinds[0]}</span>
+          <span>{String(index + 1).padStart(2,"0")} · {content.articleKinds[0]}</span>
           <h3>{article.title[language]}</h3>
           <p>{article.dek[language]}</p>
           <b>{content.articleCta}</b>
@@ -140,7 +140,7 @@ function Home({ language, content }) {
         <div className="hero-visual">
           <div className="showcase-head">
             <span>{content.browse}</span>
-            <b>LIVE · {products.length}</b>
+            <b>{content.snapshot} · {products.length}</b>
           </div>
           <div className="showcase-products">
             {products.slice(0,4).map((product)=><a href={product.href} className="showcase-product" key={product.href} aria-label={`${content.catalog.open}: ${product.name}`}>
@@ -173,7 +173,7 @@ function Home({ language, content }) {
 
       <section className="content-section articles-section">
         <SectionHead eyebrow={`04 / ${content.sectionCodes[3]}`} title={content.articlesTitle} text={content.articlesText} link={`/${language}/articles`} linkText={content.nav.articles} />
-        <ArticleCards language={language} content={content} />
+        <ArticleCards language={language} content={content} limit={6} />
       </section>
 
       <section className="content-section faq-section">
@@ -222,7 +222,8 @@ function FAQPage({ content, research }) {
 }
 
 function ArticlesPage({ language, content }) {
-  return <><PageHero code={content.pageCodes.articles} title={content.pageTitles.articles} text={content.pageIntros.articles}/><section className="content-section"><ArticleCards language={language} content={content}/></section></>;
+  const collection={"@context":"https://schema.org","@type":"CollectionPage",name:content.pageTitles.articles,url:`${base}/${language}/articles`,inLanguage:language,mainEntity:{"@type":"ItemList",numberOfItems:articleBlueprints.length,itemListElement:articleBlueprints.map((article,index)=>({"@type":"ListItem",position:index+1,name:article.title[language],url:`${base}/${language}/articles/${article.slug}`}))}};
+  return <><JsonLd data={[collection,breadcrumbSchema(language,[[content.homeLabel,""],[content.pageTitles.articles,"/articles"]])]}/><PageHero code={content.pageCodes.articles} title={content.pageTitles.articles} text={content.pageIntros.articles}/><section className="content-section"><ArticleCards language={language} content={content}/></section></>;
 }
 
 function ArticleVisual({ visual }) {
@@ -231,11 +232,17 @@ function ArticleVisual({ visual }) {
   return <figure className="article-visual"><figcaption>{title}</figcaption><div>{rows.map(([label,value])=><div className="visual-row" key={label}><strong>{label}</strong><span>{value}</span></div>)}</div></figure>;
 }
 
+function ArticleExamples({ article, content }) {
+  const examples=products.filter(product=>article.productIds?.includes(product.href.match(/\/(\d+)\.html$/)?.[1]));
+  if(!examples.length)return null;
+  return <section className="article-examples"><h2>{content.productTitle}</h2><p>{content.productNote}</p><ul>{examples.map(product=><li key={product.href}><a href={product.href}>{product.name} ↗</a><span>${product.usd} {content.catalog.approx}</span></li>)}</ul></section>;
+}
+
 function ArticlePage({ language, article, content }) {
   const url = `${base}/${language}/articles/${article.slug}`;
-  const articleSchema = {"@context":"https://schema.org","@type":"Article",headline:article.title,description:article.dek,datePublished:article.datePublished || "2026-09-01",dateModified:article.dateModified || "2026-09-01",inLanguage:language,image:`${base}/usfans.png`,wordCount:article.sections.map(([,body])=>body.split(/\s+/).length).reduce((a,b)=>a+b,0),mainEntityOfPage:url,author:{"@type":"Organization",name:"USFans Field Research Desk"},publisher:{"@type":"Organization",name:"USFans Buyer Research",logo:{"@type":"ImageObject",url:`${base}/usfans.png`}}};
+  const articleSchema = {"@context":"https://schema.org","@type":"Article",headline:article.title,description:article.dek,datePublished:article.datePublished || "2026-09-01",dateModified:article.dateModified || "2026-09-01",inLanguage:language,image:`${base}/usfans.png`,wordCount:article.sections.map(([,body])=>body.split(/\s+/).length).reduce((a,b)=>a+b,0),mainEntityOfPage:url,author:{"@type":"Organization",name:"USFans Buyer Research",url:`${base}/${language}`},publisher:{"@type":"Organization",name:"USFans Buyer Research",logo:{"@type":"ImageObject",url:`${base}/usfans.png`}}};
   const breadcrumbs = breadcrumbSchema(language, [[content.homeLabel,""],[content.pageTitles.articles,"/articles"],[article.title,`/articles/${article.slug}`]]);
-  return <><JsonLd data={[articleSchema,breadcrumbs]}/><article className="long-article"><header><span className="eyebrow">{content.articleEyebrow}</span><h1>{article.title}</h1><p>{article.dek}</p><div>{(article.articleMeta || content.articleMeta).map((item)=><span key={item}>{item}</span>)}</div></header><ArticleVisual visual={article.visual}/><p className="source-note article-source">{article.sourceNote}</p>{article.related && <nav className="article-related" aria-label="Related reading">{article.related.map(([label,path])=><Link key={path} href={`/${language}${path}`}>{label} <span>↗</span></Link>)}</nav>}<div className="article-body"><aside><strong>{content.articleToc}</strong>{article.sections.map(([heading],index)=><a href={`#section-${index+1}`} key={heading}>{heading}</a>)}</aside><div>{article.sections.map(([heading,body],index)=><section id={`section-${index+1}`} key={heading}><span>{String(index+1).padStart(2,"0")}</span><h2>{heading}</h2><p>{body}</p></section>)}</div></div></article></>;
+  return <><JsonLd data={[articleSchema,breadcrumbs]}/><article className="long-article"><header><span className="eyebrow">{content.articleEyebrow}</span><h1>{article.title}</h1><p>{article.dek}</p><div><span>{content.publishedLabel}: <time dateTime={article.datePublished}>{article.datePublished}</time></span><span>{content.updatedLabel}: <time dateTime={article.dateModified}>{article.dateModified}</time></span></div></header><ArticleVisual visual={article.visual}/><p className="source-note article-source">{article.sourceNote}</p>{article.related && <nav className="article-related" aria-label={content.relatedLabel}>{article.related.map(([label,path])=><Link key={path} href={`/${language}${path}`}>{label} <span>↗</span></Link>)}</nav>}<ArticleExamples article={article} content={content}/><div className="article-body"><aside><strong>{content.articleToc}</strong>{article.sections.map(([heading],index)=><a href={`#section-${index+1}`} key={heading}>{heading}</a>)}</aside><div>{article.sections.map(([heading,body],index)=><section id={`section-${index+1}`} key={heading}><span>{String(index+1).padStart(2,"0")}</span><h2>{heading}</h2><p>{body}</p></section>)}</div></div></article></>;
 }
 
 export default async function DynamicPage({ params }) {

@@ -13,10 +13,12 @@ export default function SearchBox({ placeholder, button, compact = false }) {
   }
 
   return (
-    <form className={`search-box ${compact ? "compact" : ""}`} onSubmit={submit}>
+    <form className={`search-box ${compact ? "compact" : ""}`} action="https://cnfansge.com/search.html" method="get" onSubmit={submit}>
+      <input type="hidden" name="channelid" value="2" />
       <input
         name="keywords"
         type="search"
+        required
         value={query}
         onChange={(event) => setQuery(event.target.value)}
         placeholder={placeholder}
