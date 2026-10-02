@@ -29,7 +29,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const canonical = `${SITE_ORIGIN}${localizedPath(lang, path)}`;
   const alternateLanguages = Object.fromEntries(languages.map((item) => [item, `${SITE_ORIGIN}${localizedPath(item, path)}`]));
   return {
-    title,
+    title: article ? { absolute: title } : title,
     description,
     keywords: article ? [article.primaryKeyword, "Sugargoo guide", "Sugargoo 2026"] : undefined,
     other: { "content-language": lang },
@@ -60,7 +60,7 @@ export default async function RoutedPage({ params }: Props) {
             wordCount: article.sections.flatMap((section) => section.body).join(" ").trim().split(/\s+/).length,
             inLanguage: lang,
             mainEntityOfPage: `${SITE_ORIGIN}${localizedPath(lang, path)}`,
-            author: { "@type": "Organization", name: "Sugar Scout" },
+            author: { "@type": "Organization", name: "Sugar Scout", url: SITE_ORIGIN, logo: { "@type": "ImageObject", url: `${SITE_ORIGIN}/sugargoo-logo.png` } },
             publisher: { "@type": "Organization", name: "Sugar Scout", logo: { "@type": "ImageObject", url: `${SITE_ORIGIN}/sugargoo-logo.png` } },
           },
           {

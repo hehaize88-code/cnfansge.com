@@ -60,6 +60,7 @@ test("all 30 updated article pages render localized SEO and links", async () => 
       assert.equal(schema.datePublished, article.slug === "how-to-read-sugargoo-qc-photos" ? "2026-08-29" : article.slug === "sugargoo-spreadsheet-guide-2026" ? "2026-09-01" : "2026-10-02");
       assert.ok(schema.image.startsWith("https://sugargoos.store/"));
       assert.ok(schema.publisher.logo.url);
+      assert.ok(schema.author.logo.url);
       const visible = html.replace(/<script\b[^>]*>[\s\S]*?<\/script>/gi, "");
       assert.equal((visible.match(/<h1\b/g) ?? []).length, 1);
       assert.doesNotMatch(visible, /\[[^\]]+\]\(\/articles\//);
@@ -73,6 +74,7 @@ test("all 30 updated article pages render localized SEO and links", async () => 
 
 test("sitemap covers every existing and new route in all five languages", async () => {
   assert.equal(sitemapUrls.length, 95);
+  assert.equal(await readFile(new URL("../public/sitemap-content.xml", import.meta.url), "utf8"), xml);
   assert.equal(new Set(sitemapUrls).size, 95);
   assert.equal((xml.match(/hreflang="x-default"/g) ?? []).length, 95);
   for (const url of sitemapUrls) {

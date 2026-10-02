@@ -18,7 +18,9 @@ try {
     }
   }
   if (new Set(entries.map((entry) => entry.match(/<loc>(.*?)<\/loc>/)[1])).size !== entries.length) throw new Error("Duplicate canonical sitemap URL");
-  await writeFile(new URL("../public/sitemap.xml", import.meta.url), `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">\n${entries.join("\n")}\n</urlset>\n`);
+  const xml = `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">\n${entries.join("\n")}\n</urlset>\n`;
+  // Provide a separate submission endpoint while retaining the legacy URL.
+  await Promise.all(["sitemap.xml", "sitemap-content.xml"].map((name) => writeFile(new URL(`../public/${name}`, import.meta.url), xml)));
   console.log(`Generated sitemap with ${entries.length} canonical URLs.`);
 } finally {
   await server.close();
