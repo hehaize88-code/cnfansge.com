@@ -1,0 +1,478 @@
+[
+  {
+    "slug": "sugargoo-spreadsheet-links-not-working",
+    "title": "Sugargoo-Links prüfen: Produkt-ID, Bestand und Varianten",
+    "dek": "Unterscheide Verzeichnislink, Verkäuferangebot, Produkt-ID und Importergebnis, bevor du einen fehlerhaften Spreadsheet-Eintrag ersetzt.",
+    "primaryKeyword": "sugargoo link not working",
+    "label": "Produktlinks prüfen",
+    "table": {
+      "title": "Ein Linkfehler braucht eine genaue Diagnose",
+      "headers": [
+        "Beobachtung",
+        "Nächster Prüfschritt",
+        "Was damit nicht bewiesen ist"
+      ],
+      "rows": [
+        [
+          "Verkäuferseite öffnet nicht",
+          "Originaladresse und Zugang",
+          "Dass der Artikel ausverkauft ist"
+        ],
+        [
+          "Verkäuferseite öffnet, Import scheitert",
+          "Linkformat und manuelle Möglichkeiten",
+          "Dass das Angebot unterstützt wird"
+        ],
+        [
+          "Andere Angaben auf der Produktseite",
+          "ID, Verkäufer und genaue Variante",
+          "Dass der alte Eintrag noch stimmt"
+        ],
+        [
+          "Nur eine Option fehlt",
+          "Bestand der Variante",
+          "Dass alle Optionen fehlen"
+        ]
+      ]
+    },
+    "sections": [
+      {
+        "heading": "Beginne mit dem gescheiterten Schritt",
+        "body": [
+          "Ein nicht funktionierender Sugargoo-Link kann mehrere Ursachen haben. Der Spreadsheet-Button kann eine alte Adresse verwenden, die Verkäuferseite einen Zugang in der eigenen App verlangen oder der Agent ein weiterhin vorhandenes Angebot nicht importieren können. Ebenso kann die Seite normal laden, obwohl gerade deine Größe fehlt. Diese Fälle verlangen unterschiedliche Belege. Notiere zuerst, an welcher Stelle der Ablauf stoppte und was tatsächlich auf dem Bildschirm stand.",
+          "Bewahre den ursprünglichen Eintrag auf: Produktname, Marktplatz, Verkäufer, Produkt-ID, gewählte Option, Referenzpreis und Datum der letzten Prüfung. Ein Screenshot erleichtert den Vergleich, ersetzt aber nicht die vollständige Adresse. Diese kleine Dokumentation verhindert, dass eine neue Suche den Artikel unbemerkt durch ein ähnliches Foto ersetzt. Der [Spreadsheet-Leitfaden](/articles/sugargoo-spreadsheet-guide-2026) erklärt den Aufbau der ersten Auswahl."
+        ]
+      },
+      {
+        "heading": "Unterscheide Verzeichnis- und Verkäuferlink",
+        "body": [
+          "Ein Spreadsheet kann zunächst zu einem Produktverzeichnis führen, nicht direkt zu Taobao, Weidian oder einem anderen Marktplatz. Das Verzeichnis verwendet eine eigene Produktnummer; die Verkäuferseite möglicherweise eine andere. Halte beide getrennt fest, soweit vorhanden. Eine Kategorienseite, Suchergebnisseite oder Verzeichnis-Startseite identifiziert nicht automatisch den ausgewählten Artikel und gehört deshalb nicht ungeprüft in das Bestellformular.",
+          "Öffne die Produktdetails und suche den ursprünglichen Verkäuferlink, sofern er angegeben ist. Vergleiche Titel, Modell und Fotos mit dem Verzeichniseintrag. Fehlen Herkunftslink oder eindeutige Optionsangaben, ist das eine Beleglücke. Der Eintrag kann zur weiteren Recherche gespeichert bleiben, ohne bereits bestellbereit zu sein. Ein funktionierender Button beweist lediglich die Erreichbarkeit einer Seite, nicht die Vollständigkeit der Kaufangaben."
+        ]
+      },
+      {
+        "heading": "Kopiere die vollständige Produktadresse sorgfältig",
+        "body": [
+          "Geteilte Marktplatzinhalte enthalten oft Beschreibungstext, App-Hinweise, Kurzlinks oder Trackingparameter rund um den eigentlichen Produktlink. Kopiere die Produktadresse über die normale Teilen- oder Browserfunktion der Plattform. Prüfe versehentliche Leerzeichen, Satzzeichen und ein abgeschnittenes Ende. Die Produktkennung muss erhalten bleiben. Wer wahllos alle Parameter entfernt, kann genau den Wert löschen, der das gewünschte Angebot bezeichnet.",
+          "Die offiziellen Sugargoo-Hinweise zu Links und DIY-Bestellungen unterscheiden automatischen Import und manuelle Eingabe. Prüfe im aktuellen Interface, welcher Weg angeboten wird; ein Verfahren für einen Marktplatz gilt nicht automatisch überall. Gib niemals Passwörter, Bestätigungscodes oder Login-Cookies an Verkäufer oder Supportkontakte weiter, um einen Produktlink zu reparieren. Ein Bestellauftrag benötigt Produktdaten, keinen Zugang zu deinem persönlichen Konto."
+        ]
+      },
+      {
+        "heading": "Prüfe die Quelle unabhängig vom Import",
+        "body": [
+          "Öffne das Originalangebot über den normalen Zugang des Marktplatzes. Notiere, ob eine Produktseite, eine Anmeldung, eine Meldung über ein entferntes Angebot oder ein unpassendes Ziel erscheint. Eine notwendige Anmeldung sagt nichts über den Bestand aus. Ebenso beweist ein vorübergehender Ladefehler keine Löschung. Bleibt der Zugang unmöglich, kennzeichne das Angebot als ungeprüft, statt eine Ursache zu erfinden.",
+          "Wenn die Verkäuferseite funktioniert, der Agentenimport aber scheitert, halte beide Beobachtungen fest. Linkformat, Verarbeitung oder aktuelle Plattformunterstützung könnten eine Rolle spielen; die genaue Ursache ist damit noch nicht festgestellt. Nutze die aktuelle offizielle Anleitung oder frage, ob genau dieses Angebot bearbeitet werden kann. Wiederholte Zahlungen über andere Wege sind keine Diagnose. Kläre vor der Kaufbeauftragung, was tatsächlich bestellt wird."
+        ]
+      },
+      {
+        "heading": "Prüfe die Identität trotz passender Produkt-ID",
+        "body": [
+          "Eine stabile Produkt-ID ist hilfreich, beschreibt aber nicht dauerhaft alles, was unter dieser Adresse verkauft wird. Verkäufer können Bilder, Optionen und Angebotsinhalte ändern. Vergleiche aktuellen Verkäufer, Modell, Optionsbezeichnung, Preisgrundlage und Fotos mit deiner gespeicherten Fassung. Eine gleiche ID mit anderem Produktinhalt ist eine Änderung und keine erfolgreiche Bestätigung des alten Eintrags.",
+          "Ein hypothetischer Eintrag wurde für einen schwarzen Hoodie in M gespeichert. Später zeigt die Seite standardmäßig ein graues Sweatshirt, während ein schwarzes Vorschaubild noch in der Optionsliste steht. Nun musst du die Optionen öffnen und prüfen, auf welchen Artikel sich der sichtbare Preis bezieht. Weder das Standardfoto noch der alte Eintrag löst die Unklarheit. Speichere passende Optionsbezeichnung und Vorschaubild vor dem nächsten Schritt."
+        ]
+      },
+      {
+        "heading": "Behandle Bestand und Preis als Variantenangaben",
+        "body": [
+          "Der Hauptpreis kann eine Spanne, einen Einstiegspreis oder ein Zubehörteil statt des abgebildeten Kleidungsstücks betreffen. Wähle die gewünschte Variante vor dem Preisvergleich. Erfasse Größe, Farbe, Menge und die aktuell angezeigten innerchinesischen Versandkosten. Ist eine bestimmte Option nicht wählbar, kennzeichne diese als nicht verfügbar, anstatt das gesamte Angebot als ausverkauft zu beschreiben.",
+          "Dollar-Referenzpreise erleichtern das Stöbern; eine geänderte Umrechnung ist jedoch etwas anderes als ein geänderter Verkäuferpreis. Vergleiche zuerst den nativen Betrag und bewahre das Prüfdatum auf. Überschreibe bei der Pflege einer Auswahl den gestrigen Wert nicht kommentarlos mit dem heutigen. Ein kurzer Änderungsvermerk erklärt später Abweichungen zur Bestellung, ohne einen der Werte als garantierten Preis auszugeben."
+        ]
+      },
+      {
+        "heading": "Nutze manuelle Bestellungen nur mit klaren Produktdaten",
+        "body": [
+          "Eine manuelle Bestellung kann helfen, wenn die Plattform sie aktuell für ein nicht importierbares Angebot ermöglicht. Sie bestätigt weder automatisch Zulässigkeit noch Zuverlässigkeit oder Bestand. Gib vollständige Quelladresse, exakten Variantentext, Menge und ein zur Option passendes Referenzbild an. Prüfe Betrag und Bearbeitungshinweise im aktuellen Service vor der Zahlung.",
+          "Kläre mehrdeutige Felder. Ein Größencode kann beispielsweise wie eine Kleidergröße aussehen, tatsächlich aber eine Modellnummer sein. Die Bemerkung „wie auf dem Bild“ bleibt unklar, wenn das Bild mehrere Versionen zeigt. Bewahre die Annahme oder Erläuterung des Agenten beim Auftrag auf. Kann der Artikel nicht bearbeitet werden, dokumentiere das Ergebnis und suche Alternativen, ohne eine Beschränkung umgehen zu wollen."
+        ]
+      },
+      {
+        "heading": "Erstelle für Ersatzartikel einen neuen Eintrag",
+        "body": [
+          "Ist ein Link tatsächlich entfernt oder ungeeignet, bewahre Kennung und Status in deiner Recherchehistorie. Ein Ersatzartikel braucht einen eigenen Quelllink, Verkäuferdaten, Optionsangaben und ein Prüfdatum. Verwende QC-Fotos des alten Artikels nicht als Nachweis für den Ersatz. Ähnliche Optik beweist weder gleiche Verarbeitung noch gleiche Größe oder Bezugsquelle.",
+          "Vergleiche Alternativen anhand derselben Felder: Quellenidentität, benötigte Variante, sichtbare Maßangaben, nativer Preis, innerchinesischer Versand und offene Fragen. Ein etwas teurerer Eintrag kann besser dokumentiert sein; das ist eine Beurteilung der Beleglage, kein Qualitätsversprechen. Die endgültige Auswahl sollte für den Käufer nachvollziehbar bleiben und nicht in einer überschriebenen Tabellenzelle verschwinden."
+        ]
+      },
+      {
+        "heading": "Schließe die Prüfung mit den Lagerfotos ab",
+        "body": [
+          "Ein erfolgreicher Import beendet nur die Erfassung der Bestelldaten. Bei Ankunft im Lager vergleichst du den Auftrag mit dem tatsächlich erhaltenen Artikel. Prüfe Farbe, Größenetikett, Modelldetails und Stückzahl vor kleinen kosmetischen Merkmalen. Der [QC-Fotoleitfaden](/articles/how-to-read-sugargoo-qc-photos) trennt Identitätsprüfungen von Aussagen, die Fotos nicht belegen können.",
+          "Bewahre Angebotssnapshot und Fotos deines eigenen Auftrags gemeinsam auf. Bei Abweichungen beschreibe den konkreten Unterschied und nutze zeitnah den aktuellen Kundendienstprozess. Bilder anderer Käufer dürfen nicht als Beweis deiner Bestellung ausgegeben werden. Ein guter Linkdatensatz endet mit einer nachvollziehbaren Entscheidung: weiter geprüft, nicht verfügbar, geändert, ungeklärt oder ersetzt. Das hilft mehr als ein undatiertes pauschales Kennzeichen „Link funktioniert“."
+        ]
+      },
+      {
+        "heading": "Führe ein nachvollziehbares Prüfprotokoll",
+        "body": [
+          "Ein praktisches Protokoll hat vier Felder: Beobachtungsdatum, genaue Adresse, sichtbares Ergebnis und nächster Schritt. Schreibe „Größe M auf der geprüften Seite nicht verfügbar“ statt „schlechter Verkäufer“ oder „Anmeldung erforderlich; Bestand ungeprüft“ statt „ausverkauft“. Private Kontodaten gehören nicht hinein. Andere Leser sollten die Prüfung wiederholen können, ohne deine Bedeutung erraten zu müssen. Weicht eine spätere Beobachtung ab, ergänze einen neuen datierten Eintrag. So bleibt das Spreadsheet langfristig nützlich, ohne unbelegte Aussagen über Bestand, Qualität oder die Ursache eines Linkfehlers zu verbreiten."
+        ]
+      }
+    ],
+    "references": [
+      {
+        "label": "Offizieller Produktlink-Leitfaden",
+        "url": "https://blog.sugargoo.com/how-to-copy-taobao-links-properly/"
+      },
+      {
+        "label": "Offizieller QC-Leitfaden",
+        "url": "https://blog.sugargoo.com/sugargoo-qc-service-quality-check-guide/"
+      }
+    ]
+  },
+  {
+    "slug": "sugargoo-shoe-size-guide-measurements",
+    "title": "Sugargoo-Schuhgrößen: Tabellen, Maße und QC prüfen",
+    "dek": "Verbinde die genaue Verkäufertabelle mit Fußmaßen und vergleichbaren Lagerfotos, statt eine allgemeingültige Größenumrechnung vorauszusetzen.",
+    "primaryKeyword": "sugargoo shoe size guide",
+    "label": "Schuhdaten dokumentieren",
+    "image": "/products/air-jordan-4.webp",
+    "imageCaption": "Vorhandenes Katalogbild zur Einordnung. Kein Messfoto und kein Nachweis für eine bestimmte Bestellung.",
+    "table": {
+      "title": "Verschiedene Längenmaße getrennt halten",
+      "headers": [
+        "Feld",
+        "Dokumentation",
+        "Vergleichsregel"
+      ],
+      "rows": [
+        [
+          "Fußlänge",
+          "Ferse bis längster Zeh",
+          "Methode des Verkäufers beachten"
+        ],
+        [
+          "Einlegesohlenlänge",
+          "Herausnehmbare Einlage, sofern möglich",
+          "Nicht gleich nutzbarer Innenraum"
+        ],
+        [
+          "Außensohlenlänge",
+          "Äußere Sohle",
+          "Nicht direkt in Fußlänge umrechnen"
+        ],
+        [
+          "Größenetikett",
+          "System, Modell und Variante",
+          "Ein Etikett beweist keine Passform"
+        ]
+      ]
+    },
+    "sections": [
+      {
+        "heading": "Beginne beim konkreten Angebot",
+        "body": [
+          "Ein Sugargoo-Schuhgrößenleitfaden hilft als Methode zur Prüfung eines bestimmten Verkäuferangebots. Eine einzige US-EU-Umrechnung erklärt nicht die Passform aller Modelle. Dieselbe Größenangabe kann auf Schuhen mit unterschiedlicher Zehenform, Breite, Fütterung und Innenkonstruktion stehen. Beginne deshalb mit dem Produktlink und der exakten Variante, bevor du routinemäßig deine übliche Nummer auswählst.",
+          "Speichere die Verkäufertabelle einschließlich Spaltenüberschriften und Messhinweisen. Notiere, ob sie Fußlänge, Innenlänge, Einlegesohlenlänge oder etwas anderes beschreibt. Diese Begriffe sind nicht austauschbar. Nennt das Angebot nur eine allgemeine Größe ohne Messdefinition, muss diese Unsicherheit sichtbar bleiben. Ergänze keinen präzisen Zentimeterwert aus einer Tabelle eines anderen Verkäufers."
+        ]
+      },
+      {
+        "heading": "Miss beide Füße unter gleichen Bedingungen",
+        "body": [
+          "Miss für deine persönliche Referenz beide Füße auf einer ebenen Fläche mit einer wiederholbaren Methode. Stehe natürlich, trage die vorgesehenen Socken und markiere Ferse und längsten Zeh, ohne die Zehen einzukrümmen. Wiederhole die Messung bei unklarer Kontur oder Skala. Notiere Einheit und Vorgehensweise zusammen mit dem Wert, damit spätere Vergleiche nachvollziehbar bleiben.",
+          "Ein Fußmaß ist eine Eingabe, keine automatische Größenempfehlung. Vergleiche es mit der Erklärung des Verkäufers und berücksichtige Verwendungszweck und persönliche Passformwünsche. Addiere nicht bei jedem Modell denselben Zuschlag; die Tabelle kann bereits eine eigene Empfehlung enthalten. Bei anhaltenden Passformproblemen oder Spezialschuhen ersetzen Tabellen und Lagerfotos keine geeignete professionelle Anpassung."
+        ]
+      },
+      {
+        "heading": "Unterscheide Fuß, Einlegesohle und Außensohle",
+        "body": [
+          "Fußlänge beschreibt deinen Fuß. Die Einlegesohlenlänge beschreibt eine Einlage, sofern sie sich ohne Beschädigung entfernen und messen lässt. Die Außensohlenlänge beschreibt die äußere Sohle. Diese kann über den nutzbaren Innenraum hinausragen; eine gewölbte oder gepolsterte Einlage liegt möglicherweise nicht flach. Ein nur als „Länge“ bezeichneter Wert bleibt unvollständig, solange Messobjekt und Methode fehlen.",
+          "Eine hypothetisch 29 cm lange Außensohle beweist beispielsweise keine Eignung für einen 29 cm langen Fuß. Dafür wären Informationen zum Innenraum und zum Größensystem des Verkäufers nötig. Führe getrennte Spalten für die verschiedenen Maße statt eines einzigen Felds „Schuhlänge“. So verbirgt eine ordentlich aussehende Tabelle keine Verwechslung grundsätzlich verschiedener Größen."
+        ]
+      },
+      {
+        "heading": "Lies Größensystem und Variante gemeinsam",
+        "body": [
+          "Prüfe, ob das Angebot ausdrücklich ein Herren-, Damen-, Kinder- oder anderes Größensystem nennt. Eine bloße Nummer klärt das System nicht; Modellbezeichnungen können abgekürzt sein. Speichere vollständigen Optionstext und Vorschaubild. Enthält ein Angebot mehrere Farben oder Versionen, muss die Größentabelle zur tatsächlich gewünschten Variante passen.",
+          "Kontrolliere die importierten Bestelldaten vor der Zahlung. Weicht die angezeigte Option vom Verkäufertext ab, kläre die Zuordnung statt zu raten. Eine Bestellnotiz sollte Größensystem und Option benennen, nicht nur „meine normale Größe“ verlangen. Die [Angebots-Checkliste](/articles/sugargoo-spreadsheet-guide-2026) hilft, Produkt-ID und Variantenbelege zusammen mit den Größenangaben aufzubewahren."
+        ]
+      },
+      {
+        "heading": "Nutze ein passendes Paar als Vergleich",
+        "body": [
+          "Ein vorhandenes, gut passendes Paar ist eine hilfreiche körperliche Referenz, wenn Konstruktion und Verwendungszweck vergleichbar sind. Notiere, was gut oder schlecht passt: Zehenraum, Fersenbewegung, Breite oder Druck am Obermaterial. Beschreibe bei einer zugänglichen Einlage auch die Messlage. Eine Referenz liefert Kontext, beweist aber keine identische Passform eines anderen Modells.",
+          "Ziehe nicht einfach zwei Etikettgrößen voneinander ab und übertrage die Differenz auf andere Marken oder Verkäufer. Laufschuh, steifer Lederschuh und gepolsterter Freizeitschuh nutzen Innenraum unterschiedlich. Ein Vergleich wird belastbarer, wenn Maßart und Methode übereinstimmen. Eine Außensohlenlänge mit einer empfohlenen Fußlänge zu vergleichen, ist deutlich schwächer. Halte diesen Unterschied ausdrücklich fest."
+        ]
+      },
+      {
+        "heading": "Fordere ein Foto für eine konkrete Größenfrage an",
+        "body": [
+          "Wenn Messfotos angeboten werden, formuliere die Anfrage präzise: Auftrag, zu messendes Teil, Anfangs- und Endpunkte sowie sichtbare Einheit. Möglich wäre eine sicher entnehmbare, flach liegende Einlage mit vollständig sichtbarem Lineal und beiden Enden. Voraussetzung ist, dass die Entnahme erlaubt und schonend möglich ist. Verlange nicht, eine verklebte Komponente für eine Zahl auseinanderzureißen.",
+          "Prüfe Verfügbarkeit und Preis zusätzlicher Arbeiten im aktuellen Service; dieser Leitfaden verspricht keine kostenlos enthaltene Messung. Lässt sich die Einlage nicht entfernen, erfrage eine machbare Alternative und dokumentiere deren Grenzen. Ein Lineal neben dem Schuh beantwortet eine andere Frage als ein Innenmaß. Genaue Formulierungen vermeiden ein kostenpflichtiges Foto, das dein Problem gar nicht lösen kann."
+        ]
+      },
+      {
+        "heading": "Prüfe das Messfoto vor der Zahl",
+        "body": [
+          "Vergewissere dich, dass das richtige Produkt fotografiert wurde und das Lineal am vorgesehenen Bezugspunkt beginnt. Die relevante Skala muss lesbar sein. Schräger Blickwinkel, gebogenes Maßband, angehobene Ferse oder verdeckte Endpunkte können das Ergebnis unklar machen. Ergänze keine unsichtbaren Millimeter aus einem verschwommenen Ausschnitt. Bitte um Klärung, wenn das Foto die erforderliche Entscheidung nicht trägt.",
+          "Geht es um einen Unterschied innerhalb des Paars, vergleiche beide Schuhe. Notiere gemessene Seite und Methode. Kleine Unterschiede können durch die Positionierung entstehen; suche deshalb wiederholbare Belege, bevor du auf die Konstruktion schließt. Der [QC-Fotoleitfaden](/articles/how-to-read-sugargoo-qc-photos) ergänzt die Identitäts- und Zustandsprüfungen, die zum Größenprotokoll gehören."
+        ]
+      },
+      {
+        "heading": "Beziehe Breite, Form und Nutzung ein",
+        "body": [
+          "Länge allein beschreibt keine Passform. Zehenbox, Flexibilität des Obermaterials, Polsterung und Verschluss verändern das Tragegefühl auch bei ähnlichen Längen. Lagerbilder können deutliche Formunterschiede zeigen, aber weder Gehen noch Druck oder Komfort reproduzieren. Halte fest, welche Fragen beantwortet sind und welche offenbleiben, statt optische Ähnlichkeit als Passformgarantie auszugeben.",
+          "Behandle Community-Kommentare als Berichte über fremde Füße und Bestellungen. Angaben zum gleichen Modell, zur gleichen Variante und Messmethode machen sie hilfreicher, aber weiterhin anekdotisch. Kopiere keine einzelne Größenempfehlung in alle Tabellenzeilen. Fehlt ein entscheidendes Passformdetail, entscheide vor der internationalen Versandzahlung, ob du diese Unsicherheit akzeptierst."
+        ]
+      },
+      {
+        "heading": "Dokumentiere die Größenentscheidung vor dem Versand",
+        "body": [
+          "Der endgültige Datensatz sollte Verkäufertabelle, ausgewählte Option, Auftragsetikett, verfügbare Maße und Entscheidung verbinden. Weichen erhaltene Größe oder Modell von der Bestellung ab, dokumentiere das getrennt von persönlichen Passformvorlieben. Nutze den aktuellen Kundendienstprozess rechtzeitig. Lagerdauer ist kein Grund, die Prüfung des eingetroffenen Artikels aufzuschieben.",
+          "Vergleiche nach der Lieferung die wirkliche Passform mit deinen notierten Annahmen. Ergänze persönliche Referenzen mit Modell und Auftragsdatum, statt aus einem Kauf eine allgemeingültige Umrechnung abzuleiten. Kehre mit genauer beschriebenen Beleganforderungen zum [Spreadsheet](/spreadsheet) zurück. Ein verlässliches Größenprotokoll vermindert vermeidbares Raten und benennt zugleich ehrlich die Grenzen einer Fernmessung."
+        ]
+      },
+      {
+        "heading": "Baue eine kompakte Belegzeile auf",
+        "body": [
+          "Eine übersichtliche Zeile enthält Angebots-ID, Modell und Option, Maßart der Tabelle, persönliche Fußreferenz, verfügbares Lagermaß, verbleibende Unsicherheit und Entscheidungsdatum. Füge Fotos nur mit klarer Herkunft hinzu. Verkäuferbild, öffentliches QC-Beispiel und Bild deines eigenen Auftrags brauchen unterschiedliche Kennzeichnungen. Ein entscheidendes leeres Feld bleibt leer, statt mit einer geratenen Umrechnung gefüllt zu werden. Das erleichtert spätere Korrekturen: Eine geänderte Verkäufertabelle verändert nicht dein persönliches Fußmaß und macht ein altes QC-Bild nicht zum Beleg für eine neue Bestellung."
+        ]
+      }
+    ],
+    "references": [
+      {
+        "label": "Offizieller QC-Leitfaden",
+        "url": "https://blog.sugargoo.com/sugargoo-qc-service-quality-check-guide/"
+      },
+      {
+        "label": "Offizieller Messleitfaden",
+        "url": "https://blog.sugargoo.com/taobao-agent-quality-check-photos-videos-measurements/"
+      }
+    ]
+  },
+  {
+    "slug": "sugargoo-hoodie-sizing-measurements",
+    "title": "Sugargoo-Hoodie-Größen: Brustbreite, Länge und QC",
+    "dek": "Vergleiche mit einem eigenen Kleidungsstück, trenne flache Brustbreite vom Umfang und definiere die Messpunkte für Lagerfotos.",
+    "primaryKeyword": "sugargoo hoodie sizing",
+    "label": "Kleidungsdaten dokumentieren",
+    "image": "/products/carhartt-hoodie.webp",
+    "imageCaption": "Vorhandenes Katalogbild zur Einordnung. Das Foto bestätigt keine Größe, Materialeigenschaft oder Passform.",
+    "table": {
+      "title": "Hypothetischer Vergleich flach liegender Kleidung",
+      "headers": [
+        "Maß",
+        "Referenz / Kandidat",
+        "Einordnung"
+      ],
+      "rows": [
+        [
+          "Brustbreite",
+          "58 cm / 61 cm",
+          "Flach gemessen 3 cm breiter"
+        ],
+        [
+          "Rumpflänge",
+          "69 cm / 66 cm",
+          "Bei gleichen Endpunkten 3 cm kürzer"
+        ],
+        [
+          "Schulterbreite",
+          "54 cm / 58 cm",
+          "Schulterkonstruktion beachten"
+        ],
+        [
+          "Ärmellänge",
+          "61 cm / 59 cm",
+          "Angegebenen Anfangspunkt vergleichen"
+        ]
+      ]
+    },
+    "sections": [
+      {
+        "heading": "Übersetze den Passformwunsch in Maße",
+        "body": [
+          "Sugargoo-Hoodie-Größen beginnen bei der gewünschten Passform, nicht bei einem Etikett wie M oder Oversized. Ein Hoodie kann an der Brust weit und zugleich am Rumpf kurz sein. Ein anderer hat einen langen Körper und schmale Ärmel. Beschreibe dein Ziel praktisch: Platz für ein Shirt darunter, gewünschte Saumhöhe, ausreichende Ärmellänge oder eine vertraute Schulterform.",
+          "Wähle einen vorhandenen Hoodie mit möglichst vergleichbarer Konstruktion. Lege ihn ohne Dehnung flach hin und dokumentiere die Messmethode. Diese persönliche Referenz hilft mehr als die Annahme, jedes Verkäufer-L entspreche deinem üblichen L. Sie bleibt trotzdem ein Vergleich und keine Garantie. Andere Stoffe, Fütterungen und Schnittmuster können trotz ähnlicher Werte ein anderes Tragegefühl erzeugen."
+        ]
+      },
+      {
+        "heading": "Prüfe, ob Körper oder Kleidungsstück gemessen wird",
+        "body": [
+          "Eine Verkäufertabelle kann empfohlene Körpermaße oder das fertige Kleidungsstück beschreiben. Lies Überschrift und Hinweise vor dem Zahlenvergleich. Körper-Brustumfang und flache Kleidungsbreite sind nicht direkt vergleichbar. Bei Unklarheit frage nach der Definition oder kennzeichne den Wert als unsicher. Wähle nicht einfach die Interpretation, die deine bevorzugte Größe passend erscheinen lässt.",
+          "Die offiziellen Sugargoo-Größenhinweise betonen Maße statt bloßer Größenbezeichnungen. Speichere Originaltabelle und gewählte Größenzeile, nicht nur eine einzelne Zahl. Halte Einheiten, angegebene Toleranz und Unterschiede zwischen Versionen fest. Eine Tabelle für einen Reißverschluss-Hoodie beschreibt nicht zwangsläufig den Pullover, der als weitere Option desselben Angebots erscheint."
+        ]
+      },
+      {
+        "heading": "Trenne flache Brustbreite und Umfang",
+        "body": [
+          "Die flache Brustbreite wird an einer definierten Stelle des ausgelegten Kleidungsstücks gemessen, oft nahe den Achseln. Umfang bezeichnet eine Strecke um Körper oder Kleidungsstück. Entscheidend bleibt die konkrete Tabellendefinition. Das Verdoppeln einer eindeutig definierten Breite erklärt Größenordnungen, ergibt aber keine präzise Körperempfehlung: Form, Elastizität und beabsichtigte Bewegungszugabe bleiben relevant.",
+          "Im hypothetischen Beispiel ist die Referenz 58 cm und der Kandidat 61 cm breit, jeweils nach derselben Methode. Die flache Differenz beträgt 3 cm. Das darf nicht als lediglich 3 cm zusätzlicher Umfang beschrieben werden. Bewahre das ursprüngliche Breitenmaß auf und erkläre genau diesen Vergleich, ohne daraus für alle Käufer eine empfohlene Körpergröße zu erfinden."
+        ]
+      },
+      {
+        "heading": "Definiere Anfang und Ende der Rumpflänge",
+        "body": [
+          "Rumpflänge kann an unterschiedlichen Punkten beginnen: hoher Schulterpunkt, hintere Halsnaht oder eine andere Markierung. Wird die Kapuze einbezogen, entsteht erneut ein anderes Maß. Speichere eine Skizze oder eindeutige Beschreibung der Verkäufervorgabe. Miss deine Referenz möglichst zwischen denselben Punkten, statt jedes Feld namens „Länge“ als gleichwertig zu behandeln.",
+          "Ein breiterer, zugleich kürzerer Kandidat kann eine kastigere Silhouette ergeben; der Fall des Stoffes ist durch Maße allein jedoch nicht bewiesen. Im Beispiel ist der 66-cm-Kandidat 3 cm kürzer als die 69-cm-Referenz. Das ist nur wegen gleicher Messpunkte aussagekräftig. Bei abweichenden Methoden dokumentiere den Unterschied und kläre ihn, bevor du von einer falschen Größe sprichst."
+        ]
+      },
+      {
+        "heading": "Betrachte Schulter und Ärmel gemeinsam",
+        "body": [
+          "Die Schulterkonstruktion beeinflusst die Bedeutung der Ärmellänge. Überschnittene Schultern verlagern die Ärmelnaht nach außen; Raglanärmel haben nicht dieselbe Nahtanordnung wie klassische eingesetzte Ärmel. Ein kürzeres Ärmelmaß kann deshalb mit größerer Gesamtreichweite zusammenfallen. Prüfe die sichtbare Konstruktion statt einer einzelnen isolierten Zahl.",
+          "Kläre, ob die Ärmellänge an Schulter, Hals oder einem anderen Punkt beginnt. Miss die Referenz genauso und notiere den Umgang mit dem Bündchen. Dehne Rippstoff nicht, um einen gewünschten Wert zu erzielen. Gibt der Verkäufer ein kombiniertes Maß bis zum Bündchen an, führe es separat. Unvereinbare Maße in eine einzige Umrechnungsformel zu zwingen, erzeugt falsche Sicherheit aus eigentlich korrekten Zahlen."
+        ]
+      },
+      {
+        "heading": "Führe Material und Verarbeitung als eigene Fragen",
+        "body": [
+          "Fotos können angeraute Innenseite, Rippbund, Reißverschluss oder Futter zeigen. Sie beweisen aber keine exakte Faserzusammensetzung, Stoffmasse oder langfristige Schrumpfung. Enthält das Angebot entsprechende Angaben, kennzeichne sie als Verkäuferinformation und speichere die Quelle. Fehlen sie, bleibt das Feld unbekannt. Ein dick wirkendes Bild belegt weder ein bestimmtes Gewicht noch eine Wärmespezifikation.",
+          "Versprich nicht, dass ein Kleidungsstück passend einläuft oder sich ausreichend dehnen wird. Pflegehinweise und tatsächliches Materialverhalten sind wichtig und vor Ankunft möglicherweise unklar. Plane die Passform anhand heute dokumentierbarer Maße. Weichheit, Komfort und Haltbarkeit bleiben getrennt von Eigenschaften, die ein Lagerfoto vernünftig belegen kann."
+        ]
+      },
+      {
+        "heading": "Formuliere eine wiederholbare Messanfrage",
+        "body": [
+          "Falls zusätzliche Messfotos verfügbar sind, nenne Auftrag und gewünschte Einzelmessung. Verlange ein flach und ungedehnt liegendes Kleidungsstück, definierte Endpunkte und ein lesbares Maßband. Beschreibe für Brustbreite die Messlinie. Gib für Rumpflänge an, ob die Kapuze ausgeschlossen ist und welche Naht als Anfang dient. Prüfe Serviceumfang und Preis vorher.",
+          "Die Bitte „Größe messen“ lässt viel Interpretationsspielraum. Besser ist die genaue offene Frage, etwa ob die Brustbreite der bestellten Größe zur gespeicherten Tabelle passt. Der relevante Bereich sollte vollständig im Bild sein, damit die Bandposition erkennbar bleibt. Verlange kein beschädigendes oder unpraktikables Verfahren nur für eine präziser wirkende Zahl."
+        ]
+      },
+      {
+        "heading": "Vergleiche das Foto mit der bestellten Variante",
+        "body": [
+          "Bestätige zuerst richtigen Hoodie, Farbe und Größenetikett. Prüfe anschließend Messmethode und Sichtbarkeit beider Bandenden. Ein umgeschlagener Saum, unebener Untergrund oder gedehntes Bündchen kann das sichtbare Ergebnis beeinflussen. Bei einem unklaren Foto bitte um Erläuterung, statt eine unsichere Ablesung als bestätigten Defekt darzustellen.",
+          "Vergleiche Abweichungen mit der tatsächlich vom Verkäufer genannten Toleranz, sofern vorhanden. Erfinde keinen universellen Grenzwert. Trenne falsches Etikett, abweichendes Maß und persönliche Passformvorliebe. Der [QC-Leitfaden](/articles/how-to-read-sugargoo-qc-photos) ordnet sichtbare Belege; der [Produktlink-Leitfaden](/articles/sugargoo-spreadsheet-links-not-working) hilft zu prüfen, ob das Angebot noch die bestellte Version beschreibt."
+        ]
+      },
+      {
+        "heading": "Speichere die Entscheidung beim Produkt",
+        "body": [
+          "Halte vor internationalem Versand Referenzkleidung, Tabellenversion, gewählte Option, Messwerte und offene Fragen fest. Zeigen Belege ein anderes Produkt oder eine andere bestellte Größe, nutze den aktuellen Kundendienstprozess mit Angebotssnapshot und Fotos zeitnah. Stimmen die Maße, gefällt dir aber der Schnitt nicht, benenne diesen Unterschied ehrlich. Ein klarer Datensatz erleichtert die Erklärung deiner Entscheidung.",
+          "Ergänze nach Erhalt deine wirklichen Passformbeobachtungen im selben Eintrag. Modell und Datum verhindern, dass ein Einzelauftrag als dauerhafte Regel gelesen wird. Datiere Referenzpreise und Maße statt eines pauschalen „fällt normal aus“-Kennzeichens. Kehre zur [Finds-Seite](/finds) mit einem klareren Auswahlstandard zurück: vergleichbare Maße, identifizierte Variante und Belege für deine konkrete Passformfrage."
+        ]
+      },
+      {
+        "heading": "Bewahre die Vergleichsmethode im Datensatz",
+        "body": [
+          "Eine wiederverwendbare Hoodie-Zeile enthält Quellangebot, ausgewählte Option, Tabellendatum, Körper-oder-Kleidungsstück-Definition, Einheiten und Messpunkte. Stelle Referenzwerte neben Kandidatenwerte und ergänze verfügbare Lagerbeobachtungen. Verkäuferbehauptung und gemessenes Ergebnis bleiben getrennt. Nicht sicher lesbare Maße werden als ungeklärt markiert. So kannst du den Artikel später beurteilen, ohne die Herkunft einer nackten Zahl erraten zu müssen. Zugleich verliert eine kopierte Größenempfehlung nicht den praktischen Kontext, der sie für einen bestimmten Käufer nützlich gemacht hat."
+        ]
+      }
+    ],
+    "references": [
+      {
+        "label": "Offizieller QC-Leitfaden",
+        "url": "https://blog.sugargoo.com/sugargoo-qc-service-quality-check-guide/"
+      },
+      {
+        "label": "Offizieller Messleitfaden",
+        "url": "https://blog.sugargoo.com/taobao-agent-quality-check-photos-videos-measurements/"
+      }
+    ]
+  },
+  {
+    "slug": "sugargoo-shipping-to-usa-quote-comparison",
+    "title": "Sugargoo-Versand in die USA: Angebote richtig vergleichen",
+    "dek": "Vergleiche US-Schätzungen mit gleichem Ziel, verpackten Maßen und Produkteigenschaften und dokumentiere Ausschlüsse sowie offene Kosten.",
+    "primaryKeyword": "sugargoo shipping to USA",
+    "label": "Versandangebote dokumentieren",
+    "table": {
+      "title": "Nur Rechenbeispiel: Maße ändern das Ergebnis",
+      "headers": [
+        "Eingabe",
+        "Hypothetischer Wert",
+        "Anwendung"
+      ],
+      "rows": [
+        [
+          "Tatsächliches Gewicht",
+          "3,0 kg",
+          "Gewicht des verpackten Pakets"
+        ],
+        [
+          "Außenmaße",
+          "40 × 30 × 25 cm",
+          "Volumen: 30.000 cm³"
+        ],
+        [
+          "Beispieldivisor A",
+          "6.000 → 5,0 kg",
+          "Keine bestätigte Routenregel"
+        ],
+        [
+          "Beispieldivisor B",
+          "5.000 → 6,0 kg",
+          "Aktuelle Bedingungen jeder Route lesen"
+        ]
+      ]
+    },
+    "sections": [
+      {
+        "heading": "Vergleiche zuerst dasselbe Paket",
+        "body": [
+          "Ein sinnvoller Sugargoo-Versandvergleich für die USA beginnt mit einer einzigen Paketspezifikation. Ein günstiges Angebot für anderes Gewicht, Ziel oder andere Waren ist keine vergleichbare Alternative. Dokumentiere vorgesehenes US-Ziel, verpacktes Gewicht, Außenmaße, Produkteigenschaften und Schätzdatum. Vergleiche anschließend nur Routen, die der aktuelle Service für diese Eingaben tatsächlich anbietet.",
+          "Dieser Leitfaden veröffentlicht weder eine billigste Route noch feste Lieferzusagen oder aktuelle Versandpreise. Dafür wären konkrete Live-Angebote für dein Paket erforderlich. Die Methode hilft, Angebote zu lesen und zu speichern, ohne Schätzungen mit Rechnungen zu verwechseln. Nutze den [Versandleitfaden](/shipping) für die Gewichtseingaben und bestätige aktuelle Routenangaben im tatsächlich verwendeten Versandservice."
+        ]
+      },
+      {
+        "heading": "Berücksichtige das vollständige Zielgebiet",
+        "body": [
+          "Wähle das richtige Land und ergänze Bundesstaat oder Postinformationen, soweit der Rechner sie verlangt. Vergleiche kein anderes Ziel aus einem Screenshot, als ließen sich Preis und Zulässigkeit automatisch übertragen. Prüfe Adressanforderungen, Abdeckung und genannte ortsbezogene Zuschläge. Eine Route in einer allgemeinen Schätzung bestätigt nicht die Annahme jeder Adresse.",
+          "Speichere für die Recherche nur die zum Vergleich nötigen Zielangaben. Öffentliche Artikel oder geteilte Tabellen dürfen keine vollständigen Kundenadressen, Telefonnummern oder privaten Auftragskennungen offenlegen. Für ein veröffentlichtes Beispiel reichen gegebenenfalls Bundesstaat oder grober Zielkontext. Vollständige Lieferdaten bleiben im zuständigen Konto und werden dort vor Paketabgabe kontrolliert."
+        ]
+      },
+      {
+        "heading": "Trenne Artikelgewicht und Paketgewicht",
+        "body": [
+          "Die Summe der Produktgewichte kann vom fertig verpackten Gewicht abweichen, weil Außenverpackung, Schutz und Bearbeitung Material hinzufügen oder entfernen. Notiere, ob dein Wert aus Verkäuferangaben, Lagerdaten, einer Packsimulation oder dem fertig gepackten Paket stammt. Diese Quellen haben unterschiedliche Sicherheit. Eine Schätzung darf nicht als bestätigtes Versandgewicht bezeichnet werden.",
+          "Ein Paket mit und ohne Originalkartons sind zwei Verpackungsszenarien. Bewahre beide Maß- und Gewichtssätze auf, sofern verfügbar. Weniger Verpackung kann Volumen sparen, aber Schutz oder gewünschten Präsentationswert entfernen. Die passende Entscheidung hängt von Ware und akzeptiertem Risiko ab, nicht von der Annahme, weniger Verpackung sei immer besser."
+        ]
+      },
+      {
+        "heading": "Lies das Abrechnungsgewicht in den Routenregeln",
+        "body": [
+          "Manche Dienste verwenden tatsächliches Gewicht, andere vergleichen es nach eigenen Regeln mit Volumengewicht. Divisor, Rundungsschritte, Mindestgebühr und Größenlimits müssen aus den verwendeten Routeninformationen stammen. Mache einen Beispieldivisor nicht zu einer allgemeinen Sugargoo-Regel. Der [ausführliche Kostenartikel](/articles/sugargoo-shipping-cost-guide-2026) erklärt die Bedeutung der Paketmaße.",
+          "Die Tabelle ist bewusst hypothetisch: 40 × 30 × 25 cm ergeben 30.000 Kubikzentimeter. Division durch 6.000 ergibt 5 kg, durch 5.000 dagegen 6 kg. Bei tatsächlich 3 kg könnte eine Route, die den höheren Wert abrechnet, das größere Volumengewicht verwenden, vorbehaltlich ihrer Regeln. Die Rechnung zeigt die Wirkung verschiedener Annahmen und ist kein aktuelles Routenangebot."
+        ]
+      },
+      {
+        "heading": "Verknüpfe Warenmerkmale mit dem Angebot",
+        "body": [
+          "Erfasse tatsächlichen Inhalt und die vom Dienst abgefragten Eigenschaften. Batterien, Flüssigkeiten, Magnete, zerbrechliche Waren oder ungewöhnliche Maße können Routen und Behandlung beeinflussen. Nutze aktuelle Klassifizierung und Einschränkungen statt einer bequemeren Kategorie, die lediglich einen niedrigeren Preis anzeigt. Vergleichbar ist ein Angebot nur, wenn das Paket für die betreffende Route zulässig ist.",
+          "Fehlen Produktinformationen, kläre das relevante Merkmal vor Nutzung der Schätzung. Ein Foto zeigt beispielsweise nicht sicher, ob eine Batterie enthalten ist. Frage nach der zur Einordnung erforderlichen Information und bewahre die Antwort beim Produktdatensatz auf. Die Verkaufsbereitschaft eines Händlers beweist nicht die Annahme durch einen bestimmten internationalen Versanddienst."
+        ]
+      },
+      {
+        "heading": "Vergleiche enthaltene und ausgeschlossene Kosten",
+        "body": [
+          "Notiere je Route den sichtbaren Frachtbetrag sowie in den aktuellen Bedingungen genannte Zusatzkosten, optionalen Schutz, Versicherung oder Zielgebietsgebühren. Kennzeichne bestätigte Beträge und Schätzungen. Ein attraktiver Hauptpreis ist schwer zu bewerten, wenn Angebote unterschiedliche Leistungen enthalten. Währung und Umrechnungskontext müssen beim Vergleich sichtbar bleiben.",
+          "Trenne Fracht von Warenpreis, innerchinesischem Versand und Zahlungsgebühren. Prüfe außerdem aktuelle offizielle US-Einfuhrinformationen und Routenbedingungen auf mögliche Abgaben, Steuern und Abfertigungskosten. Dieser Artikel verspricht weder Freigrenze noch Befreiung oder Abgabensatz. CBP weist auf die Verantwortung des Importeurs für anwendbare Abgaben hin; ein Werbebegriff ersetzt nicht die Prüfung, wer zahlt und was enthalten ist."
+        ]
+      },
+      {
+        "heading": "Behandle Laufzeitangaben als datierte Schätzungen",
+        "body": [
+          "Speichere Datum und Wortlaut der Laufzeitschätzung. Prüfe, welchen Abschnitt sie beschreibt: Lagerbearbeitung, Übernahme durch den Beförderer, internationalen Transport oder Zustellung nach Abfertigung. Zwei Zeitspannen sind nicht vergleichbar, wenn sie unterschiedliche Phasen messen. Mache aus einem Schätzfenster keinen garantierten Termin für eine Veranstaltung oder einen Weiterverkauf.",
+          "Verfolge nach Abgabe dein eigenes Paket im zugehörigen Datensatz. Rezensionen oder fremde Screenshots können Fragen anregen, sagen aber deine Lieferung nicht voraus. Bei Zeitdruck vergleiche aktuelle Leistungsbedingungen und Folgen einer Verzögerung ebenso wie den Preis. Sind Bedingungen unklar, dokumentiere das, statt eine Lücke mit Durchschnittswerten fremder Pakete zu füllen."
+        ]
+      },
+      {
+        "heading": "Aktualisiere den Vergleich nach der Verpackungsprüfung",
+        "body": [
+          "Wenn Packsimulation oder eine andere Bestätigung angeboten wird, entscheide, ob sie eine wesentliche Unsicherheit löst. Bei einem sperrigen Paket mit stark schwankenden Schätzmaßen kann ein bestätigtes Szenario hilfreicher sein als bei einer einfachen, gut dokumentierten Sendung. Prüfe Verfügbarkeit, Preis und tatsächlichen Messumfang. Eine Simulation garantiert nicht automatisch die spätere Bewertung des Beförderers.",
+          "Vergleiche nach Erhalt neuer Maße oder Gewichte erneut mit diesen Werten. Bewahre die frühere Schätzung datiert auf und erkläre Änderungen. Beeinflusst entfernter Karton oder zusätzlicher Schutz die Routenzulässigkeit, aktualisiere auch dieses Feld. Ein Angebotsprotokoll verbindet die Verpackungsentscheidung mit ihren Annahmen, statt nur zwei unerklärlich unterschiedliche Preise zu zeigen."
+        ]
+      },
+      {
+        "heading": "Dokumentiere die Entscheidung vor der Zahlung",
+        "body": [
+          "Prüfe vor Abgabe Zieladresse, Warenzulässigkeit, Verpackung, Abrechnungsgewichtsregeln, enthaltene Kosten, Ausschlüsse und gewählte Deckung. Speichere Routenname und Angebotsdatum privat beim Paket. Kläre offene Gebühren oder Beschränkungen vor der Zahlung. Ein Vergleich sollte offene Fragen sichtbar machen, statt sie hinter einer pauschalen Preis-Leistungsnote zu verbergen.",
+          "Veröffentliche für eine Fallstudie nur geschwärzte Belege mit Beobachtungsdatum, Paketeingaben und Grenzen. Erfinde keine versandte Bestellung und stelle fremde Erfahrungen nicht als eigene dar. Vergleiche spätere Rechnung und Schätzung erst mit tatsächlichen Belegen. Bis dahin bleibt es ein Planungsvergleich; der [Gebührenleitfaden](/articles/sugargoo-fees-cost-breakdown-2026) hilft, das übrige Kaufbudget getrennt zu halten."
+        ]
+      },
+      {
+        "heading": "Speichere eine Zeile je Vergleichsszenario",
+        "body": [
+          "Nutze pro Route und Verpackungsszenario eine Zeile mit Angebotsdatum, Zielgebiet, Paketgewicht, Maßen, Warenklasse, Abrechnungsregel, Betrag, Ausschlüssen und offenen Fragen. Hypothetische Rechnungen gehören in einen getrennten Beispielblock, nicht zwischen echte Angebote. Gleiche unterschiedliche Annahmen ab, bevor du Preise sortierst. Bewahre ausgewähltes Szenario und Entscheidungsgrund auf. Damit lässt sich eine spätere Differenz zwischen Schätzung und Rechnung erklären, ohne einen Preisverlauf zu erfinden oder eine ungetestete Route als grundsätzlich billigste auszugeben."
+        ]
+      }
+    ],
+    "references": [
+      {
+        "label": "Offizieller Versandkalkulator-Leitfaden",
+        "url": "https://blog.sugargoo.com/sugargoo-freight-calculator/"
+      },
+      {
+        "label": "US-Zoll: Internetkäufe",
+        "url": "https://www.cbp.gov/trade/basic-import-export/internet-purchases"
+      }
+    ]
+  }
+]

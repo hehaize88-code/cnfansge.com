@@ -21,7 +21,7 @@ export function LanguageNav({ current }: { current: Language }) {
       <div className="language-popover">
         {languages.map((lang) => (
           <a key={lang} href={pathFor(pathname, lang)} className={lang === current ? "active" : ""} hrefLang={lang}>
-            <span>{names[lang]}</span>{lang === current && <small>Current</small>}
+            <span>{names[lang]}</span>{lang === current && <small>{{ en: "Current", de: "Aktuell", es: "Actual", fr: "Actuelle", it: "Attuale" }[current]}</small>}
           </a>
         ))}
       </div>

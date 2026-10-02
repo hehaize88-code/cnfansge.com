@@ -1,5 +1,6 @@
 import type { Language } from "./site-data";
 import { spreadsheetMaintenanceArticles } from "./spreadsheet-maintenance-article";
+import { additionalArticles, improveArticle } from "./seo-articles";
 
 export type ArticleSection = { heading: string; body: string[] };
 export type Article = {
@@ -11,6 +12,12 @@ export type Article = {
   readTime: string;
   primaryKeyword: string;
   sourceLine: string;
+  modified?: string;
+  publishedIso?: string;
+  image?: string;
+  imageCaption?: string;
+  table?: { title: string; headers: string[]; rows: string[][] };
+  references?: { label: string; url: string }[];
   visual: {
     title: string;
     items: { label: string; value: string; note: string }[];
@@ -1337,6 +1344,10 @@ const localizedArticleText: Record<Exclude<Language, "en">, Record<string, Local
 };
 
 const articlePriority = [
+  "sugargoo-spreadsheet-links-not-working",
+  "sugargoo-shoe-size-guide-measurements",
+  "sugargoo-hoodie-sizing-measurements",
+  "sugargoo-shipping-to-usa-quote-comparison",
   "build-reliable-sugargoo-spreadsheet-fields-dates-evidence",
   "sugargoo-spreadsheet-guide-2026",
   "sugargoo-shipping-cost-guide-2026",
@@ -1348,7 +1359,8 @@ const articlePriority = [
 
 export function getArticles(lang: Language): Article[] {
   const localized = lang === "en" ? [...englishArticles, spreadsheetMaintenanceArticles.en] : [...englishArticles.map((article) => localizedArticleShell(lang, article)), spreadsheetMaintenanceArticles[lang]];
-  return articlePriority.map((slug) => localized.find((article) => article.slug === slug)!).filter(Boolean);
+  const complete = [...localized.map((article) => improveArticle(lang, article)), ...additionalArticles(lang)];
+  return articlePriority.map((slug) => complete.find((article) => article.slug === slug)!).filter(Boolean);
 }
 
 export function getArticle(lang: Language, slug: string) {

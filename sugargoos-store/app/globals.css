@@ -598,3 +598,30 @@ tbody tr:last-child td { border-bottom: 0; }
   .footer-disclaimer p { font-size: .55rem; line-height: 1.4; }
   .footer-bottom { margin-top: 10px; padding-top: 8px; font-size: .5rem; }
 }
+.article-body a { color: var(--blue-deep); text-decoration: underline; text-underline-offset: 3px; }
+.article-comparison { margin: 28px 0; padding: 22px; background: white; border: 1px solid var(--line); border-radius: 18px; }
+.article-comparison h2 { margin: 0 0 20px; font-size: 1.5rem; line-height: 1.25; }
+.article-comparison table { width: 100%; border-collapse: collapse; table-layout: fixed; font-size: .9rem; line-height: 1.6; }
+.article-comparison th, .article-comparison td { padding: 12px; border-bottom: 1px solid var(--line); text-align: left; vertical-align: top; overflow-wrap: anywhere; }
+.article-comparison th { color: var(--blue-deep); background: var(--blue-pale); }
+.article-comparison tr:last-child td { border-bottom: 0; }
+.article-figure { margin: 24px 0; padding: 20px; border: 1px solid var(--line); border-radius: 18px; background: white; }
+.article-figure img { display: block; width: min(100%, 400px); height: auto; margin: 0 auto; object-fit: contain; }
+.article-figure figcaption { margin-top: 12px; color: var(--muted); font-size: .85rem; line-height: 1.6; }
+.topic-links > div:last-child { display: grid; gap: 10px; }
+.topic-links > div:last-child > a { display: flex; justify-content: space-between; gap: 15px; padding: 18px; border: 1px solid var(--line); border-radius: 14px; background: white; color: var(--blue-deep); font-weight: 700; }
+.topic-links svg { flex-shrink: 0; }
+@media (max-width: 640px) {
+  .long-article .article-body p { font-size: 1rem; line-height: 1.85; }
+  .long-article .article-body > section { grid-template-columns: 24px minmax(0, 1fr); gap: 8px; }
+  .long-article .article-body h2 { font-size: 1.4rem; line-height: 1.25; }
+  .long-article > header > p:not(.eyebrow) { font-size: 1rem; }
+  .long-article > aside p { font-size: .85rem; line-height: 1.7; }
+  .long-article .article-comparison { padding: 12px; }
+  .article-comparison th, .article-comparison td { padding: 8px 5px; }
+  .article-comparison table { font-size: .8rem; }
+  .article-card-grid .article-card h3 { font-size: 1.05rem; line-height: 1.25; }
+  .article-card-grid .article-card > div > span { font-size: .875rem; line-height: 1.5; }
+  .article-card-grid .article-card p, .article-card-grid .article-card strong { font-size: .75rem; }
+  .article-card-grid .article-card { padding: 12px; gap: 10px; }
+}

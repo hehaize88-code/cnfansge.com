@@ -1,0 +1,478 @@
+[
+  {
+    "slug": "sugargoo-spreadsheet-links-not-working",
+    "title": "Sugargoo Links Not Working: Check IDs, Stock and Variants",
+    "dek": "Diagnose a broken spreadsheet link by separating the source listing, product ID, selected variant and agent import result, then record a verified replacement.",
+    "primaryKeyword": "sugargoo link not working",
+    "label": "Product link verification",
+    "table": {
+      "title": "A link failure needs a specific diagnosis",
+      "headers": [
+        "Observation",
+        "Check next",
+        "What it does not prove"
+      ],
+      "rows": [
+        [
+          "Seller page will not open",
+          "Original URL and access",
+          "That the item is sold out"
+        ],
+        [
+          "Seller page opens; import fails",
+          "Link format and manual options",
+          "That the listing is supported"
+        ],
+        [
+          "Product opens with different details",
+          "ID, seller and exact variant",
+          "That the old row is still accurate"
+        ],
+        [
+          "Only one option is unavailable",
+          "Variant stock",
+          "That every option is unavailable"
+        ]
+      ]
+    },
+    "sections": [
+      {
+        "heading": "Start with the failed step, not a replacement search",
+        "body": [
+          "A Sugargoo link not working can mean several different things. The spreadsheet button may point to an old address, the seller page may require access inside its own app, or the agent may be unable to import a listing that still exists. A product can also load normally while the particular size you wanted is unavailable. These are different failures and need different evidence. Start by writing down which screen stopped the process and what it actually displayed.",
+          "Keep the original row before changing anything: product name, marketplace, seller, product ID, selected option, reference price and the date you last checked it. A screenshot is useful for comparison, but it is not a substitute for the complete address. This small record prevents a new search from silently replacing the original item with a similar photograph. The [spreadsheet guide](/articles/sugargoo-spreadsheet-guide-2026) explains how to build the initial shortlist."
+        ]
+      },
+      {
+        "heading": "Separate the directory link from the seller link",
+        "body": [
+          "A spreadsheet can send you to a product directory rather than directly to Taobao, Weidian or another marketplace. That directory has its own internal product number. The seller listing may use a different identifier. Record both where available and label them clearly. Do not paste a category page, search results page or directory homepage into an agent and assume it identifies the item you selected.",
+          "Open the product details and locate the original seller route when one is provided. Compare the destination title, model and photographs with the directory record. If the directory offers no source link or clear option information, treat that as missing evidence. You can keep the row for further research without treating it as ready to order. A working button proves only that a page can be reached, not that the buying information is complete."
+        ]
+      },
+      {
+        "heading": "Copy the full product address carefully",
+        "body": [
+          "Shared marketplace content may contain descriptive text, app prompts, shortened addresses and tracking parameters around the actual product link. Copy the product address itself from the platform's normal sharing or browser interface. Inspect it for accidental spaces, punctuation or a missing end. Keep the product identifier intact. Removing every parameter indiscriminately can remove the value that tells the marketplace which listing you want.",
+          "Sugargoo's official link and DIY-order guidance distinguishes normal link import from manual submission. Use the current interface to find the available route; do not assume that a workaround described for one marketplace applies to all others. Never send passwords, verification codes or login cookies to a seller or support contact to make a product link work. An order request needs product details, not access to your personal account."
+        ]
+      },
+      {
+        "heading": "Check the source independently of the import result",
+        "body": [
+          "Try the original listing through the marketplace's normal access method. Note whether the result is a product page, a sign-in prompt, a removed-item message or an unrelated destination. A sign-in requirement is not evidence of stock. Likewise, a temporary loading failure cannot tell you whether the seller deleted the product. If access remains unavailable, mark the listing as unverified rather than inventing a cause.",
+          "When the source page opens but the agent import fails, record both observations. The problem may concern parsing, link format or current platform support, but you have not diagnosed the exact cause yet. Consult the current official guidance or ask support whether this specific listing can be handled. Repeatedly paying through a different route is not a diagnostic step. Resolve what will be purchased before authorizing the purchase."
+        ]
+      },
+      {
+        "heading": "Verify identity even when the product ID matches",
+        "body": [
+          "A stable product ID is useful, but it is not a permanent description of everything sold under that address. Sellers may change pictures, available options or the product content. Compare the current seller, model, option label, price basis and image set with your saved record. A matching ID with a different item should be marked as changed, not counted as a successful live-listing check.",
+          "Consider a hypothetical row saved for a black hoodie in size M. The page later opens on a grey sweatshirt, while the same black thumbnail remains among the options. The correct next step is to inspect the option list and confirm exactly which item the displayed price represents. Neither the default image nor the old row resolves that ambiguity. Save the matching option text and thumbnail before proceeding."
+        ]
+      },
+      {
+        "heading": "Treat stock and price as variant-level observations",
+        "body": [
+          "A listing-level price can be a range, a starting price or the amount for an accessory rather than the pictured garment. Choose the intended option before comparing prices. Record size, colour, quantity and any domestic delivery charge that the current order screen shows. If a particular option cannot be selected, record that option as unavailable instead of describing the entire listing as sold out.",
+          "Reference dollar prices help you browse, but a changed currency conversion is different from a changed seller price. Compare the native listed amount first and keep the observation date. Do not silently overwrite yesterday's value with today's value when maintaining a shortlist. A brief change note makes it possible to explain why the final order differs from the spreadsheet without pretending that either value is a guaranteed quote."
+        ]
+      },
+      {
+        "heading": "Use manual ordering only with an explicit item record",
+        "body": [
+          "A manual order can be useful when the platform currently offers it for a listing that cannot be imported. It does not automatically confirm eligibility, seller reliability or availability. Supply the complete source address, exact variant text, quantity and a reference image that matches the option. Review the amount and any handling instructions in the current service before submitting payment.",
+          "Ask for clarification when a field remains ambiguous. For example, a seller's size code may look like a conventional clothing size but represent a model number. A note saying 'same as picture' leaves room for disagreement if the picture shows several versions. Keep the agent's acceptance or clarification with the order record. If the item cannot be handled, preserve that outcome and search for alternatives without trying to bypass a restriction."
+        ]
+      },
+      {
+        "heading": "Create a replacement row instead of hiding a changed item",
+        "body": [
+          "When a link is genuinely removed or unsuitable, preserve its identifier and status in your research history. A replacement should receive its own source link, seller details, option record and check date. Do not reuse the old item's QC photographs as evidence for the replacement. Similar appearance does not establish the same construction, sizing or supply source.",
+          "Compare alternatives using the same fields so the shortlist remains useful: source identity, required variant, visible measurement information, native price, domestic delivery context and unresolved questions. A replacement with a slightly higher reference price may still be better documented, but that is a judgment about evidence, not a promise of better quality. The final decision should remain visible to the buyer rather than buried in an edited spreadsheet cell."
+        ]
+      },
+      {
+        "heading": "Close the loop when warehouse photographs arrive",
+        "body": [
+          "A successful link import only completes the ordering information stage. When the product reaches the warehouse, match the order record to the item you actually received. Check colour, size label, model details and quantity before reviewing small cosmetic features. Use the [QC photo guide](/articles/how-to-read-sugargoo-qc-photos) to separate identity checks from judgments that photographs cannot support.",
+          "Keep the listing snapshot and your own order photos together. If they differ, describe the specific discrepancy and use the current after-sales process promptly. Do not relabel another buyer's photographs as proof for your order. A well-maintained live listing record ends with a traceable decision: verified for further review, unavailable, changed, unresolved or replaced. That is more useful than a blanket 'working link' badge with no date or explanation."
+        ]
+      },
+      {
+        "heading": "Keep a small verification log that another reader can follow",
+        "body": [
+          "A practical log needs four fields for every check: observation date, exact address, visible result and next action. Write “size M unavailable on the checked page” instead of “bad seller,” or “sign-in required; stock not verified” instead of “sold out.” Keep private account information out of the log. When another person revisits the row, they should be able to repeat the check without guessing what you meant. If the next observation differs, add it as a new dated entry. This makes a spreadsheet useful over time while avoiding unsupported claims about availability, quality or the reason a link stopped working."
+        ]
+      }
+    ],
+    "references": [
+      {
+        "label": "Official product-link guide",
+        "url": "https://blog.sugargoo.com/how-to-copy-taobao-links-properly/"
+      },
+      {
+        "label": "Official QC guide",
+        "url": "https://blog.sugargoo.com/sugargoo-qc-service-quality-check-guide/"
+      }
+    ]
+  },
+  {
+    "slug": "sugargoo-shoe-size-guide-measurements",
+    "title": "Sugargoo Shoe Size Guide: Charts, Measurements and QC",
+    "dek": "Build a shoe sizing record from the exact seller chart, foot measurements and comparable warehouse photos, without relying on a universal size conversion.",
+    "primaryKeyword": "sugargoo shoe size guide",
+    "label": "Footwear product records",
+    "image": "/products/air-jordan-4.webp",
+    "imageCaption": "Existing catalogue image for footwear context. This is not a measurement photograph or proof of any particular order.",
+    "table": {
+      "title": "Keep different length measurements separate",
+      "headers": [
+        "Field",
+        "What to record",
+        "Comparison rule"
+      ],
+      "rows": [
+        [
+          "Foot length",
+          "Heel to longest toe",
+          "Use the seller's stated method"
+        ],
+        [
+          "Insole length",
+          "Removable insert, if available",
+          "Not identical to usable interior space"
+        ],
+        [
+          "Outsole length",
+          "External sole measurement",
+          "Do not convert directly to foot length"
+        ],
+        [
+          "Size label",
+          "System, model and variant",
+          "A label alone does not prove fit"
+        ]
+      ]
+    },
+    "sections": [
+      {
+        "heading": "A useful size guide starts with the exact listing",
+        "body": [
+          "A Sugargoo shoe size guide is most useful as a method for checking a specific seller's information. A single US-to-EU conversion table cannot establish how every model fits. The same size label can appear on shoes with different toe shapes, widths, lining and interior construction. Begin with the product link and exact variant rather than selecting your usual number before reading the listing.",
+          "Save the seller's chart, including its column headings and any notes about measurement. Record whether it describes foot length, inner length, insole length or something else. Those labels are not interchangeable. If the page provides only a generic size name without a measurement definition, make that uncertainty visible in your shortlist. Do not add a precise centimetre value based on a table copied from an unrelated seller."
+        ]
+      },
+      {
+        "heading": "Measure both feet using a repeatable setup",
+        "body": [
+          "For a personal reference, measure both feet on a flat surface using the same method each time. Stand naturally, wear the type of socks intended for the shoes, and mark the heel and longest toe without curling the toes. Check the result again if the outline or ruler is unclear. Record the units and the method alongside the number so you know what you are comparing later.",
+          "A foot measurement is an input, not an automatic size recommendation. Compare it with the seller's explanation and allow for the intended activity and personal fit preferences. Do not apply a fixed allowance to every model: the chart may already incorporate its own fitting guidance. If you have a persistent fitting problem or need specialist footwear, a spreadsheet and warehouse photographs cannot replace an appropriate professional fitting."
+        ]
+      },
+      {
+        "heading": "Distinguish foot, insole and outsole length",
+        "body": [
+          "Foot length describes your foot. Insole length describes an insert, where it can be removed and measured without damage. Outsole length describes the external sole. The outside may extend beyond the usable interior, while a curved or padded insole may not sit flat on a ruler. A number labelled only 'length' is incomplete evidence until you know which object and method produced it.",
+          "For example, a hypothetical 29 cm outsole does not prove that the shoe is suitable for a 29 cm foot. That conclusion would require information about the interior and the seller's sizing method. Keep separate columns in the product record for each measurement instead of combining them into a single 'shoe length' field. This prevents a neat-looking spreadsheet from hiding a mismatch between two fundamentally different quantities."
+        ]
+      },
+      {
+        "heading": "Read the size system and variant together",
+        "body": [
+          "Check whether the listing explicitly names a men's, women's, children's or other size system. A bare number is not enough to resolve the system, and model names can be abbreviated. Save the complete selected option text and thumbnail. When several colourways or versions share one listing, confirm that the size chart actually applies to the version you intend to order.",
+          "Review the imported order screen before payment. If the agent displays an option that does not match the seller wording, clarify the mapping rather than guessing. An order note should identify the intended size system and option, not merely request 'my normal size.' Use the [live listing checklist](/articles/sugargoo-spreadsheet-guide-2026) to retain the product ID and variant evidence with your sizing notes."
+        ]
+      },
+      {
+        "heading": "Use a well-fitting pair as a comparison, not a conversion",
+        "body": [
+          "A pair you already own can provide a useful physical reference when its construction and intended use are comparable. Record what you like or dislike about the fit: toe space, heel movement, width or pressure across the upper. If you measure an accessible insole, describe how it was laid out. A reference pair provides context, but it does not establish that another model will fit identically.",
+          "Avoid subtracting two label sizes and assuming that the same difference applies across brands or sellers. A running shoe, a stiff leather shoe and a padded casual sneaker can use interior space differently. Your comparison becomes stronger when the measurement type and method match, and weaker when one number is an outsole measurement and the other is a chart's recommended foot length. Keep that distinction in the record."
+        ]
+      },
+      {
+        "heading": "Request a photograph that answers one sizing question",
+        "body": [
+          "When measurement photography is available, make the request specific. Identify the order, the part to measure, the start and end points, and the units you want visible. A useful request could ask for a removable insole laid flat with the full ruler and both ends in frame, provided removal is safe and permitted. Do not ask warehouse staff to force apart a glued component to obtain a number.",
+          "Ask the current service about availability and charges before requesting additional work; this guide does not promise that every measurement is included. If an insole cannot be removed, request an alternative the service can perform and record its limitations. A ruler placed beside the exterior of the shoe answers a different question from an internal measurement. Precise wording helps you avoid paying for a photograph that cannot resolve your concern."
+        ]
+      },
+      {
+        "heading": "Inspect the measurement image before trusting its number",
+        "body": [
+          "Check that the photograph shows the correct item and that the ruler starts at the intended reference point. The whole relevant scale should be readable. Angled camera positions, a bent tape, a raised heel or an obscured endpoint can make a measurement ambiguous. Do not infer missing millimetres from a blurred crop. Request clarification when the image cannot support the decision you need to make.",
+          "Compare both shoes if the concern is a mismatch between the pair. Record which side was measured and whether the method was the same. Small observed differences may come from placement rather than construction, so look for repeatable evidence before drawing a conclusion. The [QC photo guide](/articles/how-to-read-sugargoo-qc-photos) adds identity and condition checks that should accompany the sizing record."
+        ]
+      },
+      {
+        "heading": "Include width, shape and use in the decision",
+        "body": [
+          "Length alone cannot describe fit. Toe-box shape, upper flexibility, padding and closure design can change how a shoe feels even when two length measurements are similar. Warehouse images may show obvious shape differences, but they cannot reproduce walking, pressure or comfort. Record which questions the photos answer and which remain unknown instead of converting visual similarity into a claim of guaranteed fit.",
+          "Treat community fit comments as contextual reports about someone else's feet and order. They are more useful when they identify the same model, variant and measurement method, but they remain anecdotal. Do not copy a review's size recommendation into every row of your sheet. If a critical fit detail is unavailable, choose whether the uncertainty is acceptable before paying for international shipment."
+        ]
+      },
+      {
+        "heading": "Keep a traceable sizing decision before shipping",
+        "body": [
+          "Your final record should connect the seller chart, selected option, order label, available measurements and decision. If the received size or model differs from what you ordered, document that discrepancy separately from a personal fit preference. Use the platform's current after-sales process while action is still possible. Warehouse storage time should not be treated as permission to postpone checking the received item.",
+          "After delivery, compare the actual fit with the assumptions you wrote down. Update your personal reference notes with the model and order date, rather than publishing a universal conversion from one purchase. For future searches, return to the [spreadsheet](/spreadsheet) with a clearer description of the evidence you need. A reliable shoe sizing record reduces avoidable guessing while remaining honest about what remote measurements cannot establish."
+        ]
+      },
+      {
+        "heading": "Build a compact footwear evidence row",
+        "body": [
+          "Keep the final row readable: listing ID; exact model and option; chart measurement type; your foot reference; available warehouse measurement; remaining uncertainty; and decision date. Attach a photograph only when you know what it represents. A seller image, a public QC reference and your own order photograph should carry different labels. If a crucial field is blank, leave it blank rather than filling it with a guessed conversion. This format also makes later corrections easier: you can change a seller chart observation without rewriting the personal measurement or implying that an old QC image belongs to a newer order."
+        ]
+      }
+    ],
+    "references": [
+      {
+        "label": "Official QC guide",
+        "url": "https://blog.sugargoo.com/sugargoo-qc-service-quality-check-guide/"
+      },
+      {
+        "label": "Official measurement guide",
+        "url": "https://blog.sugargoo.com/taobao-agent-quality-check-photos-videos-measurements/"
+      }
+    ]
+  },
+  {
+    "slug": "sugargoo-hoodie-sizing-measurements",
+    "title": "Sugargoo Hoodie Sizing: Chest, Length and QC Measurements",
+    "dek": "Compare hoodie measurements with a garment you own, distinguish flat chest width from circumference and request warehouse photos with clear measurement points.",
+    "primaryKeyword": "sugargoo hoodie sizing",
+    "label": "Clothing product records",
+    "image": "/products/carhartt-hoodie.webp",
+    "imageCaption": "Existing catalogue image for hoodie context. No size, fabric or fit claim is verified by this photograph.",
+    "table": {
+      "title": "A hypothetical flat-garment comparison",
+      "headers": [
+        "Measurement",
+        "Reference / candidate",
+        "Decision context"
+      ],
+      "rows": [
+        [
+          "Chest width",
+          "58 cm / 61 cm",
+          "3 cm wider laid flat"
+        ],
+        [
+          "Body length",
+          "69 cm / 66 cm",
+          "3 cm shorter using the same endpoints"
+        ],
+        [
+          "Shoulder width",
+          "54 cm / 58 cm",
+          "Check shoulder construction"
+        ],
+        [
+          "Sleeve length",
+          "61 cm / 59 cm",
+          "Compare the stated start point"
+        ]
+      ]
+    },
+    "sections": [
+      {
+        "heading": "Translate the desired fit into measurements",
+        "body": [
+          "Sugargoo hoodie sizing starts with the fit you want, not with a label such as medium or oversized. A hoodie can be wide across the chest while remaining short in the body. Another can have a long body and narrow sleeves. Describe the result you want in practical terms: room for a shirt underneath, a particular hem position, enough sleeve reach or a shoulder shape you already like.",
+          "Choose a hoodie you own that is reasonably comparable in construction. Lay it flat without stretching it and record the measurement method. This creates a personal reference that is more useful than assuming every seller's L matches your usual L. The reference is still a comparison, not a guarantee. Different fabric, lining and patterns can produce a different wearing experience even when several measurements are close."
+        ]
+      },
+      {
+        "heading": "Identify whether the chart measures the body or garment",
+        "body": [
+          "A seller's chart may describe recommended body measurements or the finished garment itself. Read the heading and explanatory notes before comparing values. A body chest circumference and a flat garment chest width cannot be compared directly. If the chart is unclear, ask for its measurement definition or keep the value marked as uncertain. Do not solve the ambiguity by guessing which interpretation makes your preferred size look right.",
+          "Sugargoo's official size-chart guidance emphasizes measurements over size names. For a product record, preserve the original chart image and the selected size row rather than copying only one number. Note the units, any stated tolerance and whether the seller distinguishes different versions. A chart for a zip hoodie may not describe a pullover that appears elsewhere in the same multi-option listing."
+        ]
+      },
+      {
+        "heading": "Separate flat chest width from circumference",
+        "body": [
+          "Flat chest width is commonly taken across a laid-flat garment at a specified point, often near the underarms. A circumference describes a distance around the body or garment. The exact chart definition matters. Doubling a clearly defined flat width can help explain scale, but it does not convert the result into a precise body-fit recommendation because garment shape, stretch and intended ease remain relevant.",
+          "In the hypothetical comparison above, a reference hoodie is 58 cm wide and the candidate is 61 cm wide using the same method. The difference is 3 cm across the flat garment. You should not describe that as only 3 cm of extra circumference. Keep the original flat measurement in the sheet and explain the comparison in those terms, without inventing a recommended body size for every buyer."
+        ]
+      },
+      {
+        "heading": "Define the endpoints for body length",
+        "body": [
+          "Body length can be measured from different starting points. A seller may use the high shoulder point, the back neck seam or another marked position. Including the hood produces yet another number. Save a diagram or a clear textual description of the seller's method. Compare your reference hoodie using the same endpoints whenever possible instead of treating every field labelled 'length' as equivalent.",
+          "A candidate that is wider but shorter than your reference may create a boxier silhouette, though the measurements alone do not prove how it will drape. In the hypothetical example, the 66 cm candidate is 3 cm shorter than the 69 cm reference. That is useful information only because the endpoints match. If the methods differ, record the mismatch and obtain clarification before deciding the item is incorrectly sized."
+        ]
+      },
+      {
+        "heading": "Read shoulder and sleeve measurements together",
+        "body": [
+          "Shoulder construction changes how sleeve measurements should be interpreted. A dropped shoulder can move the sleeve seam outward, while a raglan sleeve does not have the same shoulder seam arrangement as a conventional set-in sleeve. A shorter sleeve measurement can therefore coexist with a longer total reach. Inspect the construction shown in the listing rather than judging one isolated number.",
+          "Ask whether sleeve length begins at the shoulder seam, neck or another point. Measure the reference garment the same way and note how the cuff is handled. Do not stretch ribbing to make a preferred number appear. When a seller supplies a combined shoulder-to-cuff measurement, preserve that field separately. Combining incompatible measurements into a single conversion formula can create false confidence from otherwise accurate numbers."
+        ]
+      },
+      {
+        "heading": "Record fabric and construction as separate uncertainties",
+        "body": [
+          "Photographs may show a brushed interior, ribbed hem, zipper or lining, but they do not establish precise fibre composition, fabric weight or long-term shrinkage. If the listing states those properties, label them as seller information and save the source. If it does not, leave the field unknown. A thick-looking photograph is not evidence that the hoodie meets a particular weight or warmth specification.",
+          "Avoid promising that a garment will shrink into the right size or stretch enough to solve a poor fit. Care instructions and actual material behaviour matter, and they may not be fully known before arrival. Fit planning should use the measurements you can document today. Questions about softness, comfort or durability should remain separate from checks that a warehouse photograph can reasonably support."
+        ]
+      },
+      {
+        "heading": "Make the warehouse measurement request reproducible",
+        "body": [
+          "If additional measurement photos are available, identify the order and ask for one clear view per measurement. Specify a flat, unstretched garment, the start and end points and a readable tape. For chest width, describe the line you want measured. For body length, state whether the hood is excluded and which seam starts the measurement. Confirm the current service and any charge before requesting work.",
+          "A request for 'measure size' gives the operator little direction. A better request explains the exact uncertainty: for example, whether the selected size's chest width matches the saved seller chart. Ask for the full relevant garment area in the frame so you can see where the tape sits. Do not request a damaging or impractical procedure just to obtain a more precise-looking number."
+        ]
+      },
+      {
+        "heading": "Review the photo against the selected variant",
+        "body": [
+          "First confirm that the warehouse item is the correct hoodie, colour and size label. Then check that the tape follows the stated measurement method and that both endpoints are visible. A folded hem, uneven surface or stretched cuff can affect what the photo appears to show. If the image is unclear, request clarification rather than presenting an uncertain reading as a confirmed defect.",
+          "Compare any discrepancy with the seller's actual stated tolerance, where one exists. Do not invent a universal tolerance for every garment. Keep label mismatch, measurement mismatch and personal fit preference as separate observations. The [QC guide](/articles/how-to-read-sugargoo-qc-photos) helps organize visible evidence, while the [product-link guide](/articles/sugargoo-spreadsheet-links-not-working) helps confirm that the listing still describes the version you ordered."
+        ]
+      },
+      {
+        "heading": "Save the decision as part of the product record",
+        "body": [
+          "Before international shipping, record the reference garment, chart version, selected option, measured values and unresolved questions. If the evidence shows a different item or size from the order, use the current after-sales process promptly with the listing snapshot and photos. If the measurements match but the style is unsuitable for your preference, describe that distinction honestly. A clear record makes the decision easier to explain.",
+          "After receiving the hoodie, add your own fit observations to the same record. Note the actual model and date so future readers do not mistake one order for a permanent rule. Keep reference prices and measurements dated rather than publishing a generic 'true to size' badge. Return to the [finds page](/finds) with a clearer shortlist standard: comparable measurements, an identified variant and evidence that answers your particular fit question."
+        ]
+      },
+      {
+        "heading": "Use a garment record that preserves the comparison method",
+        "body": [
+          "A reusable hoodie row should include the source listing, selected option, chart date, garment-or-body definition, units and measurement endpoints. Add the reference garment values next to the candidate values, followed by the warehouse observation when available. Keep the original chart claim separate from the measured result. If a measurement cannot be read confidently, label it unresolved. This lets you review the same item later without assuming that a bare number came from the seller or the warehouse. It also prevents a copied size recommendation from losing the practical context that made it useful for one particular buyer."
+        ]
+      }
+    ],
+    "references": [
+      {
+        "label": "Official QC guide",
+        "url": "https://blog.sugargoo.com/sugargoo-qc-service-quality-check-guide/"
+      },
+      {
+        "label": "Official measurement guide",
+        "url": "https://blog.sugargoo.com/taobao-agent-quality-check-photos-videos-measurements/"
+      }
+    ]
+  },
+  {
+    "slug": "sugargoo-shipping-to-usa-quote-comparison",
+    "title": "Sugargoo Shipping to USA: Compare Like-for-Like Quotes",
+    "dek": "Compare US shipping estimates using one destination, the same packed dimensions and item attributes, with a clear record of exclusions and remaining costs.",
+    "primaryKeyword": "sugargoo shipping to USA",
+    "label": "Parcel quote records",
+    "table": {
+      "title": "Illustration only: dimensions change the calculation",
+      "headers": [
+        "Input",
+        "Hypothetical value",
+        "How to use it"
+      ],
+      "rows": [
+        [
+          "Actual weight",
+          "3.0 kg",
+          "Use the packed parcel weight"
+        ],
+        [
+          "Outer dimensions",
+          "40 × 30 × 25 cm",
+          "Volume is 30,000 cm³"
+        ],
+        [
+          "Example divisor A",
+          "6,000 → 5.0 kg",
+          "Illustration, not a confirmed route rule"
+        ],
+        [
+          "Example divisor B",
+          "5,000 → 6.0 kg",
+          "Read each live route's own terms"
+        ]
+      ]
+    },
+    "sections": [
+      {
+        "heading": "Compare the same parcel before choosing a route",
+        "body": [
+          "A useful Sugargoo shipping to USA comparison starts with a single parcel specification. A low quote for a different weight, destination or item category is not a comparable alternative. Keep one record with the intended US destination, packed weight, outer dimensions, product attributes and the date of the estimate. Then compare the routes the current service actually offers for those inputs.",
+          "This guide does not publish a cheapest route, a fixed delivery promise or a live shipping price. Those require current quotes for your particular parcel. The method here helps you read and save those quotes without confusing estimates with a final invoice. Use the site's [shipping guide](/shipping) to understand the weight inputs, then confirm the live route information in the service where you will arrange the shipment."
+        ]
+      },
+      {
+        "heading": "Use the complete destination context",
+        "body": [
+          "Select the correct country and provide the state or postal information requested by the estimator. Do not compare a quote for one destination with a screenshot prepared for another and assume the amount or eligibility will transfer. Check the route's address requirements, delivery coverage and any stated location-related charges. A route appearing in a generic estimate is not confirmation that every address is accepted.",
+          "For your research record, store only the destination detail needed to compare quotes. A public article or shared spreadsheet should not expose a customer's full address, phone number or private order identifiers. State or broad destination context may be enough for a published example. Keep the full delivery information inside the appropriate account and review it there before submitting the parcel."
+        ]
+      },
+      {
+        "heading": "Distinguish item weight from packed parcel weight",
+        "body": [
+          "The sum of product weights can differ from the final packed parcel weight because outer packaging, protection and handling choices add or remove material. Record whether the number in your estimate comes from seller information, warehouse item records, a packing simulation or an actual packed parcel. Those inputs carry different levels of certainty. Do not label a guess as a confirmed shipping weight.",
+          "If you are comparing a parcel with boxes against one without them, treat these as separate packing scenarios. Save both sets of dimensions and weights where available. Removing packaging may reduce bulk, but it can also remove protection or presentation value that matters to you. The right decision depends on the items and acceptable risk, not on an assumption that less packaging is always better."
+        ]
+      },
+      {
+        "heading": "Read chargeable weight from each route's rules",
+        "body": [
+          "Some shipping services use actual weight, while others compare it with a volumetric calculation under their own terms. The applicable divisor, rounding increments, minimum charge and size limits must come from the route information you are using. Do not turn one example divisor into a universal Sugargoo rule. The [detailed shipping-cost article](/articles/sugargoo-shipping-cost-guide-2026) explains why dimensions belong in the comparison.",
+          "The table above is deliberately hypothetical. A 40 by 30 by 25 cm parcel has a volume of 30,000 cubic centimetres. Dividing by 6,000 gives 5 kg; dividing by 5,000 gives 6 kg. With a 3 kg actual weight, a route that charges the greater value could use the larger volumetric result, subject to its own rules. These calculations demonstrate sensitivity to assumptions; they are not current route quotations."
+        ]
+      },
+      {
+        "heading": "Keep product attributes attached to the quote",
+        "body": [
+          "Record the actual contents and the attributes the shipping service asks about. Batteries, liquids, magnets, fragile goods or unusual dimensions may affect available routes or handling requirements. Use the exact current classification and restrictions rather than selecting a convenient category merely to display a lower price. A comparison is useful only if the parcel is eligible for the route being compared.",
+          "When the listing information is incomplete, resolve the relevant product detail before relying on the estimate. For example, a product photograph may not reveal whether a battery is included. Ask for the information needed to classify the shipment and keep the answer with the product record. A seller's willingness to sell an item does not establish that a particular international shipping service will accept it."
+        ]
+      },
+      {
+        "heading": "Compare included costs and exclusions explicitly",
+        "body": [
+          "For each route, record the displayed freight amount and whether the current terms identify additional charges, optional protection, insurance or destination-related costs. Note which values are confirmed and which are estimates. An attractive headline figure can be difficult to interpret if its inclusions differ from another route's. Keep the currency and any conversion context visible when comparing amounts.",
+          "Separate shipping charges from the price of the goods, domestic delivery and payment-related costs. Also check current official US import guidance and the route's terms for any duties, taxes or clearance charges that may apply. This article gives no threshold, exemption or duty-rate promise. CBP notes that importers are responsible for applicable duties; a marketing label should not replace verification of who pays and what is included."
+        ]
+      },
+      {
+        "heading": "Treat delivery estimates as dated information",
+        "body": [
+          "Save the date and wording of the displayed transit estimate. Check which part of the journey the estimate describes: warehouse processing, carrier acceptance, international transport or delivery after clearance may be presented differently. Two ranges are not comparable if they measure different stages. Do not convert an estimated window into a guaranteed arrival date for an event or resale commitment.",
+          "Track the actual parcel using its own account record after submission. A review or another buyer's screenshot can suggest questions to ask, but it does not predict your shipment. When timing matters, compare the service's current terms and the consequences of delay alongside price. If those terms are unavailable or unclear, record that limitation instead of filling the gap with an average taken from unrelated parcels."
+        ]
+      },
+      {
+        "heading": "Use packing confirmation to update the comparison",
+        "body": [
+          "If the service offers pre-shipment simulation or another way to confirm packaging, decide whether it resolves a meaningful uncertainty. A bulky parcel whose estimated dimensions vary widely may benefit more from a confirmed packing scenario than a simple, well-documented shipment. Check current availability, cost and what the service actually measures. Do not assume a simulation guarantees the carrier's final assessment.",
+          "Once new dimensions or weight are available, rerun the comparison using those values. Keep the earlier estimate as a dated reference and explain the change. If removing a box or adding protection changes the route eligibility, update that field too. A quote record should connect the packing decision to the resulting assumptions instead of showing an unexplained price difference between two screenshots."
+        ]
+      },
+      {
+        "heading": "Make a final decision record before payment",
+        "body": [
+          "Before submitting the parcel, review destination accuracy, item eligibility, packaging, chargeable-weight rules, included costs, stated exclusions and any chosen coverage. Save the current route name and the quote date privately with your parcel record. If a charge or restriction remains unclear, clarify it before paying. A comparison should make unresolved questions visible, not hide them behind a single 'best value' score.",
+          "For a useful public case study, publish only redacted evidence and clearly identify the observation date, parcel inputs and limitations. Do not invent a shipped order or reuse another buyer's experience as your own. Compare the eventual invoice with the estimate after shipment when you have real evidence. Until then, describe the result as a planning comparison and use the [fees guide](/articles/sugargoo-fees-cost-breakdown-2026) to keep the wider purchase budget separate."
+        ]
+      },
+      {
+        "heading": "Save a comparison sheet with one row per scenario",
+        "body": [
+          "Use one row per route and packing scenario, with columns for quote date, destination scope, packed weight, dimensions, goods classification, chargeable-weight rule, displayed amount, exclusions and unanswered questions. Keep hypothetical calculations in a separate example block rather than mixing them with real quotes. If two offers use different assumptions, reconcile the inputs before ranking them by price. Preserve the final selected scenario and the reason for choosing it. The record should make it possible to explain a later difference between estimate and invoice without inventing a rate history or claiming that an untested route is always cheapest."
+        ]
+      }
+    ],
+    "references": [
+      {
+        "label": "Official shipping calculator guide",
+        "url": "https://blog.sugargoo.com/sugargoo-freight-calculator/"
+      },
+      {
+        "label": "US Customs: internet purchases",
+        "url": "https://www.cbp.gov/trade/basic-import-export/internet-purchases"
+      }
+    ]
+  }
+]

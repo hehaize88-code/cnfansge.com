@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { headers } from "next/headers";
 import "./globals.css";
 
 export const metadata: Metadata = {
@@ -17,6 +18,9 @@ export const metadata: Metadata = {
   twitter: { card: "summary_large_image", title: "Sugargoo Spreadsheet 2026", description: "Find first. Check twice. Ship smarter.", images: ["/og.png"] },
 };
 
-export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
-  return <html lang="en"><body>{children}</body></html>;
+export default async function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
+  const requestHeaders = await headers();
+  const candidate = requestHeaders.get("x-site-language") ?? "en";
+  const lang = ["de", "es", "fr", "it"].includes(candidate) ? candidate : "en";
+  return <html lang={lang}><body>{children}</body></html>;
 }

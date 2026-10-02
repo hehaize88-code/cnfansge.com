@@ -3,11 +3,11 @@ import { SitePage } from "./site-page";
 import { SITE_ORIGIN, copy, languages, localizedPath } from "./site-data";
 
 export const metadata: Metadata = {
-  title: "Sugargoo Spreadsheet 2026 | Finds, QC Photos & Shipping Guide",
+  title: "Sugargoo Spreadsheet: Finds & QC Photos",
   description: "Independent Sugargoo spreadsheet with searchable product routes, indicative USD prices, QC photo checklists, shipping weight tools and long-form buyer guides.",
   alternates: {
-    canonical: SITE_ORIGIN,
-    languages: { ...Object.fromEntries(languages.map((lang) => [lang, `${SITE_ORIGIN}${localizedPath(lang)}`])), "x-default": SITE_ORIGIN },
+    canonical: `${SITE_ORIGIN}/`,
+    languages: { ...Object.fromEntries(languages.map((lang) => [lang, `${SITE_ORIGIN}${localizedPath(lang)}`])), "x-default": `${SITE_ORIGIN}/` },
   },
 };
 
@@ -30,6 +30,7 @@ export default function Home() {
         "@type": "Organization",
         name: "Sugar Scout",
         url: SITE_ORIGIN,
+        logo: `${SITE_ORIGIN}/sugargoo-logo.png`,
         description: "Independent Sugargoo product-discovery and buyer-education resource.",
       },
       {

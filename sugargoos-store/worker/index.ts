@@ -47,7 +47,9 @@ const worker = {
       }, allowedWidths);
     }
 
-    return handler.fetch(request, env, ctx);
+    const headers = new Headers(request.headers);
+    headers.set("x-site-language", url.pathname.match(/^\/(de|es|fr|it)(?:\/|$)/)?.[1] ?? "en");
+    return handler.fetch(new Request(request, { headers }), env, ctx);
   },
 };
 

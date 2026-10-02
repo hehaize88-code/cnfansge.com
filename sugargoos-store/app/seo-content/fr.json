@@ -1,0 +1,478 @@
+[
+  {
+    "slug": "sugargoo-spreadsheet-links-not-working",
+    "title": "Liens Sugargoo : vérifier ID, stock et variantes",
+    "dek": "Distinguez le lien du répertoire, l’annonce vendeur, la variante et le résultat d’importation avant de remplacer une entrée du spreadsheet.",
+    "primaryKeyword": "sugargoo link not working",
+    "label": "Vérification des liens",
+    "table": {
+      "title": "Un échec de lien demande un diagnostic précis",
+      "headers": [
+        "Observation",
+        "Vérification suivante",
+        "Ce que cela ne prouve pas"
+      ],
+      "rows": [
+        [
+          "La page vendeur ne s’ouvre pas",
+          "Adresse originale et accès",
+          "Que le produit est épuisé"
+        ],
+        [
+          "L’annonce s’ouvre, l’importation échoue",
+          "Format et possibilités manuelles",
+          "Que l’annonce est prise en charge"
+        ],
+        [
+          "La page affiche d’autres détails",
+          "ID, vendeur et variante exacte",
+          "Que l’ancienne ligne reste correcte"
+        ],
+        [
+          "Une seule option manque",
+          "Stock de cette variante",
+          "Que toutes les options sont indisponibles"
+        ]
+      ]
+    },
+    "sections": [
+      {
+        "heading": "Commencer par l’étape qui a échoué",
+        "body": [
+          "Un lien Sugargoo qui ne fonctionne pas peut correspondre à plusieurs situations. Le bouton du spreadsheet peut mener à une ancienne adresse, la page vendeur peut nécessiter l’application du marketplace ou l’agent peut ne pas importer une annonce toujours existante. Le produit peut aussi s’afficher alors que votre taille manque. Ces échecs demandent des preuves différentes. Notez d’abord l’écran où le parcours s’arrête et le message réellement affiché.",
+          "Conservez la ligne originale : nom, marketplace, vendeur, identifiant produit, option choisie, prix indicatif et date de vérification. Une capture facilite la comparaison sans remplacer l’adresse complète. Ce petit dossier évite qu’une nouvelle recherche substitue discrètement un article illustré par une photo semblable. Le [guide du spreadsheet](/articles/sugargoo-spreadsheet-guide-2026) explique comment constituer la première sélection."
+        ]
+      },
+      {
+        "heading": "Séparer le lien du répertoire du lien vendeur",
+        "body": [
+          "Un spreadsheet peut ouvrir un répertoire de produits plutôt que Taobao, Weidian ou un autre marketplace directement. Le répertoire utilise son propre numéro interne, tandis que l’annonce vendeur peut avoir un identifiant différent. Enregistrez les deux quand ils existent et précisez leur origine. Une catégorie, des résultats de recherche ou une page d’accueil ne désignent pas automatiquement le produit choisi.",
+          "Ouvrez les détails et cherchez le lien vendeur original lorsqu’il est fourni. Comparez titre, modèle et photographies avec le dossier du répertoire. L’absence de source ou d’options claires constitue une lacune documentaire. Vous pouvez conserver l’entrée pour recherche sans la considérer prête à commander. Un bouton fonctionnel prouve seulement qu’une page est accessible, pas que les informations d’achat sont complètes."
+        ]
+      },
+      {
+        "heading": "Copier soigneusement l’adresse complète",
+        "body": [
+          "Les contenus partagés peuvent mélanger description, invitation à ouvrir une application, adresse raccourcie et paramètres de suivi. Copiez l’adresse du produit à partir de la fonction normale de partage ou du navigateur. Vérifiez espaces accidentels, ponctuation ajoutée et fin tronquée. Préservez l’identifiant produit : supprimer tous les paramètres sans distinction peut effacer précisément celui qui désigne l’annonce.",
+          "Les guides officiels Sugargoo sur les liens et les commandes DIY distinguent importation automatique et saisie manuelle. Consultez l’interface actuelle pour identifier le parcours disponible ; une solution prévue pour un marketplace n’est pas universelle. Ne transmettez jamais mot de passe, code de vérification ou cookie de connexion pour réparer un lien. Une demande d’achat nécessite les détails du produit, pas l’accès à votre compte personnel."
+        ]
+      },
+      {
+        "heading": "Contrôler la source indépendamment de l’importation",
+        "body": [
+          "Essayez l’annonce originale par la méthode d’accès normale du marketplace. Notez si vous obtenez le produit, une demande de connexion, un avis de retrait ou une destination sans rapport. Une connexion exigée ne renseigne pas sur le stock. Un chargement temporairement impossible ne prouve pas non plus une suppression. Si l’accès reste impossible, indiquez « non vérifié » plutôt que d’inventer la cause.",
+          "Si la source s’ouvre mais pas l’importation, conservez ces deux observations. Le format, l’analyse automatique ou la prise en charge actuelle peuvent intervenir, mais la cause exacte n’est pas encore établie. Consultez les indications officielles ou demandez si cette annonce précise peut être traitée. Payer plusieurs fois par un autre parcours n’est pas un diagnostic. Clarifiez ce qui sera acheté avant d’autoriser la commande."
+        ]
+      },
+      {
+        "heading": "Vérifier l’identité malgré un identifiant identique",
+        "body": [
+          "Un identifiant stable est utile sans constituer une description permanente de tout ce qui se vend à cette adresse. Images, options et contenu peuvent changer. Comparez vendeur, modèle, libellé de variante, base du prix et photos avec la version enregistrée. Un ID identique associé à un autre produit doit être marqué comme modification, pas comme validation de l’ancienne entrée.",
+          "Prenons une ligne hypothétique enregistrée pour un hoodie noir en M. La page affiche ensuite un sweatshirt gris par défaut, mais conserve une vignette noire parmi les options. Il faut examiner ces options et vérifier quel article correspond au prix visible. Ni l’image par défaut ni l’ancienne ligne ne lèvent l’ambiguïté. Enregistrez le libellé et la vignette de l’option correspondante avant de poursuivre."
+        ]
+      },
+      {
+        "heading": "Observer prix et disponibilité au niveau de la variante",
+        "body": [
+          "Le prix principal peut être une fourchette, un minimum ou le montant d’un accessoire plutôt que du vêtement photographié. Sélectionnez l’option voulue avant de comparer. Notez taille, couleur, quantité et frais domestiques affichés dans la commande actuelle. Une option impossible à sélectionner doit être indiquée comme indisponible sans déclarer toute l’annonce épuisée.",
+          "Les prix indicatifs en dollars facilitent la navigation, mais un changement de conversion n’est pas un changement de prix vendeur. Comparez d’abord le montant dans la monnaie d’origine et gardez la date. Ne remplacez pas silencieusement la valeur d’hier par celle d’aujourd’hui. Une courte note explique une différence avec la commande finale sans présenter aucun montant comme devis garanti."
+        ]
+      },
+      {
+        "heading": "Utiliser la commande manuelle avec un dossier explicite",
+        "body": [
+          "Une commande manuelle peut aider si la plateforme la propose actuellement pour l’annonce non importable. Elle ne confirme automatiquement ni admissibilité, ni fiabilité, ni stock. Fournissez adresse complète, variante exacte, quantité et image correspondant à l’option. Vérifiez le montant et les consignes de traitement en vigueur avant paiement.",
+          "Faites préciser tout champ ambigu. Un code ressemblant à une taille peut désigner un modèle. La mention « comme sur la photo » reste incertaine si plusieurs versions y figurent. Conservez l’acceptation ou la clarification de l’agent avec le dossier. Si le produit ne peut pas être traité, enregistrez cette décision et recherchez une alternative sans tenter de contourner une restriction."
+        ]
+      },
+      {
+        "heading": "Créer une nouvelle ligne pour un remplacement",
+        "body": [
+          "Lorsqu’un lien est réellement retiré ou inadapté, préservez son identifiant et son statut dans l’historique. Le remplacement doit avoir sa propre source, ses coordonnées vendeur, sa variante et sa date de contrôle. Les anciennes photos QC ne prouvent rien sur le nouvel article. Une apparence similaire n’établit ni fabrication, ni taille, ni provenance identiques.",
+          "Comparez les alternatives avec les mêmes champs : identité de la source, variante nécessaire, mesures visibles, prix natif, livraison domestique et questions ouvertes. Une option un peu plus chère peut être mieux documentée ; cela évalue les preuves, pas une qualité supérieure garantie. La décision finale doit rester compréhensible pour l’acheteur au lieu de disparaître dans une cellule remplacée."
+        ]
+      },
+      {
+        "heading": "Boucler le contrôle à l’arrivée des photos d’entrepôt",
+        "body": [
+          "Une importation réussie ne termine que la phase des informations de commande. À l’arrivée, rapprochez le dossier de l’article réellement reçu. Contrôlez couleur, étiquette de taille, modèle et quantité avant les petits détails esthétiques. Le [guide des photos QC](/articles/how-to-read-sugargoo-qc-photos) distingue ces vérifications des conclusions qu’une image ne peut pas justifier.",
+          "Conservez ensemble la capture de l’annonce et les photos de votre propre commande. Décrivez précisément tout écart et utilisez rapidement la procédure après-vente actuelle. Ne présentez pas les photos d’un autre acheteur comme preuve de votre article. Un dossier utile aboutit à une décision traçable : vérifié pour examen, indisponible, modifié, non résolu ou remplacé. C’est plus utile qu’un badge « lien valide » sans date ni explication."
+        ]
+      },
+      {
+        "heading": "Tenir un journal de vérification reproductible",
+        "body": [
+          "Quatre champs suffisent : date, adresse exacte, résultat visible et prochaine action. Écrivez « taille M indisponible sur la page contrôlée » plutôt que « mauvais vendeur », ou « connexion nécessaire ; stock non vérifié » plutôt que « épuisé ». Excluez les données privées du compte. Un autre lecteur doit pouvoir répéter le contrôle sans deviner votre intention. Ajoutez une nouvelle observation datée si le résultat change. Le spreadsheet reste ainsi utile sans affirmer une disponibilité, une qualité ou une cause de panne non démontrée."
+        ]
+      }
+    ],
+    "references": [
+      {
+        "label": "Guide officiel des liens",
+        "url": "https://blog.sugargoo.com/how-to-copy-taobao-links-properly/"
+      },
+      {
+        "label": "Guide officiel QC",
+        "url": "https://blog.sugargoo.com/sugargoo-qc-service-quality-check-guide/"
+      }
+    ]
+  },
+  {
+    "slug": "sugargoo-shoe-size-guide-measurements",
+    "title": "Pointures Sugargoo : tableaux, mesures et photos QC",
+    "dek": "Reliez le tableau précis du vendeur, vos mesures et des photos d’entrepôt comparables sans supposer une conversion universelle des pointures.",
+    "primaryKeyword": "sugargoo shoe size guide",
+    "label": "Dossiers chaussures",
+    "image": "/products/air-jordan-4.webp",
+    "imageCaption": "Image existante du catalogue, utilisée comme contexte. Ce n’est ni une photo de mesure ni la preuve d’une commande précise.",
+    "table": {
+      "title": "Séparer les différentes longueurs",
+      "headers": [
+        "Champ",
+        "Donnée à conserver",
+        "Règle de comparaison"
+      ],
+      "rows": [
+        [
+          "Longueur du pied",
+          "Talon à l’orteil le plus long",
+          "Suivre la méthode précisée par le vendeur"
+        ],
+        [
+          "Longueur de semelle intérieure",
+          "Insert amovible, si disponible",
+          "Pas identique à l’espace intérieur utile"
+        ],
+        [
+          "Longueur de semelle extérieure",
+          "Mesure extérieure",
+          "Ne pas convertir directement en longueur de pied"
+        ],
+        [
+          "Étiquette de pointure",
+          "Système, modèle et variante",
+          "L’étiquette ne prouve pas l’ajustement"
+        ]
+      ]
+    },
+    "sections": [
+      {
+        "heading": "Commencer par l’annonce exacte",
+        "body": [
+          "Un guide de pointures Sugargoo est surtout une méthode pour vérifier les données d’un vendeur précis. Un tableau unique de conversion US-EU ne détermine pas l’ajustement de tous les modèles. La même pointure peut figurer sur des chaussures dont l’avant, la largeur, la doublure et la construction intérieure diffèrent. Commencez par le lien et la variante plutôt que par votre numéro habituel choisi sans lire l’annonce.",
+          "Enregistrez le tableau vendeur avec ses titres et notes de mesure. Précisez s’il décrit le pied, l’intérieur, la semelle intérieure ou une autre longueur. Ces notions ne sont pas interchangeables. Une simple pointure sans définition de mesure laisse une incertitude à rendre visible. N’ajoutez pas une valeur précise en centimètres provenant du tableau d’un vendeur sans rapport."
+        ]
+      },
+      {
+        "heading": "Mesurer les deux pieds de manière répétable",
+        "body": [
+          "Pour votre référence personnelle, mesurez les deux pieds sur une surface plane avec la même méthode. Tenez-vous naturellement, portez les chaussettes prévues et marquez talon et orteil le plus long sans replier les orteils. Recommencez si le contour ou la règle n’est pas clair. Notez unités et méthode avec le résultat pour savoir ce que vous comparerez ensuite.",
+          "La mesure du pied est une donnée d’entrée, pas une recommandation automatique. Comparez-la à l’explication du vendeur, à l’usage et à vos préférences. N’ajoutez pas une marge fixe à tous les modèles : le tableau peut déjà intégrer son propre conseil. Pour des besoins spécialisés ou des problèmes persistants d’ajustement, un spreadsheet et des photos ne remplacent pas un accompagnement professionnel adapté."
+        ]
+      },
+      {
+        "heading": "Distinguer pied, semelle intérieure et extérieure",
+        "body": [
+          "La longueur du pied décrit votre pied. Celle de la semelle intérieure concerne l’insert lorsqu’il peut être retiré et mesuré sans dommage. La semelle extérieure décrit le dessous externe. Elle peut dépasser l’espace utilisable ; un insert courbé ou rembourré peut ne pas rester plat. Une donnée nommée seulement « longueur » est incomplète tant que l’objet et la méthode sont inconnus.",
+          "Une semelle extérieure hypothétique de 29 cm ne prouve donc pas qu’un pied de 29 cm conviendra. Il faut des informations sur l’intérieur et la méthode du vendeur. Gardez des colonnes séparées au lieu d’un seul champ « longueur de chaussure ». Une feuille bien présentée n’occultera ainsi pas une comparaison entre deux quantités fondamentalement différentes."
+        ]
+      },
+      {
+        "heading": "Lire ensemble système de pointure et variante",
+        "body": [
+          "Vérifiez si l’annonce mentionne explicitement un système homme, femme, enfant ou autre. Un nombre seul ne résout pas le système, et les noms de modèle peuvent être abrégés. Conservez l’option complète et sa vignette. Si plusieurs couleurs ou versions partagent une annonce, assurez-vous que le tableau s’applique réellement à celle que vous voulez commander.",
+          "Relisez l’écran de commande importé avant paiement. Si l’option diffère du texte vendeur, faites préciser la correspondance plutôt que de deviner. La note de commande doit identifier système et option, pas seulement « ma pointure habituelle ». La [checklist de l’annonce](/articles/sugargoo-spreadsheet-guide-2026) aide à conserver ID et preuves de variante avec vos notes de taille."
+        ]
+      },
+      {
+        "heading": "Employer une paire connue comme référence",
+        "body": [
+          "Une paire qui vous va peut servir de référence physique si sa construction et son usage sont comparables. Notez ce qui convient ou gêne : place des orteils, mouvement du talon, largeur ou pression du dessus. Si vous mesurez une semelle accessible, décrivez sa position. Cette référence apporte du contexte sans établir qu’un autre modèle procurera le même ajustement.",
+          "Ne soustrayez pas deux étiquettes de pointure pour appliquer automatiquement la différence entre marques ou vendeurs. Une chaussure de course, un modèle en cuir rigide et une basket rembourrée utilisent différemment leur intérieur. Le rapprochement est plus solide lorsque type de mesure et méthode coïncident, moins solide entre longueur extérieure et longueur de pied recommandée. Conservez cette distinction."
+        ]
+      },
+      {
+        "heading": "Demander une photo répondant à une question précise",
+        "body": [
+          "Si les photos de mesure sont disponibles, identifiez commande, partie à mesurer, début, fin et unités visibles. Une demande utile peut viser un insert amovible posé à plat avec règle complète et deux extrémités visibles, si son retrait est sûr et autorisé. Ne demandez pas de décoller de force un composant pour obtenir une valeur.",
+          "Vérifiez disponibilité et tarif actuels avant un travail supplémentaire ; ce guide ne promet pas que toute mesure est incluse. Si l’insert n’est pas amovible, demandez une alternative réalisable et consignez ses limites. Une règle contre l’extérieur répond à une autre question qu’une mesure interne. Une formulation précise évite de payer une photo qui ne résout pas votre doute."
+        ]
+      },
+      {
+        "heading": "Contrôler la photo avant de croire le chiffre",
+        "body": [
+          "Vérifiez le bon article et le départ de la règle au point convenu. Toute l’échelle pertinente doit être lisible. Une caméra inclinée, un ruban courbé, un talon relevé ou une extrémité cachée peuvent rendre la mesure ambiguë. N’inférez pas des millimètres dans un agrandissement flou. Demandez une clarification si l’image ne suffit pas à la décision.",
+          "Comparez les deux chaussures si vous cherchez une différence dans la paire. Notez le côté mesuré et l’identité des méthodes. De petits écarts peuvent venir du placement plutôt que de la fabrication : recherchez des preuves répétables avant de conclure. Le [guide QC](/articles/how-to-read-sugargoo-qc-photos) ajoute les contrôles d’identité et d’état à joindre au dossier de pointure."
+        ]
+      },
+      {
+        "heading": "Inclure largeur, forme et utilisation",
+        "body": [
+          "La longueur ne suffit pas à décrire l’ajustement. Forme de l’avant, souplesse, rembourrage et fermeture peuvent changer le ressenti malgré des longueurs proches. Les photos montrent parfois des écarts évidents de forme sans reproduire marche, pression ou confort. Écrivez quelles questions elles résolvent et lesquelles restent ouvertes, sans transformer une ressemblance en garantie.",
+          "Considérez les avis communautaires comme des récits sur d’autres pieds et commandes. Ils sont plus utiles s’ils précisent modèle, variante et méthode identiques, mais restent anecdotiques. Ne recopiez pas une recommandation de pointure dans toutes les lignes. Si un détail essentiel manque, décidez avant l’expédition internationale si cette incertitude est acceptable."
+        ]
+      },
+      {
+        "heading": "Documenter la décision avant expédition",
+        "body": [
+          "Le dossier final doit relier tableau vendeur, option sélectionnée, étiquette, mesures disponibles et décision. Une autre taille ou un autre modèle reçu constitue un écart à documenter séparément d’une préférence personnelle. Utilisez la procédure après-vente actuelle tant qu’une action reste possible. Le temps de stockage n’est pas une raison de différer l’examen du produit.",
+          "Après livraison, comparez l’ajustement réel à vos hypothèses écrites. Ajoutez modèle et date à vos références personnelles au lieu de publier une conversion universelle issue d’un seul achat. Retournez au [spreadsheet](/spreadsheet) avec une définition plus claire des preuves nécessaires. Un dossier fiable réduit les suppositions évitables tout en reconnaissant les limites des mesures à distance."
+        ]
+      },
+      {
+        "heading": "Construire une ligne compacte de preuves",
+        "body": [
+          "Conservez ID, modèle et option exacts, type de mesure du tableau, référence personnelle du pied, mesure d’entrepôt, incertitude et date de décision. Joignez une photo seulement si vous savez ce qu’elle représente. Image vendeur, référence QC publique et photo de votre commande demandent des libellés différents. Laissez un champ essentiel vide plutôt que d’inventer une conversion. Cela permet de corriger une observation du tableau sans modifier votre mesure personnelle ni laisser croire qu’une ancienne photo QC concerne une commande plus récente."
+        ]
+      }
+    ],
+    "references": [
+      {
+        "label": "Guide officiel QC",
+        "url": "https://blog.sugargoo.com/sugargoo-qc-service-quality-check-guide/"
+      },
+      {
+        "label": "Guide officiel des mesures",
+        "url": "https://blog.sugargoo.com/taobao-agent-quality-check-photos-videos-measurements/"
+      }
+    ]
+  },
+  {
+    "slug": "sugargoo-hoodie-sizing-measurements",
+    "title": "Tailles de hoodies Sugargoo : poitrine, longueur et QC",
+    "dek": "Comparez à un vêtement connu, distinguez largeur à plat et tour de poitrine et demandez des photos avec des points de mesure définis.",
+    "primaryKeyword": "sugargoo hoodie sizing",
+    "label": "Dossiers vêtements",
+    "image": "/products/carhartt-hoodie.webp",
+    "imageCaption": "Image existante du catalogue. Elle ne vérifie ni taille, ni matière, ni ajustement.",
+    "table": {
+      "title": "Comparaison hypothétique de vêtements à plat",
+      "headers": [
+        "Mesure",
+        "Référence / candidat",
+        "Contexte"
+      ],
+      "rows": [
+        [
+          "Largeur poitrine",
+          "58 cm / 61 cm",
+          "3 cm de plus à plat"
+        ],
+        [
+          "Longueur du corps",
+          "69 cm / 66 cm",
+          "3 cm de moins, mêmes points"
+        ],
+        [
+          "Largeur épaules",
+          "54 cm / 58 cm",
+          "Vérifier la construction"
+        ],
+        [
+          "Longueur de manche",
+          "61 cm / 59 cm",
+          "Comparer le point de départ"
+        ]
+      ]
+    },
+    "sections": [
+      {
+        "heading": "Traduire l’ajustement souhaité en mesures",
+        "body": [
+          "Choisir la taille d’un hoodie Sugargoo commence par le résultat recherché, pas par une étiquette M ou oversized. Un modèle peut être large à la poitrine et court au corps ; un autre, long avec des manches étroites. Décrivez concrètement votre besoin : place pour un t-shirt, position du bas, portée de manche ou forme d’épaule appréciée.",
+          "Choisissez un hoodie personnel de construction comparable. Posez-le à plat sans le tendre et notez la méthode. Cette référence est plus utile que supposer que chaque L vendeur correspond à votre L habituel. Elle reste un rapprochement, pas une garantie. Matière, doublure et patron peuvent modifier le ressenti malgré des dimensions proches."
+        ]
+      },
+      {
+        "heading": "Identifier si le tableau mesure le corps ou le vêtement",
+        "body": [
+          "Le tableau peut décrire des mensurations corporelles conseillées ou celles du vêtement fini. Lisez titres et notes avant de comparer. Un tour de poitrine corporel ne se compare pas directement à une largeur de vêtement à plat. En cas d’ambiguïté, demandez la définition ou marquez l’incertitude. Ne choisissez pas l’interprétation qui rend votre taille préférée apparemment correcte.",
+          "Les conseils officiels Sugargoo privilégient les mesures aux noms de tailles. Gardez le tableau original et la ligne choisie, pas seulement un chiffre. Notez unités, tolérance déclarée et différences éventuelles entre versions. Le tableau d’un hoodie zippé peut ne pas décrire le modèle fermé proposé ailleurs dans la même annonce."
+        ]
+      },
+      {
+        "heading": "Séparer largeur à plat et circonférence",
+        "body": [
+          "La largeur de poitrine se mesure sur le vêtement posé à plat, à un endroit défini, souvent près des aisselles. La circonférence fait le tour du corps ou du vêtement. La définition exacte est déterminante. Doubler une largeur bien définie peut expliquer l’échelle, sans produire une recommandation corporelle précise : forme, élasticité et aisance voulue restent importantes.",
+          "Dans l’exemple hypothétique, la référence fait 58 cm et le candidat 61 cm selon la même méthode. La différence à plat est de 3 cm. Elle ne doit pas être présentée comme seulement 3 cm supplémentaires de circonférence. Gardez la valeur à plat et expliquez le rapprochement ainsi, sans inventer des mensurations recommandées pour tous les acheteurs."
+        ]
+      },
+      {
+        "heading": "Définir les extrémités de la longueur du corps",
+        "body": [
+          "La longueur peut commencer au point haut d’épaule, à la couture arrière du col ou à une autre marque. Inclure la capuche donne encore un autre résultat. Conservez un schéma ou une description claire de la méthode vendeur. Mesurez votre référence entre les mêmes points lorsque c’est possible, au lieu de considérer toutes les colonnes « longueur » comme équivalentes.",
+          "Un candidat plus large et plus court peut créer une silhouette plus carrée, mais les chiffres ne prouvent pas son tombé. Dans l’exemple, 66 cm représentent 3 cm de moins que la référence à 69 cm. Cela n’est utile que parce que les extrémités coïncident. Sinon, notez et clarifiez la différence de méthode avant de conclure à une mauvaise taille."
+        ]
+      },
+      {
+        "heading": "Lire épaules et manches ensemble",
+        "body": [
+          "La construction d’épaule change l’interprétation de la manche. Une épaule tombante déplace sa couture vers l’extérieur ; le raglan ne présente pas les mêmes coutures qu’une manche montée classique. Une manche mesurée plus courte peut donc accompagner une portée totale plus longue. Examinez la construction de l’annonce plutôt qu’un chiffre isolé.",
+          "Demandez si la manche se mesure depuis l’épaule, le cou ou un autre point. Procédez de même sur votre référence et notez le traitement du poignet. N’étirez pas les côtes pour obtenir une valeur souhaitée. Si le vendeur donne une mesure combinée jusqu’au poignet, gardez-la séparée. Une formule mêlant des méthodes incompatibles crée une fausse certitude à partir de chiffres pourtant exacts."
+        ]
+      },
+      {
+        "heading": "Séparer les incertitudes de matière et de construction",
+        "body": [
+          "Une photo peut montrer intérieur gratté, bord-côte, fermeture ou doublure sans établir composition précise, grammage ni rétrécissement futur. Si ces propriétés sont annoncées, attribuez-les au vendeur et conservez la source. Sinon, laissez-les inconnues. Une apparence épaisse ne prouve ni un poids de tissu ni un niveau de chaleur particulier.",
+          "Ne promettez pas qu’un vêtement rétrécira à la bonne taille ou s’étirera pour corriger une coupe inadaptée. Entretien et comportement réel de la matière comptent et peuvent être inconnus avant réception. Planifiez l’ajustement avec les mesures documentables aujourd’hui. Douceur, confort et durabilité restent distincts des contrôles qu’une photo d’entrepôt peut raisonnablement soutenir."
+        ]
+      },
+      {
+        "heading": "Rendre la demande de mesure reproductible",
+        "body": [
+          "Si des photos supplémentaires sont proposées, identifiez la commande et demandez une vue claire par mesure. Précisez vêtement à plat sans tension, extrémités et ruban lisible. Décrivez la ligne de poitrine ; pour la longueur, indiquez l’exclusion éventuelle de la capuche et la couture de départ. Vérifiez disponibilité et coût du service avant demande.",
+          "« Mesurer la taille » laisse trop d’interprétation. Décrivez plutôt l’incertitude exacte, par exemple la correspondance de la largeur de poitrine avec le tableau conservé. Demandez que toute la zone utile soit visible pour contrôler le placement du ruban. Évitez une procédure dommageable ou impraticable simplement pour obtenir un chiffre d’apparence plus précise."
+        ]
+      },
+      {
+        "heading": "Comparer la photo à la variante choisie",
+        "body": [
+          "Confirmez d’abord hoodie, couleur et étiquette de taille. Vérifiez ensuite la méthode et la visibilité des deux extrémités. Un bas replié, une surface irrégulière ou un poignet tendu peut modifier le résultat apparent. Si la photo est ambiguë, demandez une clarification plutôt que d’annoncer un défaut confirmé à partir d’une lecture incertaine.",
+          "Comparez l’écart à la tolérance réellement annoncée par le vendeur lorsqu’elle existe. N’inventez pas une tolérance universelle. Distinguez erreur d’étiquette, écart de mesure et préférence personnelle. Le [guide QC](/articles/how-to-read-sugargoo-qc-photos) organise les preuves ; le [guide des liens](/articles/sugargoo-spreadsheet-links-not-working) vérifie que l’annonce décrit encore la version commandée."
+        ]
+      },
+      {
+        "heading": "Enregistrer la décision dans le dossier produit",
+        "body": [
+          "Avant expédition internationale, consignez référence personnelle, version du tableau, option, valeurs et questions ouvertes. Si les preuves montrent un autre article ou une autre taille commandée, utilisez rapidement l’après-vente avec captures et photos. Si les mesures correspondent mais que le style ne convient pas, décrivez honnêtement cette différence. Un dossier clair facilite l’explication de votre choix.",
+          "Après réception, ajoutez vos véritables observations de coupe au même dossier. Modèle et date empêchent de transformer une commande en règle permanente. Datez prix et mesures plutôt qu’un badge générique « taille normalement ». Revenez aux [sélections de produits](/finds) avec des critères plus clairs : mesures comparables, variante identifiée et preuves répondant à votre question de coupe."
+        ]
+      },
+      {
+        "heading": "Conserver la méthode avec les valeurs",
+        "body": [
+          "Une ligne réutilisable comprend annonce, option, date du tableau, définition corps ou vêtement, unités et points de mesure. Placez référence et candidat côte à côte, puis ajoutez l’observation d’entrepôt disponible. Séparez l’affirmation vendeur du résultat mesuré. Une valeur illisible reste non résolue. Vous pourrez ainsi réexaminer l’article sans deviner l’origine d’un chiffre isolé. Une recommandation recopiée conservera aussi le contexte pratique qui la rendait utile à un acheteur précis."
+        ]
+      }
+    ],
+    "references": [
+      {
+        "label": "Guide officiel QC",
+        "url": "https://blog.sugargoo.com/sugargoo-qc-service-quality-check-guide/"
+      },
+      {
+        "label": "Guide officiel des mesures",
+        "url": "https://blog.sugargoo.com/taobao-agent-quality-check-photos-videos-measurements/"
+      }
+    ]
+  },
+  {
+    "slug": "sugargoo-shipping-to-usa-quote-comparison",
+    "title": "Livraison Sugargoo aux États-Unis : comparer les devis",
+    "dek": "Comparez les estimations pour une même destination, un même colis emballé et les mêmes marchandises, en notant exclusions et frais ouverts.",
+    "primaryKeyword": "sugargoo shipping to USA",
+    "label": "Dossiers de devis",
+    "table": {
+      "title": "Illustration uniquement : effet des dimensions",
+      "headers": [
+        "Entrée",
+        "Valeur hypothétique",
+        "Utilisation"
+      ],
+      "rows": [
+        [
+          "Poids réel",
+          "3,0 kg",
+          "Poids du colis emballé"
+        ],
+        [
+          "Dimensions extérieures",
+          "40 × 30 × 25 cm",
+          "Volume : 30 000 cm³"
+        ],
+        [
+          "Diviseur d’exemple A",
+          "6 000 → 5,0 kg",
+          "Pas une règle de ligne confirmée"
+        ],
+        [
+          "Diviseur d’exemple B",
+          "5 000 → 6,0 kg",
+          "Lire les conditions actuelles de chaque ligne"
+        ]
+      ]
+    },
+    "sections": [
+      {
+        "heading": "Comparer le même colis avant de choisir",
+        "body": [
+          "Un bon comparatif Sugargoo vers les États-Unis commence par une seule fiche de colis. Un prix bas pour un autre poids, une autre destination ou catégorie n’est pas une alternative équivalente. Enregistrez destination américaine, poids emballé, dimensions extérieures, caractéristiques des produits et date. Comparez ensuite les lignes réellement proposées pour ces paramètres.",
+          "Ce guide ne publie ni ligne la moins chère, ni promesse de livraison, ni tarif actuel. Cela nécessiterait des devis en direct pour votre colis. La méthode aide à les lire et à les conserver sans confondre estimation et facture finale. Le [guide d’expédition](/shipping) explique les poids ; les conditions actuelles se vérifient dans le service utilisé pour envoyer le colis."
+        ]
+      },
+      {
+        "heading": "Préciser le contexte complet de destination",
+        "body": [
+          "Choisissez le bon pays et fournissez État ou informations postales demandés par l’estimateur. Ne supposez pas que prix et admissibilité d’une capture pour une autre destination s’appliquent à la vôtre. Vérifiez exigences d’adresse, couverture et suppléments géographiques annoncés. Une ligne visible dans une estimation générale ne confirme pas l’acceptation de toutes les adresses.",
+          "Ne gardez dans le dossier de recherche que les détails nécessaires au comparatif. Un article public ou une feuille partagée ne doit pas exposer adresse complète, téléphone ou identifiants privés d’un client. L’État ou un contexte géographique large peut suffire à un exemple. Les coordonnées complètes restent dans le compte approprié et y sont contrôlées avant soumission."
+        ]
+      },
+      {
+        "heading": "Distinguer poids des articles et poids emballé",
+        "body": [
+          "La somme des poids produits peut différer du colis final : emballage extérieur, protection et préparation ajoutent ou retirent de la matière. Précisez si votre valeur vient du vendeur, des données d’entrepôt, d’une simulation ou d’un colis effectivement emballé. Ces sources présentent différents degrés de certitude. Une hypothèse ne doit pas être appelée poids d’expédition confirmé.",
+          "Avec et sans boîtes originales constituent deux scénarios d’emballage. Conservez dimensions et poids de chacun lorsqu’ils existent. Retirer des boîtes peut réduire le volume, mais aussi protection ou valeur de présentation souhaitée. Le choix dépend des produits et du risque accepté, pas de l’idée que moins d’emballage serait toujours préférable."
+        ]
+      },
+      {
+        "heading": "Lire les règles de poids facturable de chaque ligne",
+        "body": [
+          "Certains services emploient le poids réel, d’autres le comparent à un poids volumétrique selon leurs propres conditions. Diviseur, arrondis, minimums et limites doivent venir des informations de la ligne utilisée. N’érigez pas un diviseur d’exemple en règle universelle Sugargoo. L’[article détaillé sur les coûts](/articles/sugargoo-shipping-cost-guide-2026) explique pourquoi les dimensions comptent.",
+          "Le tableau est volontairement hypothétique. Un colis de 40 × 30 × 25 cm représente 30 000 cm³. Diviser par 6 000 donne 5 kg ; par 5 000, 6 kg. Avec un poids réel de 3 kg, une ligne facturant le plus élevé pourrait retenir le résultat volumétrique, selon ses règles. Ces calculs illustrent l’effet des hypothèses, pas des cotations actuelles."
+        ]
+      },
+      {
+        "heading": "Rattacher les caractéristiques des biens au devis",
+        "body": [
+          "Décrivez le contenu réel et les attributs demandés par le service. Batteries, liquides, aimants, fragilité ou dimensions particulières peuvent influer sur lignes et traitement. Utilisez classification et restrictions actuelles plutôt qu’une catégorie commode affichant un prix inférieur. Le comparatif n’est utile que si le colis est admissible sur la ligne concernée.",
+          "Si les informations sont incomplètes, clarifiez le détail pertinent avant de vous fier au devis. Une photographie peut ne pas montrer si une batterie est incluse. Demandez l’information nécessaire au classement et conservez la réponse avec le produit. Le fait qu’un vendeur accepte de vendre ne prouve pas qu’un transporteur international précis acceptera l’envoi."
+        ]
+      },
+      {
+        "heading": "Comparer clairement inclusions et exclusions",
+        "body": [
+          "Pour chaque ligne, notez fret affiché, suppléments annoncés, protection optionnelle, assurance et frais de destination indiqués dans les conditions actuelles. Séparez montants confirmés et estimés. Un prix attrayant est difficile à interpréter si les prestations incluses diffèrent. Gardez monnaie et contexte de conversion visibles.",
+          "Distinguez transport, prix des biens, livraison domestique et frais de paiement. Consultez également les indications américaines officielles actuelles et les conditions de ligne concernant d’éventuels droits, taxes ou frais de dédouanement. Aucun seuil, exemption ou taux n’est promis ici. CBP rappelle la responsabilité de l’importateur pour les droits applicables ; une mention commerciale ne remplace pas la vérification de qui paie et de ce qui est inclus."
+        ]
+      },
+      {
+        "heading": "Traiter les délais comme des informations datées",
+        "body": [
+          "Enregistrez date et formulation de l’estimation. Vérifiez la phase concernée : préparation d’entrepôt, prise en charge, transport international ou livraison après dédouanement peuvent être présentés différemment. Deux plages ne sont pas comparables si elles couvrent des étapes distinctes. Ne transformez pas une estimation en date garantie pour un événement ou une revente.",
+          "Après soumission, suivez votre colis dans son propre dossier. Avis et captures d’autres acheteurs suggèrent des questions, sans prédire votre envoi. Si le délai compte, comparez conditions actuelles et conséquences d’un retard autant que le prix. Lorsque ces conditions sont inconnues, notez la limite plutôt que de combler le vide avec une moyenne de colis sans rapport."
+        ]
+      },
+      {
+        "heading": "Actualiser après confirmation de l’emballage",
+        "body": [
+          "Si une simulation préalable ou une autre confirmation est proposée, demandez-vous si elle lève une incertitude importante. Un colis volumineux aux dimensions incertaines peut davantage en bénéficier qu’un envoi simple bien documenté. Vérifiez disponibilité, prix et mesures réellement fournies. Une simulation ne garantit pas automatiquement l’évaluation finale du transporteur.",
+          "Relancez le comparatif avec les nouvelles dimensions ou le nouveau poids. Conservez l’ancienne estimation datée et expliquez l’écart. Si retirer une boîte ou ajouter une protection change l’admissibilité, actualisez aussi ce champ. Le dossier doit relier décision d’emballage et hypothèses, pas simplement juxtaposer deux captures aux prix différents."
+        ]
+      },
+      {
+        "heading": "Enregistrer la décision avant paiement",
+        "body": [
+          "Avant soumission, vérifiez adresse, admissibilité des biens, emballage, poids facturable, coûts inclus, exclusions et couverture choisie. Gardez nom de ligne et date du devis dans le dossier privé. Clarifiez frais ou restrictions encore incertains avant de payer. Un comparatif expose les questions ouvertes au lieu de les masquer derrière une note globale de valeur.",
+          "Pour publier un cas utile, présentez uniquement des preuves expurgées avec date, paramètres et limites. N’inventez pas une commande expédiée et ne présentez pas l’expérience d’autrui comme personnelle. Comparez facture finale et estimation lorsque les preuves existent. Jusque-là, parlez de comparaison de planification et utilisez le [guide des frais](/articles/sugargoo-fees-cost-breakdown-2026) pour séparer le budget d’achat global."
+        ]
+      },
+      {
+        "heading": "Garder une ligne par scénario",
+        "body": [
+          "Créez une ligne par trajet et emballage : date, zone de destination, poids, dimensions, classement des biens, règle de facturation, montant, exclusions et questions. Les calculs hypothétiques restent dans un bloc d’exemple distinct des vrais devis. Réconciliez des hypothèses différentes avant de classer les offres par prix. Conservez scénario retenu et raison du choix. Ce dossier expliquera un écart ultérieur entre devis et facture sans inventer un historique tarifaire ni qualifier une ligne non testée de toujours moins chère."
+        ]
+      }
+    ],
+    "references": [
+      {
+        "label": "Guide officiel du calculateur de livraison",
+        "url": "https://blog.sugargoo.com/sugargoo-freight-calculator/"
+      },
+      {
+        "label": "Douanes américaines : achats en ligne",
+        "url": "https://www.cbp.gov/trade/basic-import-export/internet-purchases"
+      }
+    ]
+  }
+]

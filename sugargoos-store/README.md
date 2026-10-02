@@ -47,3 +47,14 @@ and static assets to `dist/client`.
 The production source uses `https://sugargoos.store` for canonical URLs,
 hreflang alternates, sitemap and robots. Unknown routes return a real 404.
 Catalog, search and conversion links point only to `https://cnfansge.com/`.
+# Article publishing policy
+
+`sugargoos.store` is manual-update-only from 2026-10-02. Scheduled content jobs
+must skip this directory and must not advance this site's content cursor. This
+restriction applies only to this site; leave other sites' schedules and cursors
+unchanged. Explicitly requested manual editing and deployment remain allowed.
+The machine-readable marker is `.seo/manual-updates-only.json`.
+
+The build regenerates the sitemap from the current route and article data. It
+does not generate, rewrite or publish new articles automatically. Validate
+content, localized routes, metadata and redirects with `npm test` before release.

@@ -54,13 +54,14 @@ export default async function RoutedPage({ params }: Props) {
             "@type": "Article",
             headline: article.title,
             description: article.dek,
-            datePublished: articleSlug === "build-reliable-sugargoo-spreadsheet-fields-dates-evidence" ? "2026-09-02" : "2026-09-01",
-            dateModified: articleSlug === "build-reliable-sugargoo-spreadsheet-fields-dates-evidence" ? "2026-09-02" : "2026-09-01",
+            datePublished: article.publishedIso ?? (articleSlug === "build-reliable-sugargoo-spreadsheet-fields-dates-evidence" ? "2026-09-02" : "2026-09-01"),
+            dateModified: article.modified ?? (article.publishedIso ?? (articleSlug === "build-reliable-sugargoo-spreadsheet-fields-dates-evidence" ? "2026-09-02" : "2026-09-01")),
+            image: `${SITE_ORIGIN}${article.image ?? "/og.png"}`,
             wordCount: article.sections.flatMap((section) => section.body).join(" ").trim().split(/\s+/).length,
             inLanguage: lang,
             mainEntityOfPage: `${SITE_ORIGIN}${localizedPath(lang, path)}`,
             author: { "@type": "Organization", name: "Sugar Scout" },
-            publisher: { "@type": "Organization", name: "Sugar Scout" },
+            publisher: { "@type": "Organization", name: "Sugar Scout", logo: { "@type": "ImageObject", url: `${SITE_ORIGIN}/sugargoo-logo.png` } },
           },
           {
             "@type": "BreadcrumbList",
@@ -80,5 +81,5 @@ export default async function RoutedPage({ params }: Props) {
           { "@type": "ListItem", position: 2, name: copy[lang].pageTitles[path] ?? path, item: `${SITE_ORIGIN}${localizedPath(lang, path)}` },
         ],
       };
-  return <><script dangerouslySetInnerHTML={{ __html: `document.documentElement.lang=${JSON.stringify(lang)}` }} /><script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} /><SitePage lang={lang} path={path} /></>;
+  return <><script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} /><SitePage lang={lang} path={path} /></>;
 }
