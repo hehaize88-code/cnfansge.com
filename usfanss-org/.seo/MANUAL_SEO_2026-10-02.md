@@ -41,3 +41,12 @@ No new product photographs added. Product IDs, prices, original images and all e
 - Cloudflare root redirect now targets the canonical absolute URL. Explicit Worker routes ensure advanced-mode handling; Worker preserves paths/query strings and true asset 404 status. HTML/sitemap/robots revalidate; immutable asset caching is preserved.
 - Local Worker checks passed for HTTP/www/root redirects, query preservation and 404 preservation. Domain-level redirects are not supported in Pages _redirects, so no invalid host rules were added.
 - Live deployment verification is recorded separately after publication. A source push alone is not evidence that the formal domain has deployed; existing edge-level HTTP/www behavior may require separate host configuration if the Worker is not reached.
+
+## Formal-domain verification
+
+- Main release commit: ac1e6b0a7a85e3bbe9f01ca6d751b391d5de517a. GitHub confirms all changed files are inside usfanss-org/.
+- Live crawler fetched all 30 new article URLs on https://usfanss.org/: HTTP 200, correct localized titles, matching HTML language, self-canonical, six language alternates and indexable robots on every page.
+- Live sitemap extraction confirmed 110 URLs. robots.txt and sitemap.xml return HTTP 200. A deliberately invalid path returns genuine HTTP 404. Existing QC article and spreadsheet return HTTP 200.
+- Browser verified article discovery, actual new content, catalog-reference links and switching EN to DE on the same new shoe article. Desktop layout inspected.
+- Known unresolved hosting issue: HTTP www still loops through repeated 301 responses; HTTPS www root redirects relatively to www/en, whose canonical points to apex. A cache-busting query shows new content on www but does not correct the redirect behavior. This is not counted as fixed. Source-level Worker/root rules passed locally, but a rule before that code or current hosting configuration still governs the public redirect. Do not advance historical C04 based on this release.
+- Final small follow-up adds the existing organization logo to author metadata and corrects reference-card copy so it does not imply that the textual references display images.

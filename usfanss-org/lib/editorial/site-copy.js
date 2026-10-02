@@ -7,7 +7,7 @@ export const siteCopy = {
  browse:'Browse the product reference catalog',
  browseText:'Saved catalog examples, not live stock. USD estimates use 6.72 CNY per USD; check the current listing, variant and checkout total before buying.',
  updated:'Editorial update · 2 Oct 2026', catalogVerified:'Saved catalog reference', snapshot:'CATALOG',
- relatedLabel:'Related guides', productTitle:'Examples from the existing catalog', productNote:'Reference prices only. Availability, variants and final costs must be checked on the linked listing. These are catalog images, not warehouse QC photos.',
+ relatedLabel:'Related guides', productTitle:'Examples from the existing catalog', productNote:'Reference prices only. Availability, variants and final costs must be checked on the linked listing. Product names identify listings; these examples are not tested recommendations.',
  publishedLabel:'Published', updatedLabel:'Updated',
  },
  de: {
@@ -18,7 +18,7 @@ export const siteCopy = {
  browse:'Produktbeispiele im Katalog vergleichen',
  browseText:'Gespeicherte Katalogbeispiele, keine Live-Bestände. USD-Schätzungen basieren auf 6,72 CNY pro USD. Prüfe vor dem Kauf das aktuelle Angebot, die Variante und den Gesamtpreis.',
  updated:'Redaktionell aktualisiert · 2. Okt. 2026', catalogVerified:'Gespeichertes Katalogbeispiel', snapshot:'KATALOG',
- relatedLabel:'Weiterführende Ratgeber', productTitle:'Beispiele aus dem bestehenden Katalog', productNote:'Nur Referenzpreise. Verfügbarkeit, Varianten und Endkosten müssen im verlinkten Angebot geprüft werden. Dies sind Katalogbilder, keine QC-Lagerfotos.',
+ relatedLabel:'Weiterführende Ratgeber', productTitle:'Beispiele aus dem bestehenden Katalog', productNote:'Nur Referenzpreise. Verfügbarkeit, Varianten und Endkosten müssen im verlinkten Angebot geprüft werden. Die Produktnamen bezeichnen Angebote; diese Beispiele sind keine getesteten Empfehlungen.',
  publishedLabel:'Veröffentlicht', updatedLabel:'Aktualisiert',
  },
  es: {
@@ -29,7 +29,7 @@ export const siteCopy = {
  browse:'Compara productos del catálogo de referencia',
  browseText:'Ejemplos guardados, sin inventario en tiempo real. Los valores en USD usan 6,72 CNY por USD. Comprueba la ficha actual, la variante y el importe final antes de comprar.',
  updated:'Actualización editorial · 2 oct. 2026', catalogVerified:'Referencia guardada del catálogo', snapshot:'CATÁLOGO',
- relatedLabel:'Guías relacionadas', productTitle:'Ejemplos del catálogo existente', productNote:'Solo precios de referencia. Comprueba disponibilidad, variantes y costes finales en la ficha enlazada. Son imágenes de catálogo, no fotos QC del almacén.',
+ relatedLabel:'Guías relacionadas', productTitle:'Ejemplos del catálogo existente', productNote:'Solo precios de referencia. Comprueba disponibilidad, variantes y costes finales en la ficha enlazada. Los nombres identifican fichas; estos ejemplos no son recomendaciones probadas.',
  publishedLabel:'Publicado', updatedLabel:'Actualizado',
  },
  fr: {
@@ -40,7 +40,7 @@ export const siteCopy = {
  browse:'Comparer les références du catalogue',
  browseText:'Exemples enregistrés, sans stock en temps réel. Les estimations en USD utilisent 6,72 CNY par USD. Vérifiez la fiche actuelle, la variante et le total avant l’achat.',
  updated:'Mise à jour éditoriale · 2 oct. 2026', catalogVerified:'Référence enregistrée du catalogue', snapshot:'CATALOGUE',
- relatedLabel:'Guides associés', productTitle:'Exemples du catalogue existant', productNote:'Prix indicatifs uniquement. Vérifiez disponibilité, variantes et coût final dans la fiche liée. Ces images proviennent du catalogue, pas du contrôle QC en entrepôt.',
+ relatedLabel:'Guides associés', productTitle:'Exemples du catalogue existant', productNote:'Prix indicatifs uniquement. Vérifiez disponibilité, variantes et coût final dans la fiche liée. Les noms identifient des fiches ; ces exemples ne sont pas des recommandations testées.',
  publishedLabel:'Publié', updatedLabel:'Mis à jour',
  },
  it: {
@@ -51,7 +51,7 @@ export const siteCopy = {
  browse:'Confronta i prodotti del catalogo di riferimento',
  browseText:'Esempi salvati, senza disponibilità in tempo reale. Le stime in USD usano 6,72 CNY per USD. Controlla inserzione attuale, variante e totale prima dell’acquisto.',
  updated:'Aggiornamento editoriale · 2 ott. 2026', catalogVerified:'Riferimento salvato del catalogo', snapshot:'CATALOGO',
- relatedLabel:'Guide correlate', productTitle:'Esempi dal catalogo esistente', productNote:'Solo prezzi di riferimento. Verifica disponibilità, varianti e costi finali nella scheda collegata. Sono immagini del catalogo, non foto QC del magazzino.',
+ relatedLabel:'Guide correlate', productTitle:'Esempi dal catalogo esistente', productNote:'Solo prezzi di riferimento. Verifica disponibilità, varianti e costi finali nella scheda collegata. I nomi identificano inserzioni; questi esempi non sono raccomandazioni testate.',
  publishedLabel:'Pubblicato', updatedLabel:'Aggiornato',
  }
 };
