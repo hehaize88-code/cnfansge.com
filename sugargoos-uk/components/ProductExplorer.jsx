@@ -9,10 +9,10 @@ export default function ProductExplorer({ items, categories, copy, compact = fal
     const normalized = query.trim().toLowerCase();
     const filtered = items.filter((item) =>
       (active === "all" || item.category === active) &&
-      (!normalized || `${item.title} ${item.tags.join(" ")}`.toLowerCase().includes(normalized))
+      (!normalized || `${item.title} ${item.tags.join(" ")} ${item.tags.map((tag) => copy.tagLabels?.[tag] || tag).join(" ")} ${categories.find((category) => category.slug === item.category)?.label || ""}`.toLowerCase().includes(normalized))
     );
     return compact ? filtered.slice(0, 8) : filtered;
-  }, [active, compact, items, query]);
+  }, [active, compact, items, query, copy.tagLabels, categories]);
 
   return (
     <div className="explorer">
@@ -27,7 +27,7 @@ export default function ProductExplorer({ items, categories, copy, compact = fal
             ))}
           </div>
           <label className="mini-search">
-            <span className="sr-only">Filter products</span>
+            <span className="sr-only">{copy.filterLabel}</span>
             <input value={query} onChange={(event) => setQuery(event.target.value)} placeholder={copy.searchPlaceholder} />
           </label>
         </div>
@@ -40,7 +40,7 @@ export default function ProductExplorer({ items, categories, copy, compact = fal
               <span className="route-pill">UK ROUTE / {item.id}</span>
             </a>
             <div className="product-card-body">
-              <div className="product-tags">{item.tags.slice(0, 2).map((tag) => <span key={tag}>{tag}</span>)}</div>
+              <div className="product-tags">{item.tags.slice(0, 2).map((tag) => <span key={tag}>{copy.tagLabels?.[tag] || tag}</span>)}</div>
               <h3>{item.title}</h3>
               <div className="product-bottom">
                 <p><small>{copy.approx}</small> ${item.usd.toFixed(2)}</p>

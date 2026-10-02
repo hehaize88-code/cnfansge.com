@@ -1,8 +1,9 @@
+import { guideUi, relatedGuides } from "../data/uk-guides";
 import ProductExplorer from "./ProductExplorer";
 import WeightCalculator from "./WeightCalculator";
 import { articleBody, pageCopy, pageFacts } from "../data/pages";
 import { categoryGuides } from "../data/category-guides";
-import { archivedProducts, articles, categories, featuredProducts, languageNames, languages, products, routeFor, translations } from "../data/site";
+import { archivedProducts, articles, categories, featuredProducts, localizedCategories, languageNames, languages, products, routeFor, translations } from "../data/site";
 
 const siteUrl = "https://sugargoos.uk";
 const editorialLabels = {
@@ -85,7 +86,7 @@ function RouteArchive({ lang, t }) {
       <SectionHeading kicker={labels.archive} title={labels.archive} text={labels.archiveText} split />
       <div className="route-archive-grid">
         {archivedProducts.map((product) => {
-          const category = categories.find((item) => item.slug === product.category);
+          const category = localizedCategories(lang).find((item) => item.slug === product.category);
           return <article key={product.id}><div><span>{category?.label || product.category}</span><strong>{product.title}</strong></div><p>${product.usd.toFixed(2)} <small>{t.approx}</small></p><a href={product.source} target="_blank" rel="nofollow sponsored noopener" aria-label={`${t.openListing}: ${product.title}`}>↗</a></article>;
         })}
       </div>
@@ -108,7 +109,7 @@ function CategoryGrid({ lang, t }) {
   const coverByCategory = Object.fromEntries(categories.map((category) => [category.slug, products.find((p) => p.category === category.slug)?.image]));
   return (
     <div className="category-grid">
-      {categories.map((category) => (
+      {localizedCategories(lang).map((category) => (
         <article className="category-card" key={category.slug}>
           <img src={coverByCategory[category.slug]} alt="" width="560" height="420" loading="lazy" />
           <div className="category-overlay"><span>{category.icon}</span><h3>{category.label}</h3><p>{category.note}</p></div>
@@ -127,8 +128,8 @@ function ArticlesGrid({ lang, t }) {
     <div className="article-grid">
       {articles.map((article, index) => (
         <article className="article-card" key={article.slug}>
-          <div className="article-index">0{index + 1}</div>
-          <p className="eyebrow">{article.label} / {article.read}</p>
+          <div className="article-index">{String(index + 1).padStart(2, "0")}</div>
+          <p className="eyebrow">{article.labels?.[lang] || article.label} / {article.read}</p>
           <h3>{article.title[lang]}</h3>
           <p>{article.summary[lang]}</p>
           <a href={routeFor(lang, ["articles", article.slug])}>{t.readArticle} <span>↗</span></a>
@@ -167,7 +168,7 @@ function HomePage({ lang, t }) {
       <section className="hero shell">
         <div className="hero-copy">
           <p className="eyebrow">{t.heroKicker}</p>
-          <h1>{t.heroTitle}</h1>
+          <h1>{guideUi[lang].homeHeading}</h1>
           <p className="hero-intro">{t.heroText}</p>
           <div className="hero-buttons">
             <a className="button primary" href={routeFor(lang, ["spreadsheet"])}>{t.browse}</a>
@@ -193,7 +194,7 @@ function HomePage({ lang, t }) {
       <section className="section section-ink">
         <div className="shell">
           <SectionHeading kicker={t.findsKicker} title={t.findsTitle} text={t.findsText} split />
-          <ProductExplorer items={products} categories={categories} copy={{ ...t, searchPlaceholder: t.searchPlaceholder }} compact />
+          <ProductExplorer items={products} categories={localizedCategories(lang)} copy={{ ...t, filterLabel: guideUi[lang].filter, tagLabels: Object.fromEntries(guideUi.en.tags.map((tag, index) => [tag, guideUi[lang].tags[index]])) }} compact />
           <div className="center-action"><a className="button light" href={routeFor(lang, ["spreadsheet"])}>{t.browse} ↗</a></div>
         </div>
       </section>
@@ -225,7 +226,7 @@ function HomePage({ lang, t }) {
 
 function ProductPage({ lang, t, category }) {
   const filtered = category ? products.filter((product) => product.category === category.slug) : featuredProducts;
-  const title = category ? `Sugargoo ${category.label} / UK lane` : t.findsTitle;
+  const title = category ? `Sugargoo ${category.label} / UK` : t.findsTitle;
   const kicker = category ? `CATEGORY ${category.icon}` : t.findsKicker;
   const labels = editorialLabels[lang] || editorialLabels.en;
   return (
@@ -235,7 +236,7 @@ function ProductPage({ lang, t, category }) {
         <SearchPanel t={t} />
       </section>
       <section className="section shell products-page">
-        <ProductExplorer items={filtered} categories={category ? [category] : categories} copy={{ ...t, searchPlaceholder: t.searchPlaceholder }} initialCategory={category?.slug || "all"} />
+        <ProductExplorer items={filtered} categories={category ? [category] : localizedCategories(lang)} copy={{ ...t, filterLabel: guideUi[lang].filter, tagLabels: Object.fromEntries(guideUi.en.tags.map((tag, index) => [tag, guideUi[lang].tags[index]])) }} initialCategory={category?.slug || "all"} />
         {!category && <RouteArchive lang={lang} t={t} />}
       </section>
       {category && <CategoryEvidence lang={lang} category={category} />}
@@ -250,7 +251,7 @@ function GuidePage({ lang, t, type }) {
   const labels = editorialLabels[lang] || editorialLabels.en;
   return (
     <main>
-      <section className="page-hero shell guide-hero"><p className="eyebrow">{copy.kicker}</p><h1>{copy.title}</h1><p>{copy.intro}</p><div className="fact-row"><span>{labels.official}</span><span>{labels.checked}</span><span>{labels.interpretation}</span></div></section>
+      <section className="page-hero shell guide-hero"><p className="eyebrow">{copy.kicker}</p><h1>{type === "shipping" ? guideUi[lang].shippingHeading : copy.title}</h1><p>{copy.intro}</p><div className="fact-row"><span>{labels.official}</span><span>{labels.checked}</span><span>{labels.interpretation}</span></div></section>
       <section className="section shell guide-layout">
         <aside><div><p className="eyebrow">{labels.onPage}</p>{copy.sections.map(([title], index) => <a key={title} href={`#step-${index + 1}`}>0{index + 1} / {title}</a>)}</div></aside>
         <div className="guide-sections">
@@ -268,15 +269,22 @@ function GuidePage({ lang, t, type }) {
 function SpreadsheetPage({ lang, t }) {
   return (
     <main>
-      <section className="page-hero shell spreadsheet-hero"><p className="eyebrow">LIVE PREVIEW INDEX / 24 ROUTES</p><h1>{t.heroTitle}</h1><p>{t.heroText}</p><SearchPanel t={t} /></section>
+      <section className="page-hero shell spreadsheet-hero"><p className="eyebrow">LIVE PREVIEW INDEX / 24 ROUTES</p><h1>{guideUi[lang].sheetHeading}</h1><p>{guideUi[lang].sheetDescription}</p><SearchPanel t={t} /></section>
       <section className="section shell"><SectionHeading kicker={t.categoryKicker} title={t.categoryTitle} text={t.categoryText} split /><CategoryGrid lang={lang} t={t} /></section>
-      <section className="section section-ink"><div className="shell"><SectionHeading kicker={t.findsKicker} title={t.findsTitle} text={t.findsText} split /><ProductExplorer items={products} categories={categories} copy={{ ...t, searchPlaceholder: t.searchPlaceholder }} /></div></section>
+      <section className="section section-ink"><div className="shell"><SectionHeading kicker={t.findsKicker} title={t.findsTitle} text={t.findsText} split /><ProductExplorer items={products} categories={localizedCategories(lang)} copy={{ ...t, filterLabel: guideUi[lang].filter, tagLabels: Object.fromEntries(guideUi.en.tags.map((tag, index) => [tag, guideUi[lang].tags[index]])) }} /></div></section>
+      <section className="section shell catalogue-guidance"><p>{guideUi[lang].catalogueNote}</p><p>{guideUi[lang].sheetHelp}</p><RelatedGuides lang={lang} topic="spreadsheet" /></section>
     </main>
   );
 }
 
+function RelatedGuides({ lang, topic }) {
+  const ui = guideUi[lang];
+  const selected = (relatedGuides[topic] || []).map((slug) => articles.find((article) => article.slug === slug)).filter(Boolean);
+  return <nav className="related-guides" aria-label={ui.related}><h2>{ui.related}</h2><ul>{selected.map((article) => <li key={article.slug}><a href={routeFor(lang, ["articles", article.slug])}>{article.title[lang]} <span aria-hidden="true">↗</span></a></li>)}</ul><a className="article-hub-link" href={routeFor(lang, ["articles"])}>{ui.articleHubLink} →</a></nav>;
+}
+
 function ArticlesPage({ lang, t }) {
-  return <main><section className="page-hero shell"><p className="eyebrow">{t.articlesKicker}</p><h1>{t.articlesTitle}</h1><p>{t.heroText}</p></section><section className="section shell"><ArticlesGrid lang={lang} t={t} /></section></main>;
+  return <main><section className="page-hero shell"><p className="eyebrow">{t.articlesKicker}</p><h1>{guideUi[lang].articlesHeading}</h1><p>{guideUi[lang].articlesDescription}</p></section><section className="section shell"><ArticlesGrid lang={lang} t={t} /></section></main>;
 }
 
 function ArticlePage({ lang, t, article }) {
@@ -285,17 +293,19 @@ function ArticlePage({ lang, t, article }) {
   return (
     <main>
       <article className="longform shell">
-        <header><p className="eyebrow">{article.label} / {article.read}</p><h1>{article.title[lang]}</h1><p className="article-deck">{article.summary[lang]}</p><div className="article-meta"><span>{labels.independent}</span><span>{article.updatedLabel?.[lang] || labels.updated}</span><span>{lang.toUpperCase()}</span></div></header>
+        <header><p className="eyebrow">{article.labels?.[lang] || article.label} / {article.read}</p><h1>{article.title[lang]}</h1><p className="article-deck">{article.summary[lang]}</p><div className="article-meta"><span>{labels.independent}</span><span>{article.updatedLabel?.[lang] || labels.updated}</span><span>{lang.toUpperCase()}</span></div></header>
         <div className="article-body">
           <p className="lead">{body.opening}</p>
           <EvidencePanel facts={body.takeaways} note={body.sourceNote} lang={lang} label={article.researchLabel?.[lang]} />
-          {body.sections.map(({ title, paragraphs }, index) => <section key={title}><span className="section-number">{String(index + 1).padStart(2, "0")}</span><h2>{title}</h2>{paragraphs.map((text) => <p key={text}>{text}</p>)}</section>)}
+          <nav className="article-toc" aria-label={guideUi[lang].toc}><h2>{guideUi[lang].toc}</h2><ol>{body.sections.map(({ title }, index) => <li key={title}><a href={`#section-${index + 1}`}>{title}</a></li>)}</ol></nav>
+          {body.sections.map(({ title, paragraphs }, index) => <section id={`section-${index + 1}`} key={title}><span className="section-number">{String(index + 1).padStart(2, "0")}</span><h2>{title}</h2>{paragraphs.map((text) => <p key={text}>{text}</p>)}</section>)}
           {body.checklist && <aside className="article-checklist"><p className="eyebrow">{labels.decision}</p><h2>{body.checklist.title}</h2><ol>{body.checklist.items.map((item, index) => <li key={item}><span>{String(index + 1).padStart(2, "0")}</span><p>{item}</p></li>)}</ol></aside>}
           {article.slug === "reduce-volumetric-weight" && <div className="inline-tool"><p className="eyebrow">{labels.numbers}</p><WeightCalculator lang={lang} /></div>}
           <p className="closing">{body.close}</p>
+          <RelatedGuides lang={lang} topic={article.slug} />
         </div>
       </article>
-      <section className="section section-ink"><div className="shell"><SectionHeading kicker={t.findsKicker} title={t.findsTitle} /><ProductExplorer items={products.slice(0, 8)} categories={categories} copy={{ ...t, searchPlaceholder: t.searchPlaceholder }} compact /></div></section>
+      <section className="section section-ink"><div className="shell"><SectionHeading kicker={t.findsKicker} title={t.findsTitle} /><ProductExplorer items={products.slice(0, 8)} categories={localizedCategories(lang)} copy={{ ...t, filterLabel: guideUi[lang].filter, tagLabels: Object.fromEntries(guideUi.en.tags.map((tag, index) => [tag, guideUi[lang].tags[index]])) }} compact /></div></section>
     </main>
   );
 }
@@ -339,7 +349,7 @@ export default function SitePage({ lang = "en", slug = [], isRoot = false }) {
   const t = translations[lang] || translations.en;
   const first = slug[0] || "home";
   const second = slug[1];
-  const category = first === "category" ? categories.find((item) => item.slug === second) : null;
+  const category = first === "category" ? localizedCategories(lang).find((item) => item.slug === second) : null;
   const article = first === "articles" && second ? articles.find((item) => item.slug === second) : null;
   let content;
   if (first === "home") content = <HomePage lang={lang} t={t} />;

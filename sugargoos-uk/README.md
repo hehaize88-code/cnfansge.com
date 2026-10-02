@@ -13,6 +13,9 @@ shipping, FAQ and evidence-led article site at `https://sugargoos.uk/`.
 - Languages: English, German, Spanish, French and Italian
 - Catalogue destination: `https://cnfansge.com/`
 
-The build renders 85 localized routes as extensionless static HTML, plus a real
+The build renders 135 localized routes as extensionless static HTML, plus a real
 404 page, `robots.txt`, `sitemap.xml`, security headers and production redirects.
 Only changes under `sugargoos-uk/*` should trigger this Cloudflare project.
+
+Article auto-publishing for sugargoos.uk is paused by owner request on 2 October 2026.
+Do not advance its editorial cursor or resume automatic writes; see `.seo/AUTO_UPDATE_PAUSED.md`.

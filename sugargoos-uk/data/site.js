@@ -1,3 +1,6 @@
+import { newArticles, guideUi } from "./uk-guides.js";
+import { revisedArticleSlugs } from "./article-revisions.js";
+
 export const languages = ["en", "de", "es", "fr", "it"];
 
 export const languageNames = {
@@ -57,6 +60,7 @@ export const featuredProducts = featuredProductIds.map((id) => products.find((pr
 export const archivedProducts = products.filter((product) => !featuredProductIds.includes(product.id));
 
 export const articles = [
+  ...newArticles,
   {
     slug: "sugargoo-shoe-qc-box-laces-accessory-completeness",
     label: "SHOE SET INVENTORY NOTE",
@@ -240,6 +244,17 @@ export const articles = [
     }
   }
 ];
+
+for (const article of articles) {
+  if (revisedArticleSlugs.includes(article.slug)) {
+    article.dateModified = "2026-10-02";
+    article.updatedLabel = Object.fromEntries(languages.map((lang) => [lang, guideUi[lang].updated]));
+  }
+}
+
+export function localizedCategories(lang) {
+  return categories.map((category, index) => ({ ...category, label: guideUi[lang].categoryLabels[index], note: guideUi[lang].categoryNotes[index] }));
+}
 
 export const translations = {
   en: {
@@ -427,36 +442,23 @@ const articleDescriptionSuffix = {
   it: " Con una checklist pratica per gli acquirenti UK."
 };
 
-const descriptionTails = {
-  en: [" Updated 2 Sep 2026.", " Checked 2 September 2026.", " Facts and route links were checked on 2 September 2026."],
-  de: [" Stand: 2. Sep. 2026.", " Geprüft am 2. September 2026.", " Fakten und Routenlinks wurden am 2. September 2026 geprüft."],
-  es: [" Revisado 02.09.2026.", " Actualizado: 2 sep. 2026.", " Revisado el 2 de septiembre de 2026.", " Datos y rutas verificados el 2 de septiembre de 2026."],
-  fr: [" Mis à jour : 2 sept. 2026.", " Vérifié le 2 septembre 2026.", " Faits et routes vérifiés le 2 septembre 2026."],
-  it: [" Aggiornato: 2 set. 2026.", " Verificato il 2 settembre 2026.", " Dati e rotte verificati il 2 settembre 2026."]
-};
-
-function boundedDescription(text, lang) {
-  let description = text.trim();
-  const length = (value) => [...value].length;
-  if (length(description) < 140) {
-    const tails = descriptionTails[lang] || descriptionTails.en;
-    const fitting = tails.find((tail) => length(description + tail) >= 140 && length(description + tail) <= 160);
-    description += fitting || tails[tails.length - 1];
-  }
-  if (length(description) <= 160) return description;
-  const clipped = [...description].slice(0, 159).join("");
+function boundedDescription(text) {
+  const description = text.trim();
+  if ([...description].length <= 160) return description;
+  const clipped = [...description].slice(0, 157).join("");
   const boundary = clipped.lastIndexOf(" ");
-  return `${clipped.slice(0, boundary >= 140 ? boundary : 159).replace(/[,:;–—-]+$/u, "")}.`;
+  return `${clipped.slice(0, boundary > 110 ? boundary : 157).replace(/[,:;–—-]+$/u, "")}…`;
 }
 
 export function pageMeta(lang, key) {
   const article = key.startsWith("articles/") ? articles.find((item) => `articles/${item.slug}` === key) : null;
-  const category = key.startsWith("category/") ? categories.find((item) => `category/${item.slug}` === key) : null;
-  const titles = metaTitles[lang] || metaTitles.en;
+  const category = key.startsWith("category/") ? localizedCategories(lang).find((item) => `category/${item.slug}` === key) : null;
+  const ui = guideUi[lang] || guideUi.en;
+  const titles = { ...(metaTitles[lang] || metaTitles.en), home: ui.homeTitle, spreadsheet: ui.sheetTitle, shipping: ui.shippingTitle, articles: ui.articlesTitle };
   const title = article?.title?.[lang] || (category ? (categoryMeta[lang] || categoryMeta.en)(category.label) : titles[key] || titles.home);
-  const descriptions = metaDescriptions[lang] || metaDescriptions.en;
+  const descriptions = { ...(metaDescriptions[lang] || metaDescriptions.en), home: ui.homeDescription, spreadsheet: ui.sheetDescription, shipping: ui.shippingDescription, articles: ui.articlesDescription };
   const description = article
-    ? `${article.summary?.[lang] || article.summary.en}${articleDescriptionSuffix[lang] || articleDescriptionSuffix.en}`
+    ? article.summary?.[lang] || article.summary.en
     : category
       ? (categoryDescriptions[lang] || categoryDescriptions.en)(category.label)
       : descriptions[key] || descriptions.home;
@@ -467,14 +469,14 @@ export function pageMeta(lang, key) {
 }
 
 export const pageLastModified = {
-  home: "2026-09-17T19:38:00Z",
-  spreadsheet: "2026-09-01T00:00:00Z",
+  home: "2026-10-02T00:00:00Z",
+  spreadsheet: "2026-10-02T00:00:00Z",
   finds: "2026-09-02T06:00:00Z",
-  guide: "2026-09-02T06:00:00Z",
+  guide: "2026-10-02T00:00:00Z",
   qc: "2026-09-02T06:00:00Z",
-  shipping: "2026-09-02T06:00:00Z",
+  shipping: "2026-10-02T00:00:00Z",
   faq: "2026-09-02T06:00:00Z",
-  articles: "2026-09-17T19:38:00Z"
+  articles: "2026-10-02T00:00:00Z"
 };
 
 export function lastModifiedForPath(parts = []) {

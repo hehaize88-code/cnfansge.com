@@ -1,3 +1,5 @@
+import { ukGuides } from "./uk-guides.js";
+import { articleRevision } from "./article-revisions.js";
 import { researchedArticles } from "./articles";
 import { deArticles } from "./articles-de";
 import { esArticles } from "./articles-es";
@@ -133,9 +135,12 @@ const shared = {
 };
 
 export function articleBody(lang, slug) {
+  if (ukGuides[lang]?.articles[slug]) return ukGuides[lang].articles[slug];
   const key = slug === "how-to-read-qc-photos" ? "qc" : slug === "reduce-volumetric-weight" ? "shipping" : "guide";
   if (localizedArticles[lang]?.[slug]) {
-    return { ...localizedArticles[lang][slug], checklist: articleChecklists[lang]?.[slug] };
+    const body = localizedArticles[lang][slug];
+    const revision = articleRevision(lang, slug);
+    return { ...body, sections: revision ? [...body.sections, revision] : body.sections, checklist: articleChecklists[lang]?.[slug] };
   }
   const copy = pageCopy[lang] || pageCopy.en;
   return {
