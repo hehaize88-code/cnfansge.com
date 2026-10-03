@@ -1,4 +1,5 @@
 import "../globals.css";
+import Script from "next/script";
 import { languages } from "../../lib/data";
 
 export const metadata = {
@@ -29,5 +30,5 @@ export const metadata = {
 export default async function LanguageLayout({ children, params }) {
   const { lang } = await params;
   const language = languages.includes(lang) ? lang : "en";
-  return <html lang={language}><body>{children}</body></html>;
+  return <html lang={language}><body>{children}<Script src="/site-events.js" strategy="afterInteractive" /></body></html>;
 }

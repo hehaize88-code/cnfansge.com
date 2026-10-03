@@ -1,5 +1,12 @@
 # usfanss.shop SEO60 private cursor
 
+## Manual stop — 2026-10-03
+
+User instruction: permanently stop automatic article updates for usfanss.shop only. The shared task remains enabled on its unchanged schedule for other sites. Do not generate, modify, commit, deploy or advance this site's automatic issues until the user explicitly resumes it.
+
+The historical automatic cursor remains C01; no automatic issue has been completed. The manual October editorial release is separate from SEO60 and must not advance, reset or backfill the cursor. Historical records above/below remain preserved.
+
+
 This file is private automation state and must never be exposed on the public site.
 
 - Lane: PCR — Parcel Configuration & Risk Control

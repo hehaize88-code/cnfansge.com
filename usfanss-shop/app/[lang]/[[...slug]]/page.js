@@ -12,13 +12,13 @@ import {
 } from "../../../lib/data";
 import { translations } from "../../../lib/i18n";
 import { researchedArticles } from "../../../lib/articles";
-import { localizedArticles, localizedSupplements, localizedClosingNotes } from "../../../lib/article-translations";
+import { localizedArticles } from "../../../lib/article-translations";
 
 const destinationSearch = "https://cnfansge.com/search.html";
 const finalBase = "https://usfanss.shop";
 const officialSources = [
   { key: "help", href: "https://www.usfans.com/help" },
-  { key: "product", href: "https://www.usfans.com/product/1/976460554537" }
+  { key: "product", href: "https://www.usfans.com/" }
 ];
 
 export function generateStaticParams() {
@@ -63,7 +63,7 @@ export async function generateMetadata({ params }) {
   );
   languageAlternates["x-default"] = `${finalBase}${internalPath("en", route)}`;
   return {
-    title: titleMap[pageKey],
+    title: { absolute: titleMap[pageKey] },
     description,
     alternates: {
       canonical: `${finalBase}${canonicalPath}`,
@@ -76,6 +76,11 @@ export async function generateMetadata({ params }) {
       url: `${finalBase}${canonicalPath}`,
       locale: t.locale,
       siteName: "USFans Index",
+      type: articleSlug ? "article" : "website",
+      ...(articleSlug && researchedArticles[articleSlug] ? {
+        publishedTime: researchedArticles[articleSlug].datePublished,
+        modifiedTime: researchedArticles[articleSlug].dateModified
+      } : {}),
       images: [{ url: "/og-cover.png", width: 1200, height: 630, alt: t.seoTitles.home }]
     },
     twitter: {
@@ -230,10 +235,10 @@ function MethodGrid({ t }) {
   return <div className="method-grid">{t.method.map(([number, title, body]) => <article key={number}><span>{number}</span><h3>{title}</h3><p>{body}</p></article>)}</div>;
 }
 
-function ArticleGrid({ lang, t }) {
+function ArticleGrid({ lang, t, featured = false }) {
   return (
     <div className="article-grid">
-      {articleCards.map((article) => {
+      {(featured ? articleCards.slice(-6) : articleCards).map((article) => {
         const [title, description] = t.articleTitles[article.contentKey];
         return (
           <Link key={article.slug} href={internalPath(lang, `articles/${article.slug}`)} className="article-card">
@@ -272,7 +277,7 @@ function OfficialSources({ t }) {
       <p>{t.common.checkedOn}</p>
       <ul>
         {officialSources.map((source) => (
-          <li key={source.key}><a href={source.href} target="_blank" rel="nofollow noopener noreferrer">{source.key === "help" ? t.common.officialHelpCenter : t.common.officialProductNotice} <Arrow diagonal /></a></li>
+          <li key={source.key}>{source.key === "help" ? t.common.officialHelpCenter : t.common.officialProductNotice}</li>
         ))}
       </ul>
     </aside>
@@ -311,7 +316,7 @@ function HomePage({ lang, t }) {
         </section>
         <section className="section-shell articles-section">
           <SectionHeading eyebrow={t.home.articlesEyebrow} title={t.home.articlesTitle} action={<Link href={internalPath(lang, "articles")} className="text-link">{t.nav.articles}<Arrow /></Link>} />
-          <ArticleGrid lang={lang} t={t} />
+          <ArticleGrid lang={lang} t={t} featured />
         </section>
         <section className="section-shell faq-section">
           <SectionHeading eyebrow={t.home.faqEyebrow} title={t.home.faqTitle} />
@@ -376,6 +381,14 @@ function ArticlesPage({ lang, t }) {
   return <><PageHero intro={t.pageIntro.articles} number="07" /><section className="section-shell articles-page"><CorePageNote note={t.corePageNotes.articles} /><ArticleGrid lang={lang} t={t} /></section></>;
 }
 
+function RelatedGuides({ lang, t, slugs }) {
+  return <section className="related-guides"><h2>{t.common.related}</h2><ul>{slugs.map((slug) => {
+    const card = articleCards.find((item) => item.slug === slug);
+    if (!card) return null;
+    return <li key={slug}><Link href={internalPath(lang, `articles/${slug}`)}>{t.articleTitles[card.contentKey][0]}<Arrow /></Link></li>;
+  })}</ul></section>;
+}
+
 function ArticlePage({ lang, slug, t }) {
   const article = articleCards.find((item) => item.slug === slug);
   if (!article) notFound();
@@ -383,17 +396,10 @@ function ArticlePage({ lang, slug, t }) {
   const [title, description] = t.articleTitles[contentKey];
   const baseArticle = researchedArticles[slug];
   const localizedArticle = localizedArticles[lang]?.[slug];
-  const localizedSupplement = localizedSupplements[lang]?.[slug];
-  const localizedClosingNote = localizedClosingNotes[lang];
   const researched = baseArticle ? {
     ...baseArticle,
     ...localizedArticle,
-    sections: localizedArticle
-      ? [
-          ...localizedArticle.sections.map(([heading, paragraph]) => ({ heading, paragraphs: [paragraph] })),
-          ...(localizedSupplement ? [{ heading: localizedSupplement[0], paragraphs: [localizedSupplement[1], localizedClosingNote].filter(Boolean) }] : [])
-        ]
-      : baseArticle.sections
+    sections: localizedArticle ? localizedArticle.sections : baseArticle.sections
   } : null;
   const researchedWordCount = researched
     ? researched.sections.reduce((total, section) => total + section.heading.split(/\s+/).length + section.paragraphs.join(" ").split(/\s+/).length, 0)
@@ -408,8 +414,14 @@ function ArticlePage({ lang, slug, t }) {
   if (contentKey === "taobao-weidian-1688") { primary = t.marketplaces; secondary = t.guideSteps.slice(0, 3); }
   return (
     <>
-      <JsonLd data={{ "@context": "https://schema.org", "@type": "Article", headline: title, description, datePublished: "2026-09-02", dateModified: "2026-09-02", inLanguage: lang, wordCount: researchedWordCount, citation: officialSources.map((source) => source.href), mainEntityOfPage: `${finalBase}${internalPath(lang, `articles/${slug}`)}`, publisher: { "@type": "Organization", name: "USFans Index" } }} />
+      <JsonLd data={{ "@context": "https://schema.org", "@type": "Article", headline: title, description, datePublished: baseArticle.datePublished, dateModified: baseArticle.dateModified, inLanguage: lang, wordCount: researchedWordCount, image: articleImage.image, author: { "@type": "Organization", name: "USFans Index", url: `${finalBase}/${lang}` }, mainEntityOfPage: `${finalBase}${internalPath(lang, `articles/${slug}`)}`, publisher: { "@type": "Organization", name: "USFans Index" } }} />
+      <JsonLd data={{ "@context": "https://schema.org", "@type": "BreadcrumbList", itemListElement: [
+        { "@type": "ListItem", position: 1, name: t.common.home, item: `${finalBase}/${lang}` },
+        { "@type": "ListItem", position: 2, name: t.nav.articles, item: `${finalBase}/${lang}/articles` },
+        { "@type": "ListItem", position: 3, name: title, item: `${finalBase}/${lang}/articles/${slug}` }
+      ] }} />
       <article className="long-article">
+        <nav className="article-breadcrumbs" aria-label={t.common.breadcrumbs}><Link href={internalPath(lang, "")}>{t.common.home}</Link><span>/</span><Link href={internalPath(lang, "articles")}>{t.nav.articles}</Link></nav>
         <header><p className="eyebrow"><span></span>{article.number} · {article.read}</p><h1>{title}</h1><p>{description}</p></header>
         <div className="article-body">
           {researched ? <>
@@ -424,7 +436,8 @@ function ArticlePage({ lang, slug, t }) {
             <section><h2>{t.articleLabels.checklist}</h2><NumberedContent items={secondary} /></section>
             <section><h2>{t.articleLabels.limitations}</h2><p>{t.common.cnyNote}</p><p>{t.common.disclaimer}</p></section>
           </>}
-          <section className="article-next"><h2>{t.articleLabels.next}</h2><SearchForm t={t} compact /><Link href={internalPath(lang, "finds")} className="button primary">{t.common.viewAll}<Arrow /></Link></section>
+          <RelatedGuides lang={lang} t={t} slugs={baseArticle.related} />
+          <section className="article-next"><h2>{t.articleLabels.next}</h2><SearchForm t={t} compact />{baseArticle.category ? <a href={categories.find((category) => category.key === baseArticle.category).href} className="button primary" target="_blank" rel="noreferrer">{t.common.browseCategory}<Arrow /></a> : <Link href={internalPath(lang, "finds")} className="button primary">{t.common.viewAll}<Arrow /></Link>}</section>
         </div>
       </article>
     </>

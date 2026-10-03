@@ -1,3 +1,5 @@
+import { researchedArticles } from "./articles";
+
 export const languages = ["en", "de", "es", "fr", "it"];
 
 export const languageNames = {
@@ -15,7 +17,13 @@ export const articleRoutes = [
   "articles/qc-photo-checklist",
   "articles/international-shipping-cost",
   "articles/warehouse-returns-guide",
-  "articles/taobao-weidian-1688"
+  "articles/taobao-weidian-1688",
+  "articles/usfans-shoes-spreadsheet",
+  "articles/usfans-hoodies-spreadsheet",
+  "articles/usfans-haul-budget",
+  "articles/usfans-shipping-time",
+  "articles/usfans-volumetric-weight",
+  "articles/usfans-parcel-packing"
 ];
 export const routes = [...coreRoutes, ...articleRoutes];
 
@@ -51,5 +59,14 @@ export const articleCards = [
   { slug: "qc-photo-checklist", contentKey: "qc-photo-checklist", number: "03", read: "11 min", wordCount: 1339 },
   { slug: "international-shipping-cost", contentKey: "uk-shipping-cost", number: "04", read: "11 min", wordCount: 1366 },
   { slug: "warehouse-returns-guide", contentKey: "warehouse-returns-guide", number: "05", read: "11 min", wordCount: 1333 },
-  { slug: "taobao-weidian-1688", contentKey: "taobao-weidian-1688", number: "06", read: "11 min", wordCount: 1326 }
-];
+  { slug: "taobao-weidian-1688", contentKey: "taobao-weidian-1688", number: "06" },
+  { slug: "usfans-shoes-spreadsheet", contentKey: "usfans-shoes-spreadsheet", number: "07" },
+  { slug: "usfans-hoodies-spreadsheet", contentKey: "usfans-hoodies-spreadsheet", number: "08" },
+  { slug: "usfans-haul-budget", contentKey: "usfans-haul-budget", number: "09" },
+  { slug: "usfans-shipping-time", contentKey: "usfans-shipping-time", number: "10" },
+  { slug: "usfans-volumetric-weight", contentKey: "usfans-volumetric-weight", number: "11" },
+  { slug: "usfans-parcel-packing", contentKey: "usfans-parcel-packing", number: "12" }
+].map((card) => {
+  const wordCount = researchedArticles[card.slug].sections.reduce((total, section) => total + `${section.heading} ${section.paragraphs.join(" ")}`.split(/\s+/).length, 0);
+  return { ...card, wordCount, read: `${Math.ceil(wordCount / 180)} min` };
+});

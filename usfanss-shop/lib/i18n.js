@@ -1,3 +1,5 @@
+import { applyEditorialRelease } from "./editorial-release";
+
 const en = {
   locale: "en-GB",
   nav: { spreadsheet: "Spreadsheet", finds: "Finds", guide: "Guide", qc: "QC", shipping: "Shipping", faq: "FAQ", articles: "Articles" },
@@ -454,4 +456,5 @@ Object.entries(seoContent).forEach(([language, content]) => {
   translationsByLanguage[language].articleVisuals = content.articleVisuals;
 });
 
+applyEditorialRelease(translationsByLanguage);
 export const translations = translationsByLanguage;
