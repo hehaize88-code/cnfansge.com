@@ -541,3 +541,24 @@ footer small { color: #9d918e; text-align: right; }
   footer p { font-size: 9px; line-height: 1.4; }
   footer small { grid-column: 1 / -1; font-size: 8px; text-align: left; }
 }
+/* Practical research tools and readable multilingual article navigation. */
+.breadcrumbs{max-width:1180px;margin:20px auto;padding:0 24px;display:flex;flex-wrap:wrap;gap:10px;font-size:13px;color:#53655b}
+.breadcrumbs a,.article-toc a{text-decoration:underline;text-underline-offset:3px}
+.article-toc{margin-top:20px;padding-top:16px;border-top:1px solid #d4dfd6}
+.article-toc h2{font-size:16px;margin:0 0 10px}
+.article-toc ol{padding-left:18px;margin:0}
+.article-toc li{font-size:13px;line-height:1.55;margin:9px 0}
+.article-body section{scroll-margin-top:100px}
+.article-body aside{position:static;align-self:start}
+.related-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px}
+.related-grid a{padding:20px;border:1px solid #d4dfd6;border-radius:16px;background:#f5f8f2}
+.related-grid span{font-size:12px;color:#53655b}.related-grid h3{font-size:19px;line-height:1.35;margin:8px 0 15px}
+.weight-calculator{background:#f0f5e9;border:1px solid #d3ddc8;padding:26px;border-radius:20px;margin-bottom:22px}
+.weight-calculator h2{margin-top:0}.weight-calculator p{max-width:75ch;line-height:1.6}
+.calculator-fields{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:12px;margin:20px 0}
+.calculator-fields label{display:flex;flex-direction:column;justify-content:space-between;gap:8px;font-size:13px;font-weight:600}
+.calculator-fields input{width:100%;min-width:0;background:white;border:1px solid #80977c;border-radius:8px;padding:12px;font-size:16px;color:#193427}
+.weight-calculator button{border:0;border-radius:10px;padding:13px 20px;background:#193427;color:#fff;cursor:pointer;font:inherit}
+.weight-result{margin-top:18px;padding:16px;background:white;border-radius:12px}.weight-result p{margin:6px 0}.weight-result small{display:block;line-height:1.5}
+:focus-visible{outline:3px solid #5a8243;outline-offset:4px}
+@media(max-width:700px){.breadcrumbs{margin:12px auto;padding:0 16px;font-size:12px}.calculator-fields{grid-template-columns:repeat(2,minmax(0,1fr))}.calculator-fields label:last-child{grid-column:1/-1}.weight-calculator{padding:18px;border-radius:14px}.weight-calculator h2{font-size:23px}.weight-calculator p{font-size:14px}.related-grid{grid-template-columns:1fr;gap:8px}.related-grid a{padding:15px}.related-grid h3{font-size:17px;margin:6px 0}.related-grid svg{display:none}.article-toc li{font-size:13px;margin:8px 0}.article-toc h2{font-size:16px}.field-article header > span{font-size:11px;line-height:1.6}.field-article header > p:not(.eyebrow){font-size:15px;line-height:1.6}.article-body aside p{font-size:12px;line-height:1.6}.article-body aside small{font-size:11px}.source-notes li{font-size:12px;line-height:1.5}.article-grid p{font-size:13px;line-height:1.55}}

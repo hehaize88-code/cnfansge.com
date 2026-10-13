@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Script from "next/script";
+import AnalyticsEvents from "./analytics-events";
 import "./globals.css";
 
 export const metadata: Metadata = {
@@ -23,7 +24,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body>{children}</body>
+      <body>{children}<AnalyticsEvents/></body>
       <Script src="https://www.googletagmanager.com/gtag/js?id=G-M114ZXGDY0" strategy="afterInteractive" />
       <Script id="google-analytics" strategy="afterInteractive">{`window.dataLayer = window.dataLayer || [];
 function gtag(){dataLayer.push(arguments);}

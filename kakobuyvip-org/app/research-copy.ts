@@ -1,25 +1,25 @@
 import type { Locale, PageKey } from "./site-data";
 
-type IndependentPage = Exclude<PageKey, "home" | "qcArticle" | "shippingArticle" | "storageArticle" | "officialWebsiteArticle" | "legitArticle" | "reviewsArticle" | "safeArticle" | "scamClaimsArticle" | "helpCenterArticle" | "copycatArticle" | "policyTrackerArticle">;
+type IndependentPage = Exclude<PageKey,"home"|`${string}Article`>;
 
 export const seoPageIntro: Record<Locale, Record<IndependentPage, [string, string]>> = {
   en: {
-    spreadsheet: ["Kakobuy Spreadsheet 2026", "A checked product index that keeps images, prices and destination routes aligned—and explains what still needs verifying before you order."],
+    spreadsheet: ["Kakobuy Spreadsheet: Product Finds and Category Links", "A checked product index that keeps images, prices and destination routes aligned—and explains what still needs verifying before you order."],
     finds: ["Kakobuy Finds With Checked Product Routes", "Browse current product records whose card image and destination were reviewed together. Prices remain dated snapshots, not final landed costs."],
     guide: ["How to Buy With Kakobuy: Step-by-Step Guide", "Follow the official agent sequence from Chinese marketplace link to item payment, warehouse QC and international parcel submission."],
     qc: ["Kakobuy QC Photo Guide", "Use a repeatable inspection method for identity, shape, construction and decision-critical evidence before the parcel leaves the warehouse."],
     shipping: ["Kakobuy Shipping Calculator and Weight Guide", "Compare live routes with realistic weight and dimensions, understand volumetric billing, and separate platform services from destination taxes."],
     faq: ["Kakobuy Fees, Storage and Returns FAQ", "Clear, dated answers based on Kakobuy's public help pages, with variable fees and policies described as snapshots rather than guarantees."],
-    articles: ["Kakobuy Reviews and Evidence Guides", "Source-checked research on the official site, legitimacy, reviews, safety, policy changes, QC and parcel decisions."],
+    articles: ["Kakobuy Guides: QC, Fees, Links and Shipping", "Source-checked research on the official site, legitimacy, reviews, safety, policy changes, QC and parcel decisions."],
   },
   de: {
-    spreadsheet: ["Kakobuy Spreadsheet 2026", "Geprüfte Produktwege mit passenden Bildern, Preisen und Zielen – plus klare Hinweise, was vor der Bestellung noch geprüft werden muss."],
+    spreadsheet: ["Kakobuy Spreadsheet: Produktliste und Kategorien", "Geprüfte Produktwege mit passenden Bildern, Preisen und Zielen – plus klare Hinweise, was vor der Bestellung noch geprüft werden muss."],
     finds: ["Kakobuy-Funde mit geprüften Zielen", "Aktuelle Datensätze, deren Kartenbild und Ziel gemeinsam kontrolliert wurden. Preise bleiben datierte Momentaufnahmen."],
     guide: ["Mit Kakobuy bestellen: Schritt für Schritt", "Vom chinesischen Produktlink über Artikelzahlung und Lager-QC bis zur Einreichung des internationalen Pakets."],
     qc: ["Kakobuy QC-Foto-Leitfaden", "Identität, Form, Verarbeitung und entscheidende Belege vor dem Versand systematisch prüfen."],
     shipping: ["Kakobuy Versandkosten- und Gewichtsleitfaden", "Live-Linien mit realistischen Maßen vergleichen, Volumengewicht verstehen und Plattformdienste von Einfuhrabgaben trennen."],
     faq: ["Kakobuy Gebühren, Lagerung und Rückgaben", "Datierte Antworten aus öffentlichen Kakobuy-Hilfeseiten; variable Regeln werden nicht als Garantien dargestellt."],
-    articles: ["Kakobuy Erfahrungen und Quellenleitfäden", "Quellengeprüfte Recherche zu offizieller Website, Seriosität, Sicherheit, Richtlinien, QC und Paketentscheidungen."],
+    articles: ["Kakobuy-Leitfäden: QC, Kosten, Links und Versand", "Quellengeprüfte Recherche zu offizieller Website, Seriosität, Sicherheit, Richtlinien, QC und Paketentscheidungen."],
   },
   es: {
     spreadsheet: ["Hoja Kakobuy 2026", "Índice revisado que mantiene alineados imagen, precio y destino y explica qué verificar antes de pedir."],
@@ -28,7 +28,7 @@ export const seoPageIntro: Record<Locale, Record<IndependentPage, [string, strin
     qc: ["Guía de fotos QC de Kakobuy", "Método repetible para identidad, forma, construcción y evidencia decisiva antes del envío."],
     shipping: ["Calculadora y guía de peso Kakobuy", "Compara rutas con peso y medidas realistas, entiende el volumétrico y separa servicios de impuestos de destino."],
     faq: ["Comisiones, almacén y devoluciones Kakobuy", "Respuestas fechadas basadas en la ayuda pública, sin convertir términos variables en garantías."],
-    articles: ["Opiniones y guías con evidencia Kakobuy", "Investigación verificada sobre web oficial, legitimidad, seguridad, políticas, QC y decisiones de paquete."],
+    articles: ["Guías Kakobuy: QC, costes, enlaces y envío", "Investigación verificada sobre web oficial, legitimidad, seguridad, políticas, QC y decisiones de paquete."],
   },
   fr: {
     spreadsheet: ["Tableur Kakobuy 2026", "Index vérifié où image, prix et destination restent alignés, avec les contrôles à faire avant commande."],
@@ -37,7 +37,7 @@ export const seoPageIntro: Record<Locale, Record<IndependentPage, [string, strin
     qc: ["Guide des photos QC Kakobuy", "Méthode répétable pour identité, forme, fabrication et preuve décisive avant expédition."],
     shipping: ["Calculateur et guide de poids Kakobuy", "Comparez les lignes avec poids et dimensions réalistes et séparez services de plateforme et taxes de destination."],
     faq: ["Frais, stockage et retours Kakobuy", "Réponses datées issues des pages d'aide publiques, sans transformer des conditions variables en garanties."],
-    articles: ["Avis Kakobuy et guides étayés", "Recherche vérifiée sur le site officiel, la légitimité, la sécurité, les politiques, le QC et les colis."],
+    articles: ["Guides Kakobuy : QC, frais, liens et livraison", "Recherche vérifiée sur le site officiel, la légitimité, la sécurité, les politiques, le QC et les colis."],
   },
   it: {
     spreadsheet: ["Foglio Kakobuy 2026", "Indice verificato che mantiene allineati immagine, prezzo e destinazione e indica cosa controllare prima dell'ordine."],
@@ -46,59 +46,14 @@ export const seoPageIntro: Record<Locale, Record<IndependentPage, [string, strin
     qc: ["Guida alle foto QC Kakobuy", "Metodo ripetibile per identità, forma, costruzione e prova decisiva prima della spedizione."],
     shipping: ["Calcolatore e guida peso Kakobuy", "Confronta linee con peso e misure realistiche e separa servizi di piattaforma e tasse di destinazione."],
     faq: ["Costi, deposito e resi Kakobuy", "Risposte datate basate sulle pagine pubbliche, senza trasformare termini variabili in garanzie."],
-    articles: ["Recensioni Kakobuy e guide basate su prove", "Ricerca verificata su sito ufficiale, affidabilità, sicurezza, politiche, QC e decisioni sul pacco."],
+    articles: ["Guide Kakobuy: QC, costi, link e spedizione", "Ricerca verificata su sito ufficiale, affidabilità, sicurezza, politiche, QC e decisioni sul pacco."],
   },
 };
 
-export const officialFaqs: Record<Locale, Array<[string, string]>> = {
-  en: [
-    ["Is this website Kakobuy?", "No. Kakobuy VIP is an independent research and discovery site. It does not process orders or hold customer funds."],
-    ["What is the public Kakobuy buying flow?", "Kakobuy's beginner material describes copying a product link from a Chinese marketplace, pasting it into Kakobuy, selecting and paying for the item, waiting for warehouse arrival and quality checking, then submitting an international parcel."],
-    ["Does Kakobuy currently advertise free warehouse storage?", "Yes. Its public service introduction and beginner guide currently state 100 days of free warehouse storage. This was checked on 29 August 2026; confirm the live account policy before relying on it."],
-    ["Does Kakobuy charge a basic shopping-agent handling fee?", "Its Services & Fees help page currently says the basic shopping-agent service adds no handling charge apart from item cost and shipping. Optional value-added services can cost extra."],
-    ["What PayPal fee does Kakobuy currently show?", "The public payment help currently lists 3.5% plus US$0.30 for PayPal. Payment terms can change, so the live checkout is authoritative."],
-    ["What does Kakobuy warehouse QC cover?", "Kakobuy's public homepage says quality checking after warehouse arrival covers visible issues including defects, size and color. Photos do not prove material, durability, comfort or authenticity."],
-    ["Is the 5-Day Return/Exchange Guarantee universal?", "No. Kakobuy describes it as an after-sales service offered by sellers on supported third-party marketplace products. Eligibility depends on the exact item and current terms."],
-    ["Is a shipping estimate the final cost or delivery guarantee?", "No. Final cost can change with packed weight, dimensions, route rules, classification and services. Delivery windows can also change because of customs, carrier capacity and local handoff."],
-  ],
-  de: [
-    ["Ist diese Website Kakobuy?", "Nein. Kakobuy VIP ist eine unabhängige Recherche- und Suchseite und verarbeitet keine Bestellungen oder Kundengelder."],
-    ["Wie beschreibt Kakobuy den Kaufablauf?", "Produktlink eines chinesischen Marktplatzes kopieren, bei Kakobuy einfügen, Artikel wählen und bezahlen, Lagereingang mit Qualitätsprüfung abwarten und anschließend das internationale Paket einreichen."],
-    ["Gibt es aktuell kostenlose Lagerung?", "Die öffentlichen Informationen nennen derzeit 100 Tage kostenlose Lagerung. Geprüft am 29. August 2026; aktuelle Kontobedingungen erneut bestätigen."],
-    ["Gibt es eine Basis-Handling-Gebühr?", "Die Gebührenseite nennt derzeit keine zusätzliche Handling-Gebühr neben Artikel und Versand. Optionale Zusatzdienste können kosten."],
-    ["Welche PayPal-Gebühr wird angezeigt?", "Die öffentliche Hilfe nennt aktuell 3,5 % plus 0,30 US-Dollar. Der Live-Checkout bleibt maßgeblich."],
-    ["Was deckt die Lager-QC ab?", "Kakobuy nennt sichtbare Mängel, Größe und Farbe. Fotos beweisen weder Material, Haltbarkeit, Komfort noch Echtheit."],
-    ["Gilt die 5-Tage-Rückgabe immer?", "Nein. Kakobuy beschreibt sie als Verkäuferleistung für unterstützte Marktplatzprodukte; die genaue Bestellung muss berechtigt sein."],
-    ["Ist die Versandschätzung garantiert?", "Nein. Packgewicht, Maße, Linienregeln und Dienste können Kosten ändern; Zoll und Übergaben können die Laufzeit ändern."],
-  ],
-  es: [
-    ["¿Esta web es Kakobuy?", "No. Kakobuy VIP es un sitio independiente de investigación y descubrimiento; no procesa pedidos ni guarda fondos."],
-    ["¿Cuál es el flujo público de compra?", "Copiar el enlace de un marketplace chino, pegarlo en Kakobuy, elegir y pagar, esperar llegada y QC, y enviar el paquete internacional."],
-    ["¿Hay almacenamiento gratuito?", "La información pública indica actualmente 100 días gratuitos. Revisado el 29 de agosto de 2026; confirma la política en vivo."],
-    ["¿Existe comisión básica de agente?", "La ayuda dice actualmente que no añade handling fee aparte de artículo y envío. Los servicios opcionales pueden costar."],
-    ["¿Qué comisión PayPal aparece?", "La ayuda pública muestra ahora 3,5% más US$0,30. El checkout en vivo es la referencia."],
-    ["¿Qué cubre el QC?", "Kakobuy cita defectos visibles, talla y color. Las fotos no prueban material, duración, comodidad o autenticidad."],
-    ["¿La devolución de cinco días es universal?", "No. Se describe como servicio de vendedores en productos compatibles y depende del artículo y los términos."],
-    ["¿El estimado de envío es final?", "No. Peso embalado, medidas, ruta, clasificación y servicios cambian coste; aduana y transportistas cambian plazos."],
-  ],
-  fr: [
-    ["Ce site est-il Kakobuy ?", "Non. Kakobuy VIP est un site indépendant de recherche et de découverte ; il ne traite pas les commandes ou fonds."],
-    ["Quel est le parcours d'achat public ?", "Copier un lien de marketplace chinoise, le coller dans Kakobuy, choisir et payer, attendre l'arrivée et le QC, puis soumettre le colis international."],
-    ["Le stockage est-il gratuit ?", "Les informations publiques indiquent actuellement 100 jours gratuits. Vérifié le 29 août 2026 ; confirmez la règle en direct."],
-    ["Y a-t-il des frais d'agent de base ?", "L'aide indique actuellement aucun handling fee en plus de l'article et du transport. Les services optionnels peuvent coûter."],
-    ["Quels frais PayPal sont affichés ?", "L'aide publique affiche actuellement 3,5 % plus 0,30 USD. Le paiement en direct fait foi."],
-    ["Que couvre le QC ?", "Kakobuy cite défauts visibles, taille et couleur. Les photos ne prouvent ni matière, durée, confort ou authenticité."],
-    ["Le retour cinq jours est-il universel ?", "Non. Il est décrit comme un service de vendeurs sur produits compatibles et dépend de l'article et des conditions."],
-    ["L'estimation de livraison est-elle finale ?", "Non. Poids, dimensions, ligne, classification et services changent le coût ; douane et transporteurs changent les délais."],
-  ],
-  it: [
-    ["Questo sito è Kakobuy?", "No. Kakobuy VIP è un sito indipendente di ricerca e scoperta; non gestisce ordini o fondi."],
-    ["Qual è il flusso pubblico?", "Copiare un link da un marketplace cinese, incollarlo in Kakobuy, scegliere e pagare, attendere arrivo e QC, poi inviare il pacco internazionale."],
-    ["Il deposito è gratuito?", "Le informazioni pubbliche indicano ora 100 giorni gratuiti. Verificato il 29 agosto 2026; conferma la regola live."],
-    ["C'è una commissione base dell'agente?", "L'aiuto indica ora nessun handling fee oltre articolo e spedizione. I servizi opzionali possono costare."],
-    ["Quale costo PayPal appare?", "L'aiuto pubblico mostra ora 3,5% più US$0,30. Fa fede il checkout live."],
-    ["Cosa copre il QC?", "Kakobuy cita difetti visibili, taglia e colore. Le foto non provano materiale, durata, comodità o autenticità."],
-    ["Il reso cinque giorni è universale?", "No. È descritto come servizio dei venditori su prodotti compatibili e dipende dall'articolo e dai termini."],
-    ["La stima di spedizione è finale?", "No. Peso, misure, linea, classificazione e servizi cambiano il costo; dogana e vettori cambiano i tempi."],
-  ],
+export const officialFaqs: Record<Locale, Array<[string,string]>> = {
+ en:[['Is this website Kakobuy?','No. Kakobuy VIP is an independent guide. It does not process orders or hold customer funds.'],['How does a purchase reach me?','The product is ordered from a seller, received and inspected at the warehouse, then submitted as an international parcel. Item payment and parcel payment are separate stages.'],['How long can I store an item?','Read the allowance and expiry in the current warehouse record for each item. Check extension terms before relying on additional time.'],['Which fees belong in my budget?','Separate the product, domestic delivery, payment charges, selected services and international freight. Use current checkout amounts and mark unresolved destination charges separately.'],['Is a published payment fee still current?','An old percentage is not a current quote. Compare the total charged by your available payment methods and avoid counting conversion twice.'],['What can QC photos establish?','They help check visible identity, color, size labels and defects. They cannot prove material composition, authenticity, comfort or long-term durability.'],['Can every item be returned?','No universal return promise applies here. Check the exact order, seller conditions, request deadline and possible domestic return charge.'],['Is the weight calculator a shipping quote?','No. It compares actual and volumetric weight using your inputs. Route pricing, rounding, restrictions and current availability must be checked separately.']],
+ de:[['Ist diese Website Kakobuy?','Nein. Kakobuy VIP ist ein unabhängiger Leitfaden und bearbeitet weder Bestellungen noch Kundengelder.'],['Wie kommt eine Bestellung an?','Der Verkäufer liefert zum Lager. Nach Eingang und QC folgt die internationale Paketeinreichung. Artikel- und Paketzahlung sind getrennte Schritte.'],['Wie lange kann ich lagern?','Prüfe Dauer und Ablaufdatum jedes Artikels im aktuellen Lagereintrag sowie mögliche Verlängerungsbedingungen.'],['Welche Kosten gehören ins Budget?','Trenne Ware, Inlandslieferung, Zahlung, Zusatzleistungen und internationalen Versand. Nutze aktuelle Beträge und markiere offene Zielgebühren.'],['Gilt eine veröffentlichte Zahlungsgebühr noch?','Ein alter Prozentsatz ist kein aktuelles Angebot. Vergleiche den gesamten Zahlbetrag und zähle Umrechnung nicht doppelt.'],['Was belegen QC-Fotos?','Sichtbare Identität, Farbe, Größenetikett und Mängel lassen sich prüfen. Material, Echtheit, Komfort und Haltbarkeit sind dadurch nicht bewiesen.'],['Kann jeder Artikel zurückgegeben werden?','Prüfe konkrete Bestellung, Verkäuferbedingungen, Frist und mögliche inländische Rücksendekosten. Es gibt hier keine allgemeine Zusage.'],['Liefert der Rechner einen Versandpreis?','Nein. Er vergleicht Ist- und Volumengewicht. Preise, Rundung, Beschränkungen und Verfügbarkeit müssen separat geprüft werden.']],
+ es:[['¿Esta web es Kakobuy?','No. Kakobuy VIP es una guía independiente; no procesa pedidos ni guarda fondos.'],['¿Cómo llega una compra?','El vendedor envía al almacén, donde se recibe y revisa. Después se presenta el paquete internacional. Producto y paquete se pagan en etapas distintas.'],['¿Cuánto puedo almacenar?','Consulta duración y vencimiento de cada artículo en su registro actual y revisa las condiciones de extensión.'],['¿Qué gastos debo presupuestar?','Separa producto, entrega nacional, pago, servicios y transporte internacional. Usa importes actuales y marca gastos de destino pendientes.'],['¿Sigue vigente una comisión publicada?','Un porcentaje antiguo no es una cotización actual. Compara el cargo total de cada método y evita duplicar la conversión.'],['¿Qué acreditan las fotos QC?','Ayudan a revisar identidad visible, color, etiqueta y defectos. No prueban composición, autenticidad, comodidad ni duración.'],['¿Se puede devolver cualquier artículo?','Comprueba pedido, vendedor, plazo y posible coste de retorno nacional. No existe aquí una promesa universal.'],['¿La calculadora cotiza el envío?','No. Compara peso real y volumétrico. Precios, redondeos, restricciones y disponibilidad deben comprobarse aparte.']],
+ fr:[['Ce site est-il Kakobuy ?','Non. Kakobuy VIP est un guide indépendant qui ne traite ni commandes ni fonds clients.'],['Comment un achat arrive-t-il ?','Le vendeur livre à l’entrepôt pour réception et QC, puis vient la soumission du colis international. Achat et transport se paient à des étapes distinctes.'],['Combien de temps stocker un article ?','Lisez durée et expiration de chaque dossier actuel, ainsi que les conditions de prolongation.'],['Quels frais prévoir ?','Séparez produit, livraison intérieure, paiement, services et fret. Utilisez les montants actuels et signalez les frais à destination non résolus.'],['Un ancien frais de paiement reste-t-il valable ?','Un pourcentage publié autrefois n’est pas un devis actuel. Comparez les débits totaux sans compter deux fois la conversion.'],['Que montrent les photos QC ?','Identité visible, couleur, étiquette et défauts peuvent être examinés. Composition, authenticité, confort et durabilité ne sont pas prouvés.'],['Tout article est-il retournable ?','Vérifiez commande, vendeur, délai et frais de retour intérieur éventuels. Aucune promesse universelle n’est faite ici.'],['Le calculateur donne-t-il un tarif ?','Non. Il compare poids réel et volumétrique. Prix, arrondis, restrictions et disponibilité se vérifient séparément.']],
+ it:[['Questo sito è Kakobuy?','No. Kakobuy VIP è una guida indipendente e non gestisce ordini o fondi.'],['Come arriva un acquisto?','Il venditore invia al magazzino per ricezione e QC, poi si presenta il pacco internazionale. Prodotto e pacco hanno pagamenti distinti.'],['Quanto posso conservare un articolo?','Leggi durata e scadenza di ogni scheda corrente e controlla le condizioni di proroga.'],['Quali costi includere?','Separa prodotto, consegna interna, pagamento, servizi e trasporto internazionale. Usa importi correnti e indica i costi di destinazione irrisolti.'],['Una commissione pubblicata è ancora valida?','Una vecchia percentuale non è un preventivo corrente. Confronta gli addebiti totali senza duplicare la conversione.'],['Cosa mostrano le foto QC?','Aiutano a verificare identità visibile, colore, etichetta e difetti. Non provano composizione, autenticità, comfort o durata.'],['Ogni articolo è restituibile?','Verifica ordine, venditore, scadenza e possibili costi di ritorno nazionale. Qui non viene promessa copertura universale.'],['Il calcolatore fornisce un prezzo?','No. Confronta peso reale e volumetrico. Tariffe, arrotondamenti, restrizioni e disponibilità vanno controllati a parte.']]
 };
