@@ -6,7 +6,10 @@ import { newFindsArticles, newFindsSlugs, type NewFindsSlug } from "./new-finds-
 import { newFindsAddenda } from "./new-finds-addenda";
 import { newFindsFinalNotes } from "./new-finds-final-notes";
 
+import { shippingArticles, shippingSlugs, shippingKeywords, type ShippingSlug } from "./shipping-articles";
+
 export type ArticleSlug =
+  | ShippingSlug
   | "how-to-use-kakobuy"
   | "qc-photo-checklist"
   | "actual-vs-volumetric-weight"
@@ -459,6 +462,7 @@ export const articleRecords: ArticleRecord[] = [
     readingTime: "15 min read",
     updated: "September 12, 2026"
   },
+  ...shippingSlugs.map((slug): ArticleRecord => ({ slug, ...shippingArticles.en[slug], primaryKeyword: shippingKeywords[slug], readingTime: "7 min read", updated: "October 13, 2026" })),
   ...newFindsSlugs.map((slug): ArticleRecord => ({
     slug,
     ...newFindsArticles[slug],

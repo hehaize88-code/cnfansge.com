@@ -1,10 +1,12 @@
+import { articleDates } from "./article-dates";
+import { shippingKeywords } from "./shipping-articles";
 import type { Metadata } from "next";
 import type { ArticleSlug } from "./article-data";
 import { getLocalizedArticle } from "./localized-article-data";
 import { Lang, languages, localizedPath } from "./site-data";
 import type { SectionKey } from "./ResearchPage";
 
-export const baseUrl = "https://kakobuyvip.store";
+export { baseUrl } from "./site-config";
 
 type SeoEntry = { title: string; description: string; keywords: string[] };
 
@@ -75,18 +77,18 @@ export function sectionMetadata(section: SectionKey, lang: Lang): Metadata {
 
 export function homeMetadata(lang: Lang): Metadata {
   const titles: Record<Lang, string> = {
-    en: "Kakobuy Spreadsheet & Finds 2026 | Product Links and QC Guides",
-    de: "Aktuelle Kakobuy-Funde und Produktrouten 2026",
-    es: "Últimos hallazgos y rutas Kakobuy 2026",
-    fr: "Dernières sélections et liens Kakobuy 2026",
-    it: "Ultimi prodotti e percorsi Kakobuy 2026",
+    en: "Kakobuy Spreadsheet & Finds | QC and Shipping Guides",
+    de: "Kakobuy Spreadsheet & Funde | QC und Versandratgeber",
+    es: "Spreadsheet Kakobuy y hallazgos | QC y envío",
+    fr: "Kakobuy Spreadsheet et sélections | QC et livraison",
+    it: "Kakobuy Spreadsheet e prodotti | QC e spedizione",
   };
   const descriptions: Record<Lang, string> = {
-    en: "Browse Kakobuy spreadsheet categories, product finds and current item links. Compare listing images, options and warehouse QC checks before choosing a route.",
-    de: "Neue Kakobuy-Funde, klare Kategorien, passende Produktbilder, aktuelle Routen und praktische QC-Prüfungen.",
-    es: "Consulta hallazgos Kakobuy recientes, categorías claras, imágenes correspondientes, rutas actuales y controles QC.",
-    fr: "Découvrez les sélections Kakobuy récentes, catégories ciblées, images correspondantes, liens actuels et contrôles QC.",
-    it: "Esplora prodotti Kakobuy recenti, categorie mirate, immagini corrispondenti, percorsi attuali e controlli QC.",
+    en: "Browse Kakobuy spreadsheet categories and product links. Compare listings, check warehouse QC and plan shipping costs, packing and order stages.",
+    de: "Kakobuy-Produktlinks nach Kategorien entdecken. Angebote und QC prüfen, Versandkosten schätzen und den Bestellablauf verstehen.",
+    es: "Explora enlaces y categorías del spreadsheet Kakobuy. Compara anuncios, revisa fotos QC y planifica costes y etapas del envío.",
+    fr: "Explorez les liens et catégories du spreadsheet Kakobuy. Comparez les annonces, vérifiez le QC et préparez coûts et étapes de livraison.",
+    it: "Esplora link e categorie dello spreadsheet Kakobuy. Confronta inserzioni, controlla foto QC e pianifica costi e fasi della spedizione.",
   };
   return {
     title: titles[lang],
@@ -112,28 +114,24 @@ export function articleMetadata(slug: ArticleSlug, lang: Lang): Metadata {
     alternates: { canonical, languages: languageAlternates(pathname) },
   };
 
-  if (slug === "kakobuy-usa-pre-order-readiness-checklist" || slug === "kakobuy-us-delivery-address-format" || slug === "kakobuy-apartment-suite-unit-zip4-checks" || slug === "kakobuy-billing-address-vs-delivery-address") {
-    const publishedTime = slug === "kakobuy-billing-address-vs-delivery-address" ? "2026-09-12T00:00:00+08:00" : slug === "kakobuy-apartment-suite-unit-zip4-checks" ? "2026-09-10T00:00:00+08:00" : slug === "kakobuy-us-delivery-address-format" ? "2026-09-04T00:00:00+08:00" : "2026-09-02T00:00:00+08:00";
-    metadata.openGraph = {
-      type: "article",
-      url: canonical,
-      title: article.title,
-      description: article.description,
-      siteName: "KakobuyVIP",
-      locale: { en: "en_US", de: "de_DE", es: "es_ES", fr: "fr_FR", it: "it_IT" }[lang],
-      alternateLocale: languages.filter((language) => language !== lang).map((language) => ({ en: "en_US", de: "de_DE", es: "es_ES", fr: "fr_FR", it: "it_IT" })[language]),
-      publishedTime,
-      modifiedTime: publishedTime,
-    };
-  }
+  const dates = articleDates(slug);
+  metadata.openGraph = {
+    type: "article", url: canonical, title: article.title, description: article.description,
+    siteName: "KakobuyVIP",
+    locale: { en: "en_US", de: "de_DE", es: "es_ES", fr: "fr_FR", it: "it_IT" }[lang],
+    alternateLocale: languages.filter(language => language !== lang).map(language => ({ en: "en_US", de: "de_DE", es: "es_ES", fr: "fr_FR", it: "it_IT" })[language]),
+    publishedTime: `${dates.published}T00:00:00Z`, modifiedTime: `${dates.modified}T00:00:00Z`,
+  };
+  metadata.twitter = { card: "summary", title: article.title, description: article.description };
 
   return metadata;
 }
 
 const articleByIntent: Record<ArticleSlug, string> = {
+  ...shippingKeywords,
   "how-to-use-kakobuy": "how to use Kakobuy",
   "qc-photo-checklist": "Kakobuy QC photos",
-  "actual-vs-volumetric-weight": "Kakobuy shipping cost",
+  "actual-vs-volumetric-weight": "Kakobuy volumetric weight",
   "kakobuy-fees-explained": "Kakobuy fees",
   "kakobuy-warehouse-storage-guide": "Kakobuy warehouse",
   "kakobuy-return-exchange-guide": "Kakobuy return policy",

@@ -1,15 +1,17 @@
 import type { MetadataRoute } from "next";
-import { articleSlugs } from "@/components/article-data";
+import { articleDates } from "@/components/article-dates";
+import { articleSlugs, type ArticleSlug } from "@/components/article-data";
 import { baseUrl, languageAlternates } from "@/components/seo-data";
 import { languages, localizedPath } from "@/components/site-data";
 
 export const dynamic = "force-static";
 
 const sections = ["spreadsheet", "finds", "guide", "qc", "shipping", "faq", "articles"];
-const updated = new Date("2026-08-31T00:00:00.000Z");
+const updated = new Date("2026-10-13T00:00:00.000Z");
 
 function entry(pathname: string, lang: (typeof languages)[number], priority: number, frequency: "weekly" | "monthly"): MetadataRoute.Sitemap[number] {
-  const lastModified = /check-kakobuy-product-links|kakobuy-shoes-spreadsheet-checks|kakobuy-hoodie-size-qc-guide|kakobuy-jersey-listing-measurements|kakobuy-weidian-taobao-links|kakobuy-product-link-not-working/.test(pathname) ? new Date("2026-09-23T00:00:00.000Z") : pathname.includes("kakobuy-billing-address-vs-delivery-address") ? new Date("2026-09-12T00:00:00.000Z") : pathname.includes("kakobuy-apartment-suite-unit-zip4-checks") ? new Date("2026-09-10T00:00:00.000Z") : pathname.includes("kakobuy-us-delivery-address-format") ? new Date("2026-09-04T00:00:00.000Z") : pathname.includes("kakobuy-usa-pre-order-readiness-checklist") ? new Date("2026-09-02T00:00:00.000Z") : updated;
+  const slug = pathname.startsWith("/articles/") ? pathname.slice("/articles/".length) as ArticleSlug : undefined;
+  const lastModified = slug ? new Date(`${articleDates(slug).modified}T00:00:00Z`) : updated;
   return {
     url: `${baseUrl}${localizedPath(pathname, lang) === "/" ? "" : localizedPath(pathname, lang)}`,
     lastModified,

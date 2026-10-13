@@ -5,11 +5,17 @@ export type SourceReference = {
   publisher: string;
   title: string;
   reference: string;
+  url?: string;
   checked: string;
   scope: Record<Lang, string>;
 };
 
 const sources = {
+  estimateCurrent: {"publisher": "Kakobuy", "title": "Shipping estimate", "reference": "https://kakobuy.com/tools/estimate", "checked": "2026-10-13", "scope": {"en": "Current estimate tool; third-party logistics rates can change.", "de": "Aktueller Rechner; Logistikpreise Dritter können sich ändern.", "es": "Estimador actual; las tarifas de terceros pueden cambiar.", "fr": "Calculateur actuel ; les tarifs des prestataires peuvent changer.", "it": "Calcolatore attuale; le tariffe di terzi possono cambiare."}},
+  warehouseCurrent: {"publisher": "Kakobuy", "title": "Warehouse arrival and parcel measurements", "reference": "https://kakobuy.com/service/help/question?cid=35&id=84", "checked": "2026-10-13", "scope": {"en": "Intake status and differences between intake and final packed measurements.", "de": "Lagereingang und Unterschiede zu endgültigen Packmaßen.", "es": "Recepción y diferencias respecto a las medidas finales del paquete.", "fr": "Réception et écarts avec les mesures du colis emballé.", "it": "Ricezione e differenze rispetto alle misure finali del pacco."}},
+  parcelFlowCurrent: {"publisher": "Kakobuy", "title": "Shopping and parcel submission guide", "reference": "https://item2.kakobuy.com/index/information?information_id=12", "checked": "2026-10-13", "scope": {"en": "Selecting warehouse items, packing services and submitting a parcel.", "de": "Lagerwaren auswählen, Packdienste und Paketeinreichung.", "es": "Selección de artículos, servicios de embalaje y presentación del paquete.", "fr": "Choix des articles, emballage et soumission du colis.", "it": "Selezione degli articoli, imballaggio e presentazione del pacco."}},
+  trackingCurrent: {"publisher": "Kakobuy", "title": "Parcel logistics tracking", "reference": "https://www.kakobuy.com/service/help/question?id=111", "checked": "2026-10-13", "scope": {"en": "Where to view parcel logistics details after dispatch.", "de": "Logistikdetails des Pakets nach Versand aufrufen.", "es": "Dónde consultar el seguimiento después del despacho.", "fr": "Consulter les détails logistiques après expédition.", "it": "Dove vedere i dettagli logistici dopo la spedizione."}},
+
   service: {
     publisher: "Kakobuy",
     title: "Service introduction",
@@ -170,6 +176,9 @@ const sources = {
 } satisfies Record<string, SourceReference>;
 
 const sourceKeysByArticle: Record<ArticleSlug, (keyof typeof sources)[]> = {
+  "kakobuy-shipping-calculator": ["estimateCurrent", "warehouseCurrent"],
+  "kakobuy-shipping-time-tracking": ["parcelFlowCurrent", "warehouseCurrent", "trackingCurrent"],
+  "kakobuy-parcel-consolidation-packing": ["parcelFlowCurrent", "warehouseCurrent", "estimateCurrent"],
   "how-to-use-kakobuy": ["service", "returns", "estimate"],
   "qc-photo-checklist": ["service", "returns"],
   "actual-vs-volumetric-weight": ["estimate", "costs"],
@@ -198,5 +207,10 @@ export const sourceHeadings: Record<Lang, [string, string]> = {
 };
 
 export function sourcesForArticle(slug: ArticleSlug) {
-  return sourceKeysByArticle[slug].map((key) => sources[key]);
+  return sourceKeysByArticle[slug].map((key): SourceReference => {
+    const source = sources[key];
+    const reference = source.reference.split(/\s+[·|]\s+/)[0];
+    const url = /^https?:\/\//.test(reference) ? reference : reference.startsWith("/") && source.publisher === "Kakobuy" ? `https://kakobuy.com${reference}` : undefined;
+    return { ...source, url };
+  });
 }

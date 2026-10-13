@@ -3,6 +3,7 @@ import Script from "next/script";
 import { JsonLd } from "@/components/JsonLd";
 import { languageAlternates } from "@/components/seo-data";
 import "./globals.css";
+import { AnalyticsEvents } from "@/components/AnalyticsEvents";
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://kakobuyvip.store"),
@@ -40,6 +41,7 @@ gtag("config", "G-BE0ZJNGLKL");`}</Script>
           description: "Independent directory for current Kakobuy finds, product routes, categories and buyer research.",
           inLanguage: ["en", "de", "es", "fr", "it"],
         }} />
+        <AnalyticsEvents />
         {children}
       </body>
     </html>

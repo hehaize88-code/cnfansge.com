@@ -590,3 +590,51 @@ footer > div:last-child a:hover { color: var(--red); }
 @media (prefers-reduced-motion: reduce) {
   * { scroll-behavior: auto !important; transition: none !important; }
 }
+
+/* Reading and discovery improvements shared by all five locales. */
+.guide-shortcuts { width: min(1320px, calc(100% - 36px)); margin: 26px auto; }
+.guide-shortcuts h2 { font-size: 19px; letter-spacing: -.02em; margin: 0 0 14px; }
+.guide-shortcuts > div { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 10px; }
+.guide-shortcuts a { display: flex; gap: 12px; align-items: center; min-height: 72px; padding: 16px; border: 1px solid var(--line); border-radius: 14px; background: white; font-size: 15px; font-weight: 700; }
+.guide-shortcuts a span:first-child { color: var(--red); font-size: 12px; }
+.guide-shortcuts a span:last-child { margin-left: auto; }
+.guide-shortcuts a:hover, .guide-shortcuts a:focus-visible { border-color: var(--red); }
+.page-languages { display: flex; flex-wrap: wrap; justify-content: center; gap: 10px 20px; padding: 24px 16px; border-top: 1px solid var(--line); }
+.page-languages a { font-size: 14px; padding: 8px 0; text-underline-offset: 5px; }
+.page-languages a[aria-current] { color: var(--red); text-decoration: underline; font-weight: 700; }
+.article-contents, .official-tool { width: min(1020px, calc(100% - 36px)); margin: 24px auto; }
+.article-contents { padding: 24px; border: 1px solid var(--line); border-radius: 18px; background: white; }
+.article-contents h2 { font-size: 19px; margin: 0 0 16px; }
+.article-contents ol { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px 32px; padding-left: 22px; margin: 0; }
+.article-contents li { font-size: 15px; line-height: 1.55; padding-left: 4px; }
+.article-contents a:hover, .article-contents a:focus-visible { text-decoration: underline; text-underline-offset: 4px; }
+.official-tool a { display: inline-flex; padding: 15px 20px; background: var(--ink); color: white; border-radius: 12px; font-size: 16px; font-weight: 700; }
+.article-body section { scroll-margin-top: 24px; }
+.article-body section > div { min-width: 0; }
+.article-body p { font-size: 16px; overflow-wrap: anywhere; }
+.article-body p + p { margin-top: 18px; }
+.article-context-link { margin-top: 22px; padding: 16px 18px; border-left: 3px solid var(--red); background: #fff; font-size: 15px; line-height: 1.6; }
+.article-context-link > span { display: block; color: var(--muted); font-size: 12px; margin-bottom: 5px; }
+.article-context-link a { text-decoration: underline; text-underline-offset: 4px; font-weight: 650; }
+.article-takeaways p { font-size: 14px; }
+.article-takeaways small, .article-note b { font-size: 11px; }
+.article-note a { font-size: 14px; }
+.article-card p { font-size: 14px; line-height: 1.65; }
+.source-grid code { white-space: normal; overflow-wrap: anywhere; }
+.source-grid h3 a { text-decoration: underline; text-underline-offset: 4px; }
+.article-hero h1, .article-card h3 { overflow-wrap: anywhere; }
+@media (max-width: 760px) {
+  .guide-shortcuts > div { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .article-contents ol { grid-template-columns: 1fr; }
+  .article-takeaways { position: static; }
+}
+@media (max-width: 460px) {
+  .guide-shortcuts, .article-contents, .official-tool { width: calc(100% - 20px); }
+  .guide-shortcuts a { padding: 12px; gap: 8px; font-size: 14px; }
+  .article-contents { padding: 20px; }
+  .article-body p { font-size: 16px; line-height: 1.8; }
+  .article-body section { grid-template-columns: 22px minmax(0, 1fr); }
+  .article-body h2 { font-size: 24px; line-height: 1.2; }
+  .article-hero h1 { font-size: clamp(31px, 9vw, 43px); }
+  .article-card p { font-size: 14px; }
+}

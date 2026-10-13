@@ -7,9 +7,10 @@
   },
   "scripts": {
     "dev": "next dev",
-    "build": "next build --webpack",
+    "build": "next build --webpack && node scripts/finalize-export.mjs && node scripts/verify-export.mjs",
     "start": "next start",
-    "lint": "eslint . --ignore-pattern out --ignore-pattern .next"
+    "lint": "eslint . --ignore-pattern out --ignore-pattern .next",
+    "verify:seo": "node scripts/verify-export.mjs"
   },
   "dependencies": {
     "@base-ui/react": "^1.7.0",

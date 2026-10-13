@@ -1,3 +1,5 @@
+import { shippingArticles, type ShippingSlug } from "./shipping-articles";
+import { articleImprovement } from "./article-improvements";
 import type { ArticleRecord, ArticleSlug } from "./article-data";
 import { newFindsArticles, type NewFindsSlug } from "./new-finds-articles";
 import { newFindsArticle } from "./new-finds-localized";
@@ -543,7 +545,8 @@ const it: ArticleTranslations = {
 const en = articleBySlug as ArticleTranslations;
 export const localizedArticles: Record<Lang, ArticleTranslations> = { en, de, es, fr, it };
 
-export function getLocalizedArticle(lang: Lang, slug: ArticleSlug): LocalizedArticle {
+function originalLocalizedArticle(lang: Lang, slug: ArticleSlug): LocalizedArticle {
+  if (slug in shippingArticles[lang]) return shippingArticles[lang][slug as ShippingSlug];
   if (slug in newFindsArticles) return newFindsArticle(lang, slug as NewFindsSlug);
   if (slug === "kakobuy-usa-pre-order-readiness-checklist") return usaArticleTranslations[lang];
   if (slug === "kakobuy-us-delivery-address-format") return usaAddressArticleTranslations[lang];
@@ -558,5 +561,17 @@ export function getLocalizedArticle(lang: Lang, slug: ArticleSlug): LocalizedArt
       ...section,
       body: expansions[index] ? `${section.body} ${expansions[index]}` : section.body,
     })),
+  };
+}
+
+export function getLocalizedArticle(lang: Lang, slug: ArticleSlug): LocalizedArticle {
+  const article = originalLocalizedArticle(lang, slug);
+  const improvement = articleImprovement(lang, slug);
+  if (!improvement) return article;
+  return {
+    ...article,
+    title: improvement.title ?? article.title,
+    description: improvement.description ?? article.description,
+    sections: [...article.sections, { heading: improvement.heading, body: improvement.body }],
   };
 }
