@@ -1,6 +1,7 @@
+import { articleUi } from "@/lib/article-improvements";
 import Link from "next/link";
 import Image from "next/image";
-import { ArrowRight, ArrowUpRight, BookOpenCheck, Boxes, Camera, CircleDollarSign, Clock3, PackageCheck, RotateCcw, Ruler, Search, ShieldCheck } from "lucide-react";
+import { ArrowRight, ArrowUpRight, BookOpenCheck, Boxes, Camera, CircleDollarSign, Clock3, PackageCheck, Focus, ScanText, RotateCcw, Ruler, Search, ShieldCheck } from "lucide-react";
 import { CatalogSearch } from "@/components/site-header";
 import { ProductExplorer } from "@/components/product-explorer";
 import { FaqList } from "@/components/faq-list";
@@ -58,7 +59,7 @@ export function HomePage({ locale }: { locale: Locale }) {
         <FaqList locale={locale} limit={4} />
       </section>
 
-      <section className="article-band"><div className="shell"><div className="section-head"><div><p className="kicker">{t.nav.articles}</p><h2>{t.articlesTitle}</h2><p>{t.articlesIntro}</p></div><Link className="text-link" href={sectionPath(locale, "articles")}>{t.nav.articles}<ArrowRight /></Link></div><ArticleGrid locale={locale} articles={articles.slice(0, 6)} /></div></section>
+      <section className="article-band"><div className="shell"><div className="section-head"><div><p className="kicker">{t.nav.articles}</p><h2>{t.articlesTitle}</h2><p>{t.articlesIntro}</p></div><Link className="text-link" href={sectionPath(locale, "articles")}>{t.nav.articles}<ArrowRight /></Link></div><ArticleGrid locale={locale} articles={articles.slice(0, 4)} /></div></section>
     </main>
   );
 }
@@ -67,6 +68,10 @@ export function ArticleGrid({ locale, articles }: { locale: Locale; articles: Ar
   const t = copy[locale];
   const labels = homeUi[locale].articleLabels;
   const visuals = {
+    "oopbuy-qc-photo-angles": { label: labels.qc, className: "thumb-qc", Icon: Camera },
+    "oopbuy-qc-quantity-accessories": { label: labels.qc, className: "thumb-sheet", Icon: Boxes },
+    "oopbuy-qc-prints-embroidery": { label: labels.qc, className: "thumb-guide", Icon: ScanText },
+    "oopbuy-qc-blur-compression": { label: labels.qc, className: "thumb-fees", Icon: Focus },
     "oopbuy-beginner-guide-2026": { label: labels.beginner, className: "thumb-guide", Icon: BookOpenCheck },
     "oopbuy-spreadsheet-workflow": { label: labels.spreadsheet, className: "thumb-sheet", Icon: Boxes },
     "oopbuy-qc-photo-checklist": { label: labels.qc, className: "thumb-qc", Icon: Camera },
@@ -181,5 +186,37 @@ export function ArticlePage({ locale, article }: { locale: Locale; article: Arti
     { "@type": "ListItem", position: 2, name: t.nav.articles, item: `${SITE_URL}${sectionPath(locale, "articles")}` },
     { "@type": "ListItem", position: 3, name: article.title, item: articleUrl },
   ] };
-  return <main><script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(articleLd) }} /><script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbLd) }} /><article className="longform"><header className="article-hero"><div className="shell article-header"><p className="eyebrow">OOPBUY VIP / {t.nav.articles}</p><h1>{article.title}</h1><p>{article.deck}</p><div><span><Clock3 />{article.readTime}</span><span>{article.sourceNote || t.updated}</span></div></div></header><div className="shell article-layout"><aside><p>{homeUi[locale].toc}</p>{article.sections.map((section, index) => <a key={section.heading} href={`#section-${index + 1}`}>{String(index + 1).padStart(2, "0")} {section.heading}</a>)}</aside><div className="article-body">{article.sections.map((section, index) => <section id={`section-${index + 1}`} key={section.heading}><span>{String(index + 1).padStart(2, "0")}</span><h2>{section.heading}</h2>{section.paragraphs.map((paragraph) => <p key={paragraph}>{paragraph}</p>)}</section>)}<div className="source-box"><PackageCheck /><div><b>{article.sourceNote || t.sourceNote}</b><p>{t.disclosure}</p>{article.related && <div className="source-links">{article.related.map((item) => <a key={item.label} href={item.kind === "qc" ? sectionPath(locale, "qc") : articlePath(locale, item.slug || "")}>{item.label}<ArrowUpRight /></a>)}</div>}{article.sources && <div className="source-links">{article.sources.map((source) => <a key={source.href} href={source.href} target="_blank" rel="noopener noreferrer">{source.label}<ArrowUpRight /></a>)}</div>}</div></div></div></div></article></main>;
+  const ui = articleUi[locale];
+  const toc = article.sections.map((section, index) => <a key={section.heading} href={`#section-${index + 1}`}>{String(index + 1).padStart(2, "0")} {section.heading}</a>);
+  return (
+    <main>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(articleLd) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbLd) }} />
+      <article className="longform">
+        <header className="article-hero"><div className="shell article-header">
+          <p className="eyebrow"><Link href={sectionPath(locale, "articles")}>OOPBUY VIP / {t.nav.articles}</Link></p>
+          <h1>{article.title}</h1><p>{article.deck}</p>
+          <div><span><Clock3 />{article.readTime}</span><span>{ui.updated} <time dateTime={article.modified || published}>{article.modified || published}</time></span></div>
+        </div></header>
+        <div className="shell article-layout">
+          <aside><p>{homeUi[locale].toc}</p>{toc}</aside>
+          <div className="article-body">
+            {article.takeaways && <section className="quick-checks" aria-labelledby="quick-checks-title"><h2 id="quick-checks-title">{ui.quick}</h2><ul>{article.takeaways.map(point => <li key={point}>{point}</li>)}</ul></section>}
+            <details className="mobile-toc"><summary>{homeUi[locale].toc}</summary><nav>{toc}</nav></details>
+            {article.reviewNotice && <p className="review-notice">{article.reviewNotice}</p>}
+            {article.sections.map((section, index) => <section id={`section-${index + 1}`} key={section.heading}>
+              <span>{String(index + 1).padStart(2, "0")}</span><h2>{section.heading}</h2>
+              {section.paragraphs.map(paragraph => <p key={paragraph}>{paragraph}</p>)}
+              {section.table && <div className="inspection-table" tabIndex={0} role="region" aria-label={`${ui.table}: ${section.heading}`}><table><caption>{ui.table}</caption><thead><tr>{section.table.headers.map(header => <th scope="col" key={header}>{header}</th>)}</tr></thead><tbody>{section.table.rows.map(row => <tr key={row[0]}>{row.map((cell, cellIndex) => cellIndex === 0 ? <th scope="row" key={cellIndex}>{cell}</th> : <td key={cellIndex}>{cell}</td>)}</tr>)}</tbody></table></div>}
+            </section>)}
+            <div className="source-box" data-article-end><PackageCheck /><div>
+              <b>{article.sourceNote || t.sourceNote}</b><p>{t.disclosure}</p>
+              {article.related && <nav className="related-reading" aria-label={ui.related}><h2>{ui.related}</h2><div className="source-links">{article.related.map(item => <Link data-related-article key={`${item.kind}-${item.slug}`} href={item.kind === "qc" ? sectionPath(locale, "qc") : articlePath(locale, item.slug || "")}>{item.label}<ArrowUpRight /></Link>)}</div></nav>}
+              {article.sources && <div className="source-links">{article.sources.map(source => <a key={source.href} href={source.href} target="_blank" rel="noopener noreferrer">{source.label}<ArrowUpRight /></a>)}</div>}
+            </div></div>
+          </div>
+        </div>
+      </article>
+    </main>
+  );
 }

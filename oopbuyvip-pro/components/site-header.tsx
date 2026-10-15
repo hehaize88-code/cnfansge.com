@@ -47,7 +47,7 @@ export function SiteHeader({ locale }: { locale: Locale }) {
             </button>
             {languageOpen && (
               <div className="language-menu">
-                {locales.map((item) => <Link key={item} href={localeRoute(pathname, item)} onClick={() => setLanguageOpen(false)}>{localeNames[item]}</Link>)}
+                {locales.map((item) => <Link key={item} href={localeRoute(pathname, item)} hrefLang={item} data-language-link={item} onClick={() => setLanguageOpen(false)}>{localeNames[item]}</Link>)}
               </div>
             )}
           </div>
@@ -60,7 +60,7 @@ export function SiteHeader({ locale }: { locale: Locale }) {
                 {sections.map((section) => <SheetClose key={section} asChild><Link href={sectionPath(locale, section)}>{t.nav[section]}</Link></SheetClose>)}
               </nav>
               <div className="mobile-languages">
-                {locales.map((item) => <SheetClose key={item} asChild><Link className={locale === item ? "current" : ""} href={localeRoute(pathname, item)}>{localeNames[item]}</Link></SheetClose>)}
+                {locales.map((item) => <SheetClose key={item} asChild><Link className={locale === item ? "current" : ""} href={localeRoute(pathname, item)} hrefLang={item} data-language-link={item}>{localeNames[item]}</Link></SheetClose>)}
               </div>
             </SheetContent>
           </Sheet>
@@ -79,4 +79,9 @@ export function CatalogSearch({ locale, compact = false }: { locale: Locale; com
       <Button type="submit">{t.searchButton}</Button>
     </form>
   );
+}
+
+export function FooterLanguages({ locale }: { locale: Locale }) {
+  const pathname = usePathname();
+  return <div className="footer-language">{locales.map(item => <Link key={item} className={locale === item ? "active" : ""} href={localeRoute(pathname, item)} hrefLang={item} data-language-link={item} aria-current={locale === item ? "page" : undefined}>{localeNames[item]}</Link>)}</div>;
 }

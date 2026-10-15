@@ -11,6 +11,7 @@ const titles: Record<Locale, string[]> = {
 const slugs = ["oopbuy-shoe-qc-symmetry", "oopbuy-hoodie-qc-measurements", "oopbuy-jersey-qc-names-numbers", "oopbuy-qc-size-labels", "oopbuy-qc-measurement-photos", "oopbuy-qc-color-differences", "oopbuy-qc-stitching-seams", "oopbuy-bag-qc-hardware"];
 
 export function articleSearchTitle(locale: Locale, article: Article) {
+  if (article.seoTitle) return article.seoTitle;
   const index = slugs.indexOf(article.slug);
   return index < 0 ? article.title : titles[locale][index];
 }
