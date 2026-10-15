@@ -1,4 +1,6 @@
-import { articleCards, articleSlugs, categories, products, type Language, ui } from "../site-content";
+import { getArticle } from "../article-copy";
+import { editorialLabels, octoberSlugs, seo } from "../editorial-config";
+import { categories, products, type Language, ui } from "../site-content";
 import { SiteFooter, SiteHeader } from "./SiteHeader";
 
 const categoryLabels: Record<Language, string[]> = {
@@ -13,7 +15,8 @@ const fixed:Record<Language,string[]>={en:["FIELD CARD / 001","KEEP OR REMOVE?",
 
 export function HomePage({ lang }: { lang: Language }) {
   const t = ui[lang];
-  const cards = articleCards[lang];
+  const cards = octoberSlugs.map(slug=>({slug,article:getArticle(lang,slug)!}));
+  const labels=editorialLabels[lang];
   const evidenceLink={en:"Review the on-site product evidence table",de:"Produkt-Nachweistabelle auf dieser Website prüfen",es:"Revisar la tabla de pruebas de producto del sitio",fr:"Consulter le tableau de preuves produit du site",it:"Consulta la tabella delle prove prodotto del sito"}[lang];
   const tagMap:Record<string,Record<Language,string>>={Latest:{en:"Latest",de:"Neu",es:"Nuevo",fr:"Nouveau",it:"Nuovo"},Popular:{en:"Popular",de:"Beliebt",es:"Popular",fr:"Populaire",it:"Popolare"},"New route":{en:"New route",de:"Neue Route",es:"Ruta nueva",fr:"Nouveau lien",it:"Nuova rotta"},Value:{en:"Value",de:"Preiswert",es:"Valor",fr:"Bon prix",it:"Conveniente"}};
   return <main className="home-page">
@@ -22,8 +25,8 @@ export function HomePage({ lang }: { lang: Language }) {
     <section className="hero shell" id="top">
       <div className="hero-copy">
         <div className="eyebrow"><span>{t.edition}</span>{t.eyebrow}</div>
-        <h1>{t.hero[0]} <em>{t.hero[1]}</em> {t.hero[2]}</h1>
-        <p className="hero-lead">{t.lead}</p>
+        <h1>LoveGoBuy <em>Spreadsheet</em><span className="hero-subtitle">{{en:"Finds, QC & sizing guides",de:"Produkte, QC & Größenratgeber",es:"Productos, QC y guía de tallas",fr:"Produits, QC et guide des tailles",it:"Prodotti, QC e guida alle taglie"}[lang]}</span></h1>
+        <p className="hero-lead">{seo[lang].description}</p>
         <form className="search-panel" action="https://cnfansge.com/search.html" method="get" target="_blank">
           <label htmlFor={`search-${lang}`}>{t.searchLabel}</label>
           <div className="search-row"><input id={`search-${lang}`} name="keywords" placeholder={t.searchPlaceholder} required /><input type="hidden" name="channelid" value="2" /><input type="hidden" name="method" value="1" /><button type="submit">{t.searchButton} <span>↗</span></button></div>
@@ -53,14 +56,14 @@ export function HomePage({ lang }: { lang: Language }) {
         <div className="check-grid">{t.checks.map((item: string[], i: number) => <article key={item[0]}><b>0{i+1}</b><div><h3>{item[0]}</h3><p>{item[1]}</p></div></article>)}</div>
       </div>
       <div className="shipping-stack">
-        <div className="formula-card"><span className="kicker">{t.shippingKicker}</span><h2>{t.shippingTitle}</h2><p>{t.shippingText}</p><div className="formula"><span>L × W × H</span><i>÷</i><strong>6000</strong><small>= {fixed[lang][2]}</small></div><a href="https://www.lovegobuy.com/shipping/estimation/index" target="_blank" rel="noopener noreferrer">{t.estimator} ↗</a></div>
+        <div className="formula-card"><span className="kicker">{t.shippingKicker}</span><h2>{t.shippingTitle}</h2><p>{t.shippingText}</p><div className="formula"><span>L × W × H</span><i>÷</i><strong>6000</strong><small>= {fixed[lang][2]}</small></div><a href={`/${lang}/articles/lovegobuy-shipping-cost-calculator`}>{fixed[lang][5]} →</a></div>
         <div className="shipping-notes"><div className="route-label">{fixed[lang][3]}</div><h3>{t.estimateTitle}</h3><ol>{t.estimateSteps.map((step: string, i: number) => <li key={step}><b>0{i+1}</b>{step}</li>)}</ol><a className="plain-link" href={`/${lang}/shipping`}>{fixed[lang][5]} →</a></div>
       </div>
     </div></section>
 
     <section className="articles section shell">
-      <div className="section-heading"><div><span className="kicker">{t.articlesKicker}</span><h2>{t.articlesTitle}</h2></div><a href={`/${lang}/articles`}>{t.nav[3]} →</a></div>
-      <div className="article-grid">{cards.map((card: string[], i: number) => <article className={`article-card ${i===0?"featured":""}`} key={card[1]}><span>{card[0]}</span><h3>{card[1]}</h3><p>{card[2]}</p><a href={`/${lang}/articles/${articleSlugs[i]}`}>{fixed[lang][6]} →</a></article>)}</div>
+      <div className="section-heading"><div><span className="kicker">{t.articlesKicker}</span><h2>{labels.latest}</h2></div><a href={`/${lang}/articles`}>{labels.all} →</a></div>
+      <div className="article-grid">{cards.map(({slug,article}) => <article className="article-card" key={slug}><span>{article.read}</span><h3>{article.title}</h3><p>{article.deck}</p><a href={`/${lang}/articles/${slug}`}>{fixed[lang][6]} →</a></article>)}</div>
     </section>
 
     <section className="faq section shell"><div className="faq-intro"><span className="kicker">{t.faqKicker}</span><h2>{t.faqTitle}</h2><p>{t.faqIntro}</p><a className="plain-link" href={`/${lang}/faq`}>{fixed[lang][7]} →</a></div><div className="faq-list">{t.faqs.map((faq: string[], i: number) => <details key={faq[0]} open={i===0}><summary>{faq[0]}<span>{i===0?"−":"+"}</span></summary><p>{faq[1]}</p></details>)}</div></section>

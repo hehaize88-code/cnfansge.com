@@ -1,10 +1,9 @@
 import type { MetadataRoute } from "next";
 import { articleSlugs, languages } from "./site-content";
+import { editorialDate } from "./editorial-config";
 const base="https://lovegobuys.shop";
 export const dynamic = "force-static";
-const pageLastModified:Record<string,string>={"":"2026-09-01",spreadsheet:"2026-09-01",finds:"2026-09-01",guide:"2026-09-01",qc:"2026-09-01",shipping:"2026-09-01",faq:"2026-09-01",articles:"2026-09-01"};
-const articleLastModified:Record<string,string>={"lovegobuy-spreadsheet-guide":"2026-09-01","lovegobuy-qc-photo-guide":"2026-09-01","lovegobuy-shipping-weight":"2026-09-01"};
 export default function sitemap(): MetadataRoute.Sitemap {
-  const pages=["","spreadsheet","finds","guide","qc","shipping","faq","articles"];
-  return languages.flatMap(lang=>[...pages.map(page=>({url:`${base}/${lang}${page?`/${page}`:""}`,lastModified:new Date(lang==="en"&&["","articles"].includes(page)?"2026-09-24":pageLastModified[page])})),...articleSlugs.slice(0,lang==="en"?articleSlugs.length:3).map(slug=>({url:`${base}/${lang}/articles/${slug}`,lastModified:new Date(lang==="de"&&slug==="lovegobuy-shipping-weight"?"2026-09-24":articleLastModified[slug]??"2026-09-24")}))]);
+  const paths=["","spreadsheet","finds","guide","qc","shipping","faq","articles",...articleSlugs.map(slug=>`articles/${slug}`)];
+  return languages.flatMap(lang=>paths.map(path=>({url:`${base}/${lang}${path?`/${path}`:""}`,lastModified:new Date(editorialDate),alternates:{languages:Object.fromEntries([...languages.map(code=>[code,`${base}/${code}${path?`/${path}`:""}`]),["x-default",`${base}/en${path?`/${path}`:""}`]])}})));
 }
