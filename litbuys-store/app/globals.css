@@ -494,3 +494,70 @@ footer > span { font-size: 9px; font-weight: 800; }
   .checklist-grid p, .shipping-grid p { font-size: 11px; line-height: 1.45; }
   main:not(.home-page) .article-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
 }
+
+/* Compact home introduction with a usable catalog search and a real product. */
+.home-page .hero {
+  min-height: 0;
+  grid-template-columns: minmax(0, 1fr) minmax(280px, 360px);
+  align-items: center;
+  gap: 28px;
+  padding: 28px;
+  border-radius: 24px;
+}
+.home-page .hero-copy { min-width: 0; min-height: 0; padding: 4px 8px; }
+.home-page .hero .eyebrow { margin: 0; }
+.home-page .hero h1 {
+  max-width: 760px;
+  margin: 12px 0;
+  font-size: clamp(30px, 3.2vw, 44px);
+  line-height: 1.08;
+  letter-spacing: -.035em;
+  text-transform: none;
+  overflow-wrap: anywhere;
+  text-wrap: balance;
+}
+.home-page .hero-intro { max-width: 680px; font-size: 15px; line-height: 1.5; }
+.hero-search { display: flex; width: 100%; max-width: 660px; min-height: 50px; margin-top: 20px; overflow: hidden; background: #fff; border: 1px solid #c6b8a7; border-radius: 12px; }
+.hero-search:focus-within { border-color: var(--orange); box-shadow: 0 0 0 3px rgba(255,106,0,.16); }
+.hero-search input[type="search"] { flex: 1; width: 0; min-width: 0; padding: 12px 14px; border: 0; outline: 0; background: transparent; font-size: 16px; color: var(--ink); }
+.hero-search button { flex-shrink: 0; padding: 0 20px; border: 0; background: var(--ink); color: #fff; font-size: 14px; font-weight: 700; cursor: pointer; }
+.hero-search button:hover { background: #3b332a; }
+.hero-search button:focus-visible, .hero-product:focus-visible { outline: 3px solid var(--orange); outline-offset: 3px; }
+.hero-product { display: grid; min-width: 0; overflow: hidden; border: 1px solid var(--line); border-radius: 18px; background: #fff; transition: border-color .2s ease; }
+.hero-product:hover { border-color: var(--orange); }
+.hero-product-image { display: grid; place-items: center; padding: 10px; background: #f7f3ed; }
+.hero-product-image img { display: block; width: 100%; height: 210px; object-fit: contain; }
+.hero-product-info { min-width: 0; padding: 14px 18px 16px; }
+.hero-product-label { margin: 0 0 6px; color: #62574b; font-size: 11px; line-height: 1.4; }
+.hero-product h2 { margin: 0 0 10px; font-size: 20px; line-height: 1.2; letter-spacing: -.02em; overflow-wrap: anywhere; }
+.hero-product-price { display: flex; flex-wrap: wrap; align-items: baseline; gap: 4px 8px; }
+.hero-product-price strong { font-size: 23px; line-height: 1.2; }
+.hero-product-price > span { color: #62574b; font-size: 11px; }
+.hero-product-link { display: flex; align-items: center; justify-content: space-between; gap: 8px; margin-top: 12px; font-size: 13px; font-weight: 700; }
+.home-page .proof-strip { min-height: 42px; margin-top: 8px; }
+@media (max-width: 900px) {
+  .home-page .hero { grid-template-columns: minmax(0, 1fr) minmax(240px, .7fr); gap: 18px; padding: 20px; }
+  .home-page .hero-copy { padding: 0; }
+  .home-page .hero h1 { font-size: 32px; }
+  .home-page .hero-intro { font-size: 14px; }
+}
+@media (max-width: 640px) {
+  .home-page .hero { grid-template-columns: minmax(0, 1fr); gap: 16px; padding: 18px 14px; border-radius: 18px; }
+  .home-page .hero-copy { padding: 0; }
+  .home-page .hero .eyebrow { font-size: 9px; line-height: 1.4; }
+  .home-page .hero h1 { margin: 8px 0; font-size: 28px; line-height: 1.1; }
+  .home-page .hero-intro { font-size: 13px; line-height: 1.45; }
+  .hero-search { min-height: 46px; margin-top: 14px; border-radius: 10px; }
+  .hero-search input[type="search"] { padding: 10px; }
+  .hero-search button { padding: 0 12px; font-size: 12px; }
+  .hero-product { grid-template-columns: 112px minmax(0, 1fr); align-items: stretch; border-radius: 12px; }
+  .hero-product-image { padding: 6px; }
+  .hero-product-image img { height: auto; aspect-ratio: 1; }
+  .hero-product-info { padding: 12px; }
+  .hero-product-label { font-size: 10px; margin-bottom: 4px; }
+  .hero-product h2 { font-size: 16px; margin-bottom: 6px; }
+  .hero-product-price strong { font-size: 20px; }
+  .hero-product-price > span { font-size: 10px; }
+  .hero-product-link { margin-top: 8px; font-size: 12px; }
+  .home-page .proof-strip { min-height: 34px; margin-top: 5px; }
+}

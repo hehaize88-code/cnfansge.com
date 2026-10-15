@@ -184,11 +184,33 @@ export function useLanguage() {
   return { lang, update, copy: copies[lang] };
 }
 
+const heroLabels: Record<Lang, { search: string; placeholder: string; featured: string; product: string; detail: string }> = {
+  en: { search: "Search", placeholder: "Search shoes, hoodies, bags…", featured: "Featured find", product: "Fresh sweatshirt find", detail: "View product" },
+  de: { search: "Suchen", placeholder: "Schuhe, Hoodies, Taschen suchen…", featured: "Ausgewählter Fund", product: "Sweatshirt-Auswahl", detail: "Produkt ansehen" },
+  es: { search: "Buscar", placeholder: "Buscar zapatos, sudaderas, bolsos…", featured: "Producto destacado", product: "Sudadera seleccionada", detail: "Ver producto" },
+  fr: { search: "Rechercher", placeholder: "Chaussures, sweats, sacs…", featured: "À découvrir", product: "Sweat-shirt sélectionné", detail: "Voir le produit" },
+  it: { search: "Cerca", placeholder: "Cerca scarpe, felpe, borse…", featured: "Prodotto in evidenza", product: "Felpa selezionata", detail: "Vedi prodotto" },
+};
+
+function CatalogSearch({ lang, copy, hero = false }: { lang: Lang; copy: Copy; hero?: boolean }) {
+  const id = hero ? "hero-search" : "site-search";
+  function search(event: FormEvent<HTMLFormElement>) {
+    const input = event.currentTarget.elements.namedItem("keywords") as HTMLInputElement;
+    input.value = input.value.trim();
+    if (!input.value) { event.preventDefault(); input.focus(); }
+  }
+  return <form className={hero ? "hero-search" : "site-search"} action="https://cnfansge.com/search.html" method="get" role="search" onSubmit={search}>
+    <label className="sr-only" htmlFor={id}>{copy.search}</label>
+    <input id={id} type="search" name="keywords" placeholder={hero ? heroLabels[lang].placeholder : copy.search} required />
+    <input type="hidden" name="channelid" value="2" />
+    <button type="submit" aria-label={heroLabels[lang].search}>{hero ? heroLabels[lang].search : "↗"}</button>
+  </form>;
+}
+
 export function SiteHeader({ lang, update, copy }: { lang: Lang; update: (l: Lang) => void; copy: Copy }) {
-  function search(event: FormEvent<HTMLFormElement>) { event.preventDefault(); const data = new FormData(event.currentTarget); const term = String(data.get("keywords") ?? "").trim(); if (term) window.location.href = `https://cnfansge.com/search.html?keywords=${encodeURIComponent(term)}`; }
   return <header className="site-header">
     <Link className="logo" href="/" aria-label="LitBuys Store home"><img src="/litbuy.png" alt="LitBuy" width="1368" height="356" /></Link>
-    <form className="site-search" onSubmit={search}><label className="sr-only" htmlFor="site-search">{copy.search}</label><input id="site-search" name="keywords" placeholder={copy.search} /><button type="submit" aria-label="Search">↗</button></form>
+    <CatalogSearch lang={lang} copy={copy} />
     <Select value={lang} onValueChange={(value) => update(value as Lang)}><SelectTrigger className="language-trigger" aria-label="Language"><SelectValue /></SelectTrigger><SelectContent className="language-menu" position="popper" align="end"><SelectItem className="language-option" value="en">EN</SelectItem><SelectItem className="language-option" value="de">DE</SelectItem><SelectItem className="language-option" value="es">ES</SelectItem><SelectItem className="language-option" value="fr">FR</SelectItem><SelectItem className="language-option" value="it">IT</SelectItem></SelectContent></Select>
   </header>;
 }
@@ -206,10 +228,15 @@ export function ProductGrid({ copy, limit }: { copy: Copy; limit?: number }) {
 
 export function HomePage() {
   const { lang, update, copy } = useLanguage();
+  const featured = products[0];
+  const labels = heroLabels[lang];
   return <main className="home-page"><SiteHeader lang={lang} update={update} copy={copy} />
     <TopicNav copy={copy} />
-    <section className="hero"><div className="hero-copy"><p className="eyebrow">{copy.eyebrow}</p><h1>{copy.hero}</h1><p className="hero-intro">{copy.intro}</p><div className="hero-actions"><a className="button button-primary" href="#finds">{copy.primary} ↓</a><a className="button button-ghost" href="/spreadsheet">{copy.secondary} ↗</a></div></div>
-      <div className="hero-board" aria-hidden="true"><span className="board-label">LITBUY / INDEX</span><div className="board-word">LOOK<br/>TWICE</div><div className="board-stamp">QC<br/>READY</div><div className="board-line">PRODUCT ROUTES / USD / GUIDES / 2026</div></div></section>
+    <section className="hero"><div className="hero-copy"><p className="eyebrow">{copy.eyebrow}</p><h1>{copy.hero}</h1><p className="hero-intro">{copy.intro}</p><CatalogSearch lang={lang} copy={copy} hero /></div>
+      <a className="hero-product" href={featured.target} aria-label={`${labels.detail}: ${labels.product}`}>
+        <div className="hero-product-image"><img src={featured.image} alt={labels.product} width="640" height="640" fetchPriority="high" /></div>
+        <div className="hero-product-info"><p className="hero-product-label">{labels.featured} · ID {featured.id}</p><h2>{labels.product}</h2><div className="hero-product-price"><strong>{featured.price}</strong><span>{copy.usd}</span></div><span className="hero-product-link">{labels.detail} <span aria-hidden="true">↗</span></span></div>
+      </a></section>
     <div className="proof-strip"><span>● {copy.verified}</span><span>● {copy.usd}</span><span>● {copy.checked}</span></div>
     <section className="section compact-section"><div className="section-heading"><div><p className="kicker">CATALOG / 01</p><h2>{copy.categories}</h2></div><p>{copy.categoryIntro}</p></div><div className="category-grid">{categories.map(([label, url, number]) => <a key={label} href={url} target="_blank" rel="noopener noreferrer"><span>{number}</span><b>{label}</b><i>↗</i></a>)}</div></section>
     <section className="section" id="finds"><div className="section-heading"><div><p className="kicker">FINDS / 02</p><h2>{copy.picks}</h2></div><p>{copy.picksIntro}</p></div><ProductGrid copy={copy} /></section>
