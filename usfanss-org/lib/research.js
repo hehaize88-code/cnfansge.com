@@ -1,3 +1,4 @@
+import { refreshResearch } from "./editorial/oct15-updates.js";
 import { getResearchParity } from "./researchParity.js";
 import { getFaqParity } from "./faqParity.js";
 
@@ -248,5 +249,5 @@ export function getResearch(language) {
     const parity = getFaqParity(activeLanguage, index + 4);
     return [question, parity ? `${answer} ${parity}` : answer];
   });
-  return { ...base, ...expanded, faqExtra };
+  return refreshResearch({ ...base, ...expanded, faqExtra }, activeLanguage);
 }

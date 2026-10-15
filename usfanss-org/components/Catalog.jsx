@@ -1,7 +1,7 @@
 "use client";
 
 import { useMemo, useState } from "react";
-import { products } from "../lib/content";
+import { products } from "../lib/products";
 
 export default function Catalog({ labels, limit }) {
   const [query, setQuery] = useState("");

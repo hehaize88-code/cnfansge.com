@@ -1,11 +1,14 @@
 import Link from "next/link";
 import LanguagePicker from "./LanguagePicker";
 import LanguageSync from "./LanguageSync";
+import SearchBox from "./SearchBox";
+import InteractionEvents from "./InteractionEvents";
 
-export default function SiteChrome({ language, content, children }) {
+export default function SiteChrome({ language, content, children, showSearch = true }) {
   return (
     <div className="site-shell">
       <LanguageSync language={language} />
+      <InteractionEvents language={language} />
       <div className="research-bar">
         <span>{content.label}</span>
         <span>{content.updated}</span>
@@ -31,6 +34,7 @@ export default function SiteChrome({ language, content, children }) {
           <LanguagePicker current={language} label={content.languageLabel} />
         </div>
       </header>
+      {showSearch && <div className="site-search"><SearchBox compact placeholder={content.searchPlaceholder} button={content.searchButton}/></div>}
       <main>{children}</main>
       <footer>
         <div className="footer-brand">

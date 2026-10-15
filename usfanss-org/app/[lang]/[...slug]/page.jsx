@@ -1,4 +1,6 @@
 import Link from "next/link";
+import ArticleDirectory from "../../../components/ArticleDirectory";
+import { articleCategory } from "../../../lib/editorial/navigation";
 import { notFound } from "next/navigation";
 import Catalog from "../../../components/Catalog";
 import SearchBox from "../../../components/SearchBox";
@@ -173,7 +175,7 @@ function Home({ language, content }) {
 
       <section className="content-section articles-section">
         <SectionHead eyebrow={`04 / ${content.sectionCodes[3]}`} title={content.articlesTitle} text={content.articlesText} link={`/${language}/articles`} linkText={content.nav.articles} />
-        <ArticleCards language={language} content={content} limit={6} />
+        <ArticleCards language={language} content={content} limit={4} />
       </section>
 
       <section className="content-section faq-section">
@@ -213,17 +215,17 @@ function QCPage({ content, research }) {
 }
 
 function ShippingPage({ content, research }) {
-  return <><PageHero code={content.pageCodes.shipping} title={content.pageTitles.shipping} text={content.pageIntros.shipping}/><section className="content-section shipping-layout"><div><h2>{content.shippingFormula}</h2><p>{content.faqItems[3][1]}</p><p>{content.steps[3][2]}</p></div><ShippingCalculator labels={content.calculator}/></section><ResearchBlocks items={research.shipping}/><FactGrid research={research}/></>;
+  return <><PageHero code={content.pageCodes.shipping} title={content.pageTitles.shipping} text={content.pageIntros.shipping}/><section className="content-section shipping-layout"><div><h2>{content.shippingFormula}</h2><p>{content.faqItems[3][1]}</p><p>{content.steps[3][2]}</p></div><ShippingCalculator labels={{...content.calculator,...content.navigation}}/></section><ResearchBlocks items={research.shipping}/><FactGrid research={research}/></>;
 }
 
 function FAQPage({ content, research }) {
   const questions = [...content.faqItems, ...research.faqExtra];
-  return <><JsonLd data={{"@context":"https://schema.org","@type":"FAQPage",mainEntity:questions.map(([name,text])=>({"@type":"Question",name,acceptedAnswer:{"@type":"Answer",text}}))}}/><PageHero code={content.pageCodes.faq} title={content.pageTitles.faq} text={content.pageIntros.faq}/><section className="content-section"><div className="faq-list large">{questions.map(([q,a])=><details open key={q}><summary>{q}</summary><p>{a}</p></details>)}</div><p className="source-note">{research.sourceNote}</p></section></>;
+  return <><JsonLd data={{"@context":"https://schema.org","@type":"FAQPage",mainEntity:questions.map(([name,text])=>({"@type":"Question",name,acceptedAnswer:{"@type":"Answer",text}}))}}/><PageHero code={content.pageCodes.faq} title={content.pageTitles.faq} text={content.pageIntros.faq}/><section className="content-section"><div className="faq-list large">{questions.map(([q,a])=><details key={q}><summary>{q}</summary><p>{a}</p></details>)}</div><p className="source-note">{research.sourceNote}</p></section></>;
 }
 
 function ArticlesPage({ language, content }) {
   const collection={"@context":"https://schema.org","@type":"CollectionPage",name:content.pageTitles.articles,url:`${base}/${language}/articles`,inLanguage:language,mainEntity:{"@type":"ItemList",numberOfItems:articleBlueprints.length,itemListElement:articleBlueprints.map((article,index)=>({"@type":"ListItem",position:index+1,name:article.title[language],url:`${base}/${language}/articles/${article.slug}`}))}};
-  return <><JsonLd data={[collection,breadcrumbSchema(language,[[content.homeLabel,""],[content.pageTitles.articles,"/articles"]])]}/><PageHero code={content.pageCodes.articles} title={content.pageTitles.articles} text={content.pageIntros.articles}/><section className="content-section"><ArticleCards language={language} content={content}/></section></>;
+  return <><JsonLd data={[collection,breadcrumbSchema(language,[[content.homeLabel,""],[content.pageTitles.articles,"/articles"]])]}/><PageHero code={content.pageCodes.articles} title={content.pageTitles.articles} text={content.pageIntros.articles}/><section className="content-section"><ArticleDirectory language={language} labels={content.navigation} cta={content.articleCta} articles={articleBlueprints.map(blueprint => { const article = getArticle(blueprint.slug, language); return {slug:article.slug,title:article.title,dek:article.dek,category:articleCategory(article.slug),minutes:Math.max(1,Math.ceil(article.sections.map(([,body])=>body.split(/\s+/).length).reduce((a,b)=>a+b,0)/200))}; })}/></section></>;
 }
 
 function ArticleVisual({ visual }) {
@@ -242,7 +244,24 @@ function ArticlePage({ language, article, content }) {
   const url = `${base}/${language}/articles/${article.slug}`;
   const articleSchema = {"@context":"https://schema.org","@type":"Article",headline:article.title,description:article.dek,datePublished:article.datePublished || "2026-09-01",dateModified:article.dateModified || "2026-09-01",inLanguage:language,image:`${base}/usfans.png`,wordCount:article.sections.map(([,body])=>body.split(/\s+/).length).reduce((a,b)=>a+b,0),mainEntityOfPage:url,author:{"@type":"Organization",name:"USFans Buyer Research",url:`${base}/${language}`,logo:{"@type":"ImageObject",url:`${base}/usfans.png`}},publisher:{"@type":"Organization",name:"USFans Buyer Research",logo:{"@type":"ImageObject",url:`${base}/usfans.png`}}};
   const breadcrumbs = breadcrumbSchema(language, [[content.homeLabel,""],[content.pageTitles.articles,"/articles"],[article.title,`/articles/${article.slug}`]]);
-  return <><JsonLd data={[articleSchema,breadcrumbs]}/><article className="long-article"><header><span className="eyebrow">{content.articleEyebrow}</span><h1>{article.title}</h1><p>{article.dek}</p><div><span>{content.publishedLabel}: <time dateTime={article.datePublished}>{article.datePublished}</time></span><span>{content.updatedLabel}: <time dateTime={article.dateModified}>{article.dateModified}</time></span></div></header><ArticleVisual visual={article.visual}/><p className="source-note article-source">{article.sourceNote}</p>{article.related && <nav className="article-related" aria-label={content.relatedLabel}>{article.related.map(([label,path])=><Link key={path} href={`/${language}${path}`}>{label} <span>↗</span></Link>)}</nav>}<ArticleExamples article={article} content={content}/><div className="article-body"><aside><strong>{content.articleToc}</strong>{article.sections.map(([heading],index)=><a href={`#section-${index+1}`} key={heading}>{heading}</a>)}</aside><div>{article.sections.map(([heading,body],index)=><section id={`section-${index+1}`} key={heading}><span>{String(index+1).padStart(2,"0")}</span><h2>{heading}</h2><p>{body}</p></section>)}</div></div></article></>;
+  const minutes = Math.max(1, Math.ceil(articleSchema.wordCount / 200));
+  return <><JsonLd data={[articleSchema,breadcrumbs]}/>
+    <article className="long-article">
+      <nav className="breadcrumbs" aria-label={content.navLabel}><Link href={`/${language}`}>{content.homeLabel}</Link><span>›</span><Link href={`/${language}/articles`}>{content.nav.articles}</Link></nav>
+      <header><span className="eyebrow">{content.articleEyebrow}</span><h1>{article.title}</h1><p>{article.dek}</p>
+        <div><span>{content.publishedLabel}: <time dateTime={article.datePublished}>{article.datePublished}</time></span><span>{content.updatedLabel}: <time dateTime={article.dateModified}>{article.dateModified}</time></span><span>{minutes} {content.navigation.reading}</span></div>
+      </header>
+      <ArticleVisual visual={article.visual}/>
+      <p className="source-note article-source">{article.sourceNote}</p>
+      <div className="article-body">
+        <aside><details className="article-toc"><summary>{content.navigation.toc}</summary><nav>{article.sections.map(([heading],index)=><a href={`#section-${index+1}`} key={heading}>{heading}</a>)}</nav></details></aside>
+        <div>{article.sections.map(([heading,body],index)=><section id={`section-${index+1}`} key={heading}><span>{String(index+1).padStart(2,"0")}</span><h2>{heading}</h2>{body.split(/\n\s*\n/).map((paragraph,i)=><p key={i}>{paragraph}</p>)}</section>)}</div>
+      </div>
+      <ArticleExamples article={article} content={content}/>
+      {article.related?.length > 0 && <section className="related-guides"><h2>{content.relatedLabel}</h2><nav className="article-related" aria-label={content.relatedLabel}>{article.related.map(([label,path])=><Link key={path} href={`/${language}${path}`}>{label} <span>↗</span></Link>)}</nav></section>}
+      <div className="article-next"><h2>{content.navigation.continue}</h2><p>{content.navigation.continueText}</p><Link className="button-link" href={`/${language}/spreadsheet`}>{content.nav.spreadsheet} ↗</Link></div>
+    </article></>;
+
 }
 
 export default async function DynamicPage({ params }) {
@@ -265,5 +284,8 @@ export default async function DynamicPage({ params }) {
     if (!article) notFound();
     page = <ArticlePage language={lang} article={article} content={content}/>;
   } else notFound();
-  return <SiteChrome language={lang} content={content}>{page}</SiteChrome>;
+  return <SiteChrome language={lang} content={content} showSearch={key !== 'home'}>{page}{key !== 'articles' && !key.startsWith('articles/') && <nav className="next-steps" aria-label={content.navigation.topics}>
+    <strong>{content.navigation.next}</strong>
+    {[[content.navigation.start,'/articles/how-to-order-on-usfans'],[content.navigation.size,'/articles/usfans-size-guide-measurements'],[content.navigation.budget,'/shipping'],[content.nav.articles,'/articles']].map(([label,path])=><Link key={path} href={`/${lang}${path}`}>{label} ↗</Link>)}
+  </nav>}</SiteChrome>;
 }
