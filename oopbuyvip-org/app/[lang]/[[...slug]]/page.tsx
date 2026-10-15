@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
-import { articleSlugs, copy, languages, navKeys, type ArticleSlug, type Language } from "../../content";
+import { articleSlugs, copy, discoveryCopy, languages, navKeys, type ArticleSlug, type Language } from "../../content";
 import { SitePage } from "../../site-page";
 
 const SITE = "https://oopbuyvip.org";
@@ -55,9 +55,9 @@ export async function generateMetadata({ params }: { params: Params }): Promise<
   const path = slug.join("/");
   const article = slug[0] === "articles" && slug[1] ? t.articles[slug[1] as ArticleSlug] : null;
   const page = slug[0] ? t.page[slug[0]] : null;
-  const rawTitle = article?.title ?? page?.title ?? homeTitles[lang];
+  const rawTitle = article?.title ?? page?.title ?? `${discoveryCopy[lang].title} | OOPBUY VIP`;
   const title = compact(rawTitle, 59);
-  const rawDescription = article?.description ?? (slug[0] === "spreadsheet" ? spreadsheetDescriptions[lang] : page?.body) ?? t.hero.body;
+  const rawDescription = article?.description ?? (slug[0] === "spreadsheet" ? discoveryCopy[lang].priceNote : page?.body) ?? t.hero.body;
   const description = compact(rawDescription, 158);
   const canonical = `${SITE}/${lang}${path ? `/${path}` : ""}`;
   const languagesMap = Object.fromEntries(languages.map((code) => [code, `${SITE}/${code}${path ? `/${path}` : ""}`]));

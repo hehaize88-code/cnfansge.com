@@ -10,8 +10,8 @@ export default function sitemap(): MetadataRoute.Sitemap {
   return languages.flatMap((lang) => paths.map((path) => ({
     url: `${base}/${lang}${path ? `/${path}` : ""}`,
     lastModified: new Date(path.startsWith("articles/")
-      ? copy.en.articles[path.slice("articles/".length) as ArticleSlug].modified ?? "2026-09-01"
-      : path === "" || path === "articles" ? "2026-10-01" : "2026-09-01"),
+      ? copy[lang].articles[path.slice("articles/".length) as ArticleSlug].modified ?? "2026-09-01"
+      : "2026-10-15"),
     changeFrequency: path.startsWith("articles/") ? "monthly" as const : "weekly" as const,
     priority: path === "" ? 1 : path === "spreadsheet" || path === "finds" ? 0.9 : 0.75,
     alternates: { languages: { ...Object.fromEntries(languages.map((code) => [code, `${base}/${code}${path ? `/${path}` : ""}`])), "x-default": `${base}/en${path ? `/${path}` : ""}` } },

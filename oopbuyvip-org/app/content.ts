@@ -1,3 +1,5 @@
+import { discoveryCopy } from "./discovery-copy";
+export { discoveryCopy } from "./discovery-copy";
 import { englishArticles } from "./seo-articles";
 import { germanArticles } from "./articles-de";
 import { spanishArticles } from "./articles-es";
@@ -37,7 +39,7 @@ export const products = [
     category: "shoes" as CategoryKey,
     code: "F-6127",
     price: "$13.75",
-    weight: "673 g",
+    weight: "",
     image: "https://cnfansge.com/uploads/allimg/20260415/1-260415150J2P3.jpg",
     href: "https://cnfansge.com/AllProducts/6127.html",
   },
@@ -45,7 +47,7 @@ export const products = [
     category: "hoodies" as CategoryKey,
     code: "F-6182",
     price: "$13.61",
-    weight: "949 g",
+    weight: "",
     image: "https://cnfansge.com/uploads/allimg/20260421/1-260421155341E1.jpg",
     href: "https://cnfansge.com/AllProducts/6182.html",
   },
@@ -53,7 +55,7 @@ export const products = [
     category: "tshirts" as CategoryKey,
     code: "F-6237",
     price: "$12.36",
-    weight: "602 g",
+    weight: "",
     image: "https://cnfansge.com/uploads/allimg/20260421/1-2604211G02MO.jpg",
     href: "https://cnfansge.com/AllProducts/6237.html",
   },
@@ -61,7 +63,7 @@ export const products = [
     category: "jackets" as CategoryKey,
     code: "F-6292",
     price: "$22.22",
-    weight: "580 g",
+    weight: "",
     image: "https://cnfansge.com/uploads/allimg/20260421/1-260421213Tb41.jpg",
     href: "https://cnfansge.com/AllProducts/6292.html",
   },
@@ -69,7 +71,7 @@ export const products = [
     category: "pants" as CategoryKey,
     code: "F-6347",
     price: "$16.33",
-    weight: "958 g",
+    weight: "",
     image: "https://cnfansge.com/uploads/allimg/20260421/1-260421224253553.jpg",
     href: "https://cnfansge.com/AllProducts/6347.html",
   },
@@ -77,7 +79,7 @@ export const products = [
     category: "headwear" as CategoryKey,
     code: "F-6403",
     price: "$25.00",
-    weight: "931 g",
+    weight: "",
     image: "https://cnfansge.com/uploads/allimg/20260422/1-260422145A2C4.jpg",
     href: "https://cnfansge.com/AllProducts/6403.html",
   },
@@ -85,7 +87,7 @@ export const products = [
     category: "accessories" as CategoryKey,
     code: "F-6457",
     price: "$33.33",
-    weight: "585 g",
+    weight: "",
     image: "https://cnfansge.com/uploads/allimg/20260422/1-260422155514607.jpg",
     href: "https://cnfansge.com/AllProducts/6457.html",
   },
@@ -93,7 +95,7 @@ export const products = [
     category: "jerseys" as CategoryKey,
     code: "F-6679",
     price: "$18.19",
-    weight: "670 g",
+    weight: "",
     image: "https://cnfansge.com/uploads/allimg/20260422/1-2604222250014B.jpg",
     href: "https://cnfansge.com/AllProducts/6679.html",
   },
@@ -432,3 +434,32 @@ for (const lang of ["de", "es", "fr", "it"] as const) {
 }
 
 export const navKeys = ["home", "spreadsheet", "finds", "guide", "qc", "shipping", "faq", "articles"] as const;
+
+// Keep unknown product measurements explicit in every locale.
+
+for (const lang of languages) {
+  const t = copy[lang];
+  const d = discoveryCopy[lang];
+  t.hero.title = d.title;
+  t.hero.body = d.body;
+  t.hero.proof = d.proof;
+  t.labels.disclaimer = d.priceNote;
+  t.faq[3].a = d.weightAnswer;
+  for (const section of ["spreadsheet", "finds"]) {
+    // These existing second cards described unverified weights as available data.
+    t.page[section].points[1].body = d.priceNote;
+  }
+}
+
+const pageRefresh = {
+  en: ["A selection from the product index. Open the listing to confirm the option and current price.", "OOPBuy Finds: Product Links and Budget Checks", "Compare dated product links and reference prices, then verify the selected option, warehouse QC and parcel quote."],
+  de: ["Eine Auswahl aus dem Produktindex. Prüfe Variante und aktuellen Preis im Angebot.", "OOPBuy-Funde: Produktlinks und Budgetprüfung", "Vergleiche datierte Produktlinks und Referenzpreise und prüfe danach Variante, Lager-QC und Paketangebot."],
+  es: ["Una selección del índice. Abre el anuncio para confirmar opción y precio actuales.", "Hallazgos OOPBuy: enlaces y control de presupuesto", "Compara enlaces fechados y precios de referencia; confirma opción, QC de almacén y cotización del paquete."],
+  fr: ["Une sélection du répertoire. Ouvrez l’offre pour confirmer option et prix actuels.", "Trouvailles OOPBuy : liens et contrôle du budget", "Comparez liens datés et prix indicatifs, puis vérifiez option, QC d’entrepôt et devis du colis."],
+  it: ["Una selezione del catalogo. Apri l’offerta per confermare opzione e prezzo attuali.", "Prodotti OOPBuy: link e controllo del budget", "Confronta link datati e prezzi indicativi, poi verifica opzione, QC di magazzino e preventivo del pacco."],
+} as const;
+for (const lang of languages) {
+  copy[lang].labels.latestBody = pageRefresh[lang][0];
+  copy[lang].page.finds.title = pageRefresh[lang][1];
+  copy[lang].page.spreadsheet.body = pageRefresh[lang][2];
+}

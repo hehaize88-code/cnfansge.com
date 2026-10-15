@@ -4,7 +4,7 @@ import { join } from "node:path";
 const root = new URL("../out/", import.meta.url);
 const languages = ["en", "de", "es", "fr", "it"];
 const articleSlugs = (await readdir(new URL("./en/articles/", root))).filter((file) => file.endsWith(".html")).map((file) => file.slice(0, -5));
-const additions = JSON.parse(await readFile(new URL("../app/new-articles-en.json", import.meta.url), "utf8"));
+const additions = { ...JSON.parse(await readFile(new URL("../app/new-articles-en.json", import.meta.url), "utf8")), ...JSON.parse(await readFile(new URL("../app/seo-expansion-en.json", import.meta.url), "utf8")) };
 const allowedOutboundHosts = new Set(["oopbuyvip.org", "www.oopbuyvip.org", "cnfansge.com", "www.cnfansge.com"]);
 const failures = [];
 
@@ -14,7 +14,7 @@ function assert(condition, message) {
 
 function outputPath(url) {
   const path = new URL(url).pathname.replace(/^\//, "").replace(/\/$/, "");
-  return path ? `${path}.html` : "index.html";
+  return /\.[a-z0-9]+$/i.test(path) ? path : path ? `${path}.html` : "index.html";
 }
 
 function decodeHtml(value) {
@@ -57,9 +57,32 @@ for (const url of urls) {
   }
 }
 
+assert(articleSlugs.length === 17, `Expected 17 article topics, got ${articleSlugs.length}`);
+for (const lang of languages) {
+  const listing = await readFile(new URL(`./${lang}/articles.html`, root), "utf8");
+  const home = await readFile(new URL(`./${lang}.html`, root), "utf8");
+  const sheet = await readFile(new URL(`./${lang}/spreadsheet.html`, root), "utf8");
+  assert((home.match(/class="article-card /g) ?? []).length === 4, `${lang}: homepage must show 4 articles`);
+  assert((listing.match(/class="article-card /g) ?? []).length === 17, `${lang}: directory must show all 17 articles`);
+  assert(!/(673|949|602|580|958|931|585|670) g<\//.test(home + sheet), `${lang}: view counter remains as a weight`);
+  const expansion = JSON.parse(await readFile(new URL(`../app/seo-expansion-${lang}.json`, import.meta.url), "utf8"));
+  const englishExpansion = JSON.parse(await readFile(new URL("../app/seo-expansion-en.json", import.meta.url), "utf8"));
+  assert(Object.keys(expansion).sort().join() === Object.keys(englishExpansion).sort().join(), `${lang}: new article set mismatch`);
+  for (const [slug, article] of Object.entries(expansion)) {
+    assert(article.sections.length === englishExpansion[slug].sections.length, `${lang}/${slug}: missing translated sections`);
+    assert(article.sections.every((section, i) => section.paragraphs.length === englishExpansion[slug].sections[i].paragraphs.length), `${lang}/${slug}: missing translated paragraphs`);
+    assert(article.published === "2026-10-15", `${lang}/${slug}: incorrect publication date`);
+  }
+}
 for (const slug of articleSlugs) {
   for (const lang of languages) {
     const html = await readFile(new URL(`./${lang}/articles/${slug}.html`, root), "utf8");
+    assert((html.match(/class="article-card /g) ?? []).length === 3, `/${lang}/articles/${slug}: expected 3 related cards`);
+    const articleLinks = [...html.matchAll(/href="(\/[^"#?]+)"/g)].map(match => match[1]);
+    for (const href of articleLinks) {
+      const file = outputPath(`https://oopbuyvip.org${href}`);
+      try { await readFile(new URL(`./${file}`, root)); } catch { failures.push(`${lang}/${slug}: broken internal link ${href}`); }
+    }
     const body = html.match(/<article class="article-body section">([\s\S]*?)<\/article>/)?.[1] ?? "";
     const editorialBody = body.split('<section class="article-sources">')[0];
     const words = textContent(editorialBody).split(/\s+/).filter(Boolean).length;

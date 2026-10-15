@@ -11,6 +11,7 @@ import {
 } from "lucide-react";
 import {
   articleSlugs,
+  discoveryCopy,
   categoryRoutes,
   copy,
   languageNames,
@@ -127,7 +128,7 @@ function Header({ lang, path }: { lang: Language; path: string }) {
 function SearchBar({ lang }: { lang: Language }) {
   const t = copy[lang];
   return (
-    <form className="search-bar" action="https://cnfansge.com/search.html" method="get" target="_blank">
+    <form className="search-bar" data-track="search_submit" action="https://cnfansge.com/search.html" method="get" target="_blank">
       <Search aria-hidden="true" />
       <input name="keywords" placeholder={t.hero.search} aria-label={t.hero.search} required />
       <input type="hidden" name="channelid" value="2" />
@@ -142,7 +143,7 @@ function Categories({ lang }: { lang: Language }) {
   return (
     <div className="category-grid">
       {categoryRoutes.map((category) => (
-        <a key={category.key} href={category.href} target="_blank" rel="noopener" className="category-tile">
+        <a key={category.key} href={category.href} target="_blank" rel="noopener" className="category-tile" data-track="category_click" data-category={category.key}>
           <span>{category.icon}</span>
           <strong>{t.categories[category.key]}</strong>
           <ArrowUpRight aria-hidden="true" />
@@ -160,7 +161,7 @@ function Products({ lang, compact = false, mode = "default" }: { lang: Language;
     <div className="product-grid">
       {list.map((product) => (
         <article className="product-card" key={product.code}>
-          <a className="product-image" href={product.href} target="_blank" rel="noopener" aria-label={`${t.categories[product.category]} ${product.code}`}>
+          <a className="product-image" href={product.href} data-track="outbound_product_click" data-item={product.code} target="_blank" rel="noopener" aria-label={`${t.categories[product.category]} ${product.code}`}>
             {/* eslint-disable-next-line @next/next/no-img-element */}
             <img src={product.image} alt={`${t.categories[product.category]} product route ${product.code}`} loading="lazy" width="600" height="600" />
             <span>{product.code}</span>
@@ -170,14 +171,14 @@ function Products({ lang, compact = false, mode = "default" }: { lang: Language;
             <h3>{t.categories[product.category]} · {product.code.replace("F-", "#")}</h3>
             <dl>
               <div><dt>{t.labels.sourcePrice}</dt><dd>{product.price}</dd></div>
-              <div><dt>{t.labels.listedWeight}</dt><dd>{product.weight}</dd></div>
+              <div><dt>{t.labels.listedWeight}</dt><dd>{product.weight || discoveryCopy[lang].unknown}</dd></div>
             </dl>
             {mode === "finds" && <div className="finds-context">
               <p><strong>{notes.why}</strong>{notes.whyBody}</p>
               <p><strong>{notes.qc}</strong>{notes.qcBody}</p>
               <p><strong>{notes.packing}</strong>{notes.packingBody}</p>
             </div>}
-            <a className="text-link" href={product.href} target="_blank" rel="noopener">{t.labels.open}<ArrowUpRight aria-hidden="true" /></a>
+            <a className="text-link" href={product.href} data-track="outbound_product_click" data-item={product.code} target="_blank" rel="noopener">{t.labels.open}<ArrowUpRight aria-hidden="true" /></a>
           </div>
         </article>
       ))}
@@ -218,11 +219,13 @@ function Facts({ lang }: { lang: Language }) {
   );
 }
 
-function ArticleCards({ lang }: { lang: Language }) {
+function ArticleCards({ lang, limit, selected, exclude }: { lang: Language; limit?: number; selected?: string[]; exclude?: string }) {
   const t = copy[lang];
+  const recent = [...articleSlugs].sort((a, b) => (t.articles[b].modified ?? t.articles[b].published ?? "2026-09-01").localeCompare(t.articles[a].modified ?? t.articles[a].published ?? "2026-09-01") || ((t.articles[b].published ?? "2026-09-01").localeCompare(t.articles[a].published ?? "2026-09-01")));
+  const list = [...new Set([...(selected ?? []), ...recent])].filter(slug => slug !== exclude && articleSlugs.includes(slug as ArticleSlug)).slice(0, limit) as ArticleSlug[];
   return (
     <div className="article-grid">
-      {articleSlugs.map((slug, index) => {
+      {list.map((slug, index) => {
         const article = t.articles[slug];
         return (
           <article key={slug} className={`article-card tone-${(index % 6) + 1}`}>
@@ -290,16 +293,17 @@ function Home({ lang }: { lang: Language }) {
             <p className="hero-tagline">{t.hero.tagline}</p>
             <p className="hero-body">{t.hero.body}</p>
             <SearchBar lang={lang} />
+            <p className="search-note">{discoveryCopy[lang].searchNote}</p>
             <div className="proof-line"><CheckCircle2 aria-hidden="true" />{t.hero.proof}</div>
           </div>
           <aside className="hero-showcase" aria-label={t.labels.latest}>
             <div className="showcase-backdrop" />
-            <a className="hero-shot hero-shot-main" href={products[0].href} target="_blank" rel="noopener">
+            <a className="hero-shot hero-shot-main" href={products[0].href} data-track="outbound_product_click" data-item={products[0].code} target="_blank" rel="noopener">
               {/* eslint-disable-next-line @next/next/no-img-element */}
               <img src={products[0].image} alt={`${t.categories[products[0].category]} ${products[0].code}`} width="600" height="600" />
               <span><small>{t.categories[products[0].category]}</small><b>{products[0].price}</b></span>
             </a>
-            <a className="hero-shot hero-shot-small" href={products[1].href} target="_blank" rel="noopener">
+            <a className="hero-shot hero-shot-small" href={products[1].href} data-track="outbound_product_click" data-item={products[1].code} target="_blank" rel="noopener">
               {/* eslint-disable-next-line @next/next/no-img-element */}
               <img src={products[1].image} alt={`${t.categories[products[1].category]} ${products[1].code}`} width="600" height="600" />
             </a>
@@ -317,16 +321,16 @@ function Home({ lang }: { lang: Language }) {
 
         <section className="section products-section">
           <div className="section-heading split-heading"><div><p className="eyebrow">02 / LIVE ROUTES</p><h2>{t.labels.latest}</h2></div><p>{t.labels.latestBody}</p></div>
-          <Products lang={lang} />
+          <Products lang={lang} compact />
           <div className="section-actions"><a className="button-link" href="https://cnfansge.com/AllProducts/" target="_blank" rel="noopener">{t.labels.viewAll}<ExternalLink aria-hidden="true" /></a><p>{t.labels.disclaimer}</p></div>
         </section>
 
-        <Process lang={lang} />
-        <Facts lang={lang} />
+        <section className="section next-steps"><div className="section-heading"><h2>{discoveryCopy[lang].homeLinks}</h2></div><div className="guide-links">{["spreadsheet", "finds", "guide", "qc", "shipping", "faq"].map(key => <a key={key} href={`/${lang}/${key}`}><strong>{t.nav[key]}</strong><span>{t.page[key].body}</span><ArrowRight aria-hidden="true" /></a>)}</div></section>
 
         <section className="section articles-section">
           <div className="section-heading"><p className="eyebrow">06 / FIELD NOTES</p><h2>{t.page.articles.title}</h2><p>{t.page.articles.body}</p></div>
-          <ArticleCards lang={lang} />
+          <ArticleCards lang={lang} limit={4} />
+          <a className="browse-articles" href={`/${lang}/articles`}>{discoveryCopy[lang].all}<ArrowRight aria-hidden="true" /></a>
         </section>
 
         <section className="section faq-section">
@@ -369,7 +373,7 @@ function SectionPage({ lang, section }: { lang: Language; section: string }) {
       {isFaq && <section className="section faq-section"><FAQ lang={lang} /></section>}
       {isArticles && <section className="section articles-section"><ArticleCards lang={lang} /></section>}
       {!isArticles && <SourcesPanel lang={lang} section={section} />}
-      {!isArticles && <section className="section related-section"><div className="section-heading"><p className="eyebrow">RELATED / FIELD NOTES</p><h2>{t.page.articles.title}</h2></div><ArticleCards lang={lang} /></section>}
+      {!isArticles && <section className="section related-section"><div className="section-heading"><p className="eyebrow">RELATED / FIELD NOTES</p><h2>{t.page.articles.title}</h2></div><ArticleCards lang={lang} limit={3} selected={section === "shipping" ? ["oopbuy-shipping-planning", "oopbuy-shipping-time", "oopbuy-fees-total-cost"] : section === "qc" ? ["oopbuy-qc-checklist", "oopbuy-shoe-sizing", "oopbuy-return-exchange-before-shipping"] : ["oopbuy-spreadsheet-guide", "oopbuy-budget-finds", "oopbuy-qc-checklist"]} /></section>}
     </main>
     </>
   );
@@ -400,13 +404,14 @@ function ArticlePage({ lang, slug }: { lang: Language; slug: ArticleSlug }) {
           <div><p className="eyebrow">{article.eyebrow} / {article.read}</p><h1>{article.title}</h1><p>{article.description}</p>{article.updated && <small className="article-updated">{updateLabels[lang]} {article.updated}</small>}</div>
           <aside><ShieldCheck aria-hidden="true"/><strong>{t.labels.independently}</strong><p>{article.description}</p></aside>
         </header>
+        <nav className="article-toc section" aria-label={discoveryCopy[lang].contents}><strong>{discoveryCopy[lang].contents}</strong><ol>{article.sections.map((section, i) => <li key={section.heading}><a href={`#section-${i + 1}`}>{section.heading}</a></li>)}</ol></nav>
         <article className="article-body section">
-          {article.sections.map((section, index) => <section key={section.heading}><span>{String(index + 1).padStart(2, "0")}</span><div><h2>{section.heading}</h2>{section.paragraphs.map((paragraph, p) => <p key={p}>{paragraph}</p>)}</div></section>)}
+          {article.sections.map((section, index) => <section id={`section-${index + 1}`} key={section.heading}><span>{String(index + 1).padStart(2, "0")}</span><div><h2>{section.heading}</h2>{section.paragraphs.map((paragraph, p) => <p key={p}>{paragraph}</p>)}</div></section>)}
           {!!article.related?.length && <section><span>↗</span><div><h2>{t.nav.articles}</h2><ul>{article.related.filter((related) => related !== slug && articleSlugs.includes(related as ArticleSlug)).map((related) => <li key={related}><a href={`/${lang}/articles/${related}`}>{t.articles[related as ArticleSlug].title}</a></li>)}</ul></div></section>}
           {!!article.sources?.length && <section className="article-sources"><span>↗</span><div><h2>{sourceHeadings[lang][0]}</h2><p className="source-intro">{sourceIntro}</p><ul>{article.sources.map((source) => { const kind = source.kind ?? (/Trustpilot|Reddit|customer/i.test(source.label) ? "customer" : "official"); return <li key={source.label}><strong className="source-name">{source.label}</strong><span className="source-meta">{sourceKinds[lang][kind]} · {sourceKinds[lang].checked} {source.checked ?? "1 Sep 2026"}</span><p>{source.note}</p>{source.reference && <code>{source.reference}</code>}</li>; })}</ul></div></section>}
           <div className="source-note"><strong>{sourceBoundary[lang][0]}</strong><p>{t.labels.disclaimer} {sourceBoundary[lang][1]}</p></div>
         </article>
-        <section className="section related-section"><div className="section-heading"><p className="eyebrow">NEXT / FIELD NOTES</p><h2>{t.page.articles.title}</h2></div><ArticleCards lang={lang} /></section>
+        <section className="section related-section"><div className="section-heading"><p className="eyebrow">NEXT / FIELD NOTES</p><h2>{t.page.articles.title}</h2></div><ArticleCards lang={lang} limit={3} selected={article.related} exclude={slug} /></section>
       </main>
     </>
   );
