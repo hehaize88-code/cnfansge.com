@@ -247,5 +247,5 @@ export function getArticle(lang:Language,slug:string):Article|null {
   const article:Article|null=fresh?{...fresh,read:"",sources:[]}:getLegacyArticle(lang,slug);
   if(!article)return null;
   const words=article.sections.reduce((total,s)=>total+[s.title,...s.paragraphs,...(s.bullets??[])].join(" ").split(/\s+/u).length,0);
-  return {...article,...coreArticleMetadata[lang][slug],read:`${Math.max(1,Math.ceil(words/200))} ${editorialLabels[lang].read}`,datePublished:octoberSlugs.includes(slug)?editorialDate:(slug in englishArticles?"2026-09-01":"2026-09-24"),dateModified:editorialDate};
+  return {...article,...coreArticleMetadata[lang][slug],read:`${Math.max(1,Math.ceil(words/200))} ${editorialLabels[lang].read}`,datePublished:octoberSlugs.includes(slug)||(lang!=="en"&&!(slug in englishArticles))?editorialDate:(slug in englishArticles?"2026-09-01":"2026-09-24"),dateModified:editorialDate};
 }
