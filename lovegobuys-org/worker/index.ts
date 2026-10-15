@@ -1,6 +1,8 @@
 /** Cloudflare Worker entry point for LoveGoBuy Field Guide. */
 import handler from "vinext/server/app-router-entry";
 
+const CONTENT_REVISION = "2026-10-15-multilingual-guides";
+
 const HTML_CACHE_CONTROL = "public, max-age=0, s-maxage=3600, stale-while-revalidate=86400";
 
 function canonicalRedirect(request: Request) {
@@ -20,6 +22,7 @@ function cacheableHtml(response: Response, cacheState: "HIT" | "MISS") {
   headers.set("Cache-Control", HTML_CACHE_CONTROL);
   headers.set("Cloudflare-CDN-Cache-Control", "public, max-age=3600, stale-while-revalidate=86400");
   headers.set("X-LoveGoBuy-Cache", cacheState);
+  headers.set("X-LoveGoBuy-Revision", CONTENT_REVISION);
   return new Response(response.body, { status: response.status, statusText: response.statusText, headers });
 }
 
@@ -36,16 +39,20 @@ async function localizeDocumentLanguage(response: Response, url: URL) {
 }
 
 const worker = {
-  async fetch(request: Request, env: unknown, ctx: ExecutionContext): Promise<Response> {
+  async fetch(request: Request, env: Parameters<typeof handler.fetch>[1], ctx: NonNullable<Parameters<typeof handler.fetch>[2]>): Promise<Response> {
     const redirect = canonicalRedirect(request);
     if (redirect) return redirect;
 
     const url = new URL(request.url);
-    const shouldCache = request.method === "GET" && url.hostname === "lovegobuys.org" && url.search === "";
+    const shouldCache = request.method === "GET" && url.hostname === "lovegobuys.org" && url.search === ""
+      && (request.headers.get("Accept") ?? "").includes("text/html")
+      && !request.headers.has("RSC") && !request.headers.has("Next-Router-Prefetch");
     if (!shouldCache) return localizeDocumentLanguage(await handler.fetch(request, env, ctx), url);
 
     const edgeCache = (caches as CacheStorage & { default: Cache }).default;
-    const cacheKey = new Request(url.toString(), { method: "GET" });
+    const cacheUrl = new URL(url);
+    cacheUrl.searchParams.set("__content_revision", CONTENT_REVISION);
+    const cacheKey = new Request(cacheUrl.toString(), { method: "GET" });
     const cached = await edgeCache.match(cacheKey);
     if (cached) return cacheableHtml(cached, "HIT");
 

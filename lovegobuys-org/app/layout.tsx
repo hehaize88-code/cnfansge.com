@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Script from "next/script";
+import { InteractionTracking } from "@/components/interaction-tracking";
 import "./globals.css";
 
 export const metadata: Metadata = {
@@ -38,6 +39,7 @@ export default function RootLayout({
 function gtag(){dataLayer.push(arguments);}
 gtag("js", new Date());
 gtag("config", "G-MBX2JGZC4R");`}</Script>
+        <InteractionTracking />
         {children}
       </body>
     </html>

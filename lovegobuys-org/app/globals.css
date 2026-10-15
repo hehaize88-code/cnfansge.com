@@ -721,3 +721,25 @@ img { display: block; max-width: 100%; }
 @media (prefers-reduced-motion: reduce) {
   *, *::before, *::after { scroll-behavior: auto !important; transition: none !important; }
 }
+
+/* Article navigation keeps the answer near the top, including on small screens. */
+.article-toc b { display: block; font-size: 14px; color: var(--red-dark); }
+.article-toc ol { margin: 12px 0 18px; padding-left: 20px; }
+.article-toc li { margin: 9px 0; font-size: 13px; line-height: 1.4; }
+.article-toc a:hover, .all-articles-link:hover { text-decoration: underline; }
+.prose section[id] { scroll-margin-top: 105px; }
+.article-date { font-size: 13px !important; margin-top: 12px !important; }
+.all-articles-link { display: inline-block; margin: 10px 0; font-size: 14px; text-decoration: underline; }
+.home-articles .article-card.featured { grid-column: auto; min-height: 270px; }
+.home-articles .article-card h3 { font-size: clamp(23px,2.4vw,34px); }
+@media (max-width: 760px) {
+  .article-toc ol { columns: 2; column-gap: 25px; }
+  .article-toc li { break-inside: avoid; font-size: 12px; margin: 7px 0; }
+  .article-layout > aside:has(.article-toc) { position: static; }
+  .home-articles .article-card, .home-articles .article-card.featured { min-height: 215px; }
+  .home-articles .article-card h3 { font-size: 23px; }
+}
+@media (max-width: 460px) {
+  .article-toc ol { columns: 1; }
+  .home-articles .article-card, .home-articles .article-card.featured { min-height: 200px; }
+}

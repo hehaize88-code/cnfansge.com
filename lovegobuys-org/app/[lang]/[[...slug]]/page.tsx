@@ -8,6 +8,7 @@ import { DocumentLanguage } from "@/components/document-language";
 import { categories, copy, guideCards, interfaceCopy, isLang, languages, productCopy, products, type Lang } from "@/lib/site-data";
 import { topics, type Topic } from "@/lib/topics";
 import { articleSlugs, getArticle, getResearchArticles } from "@/lib/articles";
+import { articleUi, relatedSlugs } from "@/lib/article-navigation";
 import { researchFacts, type PageKind } from "@/lib/research-facts";
 
 type PageProps = { params: Promise<{ lang: string; slug?: string[] }> };
@@ -94,7 +95,7 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
   const article = slug[0] === "articles" && slug[1] && slug.length === 2 ? getArticle(slug[1], lang) : null;
   const pageSeo = seoCopy[lang][key] ?? seoCopy[lang].home;
   const title = article?.title ?? pageSeo.title;
-  const description = article?.intro ?? pageSeo.description;
+  const description = article?.deck ?? pageSeo.description;
   const canonical = absolutePath(lang, slug);
   return {
     title: { absolute: title },
@@ -127,7 +128,8 @@ function breadcrumbSchema(lang: Lang, slug: string[], label: string) {
     "@type": "BreadcrumbList",
     itemListElement: [
       { "@type": "ListItem", position: 1, name: interfaceCopy[lang].home, item: absolutePath(lang, []) },
-      { "@type": "ListItem", position: 2, name: label, item: absolutePath(lang, slug) },
+      ...(slug[0] === "articles" && slug.length === 2 ? [{ "@type": "ListItem", position: 2, name: articleUi[lang].all, item: absolutePath(lang, ["articles"]) }] : []),
+      { "@type": "ListItem", position: slug.length === 2 ? 3 : 2, name: label, item: absolutePath(lang, slug) },
     ],
   };
 }
@@ -138,7 +140,7 @@ function SearchBox({ lang }: { lang: Lang }) {
     <form className="search-box" action="https://cnfansge.com/search.html" method="get" target="_blank">
       <Search aria-hidden="true" />
       <input name="keywords" type="search" placeholder={c.searchPlaceholder} aria-label={c.searchPlaceholder} required />
-      <input name="channelid" type="hidden" value="" />
+      <input name="channelid" type="hidden" value="2" />
       <button type="submit">{c.searchButton}<ArrowUpRight size={17} /></button>
     </form>
   );
@@ -180,35 +182,6 @@ function ArticleCards({ lang, limit }: { lang: Lang; limit?: number }) {
   );
 }
 
-const evidenceProductIndexes: Record<string, number[]> = {
-  "lovegobuy-spreadsheet-research-workflow": [0, 1, 2],
-  "how-to-buy-with-lovegobuy-2026": [0, 3, 5],
-  "lovegobuy-qc-photos-guide": [0, 1, 3],
-  "lovegobuy-shipping-cost-guide": [1, 3, 5],
-  "is-lovegobuy-legit-review-2026": [0, 4, 7],
-};
-
-function ArticleEvidence({ lang, articleSlug }: { lang: Lang; articleSlug: string }) {
-  const ui = interfaceCopy[lang];
-  const indexes = evidenceProductIndexes[articleSlug] ?? [0, 1, 2];
-  return (
-    <div className="article-evidence" aria-label={ui.routeEvidence}>
-      <div><b>{ui.routeEvidence}</b><span>{ui.routeEvidenceText}</span></div>
-      <div>
-        {indexes.map((index) => {
-          const product = products[index];
-          const label = productCopy[lang][index];
-          return (
-          <a href={product.href} target="_blank" rel="noopener noreferrer" key={product.href}>
-            <img src={product.image} alt={`${label.category} ${ui.productRoute}`} width="320" height="320" loading="lazy" />
-            <span>{label.category} · {product.price}</span>
-          </a>
-          );
-        })}
-      </div>
-    </div>
-  );
-}
 
 function ProductGrid({ lang, limit = 8 }: { lang: Lang; limit?: number }) {
   const c = copy[lang];
@@ -332,7 +305,7 @@ function HomePage({ lang }: { lang: Lang }) {
 
         <section className="page-section page-shell home-articles">
           <SectionHead kicker={ui.sectionResearch} title={c.nav[5]} text={researchFacts[lang].articles.note} />
-          <ArticleCards lang={lang} limit={3} />
+          <ArticleCards lang={lang} limit={4} />
           <div className="section-cta"><Link href={`/${lang}/articles`}>{c.nav[5]} <ArrowRight size={16} /></Link></div>
         </section>
 
@@ -354,17 +327,17 @@ function Breadcrumb({ lang, label }: { lang: Lang; label: string }) {
 
 function RelatedArticles({ lang, articleSlug }: { lang: Lang; articleSlug: string }) {
   const articles = getResearchArticles(lang);
-  const currentIndex = Math.max(0, articles.findIndex((item) => item.slug === articleSlug));
-  const related = [articles[(currentIndex + 1) % articles.length], articles[(currentIndex + 2) % articles.length]];
+  const related = relatedSlugs(articleSlug).map(slug => articles.find(item => item.slug === slug)).filter((item): item is NonNullable<typeof item> => Boolean(item));
   return (
     <nav className="related-articles" aria-label={interfaceCopy[lang].relatedArticles}>
       <b>{interfaceCopy[lang].relatedArticles}</b>
+      <Link className="all-articles-link" href={`/${lang}/articles`}>{articleUi[lang].all}</Link>
       <div>{related.map((article) => <Link key={article.slug} href={`/${lang}/articles/${article.slug}`}>{article.title}<ArrowRight size={15} /></Link>)}</div>
     </nav>
   );
 }
 
-function TopicPage({ lang, topic, kind, sourceBasis, contentLang, articleSlug }: { lang: Lang; topic: Topic; kind: string; sourceBasis?: string; contentLang?: string; articleSlug?: string }) {
+function TopicPage({ lang, topic, kind, sourceBasis, contentLang, articleSlug, modified }: { lang: Lang; topic: Topic; kind: string; sourceBasis?: string; contentLang?: string; articleSlug?: string; modified?: string }) {
   const c = copy[lang];
   const ui = interfaceCopy[lang];
   const pageSlug = kind === "article" && articleSlug ? ["articles", articleSlug] : [kind];
@@ -377,16 +350,17 @@ function TopicPage({ lang, topic, kind, sourceBasis, contentLang, articleSlug }:
       <JsonLd data={breadcrumbSchema(lang, pageSlug, topic.title)} />
       {itemList && <JsonLd data={itemList} />}
       <Breadcrumb lang={lang} label={topic.title} />
-      <header className="interior-hero"><span>{kind.toUpperCase()} / {ui.fieldNote}</span><h1>{topic.title}</h1><p>{topic.intro}</p></header>
+      <header className="interior-hero"><span>{kind === "article" ? c.nav[5] : kind === "guide" ? articleUi[lang].overview : kind.toUpperCase()} / {ui.fieldNote}</span><h1>{topic.title}</h1><p>{topic.intro}</p>{modified && <p className="article-date">{articleUi[lang].updated} <time dateTime={modified}>{new Intl.DateTimeFormat(lang, { dateStyle: "long", timeZone: "UTC" }).format(new Date(modified))}</time></p>}</header>
       {kind !== "article" && <ResearchStrip lang={lang} kind={kind as PageKind} />}
       {kind === "finds" && <ProductGrid lang={lang} />}
       <div className="article-layout">
-        <aside><b>{ui.checkingRule}</b><p>{ui.checkingRuleText}</p><SearchBox lang={lang} /></aside>
+        <aside>{articleSlug ? <nav className="article-toc" aria-label={articleUi[lang].contents}><b>{articleUi[lang].contents}</b><ol>{topic.sections.map((section, index) => <li key={section.h}><a href={`#section-${index + 1}`}>{section.h}</a></li>)}</ol></nav> : <><b>{ui.checkingRule}</b><p>{ui.checkingRuleText}</p></>}<SearchBox lang={lang} /></aside>
         <article className="prose" lang={contentLang}>
-          {sourceBasis && articleSlug && <><p className="source-basis">{sourceBasis}</p><ArticleEvidence lang={lang} articleSlug={articleSlug} /></>}
+          {sourceBasis && articleSlug && <p className="source-basis">{sourceBasis}</p>}
           {topic.sections.map((section, index) => (
-            <section key={section.h}><span>{String(index + 1).padStart(2, "0")}</span><h2>{section.h}</h2>{section.p.map((p) => <p key={p}>{p}</p>)}{section.bullets && <ul>{section.bullets.map((item) => <li key={item}><Check size={15} />{item}</li>)}</ul>}</section>
+            <section id={`section-${index + 1}`} key={section.h}><span>{String(index + 1).padStart(2, "0")}</span><h2>{section.h}</h2>{section.p.map((p) => <p key={p}>{p}</p>)}{section.bullets && <ul>{section.bullets.map((item) => <li key={item}><Check size={15} />{item}</li>)}</ul>}</section>
           ))}
+          {kind === "guide" && <nav className="related-articles"><b>{articleUi[lang].next}</b><Link href={`/${lang}/articles/how-to-buy-with-lovegobuy-2026`}>{getArticle("how-to-buy-with-lovegobuy-2026", lang)?.title}<ArrowRight size={15} /></Link></nav>}
           {articleSlug && <RelatedArticles lang={lang} articleSlug={articleSlug} />}
           <div className="article-next"><b>{c.guides}</b><GuideGrid lang={lang} /></div>
         </article>
@@ -436,7 +410,7 @@ function ArticlesPage({ lang }: { lang: Lang }) {
     <main className="interior page-shell">
       <JsonLd data={breadcrumbSchema(lang, ["articles"], c.nav[5])} />
       <Breadcrumb lang={lang} label={c.nav[5]} />
-      <header className="interior-hero"><span>{interfaceCopy[lang].longForm} / {interfaceCopy[lang].sourceAware}</span><h1>{c.guides}</h1><p>{c.guidesText}</p></header>
+      <header className="interior-hero"><span>{interfaceCopy[lang].longForm} / {interfaceCopy[lang].sourceAware}</span><h1>{articleUi[lang].all}</h1><p>{c.guidesText}</p></header>
       <ResearchStrip lang={lang} kind="articles" />
       <ArticleCards lang={lang} />
     </main>
@@ -444,13 +418,12 @@ function ArticlesPage({ lang }: { lang: Lang }) {
 }
 
 function ArticlePage({ article, lang }: { article: NonNullable<ReturnType<typeof getArticle>>; lang: Lang }) {
-  const imageIndex = (evidenceProductIndexes[article.slug] ?? [0])[0];
   const publisher = { "@type": "Organization", name: "LoveGoBuy Field Guide", url: "https://lovegobuys.org/", logo: { "@type": "ImageObject", url: "https://lovegobuys.org/lovegobuy-logo.png" } };
-  const schema = { "@context": "https://schema.org", "@type": "Article", headline: article.title, description: article.intro, image: [products[imageIndex].image], datePublished: article.published, dateModified: article.modified, inLanguage: lang, mainEntityOfPage: absolutePath(lang, ["articles", article.slug]), author: publisher, publisher };
+  const schema = { "@context": "https://schema.org", "@type": "Article", headline: article.title, description: article.deck, image: ["https://lovegobuys.org/lovegobuy-logo.png"], datePublished: article.published, dateModified: article.modified, inLanguage: lang, mainEntityOfPage: absolutePath(lang, ["articles", article.slug]), author: publisher, publisher };
   return (
     <>
       <JsonLd data={schema} />
-      <TopicPage lang={lang} topic={article} kind="article" sourceBasis={article.sourceBasis} contentLang={lang} articleSlug={article.slug} />
+      <TopicPage lang={lang} topic={article} kind="article" sourceBasis={article.sourceBasis} contentLang={lang} articleSlug={article.slug} modified={article.modified} />
     </>
   );
 }
@@ -471,7 +444,7 @@ export default async function LocalizedPage({ params }: PageProps) {
     if (!article) notFound();
     content = <ArticlePage article={article} lang={lang} />;
   }
-  else if ((["finds", "guide", "qc", "shipping"] as const).includes(key as "finds" | "guide" | "qc" | "shipping") && slug.length === 1) content = <TopicPage lang={lang} topic={topics[key as keyof typeof topics][lang]} kind={key} />;
+  else if ((["finds", "guide", "qc", "shipping"] as const).includes(key as "finds" | "guide" | "qc" | "shipping") && slug.length === 1) content = <TopicPage lang={lang} topic={key === "guide" ? { title: articleUi[lang].guideTitle, intro: articleUi[lang].guideIntro, sections: getArticle("how-to-buy-with-lovegobuy-2026", lang)!.sections.slice(0, 3) } : topics[key as keyof typeof topics][lang]} kind={key} />;
   else notFound();
 
   return <><DocumentLanguage lang={lang} /><SiteHeader lang={lang} />{content}<SiteFooter lang={lang} /></>;

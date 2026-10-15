@@ -1,4 +1,8 @@
 import { longArticle, longArticleSlug, type Topic } from "./topics";
+import { newArticles as restoredArticles } from "./restored-articles";
+import { restoredTranslations } from "./restored-translations";
+import { priorityArticles } from "./priority-articles";
+import { improveArticle } from "./article-improvements";
 import { articleTranslations } from "./article-translations";
 import type { Lang } from "./site-data";
 
@@ -113,6 +117,8 @@ const reviewGuide: ResearchArticle = {
 };
 
 export const researchArticles: ResearchArticle[] = [
+  ...priorityArticles("en"),
+  ...restoredArticles,
   spreadsheet,
   howToBuy,
   qcGuide,
@@ -123,14 +129,22 @@ export const researchArticles: ResearchArticle[] = [
 export const articleSlugs = researchArticles.map((article) => article.slug);
 
 export function getArticle(slug: string, lang: Lang = "en") {
-  const article = researchArticles.find((item) => item.slug === slug);
-  if (!article || lang === "en") return article;
-  const translation = articleTranslations[lang][slug];
-  return translation ? { ...article, ...translation } : undefined;
+  const base = researchArticles.find((item) => item.slug === slug);
+  if (!base) return undefined;
+  let article: ResearchArticle = base;
+  if (lang !== "en") {
+    const priority = priorityArticles(lang).find((item) => item.slug === slug);
+    const translation = restoredTranslations[lang][slug] ?? articleTranslations[lang][slug];
+    if (priority) article = priority;
+    else if (translation) article = { ...base, ...translation, published: restoredTranslations[lang][slug] ? "2026-10-15" : base.published, modified: "2026-10-15" };
+    else return undefined;
+  }
+  article = improveArticle(article, lang);
+  const words = [article.intro, ...article.sections.flatMap(s => [s.h, ...s.p, ...(s.bullets ?? [])])].join(" ").split(/\s+/).length;
+  return { ...article, readingTime: `${Math.max(2, Math.ceil(words / 190))} min` };
 }
 
 export function getResearchArticles(lang: Lang) {
-  return researchArticles
-    .map((article) => getArticle(article.slug, lang))
+  return researchArticles.map((article) => getArticle(article.slug, lang))
     .filter((article): article is ResearchArticle => Boolean(article));
 }

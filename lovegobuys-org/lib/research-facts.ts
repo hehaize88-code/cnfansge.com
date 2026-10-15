@@ -51,4 +51,23 @@ export const researchFacts: Record<Lang, Record<PageKind, FactSet>> = {
   },
 };
 
+const articleNotes: Record<Lang, string> = {
+  en: "13 complete guides in English, with matching German, Spanish, French and Italian editions.",
+  de: "13 vollständige Ratgeber auf Deutsch sowie passende Ausgaben auf Englisch, Spanisch, Französisch und Italienisch.",
+  es: "13 guías completas en español, también disponibles en inglés, alemán, francés e italiano.",
+  fr: "13 guides complets en français, également disponibles en anglais, allemand, espagnol et italien.",
+  it: "13 guide complete in italiano, disponibili anche in inglese, tedesco, spagnolo e francese.",
+};
+const qcFacts: Record<Lang, string> = {
+  en: "Check the inspection photos attached to your own warehouse item.",
+  de: "Prüfe die Fotos, die deinem eigenen Lagerartikel zugeordnet sind.",
+  es: "Revisa las fotos de inspección asociadas a tu propio artículo.",
+  fr: "Examinez les photos de contrôle associées à votre propre article.",
+  it: "Controlla le foto di ispezione associate al tuo articolo di magazzino.",
+};
+for (const lang of Object.keys(articleNotes) as Lang[]) {
+  researchFacts[lang].articles.note = articleNotes[lang];
+  researchFacts[lang].qc.facts[0] = qcFacts[lang];
+}
+
 export type { PageKind };
