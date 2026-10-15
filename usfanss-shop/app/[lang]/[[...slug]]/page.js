@@ -158,6 +158,7 @@ function SearchForm({ t, compact = false }) {
 }
 
 function HomeHero({ lang, t }) {
+  const featured = products[0];
   return (
     <section className="home-hero">
       <div className="hero-main">
@@ -173,12 +174,17 @@ function HomeHero({ lang, t }) {
           {[t.hero.stat1, t.hero.stat2, t.hero.stat3].map((stat, index) => <div key={stat}><strong>0{index + 1}</strong><span>{stat}</span></div>)}
         </div>
       </div>
-      <aside className="route-brief">
-        <div className="brief-top"><span>{t.hero.brief}</span><i>↗</i></div>
-        <div className="brief-orbit"><div className="orbit-dot"></div><strong>QC</strong><span>LIST</span></div>
-        <h2>{t.hero.briefTitle}</h2>
-        <p>{t.hero.briefBody}</p>
-        <div className="brief-tags"><span>{t.hero.tag1}</span><span>{t.hero.tag2}</span><span>{t.hero.tag3}</span></div>
+      <aside className="hero-product" aria-labelledby="hero-product-title">
+        <a className="hero-product-image" href={featured.href} target="_blank" rel="noopener noreferrer" aria-label={`${t.hero.productDetails}: ${featured.title}`}>
+          <img src={featured.image} alt={featured.title} width="750" height="750" fetchPriority="high" />
+        </a>
+        <div className="hero-product-info">
+          <p className="hero-product-label">{t.hero.featuredProduct} · {t.categoryNames.shoes}</p>
+          <h2 id="hero-product-title"><a href={featured.href} target="_blank" rel="noopener noreferrer">{featured.title}</a></h2>
+          <div className="hero-product-price"><strong>{featured.price}</strong><span>{t.common.currentPrice}</span></div>
+          <p className="hero-product-note">{t.hero.productNote}</p>
+          <a className="hero-product-link" href={featured.href} target="_blank" rel="noopener noreferrer">{t.hero.productDetails}<Arrow diagonal /></a>
+        </div>
       </aside>
     </section>
   );
