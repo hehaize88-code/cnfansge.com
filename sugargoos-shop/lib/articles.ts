@@ -1,3 +1,6 @@
+import { searchReleaseArticles, searchReleaseSlugs } from "@/lib/articles-search-release";
+import { articleUpgrades, upgradedSlugs, decisionHeaders } from "@/lib/article-upgrades";
+import { editorialUI } from "@/lib/editorial-ui";
 import { legacyArticleUpdates } from "@/lib/legacy-article-update";
 import { Locale, locales } from "@/lib/site-data";
 import { extraArticles } from "@/lib/articles-extra";
@@ -13,12 +16,12 @@ export const legacyArticleSlugs = [
   "sugargoo-review-2026",
   "sugargoo-order-status-purchased-shipped-received-stored",
 ] as const;
-export const articleSlugs = [...octoberSlugs, ...legacyArticleSlugs] as const;
+export const articleSlugs = [...searchReleaseSlugs, ...octoberSlugs, ...legacyArticleSlugs] as const;
 export type LegacyArticleSlug = (typeof legacyArticleSlugs)[number];
 export type ArticleSlug = (typeof articleSlugs)[number];
 export function isArticleSlug(value: string): value is ArticleSlug { return articleSlugs.includes(value as ArticleSlug); }
 
-export type Article = { title: string; description: string; category: string; readTime: string; published: string; publishedISO?: string; modifiedISO?: string; research?: { checked: string; sources: string[]; metrics?: { label: string; value: string }[] }; related?: string[]; sections: { heading: string; paragraphs: string[] }[] };
+export type Article = { summary?: string; sources?: {label: string; url: string}[]; table?: {caption: string; headers: string[]; rows: string[][]}; title: string; description: string; category: string; readTime: string; published: string; publishedISO?: string; modifiedISO?: string; research?: { checked: string; sources: string[]; metrics?: { label: string; value: string }[] }; related?: string[]; sections: { heading: string; paragraphs: string[] }[] };
 
 const baseArticles: Record<Locale, Record<LegacyArticleSlug, Article>> = {
   en: {
@@ -222,4 +225,21 @@ for (const locale of locales) {
   }
 }
 
-export const articles = Object.fromEntries(locales.map((locale) => [locale, { ...baseArticles[locale], ...octoberArticles[locale] }])) as Record<Locale, Record<ArticleSlug, Article>>;
+export const articles = Object.fromEntries(locales.map((locale) => [locale, { ...baseArticles[locale], ...octoberArticles[locale], ...searchReleaseArticles[locale] }])) as Record<Locale, Record<ArticleSlug, Article>>;
+
+
+for (const locale of locales) {
+  for (const slug of upgradedSlugs) {
+    const item = articles[locale][slug];
+    const update = articleUpgrades[locale][slug];
+    item.summary = update.summary;
+    item.table = { caption: editorialUI[locale].table, headers: decisionHeaders[locale], rows: update.rows };
+    item.sections.push({ heading: update.heading, paragraphs: [update.paragraph] });
+    item.modifiedISO = "2026-10-15";
+  }
+  for (const slug of articleSlugs) {
+    const item = articles[locale][slug];
+    const count = item.sections.flatMap(section => [section.heading, ...section.paragraphs]).join(" ").match(/\p{L}+(?:[’'-]\p{L}+)*/gu)?.length ?? 0;
+    item.readTime = `${Math.ceil(count / 200)} ${{en:"min read",de:"Min. Lesezeit",es:"min de lectura",fr:"min de lecture",it:"min di lettura"}[locale]}`;
+  }
+}

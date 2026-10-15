@@ -1,3 +1,4 @@
+import { editorialUI } from "@/lib/editorial-ui";
 import { Locale } from "@/lib/site-data";
 import { faqAnswerExpansions, pageIntroExpansions, pageSectionExpansions } from "@/lib/page-content-expansions";
 
@@ -184,4 +185,9 @@ for (const locale of ["de", "es", "fr", "it"] as const) {
   });
   pageContent[locale].faq.intro += pageIntroExpansions[locale].faq;
   pageContent[locale].articles.intro += pageIntroExpansions[locale].articles;
+}
+
+for (const locale of ["en", "de", "es", "fr", "it"] as const) {
+  const storage = faqCopy[locale].find(item => /100/.test(item.a));
+  if (storage) storage.a = editorialUI[locale].storage;
 }

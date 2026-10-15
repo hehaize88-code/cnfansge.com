@@ -6,6 +6,7 @@ import { FAQList } from "@/components/FAQList";
 import { ProductCard } from "@/components/ProductCard";
 import { SearchBox } from "@/components/SearchBox";
 import { articleSlugs, articles } from "@/lib/articles";
+import { editorialUI } from "@/lib/editorial-ui";
 import { faqCopy } from "@/lib/page-content";
 import { categories, categoryLabels, homeCopy, isLocale, locales, productLabels, products } from "@/lib/site-data";
 
@@ -23,10 +24,10 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
   } as const;
   return {
     title: { absolute: titles[locale] },
-    description: homeCopy[locale].intro,
+    description: editorialUI[locale].intro,
     alternates: { canonical: `/${locale}/`, languages: { ...languages, "x-default": "https://sugargoos.shop/en/" } },
-    openGraph: { title: titles[locale], description: homeCopy[locale].intro, images:[] },
-    twitter: { card:"summary", title:titles[locale], description:homeCopy[locale].intro, images:[] },
+    openGraph: { title: titles[locale], description: editorialUI[locale].intro, images:[] },
+    twitter: { card:"summary", title:titles[locale], description:editorialUI[locale].intro, images:[] },
   };
 }
 
@@ -34,6 +35,8 @@ export default async function LocaleHome({ params }: { params: Promise<{ locale:
   const { locale } = await params;
   if (!isLocale(locale)) notFound();
   const copy = homeCopy[locale];
+  const ui = editorialUI[locale];
+  const featured = [...articleSlugs.slice(0,3), "sugargoo-spreadsheet-guide-2026" as const];
   const extra = {
     en:{catalog:"Live discovery workspace",latest:"Latest catalog routes",workflow:"From link to parcel",faq:"Quick answers",faqNote:"Clear answers before you commit to a listing or shipping line.",articles:"Read before you order",articlesNote:"Practical guides built around decisions that listings cannot answer.",read:"Read guide",allFaq:"All answers",allArticles:"All articles"},
     de:{catalog:"Arbeitsfläche für aktive Funde",latest:"Neueste Katalogwege",workflow:"Vom Link zum Paket",faq:"Schnelle Antworten",faqNote:"Klare Antworten, bevor du dich für ein Angebot oder eine Versandlinie entscheidest.",articles:"Vor der Bestellung lesen",articlesNote:"Praktische Leitfäden zu Fragen, die ein Angebot allein nicht beantwortet.",read:"Leitfaden lesen",allFaq:"Alle Antworten",allArticles:"Alle Artikel"},
@@ -47,23 +50,25 @@ export default async function LocaleHome({ params }: { params: Promise<{ locale:
         <div className="hero-grid page-width">
           <div className="hero-copy">
             <p className="hero-kicker"><span>2026</span>{extra.catalog}</p>
-            <h1>{copy.titleA}<br/><em>{copy.titleB}</em></h1>
-            <p className="hero-intro">{copy.intro}</p>
-            <SearchBox placeholder={copy.search} button={copy.searchButton} />
-            <div className="trust-row">{copy.facts.map((item) => <span key={item}><ShieldCheck aria-hidden="true" />{item}</span>)}</div>
+            <h1>{ui.titleA}<br/><em>{ui.titleB}</em></h1>
+            <p className="hero-intro">{ui.intro}</p>
+            <SearchBox placeholder={copy.search} button={ui.search} />
+            <p className="external-catalog-note">{ui.external}</p>
+            <nav className="intent-links" aria-label={ui.quick}>{(["spreadsheet","qc","shipping"] as const).map((path,index) => <Link key={path} href={`/${locale}/${path}/`}>{ui.hubs[index]}<ArrowRight aria-hidden="true"/></Link>)}</nav>
+            <div className="trust-row">{ui.facts.map((item) => <span key={item}><ShieldCheck aria-hidden="true" />{item}</span>)}</div>
           </div>
-          <aside className="hero-board" aria-label={copy.signal}>
-            <div className="board-head"><span>{copy.liveBoard}</span><strong>01 / 08</strong></div>
-            <div className="board-image"><img src={products[0].image} alt={productLabels[locale][products[0].id].name} width="720" height="720" /><span>{copy.routeChecked}</span></div>
-            <div className="board-copy"><p>{copy.signal}</p><h2>{productLabels[locale][products[0].id].name}</h2><span>{copy.signalText}</span><a href={products[0].href} target="_blank" rel="noopener noreferrer">{copy.open}<ExternalLink aria-hidden="true" /></a></div>
+          <aside className="hero-board" aria-label={ui.selection}>
+            <div className="board-head"><span>{ui.selection}</span><strong>01 / 08</strong></div>
+            <div className="board-image"><img src={products[0].image} alt={productLabels[locale][products[0].id].name} width="720" height="720" /><span>{ui.reference}</span></div>
+            <div className="board-copy"><p>{ui.selection}</p><h2>{productLabels[locale][products[0].id].name}</h2><span>{ui.note}</span><a data-product-id={products[0].id} href={products[0].href} target="_blank" rel="noopener noreferrer">{copy.open}<ExternalLink aria-hidden="true" /></a></div>
           </aside>
         </div>
       </section>
       <section className="category-section page-width"><div className="section-label"><span>01</span><div><small>{copy.eyebrow}</small><h2>{copy.categories}</h2></div></div><div className="category-grid">
-        {categories.map((category) => <a href={category.href} target="_blank" rel="noopener noreferrer" key={category.key}><small>{category.icon}</small><strong>{categoryLabels[locale][category.key]}</strong><ArrowRight aria-hidden="true" /></a>)}
+        {categories.map((category) => <a data-link-kind="category" href={category.href} target="_blank" rel="noopener noreferrer" key={category.key}><small>{category.icon}</small><strong>{categoryLabels[locale][category.key]}</strong><ArrowRight aria-hidden="true" /></a>)}
       </div></section>
       <section className="products-section page-width">
-        <div className="products-head"><div className="section-label"><span>02</span><div><small>{extra.latest}</small><h2>{copy.products}</h2></div></div><p>{copy.productsNote}</p><a href="https://cnfansge.com/AllProducts/" target="_blank" rel="noopener noreferrer">{copy.viewAll}<ArrowRight aria-hidden="true" /></a></div>
+        <div className="products-head"><div className="section-label"><span>02</span><div><small>{ui.selection}</small><h2>{ui.selection}</h2></div></div><p>{ui.note}</p><a href="https://cnfansge.com/AllProducts/" target="_blank" rel="noopener noreferrer">{copy.viewAll}<ArrowRight aria-hidden="true" /></a></div>
         <div className="product-grid">{products.map((product) => <ProductCard key={product.id} product={product} locale={locale} />)}</div>
       </section>
       <section className="workflow-section"><div className="page-width workflow-inner"><div><p className="hero-kicker"><span>03</span>{extra.workflow}</p><h2>{copy.workflow}</h2><p>{copy.workflowText}</p></div><ol>
@@ -71,7 +76,7 @@ export default async function LocaleHome({ params }: { params: Promise<{ locale:
       </ol></div></section>
       <section className="home-knowledge page-width">
         <div className="home-faq"><div className="knowledge-head"><span>04</span><div><h2>{extra.faq}</h2><p>{extra.faqNote}</p></div><Link href={`/${locale}/faq/`}>{extra.allFaq}<ArrowRight/></Link></div><FAQList items={faqCopy[locale].slice(0,3)}/></div>
-        <div className="home-articles"><div className="knowledge-head"><span>05</span><div><h2>{extra.articles}</h2><p>{extra.articlesNote}</p></div><Link href={`/${locale}/articles/`}>{extra.allArticles}<ArrowRight/></Link></div><div className="home-article-grid">{articleSlugs.map((slug) => {const article=articles[locale][slug];return <Link href={`/${locale}/articles/${slug}/`} key={slug} className="home-article-card"><div><BookOpen/><span>{article.category}</span><small>{article.readTime}</small></div><h3>{article.title}</h3><p>{article.description}</p><b>{extra.read}<ArrowRight/></b></Link>;})}</div></div>
+        <div className="home-articles"><div className="knowledge-head"><span>05</span><div><h2>{extra.articles}</h2><p>{extra.articlesNote}</p></div><Link href={`/${locale}/articles/`}>{extra.allArticles}<ArrowRight/></Link></div><div className="home-article-grid">{featured.map((slug) => {const article=articles[locale][slug];return <Link href={`/${locale}/articles/${slug}/`} key={slug} className="home-article-card"><div><BookOpen/><span>{article.category}</span><small>{article.readTime}</small></div><h3>{article.title}</h3><p>{article.description}</p><b>{extra.read}<ArrowRight/></b></Link>;})}</div></div>
       </section>
     </main>
   );

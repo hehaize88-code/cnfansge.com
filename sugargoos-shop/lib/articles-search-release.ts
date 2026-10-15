@@ -1,0 +1,21 @@
+import type { Article } from "@/lib/articles";
+import type { Locale } from "@/lib/site-data";
+import linksEn from "./editorial-20261015/links-en.json";
+import linksDe from "./editorial-20261015/links-de.json";
+import linksEs from "./editorial-20261015/links-es.json";
+import linksFr from "./editorial-20261015/links-fr.json";
+import linksIt from "./editorial-20261015/links-it.json";
+import feesEn from "./editorial-20261015/fees-en.json";
+import feesDe from "./editorial-20261015/fees-de.json";
+import feesEs from "./editorial-20261015/fees-es.json";
+import feesFr from "./editorial-20261015/fees-fr.json";
+import feesIt from "./editorial-20261015/fees-it.json";
+import storageEn from "./editorial-20261015/storage-en.json";
+import storageDe from "./editorial-20261015/storage-de.json";
+import storageEs from "./editorial-20261015/storage-es.json";
+import storageFr from "./editorial-20261015/storage-fr.json";
+import storageIt from "./editorial-20261015/storage-it.json";
+
+export const searchReleaseSlugs = ["sugargoo-link-not-working-weidian-taobao", "sugargoo-fees-total-cost-guide", "sugargoo-warehouse-storage-returns"] as const;
+const copy = {en:[linksEn,feesEn,storageEn],de:[linksDe,feesDe,storageDe],es:[linksEs,feesEs,storageEs],fr:[linksFr,feesFr,storageFr],it:[linksIt,feesIt,storageIt]};
+export const searchReleaseArticles = Object.fromEntries(Object.entries(copy).map(([locale, entries]) => [locale, Object.fromEntries(entries.map((article,index) => [searchReleaseSlugs[index],article]))])) as Record<Locale, Record<typeof searchReleaseSlugs[number], Article>>;

@@ -1,3 +1,4 @@
+import { editorialUI } from "@/lib/editorial-ui";
 import type { PageSlug } from "@/lib/page-content";
 import type { ArticleSlug } from "@/lib/articles";
 
@@ -11,7 +12,7 @@ export const pageResearchBasis: Record<PageSlug, ResearchBasis> = {
   spreadsheet: {
     checked: "September 1, 2026",
     sources: [
-      "Live destination, image and price-label review on cnfansge.com",
+      "Live destination, image and price-label review on the linked external catalog",
       "Sugargoo official buying-flow and DIY-order guides (2025–2026)",
       "Sugargoo official QC and shipping-estimator guides (2025)",
     ],
@@ -19,7 +20,7 @@ export const pageResearchBasis: Record<PageSlug, ResearchBasis> = {
   finds: {
     checked: "September 1, 2026",
     sources: [
-      "Live product-route and category review on cnfansge.com",
+      "Live product-route and category review on the linked external catalog",
       "Sugargoo official buying, QC and restricted-item guidance",
       "Manual separation of listing claims, warehouse evidence and parcel decisions",
     ],
@@ -71,7 +72,7 @@ export const articleResearchBasis: Partial<Record<ArticleSlug, ResearchBasis>> =
     checked: "September 1, 2026",
     sources: [
       "Sugargoo official buying-flow, DIY-order, QC and shipping-estimator guides",
-      "Current live product routes, images and reference-price labels on cnfansge.com",
+      "Current live product routes, images and reference-price labels on the linked external catalog",
       "Route status is deliberately separated from seller, material and warehouse-quality claims",
     ],
   },
@@ -114,3 +115,5 @@ export const articleResearchBasis: Partial<Record<ArticleSlug, ResearchBasis>> =
     ],
   },
 };
+
+pageResearchBasis.faq = {checked:"2026-10-15", sources:[editorialUI.en.storage]};

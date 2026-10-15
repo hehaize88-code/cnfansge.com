@@ -5,7 +5,7 @@ import { locales } from "@/lib/site-data";
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const base = "https://sugargoos.shop";
-  const now = new Date("2026-10-01T08:00:00Z");
+  const now = new Date("2026-10-15T00:00:00Z");
   return locales.flatMap((locale) => [
     { url:`${base}/${locale}/`, lastModified:now, changeFrequency:"weekly" as const, priority:locale === "en" ? 1 : .8 },
     ...pageSlugs.map((slug) => ({url:`${base}/${locale}/${slug}/`,lastModified:now,changeFrequency:"weekly" as const,priority:.75})),

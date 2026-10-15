@@ -144,7 +144,7 @@ test("keeps every homepage module in the dense mobile layout", async () => {
 
   assert.match(homepage, /<main className="home-page">/);
   assert.match(css, /\.home-page \.category-grid\s*\{[^}]*repeat\(4,minmax\(0,1fr\)\)/);
-  assert.match(css, /\.home-page \.product-grid\s*\{[^}]*repeat\(2,minmax\(0,1fr\)\)/);
+  assert.match(css, /\.home-page \.product-grid(?:,\.inner-page \.product-grid)?\s*\{[^}]*repeat\(2,minmax\(0,1fr\)\)/);
   assert.match(css, /\.home-page \.workflow-inner ol\s*\{[^}]*repeat\(2,minmax\(0,1fr\)\)/);
   assert.match(css, /\.home-page \.home-article-grid\s*\{[^}]*repeat\(2,minmax\(0,1fr\)\)/);
   assert.match(css, /\.inner-page \.product-grid\s*\{[^}]*repeat\(2,minmax\(0,1fr\)\)/);
