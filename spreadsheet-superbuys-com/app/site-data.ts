@@ -12,8 +12,8 @@ export const categories = [
 ];
 
 export const products = [
-  { title: "Sweatshirts — latest listing", category: "Sweatshirts", id: "6681", image: "https://cnfansge.com/uploads/allimg/20260506/1-260506103535537.webp" },
-  { title: "Pants / Shorts — latest listing", category: "Pants", id: "6680", image: "https://cnfansge.com/uploads/allimg/20260506/1-26050610331M37.webp" },
+  { title: "Sweatshirt product listing", category: "Sweatshirts", id: "6681", image: "https://cnfansge.com/uploads/allimg/20260506/1-260506103535537.webp" },
+  { title: "Pants and shorts product listing", category: "Pants", id: "6680", image: "https://cnfansge.com/uploads/allimg/20260506/1-26050610331M37.webp" },
   { title: "Jersey find no. 55", category: "Jerseys", id: "6679", image: "https://cnfansge.com/uploads/allimg/20260422/1-2604222250014B.jpg" },
   { title: "Jersey find no. 54", category: "Jerseys", id: "6678", image: "https://cnfansge.com/uploads/allimg/20260422/1-260422225000a6.jpg" },
   { title: "Jersey find no. 53", category: "Jerseys", id: "6677", image: "https://cnfansge.com/uploads/allimg/20260422/1-260422224959349.jpg" },

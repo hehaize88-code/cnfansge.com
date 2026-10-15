@@ -1,5 +1,5 @@
 const CANONICAL_HOST = "spreadsheet-superbuys.com";
-const CACHE_VERSION = "2026-08-25-link-checker-v1";
+const CACHE_VERSION = "2026-10-15-six-languages-v2";
 const HTML_EDGE_TTL_SECONDS = 600;
 
 function withHeader(response, name, value) {

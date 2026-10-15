@@ -2,8 +2,8 @@ import type { Metadata } from "next";
 import { GuidePage } from "../guide-page";
 
 export const metadata: Metadata = {
-  title: "Superbuy Shipping Calculator: Estimate Cost in 2026",
-  description: "Use the Superbuy shipping calculator correctly: estimate packed weight, compare eligible routes and understand deposit versus final carrier settlement.",
+  title: "Superbuy Shipping Calculator: Weight, Cost & Worked Example",
+  description: "Calculate a Superbuy shipping estimate using destination, packed weight and dimensions. See a volumetric-weight example and understand deposit versus final cost.",
   keywords: ["superbuy shipping cost", "superbuy shipping calculator", "superbuy international shipping", "superbuy volumetric weight"],
   alternates: { canonical: "/shipping-cost/" },
 };
@@ -11,9 +11,9 @@ export const metadata: Metadata = {
 export default function ShippingPage() {
   return <GuidePage
     eyebrow="SHIPPING · COST PLANNING"
-    title="Superbuy shipping calculator: estimate cost without inventing a final price"
+    title="How to calculate Superbuy shipping costs"
     pagePath="/shipping-cost/"
-    intro="Superbuy shipping cost is determined by the completed parcel, destination and available route—not by a product-card number. Build the estimate in layers, then reconcile it with the carrier-confirmed parcel."
+    intro="Enter the destination, packed weight, parcel dimensions and item restrictions in Superbuy's current shipping calculator. Compare eligible routes, add optional services and possible destination charges, then recheck the final packed parcel. There is no single shipping price per kilogram for every order."
     readMinutes={12}
     takeaways={[
       "Separate product price, Chinese domestic delivery, optional services, international freight and destination charges.",
@@ -48,6 +48,12 @@ export default function ShippingPage() {
       },
       {
         heading: "Physical weight is only part of the parcel",
+        table: {caption: "Illustrative weight calculation, not a route quote: a 3 kg parcel measuring 40 × 30 × 25 cm", headers: ["Scenario", "Calculation", "Weight before route rounding"], rows: [
+          ["Actual weight", "Measured on a scale", "3 kg"],
+          ["Hypothetical divisor of 6000", "40 × 30 × 25 ÷ 6000", "5 kg volumetric weight"],
+          ["Hypothetical divisor of 5000", "40 × 30 × 25 ÷ 5000", "6 kg volumetric weight"],
+          ["Route using the greater weight", "Compare actual and volumetric weight", "5 kg or 6 kg in these examples; check the real route rule"]
+        ]},
         body: [
           "International routes may charge by actual scale weight, parcel dimensions or another route-specific chargeable-weight rule. Even when an item itself is light, a large box can occupy meaningful transport space. The exact divisor and rounding unit depend on the route, so use the live calculator and route rules rather than one universal volumetric formula copied from another carrier.",
           "Think in shapes as well as kilograms. Shoes with retail boxes, structured bags, helmets, figurine boxes and protective packaging can create much more volume than folded clothing. Combining them may use empty space efficiently, or it may require a larger outer carton. An estimated product weight before packing cannot predict that final carton.",
@@ -76,6 +82,7 @@ export default function ShippingPage() {
       {
         heading: "A repeatable method for estimating before checkout",
         body: [
+          "For a US destination, choose the United States and the actual delivery area in the live calculator. For another country, use that destination instead. Enter the packed dimensions, weight and product characteristics requested by the calculator; do not reuse a US quote for Europe or assume a route accepts every item. Record the quote date and currency so later comparisons use the same basis.",
           "First, make a list of intended items with seller price, domestic shipping, estimated weight and rough dimensions where available. Second, add optional service assumptions separately. Third, enter a reasonable combined parcel into Superbuy’s current shipping calculator for the correct destination. Record at least two eligible routes instead of anchoring the budget to only the cheapest result.",
           "Next, add a buffer for packaging, chargeable-volume uncertainty and destination costs. Recalculate when warehouse weights become available, then reassess after consolidation and packing. If the final parcel exceeds your limit, compare removing a nonessential item, changing packaging where safe, splitting incompatible goods or selecting another eligible route. Do not solve a cost problem by making a fragile parcel unreasonably vulnerable.",
           "Finally, keep the estimated and final figures. Divide the final parcel cost by item only if that allocation is useful to you; do not pretend each item caused an equal share when one bulky product drove the carton size. Over several orders, your own parcel history becomes far more useful than a screenshot of someone else’s shipment to another country. This produces practical cost content without pretending that one shipping price applies to every buyer.",

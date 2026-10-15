@@ -1,109 +1,30 @@
-# vinext-starter
+# spreadsheet-superbuys.com
 
-> Publication note: automated article updates are disabled for spreadsheet-superbuys.com; releases for this site are reviewed and published manually.
+Independent product-discovery and buying guides, published from this directory in the shared `hehaize88-code/cnfansge.com` repository. Keep changes scoped to this site. The catalog destination is **cnfansge.com**.
 
-A clean full-stack starter running on
-[vinext](https://github.com/cloudflare/vinext), with optional Cloudflare D1 and
-Drizzle support.
+## Build and release
 
-## Prerequisites
+Requires Node 22.13 or newer. Run `npm ci`, then `npm run build` and `node --test tests/rendered-html.test.mjs`. The build produces matching `out/` and `dist/client/` static sites. Production has historically served the checked-in static files at the site root; a source-only commit does not update those files.
 
-- Node.js `>=22.13.0`
-- Linux with `flock`, `curl`, and GNU `timeout`
+After validation, run `node scripts/sync-static-release.mjs`, inspect the diff and publish the complete source plus static release in one GitHub commit. Preserve files belonging to other sites in this repository. Verify the `Cloudflare Pages: spreadsheet-superbuys-com` GitHub check and then check the production `/release.json`, home page, language pages and sitemap. A successful check alone does not establish that the intended content is live.
 
-## Sites Lifecycle
+Publication is manual and review-based. No automatic article-generation schedule is enabled.
 
-The Sites lifecycle CLI runs the locked dependency install before returning this checkout. Edit the source under `app/`, then checkpoint when a coherent milestone is ready to inspect or share. The remote Sites builder runs `npm run build` against the pushed commit. Do not repeat install or build as a normal pre-checkpoint step.
+## Languages and content
 
-This starter does not use `wrangler.jsonc`.
+English stays at existing URLs. German, French, Spanish, Italian and Polish use `/de/`, `/fr/`, `/es/`, `/it/` and `/pl/` with the same page paths. Every language has the full article body, metadata, JSON-LD, reciprocal hreflang and internal navigation. There are 19 canonical pages and 15 guides per language.
 
-`install:ci` is intentionally a single, non-retrying `npm ci`. It refuses a concurrent install for the same project, consumes a matching image-seeded npm cache with `--prefer-offline` while retaining registry fallback for a missing cache object, otherwise downloads and verifies the complete vinext tarball recorded in `package-lock.json`, limits npm to one socket, and terminates a stalled install. `build` applies a short timeout. These helpers target Linux and use GNU `timeout`; they are not native macOS scripts.
+Article sources are `app/seo-article-data.ts`, `app/new-article-data.ts` and the four core guide pages. `scripts/build-locales.mjs` converts the Next export into static documents and fails if a translated string is absent. It intentionally removes React hydration, which would otherwise overwrite translated HTML. Native links, forms and details controls work without a React runtime; `public/site.js` supplies analytics and compatibility with older `?lang=` links.
 
-Scripts that need writable project-scoped home, npm, XDG, and temporary paths use `scripts/sites-env.sh`. The `dev` and `start` scripts honor the caller's runtime environment and keep Wrangler logs inside the checkout. The generated `.sites-runtime/` directory is disposable and ignored by Git.
+To add or edit text:
 
-## Included Shape
+1. Update the English source and build the Next export with `node_modules/.bin/next build`.
+2. Run `node scripts/build-locales.mjs --collect` to collect exact source strings in `work/translation-strings.json`.
+3. Supply complete translations in `content/translations/{language}.json`. Reviewed corrections belong in `content/translation-overrides.json`; these take precedence. Never leave an English paragraph as a fallback. Translation drafts require editorial checks, especially numbers, policy limits, negations, product terminology and headings.
+4. Run the complete build and validation, then sync the static release.
 
-- edit site code under `app/`
-- `app/chatgpt-auth.ts` provides optional dispatch-owned ChatGPT sign-in helpers
-- `.openai/hosting.json` declares optional Sites D1 and R2 bindings
-- `vite.config.ts` simulates declared bindings for local development
-- `db/index.ts` reads the D1 binding from the Cloudflare Worker environment
-- `db/schema.ts` starts intentionally empty
-- `examples/d1/` contains an optional D1 example surface
-- `drizzle.config.ts` supports local migration generation when needed
+Builds use committed translation data and do not call an external translation service. Do not restore the old generated translation module: its previous committed contents were corrupted by truncated tool output.
 
-## Workspace Auth Headers
+## Analytics
 
-OpenAI workspace sites can read the current user's email from
-`oai-authenticated-user-email`.
-
-SIWC-authenticated workspace sites may also receive
-`oai-authenticated-user-full-name` when the user's SIWC profile has a non-empty
-`name` claim. The full-name value is percent-encoded UTF-8 and is accompanied by
-`oai-authenticated-user-full-name-encoding: percent-encoded-utf-8`.
-
-Treat the full name as optional and fall back to email when it is absent:
-
-```tsx
-import { headers } from "next/headers";
-
-export default async function Home() {
-  const requestHeaders = await headers();
-  const email = requestHeaders.get("oai-authenticated-user-email");
-  const encodedFullName = requestHeaders.get("oai-authenticated-user-full-name");
-  const fullName =
-    encodedFullName &&
-    requestHeaders.get("oai-authenticated-user-full-name-encoding") ===
-      "percent-encoded-utf-8"
-      ? decodeURIComponent(encodedFullName)
-      : null;
-
-  const displayName = fullName ?? email;
-  // ...
-}
-```
-
-## Optional Dispatch-Owned ChatGPT Sign-In
-
-Import the ready-to-use helpers from `app/chatgpt-auth.ts` when the site needs
-optional or required ChatGPT sign-in:
-
-- Use `getChatGPTUser()` for optional signed-in UI.
-- Use `requireChatGPTUser(returnTo)` for server-rendered pages that should send
-  anonymous visitors through Sign in with ChatGPT.
-- Use `chatGPTSignInPath(returnTo)` and `chatGPTSignOutPath(returnTo)` for
-  browser links or actions.
-- Pass a same-origin relative `returnTo` path for the destination after sign-in
-  or sign-out. The helper validates and safely encodes it.
-- Mark protected pages with `export const dynamic = "force-dynamic"` because
-  they depend on per-request identity headers.
-
-Dispatch owns `/signin-with-chatgpt`, `/signout-with-chatgpt`, `/callback`, the
-OAuth cookies, and identity header injection. Do not implement app routes for
-those reserved paths. Routes that do not import and call the helper remain
-anonymous-compatible.
-
-SIWC establishes identity only; it does not prove workspace membership. Use the
-Sites hosting platform's access policy controls for workspace-wide restrictions,
-or enforce explicit server-side membership or allowlist checks.
-
-Use SIWC for account pages, user-specific dashboards, saved records, and write
-actions tied to the current ChatGPT user. Leave public content anonymous.
-
-## Diagnostic Commands
-
-- `npm run install:ci`: perform the one bounded lockfile install
-- `npm run dev`: start the Vite/Vinext development server
-- `npm run build`: build the deployable Sites artifact
-- `npm run start`: start the built Vinext application
-- `npm test`: build and verify the rendered development-preview metadata
-- `npm run db:generate`: generate Drizzle migrations after schema changes
-
-Use build commands for targeted diagnosis after a remote failure, not as part of the normal checkpoint path.
-
-The timeout defaults can be overridden for a controlled canary with `SITES_INSTALL_TIMEOUT`, `SITES_INSTALL_KILL_AFTER`, `SITES_BUILD_TIMEOUT`, and `SITES_BUILD_KILL_AFTER`. A timeout fails the command; the helpers never retry an unchanged install or build.
-
-## Learn More
-
-- [vinext Documentation](https://github.com/cloudflare/vinext)
-- [Drizzle D1 Guide](https://orm.drizzle.team/docs/get-started/d1-new)
+Preserves GA4 measurement ID `G-NJEYHQ693H`. Events: `catalog_outbound_click` (product, category or catalog), `article_click`, `product_index_search`, and `language_change`. Events include page language. Free-form search terms are not sent to GA4. Key-event definitions in the Analytics account are separate and are not changed by this release.

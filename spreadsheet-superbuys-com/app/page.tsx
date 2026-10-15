@@ -1,14 +1,15 @@
+import { newArticles } from "./new-article-data";
 import type { Metadata } from "next";
 import Link from "next/link";
 import { ArrowIcon, CategoryGrid, Footer, Header, ProductGrid, SearchBox } from "./components";
 
 export const metadata: Metadata = {
-  title: "Superbuy Spreadsheet 2026: Live Links, Finds & QC Guide",
-  description: "Browse the Superbuy spreadsheet 2026, check live product links and use independent fee, QC photo, warehouse and shipping guides before ordering.",
+  title: "Superbuy Spreadsheet | Product Finds, QC & Shipping Guides",
+  description: "Browse Superbuy spreadsheet finds by category. Check product links, estimate shipping costs and learn the 90-day warehouse storage rules before ordering.",
   alternates: { canonical: "/" },
   robots: { index: true, follow: true },
   openGraph: {
-    title: "Superbuy Spreadsheet 2026: Live Links, Finds & QC Guide",
+    title: "Superbuy Spreadsheet | Product Finds, QC & Shipping Guides",
     description: "Check current product destinations, then use practical fee, QC, warehouse and shipping guides.",
     type: "website",
     url: "/",
@@ -17,7 +18,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Superbuy Spreadsheet 2026: Live Links, Finds & QC Guide",
+    title: "Superbuy Spreadsheet | Product Finds, QC & Shipping Guides",
     description: "Check current Superbuy spreadsheet destinations before ordering.",
     images: ["/og.png"],
   },
@@ -30,11 +31,7 @@ const guideCards = [
   { title: "Use warehouse storage well", copy: "Plan QC, after-sales and consolidation during the storage window.", href: "/warehouse-storage/", label: "Warehouse" },
 ];
 
-const articleCards = [
-  { title: "Superbuy Fees Explained: Service Fees and Shipping Charges", copy: "See which cost belongs to the seller, optional services or the final international parcel.", href: "/articles/superbuy-fees-explained/", topic: "Fees", time: "13 min read" },
-  { title: "Superbuy Spreadsheet vs Reddit and Google Sheets", copy: "A practical trust test for current destinations, variants, seller details and saved evidence.", href: "/articles/superbuy-spreadsheet-vs-reddit-google-sheets/", topic: "Link trust", time: "12 min read" },
-  { title: "Superbuy Product Search: Photos, Links and Item Numbers", copy: "Turn a screenshot or identifier into a verified source listing before placing an order.", href: "/articles/superbuy-image-search-item-number/", topic: "Product search", time: "12 min read" },
-];
+const articleCards = newArticles.map(article => ({title: article.title, copy: article.description, href: `/articles/${article.slug}/`, topic: article.eyebrow, time: `${article.readMinutes} min read`}));
 
 export default function Home() {
   const websiteSchema = {
@@ -55,17 +52,18 @@ export default function Home() {
       <Header />
       <main>
         <section className="hero wrap">
-          <span className="hero-label">Independent link verification index · Checked 14 September 2026</span>
-          <h1 data-i18n="title">Superbuy Spreadsheet 2026: check live links before ordering.</h1>
+          <span className="hero-label">Independent product index · Guides updated 15 October 2026</span>
+          <h1 data-i18n="title">Superbuy Spreadsheet: find products, check costs, plan your parcel.</h1>
           <p className="hero-lede" data-i18n="intro">Browse Superbuy finds by category, open the current destination and verify the listing, selected option, seller details and price before placing an order.</p>
           <SearchBox />
+          <div className="hero-links"><Link href="/warehouse-storage/">How long can Superbuy store items?</Link><Link href="/shipping-cost/">Estimate shipping costs</Link></div>
           <div className="hero-links">
             <a href="https://cnfansge.com/AllProducts/" target="_blank" rel="noopener noreferrer"><span data-i18n="all">View all products</span> <ArrowIcon /></a>
             <Link href="/how-to-use/" data-i18n="how">How it works</Link>
           </div>
           <div className="status-row" aria-label="Index overview">
             <div><b>10</b><span data-i18n="categories">Product categories</span></div>
-            <div><b>6</b><span data-i18n="recent">Recent listings</span></div>
+            <div><b>6</b><span data-i18n="recent">Featured listings</span></div>
             <div><b data-i18n="storageDays">90 days</b><span data-i18n="storage">Free storage stated by Superbuy</span></div>
           </div>
         </section>
@@ -81,7 +79,7 @@ export default function Home() {
         <section className="finds-section" id="finds">
           <div className="wrap">
             <div className="section-heading simple-heading">
-              <div><span className="kicker" data-i18n="newIndex">New in the index</span><h2 data-i18n="recentFinds">Recently listed finds</h2></div>
+              <div><span className="kicker" data-i18n="newIndex">New in the index</span><h2 data-i18n="recentFinds">Product finds to explore</h2></div>
               <a href="https://cnfansge.com/AllProducts/" target="_blank" rel="noopener noreferrer" className="line-link"><span data-i18n="everything">See everything</span> <ArrowIcon /></a>
             </div>
             <ProductGrid />
@@ -106,14 +104,14 @@ export default function Home() {
           </div>
           <div className="fact-strip">
             <div><span data-i18n="factSource">Superbuy public guidance</span><b data-i18n="factSummary">QC photos · 90-day storage · parcel consolidation · final carrier settlement</b></div>
-            <Link href="/articles/"><span data-i18n="articles">SEO Articles</span> <ArrowIcon /></Link>
+            <Link href="/articles/"><span data-i18n="articles">Buyer Guides</span> <ArrowIcon /></Link>
           </div>
         </section>
 
         <section className="articles-section">
           <div className="wrap">
             <div className="section-heading simple-heading">
-              <div><span className="kicker" data-i18n="seoLabel">SEO Articles</span><h2 data-i18n="seoTitle">In-depth buying guides</h2></div>
+              <div><span className="kicker" data-i18n="seoLabel">Buyer Guides</span><h2 data-i18n="seoTitle">In-depth buying guides</h2></div>
               <p data-i18n="seoIntro">Independent articles about discovery, quality control, warehouse storage and shipping.</p>
             </div>
             <div className="article-card-grid">
@@ -124,7 +122,7 @@ export default function Home() {
                 <b><span data-i18n="read">Read article</span> <ArrowIcon /></b>
               </Link>)}
             </div>
-            <div className="articles-link"><Link href="/articles/"><span data-i18n="browseArticles">Browse the complete SEO article center</span> <ArrowIcon /></Link></div>
+            <div className="articles-link"><Link href="/articles/"><span data-i18n="browseArticles">Browse all 15 buyer guides</span> <ArrowIcon /></Link></div>
           </div>
         </section>
 

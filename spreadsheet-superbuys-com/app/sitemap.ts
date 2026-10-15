@@ -1,3 +1,4 @@
+import { newArticles } from "./new-article-data";
 import type { MetadataRoute } from "next";
 
 export const dynamic = "force-static";
@@ -13,10 +14,11 @@ export default function sitemap(): MetadataRoute.Sitemap {
     "/articles/superbuy-shopping-agent-vs-forwarding/",
     "/articles/superbuy-returns-before-shipping/",
     "/articles/superbuy-restricted-items-shipping-routes/",
+    ...newArticles.map(article => `/articles/${article.slug}/`),
   ];
   return paths.map((path, index) => ({
     url: `${base}${path || "/"}`,
-    lastModified: new Date("2026-09-14"),
+    lastModified: new Date("2026-10-15"),
     changeFrequency: index < 2 ? "weekly" : "monthly",
     priority: index === 0 ? 1 : index === 1 ? .9 : index === 2 ? .85 : .8,
   }));

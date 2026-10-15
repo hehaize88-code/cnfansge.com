@@ -2,8 +2,8 @@ import type { Metadata } from "next";
 import { GuidePage } from "../guide-page";
 
 export const metadata: Metadata = {
-  title: "Superbuy Warehouse Storage Time: 90-Day Guide",
-  description: "Understand Superbuy warehouse storage time and use the published 90-day free window for QC, returns and parcel consolidation planning.",
+  title: "How Long Does Superbuy Store Items? 90 Days Free Storage",
+  description: "Superbuy publishes 90 days of free warehouse storage. Learn when storage fees start, how extensions work and which item deadline to check before shipping.",
   keywords: ["superbuy warehouse storage", "superbuy 90 day storage", "how to add storage days superbuy", "superbuy parcel consolidation", "superbuy warehouse guide"],
   alternates: { canonical: "/warehouse-storage/" },
 };
@@ -11,9 +11,9 @@ export const metadata: Metadata = {
 export default function WarehousePage() {
   return <GuidePage
     eyebrow="WAREHOUSE · CONSOLIDATION"
-    title="Superbuy warehouse storage time: use the 90-day window well"
+    title="How long does Superbuy keep items in the warehouse?"
     pagePath="/warehouse-storage/"
-    intro="Superbuy currently publishes a 90-day free storage period for items. The real advantage is not simply waiting: it is using warehouse time to inspect arrivals, resolve problems and compare complete-parcel options."
+    intro="Superbuy publishes 90 days of free storage after warehouse arrival. Its fee page lists CNY 0.1 per item per day after that, with a standard maximum of 180 days unless storage is extended. Check each item's actual account deadline and current terms before relying on these limits."
     readMinutes={12}
     takeaways={[
       "Check the actual storage deadline shown for every item; do not rely only on a general policy page.",
@@ -29,7 +29,13 @@ export default function WarehousePage() {
     next={{ label: "Review frequently asked questions", href: "/faq/" }}
     sections={[
       {
-        heading: "What the 90-day warehouse window means",
+        heading: "90 days free: when fees and storage limits apply",
+        table: {caption: "Published storage policy checked 15 October 2026; the current item record controls your deadline", headers: ["Stage", "Published policy", "What to do"], rows: [
+          ["After warehouse arrival", "90 days of free storage", "Inspect the item and record its displayed deadline."],
+          ["After the free period", "CNY 0.1 per item per day", "Check the current accrued charge before submission."],
+          ["Standard maximum", "180 days unless extended", "Act before the limit; the policy describes disposal after the stated conditions."],
+          ["Storage extension", "Extends the maximum period, not the free period", "Purchase in advance and verify the new deadline and daily fees."]
+        ]},
         body: [
           "Superbuy’s official user guidance currently states that it provides 90 days of free storage for items after warehouse arrival. The guide explicitly connects that period with buying additional products and sending stored items together. This turns the warehouse into a planning stage between domestic purchasing and international parcel submission.",
           "Use the published 90 days as a current service fact, not a permanent promise or a reason to ignore the account. If you need to add storage days in Superbuy, check the item-level deadline and the current extension option in your warehouse account; the fee page describes storage after the free period and optional extension services, but terms and charges can change. The date shown for the actual item should control your action.",

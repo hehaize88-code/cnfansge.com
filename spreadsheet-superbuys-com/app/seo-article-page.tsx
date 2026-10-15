@@ -13,6 +13,7 @@ export type SeoArticle = {
   title: string;
   description: string;
   readMinutes: number;
+  datePublished?: string;
   takeaways: string[];
   sections: SeoArticleSection[];
   sources: string[];
@@ -26,8 +27,8 @@ export function SeoArticlePage({ article }: { article: SeoArticle }) {
     "@type": "Article",
     headline: article.title,
     description: article.description,
-    datePublished: "2026-09-14",
-    dateModified: "2026-09-14",
+    datePublished: article.datePublished ?? "2026-10-15",
+    dateModified: "2026-10-15",
     author: { "@type": "Organization", name: "Superbuy Spreadsheet Editorial" },
     publisher: {
       "@type": "Organization",
@@ -58,7 +59,7 @@ export function SeoArticlePage({ article }: { article: SeoArticle }) {
           <span className="kicker">{article.eyebrow}</span>
           <h1>{article.title}</h1>
           <p>{article.description}</p>
-          <div className="article-meta"><span>Independent buyer guide</span><span>Checked 14 September 2026</span><span>{article.readMinutes} min read</span></div>
+          <div className="article-meta"><span>Independent buyer guide</span><span>Checked 15 October 2026</span><span>{article.readMinutes} min read</span></div>
         </header>
         <div className="article-layout wrap">
           <aside className="article-aside">
@@ -84,7 +85,7 @@ export function SeoArticlePage({ article }: { article: SeoArticle }) {
             <section className="article-sources" aria-labelledby="sources-checked">
               <span className="section-no">PRIMARY SOURCES</span>
               <h2 id="sources-checked">Sources checked for this guide</h2>
-              <p>Official English-language Superbuy materials checked on 14 September 2026. Source names are listed for verification; service details can change after publication.</p>
+              <p>Official English-language Superbuy materials checked on 15 October 2026. Source names are listed for verification; service details can change after publication.</p>
               <ul>{article.sources.map((source) => <li key={source}><span className="source-citation"><span>{source}</span><b aria-hidden="true">✓</b></span></li>)}</ul>
             </section>
             <section className="related-guides" aria-labelledby="related-guides">

@@ -5,6 +5,7 @@ project_root="$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)"
 cd "${project_root}"
 
 node_modules/.bin/next build
+node scripts/build-locales.mjs
 
 # The existing Cloudflare Pages project is configured for the Vinext client
 # directory. Mirror the static export there so the current Pages setting and

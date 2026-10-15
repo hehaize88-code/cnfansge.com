@@ -5,6 +5,7 @@ export type GuideSection = {
   heading: string;
   body: string[];
   points?: string[];
+  table?: { caption: string; headers: string[]; rows: string[][] };
 };
 
 export type GuideSource = {
@@ -23,7 +24,7 @@ export function GuidePage({
   title,
   intro,
   pagePath,
-  updated = "14 September 2026",
+  updated = "15 October 2026",
   readMinutes = 11,
   takeaways,
   sources,
@@ -49,7 +50,7 @@ export function GuidePage({
     headline: title,
     description: intro,
     datePublished: "2026-08-25",
-    dateModified: "2026-09-14",
+    dateModified: "2026-10-15",
     author: { "@type": "Organization", name: "Superbuy Spreadsheet Editorial" },
     image: ["https://spreadsheet-superbuys.com/og.png"],
     publisher: {
@@ -109,6 +110,7 @@ export function GuidePage({
                 <span className="section-no">0{index + 1}</span>
                 <h2 data-i18n={`${pageKey}Section${index + 1}`}>{section.heading}</h2>
                 {section.body.map((paragraph, paragraphIndex) => <p key={paragraph} data-i18n={`${pageKey}Body${index + 1}_${paragraphIndex + 1}`}>{paragraph}</p>)}
+                {section.table && <div className="table-scroll"><table><caption>{section.table.caption}</caption><thead><tr>{section.table.headers.map(h => <th scope="col" key={h}>{h}</th>)}</tr></thead><tbody>{section.table.rows.map((row, i) => <tr key={i}>{row.map((cell, j) => <td key={j}>{cell}</td>)}</tr>)}</tbody></table></div>}
                 {section.points && <ul>{section.points.map((point, pointIndex) => <li key={point} data-i18n={`${pageKey}Point${index + 1}_${pointIndex + 1}`}>{point}</li>)}</ul>}
               </section>
             ))}
