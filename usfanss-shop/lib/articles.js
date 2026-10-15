@@ -1,3 +1,5 @@
+import { applyContentRelease } from "./seo-release";
+
 export const researchedArticles = {
   "use-usfans-spreadsheet": {
     "imageIndex": 0,
@@ -938,3 +940,5 @@ export const researchedArticles = {
     "sourceLabel": "Editorial review · 3 October 2026. All numerical scenarios are illustrative, not live USFans quotes or guaranteed service terms."
   }
 };
+
+applyContentRelease(researchedArticles, "en");

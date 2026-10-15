@@ -23,7 +23,10 @@ export const articleRoutes = [
   "articles/usfans-haul-budget",
   "articles/usfans-shipping-time",
   "articles/usfans-volumetric-weight",
-  "articles/usfans-parcel-packing"
+  "articles/usfans-parcel-packing",
+  "articles/usfans-link-not-working",
+  "articles/usfans-payment-methods",
+  "articles/usfans-jackets-spreadsheet"
 ];
 export const routes = [...coreRoutes, ...articleRoutes];
 
@@ -51,7 +54,7 @@ export const products = [
   { id: 3300, title: "FF Canvas Belt", category: "Accessories", price: "$10.25", cny: "¥73", image: "https://cnfansge.com/uploads/allimg/20251204/1-2512041152124B.webp" },
   { id: 2189, title: "Moonwatch-Style Watch", category: "Accessories", price: "$24.60", cny: "¥175", image: "https://cnfansge.com/uploads/allimg/20251117/1-25111G05252F3.webp" },
   { id: 5458, title: "Valentino-Style Bracelet", category: "Accessories", price: "$15.20", cny: "¥108", image: "https://cnfansge.com/uploads/allimg/20260120/1-2601201229555U.jpg" }
-].map((product) => ({ ...product, href: `https://cnfansge.com/AllProducts/${product.id}.html` }));
+].map((product) => ({ ...product, categoryKey: { Shoes: "shoes", Hoodies: "hoodies", Outerwear: "jackets", Accessories: "accessories" }[product.category], href: `https://cnfansge.com/AllProducts/${product.id}.html` }));
 
 export const articleCards = [
   { slug: "use-usfans-spreadsheet", contentKey: "use-sugargoo-spreadsheet", number: "01", read: "11 min", wordCount: 1381 },
@@ -65,7 +68,10 @@ export const articleCards = [
   { slug: "usfans-haul-budget", contentKey: "usfans-haul-budget", number: "09" },
   { slug: "usfans-shipping-time", contentKey: "usfans-shipping-time", number: "10" },
   { slug: "usfans-volumetric-weight", contentKey: "usfans-volumetric-weight", number: "11" },
-  { slug: "usfans-parcel-packing", contentKey: "usfans-parcel-packing", number: "12" }
+  { slug: "usfans-parcel-packing", contentKey: "usfans-parcel-packing", number: "12" },
+  { slug: "usfans-link-not-working", contentKey: "usfans-link-not-working", number: "13" },
+  { slug: "usfans-payment-methods", contentKey: "usfans-payment-methods", number: "14" },
+  { slug: "usfans-jackets-spreadsheet", contentKey: "usfans-jackets-spreadsheet", number: "15" }
 ].map((card) => {
   const wordCount = researchedArticles[card.slug].sections.reduce((total, section) => total + `${section.heading} ${section.paragraphs.join(" ")}`.split(/\s+/).length, 0);
   return { ...card, wordCount, read: `${Math.ceil(wordCount / 180)} min` };

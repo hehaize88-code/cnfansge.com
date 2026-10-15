@@ -6,14 +6,14 @@ export const dynamic = "force-static";
 // Keep dates route-specific so future editorial releases update only the URLs
 // whose visible content or metadata actually changed.
 const lastModifiedByRoute = {
-  "": "2026-10-03",
-  spreadsheet: "2026-10-03",
-  finds: "2026-10-03",
-  guide: "2026-10-03",
-  qc: "2026-10-03",
-  shipping: "2026-10-03",
-  faq: "2026-10-03",
-  articles: "2026-10-03",
+  "": "2026-10-15",
+  spreadsheet: "2026-10-15",
+  finds: "2026-10-15",
+  guide: "2026-10-15",
+  qc: "2026-10-15",
+  shipping: "2026-10-15",
+  faq: "2026-10-15",
+  articles: "2026-10-15",
   "articles/use-usfans-spreadsheet": "2026-10-03",
   "articles/beginner-ordering-guide": "2026-10-03",
   "articles/qc-photo-checklist": "2026-10-03",

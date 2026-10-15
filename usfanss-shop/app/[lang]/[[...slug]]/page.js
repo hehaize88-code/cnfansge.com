@@ -14,11 +14,17 @@ import { translations } from "../../../lib/i18n";
 import { researchedArticles } from "../../../lib/articles";
 import { localizedArticles } from "../../../lib/article-translations";
 
+import { articleWordCount } from "../../../lib/seo-release";
+import ProductCatalogue from "../../../components/ProductCatalogue";
+import WeightCalculator from "../../../components/WeightCalculator";
+
 const destinationSearch = "https://cnfansge.com/search.html";
 const finalBase = "https://usfanss.shop";
 const officialSources = [
   { key: "help", href: "https://www.usfans.com/help" },
-  { key: "product", href: "https://www.usfans.com/" }
+  { key: "beginner", href: "https://www.usfans.com/beginner-guide" },
+  { key: "payment", href: "https://www.usfans.com/help/HCON_STATIC_038" },
+  { key: "estimator", href: "https://usfans.com/estimation" }
 ];
 
 export function generateStaticParams() {
@@ -102,7 +108,7 @@ function Arrow({ diagonal = false }) {
 
 function Logo({ lang }) {
   return (
-    <Link href={internalPath(lang)} className="logo" aria-label="USFans Index home">
+    <Link href={internalPath(lang)} className="logo" aria-label={`USFans Index · ${languageNames[lang]}`}>
       <img src="/usfans-logo.png" alt="USFans" width="375" height="123" />
     </Link>
   );
@@ -114,7 +120,7 @@ function Header({ lang, route, t }) {
     <header className="site-header">
       <div className="header-inner">
         <Logo lang={lang} />
-        <nav className="desktop-nav" aria-label="Primary navigation">
+        <nav className="desktop-nav" aria-label={t.ui.navigation}>
           {navItems.map((item) => (
             <Link key={item} href={internalPath(lang, item)} className={route === item ? "active" : ""}>
               {t.nav[item]}
@@ -134,7 +140,7 @@ function Header({ lang, route, t }) {
           </details>
           <Link className="header-cta" href={internalPath(lang, "finds")}>{t.common.browse} <Arrow /></Link>
           <details className="mobile-menu">
-            <summary aria-label="Open menu"><span></span><span></span></summary>
+            <summary aria-label={t.ui.menu}><span></span><span></span></summary>
             <div className="mobile-panel">
               {navItems.map((item) => <Link key={item} href={internalPath(lang, item)}>{t.nav[item]}</Link>)}
             </div>
@@ -174,7 +180,7 @@ function HomeHero({ lang, t }) {
           {[t.hero.stat1, t.hero.stat2, t.hero.stat3].map((stat, index) => <div key={stat}><strong>0{index + 1}</strong><span>{stat}</span></div>)}
         </div>
       </div>
-      <aside className="hero-product" aria-labelledby="hero-product-title">
+      <aside className="hero-product" data-placement="homepage-feature" data-category="shoes" aria-labelledby="hero-product-title">
         <a className="hero-product-image" href={featured.href} target="_blank" rel="noopener noreferrer" aria-label={`${t.hero.productDetails}: ${featured.title}`}>
           <img src={featured.image} alt={featured.title} width="750" height="750" fetchPriority="high" />
         </a>
@@ -204,7 +210,7 @@ function CategoryGrid({ t }) {
     <div className="category-grid">
       {categories.map((category, index) => (
         <a key={category.key} href={category.href} target="_blank" rel="noreferrer" className="category-card">
-          <img src={category.image} alt={`${t.categoryNames[category.key]} product category`} width="560" height="420" loading="lazy" />
+          <img src={category.image} alt={t.categoryNames[category.key]} width="560" height="420" loading="lazy" />
           <span className="category-number">0{index + 1}</span>
           <div><h3>{t.categoryNames[category.key]}</h3><span><Arrow diagonal /></span></div>
         </a>
@@ -215,14 +221,14 @@ function CategoryGrid({ t }) {
 
 function ProductCard({ product, t }) {
   return (
-    <article className="product-card">
+    <article className="product-card" data-category={product.categoryKey}>
       <a href={product.href} target="_blank" rel="noreferrer" className="product-image">
-        <img src={product.image} alt={`${product.title} product reference`} width="640" height="640" loading="lazy" />
+        <img src={product.image} alt={product.title} width="640" height="640" loading="lazy" />
         <span>{t.common.verified}</span>
       </a>
       <div className="product-info">
-        <p>{product.category} · ID {product.id}</p>
-        <h3>{product.title}</h3>
+        <p>{t.categoryNames[product.categoryKey]} · ID {product.id}</p>
+        <h3><a href={product.href} target="_blank" rel="noopener noreferrer">{product.title}</a></h3>
         <div className="product-bottom">
           <div><small>{t.common.currentPrice}</small><strong>{product.price}</strong></div>
           <a href={product.href} target="_blank" rel="noreferrer" aria-label={`${t.common.open}: ${product.title}`}><Arrow diagonal /></a>
@@ -232,8 +238,9 @@ function ProductCard({ product, t }) {
   );
 }
 
-function ProductGrid({ t, limit }) {
-  const visible = limit ? products.slice(0, limit) : products;
+function ProductGrid({ t, limit, category }) {
+  const selected = category ? products.filter(product => product.categoryKey === category) : products;
+  const visible = limit ? selected.slice(0, limit) : selected;
   return <div className="product-grid">{visible.map((product) => <ProductCard key={product.id} product={product} t={t} />)}</div>;
 }
 
@@ -248,7 +255,7 @@ function ArticleGrid({ lang, t, featured = false }) {
         const [title, description] = t.articleTitles[article.contentKey];
         return (
           <Link key={article.slug} href={internalPath(lang, `articles/${article.slug}`)} className="article-card">
-            <div className="article-meta"><span>{article.number}</span><small>{article.read}</small></div>
+            <div className="article-meta"><span>{article.number}</span><small>{Math.ceil(articleWordCount(localizedArticles[lang]?.[article.slug] || researchedArticles[article.slug]) / 180)} min</small></div>
             <h3>{title}</h3><p>{description}</p><div className="article-link">{t.common.readGuide}<Arrow /></div>
           </Link>
         );
@@ -283,7 +290,7 @@ function OfficialSources({ t }) {
       <p>{t.common.checkedOn}</p>
       <ul>
         {officialSources.map((source) => (
-          <li key={source.key}>{source.key === "help" ? t.common.officialHelpCenter : t.common.officialProductNotice}</li>
+          <li key={source.key}><a href={source.href} target="_blank" rel="noopener noreferrer">{t.ui[source.key]} ↗</a></li>
         ))}
       </ul>
     </aside>
@@ -342,19 +349,19 @@ function SpreadsheetPage({ lang, t }) {
       <section className="section-shell core-note-shell"><CorePageNote note={t.corePageNotes.spreadsheet} /></section>
       <section className="section-shell"><CategoryGrid t={t} /></section>
       <section className="section-shell"><MethodGrid t={t} /></section>
-      <section className="section-shell products-section"><SectionHeading eyebrow={t.home.productsEyebrow} title={t.home.productsTitle} /><ProductGrid t={t} limit={8} /><Link className="button primary centered" href={internalPath(lang, "finds")}>{t.common.viewAll}<Arrow /></Link></section>
+      <section className="section-shell products-section"><SectionHeading eyebrow={t.home.productsEyebrow} title={t.home.productsTitle} /><ProductCatalogue products={products} labels={t.categoryNames} ui={t.ui} currentPrice={t.common.currentPrice} lang={lang} /><Link className="button primary centered" href={internalPath(lang, "finds")}>{t.common.viewAll}<Arrow /></Link></section>
     </>
   );
 }
 
-function FindsPage({ t }) {
+function FindsPage({ lang, t }) {
   return (
     <>
       <JsonLd data={{ "@context": "https://schema.org", "@type": "ItemList", numberOfItems: products.length, itemListElement: products.map((product, index) => ({ "@type": "ListItem", position: index + 1, name: product.title, url: product.href })) }} />
       <PageHero intro={t.pageIntro.finds} number="02" />
       <section className="section-shell finds-toolbar"><SearchForm t={t} compact /><p>{t.common.cnyNote}</p></section>
       <section className="section-shell core-note-shell"><CorePageNote note={t.corePageNotes.finds} /></section>
-      <section className="section-shell products-section"><ProductGrid t={t} /></section>
+      <section className="section-shell products-section"><ProductCatalogue products={products} labels={t.categoryNames} ui={t.ui} currentPrice={t.common.currentPrice} lang={lang} /></section>
     </>
   );
 }
@@ -372,11 +379,11 @@ function GuidePage({ t }) {
 }
 
 function QcPage({ t }) {
-  return <><PageHero intro={t.pageIntro.qc} number="04" /><FactStrip items={t.coreFacts.qc} /><section className="section-shell core-note-shell"><CorePageNote note={t.corePageNotes.qc} /></section><section className="section-shell prose-shell"><NumberedContent items={t.qcPoints} /><div className="prose-asides"><aside className="callout"><span>QC ≠ CERTIFICATE</span><p>{t.qcPoints[7][1]}</p></aside><OfficialSources t={t} /></div></section></>;
+  return <><PageHero intro={t.pageIntro.qc} number="04" /><FactStrip items={t.coreFacts.qc} /><section className="section-shell core-note-shell"><CorePageNote note={t.corePageNotes.qc} /></section><section className="section-shell prose-shell"><NumberedContent items={t.qcPoints} /><div className="prose-asides"><aside className="callout"><span>{t.nav.qc}</span><p>{t.qcPoints[7][1]}</p></aside><OfficialSources t={t} /></div></section></>;
 }
 
-function ShippingPage({ t }) {
-  return <><PageHero intro={t.pageIntro.shipping} number="05" /><FactStrip items={t.coreFacts.shipping} /><section className="section-shell shipping-formula"><div><small>CHARGEABLE WEIGHT</small><strong>max(actual, volumetric)</strong></div><p>{t.shippingPoints[1][1]}</p></section><section className="section-shell core-note-shell"><CorePageNote note={t.corePageNotes.shipping} /></section><section className="section-shell prose-shell"><NumberedContent items={t.shippingPoints} /><OfficialSources t={t} /></section></>;
+function ShippingPage({ lang, t }) {
+  return <><PageHero intro={t.pageIntro.shipping} number="05" /><FactStrip items={t.coreFacts.shipping} /><div className="section-shell"><WeightCalculator copy={t.ui.calculator} lang={lang} /></div><section className="section-shell core-note-shell"><CorePageNote note={t.corePageNotes.shipping} /></section><section className="section-shell prose-shell"><NumberedContent items={t.shippingPoints} /><OfficialSources t={t} /></section></>;
 }
 
 function FaqPage({ t }) {
@@ -408,7 +415,7 @@ function ArticlePage({ lang, slug, t }) {
     sections: localizedArticle ? localizedArticle.sections : baseArticle.sections
   } : null;
   const researchedWordCount = researched
-    ? researched.sections.reduce((total, section) => total + section.heading.split(/\s+/).length + section.paragraphs.join(" ").split(/\s+/).length, 0)
+    ? articleWordCount(researched)
     : undefined;
   const articleImage = researched ? products[researched.imageIndex] : null;
   let primary = t.guideSteps;
@@ -420,7 +427,7 @@ function ArticlePage({ lang, slug, t }) {
   if (contentKey === "taobao-weidian-1688") { primary = t.marketplaces; secondary = t.guideSteps.slice(0, 3); }
   return (
     <>
-      <JsonLd data={{ "@context": "https://schema.org", "@type": "Article", headline: title, description, datePublished: baseArticle.datePublished, dateModified: baseArticle.dateModified, inLanguage: lang, wordCount: researchedWordCount, image: articleImage.image, author: { "@type": "Organization", name: "USFans Index", url: `${finalBase}/${lang}` }, mainEntityOfPage: `${finalBase}${internalPath(lang, `articles/${slug}`)}`, publisher: { "@type": "Organization", name: "USFans Index" } }} />
+      <JsonLd data={{ "@context": "https://schema.org", "@type": "Article", headline: title, description, datePublished: baseArticle.datePublished, dateModified: baseArticle.dateModified, inLanguage: lang, wordCount: researchedWordCount, image: `${finalBase}/og-cover.png`, author: { "@type": "Organization", name: "USFans Index", url: `${finalBase}/${lang}` }, mainEntityOfPage: `${finalBase}${internalPath(lang, `articles/${slug}`)}`, publisher: { "@type": "Organization", name: "USFans Index" } }} />
       <JsonLd data={{ "@context": "https://schema.org", "@type": "BreadcrumbList", itemListElement: [
         { "@type": "ListItem", position: 1, name: t.common.home, item: `${finalBase}/${lang}` },
         { "@type": "ListItem", position: 2, name: t.nav.articles, item: `${finalBase}/${lang}/articles` },
@@ -428,13 +435,17 @@ function ArticlePage({ lang, slug, t }) {
       ] }} />
       <article className="long-article">
         <nav className="article-breadcrumbs" aria-label={t.common.breadcrumbs}><Link href={internalPath(lang, "")}>{t.common.home}</Link><span>/</span><Link href={internalPath(lang, "articles")}>{t.nav.articles}</Link></nav>
-        <header><p className="eyebrow"><span></span>{article.number} · {article.read}</p><h1>{title}</h1><p>{description}</p></header>
+        <header><p className="eyebrow"><span></span>{article.number} · {Math.ceil(researchedWordCount / 180)} min</p><h1>{title}</h1><p>{description}</p></header>
         <div className="article-body">
           {researched ? <>
             <aside className="research-note"><span>{t.common.updated}</span><p>{researched.sourceLabel}</p></aside>
+            {researched.summary && <aside className="article-answer"><strong>{t.ui.answer}</strong><p>{researched.summary}</p></aside>}
+            <nav className="article-toc" aria-label={t.ui.toc}><h2>{t.ui.toc}</h2><ol>{researched.sections.map((section, index) => <li key={section.heading}><a href={`#section-${index + 1}`}>{section.heading}</a></li>)}</ol></nav>
             <OfficialSources t={t} />
-            {t.articleVisuals[slug] ? <ArticleEvidenceVisual visual={t.articleVisuals[slug]} /> : <figure className="article-figure"><a href={articleImage.href} target="_blank" rel="noreferrer"><img src={articleImage.image} alt={`${title} — ${articleImage.title}`} width="900" height="900" loading="eager" /></a><figcaption>{t.common.articleImageCaption}</figcaption></figure>}
-            {researched.sections.map((section, index) => <section key={section.heading} className="researched-section"><span>{String(index + 1).padStart(2, "0")}</span><div><h2>{section.heading}</h2>{section.paragraphs.map((paragraph) => <p key={paragraph}>{paragraph}</p>)}</div></section>)}
+            {t.articleVisuals[slug] ? <ArticleEvidenceVisual visual={t.articleVisuals[slug]} /> : null}
+            {researched.sections.map((section, index) => <section key={section.heading} id={`section-${index + 1}`} className="researched-section"><span>{String(index + 1).padStart(2, "0")}</span><div><h2>{section.heading}</h2>{section.paragraphs.map((paragraph) => <p key={paragraph}>{paragraph}</p>)}{section.table && <div className="article-table-scroll" tabIndex={0} role="region" aria-label={section.heading}><table><thead><tr>{section.table.headers.map(header => <th key={header} scope="col">{header}</th>)}</tr></thead><tbody>{section.table.rows.map((row, i) => <tr key={i}>{row.map((cell, j) => j === 0 ? <th key={j} scope="row">{cell}</th> : <td key={j}>{cell}</td>)}</tr>)}</tbody></table></div>}{section.checklist && <ul className="article-checklist">{section.checklist.map(item => <li key={item}>{item}</li>)}</ul>}</div></section>)}
+            {["international-shipping-cost", "usfans-volumetric-weight", "usfans-jackets-spreadsheet"].includes(slug) && <WeightCalculator copy={t.ui.calculator} lang={lang} />}
+            {baseArticle.category && <section data-placement="article-products"><h2>{t.ui.relatedProducts}</h2><ProductGrid t={t} category={baseArticle.category} limit={3} /><p>{t.common.cnyNote}</p></section>}
             <section><h2>{t.articleLabels.limitations}</h2><p>{t.common.cnyNote}</p><p>{t.common.disclaimer}</p></section>
           </> : <>
             <section><h2>{t.articleLabels.introduction}</h2><p>{t.pageIntro.guide[2]} {t.hero.briefBody}</p><p>{t.common.sourceNote}</p></section>
@@ -468,13 +479,21 @@ export default async function Page({ params }) {
   let content;
   if (route === "") content = <HomePage lang={lang} t={t} />;
   else if (route === "spreadsheet") content = <SpreadsheetPage lang={lang} t={t} />;
-  else if (route === "finds") content = <FindsPage t={t} />;
+  else if (route === "finds") content = <FindsPage lang={lang} t={t} />;
   else if (route === "guide") content = <GuidePage t={t} />;
   else if (route === "qc") content = <QcPage t={t} />;
-  else if (route === "shipping") content = <ShippingPage t={t} />;
+  else if (route === "shipping") content = <ShippingPage lang={lang} t={t} />;
   else if (route === "faq") content = <FaqPage t={t} />;
   else if (route === "articles") content = <ArticlesPage lang={lang} t={t} />;
   else if (articleRoutes.includes(route)) content = <ArticlePage lang={lang} slug={route.split("/")[1]} t={t} />;
   else notFound();
-  return <><Header lang={lang} route={route} t={t} /><main>{content}</main><Footer lang={lang} t={t} /></>;
+  const coreRelated = {
+    spreadsheet: ["use-usfans-spreadsheet", "usfans-shoes-spreadsheet", "usfans-hoodies-spreadsheet", "usfans-jackets-spreadsheet", "usfans-link-not-working"],
+    finds: ["usfans-shoes-spreadsheet", "usfans-hoodies-spreadsheet", "usfans-jackets-spreadsheet"],
+    guide: ["beginner-ordering-guide", "usfans-payment-methods", "usfans-link-not-working"],
+    qc: ["qc-photo-checklist", "warehouse-returns-guide", "usfans-jackets-spreadsheet"],
+    shipping: ["international-shipping-cost", "usfans-shipping-time", "usfans-volumetric-weight", "usfans-parcel-packing", "usfans-haul-budget"],
+    faq: ["usfans-link-not-working", "usfans-payment-methods", "usfans-shipping-time"]
+  };
+  return <><Header lang={lang} route={route} t={t} /><main>{content}{coreRelated[route] && <div className="section-shell core-related"><RelatedGuides lang={lang} t={t} slugs={coreRelated[route]} /></div>}</main><Footer lang={lang} t={t} /></>;
 }

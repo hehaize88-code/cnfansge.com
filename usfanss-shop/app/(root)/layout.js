@@ -3,6 +3,7 @@ import "../globals.css";
 export const metadata = {
   title: "USFans Index",
   description: "Independent USFans spreadsheet, finds, QC and international shipping research.",
+  alternates: { canonical: "https://usfanss.shop/en" },
   robots: { index: true, follow: true }
 };
 

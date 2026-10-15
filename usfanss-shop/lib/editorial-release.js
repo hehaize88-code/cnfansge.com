@@ -1,4 +1,5 @@
 import copy from "./editorial-copy.json";
+import releaseUi from "./seo-release/ui.json";
 import { articleCards } from "./data";
 import { researchedArticles } from "./articles";
 import { localizedArticles } from "./article-translations";
@@ -11,6 +12,11 @@ export function applyEditorialRelease(translations) {
     Object.assign(t.common, c.common);
     t.pageIntro.spreadsheet = c.spreadsheetIntro;
     t.pageIntro.articles = c.articlesIntro;
+    t.ui = releaseUi[language];
+    t.pageIntro.articles[2] = t.ui.articlesIntro;
+    t.common.verified = t.ui.reference;
+    t.common.sourcesChecked = t.ui.sources;
+    t.common.checkedOn = t.ui.sourceNote;
     t.corePageNotes.articles[2] = c.common.sourceNote;
     t.coreFacts = c.coreFacts;
     t.guideSteps[3] = c.guideWarehouse;

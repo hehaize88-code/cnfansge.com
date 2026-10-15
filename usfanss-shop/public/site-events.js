@@ -16,7 +16,15 @@
     try { url = new URL(anchor.href, location.href); } catch (_) { return; }
     if (url.hostname !== "cnfansge.com") return;
     var product = url.pathname.match(/^\/AllProducts\/(\d+)\.html$/);
-    if (product) send("outbound_product_click", { product_id: product[1] });
+    if (product) {
+      var placement = anchor.closest("[data-placement]");
+      var category = anchor.closest("[data-category]");
+      send("outbound_product_click", {
+        product_id: product[1],
+        link_placement: placement ? placement.getAttribute("data-placement") : "product-card",
+        product_category: category ? category.getAttribute("data-category") : "unspecified"
+      });
+    }
     else if (/^\/(shoes|hoodies-sweaters|t-shirts|jackets|pants-shorts|accessories|Jersey|electronics)\/$/.test(url.pathname)) {
       send("outbound_category_click", { category_path: url.pathname });
     }
