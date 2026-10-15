@@ -514,3 +514,50 @@ button, input, select { font: inherit; }
 .article-card, .article-card h3, .longform h1, .page-hero h1, .hero-copy h1 { overflow-wrap: anywhere; }
 .catalogue-guidance > p { max-width: 75ch; line-height: 1.7; }
 @media (max-width: 600px) { .article-toc, .related-guides { padding: 1rem; } }
+
+/* Task-led navigation and readable article decision tables. */
+.skip-link { position: fixed; top: 8px; left: 8px; z-index: 100; padding: 12px 18px; background: var(--ink); color: white; transform: translateY(-160%); }
+.skip-link:focus { transform: translateY(0); }
+a:focus-visible, button:focus-visible, summary:focus-visible, .decision-table:focus-visible { outline: 3px solid #b74b12; outline-offset: 4px; }
+.decision-links { margin: 26px 0 12px; }
+.decision-links > div { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 10px; }
+.decision-links a { display: flex; align-items: center; gap: 10px; min-height: 72px; padding: 16px; border: 1px solid var(--ink); background: var(--paper); font-size: 14px; font-weight: 700; line-height: 1.35; }
+.decision-links a:hover { background: var(--lime); }
+.decision-links a > span { font: 500 24px Georgia, serif; color: #9f3e14; }
+.decision-links a > b { margin-left: auto; }
+.home-page .article-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+.home-page .article-card { min-height: 270px; }
+.article-card h3 a:hover { text-decoration: underline; text-underline-offset: .15em; }
+.topic-tabs { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 28px; }
+.topic-tabs a { padding: 11px 16px; border: 1px solid var(--ink); font-size: 14px; font-weight: 700; }
+.topic-tabs a:hover { background: var(--lime); }
+.article-topic { scroll-margin-top: 90px; padding-block: 50px; }
+.article-back { display: inline-block; margin-bottom: 28px; font-size: 14px; text-decoration: underline; text-underline-offset: .2em; }
+.article-answer { padding: 22px 26px; border-left: 5px solid var(--orange); background: #fff; font-size: 18px; line-height: 1.65; }
+.decision-table { margin: 32px 0; overflow-x: auto; border: 1px solid var(--ink); background: var(--paper); }
+.decision-table table { width: 100%; min-width: 520px; border-collapse: collapse; text-align: left; font-size: 14px; line-height: 1.55; }
+.decision-table caption { text-align: left; padding: 18px; color: var(--ink); font-weight: 800; font-size: 16px; }
+.decision-table thead { background: var(--ink); color: #fff; }
+.decision-table th, .decision-table td { padding: 14px 18px; vertical-align: top; border-bottom: 1px solid var(--line); }
+.decision-table tbody th { width: 27%; font-weight: 700; }
+.decision-table tbody tr:nth-child(even) { background: #edf1e7; }
+.related-guides { color: var(--ink); }
+@media (max-width: 760px) {
+  .decision-links { margin: 16px 0; }
+  .decision-links > div { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 8px; }
+  .decision-links a { min-height: 66px; padding: 12px; font-size: 13px; gap: 7px; }
+  .decision-links a > span { font-size: 19px; }
+  .home-page .article-card { min-height: 200px; padding: 12px; }
+  .home-page .article-card h3 { font-size: 19px; line-height: 1.15; }
+  .home-page .article-card > p:not(.eyebrow) { font-size: 13px; line-height: 1.45; }
+  .home-page .article-card > a { min-height: 38px; align-items: center; }
+  .article-topic { padding-block: 30px; }
+  .article-answer { padding: 16px 18px; font-size: 16px; }
+  .decision-table th, .decision-table td { padding: 12px; }
+}
+@media (max-width: 480px) {
+  .home-page .article-grid, .article-topic .article-grid { grid-template-columns: 1fr; }
+  .home-page .article-card { min-height: auto; }
+  .home-page .article-index { display: none; }
+  .article-topic .article-card { min-height: 260px; }
+}

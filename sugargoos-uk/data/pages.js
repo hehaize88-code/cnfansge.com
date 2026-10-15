@@ -1,4 +1,5 @@
 import { ukGuides } from "./uk-guides.js";
+import { decisionGuides } from "./decision-guides.js";
 import { articleRevision } from "./article-revisions.js";
 import { researchedArticles } from "./articles";
 import { deArticles } from "./articles-de";
@@ -135,6 +136,7 @@ const shared = {
 };
 
 export function articleBody(lang, slug) {
+  if (decisionGuides[lang]?.[slug]) return decisionGuides[lang][slug];
   if (ukGuides[lang]?.articles[slug]) return ukGuides[lang].articles[slug];
   const key = slug === "how-to-read-qc-photos" ? "qc" : slug === "reduce-volumetric-weight" ? "shipping" : "guide";
   if (localizedArticles[lang]?.[slug]) {

@@ -1,5 +1,7 @@
 import { newArticles, guideUi } from "./uk-guides.js";
 import { revisedArticleSlugs } from "./article-revisions.js";
+import { decisionArticleMeta, decisionUi, updateLabels } from "./decision-guides.js";
+import { articleImprovements, improvedSlugs } from "./article-improvements.js";
 
 export const languages = ["en", "de", "es", "fr", "it"];
 
@@ -60,6 +62,7 @@ export const featuredProducts = featuredProductIds.map((id) => products.find((pr
 export const archivedProducts = products.filter((product) => !featuredProductIds.includes(product.id));
 
 export const articles = [
+  ...decisionArticleMeta,
   ...newArticles,
   {
     slug: "sugargoo-shoe-qc-box-laces-accessory-completeness",
@@ -249,6 +252,12 @@ for (const article of articles) {
   if (revisedArticleSlugs.includes(article.slug)) {
     article.dateModified = "2026-10-02";
     article.updatedLabel = Object.fromEntries(languages.map((lang) => [lang, guideUi[lang].updated]));
+  }
+  if (improvedSlugs.includes(article.slug)) {
+    article.dateModified = "2026-10-15";
+    article.updatedLabel = updateLabels;
+    article.title = Object.fromEntries(languages.map((lang) => [lang, articleImprovements[lang][article.slug].title]));
+    article.metaDescription = Object.fromEntries(languages.map((lang) => [lang, articleImprovements[lang][article.slug].description]));
   }
 }
 
@@ -442,41 +451,33 @@ const articleDescriptionSuffix = {
   it: " Con una checklist pratica per gli acquirenti UK."
 };
 
-function boundedDescription(text) {
-  const description = text.trim();
-  if ([...description].length <= 160) return description;
-  const clipped = [...description].slice(0, 157).join("");
-  const boundary = clipped.lastIndexOf(" ");
-  return `${clipped.slice(0, boundary > 110 ? boundary : 157).replace(/[,:;–—-]+$/u, "")}…`;
-}
-
 export function pageMeta(lang, key) {
   const article = key.startsWith("articles/") ? articles.find((item) => `articles/${item.slug}` === key) : null;
   const category = key.startsWith("category/") ? localizedCategories(lang).find((item) => `category/${item.slug}` === key) : null;
   const ui = guideUi[lang] || guideUi.en;
-  const titles = { ...(metaTitles[lang] || metaTitles.en), home: ui.homeTitle, spreadsheet: ui.sheetTitle, shipping: ui.shippingTitle, articles: ui.articlesTitle };
+  const titles = { ...(metaTitles[lang] || metaTitles.en), home: decisionUi[lang].homeTitle, spreadsheet: decisionUi[lang].sheet, shipping: ui.shippingTitle, articles: ui.articlesTitle };
   const title = article?.title?.[lang] || (category ? (categoryMeta[lang] || categoryMeta.en)(category.label) : titles[key] || titles.home);
-  const descriptions = { ...(metaDescriptions[lang] || metaDescriptions.en), home: ui.homeDescription, spreadsheet: ui.sheetDescription, shipping: ui.shippingDescription, articles: ui.articlesDescription };
+  const descriptions = { ...(metaDescriptions[lang] || metaDescriptions.en), home: decisionUi[lang].homeDescription, spreadsheet: ui.sheetDescription, shipping: ui.shippingDescription, articles: ui.articlesDescription };
   const description = article
-    ? article.summary?.[lang] || article.summary.en
+    ? article.metaDescription?.[lang] || article.summary?.[lang] || article.summary.en
     : category
       ? (categoryDescriptions[lang] || categoryDescriptions.en)(category.label)
       : descriptions[key] || descriptions.home;
   return {
     title,
-    description: boundedDescription(description, lang)
+    description
   };
 }
 
 export const pageLastModified = {
-  home: "2026-10-02T00:00:00Z",
-  spreadsheet: "2026-10-02T00:00:00Z",
+  home: "2026-10-15T00:00:00Z",
+  spreadsheet: "2026-10-15T00:00:00Z",
   finds: "2026-09-02T06:00:00Z",
-  guide: "2026-10-02T00:00:00Z",
-  qc: "2026-09-02T06:00:00Z",
-  shipping: "2026-10-02T00:00:00Z",
+  guide: "2026-10-15T00:00:00Z",
+  qc: "2026-10-15T00:00:00Z",
+  shipping: "2026-10-15T00:00:00Z",
   faq: "2026-09-02T06:00:00Z",
-  articles: "2026-10-02T00:00:00Z"
+  articles: "2026-10-15T00:00:00Z"
 };
 
 export function lastModifiedForPath(parts = []) {

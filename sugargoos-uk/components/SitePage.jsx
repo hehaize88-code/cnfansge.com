@@ -1,4 +1,6 @@
 import { guideUi, relatedGuides } from "../data/uk-guides";
+import { decisionUi, decisionRelated, topics } from "../data/decision-guides";
+import { articleImprovements } from "../data/article-improvements";
 import ProductExplorer from "./ProductExplorer";
 import WeightCalculator from "./WeightCalculator";
 import { articleBody, pageCopy, pageFacts } from "../data/pages";
@@ -27,6 +29,7 @@ function Header({ lang, slug, t }) {
   const nav = ["spreadsheet", "finds", "guide", "qc", "shipping", "faq", "articles"];
   return (
     <>
+      <a className="skip-link" href="#main-content">{decisionUi[lang].skip}</a>
       <div className="preview-bar">{t.preview}</div>
       <header className="site-header">
         <a href={routeFor(lang)} className="brand" aria-label="Sugargoo UK Finds home">
@@ -34,7 +37,7 @@ function Header({ lang, slug, t }) {
             <img src="/sugargoo-logo.png" alt="Sugargoo" width="480" height="148" />
           </span>
         </a>
-        <nav className="desktop-nav" aria-label="Primary navigation">
+        <nav className="desktop-nav" aria-label={decisionUi[lang].nav}>
           {nav.map((item) => <a key={item} className={slug[0] === item ? "active" : ""} href={routeFor(lang, [item])}>{t.nav[item]}</a>)}
         </nav>
         <div className="header-actions">
@@ -123,20 +126,31 @@ function CategoryGrid({ lang, t }) {
   );
 }
 
-function ArticlesGrid({ lang, t }) {
+function ArticlesGrid({ lang, t, items = articles, limit }) {
   return (
     <div className="article-grid">
-      {articles.map((article, index) => (
+      {(limit ? items.slice(0, limit) : items).map((article, index) => (
         <article className="article-card" key={article.slug}>
           <div className="article-index">{String(index + 1).padStart(2, "0")}</div>
           <p className="eyebrow">{article.labels?.[lang] || article.label} / {article.read}</p>
-          <h3>{article.title[lang]}</h3>
+          <h3><a href={routeFor(lang, ["articles", article.slug])}>{article.title[lang]}</a></h3>
           <p>{article.summary[lang]}</p>
           <a href={routeFor(lang, ["articles", article.slug])}>{t.readArticle} <span>↗</span></a>
         </article>
       ))}
     </div>
   );
+}
+
+function DecisionLinks({ lang }) {
+  const ui = decisionUi[lang];
+  const paths = [["spreadsheet"], ["articles", "sugargoo-shipping-cost-uk"], ["articles", "how-to-read-qc-photos"], ["articles", "sugargoo-payment-methods-fees-exchange-rate"]];
+  return <nav className="decision-links" aria-label={ui.start}><p className="eyebrow">{ui.start}</p><div>{paths.map((path, index) => <a key={path.join("/")} href={routeFor(lang, path)}><span>{String(index + 1).padStart(2, "0")}</span>{ui.links[index]}<b aria-hidden="true">↗</b></a>)}</div></nav>;
+}
+
+function DecisionTable({ table }) {
+  if (!table) return null;
+  return <div className="decision-table" role="region" aria-label={table.caption} tabIndex={0}><table><caption>{table.caption}</caption><thead><tr>{table.headers.map((heading) => <th scope="col" key={heading}>{heading}</th>)}</tr></thead><tbody>{table.rows.map((row, index) => <tr key={index}>{row.map((cell, column) => column === 0 ? <th scope="row" key={column}>{cell}</th> : <td key={column}>{cell}</td>)}</tr>)}</tbody></table></div>;
 }
 
 function FaqList({ t, firstOpen = true }) {
@@ -152,9 +166,9 @@ function FaqList({ t, firstOpen = true }) {
   );
 }
 
-function SearchPanel({ t }) {
+function SearchPanel({ t, lang }) {
   return (
-    <form className="catalogue-search" action="https://cnfansge.com/search.html" method="get" target="_blank">
+    <form className="catalogue-search" action="https://cnfansge.com/search.html" method="get" target="_blank" rel="noopener" aria-label={decisionUi[lang].searchPrivacy}>
       <input type="hidden" name="channelid" value="2" />
       <label><span className="sr-only">{t.searchPlaceholder}</span><input name="keywords" required placeholder={t.searchPlaceholder} /></label>
       <button type="submit">{t.searchButton} ↗</button>
@@ -164,17 +178,17 @@ function SearchPanel({ t }) {
 
 function HomePage({ lang, t }) {
   return (
-    <main className="home-page">
+    <main id="main-content" className="home-page">
       <section className="hero shell">
         <div className="hero-copy">
           <p className="eyebrow">{t.heroKicker}</p>
-          <h1>{guideUi[lang].homeHeading}</h1>
+          <h1>{decisionUi[lang].homeTitle}</h1>
           <p className="hero-intro">{t.heroText}</p>
           <div className="hero-buttons">
             <a className="button primary" href={routeFor(lang, ["spreadsheet"])}>{t.browse}</a>
             <a className="button secondary" href={routeFor(lang, ["guide"])}>{t.readGuide} ↗</a>
           </div>
-          <SearchPanel t={t} />
+          <SearchPanel t={t} lang={lang} />
         </div>
         <div className="hero-collage" aria-label="Featured product preview">
           <div className="collage-label"><span>CURATED</span><strong>UK / 26</strong></div>
@@ -185,6 +199,8 @@ function HomePage({ lang, t }) {
       </section>
 
       <div className="metric-strip">{t.metrics.map((metric, index) => <div key={metric}><span>0{index + 1}</span><strong>{metric}</strong></div>)}</div>
+
+      <div className="shell"><DecisionLinks lang={lang} /></div>
 
       <section className="section shell" id="categories">
         <SectionHeading kicker={t.categoryKicker} title={t.categoryTitle} text={t.categoryText} split />
@@ -206,14 +222,15 @@ function HomePage({ lang, t }) {
 
       <section className="section shipping-lab">
         <div className="shell lab-grid">
-          <div><p className="eyebrow">{t.toolKicker}</p><h2>{t.toolTitle}</h2><p>{t.toolText}</p><a href={routeFor(lang, ["shipping"])}>{t.nav.shipping} guide ↗</a></div>
+          <div><p className="eyebrow">{t.toolKicker}</p><h2>{t.toolTitle}</h2><p>{t.toolText}</p><a href={routeFor(lang, ["shipping"])}>{t.nav.shipping} ↗</a></div>
           <WeightCalculator lang={lang} />
         </div>
       </section>
 
       <section className="section shell">
-        <SectionHeading kicker={t.articlesKicker} title={t.articlesTitle} />
-        <ArticlesGrid lang={lang} t={t} />
+        <SectionHeading kicker={t.articlesKicker} title={decisionUi[lang].latest} />
+        <ArticlesGrid lang={lang} t={t} limit={4} />
+        <div className="center-action"><a className="button secondary" href={routeFor(lang, ["articles"])}>{decisionUi[lang].all} →</a></div>
       </section>
 
       <section className="section shell faq-section">
@@ -230,10 +247,10 @@ function ProductPage({ lang, t, category }) {
   const kicker = category ? `CATEGORY ${category.icon}` : t.findsKicker;
   const labels = editorialLabels[lang] || editorialLabels.en;
   return (
-    <main>
+    <main id="main-content">
       <section className="page-hero shell">
         <p className="eyebrow">{category ? kicker : labels.latest}</p><h1>{title}</h1><p>{t.findsText}</p>
-        <SearchPanel t={t} />
+        <SearchPanel t={t} lang={lang} />
       </section>
       <section className="section shell products-page">
         <ProductExplorer items={filtered} categories={category ? [category] : localizedCategories(lang)} copy={{ ...t, filterLabel: guideUi[lang].filter, tagLabels: Object.fromEntries(guideUi.en.tags.map((tag, index) => [tag, guideUi[lang].tags[index]])) }} initialCategory={category?.slug || "all"} />
@@ -250,7 +267,7 @@ function GuidePage({ lang, t, type }) {
   const facts = pageFacts[lang]?.[type] || pageFacts.en[type];
   const labels = editorialLabels[lang] || editorialLabels.en;
   return (
-    <main>
+    <main id="main-content">
       <section className="page-hero shell guide-hero"><p className="eyebrow">{copy.kicker}</p><h1>{type === "shipping" ? guideUi[lang].shippingHeading : copy.title}</h1><p>{copy.intro}</p><div className="fact-row"><span>{labels.official}</span><span>{labels.checked}</span><span>{labels.interpretation}</span></div></section>
       <section className="section shell guide-layout">
         <aside><div><p className="eyebrow">{labels.onPage}</p>{copy.sections.map(([title], index) => <a key={title} href={`#step-${index + 1}`}>0{index + 1} / {title}</a>)}</div></aside>
@@ -261,15 +278,16 @@ function GuidePage({ lang, t, type }) {
           {type === "shipping" && <div className="inline-tool"><p className="eyebrow">INTERACTIVE CHECK</p><WeightCalculator lang={lang} /></div>}
         </div>
       </section>
-      <section className="section section-ink"><div className="shell"><SectionHeading kicker={t.articlesKicker} title={t.articlesTitle} /><ArticlesGrid lang={lang} t={t} /></div></section>
+      <section className="section section-ink"><div className="shell"><SectionHeading kicker={t.articlesKicker} title={decisionUi[lang].more} /><RelatedGuides lang={lang} topic={type} /></div></section>
     </main>
   );
 }
 
 function SpreadsheetPage({ lang, t }) {
   return (
-    <main>
-      <section className="page-hero shell spreadsheet-hero"><p className="eyebrow">LIVE PREVIEW INDEX / 24 ROUTES</p><h1>{guideUi[lang].sheetHeading}</h1><p>{guideUi[lang].sheetDescription}</p><SearchPanel t={t} /></section>
+    <main id="main-content">
+      <section className="page-hero shell spreadsheet-hero"><p className="eyebrow">{t.nav.spreadsheet} / 24</p><h1>{decisionUi[lang].sheet}</h1><p>{guideUi[lang].sheetDescription}</p><SearchPanel t={t} lang={lang} /></section>
+      <div className="shell"><DecisionLinks lang={lang} /></div>
       <section className="section shell"><SectionHeading kicker={t.categoryKicker} title={t.categoryTitle} text={t.categoryText} split /><CategoryGrid lang={lang} t={t} /></section>
       <section className="section section-ink"><div className="shell"><SectionHeading kicker={t.findsKicker} title={t.findsTitle} text={t.findsText} split /><ProductExplorer items={products} categories={localizedCategories(lang)} copy={{ ...t, filterLabel: guideUi[lang].filter, tagLabels: Object.fromEntries(guideUi.en.tags.map((tag, index) => [tag, guideUi[lang].tags[index]])) }} /></div></section>
       <section className="section shell catalogue-guidance"><p>{guideUi[lang].catalogueNote}</p><p>{guideUi[lang].sheetHelp}</p><RelatedGuides lang={lang} topic="spreadsheet" /></section>
@@ -279,28 +297,32 @@ function SpreadsheetPage({ lang, t }) {
 
 function RelatedGuides({ lang, topic }) {
   const ui = guideUi[lang];
-  const selected = (relatedGuides[topic] || []).map((slug) => articles.find((article) => article.slug === slug)).filter(Boolean);
+  const selected = (decisionRelated[topic] || relatedGuides[topic] || []).map((slug) => articles.find((article) => article.slug === slug)).filter(Boolean);
   return <nav className="related-guides" aria-label={ui.related}><h2>{ui.related}</h2><ul>{selected.map((article) => <li key={article.slug}><a href={routeFor(lang, ["articles", article.slug])}>{article.title[lang]} <span aria-hidden="true">↗</span></a></li>)}</ul><a className="article-hub-link" href={routeFor(lang, ["articles"])}>{ui.articleHubLink} →</a></nav>;
 }
 
 function ArticlesPage({ lang, t }) {
-  return <main><section className="page-hero shell"><p className="eyebrow">{t.articlesKicker}</p><h1>{guideUi[lang].articlesHeading}</h1><p>{guideUi[lang].articlesDescription}</p></section><section className="section shell"><ArticlesGrid lang={lang} t={t} /></section></main>;
+  const ui = decisionUi[lang];
+  return <main id="main-content"><section className="page-hero shell"><p className="eyebrow">{t.articlesKicker} / 17</p><h1>{guideUi[lang].articlesHeading}</h1><p>{guideUi[lang].articlesDescription}</p><nav className="topic-tabs" aria-label={ui.topic}>{Object.keys(topics).map((key) => <a key={key} href={`#topic-${key}`}>{ui[key]}</a>)}</nav></section>{Object.entries(topics).map(([key, slugs]) => <section className="section shell article-topic" id={`topic-${key}`} key={key}><SectionHeading kicker={ui.topic} title={ui[key]} /><ArticlesGrid lang={lang} t={t} items={slugs.map((slug) => articles.find((article) => article.slug === slug))} /></section>)}</main>;
 }
 
 function ArticlePage({ lang, t, article }) {
   const body = articleBody(lang, article.slug);
+  const improvement = articleImprovements[lang]?.[article.slug];
   const labels = editorialLabels[lang] || editorialLabels.en;
   return (
-    <main>
+    <main id="main-content">
       <article className="longform shell">
-        <header><p className="eyebrow">{article.labels?.[lang] || article.label} / {article.read}</p><h1>{article.title[lang]}</h1><p className="article-deck">{article.summary[lang]}</p><div className="article-meta"><span>{labels.independent}</span><span>{article.updatedLabel?.[lang] || labels.updated}</span><span>{lang.toUpperCase()}</span></div></header>
+        <header><a className="article-back" href={routeFor(lang, ["articles"])}>← {decisionUi[lang].back}</a><p className="eyebrow">{article.labels?.[lang] || article.label} / {article.read}</p><h1>{article.title[lang]}</h1><p className="article-deck">{article.summary[lang]}</p><div className="article-meta"><span>{labels.independent}</span><span>{article.updatedLabel?.[lang] || labels.updated}</span><span>{lang.toUpperCase()}</span></div></header>
         <div className="article-body">
+          {improvement && <p className="article-answer">{improvement.answer}</p>}
           <p className="lead">{body.opening}</p>
           <EvidencePanel facts={body.takeaways} note={body.sourceNote} lang={lang} label={article.researchLabel?.[lang]} />
+          <DecisionTable table={improvement?.table || body.table} />
           <nav className="article-toc" aria-label={guideUi[lang].toc}><h2>{guideUi[lang].toc}</h2><ol>{body.sections.map(({ title }, index) => <li key={title}><a href={`#section-${index + 1}`}>{title}</a></li>)}</ol></nav>
           {body.sections.map(({ title, paragraphs }, index) => <section id={`section-${index + 1}`} key={title}><span className="section-number">{String(index + 1).padStart(2, "0")}</span><h2>{title}</h2>{paragraphs.map((text) => <p key={text}>{text}</p>)}</section>)}
           {body.checklist && <aside className="article-checklist"><p className="eyebrow">{labels.decision}</p><h2>{body.checklist.title}</h2><ol>{body.checklist.items.map((item, index) => <li key={item}><span>{String(index + 1).padStart(2, "0")}</span><p>{item}</p></li>)}</ol></aside>}
-          {article.slug === "reduce-volumetric-weight" && <div className="inline-tool"><p className="eyebrow">{labels.numbers}</p><WeightCalculator lang={lang} /></div>}
+          {["reduce-volumetric-weight", "sugargoo-shipping-cost-uk", "sugargoo-rehearsal-shipping-guide"].includes(article.slug) && <div className="inline-tool"><p className="eyebrow">{labels.numbers}</p><WeightCalculator lang={lang} /></div>}
           <p className="closing">{body.close}</p>
           <RelatedGuides lang={lang} topic={article.slug} />
         </div>
@@ -311,7 +333,7 @@ function ArticlePage({ lang, t, article }) {
 }
 
 function FaqPage({ t }) {
-  return <main><section className="page-hero shell"><p className="eyebrow">{t.faqKicker}</p><h1>{t.faqTitle}</h1><p>{t.heroText}</p></section><section className="section shell faq-page"><FaqList t={t} /></section></main>;
+  return <main id="main-content"><section className="page-hero shell"><p className="eyebrow">{t.faqKicker}</p><h1>{t.faqTitle}</h1><p>{t.heroText}</p></section><section className="section shell faq-page"><FaqList t={t} /></section></main>;
 }
 
 function Footer({ lang, t }) {
