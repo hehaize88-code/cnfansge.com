@@ -10,9 +10,16 @@ import revisedDe from "./seo-content/revised-de.json";
 import revisedEs from "./seo-content/revised-es.json";
 import revisedFr from "./seo-content/revised-fr.json";
 import revisedIt from "./seo-content/revised-it.json";
+import octoberEn from "./seo-content/october-en.json";
+import octoberDe from "./seo-content/october-de.json";
+import octoberEs from "./seo-content/october-es.json";
+import octoberFr from "./seo-content/october-fr.json";
+import octoberIt from "./seo-content/october-it.json";
+import { refreshArticle, currentSourceLabels } from "./article-refresh";
 
 const content = { en, de, es, fr, it };
 const revisions = { en: revisedEn, de: revisedDe, es: revisedEs, fr: revisedFr, it: revisedIt };
+const october = { en: octoberEn, de: octoberDe, es: octoberEs, fr: octoberFr, it: octoberIt };
 const dateLabels = { en: "October 2, 2026", de: "2. Oktober 2026", es: "2 de octubre de 2026", fr: "2 octobre 2026", it: "2 ottobre 2026" };
 const sourceLabels = {
   en: "Editorial methods informed by official Sugargoo guidance on product links, measurement photos and shipping estimates. Sources reviewed October 2, 2026. Numerical examples are hypothetical, not seller measurements or live quotes.",
@@ -23,7 +30,7 @@ const sourceLabels = {
 };
 
 export function additionalArticles(lang: Language): Article[] {
-  return content[lang].map((article) => ({
+  const existing = content[lang].map((article) => ({
     ...article,
     published: dateLabels[lang],
     publishedIso: "2026-10-02",
@@ -32,12 +39,21 @@ export function additionalArticles(lang: Language): Article[] {
     sourceLine: sourceLabels[lang],
     visual: { title: article.table.title, items: article.table.rows.slice(0, 4).map((row) => ({ label: row[0], value: row[1], note: row[2] ?? "" })) },
   }));
+  return [...october[lang].map((article) => ({
+    ...article,
+    published: "2026-10-15",
+    publishedIso: "2026-10-15",
+    modified: "2026-10-15",
+    readTime: "8–10 min",
+    sourceLine: currentSourceLabels[lang],
+    visual: { title: article.table.title, items: article.table.rows.slice(0, 4).map((row) => ({ label: row[0], value: row[1], note: row[2] })) },
+  })), ...existing];
 }
 
 export function improveArticle(lang: Language, article: Article): Article {
   const update = revisions[lang].find((item) => item.slug === article.slug);
-  if (!update) return article;
-  return {
+  if (!update) return refreshArticle(lang, article);
+  return refreshArticle(lang, {
     ...article,
     ...update,
     publishedIso: article.slug === "how-to-read-sugargoo-qc-photos" ? "2026-08-29" : "2026-09-01",
@@ -45,5 +61,5 @@ export function improveArticle(lang: Language, article: Article): Article {
     modified: "2026-10-02",
     sourceLine: sourceLabels[lang],
     sections: update.sections,
-  };
+  });
 }

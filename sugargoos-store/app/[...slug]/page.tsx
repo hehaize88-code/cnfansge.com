@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import { getArticle } from "../articles-data";
 import { SitePage } from "../site-page";
+import { utilityCopy } from "../site-utility-copy";
 import { SITE_ORIGIN, copy, isLanguage, languages, localizedPath, routes, type Language } from "../site-data";
 
 type Props = { params: Promise<{ slug: string[] }> };
@@ -66,7 +67,7 @@ export default async function RoutedPage({ params }: Props) {
           {
             "@type": "BreadcrumbList",
             itemListElement: [
-              { "@type": "ListItem", position: 1, name: "Home", item: `${SITE_ORIGIN}${localizedPath(lang)}` },
+              { "@type": "ListItem", position: 1, name: utilityCopy[lang].home, item: `${SITE_ORIGIN}${localizedPath(lang)}` },
               { "@type": "ListItem", position: 2, name: copy[lang].pageTitles.articles, item: `${SITE_ORIGIN}${localizedPath(lang, "articles")}` },
               { "@type": "ListItem", position: 3, name: article.title, item: `${SITE_ORIGIN}${localizedPath(lang, path)}` },
             ],
@@ -77,7 +78,7 @@ export default async function RoutedPage({ params }: Props) {
         "@context": "https://schema.org",
         "@type": "BreadcrumbList",
         itemListElement: [
-          { "@type": "ListItem", position: 1, name: "Home", item: `${SITE_ORIGIN}${localizedPath(lang)}` },
+          { "@type": "ListItem", position: 1, name: utilityCopy[lang].home, item: `${SITE_ORIGIN}${localizedPath(lang)}` },
           { "@type": "ListItem", position: 2, name: copy[lang].pageTitles[path] ?? path, item: `${SITE_ORIGIN}${localizedPath(lang, path)}` },
         ],
       };

@@ -39,7 +39,7 @@ and static assets to `dist/client`.
 - QC guide
 - Shipping calculator and guide
 - FAQ
-- Article index and six long-form SEO articles
+- Article index and fourteen buyer guides per language (70 article pages)
 - English, German, Spanish, French and Italian routes
 
 ## SEO behavior
@@ -58,3 +58,19 @@ The machine-readable marker is `.seo/manual-updates-only.json`.
 The build regenerates the sitemap from the current route and article data. It
 does not generate, rewrite or publish new articles automatically. Validate
 content, localized routes, metadata and redirects with `npm test` before release.
+
+## Manual update — 2026-10-15
+
+Added three complete guides in all five languages: missing or blurry QC photos,
+consolidation and prepacking, and total cost for finds under $20. Refreshed the
+QC, spreadsheet verification and shipping articles, retaining original publication
+dates and setting actual revision dates. Added localized contents navigation and
+related guides, four homepage article cards, reference-price filters and sorting,
+and actual-only / 5000 / 6000 weight planning. Catalogue photographs and prices
+are explicitly references rather than live verification.
+
+The two sitemap endpoints now contain the same 110 canonical routes. `npm test`
+passes 11 checks covering rendered routes, translations, metadata, internal links,
+redirects, filter behaviour and weight calculations. A standalone TypeScript check
+requires the existing Cloudflare platform declarations (`cloudflare:workers`,
+`Fetcher`, `D1Database`), which are not supplied by this checkout.

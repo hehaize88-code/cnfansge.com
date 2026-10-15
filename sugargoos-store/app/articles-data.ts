@@ -1344,6 +1344,10 @@ const localizedArticleText: Record<Exclude<Language, "en">, Record<string, Local
 };
 
 const articlePriority = [
+  "sugargoo-qc-photos-missing-or-blurry",
+  "sugargoo-consolidation-rehearsal-shipping",
+  "sugargoo-finds-under-20-total-cost",
+  "how-to-read-sugargoo-qc-photos",
   "sugargoo-spreadsheet-links-not-working",
   "sugargoo-shoe-size-guide-measurements",
   "sugargoo-hoodie-sizing-measurements",
@@ -1352,7 +1356,6 @@ const articlePriority = [
   "sugargoo-spreadsheet-guide-2026",
   "sugargoo-shipping-cost-guide-2026",
   "sugargoo-fees-cost-breakdown-2026",
-  "how-to-read-sugargoo-qc-photos",
   "sugargoo-review-2026",
   "sugargoo-returns-refunds-storage-guide",
 ];

@@ -3,8 +3,8 @@ import { SitePage } from "./site-page";
 import { SITE_ORIGIN, copy, languages, localizedPath } from "./site-data";
 
 export const metadata: Metadata = {
-  title: "Sugargoo Spreadsheet: Finds & QC Photos",
-  description: "Independent Sugargoo spreadsheet with searchable product routes, indicative USD prices, QC photo checklists, shipping weight tools and long-form buyer guides.",
+  title: { absolute: "Sugargoo Spreadsheet: Listings, QC Photos & Shipping" },
+  description: "Browse Sugargoo product references, filter finds under $20, match QC photos to the exact listing and compare parcel weight. Independent guides in five languages.",
   alternates: {
     canonical: `${SITE_ORIGIN}/`,
     languages: { ...Object.fromEntries(languages.map((lang) => [lang, `${SITE_ORIGIN}${localizedPath(lang)}`])), "x-default": `${SITE_ORIGIN}/` },
@@ -35,7 +35,7 @@ export default function Home() {
       },
       {
         "@type": "FAQPage",
-        mainEntity: copy.en.faq.map((item) => ({
+        mainEntity: copy.en.faq.slice(0, 4).map((item) => ({
           "@type": "Question",
           name: item.q,
           acceptedAnswer: { "@type": "Answer", text: item.a },

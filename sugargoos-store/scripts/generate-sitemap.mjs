@@ -12,7 +12,7 @@ try {
   for (const lang of languages) {
     for (const route of routes) {
       const article = articles.get(route.replace(/^articles\//, ""));
-      const lastmod = article?.modified ?? (route.includes("build-reliable-") ? "2026-09-02" : article || route === "finds" || route === "faq" ? "2026-09-01" : "2026-10-02");
+      const lastmod = article?.modified ?? (route.includes("build-reliable-") ? "2026-09-02" : article ? "2026-09-01" : "2026-10-15");
       const links = [...languages, "x-default"].map((alternate) => `<xhtml:link rel="alternate" hreflang="${alternate}" href="${SITE_ORIGIN}${localizedPath(alternate === "x-default" ? "en" : alternate, route)}"/>`).join("");
       entries.push(`<url><loc>${SITE_ORIGIN}${localizedPath(lang, route)}</loc><lastmod>${lastmod}</lastmod>${links}</url>`);
     }
