@@ -15,6 +15,13 @@ const render = async (path, headers = {}) => {
   return { status: response.status, html: await response.text() };
 };
 
+test("robots advertises the current complete sitemap", async () => {
+  const { status, html } = await render("/robots.txt");
+  assert.equal(status, 200);
+  assert.match(html, /Sitemap: https:\/\/sugargoos.store\/sitemap-content.xml/);
+  assert.doesNotMatch(html, /Sitemap: https:\/\/sugargoos.store\/sitemap.xml/);
+});
+
 test("nine substantive English articles and complete matching translations", async () => {
   for (const lang of languages) {
     assert.equal(articles[lang].length, 9);
