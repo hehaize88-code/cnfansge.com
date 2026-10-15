@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Script from "next/script";
+import AnalyticsEvents from "../analytics-events";
 import "../globals.css";
 
 export const metadata: Metadata = {
@@ -44,6 +45,7 @@ export default async function RootLayout({
 function gtag(){dataLayer.push(arguments);}
 gtag("js", new Date());
 gtag("config", "G-2NWE1C6LHV");`}</Script>
+        <AnalyticsEvents/>
         {children}
       </body>
     </html>

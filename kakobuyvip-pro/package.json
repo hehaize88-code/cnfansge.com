@@ -12,7 +12,8 @@
     "deploy": "npm run build && wrangler deploy",
     "deploy:dry": "npm run build && wrangler deploy --dry-run",
     "test": "npm run lint && npm run build",
-    "lint": "eslint . --ignore-pattern dist --ignore-pattern .next"
+    "lint": "eslint . --ignore-pattern dist --ignore-pattern .next",
+    "verify:content": "node scripts/verify-content.cjs"
   },
   "dependencies": {
     "lucide-react": "^1.31.0",
@@ -38,5 +39,5 @@
     "wrangler": "4.92.0"
   },
   "type": "module",
-  "displayName": "Kakobuy VIP \u2014 Shipping, Warehouse & Returns Guide"
+  "displayName": "Kakobuy VIP — Shipping, Warehouse & Returns Guide"
 }

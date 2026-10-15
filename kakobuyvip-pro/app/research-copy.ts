@@ -1,6 +1,6 @@
-import type { Locale, PageKey } from "./site-data";
+import type { Locale } from "./site-data";
 
-type IndependentPage = Exclude<PageKey, "home" | "qcArticle" | "shippingArticle" | "storageArticle" | "orderIdentifiersArticle">;
+type IndependentPage = "spreadsheet" | "finds" | "guide" | "qc" | "shipping" | "faq" | "articles";
 
 export const seoPageIntro: Record<Locale, Record<IndependentPage, [string, string]>> = {
   en: {
@@ -13,7 +13,7 @@ export const seoPageIntro: Record<Locale, Record<IndependentPage, [string, strin
     articles: ["Kakobuy Guides and Research", "Long-form, source-checked guides covering the Kakobuy spreadsheet, QC photos, shipping cost, 100-day storage and seller returns."],
   },
   de: {
-    spreadsheet: ["Kakobuy Spreadsheet 2026", "Geprüfte Produktwege mit passenden Bildern, Preisen und Zielen – plus klare Hinweise, was vor der Bestellung noch geprüft werden muss."],
+    spreadsheet: ["Kakobuy-Tabelle: Produktlinks und QC", "Geprüfte Produktwege mit passenden Bildern, Preisen und Zielen – plus klare Hinweise, was vor der Bestellung noch geprüft werden muss."],
     finds: ["Kakobuy-Funde mit geprüften Zielen", "Aktuelle Datensätze, deren Kartenbild und Ziel gemeinsam kontrolliert wurden. Preise bleiben datierte Momentaufnahmen."],
     guide: ["Mit Kakobuy bestellen: Schritt für Schritt", "Vom chinesischen Produktlink über Artikelzahlung und Lager-QC bis zur Einreichung des internationalen Pakets."],
     qc: ["Kakobuy QC-Foto-Leitfaden", "Identität, Form, Verarbeitung und entscheidende Belege vor dem Versand systematisch prüfen."],

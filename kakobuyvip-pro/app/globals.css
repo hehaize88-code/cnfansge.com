@@ -901,3 +901,41 @@ footer { border: 2px solid var(--ink); border-radius: 0; background: var(--ink);
 
   footer { margin: 5px auto; padding: 12px; }
 }
+
+/* Readable multilingual content and practical calculator. */
+.field-article h1,.field-article h2,.page-hero h1,.article-grid h2 { overflow-wrap:anywhere; }
+.article-body section { scroll-margin-top:100px; }
+.article-body aside nav { display:grid;gap:10px;margin-top:24px; }
+.article-body aside nav a { color:inherit;font-size:13px;line-height:1.45;text-decoration:underline;text-underline-offset:3px; }
+.weight-tool { border-top:1px solid #d8d8cb; }
+.weight-tool > p { max-width:760px;line-height:1.6; }
+.weight-fields { display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px;margin:24px 0; }
+.weight-fields label { display:grid;gap:8px;font-size:14px;font-weight:600; }
+.weight-fields input { width:100%;min-width:0;padding:12px;border:1px solid #a7aa9a;border-radius:4px;background:#fff;color:#202820;font:inherit; }
+.weight-result dl { display:grid;grid-template-columns:1fr 1fr;gap:20px; }
+.weight-result dl div { padding:20px;background:#eaf0df;border-radius:6px; }
+.weight-result dt { font-size:14px;line-height:1.5; }
+.weight-result dd { margin:8px 0 0;font-size:28px;font-weight:700; }
+.tool-note { font-size:13px;color:#535d4e; }
+.related-guides > div { display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px; }
+.related-guides a { display:flex;align-items:center;justify-content:space-between;gap:12px;padding:18px;border:1px solid #d8d8cb;line-height:1.5; }
+.related-guides svg { flex-shrink:0; }
+.article-highlights .article-grid { display:grid;grid-template-columns:repeat(4,minmax(0,1fr)); }
+.article-highlights .article-grid > a { display:flex;flex-direction:column;min-width:0; }
+.article-highlights .article-grid b { margin-top:auto; }
+@media(max-width:900px){.article-highlights .article-grid{grid-template-columns:repeat(2,minmax(0,1fr));}}
+@media(max-width:600px){
+  .weight-fields { grid-template-columns:repeat(2,minmax(0,1fr));gap:12px; }
+  .weight-fields input { font-size:16px; }
+  .weight-fields label,.weight-tool p,.tool-note { font-size:14px; }
+  .weight-result dl,.related-guides > div { grid-template-columns:1fr; }
+  .article-grid p { font-size:13px;line-height:1.5; }
+  .article-grid > a { padding:14px; }
+  .article-grid h2 { font-size:17px;line-height:1.35; }
+  .decision-grid p { font-size:12px;line-height:1.45; }
+  .decision-grid h3 { font-size:15px;line-height:1.35; }
+  .hero .lede { font-size:14px;line-height:1.5; }
+  .hero-actions a,.searchbox button { min-height:40px;font-size:12px; }
+  .field-article .article-body p { font-size:16px;line-height:1.75; }
+  .related-guides a { font-size:14px; }
+}

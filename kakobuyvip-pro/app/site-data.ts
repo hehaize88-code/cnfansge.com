@@ -1,6 +1,8 @@
 export const localeCodes = ["en", "de", "es", "fr", "it"] as const;
 export type Locale = (typeof localeCodes)[number];
 export type PageKey =
+  | "feesArticle"
+  | "usaArticle"
   | "home"
   | "spreadsheet"
   | "finds"
@@ -22,9 +24,19 @@ export type PageKey =
   | "orderTimelineArticle"
   | "sellerHandoffArticle"
   | "domesticReceiptArticle"
-  | "warehouseIntakeArticle";
+  | "warehouseIntakeArticle"
+  | "quantityVariantArticle"
+  | "readinessBoardArticle"
+  | "holdSubmitArticle"
+  | "factLabelsArticle"
+  | "statusScreenshotsArticle"
+  | "conflictingSnapshotsArticle"
+  | "packagingInstructionsArticle"
+  | "parcelManifestArticle";
 
 export const pagePaths: Record<PageKey, string> = {
+  feesArticle: "articles/kakobuy-fees-explained",
+  usaArticle: "articles/kakobuy-shipping-to-usa",
   home: "", spreadsheet: "spreadsheet", finds: "finds", guide: "guide", qc: "qc", shipping: "shipping", faq: "faq", articles: "articles",
   calculator: "shipping-calculator", shippingLines: "shipping-lines", packing: "parcel-packing", warehouse: "warehouse-status-guide", returns: "returns-exchanges", qcTroubleshooting: "qc-photo-troubleshooting",
   qcArticle: "articles/kakobuy-returns-qc-photo-troubleshooting", shippingArticle: "articles/kakobuy-shipping-calculator-method", storageArticle: "articles/kakobuy-parcel-packing-warehouse-status",
@@ -33,6 +45,14 @@ export const pagePaths: Record<PageKey, string> = {
   sellerHandoffArticle: "articles/kakobuy-purchased-vs-seller-sent-handoff",
   domesticReceiptArticle: "articles/kakobuy-seller-sent-warehouse-received-record",
   warehouseIntakeArticle: "articles/kakobuy-warehouse-received-vs-stored-intake-checklist",
+  quantityVariantArticle: "articles/kakobuy-warehouse-quantity-variant-reconciliation",
+  readinessBoardArticle: "articles/kakobuy-warehouse-readiness-board",
+  holdSubmitArticle: "articles/kakobuy-waiting-item-hold-submit-record",
+  factLabelsArticle: "articles/kakobuy-estimated-confirmed-unknown-parcel-facts",
+  statusScreenshotsArticle: "articles/kakobuy-status-screenshot-record",
+  conflictingSnapshotsArticle: "articles/kakobuy-conflicting-status-snapshots",
+  packagingInstructionsArticle: "articles/kakobuy-packaging-instructions-checklist",
+  parcelManifestArticle: "articles/kakobuy-parcel-contents-manifest",
 };
 export function localPath(locale: Locale, page: PageKey) {
   const a = locale === "en" ? "" : `/${locale}`;
