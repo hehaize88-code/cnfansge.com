@@ -1,7 +1,7 @@
 /** Cloudflare Worker entry point for LoveGoBuy Field Guide. */
 import handler from "vinext/server/app-router-entry";
 
-const CONTENT_REVISION = "2026-10-15-multilingual-guides";
+const CONTENT_REVISION = "2026-10-15-multilingual-guides-nav";
 
 const HTML_CACHE_CONTROL = "public, max-age=0, s-maxage=3600, stale-while-revalidate=86400";
 
