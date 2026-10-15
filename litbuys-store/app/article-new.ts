@@ -92,7 +92,7 @@ export const newArticles: Record<(typeof newArticleSlugs)[number], ArticleConten
       {
         heading: "Stored status and the storage clock",
         paragraphs: [
-          "LitBuy's public pages currently promote warehouse storage and describe up to 120 days, with the first 90 days free. Treat the exact deadline shown in the account as stronger than a general marketing statement. The free period, overdue period, fees and disposal consequences may be governed by current policy and the date attached to each item. Record the deadline when the item becomes stored instead of assuming every item in a future combined parcel shares the same remaining time.",
+          "Earlier public LitBuy descriptions referred to up to 120 days of storage, with the first 90 days free. Treat the exact deadline shown in the account as stronger than a general marketing statement. The free period, overdue period, fees and disposal consequences may be governed by current policy and the date attached to each item. Record the deadline when the item becomes stored instead of assuming every item in a future combined parcel shares the same remaining time.",
           "Consolidation planning should start from the earliest deadline. If one item has been stored for weeks while another seller has not dispatched, waiting may reduce the available decision window. Build a simple table with order ID, stored date, account deadline, QC result and intended parcel. This makes it easier to decide whether to wait, ship a smaller parcel or resolve a return. Storage is not a reason to ignore an item; it is a limited period for inspection and parcel planning."
         ]
       },
@@ -255,7 +255,7 @@ export const newArticles: Record<(typeof newArticleSlugs)[number], ArticleConten
       {
         heading: "Stored creates the parcel-planning window",
         paragraphs: [
-          "Stored should mean the item is available in warehouse inventory for the next decision. This is the moment to review QC photos, request necessary measurements, resolve visible problems and decide whether to consolidate. Record the storage deadline shown in the account. LitBuy's public pages currently describe up to 120 days of storage with the first 90 days free, but the item-specific account deadline should control planning because policy language and overdue consequences can change.",
+          "Stored should mean the item is available in warehouse inventory for the next decision. This is the moment to review QC photos, request necessary measurements, resolve visible problems and decide whether to consolidate. Record the storage deadline shown in the account. Earlier public LitBuy descriptions referred to up to 120 days of storage with the first 90 days free, but the item-specific account deadline should control planning because policy language and overdue consequences can change.",
           "Do not approve a parcel simply because every item shows stored. Confirm identity, quantity and visible condition first. Compare the oldest storage deadline with the expected arrival of outstanding orders. If a delayed seller would force another item toward an overdue period, decide whether waiting still makes economic sense. Consolidation can reduce repeated base charges, but it can also increase parcel size, chargeable weight and dependency on the slowest order."
         ]
       },
@@ -400,7 +400,7 @@ export const newArticles: Record<(typeof newArticleSlugs)[number], ArticleConten
       {
         heading: "Understand storage and timing",
         paragraphs: [
-          "LitBuy's current public pages describe up to 120 days of storage with the first 90 days free. Buyers should still use the deadline displayed for each stored item because policies and overdue handling can change. Storage time begins as items reach the warehouse on different dates, so a consolidated parcel can contain several clocks. Record each deadline and plan from the earliest one rather than the newest arrival.",
+          "Earlier public LitBuy descriptions referred to up to 120 days of storage with the first 90 days free. Buyers should still use the deadline displayed for each stored item because policies and overdue handling can change. Storage time begins as items reach the warehouse on different dates, so a consolidated parcel can contain several clocks. Record each deadline and plan from the earliest one rather than the newest arrival.",
           "Storage is most valuable as a decision window. Use it to complete QC, resolve wrong items, wait for compatible orders and compare parcel configurations. It is not a reason to postpone every decision. A slow seller can cause an older item to approach its deadline, and waiting for one more product can change both storage and shipping risk. Review the outstanding order against the cost of sending the ready items sooner."
         ]
       },

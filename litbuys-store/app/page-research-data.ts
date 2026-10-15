@@ -32,7 +32,7 @@ export const pageResearch: Record<ResearchPageKey, { title: string; intro: strin
         title: "Review routes instead of silently replacing them",
         paragraphs: [
           "Seller pages can disappear, variants can be removed and catalog routes can change. Every row needs a visible review date and a manual check that the destination still shows the expected item. A page returning successfully is not enough: the image, product identity and option area must still match. When a record fails, redirecting it to a broad category hides the failure and weakens user trust.",
-          "The safer response is to mark the item unavailable, preserve its original source ID for audit, or replace it only after a new record has been matched from the beginning. That maintenance method also produces better search pages. Google can understand a focused product directory with stable internal detail pages more easily than a grid of changing outbound URLs, duplicate titles and generic redirects."
+          "The safer response is to mark the item unavailable, preserve its original source ID for audit, or replace it only after a new record has been matched from the beginning. That maintenance method also produces better search pages. A focused product directory with stable internal detail pages is easier to follow than a grid of changing outbound URLs, duplicate titles and generic redirects."
         ]
       }
     ]
@@ -53,7 +53,7 @@ export const pageResearch: Record<ResearchPageKey, { title: string; intro: strin
         eyebrow: "AT WAREHOUSE",
         title: "Use inspection photos for visible questions",
         paragraphs: [
-          "LitBuy advertises free QC and inspection on arrival. Its refund terms describe the basic warehouse check more narrowly: quantity, visible appearance and obvious external defects. That wording matters. Warehouse images can help confirm that an item arrived, whether the visible option appears correct, and whether obvious damage or asymmetry is present. They cannot prove fibre composition, durability, comfort, smell, electronics performance or authenticity.",
+          "LitBuy has advertised free QC and inspection on arrival. Published refund terms described the basic warehouse check more narrowly: quantity, visible appearance and obvious external defects. That wording matters. Warehouse images can help confirm that an item arrived, whether the visible option appears correct, and whether obvious damage or asymmetry is present. They cannot prove fibre composition, durability, comfort, smell, electronics performance or authenticity.",
           "Review the full silhouette first, then symmetry, construction, labels, measurements and packaging. If a decision depends on a small area, request one precise view rather than making a broad conclusion from a blurred image. Keep the order ID and image reference in any support request. A specific observation such as 'the left sleeve appears shorter in the flat measurement' is easier to act on than 'quality looks bad.'"
         ]
       },
@@ -61,7 +61,7 @@ export const pageResearch: Record<ResearchPageKey, { title: string; intro: strin
         eyebrow: "BEFORE SHIPPING",
         title: "Recheck weight, storage time and route restrictions",
         paragraphs: [
-          "LitBuy's current public pages distinguish warehouse time from international transit. The homepage advertises storage of up to 120 days with the first 90 days free, while the help center emphasizes the 90-day free period. A separate warehouse notice describes overdue handling after the free period. Because those labels have changed, users should rely on the dates and fee status shown inside their own warehouse account rather than a saved screenshot.",
+          "Published LitBuy material distinguishes warehouse time from international transit. Earlier homepage wording referred to storage of up to 120 days with the first 90 days free, while help material highlighted the 90-day free period. A separate warehouse notice described overdue handling after the free period. Because wording can change, users should rely on the dates and fee status in their current warehouse account rather than a saved screenshot.",
           "Before submitting a parcel, identify items that are bulky, fragile, restricted or likely to require protective packaging. Compare route rules using the packed parcel, not the sum of seller weights. If the best route is sensitive to dimensions, rehearsal packing can provide a more useful basis than an early estimate. The cheapest visible headline rate is not automatically the cheapest acceptable route once size, restrictions, insurance and protection are considered."
         ]
       }
@@ -75,7 +75,7 @@ export const pageResearch: Record<ResearchPageKey, { title: string; intro: strin
         eyebrow: "STEP 01",
         title: "Understand the two-stage payment model",
         paragraphs: [
-          "LitBuy describes itself as a shopping and forwarding agent rather than a conventional retailer that ships every product directly from one checkout. The first payment covers the selected product and related purchasing stage. After items reach the warehouse and the user chooses what to ship, international freight is calculated separately. Several negative app reviews describe the second payment as unexpected; LitBuy's developer responses say this is the normal agent workflow. New users should understand that distinction before ordering.",
+          "LitBuy describes itself as a shopping and forwarding agent rather than a conventional retailer that ships every product directly from one checkout. The first payment covers the selected product and related purchasing stage. After items reach the warehouse and the user chooses what to ship, international freight is calculated separately. Published negative app reviews described the second payment as unexpected; Published developer responses said this is the normal agent workflow. New users should understand that distinction before ordering.",
           "A practical budget therefore has at least two columns: product-stage spending and parcel-stage spending. Keep an additional contingency for seller domestic delivery, packing choices, payment conversion, route surcharges, tax or duty exposure and after-sales costs. A coupon or rate headline should be applied only after its eligibility, date and route conditions are verified in the live account."
         ]
       },
@@ -83,7 +83,7 @@ export const pageResearch: Record<ResearchPageKey, { title: string; intro: strin
         eyebrow: "STEP 02",
         title: "Make warehouse evidence answer a specific question",
         paragraphs: [
-          "The official refund terms say basic QC verifies quantity, visible appearance and obvious external defects. Use that scope to frame a checklist. First ask whether the expected item and option arrived. Then check shape, symmetry, visible construction, labels, measurements and packaging. If the question is not visually answerable, do not present the photo as proof.",
+          "Published refund terms described basic QC as verifying quantity, visible appearance and obvious external defects. Use that scope to frame a checklist. First ask whether the expected item and option arrived. Then check shape, symmetry, visible construction, labels, measurements and packaging. If the question is not visually answerable, do not present the photo as proof.",
           "After-sales timing can depend on the seller and order status. LitBuy's help center includes separate topics for order cancellation, returns, exchanges and after-sales service. The useful habit is to inspect promptly and submit a support ticket with the order ID, image reference and desired resolution while the item is still in the warehouse. Waiting until after international dispatch usually narrows practical options."
         ]
       },
@@ -92,14 +92,14 @@ export const pageResearch: Record<ResearchPageKey, { title: string; intro: strin
         title: "Compare complete parcel routes",
         paragraphs: [
           "LitBuy provides a shipping-estimation tool and explains that the first-weight unit is the minimum weight charged for a route. A route may then add continuation increments, dimensional rules, restrictions and service conditions. Entering an item weight without final dimensions can make a bulky parcel appear cheaper than it will be after packing. Use rehearsal data when a route decision depends heavily on dimensions.",
-          "The official shipping policy says parcel processing generally takes one to three business days, excluding weekends and public holidays. That is warehouse processing, not a promise that international delivery will finish in the same period. Delivery estimates begin after dispatch and can be affected by carrier capacity, customs, weather and local handling. A responsible guide keeps processing, transit and customs as separate time ranges."
+          "A published LitBuy shipping policy described parcel processing as generally one to three business days, excluding weekends and public holidays; check the current version. That is warehouse processing, not a promise that international delivery will finish in the same period. Delivery estimates begin after dispatch and can be affected by carrier capacity, customs, weather and local handling. A responsible guide keeps processing, transit and customs as separate time ranges."
         ]
       }
     ]
   },
   qc: {
     title: "What LitBuy QC photos can and cannot establish",
-    intro: "LitBuy markets free QC and inspection, while its refund terms define the basic warehouse inspection as a check of quantity, visible appearance and obvious external defects. This checklist stays inside that documented scope.",
+    intro: "LitBuy has marketed free QC and inspection, while published refund terms described the basic warehouse inspection as a check of quantity, visible appearance and obvious external defects. This checklist stays inside that documented scope.",
     blocks: [
       {
         eyebrow: "VISIBLE EVIDENCE",
@@ -122,7 +122,7 @@ export const pageResearch: Record<ResearchPageKey, { title: string; intro: strin
         title: "Escalate visible problems while the decision is reversible",
         paragraphs: [
           "Document the order ID, exact photo, location of the issue and requested next step. If a measurement is needed, specify the start and end points. If a closure needs checking, ask for it to be shown open and closed. Precise requests reduce unnecessary image rounds and give the agent a clearer basis for communicating with the seller.",
-          "LitBuy's refund terms state that refunds may be processed after returned goods are received and inspected, and that the refund cannot exceed the amount actually paid for the relevant order. Final credit timing depends on the payment channel. Seller rules and after-sales windows can still affect whether a return is accepted, so a QC objection should be raised promptly rather than stored for the parcel stage."
+          "Published LitBuy refund terms stated that refunds could be processed after returned goods are received and inspected, and that the refund cannot exceed the amount actually paid for the relevant order. Check the applicable current conditions. Final credit timing depends on the payment channel. Seller rules and after-sales windows can still affect whether a return is accepted, so a QC objection should be raised promptly rather than stored for the parcel stage."
         ]
       }
     ]
@@ -151,8 +151,8 @@ export const pageResearch: Record<ResearchPageKey, { title: string; intro: strin
         eyebrow: "TIMING / CLAIMS",
         title: "Separate warehouse processing from international transit",
         paragraphs: [
-          "LitBuy's published shipping policy says parcel processing normally takes one to three business days, excluding weekends and public holidays. That window refers to processing before dispatch. International delivery estimates start after shipment and are not guaranteed. Customs inspections, weather, route capacity and destination-carrier handling can extend the journey without changing the warehouse processing record.",
-          "For missing or damaged parcels, preserve tracking events, parcel images, packaging evidence and delivery records. LitBuy's common-questions area has separate topics for customs inspection, insurance and compensation, which means the applicable route and selected protection matter. Do not promise a refund while a parcel is merely delayed or held; the official policy says refunds are tied to confirmed delivery failure or a returned parcel being received and inspected."
+          "A published LitBuy shipping policy described parcel processing as generally one to three business days, excluding weekends and public holidays; check the current version. That window refers to processing before dispatch. International delivery estimates start after shipment and are not guaranteed. Customs inspections, weather, route capacity and destination-carrier handling can extend the journey without changing the warehouse processing record.",
+          "For missing or damaged parcels, preserve tracking events, parcel images, packaging evidence and delivery records. LitBuy's common-questions area has separate topics for customs inspection, insurance and compensation, which means the applicable route and selected protection matter. Do not promise a refund while a parcel is merely delayed or held; published terms linked refunds to confirmed delivery failure or receipt and inspection of a returned parcel; check the current rules for the specific case."
         ]
       }
     ]
@@ -163,58 +163,46 @@ export const pageResearch: Record<ResearchPageKey, { title: string; intro: strin
     blocks: [
       {
         eyebrow: "STORAGE",
-        title: "Is storage 90 days or 120 days?",
+        title: "Distinguish free storage from additional deadlines",
         paragraphs: [
-          "LitBuy's current homepage advertises storage for up to 120 days and states that the first 90 days are free. The help center highlights a 90-day free-storage period. A separate warehouse notice also describes a maximum 120-day window and overdue handling. These statements are not identical, but they can be read together: 90 days is the public free period, while later time is an overdue or disposal window rather than another block of free storage.",
-          "Policy wording has changed, so the warehouse date and fee status shown inside the user's account should take priority over an old guide. The official notice says items with unpaid overdue charges may eventually be treated as abandoned. Users should not plan to use the maximum disposal window as normal free storage."
+          "Earlier LitBuy homepage wording advertised up to 120 days of storage and the first 90 days free. Help material highlighted a 90-day free-storage period. A separate warehouse notice also described a maximum 120-day window and overdue handling. These statements do not mean the same thing: 90 days described the advertised free period, while later time was an overdue or disposal window rather than another block of free storage.",
+          "Because policy wording can change, the warehouse date and fee status in the current account should take priority over an old guide. The published notice described that items with unpaid overdue charges could eventually be treated as abandoned. Do not plan to use the maximum period before possible disposal as normal free storage; check the deadline that applies to the item."
         ]
       },
       {
         eyebrow: "REFUNDS",
-        title: "When is a LitBuy refund complete?",
+        title: "Separate a seller return, account credit and payment receipt",
         paragraphs: [
-          "A seller return, LitBuy account refund and payment-channel credit are different stages. The official refund terms say returned goods must be received and inspected before a refund can be processed, and the amount cannot exceed what was actually paid for the relevant order. The time when funds appear outside the platform depends on the payment provider's own processing cycle.",
-          "Cancellation may also depend on order status and the seller's rules. LitBuy's help center separates cancellation, returns and after-sales questions, and developer responses to app reviews say the cancellation button can close after the applicable processing window. Users should therefore raise a precise support ticket as soon as a problem is visible rather than assume every purchased item remains cancellable."
+          "A seller return, LitBuy account refund and payment-channel credit are different stages. Published refund terms said returned goods had to be received and inspected; check the applicable current conditions before a refund can be processed, and the amount cannot exceed what was actually paid for the relevant order. The time when funds appear outside the platform depends on the payment provider's own processing cycle.",
+          "Cancellation may also depend on order status and the seller's rules. LitBuy's help center separates cancellation, returns and after-sales questions, and published developer responses to app reviews described how a cancellation option could close after the applicable processing window. Users should therefore raise a precise support ticket as soon as a problem is visible rather than assume every purchased item remains cancellable."
         ]
       },
       {
         eyebrow: "REVIEWS",
-        title: "How should customer reviews be read?",
+        title: "Read customer feedback with dates and context",
         paragraphs: [
-          "Customer feedback is mixed. Positive reviews commonly describe a smooth purchasing flow, quick warehouse arrival, useful QC photos and successful parcel delivery. Critical reviews frequently focus on international shipping cost, dimensional weight, additional payment after the product stage, delayed support or difficulty cancelling. These are individual experiences, not controlled tests, but the repeated themes identify useful questions to ask before spending.",
-          "Trustpilot currently marks LitBuy's rating unavailable because of a breach of review guidelines and says fake reviews were removed. Apple's App Store currently shows a strong aggregate rating but also displays sharply negative reviews alongside positive ones. That combination is a reason to read the review text, dates, developer responses and parcel details instead of relying on a star average or a single promotional testimonial."
+          "Public customer comments include positive and negative experiences. Positive examples describe smooth purchasing, quick warehouse arrival, useful QC photos and successful delivery. Critical examples discuss international shipping cost, volumetric weight, an additional payment after the product stage, delayed support or difficulty cancelling. These are individual experiences rather than controlled tests, but recurring themes identify useful questions before spending.",
+          "Ratings and moderation notices on Trustpilot or Apple's App Store can change. Check the current status directly on each platform instead of assuming that old notices about removed reviews, an unavailable rating or a high average remain valid. Read the text, date, developer response and parcel details in both positive and negative accounts. That combination is more informative than a star average or one promotional testimonial."
         ]
       }
     ]
   },
   articles: {
-    title: "The editorial order behind these LitBuy guides",
-    intro: "The first content cluster answers the highest-value questions in the same order a new user encounters them: find identity, warehouse evidence, shipping cost and independent review signals.",
+    title: "Choose a LitBuy guide for your next decision",
+    intro: "Start with the stage you are at: finding an item, checking a warehouse order or comparing a parcel quote. Each guide explains a different decision and the evidence needed to make it.",
     blocks: [
-      {
-        eyebrow: "CLUSTER 01",
-        title: "Start with the process and spreadsheet intent",
-        paragraphs: [
-          "The foundational search intent is practical: users want a LitBuy spreadsheet, working product links and a clear explanation of how the agent process differs from normal retail checkout. That article should connect product IDs, images, options and source routes without turning the page into a list of keywords. It also creates internal links to finds, product details, QC and shipping pages.",
-          "A second article should explain how to order with LitBuy from source link to warehouse arrival. The target phrases can include how to use LitBuy, how to buy from LitBuy and LitBuy beginner guide. It should explain the separate product and international-shipping stages early because review data shows that this is a common source of surprise."
-        ]
-      },
-      {
-        eyebrow: "CLUSTER 02",
-        title: "Publish QC and shipping before broad opinion pieces",
-        paragraphs: [
-          "QC and shipping articles answer concrete decisions and are easier to support with official evidence. The QC article can target LitBuy QC photos, LitBuy warehouse inspection and QC checklist. The shipping article can target LitBuy shipping cost, LitBuy shipping calculator, LitBuy rehearsal parcel and volumetric weight. Both should link to the relevant functional page rather than compete with it: the functional page is the concise tool, while the article is the complete explanation.",
-          "Only after those foundations should the site publish a LitBuy review article. A useful review page needs platform facts, positive and negative customer themes, source caveats and a decision checklist. Publishing it too early can produce a thin opinion page; publishing it after the process guides lets the review link to specific explanations of the payment, QC, storage and shipping issues users mention."
-        ]
-      },
-      {
-        eyebrow: "CLUSTER 03",
-        title: "Expand into storage, refunds and country routes",
-        paragraphs: [
-          "The next support cluster should cover LitBuy storage time, returns, cancellation, refunds, insurance and customs. These are lower-volume terms than spreadsheet or shipping, but they build topical coverage and capture users who are already close to a decision. Policy pages must carry a verified date and avoid copying temporary promotion language into evergreen text.",
-          "Country and category pages should come later and only when each page has unique value. A UK or Germany article needs route, tax and delivery context specific to that destination. A shoes or hoodies article needs its own QC and packing advice. Repeating the same generic template across countries or categories creates more URLs without adding evidence, which is unlikely to outperform a smaller, well-linked cluster."
-        ]
-      }
+      { eyebrow: "BEFORE ORDERING", title: "Connect the find to the exact listing", paragraphs: [
+        "Begin with the spreadsheet guide when you need to connect a product image to its source ID, selected option and price date. A saved row is a starting point for comparison. Open the main catalog to check the current size, color, quantity and price before deciding whether the item still matches your requirements.",
+        "Use the hoodie guide for garment-specific checks, the under-$30 guide for historical product-price examples and the clothing-size guide for measurement methods. The budget examples exclude shipping and other charges. Compare a garment you own with the listing measurements instead of treating a letter size or a low headline price as a complete buying decision."
+      ]},
+      { eyebrow: "AT THE WAREHOUSE", title: "Match order status to visible evidence", paragraphs: [
+        "The order-status and warehouse guides separate seller dispatch, domestic delivery, intake and stored inventory. A domestic carrier marking a package delivered does not necessarily mean the item is ready for an international parcel. Keep the order ID and domestic tracking reference together so a support question identifies the stage that needs attention.",
+        "Once warehouse photos are available, use the QC guide and photo checklist to inspect identity, quantity, measurements and visible condition. Ask for a precise view when a material question remains unresolved. Check each item's current storage deadline and available after-sales options before combining it with other orders."
+      ]},
+      { eyebrow: "BEFORE DISPATCH", title: "Compare the complete parcel decision", paragraphs: [
+        "Read the shipping guide and weight guide together when comparing actual weight, external dimensions, chargeable weight and packaging. The USA guide adds destination-specific planning questions without promising a universal route or tax result. Use the same parcel inputs for every current quote and distinguish warehouse processing from carrier transit.",
+        "The cost-and-workflow checklist and independent review bring the stages together. Separate the recorded product price from purchasing charges, international freight and possible destination costs. Keep known amounts, estimates and unresolved terms visible. Use the review to decide whether the staged agent process fits your needs, rather than treating a rating or another buyer's successful parcel as a guarantee."
+      ]}
     ]
   }
 };
