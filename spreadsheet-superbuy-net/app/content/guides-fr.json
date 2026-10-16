@@ -1,0 +1,830 @@
+{
+  "superbuy-shipping-calculator": {
+    "slug": "superbuy-shipping-calculator",
+    "title": "Calculateur de livraison Superbuy : poids, volume et budget",
+    "description": "Comparer les lignes avec les mêmes mesures et distinguer estimation, avance de fret et montant final.",
+    "category": "Calcul du transport",
+    "sections": [
+      {
+        "heading": "Conserver un scénario daté, pas une promesse de prix",
+        "paragraphs": [
+          "Le calculateur Superbuy compare les lignes à partir de la destination, du poids estimé et des dimensions. Avant l'achat, il ne connaît ni le carton final ni toutes les caractéristiques confirmées des articles. Enregistrez destination, devise, poids, trois dimensions extérieures et date. Toute modification crée un nouveau scénario : vous pourrez ensuite expliquer une différence par l'emballage, la route ou le tarif."
+        ]
+      },
+      {
+        "heading": "Distinguer poids réel et poids volumétrique",
+        "paragraphs": [
+          "Le poids réel vient de la balance. Le poids volumétrique représente l'espace occupé dans le transport. Un carton hypothétique de 60 × 40 × 30 cm, avec un diviseur de 6 000, donne 12 kg. Ce diviseur n'est pas universel : chaque ligne peut appliquer ses arrondis, minimums et règles particulières. Conservez les deux poids et la règle effectivement utilisée."
+        ]
+      },
+      {
+        "heading": "Préparer trois étapes de calcul",
+        "paragraphs": [
+          "Avant l'achat, utilisez une fourchette plausible. À l'arrivée en entrepôt, remplacez les hypothèses par les photos, poids et dimensions disponibles. Avant l'expédition, comparez le colis réel aux lignes actuelles. Séparez produit, livraison chinoise, services et fret international. Un article bon marché mais volumineux peut coûter davantage à transporter qu'un article plus cher et compact. La première estimation reste un scénario, même lorsque les données deviennent plus précises."
+        ]
+      },
+      {
+        "heading": "Utiliser les dimensions extérieures et des unités explicites",
+        "paragraphs": [
+          "Les dimensions du produit ne sont pas celles du colis prêt à partir. Boîtes, accessoires, protection et carton d'exportation augmentent le volume. Comparez d'abord un emballage compact à une hypothèse prudente, puis déterminez ce qui peut être retiré sans dommage. Indiquez clairement grammes, kilogrammes et centimètres. Gardez les mesures brutes et placez votre réserve budgétaire dans une colonne séparée."
+        ]
+      },
+      {
+        "heading": "Comparer les lignes dans les mêmes conditions",
+        "paragraphs": [
+          "Gardez identiques contenu, destination, poids, dimensions et date. Relevez prix, délai indicatif, règle de facturation, suivi, assurance, limites et restrictions. Un prix inférieur peut s'accompagner de paliers de poids moins favorables ou d'une protection différente. Transporteurs et douanes interviennent également : une livraison précédente rapide n'est pas une garantie. Relisez les conditions de la ligne juste avant la soumission."
+        ]
+      },
+      {
+        "heading": "Calculer regroupement et séparation",
+        "paragraphs": [
+          "Le regroupement peut éviter plusieurs frais de départ, mais créer un carton volumétrique ou rendre certaines lignes indisponibles. Comparez le groupe complet à une séparation cohérente selon volume, fragilité et caractéristiques des produits. Documentez la raison du choix. Retirer un emballage exige aussi de considérer protection, valeur de collection et risque de dommage. Moins de colis ne signifie pas nécessairement moins de dépenses."
+        ]
+      },
+      {
+        "heading": "Garder l'avance et le décompte final",
+        "paragraphs": [
+          "L'avance de fret repose sur des données estimées, une ligne et une destination. Le décompte peut ensuite utiliser le poids et les mesures vérifiés du colis. Un crédit ou un complément peut en résulter. Enregistrez séparément avance, montant final et ajustement. En cas d'écart, comparez carton, dimensions, arrondis et services. Une demande précise contient le numéro du colis, la date du devis et les données saisies."
+        ]
+      },
+      {
+        "heading": "Séparer importation et conversion monétaire",
+        "paragraphs": [
+          "Le calculateur ne supprime ni taxes d'importation, ni droits, ni frais du transporteur ou de la banque. Prévoyez-les séparément à partir des règles officielles du pays destinataire. Un nom de ligne ou un témoignage ne garantit pas une livraison sans taxes. Notez la devise du devis et votre taux de conversion : le débit bancaire peut varier alors que le montant du fret en yuans reste identique."
+        ]
+      },
+      {
+        "heading": "Vérifier le dossier avant soumission",
+        "paragraphs": [
+          "Partez d'une destination et d'une plage d'emballage réaliste, puis conservez les conditions des lignes admissibles. À l'entrepôt, résolvez les questions QC et confirmez regroupement et emballage. Avant paiement, contrôlez adresse, contact, contenu, restrictions, déclaration, assurance et facturation. Après livraison, archivez coût final, ajustement, durée réelle et état de l'emballage. Cette expérience affine une fourchette future, sans devenir un tarif permanent."
+        ]
+      },
+      {
+        "heading": "Indiquer la qualité de chaque donnée",
+        "paragraphs": [
+          "Marquez un poids comme annoncé par le vendeur, mesuré en entrepôt ou vérifié après emballage. Distinguez dimensions du produit, boîte individuelle et carton extérieur. Conservez diviseur, unité de facturation, contrôle des restrictions et heure du devis. Séparez fret prévu, réserve et coûts exclus. Ne remplacez pas un scénario terminé : une nouvelle ligne rend l'évolution compréhensible à une autre personne."
+        ]
+      }
+    ]
+  },
+  "superbuy-tariffs-customs-vat": {
+    "slug": "superbuy-tariffs-customs-vat",
+    "title": "Superbuy : droits de douane, TVA et coûts d'importation",
+    "description": "Prévoir séparément taxes, droits et frais de traitement selon le pays de destination et les marchandises.",
+    "category": "Douane et taxes",
+    "sections": [
+      {
+        "heading": "Commencer par la destination et les composantes du coût",
+        "paragraphs": [
+          "Les frais de douane Superbuy ne correspondent pas à un pourcentage universel fixé par la plateforme. Distinguez valeur des marchandises, fret, taxe d'importation, droits éventuels et frais du transporteur. Notez le pays ou la région et la règle vérifiée. Le guide Royaume-Uni traite ce cas particulier ; ses hypothèses ne s'appliquent pas automatiquement ailleurs. Chaque estimation doit afficher ses conditions et sa date."
+        ]
+      },
+      {
+        "heading": "Utiliser l'autorité compétente comme source",
+        "paragraphs": [
+          "Les droits dépendent notamment de la destination, de la nature, de l'origine et de la valeur des biens, ainsi que de la date d'importation. Consultez les informations officielles et relevez titre, date, devise, seuil et hypothèse de classification. Une règle peut concerner l'envoi entier plutôt que chaque objet. Une source datée est plus utile qu'une étiquette permanente annonçant une exemption."
+        ]
+      },
+      {
+        "heading": "Distinguer taxe, droits et traitement",
+        "paragraphs": [
+          "TVA à l'importation, droits de douane, accises et frais de traitement sont des composantes différentes, même réunies sur une facture. Créez des lignes budgétaires séparées avec leur base de calcul. Lorsqu'une ligne de transport annonce un service fiscal, vérifiez précisément ce qu'il comprend. Conservez facture et déclaration. Le nom commercial de la route ne remplace pas les conditions du service."
+        ]
+      },
+      {
+        "heading": "Prendre en compte la valeur de tout l'envoi",
+        "paragraphs": [
+          "Plusieurs achats réunis peuvent atteindre un seuil différent, même si chaque article est peu coûteux. Le regroupement modifie aussi contenu, dimensions et options de transport. Comparez un regroupement raisonnable à une séparation justifiée, sans fausser les valeurs. Selon la règle, la base taxable peut inclure fret, emballage, assurance ou droits. Retenez uniquement les éléments exigés pour votre situation par l'autorité compétente."
+        ]
+      },
+      {
+        "heading": "Décrire et classer correctement les marchandises",
+        "paragraphs": [
+          "Utilisez nature réelle, quantité et valeur. Les mots cadeau ou échantillon ne créent pas d'exemption pour un achat normal. Le type de produit et son origine peuvent modifier les droits. Gardez commande, paiement et description. Si le classement est incertain, consultez le tarif officiel ou demandez une aide spécialisée : une photo ne suffit pas toujours à déterminer un code douanier. Signalez les hypothèses non résolues."
+        ]
+      },
+      {
+        "heading": "Ne pas confondre achat et cadeau",
+        "paragraphs": [
+          "Les franchises pour cadeaux ont des conditions propres, concernant notamment les parties privées, la gratuité et le caractère occasionnel. Un bien acheté pour être offert ne devient pas automatiquement un cadeau douanier. Enregistrez un achat comme tel. Pour un véritable cadeau, vérifiez les seuils actuels de valeur et de quantité. Les marchandises soumises à accises ou restrictions nécessitent une vérification supplémentaire."
+        ]
+      },
+      {
+        "heading": "Vérifier les limites de la ligne de transport",
+        "paragraphs": [
+          "Une appellation liée aux taxes n'explique pas tous les termes. Lisez destinations, caractéristiques acceptées, limites de valeur, indemnisation et traitement fiscal. En cas d'ambiguïté, posez la question avant soumission et archivez la réponse avec le devis. La douane peut contrôler, reclasser ou retarder le colis. Prévoir une réserve de temps et d'argent évite de transformer une expérience passée favorable en garantie."
+        ]
+      },
+      {
+        "heading": "Tenir une fiche par destination",
+        "paragraphs": [
+          "Notez autorité douanière, traitement fiscal, seuils possibles, base tarifaire, marchandises interdites ou limitées et procédure de paiement du transporteur. Certaines régions d'un même pays diffèrent, comme la Grande-Bretagne et l'Irlande du Nord. Datez les vérifications. Si plusieurs semaines séparent recherche et expédition, contrôlez de nouveau les règles décisives. Conservez les anciens calculs comme historique, pas comme engagement actuel."
+        ]
+      },
+      {
+        "heading": "Préparer les documents pour l'arrivée",
+        "paragraphs": [
+          "Regroupez facture, commande, preuve de paiement, numéro du colis, description et justificatif de fret. Le transporteur peut demander des pièces ou un règlement avant livraison. Des coordonnées exactes et un suivi régulier permettent de respecter les délais. Pour une somme contestée, utilisez la procédure officielle de vérification. Consignez valeur retenue, type de charge et résultat au lieu de modifier artificiellement les déclarations futures."
+        ]
+      },
+      {
+        "heading": "Budgéter avec des scénarios explicites",
+        "paragraphs": [
+          "Préparez des estimations basse, centrale et haute dont les hypothèses restent visibles. La première inclut les charges clairement applicables ; les suivantes intègrent les droits et frais possibles. Avant départ, confirmez valeur totale, description fidèle, conditions de la ligne et base officielle. Après livraison, comparez l'évaluation réelle. Un budget prépare une décision et ne doit pas promettre une exemption non étayée."
+        ]
+      },
+      {
+        "heading": "Examiner les restrictions avant l'achat",
+        "paragraphs": [
+          "Aliments, médicaments, cosmétiques, batteries, liquides, plantes et produits animaux peuvent relever de règles particulières. Un article vendu en Chine n'est pas forcément admissible sur toutes les lignes internationales. Notez la caractéristique concernée et la source vérifiée. Ne masquez pas une propriété incertaine par une description vague. Gardez un article non clarifié en dehors du groupe de colis prévu."
+        ]
+      },
+      {
+        "heading": "Archiver séparément le résultat réel",
+        "paragraphs": [
+          "Après dédouanement, conservez valeur déclarée et retenue, code tarifaire éventuel, taxe, droits, accises, traitement, change et date. Un écart peut provenir du classement, de la base ou des frais. Un avis décrit cet envoi précis. Pour d'autres biens, une autre ligne ou une nouvelle réglementation, recommencez la vérification. L'historique reste ainsi utile sans devenir une règle future supposée certaine."
+        ]
+      }
+    ]
+  },
+  "superbuy-expert-service": {
+    "slug": "superbuy-expert-service",
+    "title": "Superbuy Expert Service : frais et commande manuelle",
+    "description": "Préparer un lien non reconnu, préciser la variante et confirmer le service ainsi que ses frais avant l'achat.",
+    "category": "Aide à la commande",
+    "sections": [
+      {
+        "heading": "Préparer une demande manuelle complète",
+        "paragraphs": [
+          "Vérifiez d'abord le lien original actuel et la variante exacte. Si le parcours habituel ne lit pas le produit, préparez URL, titre, vendeur, couleur, taille, quantité, prix attendu et règle de remplacement. Confirmez le service indiqué et son coût. Expert Service et la catégorie distincte Shipping Expert ne doivent pas être traités comme une seule grille tarifaire."
+        ]
+      },
+      {
+        "heading": "Savoir quand une aide manuelle est utile",
+        "paragraphs": [
+          "Le guide officiel renvoie vers Expert Service lorsqu'un produit n'est pas trouvé dans la recherche habituelle. Une intervention manuelle peut aider pour un lien illisible, une plateforme particulière ou un article nécessitant une explication. Elle ne remplace pas votre choix d'achat. Ajoutez frais de livraison chinoise et question précise. L'agent ne devrait pas devoir deviner taille, couleur ou modèle à partir d'une note vague."
+        ]
+      },
+      {
+        "heading": "Lire exactement le nom du service",
+        "paragraphs": [
+          "Des noms proches peuvent désigner des prestations différentes. La page des frais distingue achats standards, cas particuliers et une catégorie Shipping Expert. Conservez la désignation et le montant affichés avant paiement. N'appliquez pas un ancien pourcentage par simple ressemblance. Plateforme, occasion, prévente ou communication spéciale peuvent modifier la catégorie ; le détail de la commande concrète reste la référence."
+        ]
+      },
+      {
+        "heading": "Fixer la variante et les remplacements autorisés",
+        "paragraphs": [
+          "Une demande claire contient un produit, une variante et une règle de substitution. Copiez exactement les options, séparez couleur et taille, indiquez quantité et bonne miniature. Fixez si nécessaire un plafond de prix ou de port et exigez une confirmation au-delà. Pour une personnalisation, précisez inscription, mesures, échéance et validation. Archivez l'instruction finale avec sa date."
+        ]
+      },
+      {
+        "heading": "Utiliser les captures comme preuves complémentaires",
+        "paragraphs": [
+          "Une capture explique une sélection ou un texte difficile à traduire, mais peut vieillir. Le lien actuel reste la référence principale ; une annotation doit éclairer une décision précise. Si le vendeur modifie l'annonce ou le prix, demandez une nouvelle confirmation. Passez au statut confirmé seulement quand réponse, variante, frais et date concordent. Une ancienne image ne garantit pas automatiquement l'ancien prix."
+        ]
+      },
+      {
+        "heading": "Vérifier les frais avant d'autoriser l'achat",
+        "paragraphs": [
+          "Séparez produit, transport chinois, service d'achat et options. Contrôlez devise et unité : certains services sont facturés par pièce, d'autres par commande. Placez montant attendu et confirmé côte à côte. Si la catégorie change après vérification, décidez avant validation si le supplément est acceptable. Une opération spéciale ne doit pas être présentée artificiellement comme un achat standard gratuit."
+        ]
+      },
+      {
+        "heading": "Documenter les risques du vendeur et du produit",
+        "paragraphs": [
+          "Les marchandises proviennent de vendeurs tiers. Une soumission manuelle ne rend pas automatiquement fiable un vendeur inconnu ni admissible un produit limité. Vérifiez vendeur, retours et restrictions avant paiement. Pour occasion, précommande ou personnalisation, précisez les contrôles possibles, les dates et les possibilités d'annulation. L'absence de retour rend les instructions initiales encore plus importantes."
+        ]
+      },
+      {
+        "heading": "Prévoir le contrôle QC avant l'arrivée",
+        "paragraphs": [
+          "Définissez références du modèle, variante, quantité, inscription, accessoires et mesures décisives. Les photos standards peuvent omettre une zone utile. À réception, comparez avec demande originale et confirmation. Une photo supplémentaire ou une nouvelle inspection doit répondre à une incertitude précise. Elle ne prouve pas automatiquement authenticité, matière, fonctionnement interne ou durabilité. Distinguez ce qui est confirmé de ce qui reste inconnu."
+        ]
+      },
+      {
+        "heading": "Transformer les échanges en journal de décision",
+        "paragraphs": [
+          "Posez des questions courtes et numérotées, puis associez chaque réponse au bon point. Évitez plusieurs conversations comportant des instructions légèrement différentes. Un journal commun montre variantes validées et questions ouvertes. Si l'achat échoue, notez pourquoi : rupture, minimum de commande ou restriction. Une nouvelle demande doit corriger cette cause au lieu de répéter le même dossier incomplet."
+        ]
+      },
+      {
+        "heading": "Relier le lien initial à la préparation du colis",
+        "paragraphs": [
+          "Utilisez le parcours standard lorsqu'il convient. Pour une aide manuelle, confirmez catégorie, coût, réponse du vendeur et limites après-vente. Suivez ensuite expédition et contrôle en entrepôt. N'intégrez l'article au colis qu'après résolution des écarts. L'assistance facilite communication et traitement, mais ne choisit pas le produit à votre place et n'élimine pas les incertitudes restantes."
+        ]
+      },
+      {
+        "heading": "Traiter concrètement minimums et réponses du vendeur",
+        "paragraphs": [
+          "Certains marchés affichent minimums et prix dégressifs. Indiquez si une quantité supérieure est acceptable. Pour une variante épuisée, interdisez le remplacement ou donnez une alternative exacte. Une réponse « similaire convient » est insuffisante si taille ou matière compte. Résumez variante, nouveau prix, date, retour et points ouverts. Clarifiez aussi acompte et accessoires groupés avant validation."
+        ]
+      },
+      {
+        "heading": "Transmettre la décision QC et les données de transport",
+        "paragraphs": [
+          "Après stockage, reliez la commande originale à la décision de contrôle. Confirmez variante visible, quantité et détails particuliers, tout en indiquant ce que les photos ne prouvent pas. Notez pourquoi vous acceptez l'article. Archivez prix et frais, puis transmettez au plan de colis les données utiles : dimensions, poids, restrictions, protection et valeur. Une aide à la commande ne devient pas une garantie de livraison."
+        ]
+      }
+    ]
+  },
+  "superbuy-fees": {
+    "slug": "superbuy-fees",
+    "title": "Frais Superbuy : achat, paiement, stockage et livraison",
+    "description": "Décomposer les dépenses par étape, service, unité et devise pour comparer un coût total cohérent.",
+    "category": "Comprendre les frais",
+    "sections": [
+      {
+        "heading": "Commencer par une ventilation complète",
+        "paragraphs": [
+          "Séparez produit, livraison chinoise, achat, inspection, stockage, emballage, fret international, conversion du paiement et importation. Marquez chaque poste comme inclus, proposé, estimé ou sans objet. Un service d'achat gratuit ne rend pas les autres prestations gratuites. Inscrivez devise et unité près de chaque somme. Un prix de référence produit ne doit pas être confondu avec le coût livré."
+        ]
+      },
+      {
+        "heading": "Budgéter les deux étapes de l'achat",
+        "paragraphs": [
+          "La première étape concerne produit, livraison intérieure et éventuel service d'achat. La seconde concerne le colis international concret après arrivée en entrepôt. Des options peuvent intervenir dans les deux. Un total unique cache moment et cause de chaque dépense. Des champs distincts pour assurance, stockage et importation se mettent à jour quand les données deviennent disponibles. Conservez la date du devis."
+        ]
+      },
+      {
+        "heading": "Comprendre la gratuité du service standard",
+        "paragraphs": [
+          "La page officielle indique l'absence de frais de service pour certains achats standards sur des plateformes courantes. Produit et port du vendeur restent payants. Prestataire de paiement et change peuvent également modifier le débit bancaire. Identifiez précisément la ligne de service à zéro dans une commande admissible. Vérifiez plateforme, vendeur, produit et traitement demandé dans le détail réel de l'opération."
+        ]
+      },
+      {
+        "heading": "Vérifier les catégories particulières",
+        "paragraphs": [
+          "Occasion, plateformes non listées et services spécifiques peuvent appliquer forfaits ou pourcentages avec minimums et plafonds. Consultez les conditions actuelles avant paiement. Notez plateforme d'origine et catégorie. Si celle-ci change après échange ou à cause d'une prévente, comparez le nouveau montant avant d'accepter. Le lien seul ne détermine pas toujours correctement la tarification."
+        ]
+      },
+      {
+        "heading": "Contrôler les unités des options",
+        "paragraphs": [
+          "Photo détaillée, nouvelle inspection, retrait d'étiquette, test et emballage ne sont pas nécessairement facturés avec la même unité. Vérifiez pièce, article, commande ou colis, ainsi que le périmètre du service. Sélectionnez une option pour une raison précise, comme une mesure manquante ou une protection contre les chocs. Notez nom, coût, unité et objectif ; toutes les options ne sont pas utiles."
+        ]
+      },
+      {
+        "heading": "Suivre le stockage après la période gratuite",
+        "paragraphs": [
+          "La page actuelle des frais décrit 90 jours gratuits, puis des frais quotidiens et une durée maximale standard de 180 jours. Vérifiez les dates exactes de chaque article dans le compte. Prolonger la durée maximale ne supprime pas automatiquement les frais quotidiens. Relevez arrivée, fin de gratuité et date prévue du colis. Résolvez tôt QC et retours pour que l'attente serve un regroupement décidé."
+        ]
+      },
+      {
+        "heading": "Éviter le simple prix moyen au kilogramme",
+        "paragraphs": [
+          "Poids initial, paliers supplémentaires, suppléments, volume et limites de ligne influencent le prix. Deux colis de même poids peuvent coûter différemment. Conservez ligne, poids réel, dimensions extérieures, poids facturé et date. Comparez des entrées identiques. Un prix vu sur un réseau social sans destination, diviseur, frais de départ ni date ne suffit pas pour établir un budget."
+        ]
+      },
+      {
+        "heading": "Rapprocher l'avance du montant final",
+        "paragraphs": [
+          "Un paiement provisoire de fret peut être corrigé après vérification du colis, à la hausse comme à la baisse. Gardez le montant initial et inscrivez le décompte séparément. Comparez emballage, mesures, poids, route et services ajoutés. Un ajustement expliqué n'est pas automatiquement un frais caché. Inversement, un remboursement précédent ne garantit pas un crédit pour chaque futur colis."
+        ]
+      },
+      {
+        "heading": "Garder l'importation dans un poste distinct",
+        "paragraphs": [
+          "Taxes, droits, accises et traitement dépendent de la destination et de l'évaluation. Une ligne peut inclure certaines prestations dont seules les conditions actuelles précisent l'étendue. Prévoyez une réserve d'après les autorités officielles. Ne la confondez pas avec le service d'achat et ne promettez pas d'exemption. Déclaration correcte et restrictions font également partie de la décision d'expédier."
+        ]
+      },
+      {
+        "heading": "Vérifier la ventilation à chaque étape",
+        "paragraphs": [
+          "Lors de l'achat : prix, quantité, transport intérieur, catégorie, option et devise. À l'entrepôt : échéances et inspections. Pour le colis : groupe, emballage, assurance, ligne et avance. Après départ : ajustement et avis d'importation. Ce contrôle progressif explique les coûts, même si certains tarifs évoluent ultérieurement. Il évite aussi de compter deux fois une prestation déjà incluse."
+        ]
+      },
+      {
+        "heading": "Distinguer remboursement, solde et encaissement",
+        "paragraphs": [
+          "Annulation, retour ou correction de fret peuvent d'abord créer un crédit de compte. Notez date, somme, devise, destination et éventuelle demande de retrait. Ne déduisez pas un remboursement attendu comme s'il était déjà reçu. Un autre achat peut utiliser le solde tandis que le débit initial reste visible sur la carte. Un registre commun permet de rapprocher chaque mouvement."
+        ]
+      },
+      {
+        "heading": "Évaluer les options selon leur utilité",
+        "paragraphs": [
+          "Une photo de mesure payante peut être justifiée pour un article peu cher si elle évite un transport inutile coûteux. Une protection renforcée peut aider un objet fragile et être superflue pour du textile souple. Comparez coût, risque concret, possibilité de retour et fret exposé. Définissez le problème, choisissez le service minimum approprié et archivez le résultat."
+        ]
+      },
+      {
+        "heading": "Séparer tarifs actuels et dépenses historiques",
+        "paragraphs": [
+          "Révisez les données souvent utilisées et vérifiez de nouveau avant un achat inhabituel. Marquez les devis dépassés sans modifier rétrospectivement les factures anciennes. Les nouvelles données doivent inclure service, unité, date et source. Le tableau répond ainsi à deux questions distinctes : ce qu'a réellement coûté une commande passée et ce qui est proposé pour la prochaine."
+        ]
+      }
+    ]
+  },
+  "why-superbuy-shipping-estimate-changes": {
+    "slug": "why-superbuy-shipping-estimate-changes",
+    "title": "Pourquoi le devis de livraison Superbuy change après emballage",
+    "description": "Comparer estimation, avance et fret final avec les dimensions, le poids et les règles de la ligne.",
+    "category": "Vérifier le fret",
+    "sections": [
+      {
+        "heading": "Comparer le même colis à chaque étape",
+        "paragraphs": [
+          "Vérifiez d'abord destination, ligne, contenu, poids, dimensions et paliers. Un carton hypothétique de 40 × 30 × 20 cm avec diviseur 6 000 donne 4 kg volumétriques. D'autres diviseurs et arrondis changent le résultat. Cet exemple explique un calcul, pas un tarif. Gardez séparément première estimation, avance et montant final réellement facturé."
+        ]
+      },
+      {
+        "heading": "Remplacer les hypothèses par des mesures",
+        "paragraphs": [
+          "Avant réception, poids, volume, emballage et admissibilité sont supposés. L'entrepôt fournit de meilleures données ; l'emballage définit un carton réel ; le transporteur peut vérifier les mesures. Si les entrées changent, l'estimation peut changer. Conservez recherche, scénario d'entrepôt, avance et décompte avec leurs dates au lieu d'écraser le premier chiffre."
+        ]
+      },
+      {
+        "heading": "Le poids du produit n'est pas celui du colis",
+        "paragraphs": [
+          "Une annonce peut exclure boîte, accessoires, protection et carton d'exportation. Retirer un emballage peut, à l'inverse, réduire le poids. Comparez articles individuels et colis terminé. Si la différence est notable, examinez carton et protections avant de conclure à une erreur de balance. Remplacez la réserve initiale d'emballage par les mesures réelles lorsqu'elles sont disponibles."
+        ]
+      },
+      {
+        "heading": "Les dimensions peuvent compter davantage que la balance",
+        "paragraphs": [
+          "Un colis léger mais encombrant peut être facturé au volume. Quelques centimètres supplémentaires sur chaque côté modifient sensiblement l'espace occupé. Notez trois dimensions extérieures, diviseur et arrondis. Un nouveau carton ou un renfort exige un nouveau calcul. Ne conservez pas l'ancien poids facturable lorsque l'emballage physique a changé."
+        ]
+      },
+      {
+        "heading": "Les demandes d'emballage modifient le résultat",
+        "paragraphs": [
+          "Retrait, emballage simple ou compression adaptée peuvent réduire le volume. Calage, protection des angles et carton renforcé peuvent l'augmenter. Ces choix répondent à des risques différents : notez leur objectif. Des vêtements souples et une boîte de collection fragile n'ont pas les mêmes besoins. Comparez prix, protection acceptable et valeur préservée, pas seulement la plus petite dimension."
+        ]
+      },
+      {
+        "heading": "Le regroupement produit plusieurs effets",
+        "paragraphs": [
+          "Un seul colis peut économiser des frais de départ, dépasser un palier, devenir volumétrique ou perdre des lignes disponibles. Un article restreint peut affecter tout le groupe. Comparez regroupement et séparation raisonnable, assurance et budget d'importation compris. Gardez le motif de la décision et actualisez le scénario lorsqu'un produit est retiré ou retourné."
+        ]
+      },
+      {
+        "heading": "La ligne fixe sa propre règle de facturation",
+        "paragraphs": [
+          "Poids initial, unités suivantes, diviseur, plafonds et suppléments varient selon les lignes. Un changement de route peut modifier le prix avec des dimensions identiques. Disponibilité et conditions dépendent aussi de la destination. Comparez les mêmes données le même jour. Une ligne moins chère ne convient pas si elle refuse les caractéristiques du contenu ou omet une prestation nécessaire."
+        ]
+      },
+      {
+        "heading": "L'avance reste provisoire",
+        "paragraphs": [
+          "La description officielle distingue paiement estimé et décompte après vérification. Documentez les deux sommes et le sens de l'ajustement. Le résultat peut être supérieur ou inférieur : ne promettez donc pas un remboursement systématique. Un crédit dans le compte doit aussi être suivi séparément d'un éventuel retrait bancaire. Le statut d'une étape ne prouve pas l'achèvement de la suivante."
+        ]
+      },
+      {
+        "heading": "Séparer change et importation du fret",
+        "paragraphs": [
+          "Le débit de carte peut augmenter à cause du change alors que le fret en yuans ne bouge pas. Taxes, droits ou traitement peuvent s'ajouter. Enregistrez devis, fret payé, conversion et avis d'importation séparément. Une facture douanière ne constitue pas automatiquement une modification de l'estimation de l'entrepôt. Comparer les mêmes devises évite une attribution erronée."
+        ]
+      },
+      {
+        "heading": "Examiner les grands écarts avec des preuves",
+        "paragraphs": [
+          "Comparez date, destination, contenu, poids, mesures, diviseur, unité de facturation, emballage et ligne. Cherchez un article ajouté, des boîtes conservées ou une restriction nouvelle. Sauvegardez devis et données du colis. Si l'écart reste inexpliqué, envoyez une demande précise avec numéro et valeurs. Une comparaison vague avec le prix d'un colis d'autrui est difficile à vérifier."
+        ]
+      },
+      {
+        "heading": "Apprendre pour la prochaine estimation",
+        "paragraphs": [
+          "Après livraison, notez fret final, ajustement, dimensions du carton, durée et état de protection. Identifiez l'hypothèse qui expliquait la plus grande erreur. Utilisez-la comme fourchette initiale pour des articles proches, en revérifiant les règles actuelles. Un bon tableau explique les changements et rattache chaque devis à un colis défini, plutôt que de masquer les différences."
+        ]
+      },
+      {
+        "heading": "Distinguer révision normale et différence non expliquée",
+        "paragraphs": [
+          "Une révision normale s'explique par mesures, carton, protection, règle de ligne ou contrôle. Une question subsiste lorsque le détail ne justifie pas un écart significatif. Réunissez avance, facture, dimensions et captures. Les colis d'autres personnes ne sont comparables que si contenu, destination, date et conditions concordent ; un montant isolé fournit peu de contexte."
+        ]
+      },
+      {
+        "heading": "Fixer une limite budgétaire avant l'achat",
+        "paragraphs": [
+          "Déterminez une plage de fret acceptable avec hypothèses prudentes de poids et volume, plus une réserve d'importation séparée. Si le scénario d'entrepôt dépasse cette limite, examinez droit au retour, regroupement, emballage ou attente supplémentaire. Une limite de décision empêche de justifier automatiquement n'importe quel prix d'expédition parce que les produits sont déjà payés."
+        ]
+      },
+      {
+        "heading": "Préparer une demande d'assistance claire",
+        "paragraphs": [
+          "Rassemblez données initiales, ligne sélectionnée, devis conservé, avance, mesures finales et poste précis restant inexpliqué. Demandez la cause de cette différence plutôt qu'un tarif universel. Archivez la réponse et le décompte éventuellement corrigé à côté de l'ancien. Un dossier par colis facilite le suivi sans mélanger plusieurs transactions."
+        ]
+      },
+      {
+        "heading": "Clôturer le rapprochement avec le résultat final",
+        "paragraphs": [
+          "Marquez le colis comme financièrement terminé quand fret final et ajustement sont compris. Gardez hypothèses et résultats côte à côte pour identifier poids, emballage, ligne ou conversion en cause. Les nouvelles commandes reçoivent de nouveaux scénarios. Les anciens résultats servent d'expérience et ne sont pas présentés comme des prix garantis."
+        ]
+      }
+    ]
+  },
+  "superbuy-warehouse-storage": {
+    "slug": "superbuy-warehouse-storage",
+    "title": "Stockage Superbuy : durée gratuite, limites et prolongation",
+    "description": "Planifier dates de stockage, frais, contrôle QC et regroupement avant l'expiration des articles.",
+    "category": "Gestion de l'entrepôt",
+    "sections": [
+      {
+        "heading": "La réponse courte et l'action à entreprendre",
+        "paragraphs": [
+          "La page actuelle des frais indique 90 jours gratuits à partir de l'entrée en entrepôt, puis des frais quotidiens, avec un maximum standard de 180 jours. Vérifiez l'échéance précise de chaque article dans le compte. Une prolongation étend le maximum sans recommencer la gratuité. QC et retours ont leurs propres délais. Notez la première échéance avant d'attendre d'autres achats."
+        ]
+      },
+      {
+        "heading": "Compter depuis l'arrivée, pas depuis l'achat",
+        "paragraphs": [
+          "Des commandes destinées au même colis peuvent avoir des dates limites différentes. Enregistrez achat, expédition du vendeur, entrée en entrepôt, fin de gratuité et date de colis prévue. Triez selon l'article arrivé le plus tôt. La date affichée dans le compte compte davantage qu'un calcul uniforme à partir du paiement."
+        ]
+      },
+      {
+        "heading": "Utiliser la période gratuite pour des décisions concrètes",
+        "paragraphs": [
+          "Le regroupement n'est pas la seule tâche : il faut examiner photos et mesures, communiquer avec le vendeur et traiter les demandes après-vente admissibles. Un article non clarifié ne devient pas prêt parce que d'autres sont en route. Fixez un contrôle interne avant l'échéance officielle, avec du temps pour réponses, retour ou nouveau groupe. La limite du compte reste déterminante."
+        ]
+      },
+      {
+        "heading": "Suivre les frais après la gratuité",
+        "paragraphs": [
+          "Des coûts quotidiens peuvent s'accumuler sur de nombreuses pièces. Vérifiez unité et tarif actuels plutôt que de reprendre un ancien montant. Utilisez des états comme vérifier maintenant, colis prévu ou prolongation à décider. Conservez dates réelles et coûts encourus même après expédition : ils aideront à comprendre les conséquences de l'attente."
+        ]
+      },
+      {
+        "heading": "Séparer prolongation et frais quotidiens",
+        "paragraphs": [
+          "Le service de prolongation décrit étend la durée maximale autorisée. Selon la description actuelle, les frais journaliers après la période gratuite continuent. Avant achat du service, vérifiez articles admissibles, durée, prix, plafond et nouvelle date. Une prolongation doit avoir un objectif concret, comme une précommande retardée avec date connue, et non une attente indéfinie."
+        ]
+      },
+      {
+        "heading": "Regrouper les articles compatibles",
+        "paragraphs": [
+          "Poids, volume, fragilité, batteries, liquides et emballages influencent les lignes. Un petit article soumis à restrictions peut réduire les possibilités du carton entier. Comparez les groupes possibles et au moins une séparation logique. Notez la raison de la composition choisie. L'habitude de tout mettre dans un seul colis ne constitue pas à elle seule une justification économique."
+        ]
+      },
+      {
+        "heading": "Terminer le QC avant la soumission",
+        "paragraphs": [
+          "Notez identité, quantité, variante, état visible, mesures et limites non résolues. Utilisez des décisions précises : accepté, preuve à demander, question ouverte, retour admissible ou attente. Examinez rapidement les nouveaux articles à délai après-vente court et les anciens proches de leur limite de stockage. Le tableau doit rendre visibles qualité des preuves et urgence."
+        ]
+      },
+      {
+        "heading": "Choisir l'emballage dans l'entrepôt",
+        "paragraphs": [
+          "Décidez quelles boîtes conserver et quels emballages modifier sans risque. La compression peut réduire le volume ; un renfort peut améliorer la protection tout en augmentant les dimensions. Définissez ces instructions avant soumission pour obtenir une estimation réaliste. Comparez prix, risque de dommage, valeur de collection et éventuelle valeur de revente."
+        ]
+      },
+      {
+        "heading": "Évaluer séparément les articles retardés",
+        "paragraphs": [
+          "Une livraison vendeur incertaine fait vieillir les achats déjà arrivés. Comparez attente, prolongation et envoi du groupe accepté. Pour une précommande, relevez date promise et point de décision. Si la date change, recalculez situation de stockage et fret. Un seul article incertain ne devrait pas bloquer discrètement tout le colis."
+        ]
+      },
+      {
+        "heading": "Réviser l'entrepôt chaque semaine",
+        "paragraphs": [
+          "Triez par ancienneté, examinez les nouvelles photos, fermez les questions, actualisez les dates vendeurs et recalculez les groupes. Lorsqu'un groupe est presque prêt, vérifiez son admissibilité sur les lignes actuelles. Archivez articles expédiés, retournés ou éliminés. L'historique des durées aide à organiser les futurs achats sans remplacer les règles présentes."
+        ]
+      },
+      {
+        "heading": "Vérifier toutes les échéances avant le colis",
+        "paragraphs": [
+          "Contrôlez décision par article, date la plus ancienne, frais, prolongation, groupe, emballage, destination et lignes. Comparez poids réel et volumétrique, puis préparez la déclaration. Le stockage doit soutenir des décisions organisées. Expédier précipitamment des articles non vérifiés et attendre sans limite sont deux mauvaises réponses par défaut."
+        ]
+      },
+      {
+        "heading": "Protéger séparément le délai de retour",
+        "paragraphs": [
+          "Un article peut disposer de beaucoup de stockage restant tout en approchant la fin d'un retour ou échange possible. Notez date de notification et limite après-vente séparément. Examinez les nouveaux produits immédiatement et prévoyez réponse de l'agent, accord du vendeur et transport intérieur de retour. En cas de doute, contactez le dossier de commande sans attendre les autres achats."
+        ]
+      },
+      {
+        "heading": "Suivre les commandes multiples pièce par pièce",
+        "paragraphs": [
+          "Une commande peut contenir plusieurs pièces arrivant et passant le QC à des moments différents. Les frais peuvent viser article ou commande, tandis que les colis sont séparés. Reliez chaque identifiant à la commande originale et notez quantité, variante, arrivée, QC et groupe. Le retour d'une seule pièce ne doit pas masquer le statut des autres."
+        ]
+      },
+      {
+        "heading": "Considérer l'abandon et l'élimination comme des risques distincts",
+        "paragraphs": [
+          "Après la durée maximale, les conditions applicables peuvent prévoir l'abandon des biens. Ne comptez pas uniquement sur des notifications non surveillées. Fixez un rappel suffisamment tôt. Si l'expédition n'est plus pertinente, choisissez consciemment une action disponible et conservez les confirmations de retour, d'élimination ou de prolongation."
+        ]
+      },
+      {
+        "heading": "Utiliser un tableau d'entrepôt compact",
+        "paragraphs": [
+          "Les champs utiles sont identifiant, description, variante, arrivée, fin de gratuité, maximum, délai après-vente, QC, poids, dimensions, restriction, emballage et groupe. Dans un document partagé, ajoutez responsable et prochain contrôle. Des couleurs peuvent compléter des dates lisibles. Chaque statut manuel doit être daté et relié à l'entrée correspondante du compte."
+        ]
+      },
+      {
+        "heading": "Décider avant l'échéance la plus ancienne",
+        "paragraphs": [
+          "À l'approche de la date prévue, réexaminez les nouveaux achats et décidez pour le groupe prêt. Comparez attente et départ immédiat, y compris nouvelle base de fret et stockage. Une pause peut être rationnelle si article attendu, date, coût maximum et prochain contrôle sont documentés. Le regroupement sans fin ne doit pas remplacer une décision."
+        ]
+      }
+    ]
+  },
+  "superbuy-shipping-to-uk": {
+    "slug": "superbuy-shipping-to-uk",
+    "title": "Livraison Superbuy au Royaume-Uni : TVA, douane et colis",
+    "description": "Préparer un envoi britannique selon région, poids facturé, valeur et règles actuelles d'importation.",
+    "category": "Livraison au Royaume-Uni",
+    "sections": [
+      {
+        "heading": "Vérifier deux ensembles de règles",
+        "paragraphs": [
+          "Superbuy détermine processus d'entrepôt, préparation et lignes disponibles. Les règles britanniques déterminent taxes, droits et traitement éventuel. Vérifiez les deux avant soumission et conservez source et date. Ce guide aide à préparer le dossier ; il ne fixe pas le classement obligatoire d'une marchandise ni une évaluation fiscale individuelle."
+        ]
+      },
+      {
+        "heading": "Distinguer Grande-Bretagne et Irlande du Nord",
+        "paragraphs": [
+          "Angleterre, Écosse et pays de Galles forment la Grande-Bretagne. L'Irlande du Nord peut suivre d'autres conditions d'importation. Notez région, code postal, nature et origine des biens dès le départ. Utilisez l'information GOV.UK adaptée, notamment pour l'Irlande du Nord et un éventuel mouvement vers l'Union européenne. La seule mention UK peut masquer des conditions décisives."
+        ]
+      },
+      {
+        "heading": "Vérifier la TVA selon le circuit réel de vente",
+        "paragraphs": [
+          "GOV.UK distingue notamment les biens achetés d'une valeur totale jusqu'à £135 des envois dépassant ce montant. Le moment et l'intermédiaire de perception doivent être vérifiés pour l'achat, la ligne et une éventuelle facture du transporteur. Ne traitez pas automatiquement un achat par agent comme toute vente directe au détail. Gardez une réserve jusqu'à clarification par les justificatifs."
+        ]
+      },
+      {
+        "heading": "Ne pas appliquer £135 à chaque objet séparément",
+        "paragraphs": [
+          "Pour la Grande-Bretagne, des droits peuvent devenir pertinents au-delà de £135 pour des biens hors accises ; nature et origine restent à vérifier. Le regroupement modifie la valeur de l'envoi. Comparez des groupes cohérents sans sous-évaluer ni décrire faussement les produits. Pour l'Irlande du Nord, examinez les dispositions propres au lieu de reprendre l'explication applicable à la Grande-Bretagne."
+        ]
+      },
+      {
+        "heading": "Reconstituer toute la base de calcul",
+        "paragraphs": [
+          "Selon la règle applicable, biens, fret, emballage, assurance et droits dus peuvent entrer dans une base fiscale. Gardez ces postes distincts avant d'appliquer la formule officielle. Un pourcentage sur le seul produit peut être incomplet. Conservez les hypothèses, puis remplacez l'estimation par le montant réellement établi après dédouanement sans supprimer le scénario initial."
+        ]
+      },
+      {
+        "heading": "Ne pas déclarer un achat comme cadeau",
+        "paragraphs": [
+          "Les règles sur les cadeaux ont leurs propres conditions. Un produit acheté pour être offert ne devient pas automatiquement un cadeau douanier. Déclarez nature et valeur réelles. Pour un véritable cadeau privé gratuit, consultez la page GOV.UK correspondante et ses limites actuelles. Ne renommez pas simplement une déclaration d'achat pour bénéficier d'une règle différente."
+        ]
+      },
+      {
+        "heading": "Examiner le poids facturable avant le prix",
+        "paragraphs": [
+          "Avant arrivée, utilisez des fourchettes de poids et de dimensions. Ensuite, comparez poids réel et volumétrique avec le diviseur de la ligne retenue. Comparez les lignes britanniques admissibles à données identiques. Lisez limites, suivi, assurance, restrictions et traitement fiscal. Un prix affiché bas ne suffit pas à choisir une option appropriée."
+        ]
+      },
+      {
+        "heading": "Comparer regroupement, valeur et admissibilité",
+        "paragraphs": [
+          "Un seul colis peut économiser des frais de départ tout en modifiant volume ou seuil de valeur. Un article restreint peut exclure des lignes. Calculez groupe complet et séparation logique selon protection, volume ou caractéristiques. Justifiez la décision par fret, protection, admissibilité et budget d'importation, pas uniquement par le nombre minimal de colis."
+        ]
+      },
+      {
+        "heading": "Préparer déclaration et justificatifs",
+        "paragraphs": [
+          "Listez marchandises réelles, quantités et valeurs. Conservez commande, paiement, description, numéro et facture de fret. Des coordonnées correctes sont essentielles si le transporteur demande des documents ou un paiement. Surveillez messages et échéances pour éviter un retour lié à une absence de réponse. Le nom d'une ligne ne garantit pas une livraison sans difficulté."
+        ]
+      },
+      {
+        "heading": "Vérifier le classement propre au produit",
+        "paragraphs": [
+          "Pour les questions tarifaires pertinentes, utilisez UK Trade Tariff et examinez classement, origine, taux et restrictions. Un guide général ne peut pas déterminer le bon code pour chaque vêtement ou appareil. Si un point matériel reste incertain, demandez une clarification spécialisée et marquez le calcul comme provisoire jusqu'à résolution."
+        ]
+      },
+      {
+        "heading": "Réaliser le contrôle britannique avant soumission",
+        "paragraphs": [
+          "Confirmez région, contenu, poids, dimensions, ligne, assurance, description, valeur totale et règles actuelles. Prévoyez des réserves pour taxes, droits et traitement éventuels. Après réception, enregistrez fret réel, ajustement, avis fiscal et délai. Recontrôlez les règles avant une nouvelle expédition, même si le précédent colis s'est bien déroulé."
+        ]
+      },
+      {
+        "heading": "Prévoir frais de traitement et moment du paiement",
+        "paragraphs": [
+          "Le transporteur peut demander taxe, droits et sa propre prestation de traitement. Séparez ces sommes du fret initial. Surveillez suivi et coordonnées. Vérifiez un message de paiement suspect par le canal officiel du transporteur avant de régler. Gardez l'identité de l'émetteur, le montant et le reçu pour le rapprochement final."
+        ]
+      },
+      {
+        "heading": "Un retour ne rembourse pas automatiquement l'importation",
+        "paragraphs": [
+          "Un retour ou une évaluation excessive peut relever d'une procédure officielle distincte de remboursement. Le parcours dépend notamment du transporteur. Fret, traitement et frais de plateforme peuvent suivre d'autres règles. Conservez avis d'importation et preuve de réexpédition, puis documentez séparément le résultat de chaque demande et les coûts restant à votre charge."
+        ]
+      },
+      {
+        "heading": "Conserver une fiche britannique avec statut des sources",
+        "paragraphs": [
+          "Utilisez région, code postal, description, quantité, origine, valeur des biens, fret, assurance, total, hypothèse tarifaire, base fiscale, réserve de traitement et date de vérification. Marquez non vérifié, vérifié ou réellement établi. Gardez scénario et avis final côte à côte. Les expériences historiques restent ainsi distinctes d'une estimation actuelle."
+        ]
+      }
+    ]
+  },
+  "superbuy-working-days": {
+    "slug": "superbuy-working-days",
+    "title": "Jours ouvrés Superbuy : achat, entrepôt et expédition",
+    "description": "Distinguez le traitement de commande, l’envoi du vendeur, le contrôle en entrepôt et les étapes du transport international.",
+    "category": "Suivi de commande",
+    "sections": [
+      {
+        "heading": "Identifier l’étape réellement en attente",
+        "paragraphs": [
+          "Les jours de traitement Superbuy correspondent à plusieurs opérations : paiement, achat par l’agent, préparation du vendeur, livraison intérieure, inspection, emballage et transport international. Chacune a son responsable et son point de départ. Compter depuis la découverte du produit ne permet pas de localiser un retard. Relevez le statut exact et l’heure de sa dernière modification.",
+          "Le guide officiel sépare achat, inspection et stockage, soumission du colis, paiement du fret et livraison. Un article acheté n’est pas nécessairement expédié par le vendeur. Une livraison enregistrée par le transporteur chinois ne signifie pas que l’entrée en stock est terminée. Un numéro de colis créé ne prouve pas sa collecte physique. Ces distinctions permettent une demande d’assistance ciblée."
+        ]
+      },
+      {
+        "heading": "Les horaires du service client ne garantissent pas un départ",
+        "paragraphs": [
+          "Le Help Center affiche un service en ligne de 09:00 à 18:00, heure de Pékin, soit UTC+8. Cette plage indique quand contacter le service, pas un délai universel d’achat, de contrôle ou d’expédition. Les équipes, vendeurs et transporteurs peuvent suivre des calendriers différents. Consultez l’avis applicable à votre commande plutôt que de supposer que tous les services partagent les mêmes horaires.",
+          "Convertissez l’heure avec sa date. Un message envoyé tard le soir chez vous peut parvenir le lendemain matin en Chine. Le changement d’heure dans votre pays peut modifier le décalage, tandis que Pékin reste à UTC+8. Gardez une colonne en heure de Pékin et une en heure locale, clairement nommées. Une différence de fuseau ne doit pas être interprétée comme un retard de réponse."
+        ]
+      },
+      {
+        "heading": "Éviter les demandes de précision avant l’achat",
+        "paragraphs": [
+          "Préparez le lien actuel, la variante, la taille, la couleur, la quantité et les conditions particulières du vendeur. Si plusieurs miniatures représentent des articles différents, décrivez aussi l’option choisie par écrit. Une note imprécise peut entraîner un échange supplémentaire même si le lien fonctionne. Une ancienne capture ne suffit pas à définir une variante actuelle.",
+          "Après soumission, vérifiez si un paiement ou une instruction manque. Conservez la référence de paiement avec la commande sans publier de données privées. Si un nouveau prix ou des frais intérieurs doivent être approuvés, le dossier attend votre décision. Notez votre réponse : vous distinguerez ainsi le temps de traitement d’une pause liée à une information manquante et éviterez les relances avant qu’une action soit possible."
+        ]
+      },
+      {
+        "heading": "Séparer départ du vendeur et livraison intérieure",
+        "paragraphs": [
+          "Après confirmation de l’achat, consignez la date de départ annoncée par le vendeur. Un article en stock, une précommande et un produit personnalisé ne doivent pas partager le même délai supposé. Gardez la source et la variante concernée. Une taille peut être disponible et une autre manquer ; une confirmation précise vaut davantage qu’une indication générale sur la fiche.",
+          "Suivez ensuite le numéro intérieur indépendamment du colis international : premier scan, entrepôt destinataire et livraison. Le Help Center mentionne une fonction de relance après trois jours pour les commandes d’achat. C’est une possibilité de demande, pas une garantie de départ sous trois jours. Lorsqu’une date annoncée passe, demandez si la prochaine action dépend du vendeur, du transporteur ou de l’agent."
+        ]
+      },
+      {
+        "heading": "La réception ouvre une nouvelle phase en entrepôt",
+        "paragraphs": [
+          "La livraison du transporteur chinois et la disponibilité de l’article dans votre compte sont deux événements. L’identification de la commande, l’inspection, les photos et la mise à jour peuvent intervenir après le scan de réception. Comparez numéro de commande et suivi avant de déclarer la marchandise manquante. Si plusieurs articles partagent un envoi, identifiez ceux que couvre réellement ce numéro.",
+          "La page tarifaire présente l’entrée en stock prioritaire comme une prestation payante distincte. Avant de la choisir, vérifiez conditions, point de départ et périmètre dans le compte. Une entrée accélérée ne raccourcit ni le départ antérieur du vendeur ni le vol international ultérieur. Choisissez une prestation qui agit sur l’étape en attente, sans transformer le mot priorité en garantie globale."
+        ]
+      },
+      {
+        "heading": "Examiner le QC pendant que les options restent ouvertes",
+        "paragraphs": [
+          "Dès que les photos apparaissent, comparez identité, quantité, taille visible et mesures importantes avec votre commande. Si une vue manque, indiquez l’angle ou le point de mesure recherché. Une demande précise est plus utile qu’une exigence générale de meilleures photos. Notez demande et réponse pour séparer questions ouvertes et inspection terminée.",
+          "Le stockage n’est pas un délai de retour. N’attendez pas d’autres achats pour vérifier un article potentiellement incorrect. Gardez emballage et étiquettes jusqu’à la décision et demandez rapidement les conditions applicables. Une longue durée de stockage facilite le regroupement d’articles acceptés mais ne prolonge pas automatiquement les droits auprès du vendeur. Classez chaque article : accepté, preuve nécessaire ou demande de retour."
+        ]
+      },
+      {
+        "heading": "La soumission du colis ne démarre pas tous les délais",
+        "paragraphs": [
+          "Comparez les lignes proposées pour la destination, le contenu, le poids et les dimensions réels. Conservez la ligne, sa plage de délai et la date de consultation. Vérifiez l’événement qui déclenche l’estimation. Une durée à partir de la prise en charge du transporteur ne se compte pas depuis l’achat du produit. Emballage, adresse ou ajustement de paiement peuvent encore rester à résoudre.",
+          "Séparez soumission, paiement, emballage, collecte, exportation, douane et livraison finale. Une étiquette peut exister avant le premier scan physique. Une absence de nouveau scan peut justifier une enquête sans expliquer à elle seule sa cause. Fournissez le dernier événement et son heure pour que l’assistance examine le bon transfert de responsabilité."
+        ]
+      },
+      {
+        "heading": "Construire une chronologie sans inventer de promesse",
+        "paragraphs": [
+          "Utilisez les colonnes commande, variante, étape, dernier événement confirmé, heure de Pékin, responsable, prochaine action, source de l’estimation et prochaine vérification. Ajoutez le suivi intérieur avant l’arrivée et le numéro international ensuite. Gardez ces références distinctes, surtout lorsque plusieurs achats deviennent un seul colis.",
+          "Exemple : un article acheté lundi doit, selon le vendeur, partir jeudi. Le point de contrôle utile est le départ de jeudi, pas une date d’arrivée imaginée depuis lundi. S’il part mercredi, notez le fait sans effacer la promesse initiale. Cet exemple illustre une méthode de suivi et ne prédit pas la vitesse de Superbuy. Conservez attentes et événements réels."
+        ]
+      },
+      {
+        "heading": "Poser une question précise à chaque contrôle",
+        "paragraphs": [
+          "Une demande concise donne commande, statut, dernière mise à jour, action annoncée et clarification souhaitée. Par exemple : la date de départ est passée, le statut reste acheté, et vous souhaitez confirmer le stock ou obtenir un nouveau calendrier. Évitez des instructions contradictoires demandant simultanément d’attendre, remplacer et annuler.",
+          "Pour un achat lié à une échéance, prévoyez les incertitudes du vendeur, les décisions QC, l’emballage et le traitement à destination. Consultez les avis officiels de congés plutôt que de supposer un fonctionnement ordinaire. Une fois l’achat terminé, relevez chaque étape et la raison des changements. Cet historique améliore votre préparation sans constituer un engagement universel pour les commandes suivantes."
+        ]
+      }
+    ]
+  },
+  "superbuy-payment-withdrawal": {
+    "slug": "superbuy-payment-withdrawal",
+    "title": "Paiements et retrait de solde Superbuy : frais et vérifications",
+    "description": "Comparez les moyens de paiement et distinguez remboursement, crédit du compte et retrait jusqu’au versement final.",
+    "category": "Paiements et solde",
+    "sections": [
+      {
+        "heading": "Séparer recharge, achat, remboursement et retrait",
+        "paragraphs": [
+          "Une recharge ajoute des fonds au compte. Le paiement règle une commande précise. Un remboursement annule une charge admissible ou crée un ajustement créditeur. Un retrait transfère un solde éligible vers un moyen de réception autorisé. Ces événements sont distincts même si le même montant apparaît sur plusieurs écrans. Identifiez l’opération souhaitée avant de sélectionner une option.",
+          "Tenez un registre avec date, référence, devise, montant et commande ou colis associé. Distinguez demandé, en cours et terminé. Une demande de remboursement n’atteste pas d’un crédit bancaire. De même, un solde visible n’est pas nécessairement entièrement retirable par toutes les méthodes. Lisez les conditions correspondant au type de fonds et au canal proposé."
+        ]
+      },
+      {
+        "heading": "Comparer les méthodes disponibles dans votre compte",
+        "paragraphs": [
+          "Les pages officielles mentionnent les recharges par carte et des canaux comme Wise, Alipay et WeChat Pay. Leur disponibilité peut dépendre du compte, du pays, de la devise et de l’opération. Utilisez les choix affichés dans le parcours actuel plutôt qu’une liste de forum. Vérifiez la devise de destination et ce que représente le montant : somme envoyée, crédit du compte ou frais du prestataire.",
+          "Comparez à la même date pour un même crédit utilisable souhaité. Notez le débit total, les frais annoncés et le solde réellement obtenu. Des frais affichés plus faibles ne garantissent pas un coût total inférieur lorsque la conversion diffère. Ne comparez pas un devis avant frais avec un autre après frais. Gardez les justificatifs dans vos dossiers privés."
+        ]
+      },
+      {
+        "heading": "Calculer un coût effectif",
+        "paragraphs": [
+          "Divisez la somme payée dans votre monnaie par les unités de devise du compte réellement créditées. Ce ratio décrit le coût effectif de l’opération, pas un taux de change officiel. Si un paiement fictif de 105 unités apporte 100 unités utilisables, le ratio est 1,05. Les cinq unités supplémentaires doivent être expliquées par la ventilation avant de conclure qu’un autre canal est moins cher.",
+          "Remplacez les chiffres d’exemple par ceux du compte. Un tarif passé ne s’applique pas automatiquement à une autre somme ou méthode. Les frais fixes pèsent davantage sur les petites opérations, tandis qu’un pourcentage suit le montant. Vérifiez aussi les éventuels frais de change ou d’opération internationale sur votre relevé bancaire. Séparez plateforme, prestataire et banque pour pouvoir attribuer une différence."
+        ]
+      },
+      {
+        "heading": "Prévoir les deux phases de l’achat",
+        "paragraphs": [
+          "Le parcours officiel distingue achat du produit et expédition internationale. Financer le produit ne règle pas automatiquement le fret ultérieur. Préparez d’abord article, livraison intérieure chinoise et services choisis, puis une provision distincte pour fret, emballage et importation. Actualisez cette provision lorsque les mesures d’entrepôt deviennent disponibles.",
+          "Ne rechargez pas davantage uniquement parce qu’un prix indicatif paraît bas. Confirmez l’option et les coûts exclus. Pour plusieurs produits, distinguez simples candidats et achats réellement validés afin de ne pas réserver des fonds à des idées abandonnées. Définissez une marge cohérente avec la commande ; la présence d’un solde ne signifie pas qu’il faut tout dépenser."
+        ]
+      },
+      {
+        "heading": "Examiner un paiement avant de le répéter",
+        "paragraphs": [
+          "En cas d’opération apparemment incomplète, comparez le statut du prestataire et celui du compte. Autorisation bancaire, paiement finalisé et crédit du solde ne sont pas équivalents. Conservez référence et heure, puis lisez l’action éventuellement demandée par le message d’erreur. Répéter immédiatement peut créer une seconde opération à rapprocher plus tard.",
+          "Contactez l’assistance officielle avec montant, devise, référence et statuts visibles. Ne communiquez jamais publiquement mot de passe, numéro complet de carte ou code temporaire. Si le prestataire indique une annulation, enregistrez-la séparément d’un remboursement de produit. Cette séparation permet de déterminer plus facilement quelle partie peut résoudre le problème."
+        ]
+      },
+      {
+        "heading": "Vérifier ce que le remboursement restitue",
+        "paragraphs": [
+          "Annulation d’achat, retour accepté et correction du fret peuvent produire des crédits différents. Lisez la décision du dossier : composant remboursé, frais conservés et destination du crédit. Un remboursement de produit ne révoque pas automatiquement une prestation réalisée ou des frais externes. Comparez le crédit à la somme approuvée plutôt qu’au total payé à toutes les étapes.",
+          "Le guide d’expédition décrit un rapprochement entre acompte et coût final. Rattachez cet ajustement au colis. Ne l’appelez pas remboursement de produit et ne supposez pas qu’il est déjà arrivé à la banque. Si le crédit reste dans le compte, examinez son utilisation future ou le retrait. Conservez acompte, montant final et ajustement comme trois écritures distinctes."
+        ]
+      },
+      {
+        "heading": "Préparer le retrait du solde",
+        "paragraphs": [
+          "Vérifiez type de solde, canal proposé, montant autorisé, frais et minimum éventuel. Demandez si le traitement est lié au moyen de paiement initial. Crédit promotionnel, coupon et fonds versés ne partagent pas nécessairement les mêmes conditions. Si le compte n’explique pas l’éligibilité, interrogez l’assistance avant de soumettre sur la base d’une supposition.",
+          "Consignez montant demandé, devise attendue, référence et informations de traitement affichées. Vérifiez les coordonnées du destinataire dans le parcours officiel. Ce guide ne donne ni pourcentage universel de retrait ni délai garanti, car ces détails doivent être établis pour le compte et le canal. Un champ inconnu doit rester non confirmé plutôt que reprendre le chiffre d’un autre utilisateur."
+        ]
+      },
+      {
+        "heading": "Suivre jusqu’au compte destinataire",
+        "paragraphs": [
+          "Distinguez traitement par la plateforme et règlement par la banque ou le prestataire. Un statut terminé côté plateforme peut précéder une phase de réception. Notez chaque événement. Si le délai annoncé est dépassé, demandez la référence de transfert ou de remboursement de ce dossier. Utilisez-la auprès de l’établissement destinataire au lieu de lancer une nouvelle opération sans lien.",
+          "Rapprochez le crédit final de la devise et du montant demandés. Le change peut modifier la valeur dans votre monnaie même si la somme dans la devise du compte est correcte. Notez la différence sans l’attribuer automatiquement à une commission Superbuy. Consultez les décomptes de chaque intervenant. Si plusieurs crédits partiels arrivent, additionnez-les avant de conclure à un versement incomplet."
+        ]
+      },
+      {
+        "heading": "Garder un tableau de paiement réutilisable",
+        "paragraphs": [
+          "Créez une ligne par mouvement : recharge, commande, service, acompte de fret, ajustement, remboursement ou retrait. Champs utiles : devises, brut, frais, net, référence, commande liée, destination et état final. Séparez dépenses envisagées et opérations terminées, en signalant explicitement les estimations.",
+          "Avant de clôturer l’achat, rapprochez solde restant et remboursements ouverts. Conservez les preuves jusqu’à la fin des opérations et des éventuelles vérifications. Pour la prochaine commande, comparez à nouveau les méthodes actuelles. Un canal qui a fonctionné autrefois n’est pas nécessairement le meilleur aujourd’hui. Le but est de comprendre ce qui a été payé, crédité et restitué, avec chaque frais attaché à sa cause."
+        ]
+      }
+    ]
+  },
+  "superbuy-returns-refunds": {
+    "slug": "superbuy-returns-refunds",
+    "title": "Retours et remboursements Superbuy : de l’entrepôt au crédit final",
+    "description": "Préparez les preuves, vérifiez les conditions du retour et suivez séparément les marchandises et le remboursement.",
+    "category": "Retours et remboursements",
+    "sections": [
+      {
+        "heading": "Identifier la phase de commande avant la demande",
+        "paragraphs": [
+          "Le point de départ est le lieu et le statut des marchandises. Une commande impayée, un achat déjà effectué, un article en entrepôt et un colis livré à l’étranger ne suivent pas le même traitement. Notez numéro, article, variante, statut et dernière mise à jour. Une demande générale de tout rembourser peut masquer la partie du dossier à examiner.",
+          "Séparez retour de produit, réclamation de transport et retrait de solde. Une mauvaise taille visible sur le QC concerne l’article. Un dommage après livraison internationale peut demander d’autres preuves et un dossier transport. Un solde restant concerne le paiement. L’accord obtenu dans un processus ne valide pas automatiquement les autres remboursements."
+        ]
+      },
+      {
+        "heading": "Vérifier immédiatement les conditions applicables",
+        "paragraphs": [
+          "Avant l’achat, consultez les règles du vendeur et du produit ; lorsqu’un problème apparaît, vérifiez le processus actuel du compte. Articles personnalisés, d’occasion, scellés et précommandés peuvent avoir des conditions différentes. Une longue période de stockage n’est pas une longue fenêtre de retour. Ces deux durées répondent à des objectifs distincts et peuvent commencer à des événements différents.",
+          "Les pages publiques peuvent parler de services différents ou demander une clarification. Ce guide n’applique donc pas une seule échéance à toutes les commandes. Demandez quelle limite vaut pour votre cas, son événement de départ et l’unité employée : heures, jours calendaires ou ouvrés. Gardez la réponse. Signalez rapidement une anomalie au lieu d’attendre la fin d’une fenêtre possible."
+        ]
+      },
+      {
+        "heading": "Préserver le produit et son emballage",
+        "paragraphs": [
+          "Avant la décision, évitez retrait d’étiquettes, destruction d’emballage ou modification de l’état du produit. Gardez accessoires et éléments du lot ensemble. Si l’article est encore stocké, formulez clairement la demande de maintien ou de retour avant de l’intégrer à une expédition internationale. Une correction peut devenir plus complexe après son départ.",
+          "Documentez ce qui était commandé et ce qui est arrivé : option, description du vendeur, confirmation et photos montrant l’écart. Pour un accessoire manquant, fournissez la liste attendue pour cette variante exacte. Ne comparez pas avec une annonce sans rapport ou les images d’un autre vendeur. Le dossier doit rendre la différence compréhensible sans supposition."
+        ]
+      },
+      {
+        "heading": "Transformer un problème QC en demande précise",
+        "paragraphs": [
+          "Décrivez une observation : mauvaise couleur, pièce absente, dommage visible ou différence de mesure. Indiquez les points de mesure et la référence du vendeur. L’éclairage, la perspective et des méthodes différentes peuvent autrement créer une contradiction apparente. Une formule générale sur la mauvaise qualité ne remplace pas ces éléments.",
+          "Si les photos ne permettent pas de décider, demandez une vue ciblée en précisant angle, étiquette ou mesure. Gardez le coût de ce contrôle séparé du remboursement étudié. Une photo supplémentaire peut résoudre une question, mais ne garantit ni droit de retour ni propriété invisible, comme les performances internes ou la durabilité."
+        ]
+      },
+      {
+        "heading": "Distinguer annulation et retour au vendeur",
+        "paragraphs": [
+          "Si l’achat n’est pas encore effectué, demandez si l’annulation reste possible à ce stade. Si le vendeur a expédié, il peut être nécessaire d’attendre la réception puis d’examiner un retour. Supprimer un favori ou modifier un tableau personnel n’annule pas une commande réelle. Utilisez le processus officiel et conservez sa confirmation.",
+          "Si l’accord du vendeur est nécessaire, notez en attente, approuvé ou refusé. Sauvegardez adresse, emballage, responsabilité du port et remboursement attendu. N’expédiez pas vers une adresse issue d’un ancien échange sans confirmation. Les consignes doivent appartenir au dossier actuel. Si un échange est proposé, précisez si vous l’acceptez ou souhaitez toujours un examen du remboursement."
+        ]
+      },
+      {
+        "heading": "Comparer le remboursement à chaque coût",
+        "paragraphs": [
+          "Séparez article, livraison intérieure, port retour, service d’achat et prestations optionnelles. Identifiez ce que la décision rembourse. Cela évite de comparer un crédit du produit seul au total incluant transport et travail réalisé. Demandez une ventilation lorsqu’elle manque, notamment si plusieurs articles partagent la même commande ou les mêmes frais intérieurs.",
+          "Exemple fictif : article de 100 unités, livraison de 10 et service de 5. Une proposition de 100 se note comme remboursement du produit ; les 15 restants sont exclus ou à clarifier selon la décision réelle. Ces valeurs ne sont ni tarifs Superbuy ni promesse de résultat. Le tableau doit montrer les composants approuvés et leur justification."
+        ]
+      },
+      {
+        "heading": "Suivre le retour indépendamment de l’argent",
+        "paragraphs": [
+          "Demande, départ de l’entrepôt et réception par le vendeur sont des jalons distincts. Gardez référence de retour, date d’expédition et événement de livraison. Une autorisation ne prouve pas que le vendeur a reçu l’article. Une réception ne prouve pas que le remboursement est traité. Cette séparation oriente chaque relance vers l’étape encore ouverte.",
+          "En cas d’échange, créez une fiche liée pour le remplacement sans écraser l’original. Notez nouvelle option et informations de départ. Contrôlez les preuves du nouvel article à son arrivée. L’acceptation du premier ne valide pas automatiquement un autre objet. Le principe reste valable pour le remplacement ou le remboursement d’une seule partie d’un ensemble."
+        ]
+      },
+      {
+        "heading": "Rapprocher crédit du compte et retrait séparément",
+        "paragraphs": [
+          "Après accord, vérifiez somme, devise et destination. Un crédit dans le solde n’équivaut pas à un virement terminé vers la banque ou la carte. Enregistrez d’abord ce crédit. Un retrait ou remboursement via prestataire peut comporter ses propres conditions et étapes. Reliez les références sans confondre les événements.",
+          "Comparez le montant reçu à celui approuvé, en tenant compte uniquement des frais et conversions documentés. En cas d’écart, fournissez numéro du dossier et références. Évitez les demandes répétées avec des totaux différents. Un registre reliant paiement initial, accord, crédit et éventuel retrait est plus facile à examiner que des captures sans contexte."
+        ]
+      },
+      {
+        "heading": "Préparer les preuves d’un problème de colis international",
+        "paragraphs": [
+          "Pour un colis déjà livré, gardez emballage extérieur, étiquette et photos du contenu et des dommages. Notez la date et signalez rapidement le problème dans le parcours après-vente approprié. Ne jetez pas les preuves pendant qu’une inspection peut être demandée. Retour vendeur et indemnisation transport peuvent relever de responsables et conditions différents.",
+          "Lisez la couverture liée à la ligne et aux services choisis. Une assurance ne couvre pas automatiquement tout article, toute cause et tout coût. Notez composant réclamé, preuves demandées et statut. Taxes d’importation ou frais de traitement peuvent nécessiter une procédure séparée auprès de l’autorité ou du prestataire ; le remboursement du produit ne les annule pas automatiquement."
+        ]
+      },
+      {
+        "heading": "Clôturer avec un dossier complet",
+        "paragraphs": [
+          "Un tableau de retour contient variante, motif, preuves, échéance applicable, demande, décision, suivi, réception vendeur, montant approuvé, destination et règlement final. Chaque dossier ouvert reçoit une prochaine action et une date de contrôle. Gardez visibles les coûts non résolus même lorsqu’un statut particulier passe à terminé.",
+          "Confirmez enfin réception d’un remplacement, d’un crédit ou d’un remboursement externe, et vérifiez les engagements encore ouverts. Utilisez l’expérience pour améliorer les indications de taille, demander une mesure plus tôt ou préciser l’emballage. Ce résultat documente une commande particulière ; il n’établit pas un droit universel de retour ni un délai fixe pour les achats futurs."
+        ]
+      }
+    ]
+  }
+}
