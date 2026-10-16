@@ -6,8 +6,7 @@ Independent Hipobuy product directory and buyer guides at https://spreadsheet-hi
 
 GitHub repository: `hehaize88-code/cnfansge.com`, production branch `main`.
 Cloudflare Pages project root: `spreadsheet-hipobuys-net`.
-Build command: `npm run build`; output directory: `out`.
-Keep the existing GitHub-triggered deployment. Do not upload the tracked legacy root HTML as the build output.
+Build command: `npm run build`. The existing hosting arrangement also reads versioned static files from this project root; keep source, `out` and root output synchronized. The build runs `sync-static.mjs` after localization. Keep the existing GitHub-triggered deployment and its configured output directory.
 
 ## Content and languages
 
@@ -28,7 +27,7 @@ Keep the existing GitHub-triggered deployment. Do not upload the tracked legacy 
 3. `npm run build:source`
 4. `node scripts/extract-copy.mjs` generates pending strings; update each language dictionary.
 5. `npm test` verifies all routes, article lengths, language links, sitemap, catalog search and calculator arithmetic.
-6. Commit only this project’s changes and push to the existing production branch after validation.
+6. Commit this project’s source and synchronized generated output and push to the existing production branch after validation.
 
 `translate-content.py` is an optional offline drafting aid using Argos Translate models from the official model index. Production does not download models or call a translation service. Review terminology, metadata, numbers and fit/shipping guidance before publishing.
 
@@ -36,4 +35,3 @@ Keep the existing GitHub-triggered deployment. Do not upload the tracked legacy 
 
 Existing GA4 property `G-D14KS48G0Q` retained. Events include `outbound_product_click`, `article_click`, `spreadsheet_search`, `language_change`, `category_filter` and `shipping_weight_calculation` with page language. No search terms or form contents are sent by the custom search event.
 
-October 16 decisions used verified GSC data for Sep 16–Oct 13: the shipping route had 515 impressions and 5 clicks; 9 existing articles were discovered but not indexed. Bing and GA4 reports were unavailable in this session, so no performance claims were based on them.

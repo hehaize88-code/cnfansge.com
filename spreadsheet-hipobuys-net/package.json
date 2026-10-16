@@ -7,7 +7,7 @@
   },
   "scripts": {
     "dev": "next dev",
-    "build": "next build --webpack && node scripts/localize.mjs",
+    "build": "next build --webpack && node scripts/localize.mjs && node scripts/sync-static.mjs",
     "test": "npm run build && node --test tests/*.test.mjs",
     "lint": "eslint . --ignore-pattern out --ignore-pattern .next",
     "build:source": "next build --webpack"
