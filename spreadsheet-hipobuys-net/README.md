@@ -34,4 +34,3 @@ Build command: `npm run build`. The existing hosting arrangement also reads vers
 ## Measurement
 
 Existing GA4 property `G-D14KS48G0Q` retained. Events include `outbound_product_click`, `article_click`, `spreadsheet_search`, `language_change`, `category_filter` and `shipping_weight_calculation` with page language. No search terms or form contents are sent by the custom search event.
-
