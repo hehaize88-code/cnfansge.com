@@ -1,9 +1,7 @@
 import type { Metadata } from "next";
-import Script from "next/script";
 import Link from "next/link";
 import "./globals.css";
 import LanguageSwitcher from "./components/LanguageSwitcher";
-import AnalyticsEvents from "./components/AnalyticsEvents";
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://spreadsheets-hipobuy.com"),
@@ -33,9 +31,6 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
   return (
     <html lang="en">
       <body>
-        <Script src="https://www.googletagmanager.com/gtag/js?id=G-LXGCJ9PL8W" strategy="afterInteractive" />
-        <Script id="google-analytics" strategy="afterInteractive">{`window.dataLayer = window.dataLayer || []; function gtag(){dataLayer.push(arguments);} gtag('js', new Date()); gtag('config', 'G-LXGCJ9PL8W');`}</Script>
-        <AnalyticsEvents />
         <header className="siteHeader">
           <div className="wrap headerInner">
             <Link href="/" className="brand" aria-label="Hipobuy spreadsheet home">
@@ -56,7 +51,7 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
             <div><b>Learn</b><Link href="/guide/">Buyer guide</Link><Link href="/qc/">QC checklist</Link><Link href="/shipping/">Shipping notes</Link></div>
             <div><b>Important</b><p>This site is independent and does not sell goods, process payments or guarantee sellers.</p></div>
           </div>
-          <div className="wrap copyright"><span>© 2026 Spreadsheets HipoBuy</span><span>Independent buyer resource · Updated 14 Sep 2026</span></div>
+          <div className="wrap copyright"><span>© 2026 Spreadsheets HipoBuy</span><span>Independent buyer resource · Updated 16 Oct 2026</span></div>
         </footer>
       </body>
     </html>

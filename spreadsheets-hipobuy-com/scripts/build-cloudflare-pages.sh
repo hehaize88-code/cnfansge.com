@@ -5,6 +5,7 @@ project_root="$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)"
 cd "${project_root}"
 
 node_modules/.bin/next build
+node scripts/localize.mjs
 
 # Cloudflare Pages will publish this directory.
 pages_output="${project_root}/dist/client"

@@ -1,3 +1,4 @@
+import ArticleCards from "./articles/ArticleCards";
 import ProductExplorer from "./components/ProductExplorer";
 import JsonLd from "./components/JsonLd";
 import { pageMetadata, SITE_URL } from "./seo";
@@ -53,8 +54,7 @@ export default function Home() {
           <div className="eyebrow"><span /> Independent Hipobuy product research</div>
           <h1>HipoBuy Spreadsheet:<br /><em>Find Products and Check QC</em></h1>
           <p className="heroText">
-            A cleaner Hipobuy spreadsheet experience built around searchable rows,
-            exact product pages and practical QC notes—not a wall of copied links.
+            Find product links, compare sizes and inspect QC photos. Start with a category or search, then use the shipping guides to plan the parcel.
           </p>
           <form className="searchBox" action="https://cnfansge.com/search.html" method="get" target="_blank">
             <label htmlFor="hero-search" className="srOnly">Search product finds</label>
@@ -64,9 +64,9 @@ export default function Home() {
             <button type="submit">Search main index ↗</button>
           </form>
           <div className="trustLine">
-            <span><b>5</b> listings checked today</span>
+            <span><b>5</b> sample product rows</span>
             <span><b>8</b> focused categories</span>
-            <span><b>0</b> competitor links</span>
+            <span><b>13</b> practical guides</span>
           </div>
         </div>
         <aside className="routeCard" aria-label="Quick buying route">
@@ -87,7 +87,7 @@ export default function Home() {
           {categories.map(([name, count, href], i) => (
             <a href={href} target="_blank" rel="noreferrer" key={name}>
               <span className="categoryIcon" aria-hidden="true">{String(i + 1).padStart(2, "0")}</span>
-              <b>{name}</b><small>{count} rows</small><i>↗</i>
+              <b>{name}</b><small>Browse category</small><i>↗</i>
             </a>
           ))}
         </div>
@@ -95,14 +95,7 @@ export default function Home() {
 
       <ProductExplorer />
 
-      <section className="contentSplit wrap">
-        <div className="editorialCard">
-          <span className="kicker">SEARCH METHOD / NEW</span>
-          <h2>Turn a product idea into a precise Hipobuy spreadsheet query</h2>
-          <p>Build a compact query, diagnose overloaded or empty results and preserve each single-term change.</p>
-          <Link href="/articles/hipobuy-spreadsheet-search-query/">Read the search-query guide →</Link>
-        </div>
-      </section>
+      <section className="wrap latestGuides"><div className="sectionHead"><div><span className="kicker">NEW SHIPPING GUIDES</span><h2>Plan your next parcel</h2></div><Link href="/articles/">Browse all 13 guides →</Link></div><ArticleCards latest /></section>
 
       <section className="method wrap">
         <div className="sectionHead">
@@ -113,22 +106,6 @@ export default function Home() {
           {checks.map(([number, title, copy]) => (
             <article key={number}><span>{number}</span><h3>{title}</h3><p>{copy}</p></article>
           ))}
-        </div>
-      </section>
-
-      <section className="factsPanel">
-        <div className="wrap factsInner">
-          <div>
-            <span className="kicker">PLATFORM FACTS, NOT PROMISES</span>
-            <h2>Know what Hipobuy states—and what you still need to check.</h2>
-          </div>
-          <div className="factGrid">
-            <article><b>90 <span>days</span></b><span>Free storage stated in the official app listing</span></article>
-            <article><b>200+</b><span>Countries and regions stated as supported</span></article>
-            <article><b>5 <span>days</span></b><span>Fastest advertised delivery, route dependent</span></article>
-            <article><b>24/7</b><span>Purchasing assistance stated by the platform</span></article>
-          </div>
-          <p className="factNote">Official app statements checked 14 September 2026. Shipping availability, speed and cost vary by destination, item type and parcel dimensions.</p>
         </div>
       </section>
 

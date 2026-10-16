@@ -1,0 +1,3 @@
+import { articles } from './articleData';
+const all = [...articles, {slug:'hipobuy-spreadsheet-search-query',title:'HipoBuy Spreadsheet Search: Build Better Product Queries',description:'Build a compact query, diagnose weak results and change one term at a time.',kicker:'SEARCH'}, {slug:'use-hipobuy-spreadsheet',title:'How to Use a HipoBuy Spreadsheet: Complete 2026 Guide',description:'Follow the complete workflow from a product shortlist to the final parcel.',kicker:'START'}];
+export default function ArticleCards({latest=false}:{latest?:boolean}) {return <div className="articleCards">{(latest?all.slice(0,4):all).map(a=><a href={`/articles/${a.slug}/`} key={a.slug}><span>{a.kicker}</span><h2>{a.title}</h2><p>{a.description}</p><b>Read guide →</b></a>)}</div>}

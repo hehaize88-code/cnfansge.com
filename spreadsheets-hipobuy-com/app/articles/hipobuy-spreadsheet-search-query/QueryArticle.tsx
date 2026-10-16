@@ -1,6 +1,7 @@
-"use client";
+import RelatedGuides from "../RelatedGuides";
 
-import { useEffect, useState } from "react";
+
+
 
 type Lang = "en" | "de" | "fr" | "es" | "it";
 type Copy = { title:string; lead:string; checked:string; contents:string; intro:string[]; sections:Array<{h:string;p:string[];bullets?:string[]}>; checklistTitle:string; checklist:string[]; ending:string[] };
@@ -9,7 +10,7 @@ const copy: Record<Lang, Copy> = {
   en: {
     title:"HipoBuy Spreadsheet Search: Build Better Product Queries",
     lead:"Translate a shopping need into observable category, construction and identifier terms, then change one variable at a time so every result set can be reproduced and corrected.",
-    checked:"Updated 14 September 2026",
+    checked:"Updated 16 October 2026",
     contents:"In this guide",
     intro:[
       "A precise Hipobuy spreadsheet search query begins before the search box. Write what the product must do, which features can be observed on a listing and which conditions would make you reject a result. This prevents a vague style idea from turning into a long trail of unrelated links.",
@@ -97,15 +98,6 @@ const copy: Record<Lang, Copy> = {
 };
 
 export default function QueryArticle(){
-  const [lang,setLang]=useState<Lang>("en");
-  useEffect(()=>{
-    const saved=localStorage.getItem("hipobuy-language") as Lang|null;
-    // The persisted UI preference is intentionally restored after hydration.
-    // eslint-disable-next-line react-hooks/set-state-in-effect
-    if(saved&&copy[saved])setLang(saved);
-    const change=(event:Event)=>{const next=(event as CustomEvent<Lang>).detail;if(copy[next])setLang(next)};
-    window.addEventListener("hipobuy-language-change",change);return()=>window.removeEventListener("hipobuy-language-change",change);
-  },[]);
-  const c=copy[lang];
-  return <article className="articleBody wrap"><header><span className="kicker">SEARCH METHOD · 11 MIN READ</span><h1>{c.title}</h1><p className="standfirst">{c.lead}</p><div className="byline"><span>Editorial desk</span><span>{c.checked}</span><span>Independent method</span></div></header><div className="articleLayout"><aside><b>{c.contents}</b>{c.sections.map((s,i)=><a key={s.h} href={`#step-${i+1}`}>{s.h}</a>)}<a href="#qa">{c.checklistTitle}</a></aside><div className="prose">{c.intro.map(p=><p key={p}>{p}</p>)}{c.sections.map((s,i)=><section key={s.h}><h2 id={`step-${i+1}`}>{s.h}</h2>{s.p.map(p=><p key={p}>{p}</p>)}{s.bullets&&<div className="callout"><b>QUERY WORKSHEET</b><span>{s.bullets.map(x=><span key={x} style={{display:"block"}}>• {x}</span>)}</span></div>}</section>)}<h2 id="qa">{c.checklistTitle}</h2><ul>{c.checklist.map(x=><li key={x}>{x}</li>)}</ul>{c.ending.map(p=><p key={p}>{p}</p>)}<div className="articleEnd"><div><b>{c.checklistTitle}</b><span>{c.lead}</span></div><a href="/spreadsheet/">Spreadsheet →</a></div></div></div></article>;
+  const c=copy.en;
+  return <article className="articleBody wrap"><header><span className="kicker">SEARCH METHOD · 11 MIN READ</span><h1>{c.title}</h1><p className="standfirst">{c.lead}</p><div className="byline"><span>Editorial desk</span><span>{c.checked}</span><span>Independent method</span></div></header><div className="articleLayout"><aside><b>{c.contents}</b>{c.sections.map((s,i)=><a key={s.h} href={`#step-${i+1}`}>{s.h}</a>)}<a href="#qa">{c.checklistTitle}</a></aside><div className="prose"><div className="callout"><b>Quick decision</b><span>Start with a product noun and one observable detail. Add one term for too many results; remove one term for no results. Save the query that produces relevant candidates.</span></div>{c.intro.map(p=><p key={p}>{p}</p>)}{c.sections.map((s,i)=><section key={s.h}><h2 id={`step-${i+1}`}>{s.h}</h2>{s.p.map(p=><p key={p}>{p}</p>)}{s.bullets&&<div className="callout"><b>QUERY WORKSHEET</b><span>{s.bullets.map(x=><span key={x} style={{display:"block"}}>• {x}</span>)}</span></div>}</section>)}<h2 id="qa">{c.checklistTitle}</h2><ul>{c.checklist.map(x=><li key={x}>{x}</li>)}</ul>{c.ending.map(p=><p key={p}>{p}</p>)}<RelatedGuides /><div className="articleEnd"><div><b>{c.checklistTitle}</b><span>{c.lead}</span></div><a href="/spreadsheet/">Spreadsheet →</a></div></div></div></article>;
 }

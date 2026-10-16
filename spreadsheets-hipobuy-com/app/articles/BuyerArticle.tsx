@@ -1,3 +1,5 @@
+import { examples } from "./articleExtras";
+import RelatedGuides from "./RelatedGuides";
 import JsonLd from "../components/JsonLd";
 import { absoluteUrl, SITE_URL } from "../seo";
 import type { ArticleRecord } from "./articleData";
@@ -20,8 +22,8 @@ export default function BuyerArticle({ article }: { article: ArticleRecord }) {
       "@type": "Article",
       headline: article.title,
       description: article.description,
-      datePublished: "2026-09-14",
-      dateModified: "2026-09-14",
+      datePublished: article.kicker.includes("SHIPPING") || article.kicker.includes("PARCEL") || article.kicker.includes("TRACKING") ? "2026-10-16" : "2026-09-14",
+      dateModified: "2026-10-16",
       inLanguage: "en",
       mainEntityOfPage: absoluteUrl(path),
       author: { "@type": "Organization", name: "HipoBuy Spreadsheet", url: SITE_URL },
@@ -42,7 +44,7 @@ export default function BuyerArticle({ article }: { article: ArticleRecord }) {
           <span className="kicker">{article.kicker} · {article.readTime} MIN READ</span>
           <h1>{article.title}</h1>
           <p className="standfirst">{article.lead}</p>
-          <div className="byline"><span>Editorial desk</span><span>Updated 14 September 2026</span><span>Independent guide</span></div>
+          <div className="byline"><span>Editorial desk</span><span>Updated 16 October 2026</span><span>Independent guide</span></div>
         </header>
         <div className="articleLayout">
           <aside>
@@ -51,6 +53,7 @@ export default function BuyerArticle({ article }: { article: ArticleRecord }) {
             <a href="#decision-sheet">Decision sheet</a>
           </aside>
           <div className="prose">
+            {examples[article.slug] && <div className="callout"><b>Quick decision</b><span>{examples[article.slug].answer}</span></div>}
             {article.intro.map(paragraph => <p key={paragraph}>{paragraph}</p>)}
             {article.sections.map((section, index) => (
               <section key={section.heading}>
@@ -59,6 +62,8 @@ export default function BuyerArticle({ article }: { article: ArticleRecord }) {
                 {section.checklist && <div className="callout"><b>CHECKPOINT</b><span>{section.checklist.map(item => <span key={item} className="calloutLine">• {item}</span>)}</span></div>}
               </section>
             ))}
+            {examples[article.slug] && <section><h2>Worked example</h2><p>{examples[article.slug].example}</p></section>}
+            <RelatedGuides />
             <section className="sourceBox" id="decision-sheet">
               <h2>{article.decisionTitle}</h2>
               {article.decision.map(paragraph => <p key={paragraph}>{paragraph}</p>)}
@@ -66,6 +71,10 @@ export default function BuyerArticle({ article }: { article: ArticleRecord }) {
                 <a href="/spreadsheet/">Search spreadsheet</a>
                 <a href="/qc/">Use QC checklist</a>
                 <a href="/shipping/">Plan shipping</a>
+                {article.slug === "hipobuy-shipping-spain" && <a href="https://sede.agenciatributaria.gob.es/Sede/aduanas/comercio-electronico-pipe-envios-particulares/compras-internet-envios-particulares.html" target="_blank" rel="noreferrer">Agencia Tributaria</a>}
+                {article.slug === "hipobuy-shipping-germany" && <a href="https://www.zoll.de/EN/Private-individuals/Postal_consignments_internet_order/Shipments-from-a-non-EU-country/shipments-from-a-non-eu-country_node.html" target="_blank" rel="noreferrer">Zoll</a>}
+                {["hipobuy-shipping-spain", "hipobuy-shipping-germany", "hipobuy-rehearsal-parcel"].includes(article.slug) && <a href="https://www.dhl.com/discover/en-sg/ship-with-dhl/start-shipping/how-to-calculate-dhl-volumetric-weight" target="_blank" rel="noreferrer">DHL Express</a>}
+                <a href="https://hipobuy.com/help" target="_blank" rel="noreferrer">HipoBuy</a>
                 <a href="https://play.google.com/store/apps/details?id=com.hipobuy.shop.google" target="_blank" rel="noreferrer">Official app information ↗</a>
               </div>
               <small>This independent editorial guide does not sell products, process orders, guarantee sellers or determine authenticity. Confirm the live listing and current platform terms before acting.</small>

@@ -1,3 +1,4 @@
+import { newArticles } from "./newArticles";
 export type ArticleSection = {
   short: string;
   heading: string;
@@ -24,6 +25,7 @@ export type ArticleRecord = {
 };
 
 export const articles: ArticleRecord[] = [
+  ...newArticles,
   {
     slug: "hipobuy-spreadsheet-shoes",
     title: "HipoBuy Spreadsheet Shoes: Find Sizes and Check QC Photos",

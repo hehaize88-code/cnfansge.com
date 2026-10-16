@@ -1,32 +1,7 @@
-import type { MetadataRoute } from "next";
-
-export const dynamic = "force-static";
-
-const routes = [
-  { path: "/", lastModified: "2026-09-14", priority: 1, changeFrequency: "daily" },
-  { path: "/spreadsheet/", lastModified: "2026-09-14", priority: 0.8, changeFrequency: "weekly" },
-  { path: "/finds/", lastModified: "2026-09-14", priority: 0.7, changeFrequency: "weekly" },
-  { path: "/articles/", lastModified: "2026-09-14", priority: 0.9, changeFrequency: "weekly" },
-  { path: "/articles/use-hipobuy-spreadsheet/", lastModified: "2026-09-14", priority: 0.8, changeFrequency: "monthly" },
-  { path: "/articles/hipobuy-spreadsheet-search-query/", lastModified: "2026-09-14", priority: 0.8, changeFrequency: "monthly" },
-  { path: "/articles/hipobuy-spreadsheet-shoes/", lastModified: "2026-09-14", priority: 0.8, changeFrequency: "monthly" },
-  { path: "/articles/hipobuy-links-not-working/", lastModified: "2026-09-14", priority: 0.8, changeFrequency: "monthly" },
-  { path: "/articles/hipobuy-qc-photos-product-id-color-size/", lastModified: "2026-09-14", priority: 0.8, changeFrequency: "monthly" },
-  { path: "/articles/hipobuy-spreadsheet-hoodies/", lastModified: "2026-09-14", priority: 0.8, changeFrequency: "monthly" },
-  { path: "/articles/hipobuy-spreadsheet-jerseys/", lastModified: "2026-09-14", priority: 0.8, changeFrequency: "monthly" },
-  { path: "/articles/hipobuy-spreadsheet-price-delivered-cost/", lastModified: "2026-09-14", priority: 0.8, changeFrequency: "monthly" },
-  { path: "/articles/hipobuy-spreadsheet-jackets/", lastModified: "2026-09-14", priority: 0.8, changeFrequency: "monthly" },
-  { path: "/guide/", lastModified: "2026-09-14", priority: 0.7, changeFrequency: "monthly" },
-  { path: "/qc/", lastModified: "2026-08-25", priority: 0.7, changeFrequency: "monthly" },
-  { path: "/shipping/", lastModified: "2026-09-14", priority: 0.7, changeFrequency: "monthly" },
-  { path: "/faq/", lastModified: "2026-08-25", priority: 0.7, changeFrequency: "monthly" },
-] as const;
-
-export default function sitemap(): MetadataRoute.Sitemap {
-  return routes.map((route) => ({
-    url: `https://spreadsheets-hipobuy.com${route.path}`,
-    lastModified: new Date(`${route.lastModified}T00:00:00.000Z`),
-    changeFrequency: route.changeFrequency,
-    priority: route.priority,
-  }));
-}
+import type { MetadataRoute } from 'next';
+import { articles } from './articles/articleData';
+export const dynamic='force-static';
+const origin='https://spreadsheets-hipobuy.com';
+const languages=['en','de','fr','es','it'];
+const routes=['/','/spreadsheet/','/finds/','/articles/','/guide/','/qc/','/shipping/','/faq/','/articles/use-hipobuy-spreadsheet/','/articles/hipobuy-spreadsheet-search-query/',...articles.map(a=>`/articles/${a.slug}/`)];
+export default function sitemap():MetadataRoute.Sitemap{return routes.flatMap(route=>languages.map(lang=>({url:origin+(lang==='en'?'':`/${lang}`)+route,lastModified:'2026-10-16',alternates:{languages:Object.fromEntries([...languages.map(l=>[l,origin+(l==='en'?'':`/${l}`)+route]),['x-default',origin+route]])}})))}

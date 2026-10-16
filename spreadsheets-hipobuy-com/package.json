@@ -8,7 +8,7 @@
   "scripts": {
     "dev": "next dev",
     "build": "bash scripts/build-cloudflare-pages.sh",
-    "test": "npm run build && node --test tests/rendered-html.test.mjs"
+    "test": "npm run build && node --test tests/*.test.mjs"
   },
   "dependencies": {
     "next": "16.2.6",
@@ -22,6 +22,8 @@
     "@types/react-dom": "19.2.3",
     "eslint": "9.39.4",
     "eslint-config-next": "16.2.6",
+    "linkedom": "^0.18.12",
+    "parse5": "^7.3.0",
     "tailwindcss": "4.2.1",
     "typescript": "5.9.3"
   },
