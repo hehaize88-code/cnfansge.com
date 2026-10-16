@@ -21,7 +21,7 @@ export default function Home() {
     });
   }, [category, query]);
 
-  const visible = query || category !== "All" ? filtered : filtered.slice(0, 8);
+  const visible = filtered;
 
   function searchMainSite(event: React.FormEvent<HTMLFormElement>) {
     event.preventDefault();
@@ -38,34 +38,34 @@ export default function Home() {
 
     <section className="clean-hero">
       <div className="clean-hero-copy">
-        <p className="eyebrow"><span className="status-dot" /> Updated September 2026</p>
+        <p className="eyebrow"><span className="status-dot" /> Updated October 2026</p>
         <h1>Hipobuy Spreadsheet 2026:<br/><em>finds, QC and shipping.</em></h1>
         <p>Search current Hipobuy finds, open the relevant catalog route, review warehouse evidence and plan delivered cost before you decide.</p>
       </div>
       <div className="clean-search-card">
         <p className="search-label">Search the spreadsheet</p>
-        <form onSubmit={searchMainSite} className="clean-search"><input value={query} onChange={(event) => setQuery(event.target.value)} placeholder="Try shoes, hoodies or jerseys" aria-label="Search product finds"/><button type="submit" aria-label="Search">→</button></form>
-        <div className="search-meta"><span><b>10</b> categories</span><span><b>12</b> source-checked rows</span><span><b>90 days</b> storage stated by app</span></div>
+        <form action={`${mainSite}/search.html`} method="get" onSubmit={searchMainSite} className="clean-search"><input type="hidden" name="channelid" value="2"/><input name="keywords" required value={query} onChange={(event) => setQuery(event.target.value)} placeholder="Try shoes, hoodies or jerseys" aria-label="Search product finds"/><button type="submit" aria-label="Search">→</button></form>
+        <div className="search-meta"><span><b>10</b> categories</span><span><b>12</b> catalog preview rows</span><span><b>90 days</b> storage stated by app</span></div>
       </div>
     </section>
 
     <section className="research-strip" aria-label="Official platform facts reviewed">
-      <div><span>Official app</span><strong>100k+ choices</strong><small>Public app landing page · checked 14 Sep 2026</small></div>
+      <div><span>Official app</span><strong>Buying service</strong><small>Confirm current features in your account</small></div>
       <div><span>Shopping sources</span><strong>Taobao &amp; 1688</strong><small>Named in the official app description</small></div>
       <div><span>Warehouse window</span><strong>90 days</strong><small>Free storage stated in the official app listing</small></div>
-      <div><span>Payment display</span><strong>5 methods</strong><small>PayPal, Klarna, Visa, Mastercard and JCB shown</small></div>
+      <div><span>Payment display</span><strong>Check at checkout</strong><small>Methods and charges can vary by region</small></div>
     </section>
 
     <section className="clean-catalog">
       <div className="clean-section-title"><div><p className="eyebrow">Product index</p><h2>Browse current finds</h2></div><p>These cards are source-page snapshots. Confirm the live listing, price and available options before ordering.</p></div>
-      <div className="clean-tabs" role="group" aria-label="Filter product category">{["All", ...categories].map((item) => <button type="button" key={item} onClick={() => setCategory(item)} className={item === category ? "active" : ""}>{item}</button>)}</div>
+      <div className="clean-tabs" role="group" aria-label="Filter product category">{["All", ...categories].map((item) => <button type="button" key={item} data-filter={item} onClick={() => setCategory(item)} className={item === category ? "active" : ""}>{item}</button>)}</div>
 
-      {visible.length ? <div className="clean-product-grid">{visible.map((product) => <article className="clean-product-card" key={product.id}>
-        <a href={product.url} className="clean-product-image"><img src={product.image} alt={product.name} width="600" height="600" loading="lazy"/><span>Checked 14 Sep</span></a>
+      {visible.length ? <div className="clean-product-grid">{visible.map((product) => <article className="clean-product-card" key={product.id} data-category={product.category} data-tags={product.tags.join(" ")}>
+        <a href={product.url} className="clean-product-image"><img src={product.image} alt={product.name} width="600" height="600" loading="lazy"/><span>Catalog preview</span></a>
         <div className="clean-product-copy"><p>{product.category} · #{product.id}</p><h3><a href={product.url}>{product.name}</a></h3><a href={product.url} className="clean-product-link">Open listing <span>↗</span></a></div>
       </article>)}</div> : <div className="empty-state"><h3>No preview rows match “{query}”.</h3><p>Try another term or search the complete catalog.</p><a href={`${mainSite}/search.html?channelid=2&keywords=${encodeURIComponent(query)}`}>Search full catalog ↗</a></div>}
 
-      <div className="catalog-footer"><span>Showing {visible.length} curated preview rows</span><a href={`${mainSite}/AllProducts/`}>View complete catalog <span>↗</span></a></div>
+      <p className="filter-empty" hidden>No preview rows match. Search the complete catalog above.</p><div className="catalog-footer"><span>Showing <b data-result-count>{visible.length}</b> curated preview rows</span><a href={`${mainSite}/AllProducts/`}>View complete catalog <span>↗</span></a></div>
     </section>
 
     <section className="clean-guides">
@@ -84,7 +84,7 @@ export default function Home() {
 
     <section className="clean-articles">
       <div className="clean-section-title"><div><p className="eyebrow">Research library</p><h2>Read before you ship.</h2></div><p>Long-form guides built from official platform information, warehouse decision checks and clearly labelled public-review evidence.</p></div>
-      <div className="home-article-grid">{articles.slice(0, 3).map((article, index) => <article key={article.slug}><div><span>{String(index + 1).padStart(2, "0")}</span><small>{article.readTime}</small></div><p>{article.kicker}</p><h3><Link href={`/articles/${article.slug}/`}>{article.title}</Link></h3><Link href={`/articles/${article.slug}/`}>Read full article <b>↗</b></Link></article>)}</div>
+      <div className="home-article-grid">{[...articles].sort((a,b)=>b.published.localeCompare(a.published)).slice(0, 4).map((article, index) => <article key={article.slug}><div><span>{String(index + 1).padStart(2, "0")}</span><small>{article.readTime}</small></div><p>{article.kicker}</p><h3><Link href={`/articles/${article.slug}/`}>{article.title}</Link></h3><Link href={`/articles/${article.slug}/`}>Read full article <b>↗</b></Link></article>)}</div>
       <Link className="all-articles-link" href="/articles/">View the article library →</Link>
     </section>
 

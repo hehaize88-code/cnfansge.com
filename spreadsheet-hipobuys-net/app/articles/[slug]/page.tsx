@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import GuideLayout from "../../components/GuideLayout";
+import { related } from "../../article-improvements";
 import { articles, getArticle } from "../../article-data";
 
 function anchor(text: string) {
@@ -30,13 +31,12 @@ export default async function ArticlePage({ params }: { params: Promise<{ slug: 
   const { slug } = await params;
   const article = getArticle(slug);
   if (!article) notFound();
-  const articleIndex = articles.findIndex((item) => item.slug === article.slug);
-  const relatedArticles = [1, 2, 3].map((offset) => articles[(articleIndex + offset) % articles.length]);
+  const relatedArticles = (related[article.slug] || []).map(slug=>articles.find(a=>a.slug===slug)!).filter(Boolean);
   const pageUrl = `https://spreadsheet-hipobuys.net/articles/${article.slug}/`;
   const schema = { "@context": "https://schema.org", "@graph": [
     {
       "@type": "Article", headline: article.title, description: article.description,
-      datePublished: article.published, dateModified: article.updated, author: { "@type": "Organization", name: "Hipo Index" },
+      inLanguage: "en", datePublished: article.published, dateModified: article.updated, author: { "@type": "Organization", name: "Hipo Index" },
       publisher: { "@type": "Organization", name: "Hipo Index" }, mainEntityOfPage: pageUrl,
       image: article.image ? [article.image] : undefined
     },
@@ -58,8 +58,8 @@ export default async function ArticlePage({ params }: { params: Promise<{ slug: 
         <div className="article-prose">
           {article.image ? <figure><img src={article.image} alt={article.imageAlt || ""} width="1100" height="720" /><figcaption>{article.imageCaption}</figcaption></figure> : <div className="shipping-equation"><span>Delivered cost</span><strong>item + domestic delivery + services + international parcel + import costs</strong></div>}
           {article.sections.map((section) => <section id={anchor(section.heading)} key={section.heading}><h2>{section.heading}</h2>{section.paragraphs.map((paragraph) => <p key={paragraph}>{paragraph}</p>)}{section.bullets ? <ul>{section.bullets.map((item) => <li key={item}>{item}</li>)}</ul> : null}</section>)}
-          <section className="article-sources"><p className="section-kicker">Sources checked · {article.updated}</p><h2>Research notes</h2><p>Sources support specific platform facts or identify recurring buyer questions. Community reports are not treated as official terms or guaranteed outcomes.</p><ul>{article.sources.map((source) => <li key={source.label}><strong>{source.label}</strong><span>{source.note}</span></li>)}</ul></section>
-          <section className="related-articles"><p className="section-kicker">Keep planning</p><h2>Related Hipobuy guides</h2><div>{relatedArticles.map((related) => <Link href={`/articles/${related.slug}/`} key={related.slug}><span>{related.kicker}</span><strong>{related.title}</strong><b>Read guide →</b></Link>)}</div></section>
+          <section className="article-sources"><p className="section-kicker">Editorial review · {article.updated}</p><h2>Research notes</h2><p>Sources support specific platform facts or identify recurring buyer questions. Community reports are not treated as official terms or guaranteed outcomes.</p><ul>{article.sources.map((source) => <li key={source.label}><strong>{source.label}</strong><span>{source.note}</span></li>)}</ul></section>
+          <div className="guide-links"><Link href="/spreadsheet/">Search product finds →</Link><Link href="/qc/">QC checklist →</Link><Link href="/shipping/#calculator">Shipping weight calculator →</Link></div><section className="related-articles"><p className="section-kicker">Keep planning</p><h2>Related Hipobuy guides</h2><div>{relatedArticles.map((related) => <Link href={`/articles/${related.slug}/`} key={related.slug}><span>{related.kicker}</span><strong>{related.title}</strong><b>Read guide →</b></Link>)}</div></section>
           <div className="article-next"><div><p className="section-kicker">Continue checking</p><h2>Use the guide, then verify the live listing.</h2></div><div><Link href="/articles/">All articles</Link><a href="https://cnfansge.com/AllProducts/">Browse current catalog ↗</a></div></div>
         </div>
       </div>

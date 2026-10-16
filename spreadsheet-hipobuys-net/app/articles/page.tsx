@@ -5,14 +5,14 @@ import { articles } from "../article-data";
 
 export const metadata: Metadata = {
   title: "Hipobuy Guides 2026: Spreadsheet, Fees, QC & Shipping",
-  description: "Ten evidence-led Hipobuy guides covering spreadsheet searches, fees, QC photos, shipping cost, Europe routes, tracking, storage, returns and safety.",
+  description: "Thirteen practical Hipobuy guides covering spreadsheet searches, sizing, sneaker and hoodie checks, fees, QC photos, shipping cost, Europe routes, tracking, storage, returns and safety.",
   alternates: { canonical: "/articles/" }
 };
 
 export default function ArticlesPage() {
   return <GuideLayout kicker="Evidence-led buyer library" title="Hipobuy articles built around real decisions." intro="Long-form guides based on current official platform information, clearly separated from estimates, community reports and changing seller details.">
     <section className="article-hub">
-      <div className="article-hub-intro"><p className="section-kicker">10 published guides</p><h2>Start with the workflow, then go deeper.</h2><p>The library follows real buyer decisions: find a listing, calculate fees, inspect QC, plan Europe shipping, manage storage, track the parcel and prepare evidence if something goes wrong.</p></div>
+      <div className="article-hub-intro"><p className="section-kicker">13 published guides</p><h2>Start with the workflow, then go deeper.</h2><p>The library follows real buyer decisions: find a listing, calculate fees, inspect QC, plan Europe shipping, manage storage, track the parcel and prepare evidence if something goes wrong.</p></div>
       <div className="article-card-grid">{articles.map((article, index) => <article className="article-card" key={article.slug}>
         <div className="article-card-top"><span>{String(index + 1).padStart(2, "0")}</span><p>{article.readTime}</p></div>
         {article.image ? <Link className="article-card-image" href={`/articles/${article.slug}/`}><img src={article.image} alt={article.imageAlt || ""} width="720" height="720" loading="lazy" /></Link> : <div className="article-card-visual"><b>{String(index + 1).padStart(2, "0")}</b><span>{article.keyword}</span></div>}

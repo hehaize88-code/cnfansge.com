@@ -7,9 +7,10 @@
   },
   "scripts": {
     "dev": "next dev",
-    "build": "next build --webpack",
-    "test": "npm run build && node --test tests/rendered-html.test.mjs",
-    "lint": "eslint . --ignore-pattern out --ignore-pattern .next"
+    "build": "next build --webpack && node scripts/localize.mjs",
+    "test": "npm run build && node --test tests/*.test.mjs",
+    "lint": "eslint . --ignore-pattern out --ignore-pattern .next",
+    "build:source": "next build --webpack"
   },
   "dependencies": {
     "next": "16.2.6",
@@ -24,7 +25,9 @@
     "eslint": "9.39.4",
     "eslint-config-next": "16.2.6",
     "tailwindcss": "4.2.1",
-    "typescript": "5.9.3"
+    "typescript": "5.9.3",
+    "parse5": "^7.3.0",
+    "linkedom": "^0.18.12"
   },
   "type": "module",
   "displayName": "Hipobuy Spreadsheet 2026 \u2014 Verified Finds & QC Guide"

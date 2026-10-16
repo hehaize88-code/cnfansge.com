@@ -1,3 +1,5 @@
+import { octoberArticles } from "./october-articles";
+import { improvements } from "./article-improvements";
 import { newArticles } from "./seo-articles-2026";
 
 export type ArticleSection = {
@@ -355,7 +357,7 @@ const coreArticles: Article[] = [
   }
 ];
 
-export const articles: Article[] = [...coreArticles, ...newArticles];
+export const articles: Article[] = [...coreArticles, ...newArticles].map(article=>({...article,updated:"2026-10-16",sections:improvements[article.slug]?[improvements[article.slug],...article.sections]:article.sections})).concat(octoberArticles);
 
 export function getArticle(slug: string) {
   return articles.find((article) => article.slug === slug);

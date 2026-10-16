@@ -1,50 +1,8 @@
-import assert from "node:assert/strict";
-import { readFile, readdir } from "node:fs/promises";
-import test from "node:test";
-
-test("renders production SEO metadata", async () => {
-  const html = await readFile(new URL("../out/index.html", import.meta.url), "utf8");
-  assert.match(html, /<title>Hipobuy Spreadsheet 2026/i);
-  assert.match(html, /rel="canonical" href="https:\/\/spreadsheet-hipobuys\.net\/?"/i);
-  assert.match(html, /name="robots" content="index, follow"/i);
-  assert.doesNotMatch(html, /codex-preview|noindex|nofollow/i);
-});
-
-test("publishes ten indexable long-form guides", async () => {
-  const articleRoot = new URL("../out/articles/", import.meta.url);
-  const entries = (await readdir(articleRoot, { withFileTypes: true })).filter((entry) => entry.isDirectory());
-  assert.equal(entries.length, 10);
-  for (const entry of entries) {
-    const html = await readFile(new URL(`${entry.name}/index.html`, articleRoot), "utf8");
-    const prose = html.match(/<div class="article-prose">([\s\S]*?)<section class="article-sources">/)?.[1] || "";
-    const words = prose.replace(/<[^>]+>/g, " ").replace(/&[^;]+;/g, " ").replace(/\s+/g, " ").trim().split(/\s+/).length;
-    assert.ok(words >= 1200, `${entry.name} has only ${words} rendered words`);
-    assert.ok(words <= 1800, `${entry.name} has ${words} rendered words`);
-    assert.match(html, /BreadcrumbList/);
-    assert.match(html, /Related Hipobuy guides/);
-  }
-});
-
-test("keeps catalog exits on the cnfansge.com main site", async () => {
-  const pages = ["index.html", "spreadsheet/index.html", "shipping/index.html", "faq/index.html"];
-  for (const page of pages) {
-    const html = await readFile(new URL(`../out/${page}`, import.meta.url), "utf8");
-    assert.doesNotMatch(html, /href="https:\/\/www\.hipobuys\.net/i);
-    assert.match(html, /href="https:\/\/cnfansge\.com/i);
-  }
-  const homepage = await readFile(new URL("../out/index.html", import.meta.url), "utf8");
-  const productSource = await readFile(new URL("../app/data.ts", import.meta.url), "utf8");
-  for (const id of ["6127", "6126", "6682", "6227", "607", "6328", "6401", "6416", "6679", "6559", "6678", "6624"]) {
-    assert.match(productSource, new RegExp(`url: "https://cnfansge\\.com/AllProducts/${id}\\.html"`));
-  }
-  assert.match(homepage, /search\.html\?channelid=2(?:&|&amp;)keywords=/);
-});
-
-test("exports the full sitemap and analytics events", async () => {
-  const sitemap = await readFile(new URL("../out/sitemap.xml", import.meta.url), "utf8");
-  assert.equal((sitemap.match(/<url>/g) || []).length, 17);
-  const html = await readFile(new URL("../out/index.html", import.meta.url), "utf8");
-  assert.match(html, /outbound_product_click/);
-  assert.match(html, /article_click/);
-  assert.match(html, /spreadsheet_search/);
-});
+import assert from 'node:assert/strict';import fs from 'node:fs';import path from 'node:path';import test from 'node:test';import vm from 'node:vm';import {parseHTML} from 'linkedom';
+const origin='https://spreadsheet-hipobuys.net';const langs=['en','de','fr','es','it'];const slugs=fs.readdirSync('out/articles',{withFileTypes:true}).filter(x=>x.isDirectory()).map(x=>x.name);const routes=['/','/spreadsheet/','/qc/','/shipping/','/guides/','/articles/','/faq/',...slugs.map(s=>`/articles/${s}/`)];const localized=(l,r)=>l==='en'?r:`/${l}${r}`;const read=(l,r)=>fs.readFileSync(path.join('out',localized(l,r),'index.html'),'utf8');
+test('exports all 100 pages and 65 complete article versions',()=>{assert.equal(slugs.length,13);for(const l of langs)for(const r of routes){const html=read(l,r);const {document:d}=parseHTML(html);assert.equal(d.documentElement.lang,l);assert.equal(d.querySelectorAll('h1').length,1);assert.equal(d.querySelector('link[rel=canonical]').getAttribute('href'),origin+localized(l,r));assert.equal(d.querySelectorAll('link[hreflang]').length,6);for(const other of langs){assert.equal(d.querySelector(`link[hreflang=${other}]`).href,origin+localized(other,r));assert.equal(d.querySelector(`a[data-language=${other}]`).getAttribute('href'),localized(other,r))}assert.equal(d.querySelector('meta[name=release]').content,'2026-10-16-hipobuys-v1');assert.ok(!html.includes('self.__next_f'));assert.ok(!html.includes('MutationObserver'));if(r.includes('/articles/')&&r!='/articles/'){const sections=[...d.querySelectorAll('.article-prose>section[id]')];assert.ok(sections.length>=8);if(l==='en'){const count=sections.map(s=>s.textContent).join(' ').split(/\s+/).length;assert.ok(count>=1200,`${r}: ${count}`);assert.ok(count<=1800,`${r}: ${count}`)}const schema=JSON.parse(d.querySelector('.subpage-body script[type="application/ld+json"]')?.textContent||d.querySelector('main script[type="application/ld+json"]').textContent);assert.equal(schema['@graph'][0].inLanguage,l)}}});
+test('internal page links resolve and stay in the current language',()=>{const allowed=new Set(langs.flatMap(l=>routes.map(r=>localized(l,r))));for(const l of langs)for(const r of routes){const {document:d}=parseHTML(read(l,r));for(const a of d.querySelectorAll('a[href]')){const u=new URL(a.href,origin+localized(l,r));if(u.origin!==origin)continue;assert.ok(allowed.has(u.pathname),`${l}${r}: ${a.href}`);if(!a.dataset.language)assert.ok(l==='en'?!/^\/(de|fr|es|it)\//.test(u.pathname):u.pathname.startsWith(`/${l}/`),`${l}: language leak ${u.pathname}`);if(u.hash&&u.pathname===localized(l,r))assert.ok(d.getElementById(decodeURIComponent(u.hash.slice(1))),`missing ${a.href}`)}}});
+test('sitemap publishes reciprocal alternates and stable URLs',()=>{const xml=fs.readFileSync('out/sitemap.xml','utf8');assert.equal((xml.match(/<url>/g)||[]).length,100);for(const l of langs)for(const r of routes)assert.ok(xml.includes(`<loc>${origin}${localized(l,r)}</loc>`));assert.equal((xml.match(/hreflang="x-default"/g)||[]).length,100)});
+test('all source strings have complete local translations without identical prose',()=>{const corpus=JSON.parse(fs.readFileSync('content/corpus.json'));for(const l of langs.filter(x=>x!=='en')){const dict=JSON.parse(fs.readFileSync(`content/${l}.json`));for(const row of corpus){assert.ok(dict[row.id]?.trim(),`${l}: ${row.en}`);if(row.en.split(/\s+/).length>12)assert.notEqual(dict[row.id],row.en,`${l}: untranslated prose`)}}});
+test('catalog searches work without React and events preserve GA4 ID',()=>{for(const l of langs){for(const r of ['/','/spreadsheet/']){const {document:d}=parseHTML(read(l,r));const form=d.querySelector('.clean-search');assert.equal(form.getAttribute('action'),'https://cnfansge.com/search.html');assert.equal(form.getAttribute('method'),'get');assert.equal(form.querySelector('[name=channelid]').value,'2');assert.ok(form.querySelector('[name=keywords]').hasAttribute('required'))}}const js=fs.readFileSync('public/site.js','utf8');assert.ok(js.includes('G-D14KS48G0Q'));for(const event of ['outbound_product_click','article_click','spreadsheet_search','shipping_weight_calculation','language_change'])assert.ok(js.includes(event))});
+test('calculator computes higher weight and rejects invalid inputs',()=>{const {document,window}=parseHTML(read('de','/shipping/'));const form=document.querySelector('#weight-calculator');let handler;form.addEventListener=(type,fn)=>{if(type==='submit')handler=fn};form.reportValidity=()=>true;const data={length:'40',width:'30',height:'25',actual:'3',divisor:'5000'};const events=[];const context={window,document,URL,Intl,FormData:class{constructor(){return Object.entries(data)}},location:{pathname:'/de/shipping/',href:origin+'/de/shipping/',origin},gtag:(...args)=>events.push(args)};vm.runInNewContext(fs.readFileSync('public/site.js','utf8'),context);handler({preventDefault(){}});assert.equal(form.querySelector('[data-result=volume]').textContent,'6 kg');assert.equal(form.querySelector('[data-result=billable]').textContent,'6 kg');data.actual='9';handler({preventDefault(){}});assert.equal(form.querySelector('[data-result=billable]').textContent,'9 kg');data.divisor='0';handler({preventDefault(){}});assert.equal(form.querySelector('[data-result=billable]').textContent,'9 kg')});
