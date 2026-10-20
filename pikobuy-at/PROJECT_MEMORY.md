@@ -279,12 +279,16 @@ GitHub 职责：源码、项目记忆、版本、构建与发布流程。GitHub 
 - Preview is noindex in metadata, response header and robots.txt. Formal pikobuy.at and Cloudflare DNS untouched pending user review.
 - Production follow-up: review design, confirm image-search/QC upstream contract, optimize source response time/caching, add production domain canonical/sitemap and optional SSR product SEO, then deploy from requested GitHub folder and bind Cloudflare after approval.
 
-### Preview verification and handoff
+## 2026-10-20 — Catalog completeness and pagination repair
 
-- Public deployment succeeded on 2026-10-20: https://pikobuy-at-preview.hehaize88.chatgpt.site
-- Site version 1, deployment `appgdep_6ad70d496c5081919ae234c25b6d20e9`, source commit `3cc9d8471189d155d5da21eeac23c6a67eb7f3b1`.
-- Live public catalog API verified HTTP200, 60 real source records, first Jersey-16, USD15.01. Source retrieval from the deployed Worker succeeds.
-- Build: 120 Astro pages; three adapter tests passed (source allowlist, nested original product ID URL, missing conversion stays CNY). Bundled Worker routes and image MIME verified.
-- Visual desktop layout checked in managed internal preview. Internal preview runtime could not load the upstream catalog although direct development and deployed server requests succeeded. Its supervisor later stopped.
-- Automated browser visit to the public preview was denied by the hosting domain's Cloudflare security page; no bypass attempted. Therefore complete browser interaction / mobile viewport QA is not claimed. The native publication result and direct live API checks verify server availability, not browser access for every visitor.
-- Waiting for user design review before formal Cloudflare/domain setup. If they encounter the hosting-domain block too, diagnose allowed hosting configuration; do not bypass security controls.
+User reports incomplete products and reiterates cnfansge.com as the only source.
+
+Confirmed defects: default `/AllProducts/` emits `/index.php/list_1_2/`, which returned HTTP404; category pages emit e.g. `/shoes/list_4_2/`, which the previous allowlist dropped. Thus the first upstream batch (60 products / three 20-item screens) could not continue correctly. The source's three numbered links are a sliding window, not a three-page total.
+
+Repair: derive each category's `tid` and dynamic Lists URL from the source's own sort controls; use dynamic pagination for default popular and all other sorts, with popular descending. Normalize old pretty cursors and source-provided category pagination links, retaining category, order and page. No database or persisted product mirror added. Retain 20 products per screen, add numbered buttons and a return-to-first-page button; calculate the preceding batch's last screen instead of assuming offset40. All 24 languages use the shared client/adapter.
+
+Validation: eight adapter regression tests pass; 120 localized Astro pages build. Source all-products page2 and shoes page2 returned60 products; latest source page100 also returned60, confirming access far beyond the first batch. Internal preview renders but its development runtime cannot fetch upstream, so interactive browser pagination QA remains unverified there. Public preview's browser visit is blocked by the hosting-domain security page; pikobuy.at returned connection closed. This change updates source and the existing preview only; no claim that the formal domain is deployed or repaired. Cloudflare connector currently requires reauthentication.
+
+Also removed27 stale extraneous lockfile entries that made npm ci try to install an AIX-only dependency on Linux; npm ci and build now succeed. Product data files used for read-only diagnostics remain outside the repository.
+
+Additional completeness fix: source page100 contains record584 with no actual product photo. The old adapter silently dropped it. Such records now remain in results with their title and price, without inventing an image or reusing the source placeholder. Source page100 has60 records after this fix.
