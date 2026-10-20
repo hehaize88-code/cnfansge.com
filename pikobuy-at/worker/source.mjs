@@ -8,7 +8,7 @@ export function sourceUrl(path){
  if(u.pathname==='/index.php'&&(u.searchParams.get('m')!=='home'||u.searchParams.get('c')!=='Lists'||u.searchParams.get('a')!=='index'))throw new Error('Invalid catalog route');
  u.hostname='cnfansge.com';return u;
 }
-async function read(url){const r=await fetch(url,{signal:AbortSignal.timeout(18000),headers:{'Accept':'text/html'}});if(!r.ok)throw new Error(`Source HTTP ${r.status}`);const html=await r.text();if(html.length>2000000)throw new Error('Source too large');return html;}
+async function read(url,signal){const r=await fetch(url,{signal:signal?AbortSignal.any([signal,AbortSignal.timeout(18000)]):AbortSignal.timeout(18000),headers:{'Accept':'text/html'}});if(!r.ok)throw new Error(`Source HTTP ${r.status}`);const html=await r.text();if(html.length>2000000)throw new Error('Source too large');return html;}
 function imageUrl(src){try{const u=new URL(src,SOURCE);return ['cnfansge.com','www.cnfansge.com'].includes(u.hostname)&&u.pathname.startsWith('/uploads/')?u.href:null;}catch{return null;}}
 function price(raw,rate){const cny=Number(raw.trim());return Number.isFinite(cny)&&cny>0?{cny,usd:rate?Number((cny/rate).toFixed(2)):null}:null;}
 // Read the route and category ID from the source's own sorting controls.
@@ -43,11 +43,11 @@ function paginationPath(href,html,currentUrl){
  }catch{return null;}
 }
 let rateState;
-async function getRate($){
+async function getRate($,signal){
  if(rateState&&rateState.until>Date.now())return rateState.value;
  const path=$('script[src]').toArray().map(e=>$(e).attr('src')).find(x=>x?.startsWith('/template/moban/pc/static/js/script.js'));
  if(!path)return null;
- try{const js=await read(new URL(path,SOURCE));const value=Number(js.match(/\bCNY_TO_USD_RATE\s*=\s*(\d+(?:\.\d+)?)/)?.[1]);if(value>0&&value<100){rateState={value,until:Date.now()+300000};return value;}}catch{}
+ try{const js=await read(new URL(path,SOURCE),signal);const value=Number(js.match(/\bCNY_TO_USD_RATE\s*=\s*(\d+(?:\.\d+)?)/)?.[1]);if(value>0&&value<100){rateState={value,until:Date.now()+300000};return value;}}catch{}
  return null;
 }
 export function parseCatalog(html,rate,url){
@@ -72,7 +72,7 @@ export async function api(request){
  const u=new URL(request.url);try{
  if(u.pathname==='/api/product'){
  const id=u.searchParams.get('id');if(!/^\d{1,10}$/.test(id||''))return Response.json({error:'Invalid product'},{status:400});
- const html=await read(`${SOURCE}/AllProducts/${id}.html`);return Response.json(parseProduct(html,await getRate(load(html)),id),{headers:{'Cache-Control':'public,max-age=60'}});
+ const html=await read(`${SOURCE}/AllProducts/${id}.html`,request.signal);return Response.json(parseProduct(html,await getRate(load(html),request.signal),id),{headers:{'Cache-Control':'public,max-age=60'}});
  }
  if(u.pathname==='/api/catalog'){
  const cat=u.searchParams.get('category')||'all';if(!categories.includes(cat))return Response.json({error:'Invalid category'},{status:400});
@@ -80,13 +80,13 @@ export async function api(request){
  const cursor=u.searchParams.get('cursor');
  const legacy=cursor&&new URL(cursor,SOURCE).pathname.match(/^\/(?:index\.php|[a-z-]+)\/list_(\d+)_(\d+)\/$/);
  let url=sourceUrl((!legacy&&cursor)||(q?`/search.html?${new URLSearchParams({keywords:q,channelid:'2'})}`:cat==='all'?'/AllProducts/':`/${cat}/`));
- let html=await read(url);let $=load(html);
+ let html=await read(url,request.signal);let $=load(html);
  if(!q&&(!cursor||legacy)){
  url=catalogSortUrl(html,sort);
  if(legacy){if(url.searchParams.get('tid')!==legacy[1])throw new Error('Invalid category cursor');url.searchParams.set('page',legacy[2]);}
- html=await read(url);$=load(html);
+ html=await read(url,request.signal);$=load(html);
  }
- return Response.json(parseCatalog(html,await getRate($),url.pathname+url.search),{headers:{'Cache-Control':'public,max-age=60'}});
+ return Response.json(parseCatalog(html,await getRate($,request.signal),url.pathname+url.search),{headers:{'Cache-Control':'public,max-age=60'}});
  }
  return Response.json({error:'Not found'},{status:404});
  }catch(error){return Response.json({error:'The source catalog is temporarily unavailable. Please retry.',code:'SOURCE_UNAVAILABLE',detail:String(error.message)},{status:502,headers:{'Cache-Control':'no-store'}});}

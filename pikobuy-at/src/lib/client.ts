@@ -15,6 +15,9 @@ function status(message:string,retry=false){const s=$('#catalog-status');if(!s)r
 async function fetchData(url:string){const r=await fetch(url,{signal:AbortSignal.timeout(30000)});if(!r.ok)throw new Error('Source unavailable');return r.json();}
 function card(p:any,i:number){const c=el('article','product-card');const a=link('',`${pageHref('product')}?id=${p.id}`,'product-image');a.setAttribute('aria-label',p.name);if(p.image)a.append(img(p.image,p.name,i<4?'eager':'lazy'));else{a.classList.add('missing-photo');a.append(el('span','',p.name));}a.append(el('span','product-index',String(i+1).padStart(2,'0')));const info=el('div','product-info');const title=el('h3');title.append(link(p.name,a.href));const meta=el('div','product-meta');const price=el('span','price',fmt(p.price));price.append(el('small','',unit(p.price)));const arrow=link('↗',a.href,'card-arrow');arrow.setAttribute('aria-label',text.details+': '+p.name);meta.append(price,arrow);info.append(title,meta);c.append(a,info);return c;}
 async function catalog(){
+ // SSR already supplies the full first screen and ordinary pagination links.
+ // Keep it in place rather than clearing it and fetching the same batch again.
+ if($('#product-grid')?.dataset.serverRendered==='true')return;
  status(text.loading);$('#product-grid')!.replaceChildren();$('#pagination')?.setAttribute('hidden','');
  try{
  const query=new URLSearchParams();for(const key of ['q','category','sort','cursor'])if(params.has(key))query.set(key,params.get(key)!);

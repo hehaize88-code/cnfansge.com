@@ -13,7 +13,7 @@ if(production){
   }
  }
  await findPages('.astro-output');
- await writeFile('.astro-output/robots.txt',`User-agent: *\nAllow: /\nDisallow: /api/\nSitemap: ${origin}/sitemap.xml\n`);
+ await writeFile('.astro-output/robots.txt',`User-agent: *\nAllow: /\nDisallow: /api/\nAllow: /api/catalog\nAllow: /api/product\nSitemap: ${origin}/sitemap.xml\n`);
  await writeFile('.astro-output/sitemap.xml',`<?xml version="1.0" encoding="UTF-8"?><urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">${pages.map(path=>`<url><loc>${origin}${path}</loc></url>`).join('')}</urlset>`);
 }
 

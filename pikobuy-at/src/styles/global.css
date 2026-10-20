@@ -85,6 +85,10 @@ summary{cursor:pointer}summary:focus-visible{outline:3px solid #608700;outline-o
 #page-number{display:flex;align-items:center;justify-content:center;gap:6px;flex-wrap:wrap}#page-number button{padding:9px 12px;min-width:36px}#page-number button[aria-current=page]{background:var(--ink);color:#fff;opacity:1;border-color:var(--ink)}.pagination{flex-wrap:wrap;gap:10px}@media(max-width:760px){#page-number{gap:4px}#page-number button{padding:8px;min-width:30px}.pagination{gap:6px}.pagination>button{padding:9px;font-size:10px}}
 
 .missing-photo{display:flex;align-items:center;justify-content:center;padding:20px;text-align:center;color:var(--muted);font-size:13px;line-height:1.6}
+.pagination a,.pagination .page-disabled{background:white;border:1px solid var(--line);border-radius:7px;padding:11px 18px;line-height:normal;text-align:center}
+.pagination a:hover{border-color:#879b5b}.pagination .page-disabled{opacity:.4}
+#page-number a{padding:9px 12px;min-width:36px}
+@media(max-width:760px){.pagination>a,.pagination .page-disabled{padding:9px;font-size:10px;min-height:36px}#page-number a{padding:8px;min-width:30px;min-height:36px}}
 
 /* Compact mobile rhythm shared by every locale and page type. Keep full copy,
    two-column product grids and all controls; desktop spacing stays unchanged. */
