@@ -359,3 +359,11 @@ Four new behavior regressions verify HTML cards/escaping, localized pagination a
 - Chrome verified20 SSR products on pages1,2,3,4, crossing the source-batch boundary; page4 starts Trapstar t-shirt and offers page5. Shoes price-up sorting preserves category/order in native next link. Nike search returns20 SSR products with noindex,follow for the search result. Base catalog stays index,follow with its self-canonical.
 - All24 localized catalog routes share this renderer; FAQ/articles and mobile compaction are retained. Only short-lived HTTP response caching, no product database or persisted mirror.
 - This fixes confirmed website-side causes consistent with the supplied GSC soft404 screenshot. It is NOT confirmation that Google has cleared the report or indexed the URL. Browser auto-review twice denied signed-in GSC access due to insufficient explicit private-data authorization, including after attachment context became available. Do not retry through Browser, another connector, or an alternate surface until user explicitly authorizes access to pikobuy.at GSC, live URL testing and indexing request. User-facing next step is that authorization.
+
+
+## 2026-10-20 — GSC live test passed and indexing requested
+
+- User explicitly authorized access to pikobuy.at GSC, live URL testing and an indexing request, resolving the earlier private-access block.
+- Tested exactly https://pikobuy.at/spreadsheet/ in the signed-in sc-domain:pikobuy.at property. GSC live-test timestamp: 2026-10-20 18:06 (UI local time). Result: “网址可编入 Google 索引” / “网页可以编入索引”. The fresh live test no longer reports soft404.
+- Submitted one indexing request after the successful live test. GSC confirmed “已请求编入索引” and that the URL was added to its priority crawl queue. Screenshot evidence captured.
+- The indexed-data view before the request remained “已发现 - 尚未编入索引”; do not claim the URL is already indexed. Live eligibility and accepted submission are confirmed; actual indexing is pending Google processing.
