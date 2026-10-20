@@ -1,0 +1,55 @@
+{
+  "stage": "planning-and-source-verification",
+  "brand": "Pikobuy",
+  "siteOrigin": "https://pikobuy.at",
+  "repository": "hehaize88-code/cnfansge.com",
+  "projectDirectory": "pikobuy-at",
+  "framework": {
+    "name": "astro",
+    "versionPolicy": "verify-latest-stable-at-install-and-lock",
+    "installedVersion": null,
+    "renderingPlan": "prerender-editorial-content-and-read-source-at-runtime"
+  },
+  "source": {
+    "origin": "https://cnfansge.com",
+    "observedSameSiteHosts": ["cnfansge.com", "www.cnfansge.com"],
+    "database": false,
+    "persistProductDataset": false,
+    "mockProducts": false,
+    "generatedProductImages": false,
+    "adminAccessRequired": false,
+    "searchPath": "/search.html",
+    "searchParameter": "keywords",
+    "searchChannelId": "2",
+    "catalogPath": "/AllProducts/",
+    "sourceDetailPathTemplate": "/AllProducts/{sourceRecordId}.html",
+    "visualSearchEndpoint": null,
+    "qcEndpoint": null,
+    "priceConversionStatus": "source-script-rule-not-yet-confirmed"
+  },
+  "agent": {
+    "registrationUrl": "https://www.pikobuy.com/?mode=register&redirect=/home",
+    "purchaseBaseUrl": "https://www.pikobuy.com/product/detail",
+    "purchaseParameter": "productUrl",
+    "weidianSourceTemplate": "https://weidian.com/item.html?itemID={marketplaceProductId}",
+    "encodeNestedUrl": true,
+    "logoUrl": null,
+    "faviconUrl": null
+  },
+  "i18n": {
+    "defaultLocale": "en",
+    "defaultLocaleAtRoot": true,
+    "plannedLocales": ["en", "de", "es", "fr", "it", "pl", "pt", "ro", "sv", "nl", "da", "fi", "el", "cs", "hu", "bg", "sk", "hr", "sl", "lt", "lv", "et", "ga", "mt"],
+    "publishedLocales": [],
+    "preserveRouteAndQueryOnSwitch": true,
+    "sharedSourceData": true,
+    "displayCurrency": "USD",
+    "incompleteTranslationPolicy": "do-not-publish"
+  },
+  "reference": "https://kakobuypicklist.com/",
+  "deployment": {
+    "status": "not-deployed",
+    "runtime": null,
+    "dnsConfigured": false
+  }
+}
