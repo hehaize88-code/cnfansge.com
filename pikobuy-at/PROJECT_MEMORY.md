@@ -359,3 +359,14 @@ Pre-publication checks completed during implementation:
 - `npm run build -- --pages` passed all five content/source tests, generated 409 HTML pages (408 localized routes plus the error page), and passed the generated-page link/metadata/navigation/structured-data audit.
 - Pages API Worker is 387,163 bytes (128,822 bytes gzip). The 409 HTML pages are separate static assets, not embedded in the Worker. Product source behavior remains covered by the original adapter tests.
 - Source blobs for all 24 translations were checked against local Git blob hashes before the preview commit. Final live browser and mobile results follow after deployment.
+
+### Preview 02 published and verified
+
+- Application commit: f458aa28a02d4a019d820a081b140c0bb75e18c0 on preview/pikobuy-at-pages. Cloudflare Pages check completed successfully; deployment 5130ebdf-70fd-4654-a38c-b6297ecd8adb. Public https://pikobuy-at-preview.pages.dev/; immutable https://5130ebdf.pikobuy-at-preview.pages.dev/.
+- Connected Chrome verifies PREVIEW 02, four header links, 28 FAQ answers with working expansion and official-source links, and ten article cards. All ten English article pages render full content. German-to-English switching retains the same shipping-cost article path; article contents disclosure opens correctly.
+- Mobile at viewport360x844: all17 English routes checked (home, catalog, product, guide, visual-search explanation, FAQ, article index and all10 articles), with no horizontal overflow. Additional Finnish/Bulgarian/Italian FAQ and Irish article checks also pass. Finnish at1024px and German shipping article at320px also have no horizontal overflow.
+- Same390x844 homepage comparison: header152→93px; hero359.9→312.8px; first product grid737.9→608.8px. Eight genuine source products and nine loaded images including the official logo verified. Desktop after viewport reset also has no overflow.
+- Live adapter verification: Nike keyword search returns20 source records; shoes category price-ascending order works; product6681 shows five gallery images and a purchase URL containing the original Weidian itemID7755101935. Keyword search intentionally uses source search order and hides sorting, as before this update.
+- Screenshot: docs/preview-faq-mobile.png. Detailed viewport observations: docs/qa-editorial-mobile.json. Temporary viewport override was reset and the public homepage left open for review.
+- This is the preview release only. Formal pikobuy.at DNS and domain binding are still pending user review. Preview noindex remains enabled. No product database, copied competitor catalog, generated product photos or admin features were added.
+- Final evidence/documentation commit uses [Skip CI]; the deployed application remains f458aa2. Continue from preview/pikobuy-at-pages and read the official/keyword research notes before adding policy claims or changing editorial scope.
