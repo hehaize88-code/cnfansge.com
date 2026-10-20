@@ -329,3 +329,33 @@ Build command: npm run build. Deploy command: npx wrangler deploy dist/server/in
 - Current active development branch for this preview: preview/pikobuy-at-pages; root pikobuy-at; build npm run build -- --pages; output .pages-output; NODE_VERSION=24. Do not merge its Pages-only Wrangler configuration into the earlier Worker branch without choosing the intended deployment target.
 - Final documentation-only commit uses Cloudflare's supported [Skip CI] prefix to avoid unnecessary preview rebuilds. Application code remains the successfully deployed 5f20320 commit.
 - User's prior access error remains unreproduced; this is an independently published alternative URL, not proof of universal reachability. Formal pikobuy.at remains unbound pending user review.
+
+
+## 2026-10-20 — FAQ, editorial content and compact mobile layouts
+
+User asks for a visible FAQ navigation entry, more than 20 researched FAQ answers, a separate SEO article index and 10 original researched articles, plus reduced mobile spacing across every page type. The attached screenshot was unavailable in the provided upload path; the textual requirements were sufficient to proceed.
+
+Research and implementation in progress:
+
+- Official evidence: docs/official-research-2026-10-20.md. Competitor keyword review: docs/keyword-research-2026-10-20.md. No invented search volumes or traffic figures.
+- 28 FAQ answers, four groups of seven, each with official source links. Ten original English articles (roughly 640–780 words each) cover spreadsheet use, ordering, links, sizing, budgeting, shipping estimates, QC photos, packing, tracking and returns.
+- Preserve exact official limitations: return request window is 5 days/120 hours with the official hour-counting rule and seller approval; conflicting return-cost wording is disclosed rather than silently resolved; shipping service fee provision is 8% of freight, not an across-the-board product markup; no invented warehouse free-storage duration, tax-free route or guaranteed transit time.
+- New routes: /faq/, /articles/ and /articles/{slug}/ in all 24 existing locales. No English body fallback. Language switch retains the article path, query and fragment. New page templates include breadcrumbs, source review date, related links, self-canonical, reciprocal hreflang and x-default. Article JSON-LD identifies the independent site editorial organisation.
+- Header/footer gain FAQ and Articles. Home adds three guide cards plus a FAQ entry. Mobile uses a compact two-row header, smaller section spacing and product cards, compact product gallery and guide cards, native FAQ accordions and collapsible article contents. Article body remains readable and complete.
+- Pages build now uploads Astro output as static assets and bundles only the existing read-only API adapter into _worker.js. This avoids embedding hundreds of full editorial pages in a Worker script. API paths still use cnfansge.com; no product storage or database. A real 404 page prevents unknown URLs from returning a homepage.
+- Target remains preview/pikobuy-at-pages, Cloudflare project pikobuy-at-preview. Formal pikobuy.at remains unbound. Publish/QA results will be appended after verification.
+
+Pre-publication checks completed during implementation:
+- Official and competitor research archived in the repository documentation. No competitor catalogue or photographs imported.
+- English editorial content/link checks and the three existing source-adapter tests pass. Astro compiler reports no errors in the page, editorial component or 404 page.
+- Internal desktop preview verified FAQ navigation/expansion/source links, the ten-card article index, full article rendering and English-to-French switching on the same article slug. The internal environment still cannot retrieve the product source; live catalogue verification is reserved for the deployed Pages preview.
+- Baseline public mobile measurement at viewport override 390x844: content width375, header152px, hero359.9px, first product grid begins at737.9px. Re-measure the new release under the same viewport after publishing.
+- Added a tablet navigation wrap at761–1000px and overflow wrapping for long translated headings.
+- Build now runs content/source tests first and audits all409 generated HTML pages for navigation, local targets, canonical/hreflang, preview noindex, article/FAQ counts and valid structured data.
+
+### Complete build before publication
+
+- All 24 editorial locales are complete: each contains 28 FAQs and 10 full articles (55 sections, 110 paragraphs and 21 checklist items). Translation structure, immutable source/example URLs and numerical meaning were checked; the build rejects English paragraph/answer fallback.
+- `npm run build -- --pages` passed all five content/source tests, generated 409 HTML pages (408 localized routes plus the error page), and passed the generated-page link/metadata/navigation/structured-data audit.
+- Pages API Worker is 387,163 bytes (128,822 bytes gzip). The 409 HTML pages are separate static assets, not embedded in the Worker. Product source behavior remains covered by the original adapter tests.
+- Source blobs for all 24 translations were checked against local Git blob hashes before the preview commit. Final live browser and mobile results follow after deployment.

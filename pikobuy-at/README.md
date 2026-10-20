@@ -8,13 +8,17 @@ Node 22.22+ or 24. `npm ci`, `npm run dev`. The Astro development server include
 
 ## Build
 
-`npm run check && npm run build`.
+`npm run build -- --pages` (includes content/source tests and generated-page validation).
 
-Astro generates 120 static pages under `.astro-output/`. The build embeds those assets into `dist/server/index.js` with the live data adapter, so the preview is deployable as one Worker ESM bundle. No product data is embedded. `.openai/hosting.json` is the temporary preview identity; formal Cloudflare deployment should get a separate deployment config after review.
+Astro generates 408 localized pages plus a 404 page under `.astro-output/`. The Pages build copies HTML and public assets to `.pages-output/` and bundles the read-only API into `_worker.js`; normal pages are served through the Pages ASSETS binding. No product data is embedded. Keeping editorial HTML outside the Worker prevents script-size growth as translated content is added.
+
+Current preview: https://pikobuy-at-preview.pages.dev/ . GitHub branch: `preview/pikobuy-at-pages`; root: `pikobuy-at`; build command: `npm run build -- --pages`; output: `.pages-output`; Node 24. The Pages-specific `wrangler.jsonc` belongs to this branch. The earlier Worker/Sites build is still available with `npm run build`, but it is not the active publishing target.
 
 ## Preview scope
 
-Home, catalog, source-backed keyword search, source-backed sorting, 20-card pagination, product gallery, original-to-Pikobuy purchase links, official logo/favicon, 24 localized interfaces. Product names stay as supplied by the source. Image search and verified QC are explicitly pending source integration.
+Home, catalog, source-backed keyword search, source-backed sorting, 20-card pagination, product gallery, original-to-Pikobuy purchase links, official logo/favicon, 24 localized interfaces, 28 sourced FAQ answers and 10 original guides with full translated content. Product names stay as supplied by the source. Image search and verified QC are explicitly pending source integration.
+
+Editorial content lives in `src/content/editorial/{locale}.json`. Its stable IDs and slugs link all locales. `npm run check` verifies complete translation structure, no English paragraph fallback, valid related links and source references, alongside the source-adapter tests. Research and policy uncertainties are documented under `docs/`.
 
 No production domain or DNS changes. The preview is marked noindex.
 

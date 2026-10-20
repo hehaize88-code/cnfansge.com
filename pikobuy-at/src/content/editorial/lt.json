@@ -1,0 +1,975 @@
+{
+  "labels": {
+    "faq": "DUK",
+    "articles": "Straipsniai",
+    "faqTitle": "Pikobuy dažniausiai užduodami klausimai",
+    "faqIntro": "Aiškūs atsakymai apie užsakymus, patikrą sandėlyje, siuntimą ir grąžinimą, pagrįsti oficialiais Pikobuy vadovais ir taisyklėmis. Kiekvienas atsakymas pateikia nuorodą į šaltinį.",
+    "faqShort": "Turite klausimų prieš užsakydami? Pradėkite nuo atsakymų, patikrintų pagal oficialius Pikobuy puslapius.",
+    "articlesTitle": "Pikobuy pirkimo vadovai",
+    "articlesIntro": "Nuo pirmojo radinio prekių lentelėje iki siuntinio prie jūsų durų: praktiniai vadovai apie prekių nuorodas, dydžius, kokybės patikros nuotraukas, išlaidas ir siuntimą.",
+    "allArticles": "Visi 10 vadovų",
+    "readArticle": "Skaityti vadovą",
+    "checked": "Šaltiniai patikrinti",
+    "questions": "klausimai",
+    "onThisPage": "Šiame puslapyje",
+    "officialSources": "Oficialūs šaltiniai",
+    "needHelp": "Reikia pagalbos dėl užsakymo?",
+    "helpText": "Kreipkitės į Pikobuy ir nurodykite užsakymo arba siuntinio numerį. Ši nepriklausoma vadovų svetainė negali peržiūrėti jūsų paskyros ar pakeisti užsakymo.",
+    "officialSupport": "Pikobuy pagalba",
+    "editorialNote": "Nepriklausomi vadovai su šaltinių nuorodomis",
+    "breadcrumbs": "Naršymo kelias",
+    "home": "Pradžia",
+    "editorialTeam": "Pikobuy.at redakcija",
+    "quickAnswer": "TRUMPAS ATSAKYMAS",
+    "sourceNote": "Su platforma susiję faktai nurodytą dieną buvo patikrinti pagal šiuos oficialius puslapius. Mūsų kontroliniai sąrašai yra praktiniai redakcijos pasiūlymai. Prieš mokėdami ar siųsdami patvirtinkite dabartines sąlygas savo Pikobuy užsakyme.",
+    "browseFinds": "Naršyti prekių lentelę",
+    "related": "Skaitykite toliau",
+    "independentNote": "Pikobuy.at yra nepriklausoma rekomendacijų svetainė. Prekių duomenys gaunami iš cnfansge.com; pirkimais ir paskyrų pagalba rūpinasi Pikobuy."
+  },
+  "groups": {
+    "getting-started": "Pirmieji žingsniai",
+    "orders": "Užsakymai ir grąžinimas",
+    "warehouse": "Sandėlis ir nuotraukos",
+    "shipping": "Siuntimas ir sekimas"
+  },
+  "faqs": [
+    {
+      "id": "what-is-pikobuy",
+      "group": "getting-started",
+      "q": "Kas yra Pikobuy?",
+      "a": "Pikobuy padeda pirkėjams rasti, pirkti ir siųsti prekes iš Kinijos. Jo paslaugų sutartyje aprašoma pagalba perkant, o ne tiesioginė mažmeninė prekyba. Patikrinkite pradinio pardavėjo informaciją apie prekę ir užsakymo apmokėjimo metu pateikiamus duomenis.",
+      "sources": [
+        "https://www.pikobuy.com/About",
+        "https://www.pikobuy.com/protocol/user"
+      ]
+    },
+    {
+      "id": "supported-marketplaces",
+      "group": "getting-started",
+      "q": "Kokios prekyvietės minimos Pikobuy vadove?",
+      "a": "Pradedančiųjų vadove įvardijamos Taobao, Tmall, 1688, Weidian ir Yupoo. Prekyvietės paminėjimas nepatvirtina, kad tinkamas kiekvienas jos skelbimas ar prekė; prieš mokėdami patikrinkite konkretų gaminį.",
+      "sources": [
+        "https://www.pikobuy.com/guide"
+      ]
+    },
+    {
+      "id": "open-product-link",
+      "group": "getting-started",
+      "q": "Kaip rasti prekę Pikobuy?",
+      "a": "Oficialiame vadove aprašoma paieška pagal prekės nuorodą arba raktažodžius. Atidarę rezultatą, prieš pasirinkdami variantą palyginkite jo identifikavimo duomenis su pradiniu skelbimu.",
+      "sources": [
+        "https://www.pikobuy.com/guide"
+      ]
+    },
+    {
+      "id": "search-from-image",
+      "group": "getting-started",
+      "q": "Ar galiu pradėti nuo prekės vaizdo?",
+      "a": "Pikobuy pradžios puslapyje siūloma pateikti vaizdus ir prekių paieškos užklausas. Kiekvieną rezultatą laikykite tikrintinu kandidatu: vizualiai panaši prekė gali turėti kitą pardavėją, medžiagą, dydį ar specifikaciją.",
+      "sources": [
+        "https://www.pikobuy.com/home"
+      ]
+    },
+    {
+      "id": "choose-variation",
+      "group": "getting-started",
+      "q": "Ką patikrinti prieš pirmąjį mokėjimą?",
+      "a": "Patvirtinkite spalvą, dydį ir kiekį, kaip nurodyta vadove. Išsaugoję šaltinio nuorodą kartu su pasirinktu variantu, vėliau lengviau paaiškinsite su užsakymu susijusius klausimus.",
+      "sources": [
+        "https://www.pikobuy.com/guide"
+      ]
+    },
+    {
+      "id": "two-payment-stages",
+      "group": "getting-started",
+      "q": "Kodėl pirkimas ir tarptautinis siuntimas atskirti?",
+      "a": "Vadove pirkimo apmokėjimas numatytas prieš tvarkymą sandėlyje, o tarptautinio siuntimo apmokėjimas — pateikiant siuntinį. Numatykite biudžetą abiem etapams, užuot laikę prekės kainą galutine suma su pristatymu.",
+      "sources": [
+        "https://www.pikobuy.com/guide"
+      ]
+    },
+    {
+      "id": "out-of-stock",
+      "group": "getting-started",
+      "q": "Kas nutinka, jei prekės nėra sandėlyje?",
+      "a": "Oficialiame pirkimo vadove nurodyta, kad už užsakymą, kurio prekės nėra, grąžinami pinigai. Jame nenustatytas universalus pinigų gavimo terminas, todėl patikrinkite tikrąjį užsakymo įrašą arba dėl savo mokėjimo kreipkitės į pagalbą.",
+      "sources": [
+        "https://www.pikobuy.com/guide"
+      ]
+    },
+    {
+      "id": "actual-product-price",
+      "group": "orders",
+      "q": "Ar faktinė pirkimo kaina gali skirtis nuo rodomos?",
+      "a": "Taip. Vadove kainos siejamos su faktiniu pirkimu. Prieš sutikdami su pakeista suma, palyginkite pasirinktą variantą, kiekį ir užsakymo išlaidų išklotinę, o ne remkitės vien išsaugota katalogo kaina.",
+      "sources": [
+        "https://www.pikobuy.com/guide"
+      ]
+    },
+    {
+      "id": "failed-payment",
+      "group": "orders",
+      "q": "Ar užsakymas bus vykdomas, jei mokėjimas nepavyks?",
+      "a": "Bendrosiose sąlygose nurodyta, kad nepavykus mokėjimui užsakymas nevykdomas. Prieš bandydami dar kartą patikrinkite užsakymo ir mokėjimo įrašus, kad galėtumėte pagalbai paaiškinti laukiančią ar tarsi pasikartojančią operaciją.",
+      "sources": [
+        "https://www.pikobuy.com/protocol/terms"
+      ]
+    },
+    {
+      "id": "payment-methods",
+      "group": "orders",
+      "q": "Kokiais mokėjimo būdais galiu naudotis?",
+      "a": "Puslapyje Apie mus nurodyta, kad palaikomi keli būdai ir valiutos. Naudokitės faktiškai apmokėjimo metu siūlomais pasirinkimais; logotipai puslapio apačioje nepatvirtina prieinamumo, mokesčių ar tinkamumo kiekvienai paskyrai ir paskirties vietai.",
+      "sources": [
+        "https://www.pikobuy.com/About"
+      ]
+    },
+    {
+      "id": "return-deadline",
+      "group": "orders",
+      "q": "Kada turėčiau prašyti grąžinti prekę iš sandėlio?",
+      "a": "Grąžinimo puslapyje nustatytos penkios dienos, arba 120 valandų, po būsenos Sandėlyje suteikimo, skaičiuojant nuo kitos valandos. Patikrinkite užregistruotą būsenos laiką ir pateikite prašymą nedelsdami; tai tinkamumo laikotarpis, o ne automatinis patvirtinimas.",
+      "sources": [
+        "https://www.pikobuy.com/protocol/returns"
+      ]
+    },
+    {
+      "id": "return-eligibility",
+      "group": "orders",
+      "q": "Ar visas prekes galima grąžinti?",
+      "a": "Ne. Svarbūs pardavėjo dalyvavimas, tinkama pakartotiniam pardavimui būklė ir terminai. Taisyklėse numatytos išimtys, pavyzdžiui, pagal užsakymą pagamintos arba naudotos prekės ir gaminiai su pašalintomis privalomomis etiketėmis ar pakuote. Perskaitykite jūsų konkrečiai prekei taikomas taisykles.",
+      "sources": [
+        "https://www.pikobuy.com/protocol/returns"
+      ]
+    },
+    {
+      "id": "return-cost",
+      "group": "orders",
+      "q": "Kiek kainuoja grąžinimas?",
+      "a": "Gali būti taikomi grąžinimo transporto ir paslaugų mokesčiai. Oficialiuose puslapiuose kai kurie mokesčiai ir nemokamų paslaugų sąlygos skiriasi, todėl prieš tęsdami paklauskite apie sumą jūsų užsakymui ir grąžinimo priežasčiai; nemanykite, kad kiekvienas grąžinimas nemokamas.",
+      "sources": [
+        "https://www.pikobuy.com/protocol/returns",
+        "https://www.pikobuy.com/protocol/user"
+      ]
+    },
+    {
+      "id": "seller-approval",
+      "group": "orders",
+      "q": "Ar pateiktas grąžinimo prašymas garantuoja pinigų grąžinimą?",
+      "a": "Ne. Grąžinimo taisyklėse reikalaujama pardavėjo sutikimo. Laikykite prašymą, įrodymus ir užsakymo susirašinėjimą kartu ir prieš toliau planuodami veiksmus su preke patikrinkite, kas iš tikrųjų patvirtinta.",
+      "sources": [
+        "https://www.pikobuy.com/protocol/returns"
+      ]
+    },
+    {
+      "id": "warehouse-inspection",
+      "group": "warehouse",
+      "q": "Kas vyksta, kai nupirkta prekė pasiekia sandėlį?",
+      "a": "Pirkimo vadove aprašoma gavimo registracija, fotografavimas ir defektų patikra. Prieš pasirinkdami kitą veiksmą peržiūrėkite savo užsakymo informaciją.",
+      "sources": [
+        "https://www.pikobuy.com/guide"
+      ]
+    },
+    {
+      "id": "qc-limits",
+      "group": "warehouse",
+      "q": "Ar kokybės patikros nuotraukos įrodo autentiškumą ar techninį veikimą?",
+      "a": "Ne. Paslaugų sutartyje ribojama profesionali tam tikrų prekių patikra, o nuotraukos negali patvirtinti visų paslėptų ar techninių savybių. Jomis vertinkite tai, kas matoma, ir prašykite paaiškinti svarbius neaiškius dalykus.",
+      "sources": [
+        "https://www.pikobuy.com/protocol/user",
+        "https://www.pikobuy.com/protocol/shipping"
+      ]
+    },
+    {
+      "id": "extra-photos",
+      "group": "warehouse",
+      "q": "Ar galiu gauti papildomų patikros nuotraukų?",
+      "a": "Persiuntimo sąlygose aprašomas papildomų detalių nuotraukų pirkimas. Prieš jomis pasikliaudami paklauskite apie prašomą vaizdą, prieinamumą ir mokestį. Tikslus prašymas naudingesnis nei tiesiog prašymas geresnės kokybės patikros.",
+      "sources": [
+        "https://www.pikobuy.com/protocol/shipping"
+      ]
+    },
+    {
+      "id": "forward-my-purchase",
+      "group": "warehouse",
+      "q": "Ar galiu į sandėlį nusiųsti savarankiškai nupirktą prekę?",
+      "a": "Persiuntimo sąlygose aprašoma, kaip gauti sandėlio adresą iš pagalbos tarnybos arba persiuntimo formos, pateikti reikiamą informaciją ir po gavimo organizuoti tolesnį siuntimą. Savo siuntiniui naudokite dabartines oficialias instrukcijas.",
+      "sources": [
+        "https://www.pikobuy.com/protocol/shipping"
+      ]
+    },
+    {
+      "id": "combine-sellers",
+      "group": "warehouse",
+      "q": "Ar galima sujungti skirtingų pardavėjų prekes?",
+      "a": "Pikobuy kontaktų puslapyje siūloma sujungti prekes į vieną siuntinį. Palyginkite faktinius siuntinio pasirinkimus ir maršrutų sąlygas; sujungimas negarantuoja sutaupymo kiekvienai siuntai.",
+      "sources": [
+        "https://www.pikobuy.com/contact"
+      ]
+    },
+    {
+      "id": "packaging-options",
+      "group": "warehouse",
+      "q": "Ar galiu prašyti minimalios arba sustiprintos pakuotės?",
+      "a": "Pradedančiųjų vadove abi minimos kaip galimi prašymai. Aptarkite, kas bus pašalinta ar pridėta, ir patikrinkite susijusį mokestį. Jei galbūt grąžinsite prekę, išsaugokite jos grąžinimo taisyklėse reikalaujamą būklę.",
+      "sources": [
+        "https://www.pikobuy.com/guide",
+        "https://www.pikobuy.com/protocol/returns"
+      ]
+    },
+    {
+      "id": "storage-duration",
+      "group": "warehouse",
+      "q": "Kiek laiko galiu laikyti prekes sandėlyje?",
+      "a": "Šiam vadovui peržiūrėtuose viešuose puslapiuose nepavyko patikimai nustatyti nemokamo saugojimo trukmės ar viso saugojimo mokesčių sąrašo. Patikrinkite savo užsakymui nurodytą terminą ir sąlygas arba prieš atidėdami siuntimą klauskite oficialios pagalbos tarnybos.",
+      "sources": [
+        "https://www.pikobuy.com/protocol/shipping",
+        "https://www.pikobuy.com/contact"
+      ]
+    },
+    {
+      "id": "estimate-inputs",
+      "group": "shipping",
+      "q": "Ko reikia Pikobuy siuntimo kainai apskaičiuoti?",
+      "a": "Skaičiuoklė prašo paskirties vietos, prekės tipo, svorio ir matmenų. Surinkite šiuos duomenis prieš lygindami pasiūlymus ir pakeiskite preliminarius skaičius, kai bus prieinama tikslesnė siuntinio informacija.",
+      "sources": [
+        "https://www.pikobuy.com/shipping-cost"
+      ]
+    },
+    {
+      "id": "estimate-units",
+      "group": "shipping",
+      "q": "Kokius vienetus naudoja siuntimo skaičiuoklė?",
+      "a": "Svoris įvedamas kilogramais, ilgis, plotis ir aukštis — centimetrais. Atidžiai patikrinkite vienetų perskaičiavimus, nes teisingas skaičius netinkamu vienetu pateikia nenaudingą įvertį.",
+      "sources": [
+        "https://www.pikobuy.com/shipping-cost"
+      ]
+    },
+    {
+      "id": "route-comparison",
+      "group": "shipping",
+      "q": "Ar siuntimo maršrutų kainos ir terminai skaičiuojami vienodai?",
+      "a": "Ne. Vadove teigiama, kad pristatymo laikai ir apmokestinimo metodai skiriasi pagal maršrutą. Perskaitykite kiekvieno prieinamo maršruto dabartinę informaciją, užuot lyginę vien pagrindinę kainą.",
+      "sources": [
+        "https://www.pikobuy.com/guide"
+      ]
+    },
+    {
+      "id": "shipping-service-fee",
+      "group": "shipping",
+      "q": "Ar tarptautiniam siuntimui gali būti taikomas platformos mokestis?",
+      "a": "Paskelbtoje paslaugų sutartyje nurodytas 8% siuntimo kainos platformos mokestis su atsiskaitymo išlygomis. Peržiūrėkite faktinę mokėjimo išklotinę ir dabartines sąlygas, o ne manykite, kad paslauga visada teikiama be mokesčių.",
+      "sources": [
+        "https://www.pikobuy.com/protocol/user"
+      ]
+    },
+    {
+      "id": "first-tracking",
+      "group": "shipping",
+      "q": "Kada turėtų atsirasti sekimo informacija?",
+      "a": "Pirkimo vadove nurodyta: per tris dienas po išsiuntimo. Tai apibūdina pradinės sekimo informacijos prieinamumą, o ne pristatymą per tris dienas. Jei reikia paaiškinti jūsų įrašą, nusiųskite pagalbos tarnybai siuntinio nuorodos numerį ir būsenos informaciją su datomis.",
+      "sources": [
+        "https://www.pikobuy.com/guide",
+        "https://www.pikobuy.com/contact"
+      ]
+    },
+    {
+      "id": "customs-guarantee",
+      "group": "shipping",
+      "q": "Ar muitinės formalumų atlikimas garantuotas?",
+      "a": "Ne. Paslaugų sutartis negarantuoja muitinės formalumų atlikimo. Prieš siųsdami patikrinkite prekės leistinumą ir pasirinkto maršruto reikalavimus; prekės skelbimas ar sandėlio nuotrauka nepatvirtina leidimo ją importuoti.",
+      "sources": [
+        "https://www.pikobuy.com/protocol/user",
+        "https://www.pikobuy.com/protocol/terms"
+      ]
+    },
+    {
+      "id": "contact-support",
+      "group": "shipping",
+      "q": "Kur klausti apie siuntą ar užsakymą?",
+      "a": "Naudokite oficialų Pikobuy kontaktų puslapį, kuriame rekomenduojama pateikti pagalbos užklausą ir nurodomi kiti ryšio kanalai. Pridėkite atitinkamą užsakymo ar siuntinio nuorodos numerį ir glaustą aprašymą. Ši nepriklausoma prekių lentelė negali pasiekti jūsų Pikobuy paskyros.",
+      "sources": [
+        "https://www.pikobuy.com/contact"
+      ]
+    }
+  ],
+  "articles": [
+    {
+      "slug": "spreadsheet-guide",
+      "title": "Pikobuy prekių lentelės vadovas: raskite ir palyginkite prekes",
+      "description": "Naudokite Pikobuy prekių lentelę tikriems cnfansge skelbimams ieškoti, prekių informacijai palyginti ir tinkamai šaltinio nuorodai išsaugoti prieš užsakant.",
+      "category": "Prekių paieška",
+      "eyebrow": "PIKOBUY PREKIŲ LENTELĖ",
+      "summary": "Naudingame atrinktų prekių sąraše prekė, šaltinis, variantas ir neatsakyti klausimai laikomi kartu. Štai kaip tokį sąrašą sudaryti naudojantis šios svetainės katalogu.",
+      "sections": [
+        {
+          "id": "what-you-are-browsing",
+          "title": "Pradėkite nuo prekių lentelės paskirties",
+          "paragraphs": [
+            "Pikobuy prekių lentelė yra prekių nuorodų rinkinys, sutvarkytas taip, kad būtų lengviau atrasti prekes. Svetainėje pikobuy.at šis rinkinys pateikiamas kaip katalogas su paieška, o ne atsisiunčiama lentelė. Prekių įrašai ir katalogo vaizdai gaunami iš cnfansge.com. Pikobuy.at yra nepriklausoma naršymo svetainė; prekės buvimas čia nėra pažadas dėl jos prieinamumo, kokybės ar tinkamumo.",
+            "Naudokite katalogą pasirinkimui susiaurinti, tada prieš mokėdami peržiūrėkite dabartinį pasiūlymą Pikobuy. Šis skirtumas svarbus, kai išsaugotame skelbime pasikeičia kaina, pardavėjas pakeičia galimus variantus arba nuotraukoje rodoma kita versija. Katalogo įrašas gali padėti rasti prekę, neatsakydamas į visus klausimus apie ketinamą pateikti užsakymą."
+          ]
+        },
+        {
+          "id": "search-with-a-purpose",
+          "title": "Ieškokite prekės, kurią galite apibūdinti",
+          "paragraphs": [
+            "Atidarykite prekių lentelės puslapį ir pradėkite nuo trumpos frazės, pavyzdžiui, drobinė rankinė per petį arba džemperis su gobtuvu ir užtrauktuku. Jei rezultatų per mažai, pašalinkite apibūdinantį žodį. Jei per daug, pridėkite naudingą ypatybę. Prekių pavadinimai skirtinguose šaltiniuose gali skirtis, todėl viena nesėkminga frazė neįrodo, kad prekės nėra.",
+            "Kai tyrinėjate pasiūlą, o ne ieškote vienos prekės, pasirinkite kategoriją. Naršant pagal kategorijas panašios prekės laikomos kartu ir lengviau įvertinti kainų skirtumus. Kataloge yra rikiavimo valdikliai; jie keičia prieinamų įrašų eilę, o ne jų kokybę. Populiarus rezultatas yra paieškos užuomina, o ne nepriklausoma rekomendacija."
+          ]
+        },
+        {
+          "id": "read-the-record",
+          "title": "Prieš lygindami kainas atidarykite išsamią informaciją",
+          "paragraphs": [
+            "Prekės kortelėje pateikiamas vaizdas, pavadinimas ir rodoma kaina. Atidarykite prekės puslapį, kad peržiūrėtumėte galeriją ir šaltinių nuorodas. Ieškokite jūsų naudojimui svarbių detalių: rankinės angos ir dirželio tvirtinimų, striukės pamušalo ar mažo aksesuaro užsegimo. Trūkstamas kampas yra išspręstinas klausimas, o ne įrodymas, kad ypatybės nėra.",
+            "Rodomą sumą laikykite atskaitos tašku katalogo įrašams lyginti. Patikrinkite šalia nurodytą valiutą ir patvirtinkite dabartinę pasirinkto varianto kainą Pikobuy. Dvi panašios kortelės gali aprašyti skirtingas medžiagas, dydžius ar kiekius. Todėl lyginant vien pagrindines kainas gali susidaryti klaidingas įspūdis, kuris pasiūlymas pigesnis."
+          ]
+        },
+        {
+          "id": "make-a-small-shortlist",
+          "title": "Pasirinkite tris kandidatus ir svarbius klausimus",
+          "paragraphs": [
+            "Pirmajam palyginimui tris kandidatus paprastai lengviau įvertinti nei ilgą atidarytų kortelių rinkinį. Prie kiekvienos prekės pasilikimo priežasties užrašykite šaltinio URL. Taip pažįstama miniatiūra netaps vieninteliu būdu vėliau atpažinti skelbimą. Šias pastabas galite laikyti savo dokumente; darbo eiga nepriklauso nuo išsaugotų prekių funkcijos.",
+            "Pavyzdžiui, kasdienes rankines lyginantis žmogus vieną gali pasilikti dėl tinkamos formos, kitą dėl aiškesnių matmenų, trečią dėl patogiau atrodančio užsegimo. Kitas žingsnis — papildyti trūkstamą informaciją apie kiekvieną kandidatą, o ne automatiškai pasirinkti pigiausią kortelę."
+          ],
+          "bullets": [
+            "Prekė ir šaltinis: katalogo nuoroda bei pradinis prekyvietės URL, jei prieinamas.",
+            "Tikslus pasirinkimas: norima spalva, dydis, stilius ir kiekis.",
+            "Įrodymai: kokie naudingi vaizdai ar matavimai prieinami ir ko dar trūksta.",
+            "Biudžetas: prekės kainos atskaitos taškas ir atskiras rezervas vėlesnėms išlaidoms."
+          ]
+        },
+        {
+          "id": "understand-the-photos",
+          "title": "Atskirkite katalogo vaizdus nuo užsakymo kokybės patikros",
+          "paragraphs": [
+            "Katalogo nuotraukos yra naršymui skirta informacija. Nemanykite, kad katalogo galerijoje patikrinta būtent ta prekė, kurią gausite. Ankstesnė kokybės patikra, jei aiškiai įvardyta ir prieinama, taip pat aprašo ankstesnę prekę; ji nepakeičia jūsų užsakymo peržiūros po atvykimo į sandėlį.",
+            "Ši svetainės versija neteikia veikiančios vaizdų paieškos ar atskiros kokybės patikros nuotraukų paieškos paslaugos. Prekėms atrasti naudokite tekstinę paiešką, kategorijas ir šaltinių nuorodas. Konkretaus užsakymo patikrai naudokite oficialioje Pikobuy paskyroje pateikiamą informaciją ir apie nematomą detalę klauskite pagalbos tarnybos. Nuotrauka negali patvirtinti visų medžiagos savybių, paslėptų defektų ar ilgalaikio veikimo problemų."
+          ]
+        },
+        {
+          "id": "handoff-to-pikobuy",
+          "title": "Atlikite galutines patikras Pikobuy",
+          "paragraphs": [
+            "Naudokite prekės Pikobuy pirkimo nuorodą, jei ji prieinama, tada palyginkite atvertą skelbimą su pastabomis. Patikrinkite prekę, pardavėją, pasirinktą variantą, kiekį ir dabartinę sumą. Jei importuotas puslapis neatitinka, sustokite ir grįžkite į pradinį šaltinį, užuot užbaigę užsakymą vien pagal panašų vaizdą.",
+            "Kai šie duomenys aiškūs, vykdykite oficialią pirkimo eigą. Atrankos pastabas išsaugokite, kol prekė pasieks sandėlį: jos suteiks konkretų pagrindą peržiūrai. Jei prekės įrašas šioje svetainėje neįkeliamas, bandykite dar kartą arba grįžkite vėliau; nepasiekiamas katalogo atsakas nėra patikimas teiginys apie pardavėjo atsargas."
+          ]
+        }
+      ],
+      "sources": [
+        "https://cnfansge.com/",
+        "https://www.pikobuy.com/guide",
+        "https://www.pikobuy.com/protocol/user"
+      ],
+      "related": [
+        "weidian-taobao-links",
+        "size-guide",
+        "how-to-use-pikobuy"
+      ]
+    },
+    {
+      "slug": "how-to-use-pikobuy",
+      "title": "Kaip naudotis Pikobuy: praktinis pirmojo užsakymo vadovas",
+      "description": "Laikykitės oficialios Pikobuy pirkimo eigos su atskirais prekės ir siuntimo mokėjimais bei kontroliniu sąrašu kiekvienam sprendimui.",
+      "category": "Užsakymo pateikimas",
+      "eyebrow": "PIRMASIS UŽSAKYMAS",
+      "summary": "Oficialiame Pikobuy vadove atskiriami prekės radimas, pirkimas, patikra sandėlyje ir tarptautinis siuntimas. Naudokite šiuos etapus pirmajam užsakymui tvarkingai vykdyti.",
+      "sections": [
+        {
+          "id": "prepare-your-order",
+          "title": "Paruoškite informaciją prieš registruodamiesi",
+          "paragraphs": [
+            "Pradėkite nuo vienos prekės, kurią galite tiksliai apibūdinti. Išsaugokite šaltinio URL ir užsirašykite norimą spalvą, dydį bei kiekį. Jei radote ją per šios svetainės Pikobuy prekių lentelę, prisiminkite, kad prekių katalogas gaunamas iš cnfansge.com. Pikobuy.at padeda atrasti skelbimus; paskyros registracija, apmokėjimas ir užsakymų valdymas vyksta pikobuy.com.",
+            "Naudokite oficialią registracijos nuorodą ir įveskite tikslius duomenis. Prieš įvesdami paskyros informaciją patikrinkite svetainės adresą ir neatskleiskite slaptažodžio. Paruoškite visą gavėjo adresą paskirties vietai reikalingu formatu. Nepilną pašto kodą ar trūkstamą buto numerį lengviau pataisyti prieš pateikiant siuntinį nei po išsiuntimo."
+          ]
+        },
+        {
+          "id": "find-the-exact-item",
+          "title": "Sutikrinkite prekę ir pasirinktą variantą",
+          "paragraphs": [
+            "Pikobuy pradedančiųjų vadove teigiama, kad galima ieškoti pagal prekės nuorodą arba raktažodžius. Atidarę rezultatą, palyginkite jį su išsaugotu šaltiniu. Neapsiribokite pavadinimu: pažiūrėkite į pardavėją, prekės nuotraukas ir pasirenkamus variantus. Viename skelbime gali būti keli stiliai su bendru pagrindiniu vaizdu.",
+            "Susikurkite trumpą užsakymo pastabą, pavyzdžiui, tamsiai mėlyna, dydis pasirinktas pagal pardavėjo lentelę, vienas vienetas. Jei variantai neaiškūs, prieš mokėdami prašykite paaiškinimo. Drabužiams peržiūrėkite pardavėjo matavimus; iš kelių dalių sudarytai prekei patikrinkite, ką apima nurodytas kiekis. Šis žingsnis padeda atskirti pasirinkto varianto nesusipratimą nuo vėlesnės užsakymo vykdymo problemos."
+          ]
+        },
+        {
+          "id": "first-payment",
+          "title": "Peržiūrėkite pirkimo mokėjimą",
+          "paragraphs": [
+            "Oficiali eiga pirkimą pradeda pirkimo užsakymo apmokėjimu; tarptautinis siuntimas yra vėlesnis etapas. Prieš patvirtindami perskaitykite faktiškai rodomą išklotinę. Pasižymėkite prekės sumą, pardavėjo pristatymo mokestį ir kitus taikomus mokesčius, užuot laikę katalogo kainą visomis prekės gavimo išlaidomis.",
+            "Išsaugokite užsakymo nuorodos numerį ir patvirtinimo metu rodomus variantus. Jei mokėjimas nepavyksta arba užsakymas lieka neaiškus, prieš mokėdami dar kartą patikrinkite oficialų užsakymo įrašą. Banko pranešimas ir užbaigtas pirkimo užsakymas yra skirtingi įrodymai. Svetainės bendrosiose sąlygose nurodyta, kad nesėkmingas mokėjimas nelemia užsakymo vykdymo."
+          ]
+        },
+        {
+          "id": "warehouse-review",
+          "title": "Peržiūrėkite prekę, kai ji pasieks sandėlį",
+          "paragraphs": [
+            "Oficialiame vadove patikra sandėlyje yra atskiras etapas. Naudokite prieinamas užsakymo nuotraukas gautai prekei palyginti su išsaugotais pasirinkimais. Pradėkite nuo tapatybės: tinkama prekė, matoma spalva, dydžio etiketė, kiekis ir pridedamos dalys. Tada patikrinkite matomas būklės problemas, kurios keistų sprendimą ją pasilikti.",
+            "Kai kas nors neaišku, parašykite konkretų klausimą. Pavyzdžiui, prašymas aiškiau parodyti užtrauktuko galą naudingesnis nei teiginys, kad visa prekė atrodo netinkama. Paaiškinkite neatitikimą ir pridėkite atitinkamą užsakymo vaizdą. Svarbius klausimus išspręskite prieš pateikdami tarptautinį siuntinį, kol prekę dar galima patikrinti sandėlyje."
+          ],
+          "bullets": [
+            "Turėkite šaltinio skelbimą ir užsakymo patvirtinimą palyginimui.",
+            "Atskirkite matomą neatitikimą nuo detalės, kurios nuotrauka tiesiog nerodo.",
+            "Jei gali reikėti grąžinimo ar keitimo, nedelsdami patikrinkite dabartines grąžinimo sąlygas."
+          ]
+        },
+        {
+          "id": "shipping-payment",
+          "title": "Pasirinkite siuntimą tikrajam siuntiniui",
+          "paragraphs": [
+            "Kai prekė paruošta, vadove pereinama prie maršruto pasirinkimo, siuntinio pateikimo ir tarptautinio siuntimo apmokėjimo. Peržiūrėkite jūsų paskirties vietai ir turiniui prieinamus variantus. Vien maršruto kaina neapibūdina jo tinkamumo, apmokestinimo būdo ar pristatymo lūkesčių. Naudokite dabartinę maršruto informaciją, o ne seną kito pirkėjo pasiūlymą.",
+            "Prieš mokėdami patvirtinkite gavėjo duomenis ir prašomą pakavimą. Jei jungiate kelis pirkinius, įsitikinkite, kad kiekviena numatyta prekė paruošta ir įtraukta. Išsaugokite pasirinkto maršruto ir galutinio mokesčio kopiją. Siuntimo skaičiavimo vadovas paaiškina, kaip paruošti matmenis ir svorį; biudžeto vadovas paaiškina, kaip šis antras mokėjimas įeina į bendrą pirkimą."
+          ]
+        },
+        {
+          "id": "after-dispatch",
+          "title": "Užsakymo ir siuntinio įrašus laikykite atskirai",
+          "paragraphs": [
+            "Prekės užsakymo kelionė į sandėlį ir tarptautinio siuntinio kelionė į jūsų adresą skiriasi. Po išsiuntimo užsirašykite siuntinio nuorodos numerį ir vežėjo informaciją, užuot ieškoję pagal katalogo prekės ID. Prie nuorodos laikykite naujausią įvykį ir jo datą, kad galėtumėte nustatyti, ar sekimo puslapis pasikeitė.",
+            "Jei reikia pagalbos, naudokite oficialų Pikobuy kontaktų puslapį. Naudingoje žinutėje nurodomas užsakymo arba siuntinio numeris, paskutinis matomas įvykis, data ir tikslus klausimas. Nesiųskite slaptažodžio ar visų mokėjimo kortelės duomenų. Pristatymo metu išsaugokite siuntinio informaciją ir užfiksuokite matomas problemas, kol pakuotė dar prieinama palyginimui."
+          ]
+        }
+      ],
+      "sources": [
+        "https://www.pikobuy.com/guide",
+        "https://www.pikobuy.com/protocol/terms",
+        "https://www.pikobuy.com/contact"
+      ],
+      "related": [
+        "fees-budget",
+        "qc-photos",
+        "order-tracking"
+      ]
+    },
+    {
+      "slug": "weidian-taobao-links",
+      "title": "Pikobuy nuorodos: tinkamai atidarykite Weidian ir Taobao prekes",
+      "description": "Supraskite pradinius prekyviečių URL, prekių ID ir Pikobuy nuorodas pagal konkretų Weidian pavyzdį ir neatitinkančių skelbimų patikras.",
+      "category": "Prekių paieška",
+      "eyebrow": "PREKIŲ NUORODOS",
+      "summary": "Prekyvietė ir pradinis prekės ID identifikuoja skelbimą. Pikobuy nuoroda apima tą šaltinį, kad galėtumėte peržiūrėti prekę per tarpininką.",
+      "sections": [
+        {
+          "id": "identify-the-source",
+          "title": "Išsaugokite pradinį prekyvietės URL",
+          "paragraphs": [
+            "Šaltinio skelbimo ir tarpininko nuorodos paskirtis skiriasi. Šaltinio skelbimas identifikuoja pardavėjo prekę jo prekyvietėje. Tarpininko nuoroda atidaro prekę per tokią paslaugą kaip Pikobuy. Išsaugojus tik ekrano kopiją ar sutrumpintą nuorodą gali tapti sunku patvirtinti, kurį skelbimą iš pradžių ketinote pirkti.",
+            "Naršydami pikobuy.at, atidarykite prekės informaciją ir išsaugokite pradinę prekyvietės nuorodą, kai ji pateikiama. Cnfansge įrašas yra katalogo nuoroda; jo vietinis įrašo numeris nebūtinai sutampa su prekyvietės prekės ID. Nekopijuokite numerio iš katalogo adreso manydami, kad jis priklauso Weidian ar Taobao URL."
+          ]
+        },
+        {
+          "id": "weidian-example",
+          "title": "Perskaitykite Weidian pavyzdį trimis dalimis",
+          "paragraphs": [
+            "Pateiktas šaltinio pavyzdys yra https://weidian.com/item.html?itemID=7755101935 . Čia weidian.com identifikuoja prekyvietę, item.html yra prekės puslapis, o itemID=7755101935 identifikuoja šaltinio skelbimą. Šis numeris yra skelbimo identifikatorius, o ne dydis, kaina, spalva ar Pikobuy užsakymo numeris. Pavyzdys parodo nuorodos formatą; tai nėra rekomendacija pirkti prekę.",
+            "Atitinkama pateikta tarpininko nuoroda yra https://www.pikobuy.com/product/detail?productUrl=https://weidian.com/item.html?itemID=7755101935 . Išorinis adresas atidaro Pikobuy. Parametro productUrl reikšmėje yra pradinis Weidian adresas. Todėl tikrindami bendrinamą nuorodą turite peržiūrėti ir jos paskirties domeną, ir viduje esantį šaltinio URL."
+          ]
+        },
+        {
+          "id": "nested-urls",
+          "title": "Supraskite, kodėl įdėtasis URL gali atrodyti kitaip",
+          "paragraphs": [
+            "Kai kurios nuorodos koduoja vidinį URL, kad jo skyrybos ženklai liktų viena parametro reikšme. Tą patį pavyzdį galima pateikti kaip https://www.pikobuy.com/product/detail?productUrl=https%3A%2F%2Fweidian.com%2Fitem.html%3FitemID%3D7755101935 . Užkoduoti simboliai nesukuria naujo prekės ID; jie išsaugo pradinį adresą išoriniame adrese.",
+            "Įprasto veikiančio pirkimo mygtuko nereikia redaguoti ranka. Šis skirtumas naudingas diagnozuojant neveikiančią bendrinamą nuorodą: nekoduotas ampersandas ilgesniame šaltinio URL gali būti suprastas kaip kitas išorinis parametras. Venkite pakartotinai koduoti jau užkoduotą nuorodą ir nešalinkite nepažįstamų prekyvietės adreso dalių, jei nežinote, kuri dalis identifikuoja prekę."
+          ]
+        },
+        {
+          "id": "taobao-and-other-links",
+          "title": "Naudokite šaltinio URL, užuot spėję ID",
+          "paragraphs": [
+            "Taobao prekei išsaugokite tikrąjį pardavėjo ar katalogo pateiktą prekės adresą, užuot įrašę jos numerį į Weidian šabloną. Prekyviečių pavadinimai yra tapatybės dalis. Tos pačios skaitmenų sekos dviejose skirtingose svetainėse negalima laikyti tuo pačiu skelbimu.",
+            "Oficialus Pikobuy vadovas leidžia pradėti nuo prekės nuorodos paieškos laukelyje. Tai praktiškas atsarginis būdas, kai bendrinama tarpinė nuoroda neveikia. Pirmiausia atidarykite šaltinį, nukopijuokite visą prekės nuorodą ir naudokite ją oficialioje svetainėje. Jei negalite išspręsti sutrumpintos ar tik programėlėje veikiančios nuorodos, paprašykite pardavėjo ar oficialios pagalbos viso šaltinio adreso, o ne jį išgalvokite."
+          ]
+        },
+        {
+          "id": "verify-the-result",
+          "title": "Patikrinkite importuotą prekę prieš rinkdamiesi variantą",
+          "paragraphs": [
+            "Sėkmingai įkeltas puslapis neįrodo, kad tai prekė, kurią ketinote atidaryti. Palyginkite paskirties puslapį su pradiniu skelbimu, kol abu prieinami. Pardavėjas gali siūlyti kelias spalvas ar versijas su vienu prekės ID, todėl ID sutapimas yra būtina patikra, o ne visa užsakymo specifikacija.",
+            "Pavyzdžiui, pagrindiniame skelbimo vaizde gali būti tamsi rankinė, o pigiausias pasirenkamas variantas — aksesuaras. Prieš užsakydami perskaitykite varianto tekstą ir kainą jį pasirinkę. Užsirašykite tikslų pasirinkimą, kad prekės nuoroda būtų susieta su aiškia instrukcija, o ne tik pažįstama nuotrauka."
+          ],
+          "bullets": [
+            "Sutikrinkite prekyvietę, šaltinio skelbimą ir pardavėją, kai matomas.",
+            "Palyginkite prekės tipą, nuotraukas ir svarbias specifikacijas.",
+            "Aiškiai pasirinkite norimą stilių, spalvą, dydį ir kiekį.",
+            "Patvirtinkite dabartinę sumą ir po pirkimo išsaugokite oficialų užsakymo nuorodos numerį."
+          ]
+        },
+        {
+          "id": "troubleshoot-a-link",
+          "title": "Šalinkite nuorodos triktis nepakeisdami prekės kita",
+          "paragraphs": [
+            "Jei nuoroda neveikia, patikrinkite, ar pradinis skelbimas vis dar atsidaro, ar nukopijuotas URL pilnas ir ar tarpinėje nuorodoje likęs norimas šaltinis. Bandykite dar kartą per oficialią Pikobuy paiešką arba kreipkitės į pagalbą su visu URL ir neatitikimo ekrano kopija. Nekeiskite prekės vizualiai panašiu rezultatu dar kartą nepatikrinę jo šaltinio ir variantų.",
+            "Ši svetainė neskelbia turinti universalaus keitiklio kiekvienam tarpininkui, sutrumpintam URL ar prekyvietės formatui. Prieinamos pirkimo nuorodos nukreipia į Pikobuy, kur dabartinį skelbimą vis tiek reikia peržiūrėti. Išsaugokite pradinį šaltinį pastabose ir po šio perėjimo; jis išlieka naudingas, jei prekės pavadinimas išverstas kitaip arba turite paaiškinti, kokios prekės norėjote."
+          ]
+        }
+      ],
+      "sources": [
+        "https://www.pikobuy.com/guide",
+        "https://www.pikobuy.com/contact",
+        "https://cnfansge.com/"
+      ],
+      "related": [
+        "spreadsheet-guide",
+        "how-to-use-pikobuy",
+        "size-guide"
+      ]
+    },
+    {
+      "slug": "size-guide",
+      "title": "Pikobuy dydžių vadovas: palyginkite matavimus prieš užsakydami",
+      "description": "Skaitykite pardavėjų dydžių lenteles, lyginkite drabužių matavimus ir supraskite, ką sandėlio nuotraukos gali pasakyti apie tinkamumą.",
+      "category": "Prekės patikra",
+      "eyebrow": "DYDŽIAI IR KIRPIMAS",
+      "summary": "Nėra vienos Pikobuy dydžių lentelės visiems pardavėjams. Naudokite paties skelbimo matavimus ir panašų daiktą, kuris jums jau tinka.",
+      "sections": [
+        {
+          "id": "start-with-the-seller",
+          "title": "Naudokite konkretaus skelbimo lentelę",
+          "paragraphs": [
+            "Pikobuy sujungia skirtingų pardavėjų prekes į užsakymo eigą; tai nepaverčia visų prekių viena dydžių sistema. Raidės, tokios kaip M ar XL, nepakanka dviem nesusijusiems skelbimams palyginti. Pradėkite nuo norimos prekės ir versijos lentelės, tada patikrinkite, kokius matavimus ir vienetus ji iš tikrųjų aprašo.",
+            "Ieškokite skirtumo tarp kūno matmenų ir gatavo drabužio matmenų. Krūtinės skaičius, apibūdinantis dėvėtoją, turi kitą paskirtį nei lygiai paguldytų marškinių plotis. Jei lentelė šio skirtumo aiškiai neparodo, paklauskite prieš rinkdamiesi. Užtikrintas vienos dviprasmiškos žymos pavertimas kita dviprasmybės nepašalina."
+          ]
+        },
+        {
+          "id": "measure-a-reference",
+          "title": "Išmatuokite panašų drabužį, kurį jau dėvite",
+          "paragraphs": [
+            "Pasirinkite panašios paskirties ir kirpimo drabužį. Laisvą džemperį lyginkite su kitu laisvu džemperiu, o ne naudokite prigludusius marškinius kaip vienintelį pavyzdį. Paguldykite lygiai, netempdami, ir užrašykite tuos pačius matmenis, kurie pateikti pardavėjo lentelėje. Naudokite centimetrus, jei tai lentelės vienetas; vienas colis lygus 2,54 centimetro.",
+            "Viršutiniam drabužiui dažnai naudingi krūtinės plotis, drabužio ilgis, pečių plotis ir rankovės ilgis. Kelnėms liemuo, klyno aukštis ir vidinės siūlės ilgis gali būti tiek pat svarbūs kaip pažymėtas dydis. Matavimo galiniai taškai turi sutapti su pardavėjo metodu. Rankovės, matuotos nuo peties siūlės, negalima tiesiogiai lyginti su matuota nuo kaklo centro."
+          ],
+          "bullets": [
+            "Palyginimo drabužis: įvardykite drabužį ir aprašykite, kaip jis jums tinka.",
+            "Matavimo metodas: pažymėkite, kur prasideda ir baigiasi matavimo juosta.",
+            "Vienetai: prieš lygindami visus skaičius pateikite tuo pačiu vienetu.",
+            "Pageidaujamas kirpimas: užsirašykite, kur norite daugiau ar mažiau laisvumo."
+          ]
+        },
+        {
+          "id": "read-width-correctly",
+          "title": "Nepainiokite plokščio pločio su apimtimi",
+          "paragraphs": [
+            "Įsivaizduokite, kad jūsų palyginimo marškiniai, paguldyti lygiai, per krūtinę yra 54 cm pločio, o pardavėjo lentelėje krūtinei nurodyta 108 cm. Šie skaičiai gali aprašyti palyginamus matmenis, jei pardavėjo skaičius yra apimtis. Jie nėra automatiškai palyginami: pirmiausia patvirtinkite lentelės metodą. Pavyzdys parodo, kodėl žymos svarbesnės nei virš jų esanti dydžio raidė.",
+            "Nelyginkite kūno apimties tiesiogiai su gatavu drabužiu tikėdamiesi vienodo prigludimo. Drabužio forma, numatytas laisvumas ir audinio elgsena veikia patogumą. Verčiau lyginkite lygiaverčius matavimus ir paklauskite pardavėjo trūkstamo matmens. Jei skelbime pateikta matavimo paklaida, laikykite šią informaciją prie lentelės, o ne kiekvieną skaičių laikykite tiksliu."
+          ]
+        },
+        {
+          "id": "shoes-and-accessories",
+          "title": "Taikykite tą patį metodą avalynei ir aksesuarams",
+          "paragraphs": [
+            "Avalynei naudokite konkrečią pardavėjo lentelę ir nustatykite, ar centimetrų reikšmė reiškia pėdos ilgį, vidpadžio ilgį ar kitą matmenį. Šie matavimai nėra tarpusavyje pakeičiami. Pažįstama ES, Jungtinės Karalystės ar JAV dydžio žyma gali padėti naršyti variantus, bet neturėtų pakeisti to konkretaus skelbimo lentelės patikros.",
+            "Rankinėms, diržams ir kitiems aksesuarams tinkamumas gali priklausyti nuo naudojamo matmens, o ne drabužių dydžio. Visas diržo ilgis skiriasi nuo atstumo iki užsegimo skylučių; išoriniai rankinės matmenys nebūtinai aprašo jos angą. Užsirašykite numatytam naudojimui svarbų matmenį ir paprašykite jo, jei skelbime nėra."
+          ]
+        },
+        {
+          "id": "when-information-is-missing",
+          "title": "Užduokite klausimą, į kurį galima atsakyti",
+          "paragraphs": [
+            "Užuot klausę, ar prekė atitinka įprastą dydį, pateikite tikslų prašymą: patvirtinkite šio dydžio ir spalvos krūtinės plotį, matuojamą paguldžius po pažastimis, bei nugaros ilgį. Pridėkite tinkamo skelbimo nuorodą ir nurodykite variantą. Taip mažesnė tikimybė, kad atsakymas bus apie kitą versiją ar bendrą dydžio rekomendaciją.",
+            "Jei renkatės tarp dviejų variantų, palyginkite norimą prigludimą lemiančius matmenis ir patikrinkite, kas dar nežinoma. Netaikykite automatinės taisyklės pas visus pardavėjus rinktis didesnį ar mažesnį dydį. Jei esminio matmens patvirtinti negalima, prieš mokėdami nuspręskite, ar neapibrėžtumas priimtinas, užuot tikėjęsi, kad sandėlio nuotraukos vėliau atsakys į viską."
+          ]
+        },
+        {
+          "id": "qc-and-fit",
+          "title": "Naudokite sandėlio nuotraukas patikroms, kurias jos gali pagrįsti",
+          "paragraphs": [
+            "Kai užsakymas pasiekia sandėlį, palyginkite matomą dydžio etiketę ir prašytų matavimų įrodymus su savo pasirinkimu. Kampu nufotografuotą matavimo juostą gali būti sunku perskaityti, o bendra prekės nuotrauka nepatvirtina tinkamumo. Kai reikia išspręsti konkretų neatitikimą, klauskite oficialios pagalbos apie aiškesnį matavimą ar papildomą vaizdą; prieinamumas ir mokesčiai turėtų būti patvirtinti jūsų užsakymui.",
+            "Kokybės patikros nuotraukos negali parodyti, kaip drabužis jausis ant jūsų kūno, ar garantuoti patogumo po dėvėjimo. Išsaugokite pradinę lentelę ir savo palyginimo matavimus, kol peržiūrėsite užsakymą. Jei įrodymai rodo, kad atvyko netinkamas variantas, naudokite šiuos įrašus problemai nedelsiant aprašyti ir prieš leisdami toliau siųsti perskaitykite dabartines grąžinimo sąlygas."
+          ]
+        }
+      ],
+      "sources": [
+        "https://www.pikobuy.com/guide",
+        "https://www.pikobuy.com/protocol/shipping",
+        "https://www.pikobuy.com/protocol/returns"
+      ],
+      "related": [
+        "qc-photos",
+        "returns-refunds",
+        "how-to-use-pikobuy"
+      ]
+    },
+    {
+      "slug": "fees-budget",
+      "title": "Pikobuy mokesčiai ir išlaidos: sudarykite visą užsakymo biudžetą",
+      "description": "Atskirkite prekių kainą, vietinį pristatymą, tarptautinį siuntimą ir taikomus mokesčius, tada sutikrinkite faktiškai nuskaičiuotas sumas.",
+      "category": "Siuntimo planavimas",
+      "eyebrow": "IŠLAIDOS IR MOKĖJIMAI",
+      "summary": "Prekės kaina yra pirmoji užsakymo biudžeto dalis. Kiekvieną vėlesnį mokestį laikykite atskirai, kad įvertis netaptų prielaida apie galutinę sumą.",
+      "sections": [
+        {
+          "id": "two-payment-stages",
+          "title": "Planuokite daugiau nei katalogo kainą",
+          "paragraphs": [
+            "Maža prekės kaina neparodo visų užsakymo gavimo išlaidų. Oficiali Pikobuy eiga atskiria prekės pirkimą nuo tarptautinio siuntinio apmokėjimo. Todėl pirmojo mokėjimo nereikėtų laikyti įrodymu, kad visos vėlesnės išlaidos jau padengtos.",
+            "Pradėkite biudžetą prieš pateikdami pirkimo užsakymą ir atnaujinkite, kai gaunate patikimesnės informacijos. Žymėkite sumas kaip užfiksuotą kainą, įvertį, pasiūlymą arba apmokėtą sumą. Šis paprastas skirtumas neleidžia apytikrio siuntimo skaičiavimo supainioti su sąskaita. Prie kiekvieno skaičiaus nurodykite valiutą, ypač kai katalogas rodo patogų perskaičiavimą, o užsakymas apmokamas kita valiuta."
+          ]
+        },
+        {
+          "id": "budget-lines",
+          "title": "Kiekvienai išlaidų rūšiai skirkite atskirą eilutę",
+          "paragraphs": [
+            "Praktinėje darbalapio lentelėje kiekvienai išlaidai skiriama eilutė, o valiutai, sumai, įrodymui ir mokėjimo etapui — stulpeliai. Įrodymas gali būti apmokėjimo išklotinė, oficialus maršruto pasiūlymas ar mokėjimo paslaugos teikėjo užbaigta operacija. Nežinomą sumą palikite tuščią ir pažymėkite kaip neišspręstą; įrašius nulį nepilnas biudžetas gali atrodyti baigtas.",
+            "Toliau pateiktos eilutės yra planavimo sistema, o ne teiginys, kad kiekvienas mokestis taikomas kiekvienam užsakymui. Sujunkite arba pašalinkite eilutę tik patikrinę, kaip ji pateikta dabartiniame pasiūlyme. Ypač venkite pridėti mokestį du kartus, kai į bendrą pasiūlymą jau įtraukta ta pati suma."
+          ],
+          "bullets": [
+            "Prekės: pasirinkto varianto kaina padauginta iš patvirtinto kiekio.",
+            "Pardavėjo pristatymas: mokestis už prekių nugabenimą į sandėlį.",
+            "Prašomos paslaugos: taikomas pakavimas, papildomos nuotraukos ar kitos pasirinktos paslaugos.",
+            "Tarptautinis transportas: pasirinkto siuntinio ir maršruto pasiūlyme nurodytas mokestis.",
+            "Platformos mokesčiai: paslaugų mokesčiai, rodomi taikomoje mokėjimo išklotinėje.",
+            "Mokėjimo ir paskirties vietos išlaidos: taikomi valiutos keitimo, paslaugos teikėjo ar paskirties vietos mokesčiai."
+          ]
+        },
+        {
+          "id": "published-platform-fee",
+          "title": "Skaitykite paskelbtą 8% mokestį tinkamame kontekste",
+          "paragraphs": [
+            "2026 m. spalio 20 d. patikrintos Pikobuy naudotojo sutarties tarpvalstybinio siuntinių persiuntimo dalyje nurodytas platformos paslaugos mokestis, skaičiuojamas kaip 8% siuntimo kainos. Joje taip pat pažymima, kad atsiskaitymo laikas ir valiutų kursų skirtumai gali paveikti skaičiavimą. Tai su siuntimu susijusi nuostata, o ne universalus 8% antkainis visam prekių užsakymui.",
+            "Prieš patys taikydami šį skaičių perskaitykite dabartinę siuntimo mokėjimo išklotinę. Patikrinkite mokesčio pagrindą ir ar rodoma bendra suma jį jau apima. Jei žymos neaiškios, paprašykite oficialios pagalbos įvardyti tarptautinio transporto sumą, platformos mokestį ir mokėtiną bendrą sumą. Nemanykite, kad mokesčio nebuvimas reklamos antraštėje visą operaciją atleidžia nuo paslaugų mokesčių."
+          ]
+        },
+        {
+          "id": "use-estimates-carefully",
+          "title": "Apytikrius siuntimo duomenis pakeiskite siuntinio įrodymais",
+          "paragraphs": [
+            "Pirkimo pradžioje galite nežinoti supakuoto svorio ar matmenų. Užfiksuokite įverčio prielaidas, kad vėliau galėtumėte jas patikslinti. Mažo aksesuaro ir didelės prekės dėžėje nereikėtų lyginti naudojant tą patį spėjamą siuntinį. Maršrutų prieinamumas ir apmokestinimo metodai taip pat priklauso nuo tikrosios siuntos, kurią ketinate siųsti.",
+            "Kai sandėlio informacija prieinama, grįžkite prie oficialios skaičiuoklės ir siūlomų maršrutų su dabartiniais siuntinio duomenimis. Lyginkite variantus su tuo pačiu turiniu, paskirties vieta ir pakavimo prielaidomis. Jei vienas pasiūlymas apima paslaugą, kuri kitame išvardyta atskirai, sutikrinkite skirtumus prieš spręsdami, kuris pigesnis. Galutinį maršruto pasiūlymą laikykite su užsakymo įrašais."
+          ]
+        },
+        {
+          "id": "currency-and-coupons",
+          "title": "Lyginkite mokėtinas sumas, o ne reklaminius procentus",
+          "paragraphs": [
+            "Kuponui patikrinkite dabartinį tinkamumą, galiojimo pabaigą, minimalią išlaidų sumą ir mokestį, kurį jis gali sumažinti. Vien procentų antraštė neparodo galutinio sutaupymo. Užrašykite sumą prieš kuponą ir faktiškai mokėtiną sumą jį pritaikius. Šis vadovas nežada registracijos nuolaidos ar kupono, kuris jūsų paskyrai gali būti neprieinamas.",
+            "Kai keičiama valiuta, išsaugokite mokėjimo metu rodomą sumą ir valiutą bei vėliau paslaugos teikėjo nuskaičiuotą sumą. Jos gali padėti suprasti tikrąją kainą neišgalvojant vieno kurso visiems. Konkretaus teikėjo mokestį tikrinkite tiesiogiai su juo. Paskirties vietos mokesčiams naudokite atitinkamos oficialios institucijos ar vežėjo informaciją jūsų siuntai, o ne manykite, kad mokesčių režimas universalus."
+          ]
+        },
+        {
+          "id": "reconcile-the-order",
+          "title": "Sutikrinkite biudžetą po kiekvieno mokėjimo",
+          "paragraphs": [
+            "Tarkime, planuojate dvi prekes iš skirtingų pardavėjų. Kiekvieną prekę ir jos pardavėjo pristatymo mokestį laikykite atskirai, tada abiem priskirkite tarptautinio siuntinio pasiūlymą, kai žinosite, kaip jos bus siunčiamos. Šiam pavyzdžiui nereikia spėjamos kainos: jo tikslas — parodyti, kodėl vienos prekės pagrindinės kainos dauginimas neduoda galutinės užsakymo sumos.",
+            "Po mokėjimo atitinkamą įvertį pakeiskite faktiškai nuskaičiuota suma ir išsaugokite jos nuorodą. Neapmokėtas arba neišspręstas eilutes palikite matomas. Jei grąžinami pinigai, užrašykite tai kaip atskirą koregavimą, o ne ištrinkite pradinį mokėjimą. Tada aiškiai matysite, kokius įsipareigojimus prisiėmėte, ką dar reikia mokėti ir kurią sumą turi paaiškinti oficiali pagalba."
+          ]
+        }
+      ],
+      "sources": [
+        "https://www.pikobuy.com/protocol/user",
+        "https://www.pikobuy.com/guide",
+        "https://www.pikobuy.com/shipping-cost",
+        "https://www.pikobuy.com/protocol/terms",
+        "https://www.pikobuy.com/contact"
+      ],
+      "related": [
+        "shipping-cost",
+        "warehouse-consolidation",
+        "how-to-use-pikobuy"
+      ]
+    },
+    {
+      "slug": "shipping-cost",
+      "title": "Pikobuy siuntimo kaina: nuo pirmojo įverčio iki siuntinio apmokėjimo",
+      "description": "Sužinokite, kokius duomenis įvesti į Pikobuy siuntimo skaičiuoklę, kodėl įvertis gali keistis ir ką patikrinti prieš mokant už siuntinį.",
+      "category": "Siuntimas",
+      "eyebrow": "Siuntimo kainos vadovas",
+      "summary": "Naudingas siuntimo įvertis yra planavimo įrankis, pagrįstas teisingais įvesties duomenimis. Šis vadovas aiškina, kaip palyginti preliminarius skaičius su galiausiai pateikiamu siuntiniu, nelaikant ankstyvo pasiūlymo fiksuota kaina su pristatymu.",
+      "sections": [
+        {
+          "id": "estimate-purpose",
+          "title": "Pradėkite nuo sprendimo, kuriam reikalingas įvertis",
+          "paragraphs": [
+            "Prieš surinkdami prekių krepšelį nuspręskite, ką turite sužinoti iš siuntimo įverčio. Galbūt tikrinate, ar visas užsakymas telpa į biudžetą, lyginate du pakavimo variantus arba sprendžiate, ar laukti kitos prekės. Tai skirtingi klausimai. Pirmiausia užrašykite sprendimą, kad maža atrodanti suma netaptų vienintele priežastimi pasirinkti maršrutą.",
+            "Oficiali skaičiuoklė prašo paskirties vietos, prekės tipo, svorio ir matmenų. Šie duomenys aprašo siuntą, o ne tiesiog pirkinių sąrašą. Jei kuris nežinomas, užrašykite neapibrėžtumą šalia įverčio. Pasiūlymas, pagrįstas spėjamu siuntinio dydžiu, biudžete turėtų likti preliminarus. Išsaugokite datą ir įvesties duomenis, kad vėliau galėtumėte prasmingai palyginti rezultatą."
+          ]
+        },
+        {
+          "id": "input-checklist",
+          "title": "Paruoškite nuoseklų įvesties duomenų rinkinį",
+          "paragraphs": [
+            "Lygindami variantus naudokite tą pačią paskirties vietą ir prekių informaciją. Skaičiuoklėje svoris pateikiamas kilogramais, matmenys — centimetrais. Vieneto klaida gali nustelbti bet kokį mažą maršrutų skirtumą. Jei perskaičiuojate matmenį, pastabose laikykite ir pradinį, ir perskaičiuotą skaičių; taip daug lengviau pastebėti netinkamą kablelio vietą ar netyčinį vieneto pakeitimą.",
+            "Praktiniam planavimui sudarykite mažą darbalapį su viena eilute kiekvienam galimam siuntiniui. Atskirkite patvirtintus matavimus nuo prielaidų. Pardavėjo prekės matmens nevadinkite galutiniu išoriniu siuntinio matmeniu. Kai sandėlio įraše pateikiama tinkamesnė informacija, pakeiskite prielaidą ir palyginkite dar kartą. Tai planavimo metodas, o ne teiginys, kad kiekvienas įvertis bus perskaičiuotas automatiškai."
+          ]
+        },
+        {
+          "id": "route-details",
+          "title": "Perskaitykite kiekvieno maršruto sąlygas",
+          "paragraphs": [
+            "Pikobuy pirkimo vadove teigiama, kad maršrutai skiriasi pristatymo laiku ir apmokestinimo metodais. Atidarykite kiekvieno svarstomo maršruto informaciją ir lyginkite lygiaverčius duomenis. Įvertis naudingas tik tada, jei maršrutu galima gabenti tikrąjį siuntinį į numatytą vietą. Pasižymėkite sąlygas, kurias pagalba dar turi paaiškinti prieš mokant.",
+            "Prasmingame palyginime kartu fiksuojama rodoma suma, taikoma siuntinio informacija ir termino aprašymas. Jei maršrutas paaiškina apmokestinamo svorio skaičiavimą, laikykitės jo paskelbtos taisyklės, o ne skolinkitės formulę iš kito vežėjo ar seno forumo įrašo. Jei taisyklė neaiški, paklauskite, kaip būtų apmokestintas numatytas siuntinys. Nespėkite, kuris maršrutas pigiausias, nepatikrinę šių konkrečių duomenų."
+          ]
+        },
+        {
+          "id": "payment-breakdown",
+          "title": "Palyginkite pasiūlymą su mokėjimo išklotine",
+          "paragraphs": [
+            "Atskirkite prekės pirkimą nuo siuntinio pristatymo jums išlaidų. Sudarykite biudžetą su aiškiomis eilutėmis jau sumokėtoms sumoms, kitam prašomam mokėjimui ir neišspręstoms išlaidoms. Tai neleidžia mažai prekės kainai paslėpti užsakymo, viršijančio bendrą numatytą išleisti sumą. Neatimkite nuolaidos, jei ji faktiškai neatsispindi peržiūrimoje operacijoje.",
+            "Paslaugų sutartyje nurodytas 8% platformos mokestis už siuntimą, taikant atsiskaitymo išlygas. Dabartinę apmokėjimo išklotinę laikykite tikrintinu dokumentu, o ne priežastimi tą patį procentą pridėti du kartus. Jei atrodo, kad rodoma suma jau apima mokestį, paprašykite paaiškinimo, užuot atkūrę sąskaitą iš prielaidų. Patvirtintą išklotinę laikykite su siuntinio įrašu."
+          ]
+        },
+        {
+          "id": "changes",
+          "title": "Ištirkite pasikeitusią sumą prieš ją patvirtindami",
+          "paragraphs": [
+            "Kai vėlesnė suma skiriasi nuo įverčio, pirmiausia palyginkite įvesties duomenis. Ieškokite pasikeitusios siuntinio sudėties, patikslintų matmenų, kito maršruto ar pridėtos paslaugos. Tai naudingi tiriami klausimai, o ne teiginys, kad įvyko konkretus pokytis. Jei negalite patys nustatyti priežasties, nusiųskite pagalbai abu įrašus palyginimui.",
+            "Naudingiausia galutinė patikra paprasta: ar galite paaiškinti, už ką mokate, kurį siuntinį tai apima ir kokie neaiškumai lieka? Jei taip, apytikrį įvertį pavertėte informuotu sprendimu. Jei ne, atidėkite sprendimą ir paprašykite aiškios išklotinės. Išsaugokite šį darbalapį kitam užsakymui, kad jo biudžetas prasidėtų nuo geresnės informacijos."
+          ]
+        }
+      ],
+      "sources": [
+        "https://www.pikobuy.com/shipping-cost",
+        "https://www.pikobuy.com/guide",
+        "https://www.pikobuy.com/protocol/user"
+      ],
+      "related": [
+        "warehouse-consolidation",
+        "order-tracking",
+        "returns-refunds"
+      ]
+    },
+    {
+      "slug": "qc-photos",
+      "title": "Pikobuy kokybės patikros nuotraukos: ką tikrinti ir ko vaizdai negali įrodyti",
+      "description": "Naudokite sandėlio nuotraukas matomoms užsakymo detalėms tikrinti, prašykite naudingų papildomų vaizdų ir prieš organizuodami siuntimą supraskite vizualios patikros ribas.",
+      "category": "Sandėlis",
+      "eyebrow": "Kokybės patikros nuotraukų vadovas",
+      "summary": "Sandėlio nuotraukos yra įrodymas to, ką gali parodyti kamera. Kruopšti peržiūra prasideda nuo jūsų užsakymo ir aiškaus kontrolinio sąrašo, tada atskiria matomus pastebėjimus nuo klausimų, kuriems reikia matavimų, pardavėjo informacijos ar specialisto bandymų.",
+      "sections": [
+        {
+          "id": "right-record",
+          "title": "Įsitikinkite, kad peržiūrite tinkamą prekę",
+          "paragraphs": [
+            "Pradėkite nuo užsakymo nuorodos numerio, pasirinkto varianto ir kiekio. Palyginkite juos su pradine informacija apie tai, ką ketinote pirkti. Peržiūrėdami vaizdus laikykite pirkimo įrašą atidarytą, kad atmintis netaptų standartu. Panašios prekės gali skirtis smulkmenomis, o įtikinama katalogo nuotrauka neįrodo, kad konkreti sandėlio prekė atitinka jūsų pasirinkimą.",
+            "Šioje prekių lentelėje naudojamas katalogo turinys iš cnfansge.com. Laikykite šiuos vaizdus paieškos medžiaga ir atskirkite nuo nuotraukų, pridėtų prie jūsų Pikobuy užsakymo. Oficialiame pirkimo vadove aprašomos nuotraukos ir defektų patikros po atvykimo į sandėlį. Kai reikia sprendimo dėl nupirktos prekės, naudokite tikruosius jos užsakymo įrodymus, o ne vaizdą, kuris tik iliustruoja skelbimą."
+          ]
+        },
+        {
+          "id": "visible-checks",
+          "title": "Vienu metu tikrinkite vieną matomą klausimą",
+          "paragraphs": [
+            "Peržiūrėkite nuotraukas pakartojama tvarka: bendra išvaizda, matomos etiketės, varianto detalės, kiekis ir galimi pažeidimai. Užfiksuokite pastebėjimus su nuoroda į atitinkamą vaizdą. Pasakyti, kad prie siūlės matoma žymė, naudingiau nei pareikšti, kad visa prekė nekokybiška. Lygiai taip pat atsargiai vertinkite vaizdą, kuris per mažas ar neryškus išvadai pagrįsti.",
+            "Drabužiui naudingas klausimas gali būti apie matomą dydžio etiketę ar prašytą matavimą. Kitai prekei jis gali būti apie jungtį, pridedamą dalį ar išorinę būklę. Tai peržiūros klausimų pavyzdžiai, o ne pažadai, kad standartinės nuotraukos juos apima. Sudarykite kontrolinį sąrašą pagal sprendimą, kurį turite priimti, ir nereikalaukite ilgo nuotraukų rinkinio, kuris to sprendimo nepakeistų."
+          ]
+        },
+        {
+          "id": "photo-limits",
+          "title": "Atskirkite matomą būklę nuo paslėptų savybių",
+          "paragraphs": [
+            "Pikobuy persiuntimo sąlygos ir paslaugų sutartis riboja profesionalią patikrą. Neinterpretuokite nuotraukos kaip autentiškumo sertifikato, saugumo bandymo ar ilgalaikio veikimo įrodymo. Išorės vaizdas negali patvirtinti visko viduje. Taip pat vien vaizdo, kuris skiriasi nuo pardavėjo studijinės nuotraukos, nepakanka įrodyti, kad atvyko netinkama prekė.",
+            "Apšvietimas, kampas ir vaizdo kokybė gali paveikti vertinimą. Kai skirtumas svarbus, tiesiogiai aprašykite neaiškumą: nuotrauka neparodo informacijos pakankamai aiškiai, kad būtų galima nuspręsti. Paklauskite, kokių papildomų įrodymų galima gauti. Atsakinga išvada gali būti siauresnė nei priėmimas ar atmetimas; neišspręsto klausimo įvardijimas naudingas, jei neleidžia priimti sprendimo pagal nepakankamus įrodymus."
+          ]
+        },
+        {
+          "id": "request-photos",
+          "title": "Prašykite vaizdo, atsakančio į konkretų klausimą",
+          "paragraphs": [
+            "Persiuntimo sąlygose aprašomos mokamos papildomos detalios nuotraukos. Prieš jų prašydami nustatykite trūkstamą informaciją ir paklauskite apie prieinamumą bei kainą. Naudokite trumpą instrukciją, pavyzdžiui, įskaitomas konkrečios etiketės vaizdas arba nurodytos vietos nuotrauka. Paaiškinkite, kuriam užsakymui skirtas prašymas ir kodėl esamas vaizdas neatsako į klausimą.",
+            "Jei padėtų matavimas, nurodykite du matuotinus taškus ir reikalingą vienetą. Nemanykite, kad sandėlis numanys jūsų pageidaujamą matavimo metodą. Gavę atsakymą patikrinkite, ar jis atsako į pradinį klausimą, o ne tik prideda kitą kampą. Jei prašoma patikra neįeina į tikrinimo paslaugą, nuspręskite, ar reikia pardavėjo informacijos arba kito tikrinimo metodo."
+          ]
+        },
+        {
+          "id": "next-action",
+          "title": "Paverskite peržiūrą aiškiu kitu žingsniu",
+          "paragraphs": [
+            "Kiekvienai prekei išsaugokite trumpą rezultatą: matomų problemų nenustatyta, prašoma paaiškinimo arba yra klausimas pagalbos tarnybai. Tai jūsų peržiūros įrašas, o ne oficiali sandėlio būsena. Naudingus vaizdus ir susijusias žinutes laikykite kartu. Jei svarstote grąžinimą, nedelsdami perskaitykite dabartines taisykles ir neprašykite pakuotės keitimo, kol nesuprantate poveikio tinkamumui grąžinti.",
+            "Pranešdami apie problemą pateikite užsakymo nuorodos numerį, pasirinktą variantą, atitinkamą vaizdą ir faktinį neatitikimo aprašymą. Nurodykite prašomą sprendimą neteigdami, kad jis jau patvirtintas. Kokybės patikros tikslas — geresnis sprendimas dėl tikrosios prekės. Tvarkingas įrodymų įrašas padeda paaiškinti tą sprendimą ir likusius klausimus prieš organizuojant kitą etapą."
+          ]
+        }
+      ],
+      "sources": [
+        "https://www.pikobuy.com/guide",
+        "https://www.pikobuy.com/protocol/shipping",
+        "https://www.pikobuy.com/protocol/user",
+        "https://www.pikobuy.com/protocol/returns"
+      ],
+      "related": [
+        "returns-refunds",
+        "warehouse-consolidation",
+        "shipping-cost"
+      ]
+    },
+    {
+      "slug": "returns-refunds",
+      "title": "Pikobuy grąžinimas ir pinigų grąžinimas: patikrinkite terminą, įrodymus ir išlaidas",
+      "description": "Supraskite Pikobuy paskelbtą grąžinimo iš sandėlio laikotarpį, pardavėjo patvirtinimą ir tinkamumo taisykles bei praktinę eigą neaiškiems mokesčiams ar taisyklių skirtumams spręsti.",
+      "category": "Užsakymai",
+      "eyebrow": "Grąžinimo vadovas",
+      "summary": "Grąžinimo prašymas apima kelis atskirus klausimus: ar prekė tinkama grąžinti, ar prašymas pateiktas laiku, ar pardavėjas sutinka ir kokios išlaidos taikomos. Atsakyti į juos atskirai patikimiau nei manyti, kad grąžinimo mygtukas garantuoja pinigų grąžinimą.",
+      "sections": [
+        {
+          "id": "deadline",
+          "title": "Pirmiausia patikrinkite sandėlio būsenos laiką",
+          "paragraphs": [
+            "Pikobuy grąžinimo puslapyje nustatytas penkių dienų, 120 valandų, laikotarpis po būsenos Sandėlyje suteikimo, skaičiuojant nuo kitos valandos. Perskaitykite savo užsakymo laiko žymą ir kilus problemai veikite nedelsdami. Nepakeiskite užsakymo įrašo data, kai tiesiog pastebėjote prekę. Paskelbtas laikotarpis skirtas prašymui pateikti, o ne pažadui per tą laiką užbaigti visą procesą.",
+            "Sukurkite trumpą pastabą su užsakymo nuorodos numeriu, užregistruotu būsenos laiku ir priežastimi, dėl kurios svarstote grąžinimą. Pridėkite kreipimosi į pagalbą datą. Jei laiko žyma ar laiko juosta neaiški, klauskite iš karto, užuot užtikrintai skaičiavę iš nepilnos informacijos. Ši pastaba yra praktinis būdas išlaikyti aiškią seką; ji nepratęsia platformos termino."
+          ]
+        },
+        {
+          "id": "eligibility",
+          "title": "Atskirkite tinkamumą grąžinti nuo nepasitenkinimo",
+          "paragraphs": [
+            "Grąžinimo taisyklės sieja tinkamumą su pardavėjo dalyvavimu, būkle, tinkama pakartotiniam pardavimui, ir terminais. Jose taip pat nurodytos išimtys, įskaitant pagal užsakymą pagamintas prekes ir tam tikras prekes su pašalintomis etiketėmis ar pakuote. Prieš keisdami prekę arba jos pakuotę perskaitykite jos kategorijos reikalavimus. Gebėjimas aiškiai apibūdinti rūpestį yra vertingas, bet pats savaime nepatvirtina, kad konkretus grąžinimas privalo būti priimtas.",
+            "Prašymą grįskite stebimais faktais. Palyginkite pasirinktą variantą su gauta preke ir nurodykite atitinkamą nuotrauką ar užsakymo detalę. Atskirkite akivaizdžiai netinkamą prekę nuo pasikeitusio pageidavimo ir matomą defektą nuo to, ko nuotrauka nerodo aiškiai. Tikslūs aprašymai padeda visiems spręsti tą patį klausimą; perdėjimas gali apsunkinti paprasto neatitikimo tyrimą."
+          ]
+        },
+        {
+          "id": "request",
+          "title": "Pateikite konkretų prašymą ir išsaugokite atsakymą",
+          "paragraphs": [
+            "Oficialiose taisyklėse reikalaujama pardavėjo sutikimo. Prašymo pateikimą, patvirtinimo gavimą ir pinigų grąžinimą laikykite atskirais įvykiais. Išsaugokite kiekvieną įvykį patvirtinantį susirašinėjimą, užuot manę, kad kitas žingsnis jau įvyko. Jei pagalba prašo daugiau įrodymų, atsakykite pateikdami prašomą medžiagą ir susiekite ją su pradiniu užsakymo nuorodos numeriu.",
+            "Naudingas prašymas gali būti trumpas: identifikuokite prekę, aprašykite priežastį, nurodykite įrodymus ir pageidaujamą rezultatą. Paklauskite, koks veiksmas reikalingas toliau ir ar papildomas tvarkymas paveiktų tinkamumą grąžinti. Jei gaunate sąlyginį atsakymą, užrašykite sąlygą savo pastabose. Nevadinkite grąžinimo patvirtintu, kol atsakymas to iš tikrųjų nepatvirtina."
+          ]
+        },
+        {
+          "id": "cost-ambiguity",
+          "title": "Paprašykite konkretaus užsakymo mokesčių paaiškinimo",
+          "paragraphs": [
+            "Viešuose puslapiuose ne visos grąžinimo išlaidos aprašomos nuosekliai. Grąžinimo puslapio lentelė ir mokesčių dalis skiriasi dėl pradinio siuntimo mokesčio prekėms, kurių pristatymas iš pradžių buvo nemokamas; paslaugų sutartyje taip pat minima ribota nemokamų paslaugų norma. Šie skirtumai yra priežastis prašyti paaiškinimo, o ne pagrindas pasirinkti sakinį, duodantį pigiausią rezultatą. Šis vadovas jų neišsprendžia Pikobuy vardu.",
+            "Paklauskite apie transporto mokesčius, paslaugos mokestį ir numatomą grąžintiną sumą konkrečiai jūsų priežasčiai ir užsakymui. Palyginkite paaiškinimą su iš pradžių sumokėta suma ir išsaugokite atsakymą. Jei mokestis keičiasi, prieš sutikdami su nepaaiškintu atskaitymu paprašykite priežasties. Aiški išklotinė naudingesnė nei bendras pažadas, kad grąžinimas nemokamas, ar skaičiavimas iš prieštaringų pastraipų."
+          ]
+        },
+        {
+          "id": "refund-record",
+          "title": "Sekite tikrąjį pinigų grąžinimo įrašą iki pabaigos",
+          "paragraphs": [
+            "Prašymo ir pinigų grąžinimo įrašus laikykite kartu, bet nelaikykite jų pakeičiamais. Pažymėkite patvirtintą sumą, kaip grąžintą rodomą sumą ir bet kokį neišspręstą skirtumą. Kai neaiški pinigų grąžinimo paskirties vieta ar laikas, klauskite pagalbos apie konkrečią operaciją. Čia peržiūrėta oficiali medžiaga nepagrindžia universalaus pažado, kad kiekvienas grąžinimas gaunamas tuo pačiu būdu per tiek pat dienų.",
+            "Prieš uždarydami savo įrašą patikrinkite, ar rezultatas atitinka gautą patvirtinimą. Jei ne, nusiųskite vieną glaustą papildomą užklausą su užsakymo nuorodos numeriu, patvirtinimo įrodymu ir tiksliu likusiu klausimu. Tai suteikia pagalbai nuoseklią istoriją ir neverčia atkurti išsibarsčiusių žinučių. Kitam pirkimui grąžinimo sąlygas peržiūrėkite prieš mokėdami ir išsaugokite pakuotę, kol sprendžiate, ar prekė atitinka poreikius."
+          ]
+        }
+      ],
+      "sources": [
+        "https://www.pikobuy.com/protocol/returns",
+        "https://www.pikobuy.com/protocol/user",
+        "https://www.pikobuy.com/contact"
+      ],
+      "related": [
+        "qc-photos",
+        "warehouse-consolidation",
+        "shipping-cost"
+      ]
+    },
+    {
+      "slug": "warehouse-consolidation",
+      "title": "Pikobuy sandėlis ir sujungimas: suplanuokite siuntinį prieš siųsdami",
+      "description": "Peržiūrėkite sandėlio įrodymus, atskirkite pirkimą nuo persiuntimo, palyginkite pakavimo pasirinkimus ir įvertinkite sujungimą nemanydami, kad sutaupymas garantuotas.",
+      "category": "Sandėlis",
+      "eyebrow": "Sandėlio vadovas",
+      "summary": "Sandėlio etapas yra naudingas sprendimo taškas tarp atskirų prekių pirkimo ir siuntinio išsiuntimo. Naudokite jį patikrinti, kas atvyko, išspręsti klausimus ir palyginti praktinį pakavimo planą su prieinama siuntimo informacija.",
+      "sections": [
+        {
+          "id": "order-types",
+          "title": "Nustatykite, kaip kiekviena prekė pasiekė sandėlį",
+          "paragraphs": [
+            "Per tarpininką nupirkta prekė ir savarankiškai įsigyta bei persiuntimui atsiųsta prekė yra skirtingi pradžios taškai. Pikobuy persiuntimo taisyklės aprašo dabartinio sandėlio adreso gavimą ir persiuntimo informacijos pateikimą. Savarankiškai organizuojamam pristatymui naudokite šias oficialias instrukcijas. Nekopijuokite adreso iš seno bendruomenės įrašo manydami, kad ta pati identifikavimo informacija taikoma kiekvienam klientui.",
+            "Turėkite nedidelį inventoriaus sąrašą, siejantį kiekvieną fizinę prekę su pardavėju ar siuntėju, pirkimo nuorodos numeriu ir sandėlio įrašu. Savarankiškai pirktoms prekėms išsaugokite ir pradinį susirašinėjimą su pardavėju. Tikslas praktinis: jei ko nors trūksta ar kas nors neaišku, turėtumėte galėti nustatyti atitinkamą operaciją nespėliodami, apie kurią iš kelių panašių prekių kalbama žinutėje."
+          ]
+        },
+        {
+          "id": "arrival-review",
+          "title": "Prieš planuodami siuntinį peržiūrėkite gavimo įrodymus",
+          "paragraphs": [
+            "Persiuntimo sąlygose aprašomas gaunamų prekių atidarymas ir tikrinimas. Pažiūrėkite į prie prekės pridėtus įrodymus ir užrašykite dėmesio reikalaujančius klausimus. Užsakymo tapatybės ir matomos būklės patikra prieš aptariant pakavimą atskiria du sprendimus: ar gauta prekė priimtina ir kaip norite, kad priimta prekė būtų paruošta tolesniam siuntimui.",
+            "Visoms prekėms naudokite nuoseklų kontrolinį sąrašą. Patvirtinkite tai, ką galima nustatyti iš prieinamo įrašo, ir pažymėkite neaiškumus. Jei vaizdo nepakanka, užduokite konkretų klausimą, o ne automatiškai pažymėkite prekę kaip tinkamą. Kai svarstote grąžinimą, išspręskite šią galimybę prieš prašydami pakeitimų, galinčių pašalinti naudingus įrodymus ar paveikti tinkamumą pakartotinai parduoti."
+          ]
+        },
+        {
+          "id": "packing",
+          "title": "Aprašykite reikalingą pakavimo rezultatą",
+          "paragraphs": [
+            "Pradedančiųjų vadove minimi minimalios ir sustiprintos pakuotės prašymai. Pradėkite nuo prašymo tikslo: galbūt norite išsaugoti dėžę, apsaugoti pažeidžiamą dalį arba suprasti, ar galima pašalinti nereikalingą išorinę medžiagą. Paklauskite, ką siūloma paslauga keičia ir kiek kainuoja. Vien pakavimo variantų pavadinimai nepaaiškina, kaip tiksliai bus tvarkoma konkreti prekė.",
+            "Nelaikykite mažesnės pakuotės automatiniu pagerinimu. Apsvarstykite, ką sutinkate išmesti, ko reikia pačiai prekei ir kurios detalės tebėra svarbios galimam ginčui ar grąžinimui. Jei paslauga apima negrįžtamą pakeitimą, suformuluokite pakankamai konkretų prašymą, atspindintį jūsų ketinimą. Trumpą rašytinį aprašymą lengviau patikrinti nei miglotą nurodymą viską sumažinti."
+          ]
+        },
+        {
+          "id": "consolidation",
+          "title": "Palyginkite sujungtą siuntinį su realiomis alternatyvomis",
+          "paragraphs": [
+            "Pikobuy kontaktų puslapyje siūloma sujungti skirtingų pardavėjų prekes į vieną siuntinį. Tai patvirtina paslaugos idėją, o ne garantuotą sutaupymo procentą. Sudarykite galimo siuntinio sąrašą, tiksliai parodantį, kurios priimtos prekės keliautų kartu. Palyginkite su jums svarbiomis alternatyvomis naudodami vienodą paskirties informaciją ir geriausius prieinamus siuntinio matavimus.",
+            "Naudingas palyginimas kelia kelis klausimus: ar maršrutas prieinamas šiai numatytai siuntai, kokia informacija pagrindžia įvertį ir kas pasikeistų, jei prekė būtų siunčiama atskirai? Prie kiekvieno varianto užrašykite atsakymą arba neatsakytą klausimą. Nemanykite, kad visas prekes sudėti kartu visada pigiau, greičiau ar tinkamiau. Vertinkite tikrąjį siūlomą siuntinį, o ne remkitės vien prekių skaičiumi."
+          ]
+        },
+        {
+          "id": "submit-check",
+          "title": "Prieš pateikdami išspręskite saugojimo ir išlaidų klausimus",
+          "paragraphs": [
+            "Šiam vadovui peržiūrėtuose viešuose puslapiuose nenustatytas patikimas universalus nemokamo saugojimo laikotarpis. Jei planuojate laukti kito pirkinio, patikrinkite jau saugomoms prekėms rodomas sąlygas ir paklauskite pagalbos apie neaiškų terminą. Neleiskite tikėtinai sujungimo naudai priklausyti nuo saugojimo galimybės, kurios nepatikrinote savo užsakymui.",
+            "Prieš pateikdami siuntinį kartu peržiūrėkite jo turinį, tvarkymo instrukcijas, gavėjo duomenis ir mokėjimo išklotinę. Išsaugokite versiją, kurią iš tikrųjų patvirtinote. Jei pakavimas pakeičia ankstesniam įverčiui naudotą informaciją, prieš spręsdami palyginkite patikslintus skaičius. Praktinis tikslas — siuntinio planas, kurį galite paaiškinti: kas įtraukta, kokio tvarkymo prašėte, kokią sumą priėmėte ir kurie klausimai išspręsti."
+          ]
+        }
+      ],
+      "sources": [
+        "https://www.pikobuy.com/protocol/shipping",
+        "https://www.pikobuy.com/contact",
+        "https://www.pikobuy.com/guide",
+        "https://www.pikobuy.com/shipping-cost",
+        "https://www.pikobuy.com/protocol/returns"
+      ],
+      "related": [
+        "shipping-cost",
+        "qc-photos",
+        "order-tracking"
+      ]
+    },
+    {
+      "slug": "order-tracking",
+      "title": "Pikobuy užsakymų sekimas: sekite tinkamą siuntą ir užduokite geresnius klausimus",
+      "description": "Atskirkite pardavėjo pristatymą nuo tarptautinio siuntinio sekimo, atsargiai interpretuokite nepilnus atnaujinimus ir paruoškite aiškią pagalbos užklausą su tinkamais įrašais.",
+      "category": "Siuntimas",
+      "eyebrow": "Užsakymų sekimo vadovas",
+      "summary": "Pirkimas gali apimti daugiau nei vieną judėjimą ir daugiau nei vieną nuorodos numerį. Sekti lengviau, kai žinote, kurį etapą tikrinate, kuris įrašas jam priklauso ir kokia informacija pašalintų neaiškumą.",
+      "sections": [
+        {
+          "id": "shipment-map",
+          "title": "Atskirkite pirkimą nuo tarptautinio siuntinio",
+          "paragraphs": [
+            "Pradėkite nustatydami įvykį, kurį norite suprasti. Ar tikrinate, ar pardavėjas išsiuntė prekę, ar ji pasiekė sandėlį, ar kur dabar yra pateiktas tarptautinis siuntinys? Tai praktiniai skirtumai jūsų pastaboms, o ne oficialių būsenų žymų sąrašas. Aprašydami įvykį pagalbos tarnybai, naudokite paskyroje faktiškai rodomą formuluotę.",
+            "Kiekvieną prieinamą nuorodos numerį laikykite šalia kelionės dalies, kurią jis aprašo. Užsakymo nuorodos numeris padeda nustatyti pirkimą; siuntinio nuorodos numeris padeda nustatyti tolesnę siuntą. Jei keli užsakymai sujungti, pažymėkite, kurios prekės priklauso tam siuntiniui. Taip pardavėjo pristatymo įrašas nebus supainiotas su įrodymu, kad tarptautinis siuntinys jau artėja prie jūsų adreso."
+          ]
+        },
+        {
+          "id": "first-update",
+          "title": "Atskirkite išsiuntimą nuo pirmojo sekimo atnaujinimo",
+          "paragraphs": [
+            "Pikobuy pirkimo vadove teigiama, kad sekimo informacija tampa prieinama per tris dienas po išsiuntimo. Šis teiginys susijęs su pradinės sekimo informacijos prieinamumu; tai nėra trijų dienų pristatymo pažadas. Pirmiausia patvirtinkite, kurį išsiuntimo įrašą skaitote, prieš naudodami jį kaip klausimo atskaitos tašką. Jei seka neaiški, išsaugokite paskyros įrašą su data.",
+            "Tuščias arba nepakitęs sekimo vaizdas pats savaime nepaaiškina, kas nutiko. Venkite užpildyti spragą užtikrinta istorija apie dingusį siuntinį, muitinės veiksmą ar vežėjo vėlavimą. Užrašykite, ką puslapis iš tikrųjų rodo ir kada jį tikrinote. Tada užduokite klausimą, į kurį galima atsakyti, pavyzdžiui, ar nuorodos numeris teisingas arba ar yra naujesnis atnaujinimas."
+          ]
+        },
+        {
+          "id": "read-updates",
+          "title": "Kiekvieną atnaujinimą skaitykite kaip konkretų įvykį",
+          "paragraphs": [
+            "Kai pasirodo informacija, pasižymėkite įvykio tekstą, jo laiko žymą ir jį rodantį šaltinį. Jei vežėjas ir platforma rodo skirtingą informaciją, išsaugokite abu įrašus, o ne tyliai pakeiskite vieną savo interpretacija. Ieškokite kito faktinio klausimo: ar nuorodų numeriai sutampa, ar laiko žymos naudoja tą pačią laiko juostą ir ar vienas puslapis rodo senesnį įvykį?",
+            "Šios patikros padeda sutvarkyti užklausą; jos nenustato universalios kiekvieno vežėjo būsenos reikšmės. Naudokite paties vežėjo paaiškinimą, kai jis prieinamas tikrajai siuntai. Raminamai skambanti sekimo frazė nėra tas pats, kas patvirtintas pristatymas, kaip ir nepažįstama frazė nėra problemos įrodymas. Jei reikšmė veikia kitą jūsų veiksmą, prašykite paaiškinimo."
+          ]
+        },
+        {
+          "id": "support-packet",
+          "title": "Paruoškite glaustą pagalbos užklausą",
+          "paragraphs": [
+            "Oficialus Pikobuy kontaktų puslapis rekomenduoja pateikti pagalbos užklausą. Surinkite atitinkamą užsakymo ar siuntinio nuorodos numerį, sekimo numerį, jei rodomas, naujausią atnaujinimą su data ir trumpą neatitikimo aprašymą. Įtraukite tik užklausai reikalingus asmens duomenis, naudodami oficialų kanalą, o ne skelbdami visą adresą ar paskyros duomenis viešoje diskusijoje.",
+            "Tvirta užklausa turi vieną aiškų klausimą. Paaiškinkite, apie kurį siuntinį klausiate, ką sako dabartinis įrašas ir ką reikia patvirtinti. Jei jau kreipėtės į pagalbą, pridėkite ankstesnės užklausos numerį, jei prieinamas. Taip istorija lieka kartu. Nauja žinutė, kartojanti tą patį klausimą be pradinio konteksto, gali apsunkinti supratimą, kas jau patikrinta."
+          ]
+        },
+        {
+          "id": "follow-through",
+          "title": "Atskirkite pristatymo klausimus nuo kompensacijos",
+          "paragraphs": [
+            "Naujausios siuntinio būsenos radimas ir kompensacijos prašymo vertinimas yra skirtingos užduotys. Paslaugų sutartis draudimo kompensaciją sieja su draudimo apsauga ir taikomomis sąlygomis. Nedarykite išvados apie patvirtinimą vien dėl draudimo pasirinkimo buvimo ar nerimą keliančios sekimo frazės. Jei reikalavimas tampa aktualus, paklauskite, kokie įrodymai ir eiga taikomi konkrečiai siuntai.",
+            "Kai siuntinys atvyksta, išsaugokite pristatymo įrašą ir patikrinkite gautas prekes prieš užbaigdami savo pastabas. Jei yra problema, aprašykite ją nuotraukomis ir atitinkamais nuorodų numeriais, o ne plačiu kaltinimu. Jei užklausa lieka atvira, sekite paskutinį atsakymą ir tikslų neatsakytą klausimą. Trumpa, nuosekli istorija naudingesnė nei augantis nesusijusių ekrano kopijų rinkinys."
+          ]
+        }
+      ],
+      "sources": [
+        "https://www.pikobuy.com/guide",
+        "https://www.pikobuy.com/contact",
+        "https://www.pikobuy.com/protocol/shipping",
+        "https://www.pikobuy.com/protocol/user"
+      ],
+      "related": [
+        "shipping-cost",
+        "warehouse-consolidation",
+        "returns-refunds"
+      ]
+    }
+  ]
+}
