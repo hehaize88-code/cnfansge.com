@@ -367,3 +367,10 @@ Four new behavior regressions verify HTML cards/escaping, localized pagination a
 - Tested exactly https://pikobuy.at/spreadsheet/ in the signed-in sc-domain:pikobuy.at property. GSC live-test timestamp: 2026-10-20 18:06 (UI local time). Result: “网址可编入 Google 索引” / “网页可以编入索引”. The fresh live test no longer reports soft404.
 - Submitted one indexing request after the successful live test. GSC confirmed “已请求编入索引” and that the URL was added to its priority crawl queue. Screenshot evidence captured.
 - The indexed-data view before the request remained “已发现 - 尚未编入索引”; do not claim the URL is already indexed. Live eligibility and accepted submission are confirmed; actual indexing is pending Google processing.
+
+
+## 2026-10-20 — GA4 setup and site instrumentation prepared
+
+- User requested adding pikobuy.at to Google Analytics. Created a dedicated GA4 property after the account picker showed no existing match. Account 405518068; property 559795917; web stream 16165325140 (pikobuy.at Web, https://pikobuy.at); measurement ID G-2WEC83HCE5. Reporting timezone China UTC+08:00, currency USD, industry Shopping; objectives traffic and engagement. Enhanced measurement enabled.
+- Shared Analytics.astro injects Google's async loader and one config into all 408 localized pages only in production builds. Runtime hostname guard limits measurement to pikobuy.at/www.pikobuy.at; ad personalization and Google signals disabled in the config. No second manual page_view is sent.
+- Clean production build passes all 14 tests and validates 409 HTML pages; all 408 localized pages contain exactly one GA4 loader. Initial reused output contained stale generated files; a clean rebuild resolved the artifact-only validation problem. Deployment and received-data verification follow.

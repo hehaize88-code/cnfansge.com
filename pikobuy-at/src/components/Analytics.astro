@@ -1,0 +1,17 @@
+---
+const enabled = import.meta.env.SITE_INDEXABLE === 'true';
+---
+{enabled && <>
+  <script is:inline async src="https://www.googletagmanager.com/gtag/js?id=G-2WEC83HCE5"></script>
+  <script is:inline>
+    if (location.hostname === 'pikobuy.at' || location.hostname === 'www.pikobuy.at') {
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-2WEC83HCE5', {
+        allow_google_signals: false,
+        allow_ad_personalization_signals: false
+      });
+    }
+  </script>
+</>}
