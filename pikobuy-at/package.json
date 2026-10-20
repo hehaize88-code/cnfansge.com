@@ -4,7 +4,7 @@
   "type": "module",
   "scripts": {
     "dev": "astro dev",
-    "build": "astro build && node scripts/build-worker.mjs",
+    "build": "node --test tests/*.test.mjs && astro build && node scripts/build-worker.mjs",
     "build:production": "SITE_ORIGIN=https://pikobuy.at SITE_INDEXABLE=true npm run build",
     "check": "node --test tests/*.test.mjs"
   },

@@ -1,0 +1,975 @@
+{
+  "labels": {
+    "faq": "Întrebări frecvente",
+    "articles": "Articole",
+    "faqTitle": "Întrebări frecvente despre Pikobuy",
+    "faqIntro": "Răspunsuri clare despre comenzi, verificările din depozit, livrare și retururi, bazate pe ghidurile și politicile oficiale Pikobuy. Fiecare răspuns trimite la sursa sa.",
+    "faqShort": "Ai întrebări înainte de a comanda? Începe cu răspunsuri verificate în paginile oficiale Pikobuy.",
+    "articlesTitle": "Ghiduri de cumpărături Pikobuy",
+    "articlesIntro": "De la primul produs găsit în catalog până la coletul de la ușă: ghiduri practice despre linkuri de produse, mărimi, fotografii QC, costuri și livrare.",
+    "allArticles": "Toate cele 10 ghiduri",
+    "readArticle": "Citește ghidul",
+    "checked": "Surse verificate",
+    "questions": "întrebări",
+    "onThisPage": "Pe această pagină",
+    "officialSources": "Surse oficiale",
+    "needHelp": "Ai nevoie de ajutor cu o comandă?",
+    "helpText": "Contactează Pikobuy cu numărul comenzii sau coletului. Acest site independent de ghiduri nu poate accesa contul tău sau modifica o comandă.",
+    "officialSupport": "Asistență Pikobuy",
+    "editorialNote": "Ghiduri independente cu trimiteri la surse",
+    "breadcrumbs": "Traseu de navigare",
+    "home": "Acasă",
+    "editorialTeam": "Redacția Pikobuy.at",
+    "quickAnswer": "RĂSPUNSUL PE SCURT",
+    "sourceNote": "Informațiile specifice platformei au fost verificate în aceste pagini oficiale la data indicată. Listele noastre de verificare sunt sugestii practice ale redacției. Confirmă condițiile actuale din comanda Pikobuy înainte de plată sau expediere.",
+    "browseFinds": "Explorează catalogul",
+    "related": "Citește în continuare",
+    "independentNote": "Pikobuy.at este un site independent de recomandări. Datele despre produse provin de pe cnfansge.com; cumpărăturile și asistența pentru cont sunt gestionate de Pikobuy."
+  },
+  "groups": {
+    "getting-started": "Primii pași",
+    "orders": "Comenzi și retururi",
+    "warehouse": "Depozit și fotografii",
+    "shipping": "Livrare și urmărire"
+  },
+  "faqs": [
+    {
+      "id": "what-is-pikobuy",
+      "group": "getting-started",
+      "q": "Ce este Pikobuy?",
+      "a": "Pikobuy îi ajută pe cumpărători să găsească, să cumpere și să expedieze produse din China. Acordul său de servicii descrie asistență la cumpărare, nu vânzări directe cu amănuntul. Verifică informațiile vânzătorului inițial despre produs, precum și detaliile afișate la finalizarea comenzii.",
+      "sources": [
+        "https://www.pikobuy.com/About",
+        "https://www.pikobuy.com/protocol/user"
+      ]
+    },
+    {
+      "id": "supported-marketplaces",
+      "group": "getting-started",
+      "q": "Ce platforme de vânzare menționează ghidul Pikobuy?",
+      "a": "Ghidul pentru începători numește Taobao, Tmall, 1688, Weidian și Yupoo. Menționarea unei platforme nu înseamnă că orice anunț sau produs este eligibil; verifică articolul concret înainte de plată.",
+      "sources": [
+        "https://www.pikobuy.com/guide"
+      ]
+    },
+    {
+      "id": "open-product-link",
+      "group": "getting-started",
+      "q": "Cum găsesc un produs pe Pikobuy?",
+      "a": "Ghidul oficial descrie căutarea cu un link de produs sau cuvinte-cheie. După deschiderea rezultatului, compară detaliile sale de identificare cu anunțul original înainte de a selecta o variantă.",
+      "sources": [
+        "https://www.pikobuy.com/guide"
+      ]
+    },
+    {
+      "id": "search-from-image",
+      "group": "getting-started",
+      "q": "Pot începe cu o imagine a produsului?",
+      "a": "Pagina principală Pikobuy promovează trimiterea imaginilor și cereri de găsire a produselor. Consideră orice rezultat un candidat de verificat: un articol asemănător vizual poate avea alt vânzător, material, mărime sau specificație.",
+      "sources": [
+        "https://www.pikobuy.com/home"
+      ]
+    },
+    {
+      "id": "choose-variation",
+      "group": "getting-started",
+      "q": "Ce trebuie să verific înainte de prima plată?",
+      "a": "Confirmă culoarea, mărimea și cantitatea, conform ghidului. Păstrarea linkului-sursă împreună cu varianta selectată face mai ușoară explicarea întrebărilor ulterioare despre comandă.",
+      "sources": [
+        "https://www.pikobuy.com/guide"
+      ]
+    },
+    {
+      "id": "two-payment-stages",
+      "group": "getting-started",
+      "q": "De ce sunt separate cumpărarea și livrarea internațională?",
+      "a": "Ghidul plasează plata cumpărăturii înainte de procesarea în depozit, iar plata transportului internațional la depunerea coletului. Bugetează ambele etape în loc să consideri prețul produsului drept totalul cu livrare.",
+      "sources": [
+        "https://www.pikobuy.com/guide"
+      ]
+    },
+    {
+      "id": "out-of-stock",
+      "group": "getting-started",
+      "q": "Ce se întâmplă dacă un articol nu mai este în stoc?",
+      "a": "Ghidul oficial de cumpărături spune că o comandă fără stoc este rambursată. Nu stabilește un termen universal de încasare a rambursării, așa că verifică înregistrarea comenzii sau întreabă asistența despre plata ta.",
+      "sources": [
+        "https://www.pikobuy.com/guide"
+      ]
+    },
+    {
+      "id": "actual-product-price",
+      "group": "orders",
+      "q": "Prețul efectiv de cumpărare poate fi diferit de prețul afișat?",
+      "a": "Da. Ghidul precizează că prețurile depind de cumpărarea efectivă. Înainte de a accepta o sumă modificată, compară varianta selectată, cantitatea și defalcarea comenzii, fără a te baza doar pe un preț de catalog salvat.",
+      "sources": [
+        "https://www.pikobuy.com/guide"
+      ]
+    },
+    {
+      "id": "failed-payment",
+      "group": "orders",
+      "q": "Comanda va fi procesată dacă plata eșuează?",
+      "a": "Condițiile generale spun că o comandă nu este procesată când plata eșuează. Verifică înregistrările comenzii și plății înainte de a reîncerca, pentru a putea explica asistenței orice tranzacție în așteptare sau aparent duplicată.",
+      "sources": [
+        "https://www.pikobuy.com/protocol/terms"
+      ]
+    },
+    {
+      "id": "payment-methods",
+      "group": "orders",
+      "q": "Ce metode de plată pot folosi?",
+      "a": "Pagina Despre spune că sunt acceptate mai multe metode și monede. Folosește opțiunile oferite efectiv la plată; siglele din subsol nu stabilesc disponibilitatea, comisioanele sau eligibilitatea pentru fiecare cont și destinație.",
+      "sources": [
+        "https://www.pikobuy.com/About"
+      ]
+    },
+    {
+      "id": "return-deadline",
+      "group": "orders",
+      "q": "Când trebuie să cer un retur din depozit?",
+      "a": "Pagina de retururi specifică cinci zile, sau 120 de ore, după starea In Warehouse, calculul începând din ora următoare. Verifică ora înregistrată a stării și trimite cererea prompt; acesta este un interval de eligibilitate, nu o aprobare automată.",
+      "sources": [
+        "https://www.pikobuy.com/protocol/returns"
+      ]
+    },
+    {
+      "id": "return-eligibility",
+      "group": "orders",
+      "q": "Toate produsele pot fi returnate?",
+      "a": "Nu. Contează participarea vânzătorului, starea potrivită revânzării și termenul. Politica exclude categorii precum produse personalizate sau la mâna a doua și articole ale căror etichete ori ambalaje necesare au fost îndepărtate. Citește regulile pentru articolul tău.",
+      "sources": [
+        "https://www.pikobuy.com/protocol/returns"
+      ]
+    },
+    {
+      "id": "return-cost",
+      "group": "orders",
+      "q": "Cât costă un retur?",
+      "a": "Se pot aplica taxe pentru transportul de retur și servicii. Paginile oficiale diferă în privința unor taxe și condiții de gratuitate, așa că întreabă ce sumă se aplică respectivei comenzi și motivului tău înainte de a continua; nu presupune că fiecare retur este gratuit.",
+      "sources": [
+        "https://www.pikobuy.com/protocol/returns",
+        "https://www.pikobuy.com/protocol/user"
+      ]
+    },
+    {
+      "id": "seller-approval",
+      "group": "orders",
+      "q": "Trimiterea unei cereri de retur garantează rambursarea?",
+      "a": "Nu. Politica de retur necesită acordul vânzătorului. Păstrează împreună cererea, dovezile și corespondența comenzii și verifică ce a fost aprobat efectiv înainte de a face alte planuri pentru articol.",
+      "sources": [
+        "https://www.pikobuy.com/protocol/returns"
+      ]
+    },
+    {
+      "id": "warehouse-inspection",
+      "group": "warehouse",
+      "q": "Ce se întâmplă când un articol cumpărat ajunge la depozit?",
+      "a": "Ghidul de cumpărături descrie înregistrarea sosirii, fotografierea și verificarea defectelor. Analizează informațiile comenzii tale înainte de a alege pasul următor.",
+      "sources": [
+        "https://www.pikobuy.com/guide"
+      ]
+    },
+    {
+      "id": "qc-limits",
+      "group": "warehouse",
+      "q": "Fotografiile QC dovedesc autenticitatea sau performanța tehnică?",
+      "a": "Nu. Acordul de servicii limitează inspecția profesională pentru anumite bunuri, iar fotografiile nu pot stabili toate proprietățile ascunse sau tehnice. Folosește-le pentru a evalua ce se vede și cere clarificări pentru orice aspect important rămas neclar.",
+      "sources": [
+        "https://www.pikobuy.com/protocol/user",
+        "https://www.pikobuy.com/protocol/shipping"
+      ]
+    },
+    {
+      "id": "extra-photos",
+      "group": "warehouse",
+      "q": "Pot obține fotografii suplimentare de inspecție?",
+      "a": "Condițiile de redirecționare descriu cumpărarea unor fotografii detaliate suplimentare. Întreabă despre perspectiva dorită, disponibilitate și cost înainte de a conta pe ele. O cerere precisă este mai utilă decât simpla solicitare a unui QC mai bun.",
+      "sources": [
+        "https://www.pikobuy.com/protocol/shipping"
+      ]
+    },
+    {
+      "id": "forward-my-purchase",
+      "group": "warehouse",
+      "q": "Pot trimite la depozit un articol cumpărat independent?",
+      "a": "Condițiile de redirecționare descriu obținerea adresei depozitului de la asistență sau din formular, trimiterea informațiilor necesare și organizarea expedierii mai departe după sosire. Folosește instrucțiunile oficiale actuale pentru coletul tău.",
+      "sources": [
+        "https://www.pikobuy.com/protocol/shipping"
+      ]
+    },
+    {
+      "id": "combine-sellers",
+      "group": "warehouse",
+      "q": "Se pot combina articole de la vânzători diferiți?",
+      "a": "Pagina de contact Pikobuy promovează combinarea articolelor într-un singur colet. Compară opțiunile efective ale coletului și condițiile rutelor; combinarea nu garantează economii pentru fiecare expediere.",
+      "sources": [
+        "https://www.pikobuy.com/contact"
+      ]
+    },
+    {
+      "id": "packaging-options",
+      "group": "warehouse",
+      "q": "Pot solicita ambalare minimă sau consolidată?",
+      "a": "Ghidul pentru începători le enumeră pe ambele ca solicitări posibile. Discută ce va fi îndepărtat sau adăugat și verifică taxele aferente. Dacă ai putea returna un articol, păstrează starea cerută de politica sa de retur.",
+      "sources": [
+        "https://www.pikobuy.com/guide",
+        "https://www.pikobuy.com/protocol/returns"
+      ]
+    },
+    {
+      "id": "storage-duration",
+      "group": "warehouse",
+      "q": "Cât timp pot lăsa articolele în depozit?",
+      "a": "Paginile publice analizate pentru acest ghid nu au stabilit o durată sigură de depozitare gratuită sau un tarif complet al depozitării. Verifică termenul și condițiile afișate pentru comanda ta ori întreabă asistența oficială înainte de a amâna expedierea.",
+      "sources": [
+        "https://www.pikobuy.com/protocol/shipping",
+        "https://www.pikobuy.com/contact"
+      ]
+    },
+    {
+      "id": "estimate-inputs",
+      "group": "shipping",
+      "q": "De ce am nevoie pentru o estimare a transportului Pikobuy?",
+      "a": "Calculatorul cere destinația, tipul produsului, greutatea și dimensiunile. Adună aceste date înainte de a compara ofertele și înlocuiește cifrele provizorii când apar informații mai exacte despre colet.",
+      "sources": [
+        "https://www.pikobuy.com/shipping-cost"
+      ]
+    },
+    {
+      "id": "estimate-units",
+      "group": "shipping",
+      "q": "Ce unități folosește calculatorul de transport?",
+      "a": "Greutatea se introduce în kilograme; lungimea, lățimea și înălțimea în centimetri. Verifică atent conversiile, deoarece un număr corect introdus în unitatea greșită produce o estimare inutilă.",
+      "sources": [
+        "https://www.pikobuy.com/shipping-cost"
+      ]
+    },
+    {
+      "id": "route-comparison",
+      "group": "shipping",
+      "q": "Rutele de transport au aceleași prețuri și termene?",
+      "a": "Nu. Ghidul spune că termenele de livrare și metodele de tarifare diferă în funcție de rută. Citește detaliile actuale ale fiecărei rute disponibile în loc să compari doar prețul principal.",
+      "sources": [
+        "https://www.pikobuy.com/guide"
+      ]
+    },
+    {
+      "id": "shipping-service-fee",
+      "group": "shipping",
+      "q": "Poate exista un comision al platformei pentru transportul internațional?",
+      "a": "Acordul de servicii publicat enumeră o taxă a platformei de 8% din taxa de transport, cu precizări privind decontarea. Consultă defalcarea efectivă a plății și condițiile actuale, fără a presupune că serviciul nu are niciodată comisioane.",
+      "sources": [
+        "https://www.pikobuy.com/protocol/user"
+      ]
+    },
+    {
+      "id": "first-tracking",
+      "group": "shipping",
+      "q": "Când ar trebui să apară informațiile de urmărire?",
+      "a": "Ghidul de cumpărături spune în trei zile de la expediere. Aceasta descrie disponibilitatea inițială a urmăririi, nu livrarea în trei zile. Dacă înregistrarea ta necesită clarificări, trimite asistenței referința coletului și informațiile datate despre stare.",
+      "sources": [
+        "https://www.pikobuy.com/guide",
+        "https://www.pikobuy.com/contact"
+      ]
+    },
+    {
+      "id": "customs-guarantee",
+      "group": "shipping",
+      "q": "Vămuirea este garantată?",
+      "a": "Nu. Acordul de servicii nu garantează vămuirea. Verifică eligibilitatea articolului și cerințele rutei alese înainte de expediere; un anunț de produs sau o fotografie din depozit nu stabilește permisiunea de import.",
+      "sources": [
+        "https://www.pikobuy.com/protocol/user",
+        "https://www.pikobuy.com/protocol/terms"
+      ]
+    },
+    {
+      "id": "contact-support",
+      "group": "shipping",
+      "q": "Unde pot întreba despre o expediere sau comandă?",
+      "a": "Folosește pagina oficială de contact Pikobuy, care recomandă deschiderea unui tichet și enumeră alte canale de contact. Include referința comenzii sau coletului și o descriere concisă. Acest catalog independent nu poate accesa contul tău Pikobuy.",
+      "sources": [
+        "https://www.pikobuy.com/contact"
+      ]
+    }
+  ],
+  "articles": [
+    {
+      "slug": "spreadsheet-guide",
+      "title": "Ghidul catalogului Pikobuy: găsește și compară produse",
+      "description": "Folosește catalogul Pikobuy pentru a căuta anunțuri reale cnfansge, a compara detaliile produselor și a păstra linkul-sursă corect înainte de comandă.",
+      "category": "Găsește produse",
+      "eyebrow": "CATALOGUL PIKOBUY",
+      "summary": "O listă scurtă utilă păstrează împreună produsul, sursa, opțiunea și întrebările fără răspuns. Iată cum o construiești folosind directorul acestui site.",
+      "sections": [
+        {
+          "id": "what-you-are-browsing",
+          "title": "Începe cu rolul catalogului",
+          "paragraphs": [
+            "Un catalog Pikobuy este o colecție de linkuri de produse organizată pentru a ușura descoperirea. Pe pikobuy.at, colecția apare ca un director cu căutare, nu ca un tabel descărcabil. Înregistrările produselor și imaginile de catalog provin de pe cnfansge.com. Pikobuy.at este un site independent de explorare; apariția unui articol aici nu promite disponibilitatea, calitatea sau adecvarea lui.",
+            "Folosește directorul pentru a restrânge opțiunile, apoi verifică oferta actuală pe Pikobuy înainte de plată. Distincția contează când un anunț salvat își schimbă prețul, un vânzător modifică opțiunile disponibile sau o fotografie arată altă versiune. O înregistrare de catalog poate ajuta la găsirea produsului fără să răspundă tuturor întrebărilor despre comanda intenționată."
+          ]
+        },
+        {
+          "id": "search-with-a-purpose",
+          "title": "Caută un produs pe care îl poți descrie",
+          "paragraphs": [
+            "Deschide pagina Catalog și începe cu o expresie scurtă, precum geantă de umăr din pânză sau hanorac cu fermoar. Dacă rezultatele sunt prea restrânse, elimină un cuvânt descriptiv. Dacă sunt prea largi, adaugă o caracteristică utilă. Denumirile produselor pot varia între surse, deci o expresie fără rezultate nu dovedește indisponibilitatea articolului.",
+            "Când explorezi fără să cauți un articol anume, alege o categorie. Navigarea pe categorii grupează produse asemănătoare și facilitează examinarea diferențelor de preț. Catalogul oferă controale de sortare care modifică ordinea înregistrărilor disponibile, nu calitatea lor. Un rezultat popular este un indiciu pentru descoperire, nu o recomandare independentă."
+          ]
+        },
+        {
+          "id": "read-the-record",
+          "title": "Deschide detaliile înainte de a compara prețurile",
+          "paragraphs": [
+            "Fișa unui produs oferă o imagine, un nume și un preț afișat. Deschide pagina produsului pentru a examina galeria și linkurile-sursă disponibile. Caută detalii importante pentru utilizare: deschiderea și prinderile curelei unei genți, căptușeala unei jachete sau închiderea unui accesoriu mic. Un unghi lipsă este o întrebare de lămurit, nu dovada că o caracteristică lipsește.",
+            "Consideră suma afișată un reper pentru compararea înregistrărilor din catalog. Verifică moneda de lângă ea și confirmă prețul actual al opțiunii selectate pe Pikobuy. Două fișe asemănătoare pot descrie materiale, mărimi sau cantități diferite. Compararea exclusivă a prețurilor principale poate crea o impresie greșită despre oferta mai ieftină."
+          ]
+        },
+        {
+          "id": "make-a-small-shortlist",
+          "title": "Păstrează trei candidați și întrebările importante",
+          "paragraphs": [
+            "Pentru o primă comparație, trei candidați sunt de regulă mai ușor de evaluat decât multe file deschise. Notează adresa-sursă lângă motivul pentru care păstrezi fiecare articol. Astfel, o miniatură familiară nu devine singurul mod de a recunoaște ulterior anunțul. Poți păstra notițele într-un document propriu; procesul nu depinde de o funcție de salvare a articolelor.",
+            "De exemplu, cineva care compară genți de zi poate păstra una pentru forma potrivită, alta pentru dimensiunile mai clare și o a treia pentru închiderea aparent mai ușor de folosit. Pasul următor este completarea informațiilor lipsă pentru fiecare candidat, nu alegerea automată a celei mai ieftine fișe."
+          ],
+          "bullets": [
+            "Produs și sursă: linkul din catalog plus adresa originală de pe platforma de vânzare, când există.",
+            "Alegerea exactă: culoarea, mărimea, modelul și cantitatea dorite.",
+            "Dovezi: ce imagini sau măsurători utile există și ce mai lipsește.",
+            "Buget: prețul de referință al articolului și o rezervă separată pentru costuri ulterioare."
+          ]
+        },
+        {
+          "id": "understand-the-photos",
+          "title": "Separă imaginile de catalog de QC-ul comenzii",
+          "paragraphs": [
+            "Fotografiile dintr-un director sunt informații pentru explorare. Nu presupune că o galerie de catalog reprezintă inspecția exactă a articolului pe care îl vei primi. Și QC-ul istoric, când este identificat explicit și disponibil, descrie un articol anterior; nu înlocuiește examinarea propriei comenzi după sosirea la depozit.",
+            "Această versiune a site-ului nu oferă căutare funcțională după imagine sau un serviciu separat de găsire QC. Folosește căutarea textuală, categoriile și linkurile-sursă pentru descoperire. Pentru inspecția propriei comenzi, folosește informațiile din contul oficial Pikobuy și întreabă asistența despre detaliile nevizibile. O fotografie nu poate stabili toate proprietățile materialelor, defectele ascunse sau problemele de performanță pe termen lung."
+          ]
+        },
+        {
+          "id": "handoff-to-pikobuy",
+          "title": "Fă verificările finale pe Pikobuy",
+          "paragraphs": [
+            "Folosește linkul de cumpărare Pikobuy al produsului, când este disponibil, apoi compară anunțul de destinație cu notițele tale. Verifică produsul, vânzătorul, opțiunea aleasă, cantitatea și suma actuală. Dacă pagina importată nu corespunde, oprește-te și revino la sursa originală în loc să finalizezi o comandă bazată doar pe o imagine similară.",
+            "După clarificarea detaliilor, urmează procesul oficial de cumpărare. Păstrează notițele până când articolul ajunge la depozit: oferă un reper concret pentru examinare. Dacă o fișă de produs nu se încarcă pe acest site, reîncearcă sau revino ulterior; un răspuns indisponibil al catalogului nu indică în mod sigur stocul vânzătorului."
+          ]
+        }
+      ],
+      "sources": [
+        "https://cnfansge.com/",
+        "https://www.pikobuy.com/guide",
+        "https://www.pikobuy.com/protocol/user"
+      ],
+      "related": [
+        "weidian-taobao-links",
+        "size-guide",
+        "how-to-use-pikobuy"
+      ]
+    },
+    {
+      "slug": "how-to-use-pikobuy",
+      "title": "Cum folosești Pikobuy: ghid practic pentru prima comandă",
+      "description": "Urmează procesul oficial de cumpărare Pikobuy, cu plăți separate pentru produse și transport și o listă de verificare pentru fiecare decizie.",
+      "category": "Plasează o comandă",
+      "eyebrow": "PRIMA COMANDĂ",
+      "summary": "Ghidul oficial Pikobuy separă găsirea produsului, cumpărarea, inspecția în depozit și transportul internațional. Folosește aceste etape pentru a-ți organiza prima comandă.",
+      "sections": [
+        {
+          "id": "prepare-your-order",
+          "title": "Pregătește detaliile înainte de înregistrare",
+          "paragraphs": [
+            "Începe cu un produs pe care îl poți descrie precis. Păstrează adresa-sursă și notează culoarea, mărimea și cantitatea dorite. Dacă l-ai găsit prin catalogul Pikobuy al acestui site, amintește-ți că acesta provine de pe cnfansge.com. Pikobuy.at te ajută să descoperi anunțuri; înregistrarea contului, plata și administrarea comenzilor au loc pe pikobuy.com.",
+            "Folosește linkul oficial de înregistrare și introdu date corecte. Verifică adresa site-ului înainte de a introduce informațiile contului și păstrează parola privată. Pregătește adresa completă a destinatarului în formatul necesar destinației. Un cod poștal incomplet sau un număr de apartament lipsă sunt mai ușor de corectat înainte de depunerea coletului decât după expediere."
+          ]
+        },
+        {
+          "id": "find-the-exact-item",
+          "title": "Verifică produsul și opțiunea selectată",
+          "paragraphs": [
+            "Ghidul pentru începători Pikobuy spune că poți căuta folosind un link de produs sau cuvinte-cheie. După deschiderea rezultatului, compară-l cu sursa salvată. Nu te opri la titlu: examinează vânzătorul, fotografiile și opțiunile selectabile. Un anunț poate conține mai multe modele cu aceeași imagine principală.",
+            "Scrie-ți o notă scurtă, precum bleumarin, mărime aleasă din tabelul vânzătorului, o bucată. Dacă opțiunile nu sunt clare, cere clarificări înainte de plată. Pentru îmbrăcăminte, analizează măsurătorile vânzătorului; pentru un produs cu mai multe componente, verifică ce include cantitatea indicată. Acest pas ajută la distingerea unei neînțelegeri despre opțiune de o problemă ulterioară de executare a comenzii."
+          ]
+        },
+        {
+          "id": "first-payment",
+          "title": "Verifică plata pentru cumpărare",
+          "paragraphs": [
+            "Procesul oficial începe cumpărarea cu plata comenzii de achiziție; transportul internațional este o etapă ulterioară. Înainte de confirmare, citește defalcarea efectiv afișată. Notează suma produsului, eventuala taxă de livrare a vânzătorului și alte taxe aplicabile, fără a presupune că prețul de catalog reprezintă costul complet al primirii articolului.",
+            "Salvează referința comenzii și opțiunile afișate la confirmare. Dacă plata eșuează sau comanda rămâne neclară, verifică înregistrarea oficială înainte de altă plată. O notificare bancară și o comandă de cumpărare finalizată sunt dovezi diferite. Condițiile generale ale site-ului precizează că plata nereușită nu duce la procesarea comenzii."
+          ]
+        },
+        {
+          "id": "warehouse-review",
+          "title": "Examinează articolul când ajunge la depozit",
+          "paragraphs": [
+            "Inspecția din depozit este o etapă distinctă în ghidul oficial. Folosește fotografiile disponibile ale comenzii pentru a compara articolul primit cu alegerile salvate. Începe cu identificarea: produs corect, culoare vizibilă, etichetă de mărime, cantitate și componente incluse. Apoi examinează orice problemă vizibilă de stare care ți-ar schimba decizia de păstrare.",
+            "Formulează o întrebare precisă când ceva este incert. De exemplu, solicitarea unei imagini mai clare a capătului unui fermoar este mai utilă decât afirmația că întregul articol pare greșit. Explică nepotrivirea și atașează imaginea relevantă a comenzii. Rezolvă întrebările importante înainte de depunerea coletului internațional, cât timp articolul mai poate fi examinat în depozit."
+          ],
+          "bullets": [
+            "Păstrează anunțul-sursă și confirmarea comenzii la îndemână pentru comparație.",
+            "Separă o neconcordanță vizibilă de un detaliu pe care fotografia pur și simplu nu îl arată.",
+            "Verifică prompt condițiile actuale de retur dacă ai putea avea nevoie de retur sau schimb."
+          ]
+        },
+        {
+          "id": "shipping-payment",
+          "title": "Alege transportul pentru coletul efectiv",
+          "paragraphs": [
+            "După pregătirea articolului, ghidul trece la alegerea rutei, depunerea coletului și plata transportului internațional. Analizează opțiunile disponibile pentru destinație și conținut. Prețul unei rute nu descrie singur eligibilitatea, metoda de tarifare sau așteptările de livrare. Folosește informațiile actuale ale rutei, nu oferta veche a altui cumpărător.",
+            "Înainte de plată, confirmă datele destinatarului și ambalarea solicitată. Dacă reunești mai multe cumpărături, asigură-te că toate articolele dorite sunt pregătite și incluse. Păstrează o copie a rutei alese și a taxei finale. Ghidul estimării transportului explică pregătirea dimensiunilor și greutății; ghidul bugetului explică rolul acestei a doua plăți în cumpărarea totală."
+          ]
+        },
+        {
+          "id": "after-dispatch",
+          "title": "Păstrează separat înregistrările comenzilor și coletelor",
+          "paragraphs": [
+            "O comandă de produs care se deplasează spre depozit și un colet internațional spre adresa ta sunt călătorii diferite. După expediere, notează referința coletului și transportatorul, în loc să cauți cu un ID de produs din catalog. Păstrează ultimul eveniment și data sa lângă referință pentru a observa dacă pagina de urmărire s-a schimbat.",
+            "Dacă ai nevoie de ajutor, folosește pagina oficială de contact Pikobuy. Un mesaj util include numărul comenzii sau coletului, ultimul eveniment vizibil, data și întrebarea precisă. Nu trimite parola sau datele complete ale cardului. La livrare, păstrează informațiile coletului și documentează orice problemă vizibilă cât timp ambalajul este încă disponibil pentru comparație."
+          ]
+        }
+      ],
+      "sources": [
+        "https://www.pikobuy.com/guide",
+        "https://www.pikobuy.com/protocol/terms",
+        "https://www.pikobuy.com/contact"
+      ],
+      "related": [
+        "fees-budget",
+        "qc-photos",
+        "order-tracking"
+      ]
+    },
+    {
+      "slug": "weidian-taobao-links",
+      "title": "Linkuri Pikobuy: deschide corect produsele Weidian și Taobao",
+      "description": "Înțelege adresele originale ale platformelor, ID-urile produselor și linkurile Pikobuy, cu un exemplu concret Weidian și verificări pentru anunțuri nepotrivite.",
+      "category": "Găsește produse",
+      "eyebrow": "LINKURI DE PRODUSE",
+      "summary": "Platforma de vânzare și ID-ul original identifică anunțul. Un link Pikobuy include acea sursă pentru a putea examina produsul prin agent.",
+      "sections": [
+        {
+          "id": "identify-the-source",
+          "title": "Păstrează adresa originală a platformei de vânzare",
+          "paragraphs": [
+            "Un anunț-sursă și un link de agent au scopuri diferite. Anunțul-sursă identifică produsul vânzătorului pe platforma sa. Linkul de agent deschide produsul printr-un serviciu precum Pikobuy. Dacă păstrezi doar o captură sau un link scurtat, poate deveni dificil să confirmi ce anunț intenționai inițial să cumperi.",
+            "Când navighezi pe pikobuy.at, deschide detaliile produsului și păstrează linkul original al platformei, dacă este oferit. Înregistrarea cnfansge este o referință de catalog; numărul său local nu trebuie să coincidă cu ID-ul produsului pe platformă. Nu copia un număr din adresa directorului presupunând că aparține unei adrese Weidian sau Taobao."
+          ]
+        },
+        {
+          "id": "weidian-example",
+          "title": "Citește exemplul Weidian în trei părți",
+          "paragraphs": [
+            "Exemplul-sursă furnizat este https://weidian.com/item.html?itemID=7755101935 . Aici, weidian.com identifică platforma, item.html este pagina articolului, iar itemID=7755101935 identifică anunțul-sursă. Numărul este un identificator al anunțului, nu o mărime, un preț, o culoare sau un număr de comandă Pikobuy. Exemplul demonstrează formatul linkului; nu recomandă cumpărarea articolului.",
+            "Linkul de agent corespunzător furnizat este https://www.pikobuy.com/product/detail?productUrl=https://weidian.com/item.html?itemID=7755101935 . Adresa exterioară deschide Pikobuy. Valoarea productUrl conține adresa Weidian originală. Când verifici un link partajat, trebuie deci să examinezi atât domeniul destinației, cât și adresa-sursă inclusă în el."
+          ]
+        },
+        {
+          "id": "nested-urls",
+          "title": "Înțelege de ce o adresă inclusă poate arăta diferit",
+          "paragraphs": [
+            "Unele linkuri codifică adresa interioară astfel încât punctuația să rămână o singură valoare de parametru. Același exemplu poate fi reprezentat ca https://www.pikobuy.com/product/detail?productUrl=https%3A%2F%2Fweidian.com%2Fitem.html%3FitemID%3D7755101935 . Caracterele codificate nu creează un ID de produs nou; păstrează adresa originală în cea exterioară.",
+            "Nu trebuie să editezi manual un buton obișnuit de cumpărare care funcționează. Distincția ajută la diagnosticarea unui link partajat defect: un ampersand neprotejat dintr-o adresă-sursă mai lungă poate fi interpretat ca alt parametru exterior. Evită codificarea repetată a unui link deja codificat și nu elimina părți necunoscute ale unei adrese de platformă fără să știi ce parte identifică articolul."
+          ]
+        },
+        {
+          "id": "taobao-and-other-links",
+          "title": "Folosește adresa-sursă în loc să ghicești un ID",
+          "paragraphs": [
+            "Pentru un produs Taobao, păstrează adresa efectivă furnizată de vânzător sau catalog, în loc să pui numărul într-un șablon Weidian. Numele platformelor fac parte din identitate. Același șir de cifre de pe două site-uri diferite nu trebuie tratat ca același anunț.",
+            "Ghidul oficial Pikobuy permite începerea cu un link de produs în caseta de căutare. Aceasta este o alternativă practică atunci când linkul învelitor partajat eșuează. Deschide întâi sursa, copiază linkul complet și folosește-l pe site-ul oficial. Dacă nu poți rezolva un link scurtat sau disponibil doar în aplicație, cere vânzătorului ori asistenței adresa-sursă completă, fără să inventezi una."
+          ]
+        },
+        {
+          "id": "verify-the-result",
+          "title": "Verifică articolul importat înainte de alegerea opțiunii",
+          "paragraphs": [
+            "Încărcarea reușită a unei pagini nu dovedește că este produsul dorit. Compară destinația cu anunțul original cât timp ambele sunt disponibile. Un vânzător poate oferi mai multe culori sau versiuni sub același ID, deci potrivirea ID-ului este o verificare necesară, nu o specificație completă a comenzii.",
+            "De exemplu, imaginea principală poate arăta o geantă închisă la culoare, iar cea mai ieftină opțiune selectabilă poate fi un accesoriu. Înainte de comandă, examinează textul opțiunii și prețul după selectare. Notează alegerea exactă, astfel încât linkul să fie asociat unei instrucțiuni clare, nu doar unei fotografii familiare."
+          ],
+          "bullets": [
+            "Verifică platforma, anunțul-sursă și vânzătorul, unde sunt vizibile.",
+            "Compară tipul articolului, fotografiile și specificațiile importante.",
+            "Selectează explicit modelul, culoarea, mărimea și cantitatea dorite.",
+            "Confirmă suma actuală și salvează referința oficială a comenzii după cumpărare."
+          ]
+        },
+        {
+          "id": "troubleshoot-a-link",
+          "title": "Remediază linkul fără a înlocui produsul",
+          "paragraphs": [
+            "Dacă un link eșuează, verifică dacă anunțul original se mai deschide, dacă adresa copiată este completă și dacă linkul învelitor conține încă sursa dorită. Reîncearcă prin căutarea oficială Pikobuy sau contactează asistența cu adresa completă și o captură a nepotrivirii. Evită înlocuirea cu un rezultat vizual similar fără a reverifica sursa și opțiunile.",
+            "Acest site nu pretinde că are un convertor universal pentru orice agent, adresă scurtată sau format de platformă. Linkurile de cumpărare disponibile te trimit la Pikobuy, unde anunțul actual trebuie totuși examinat. Păstrează sursa originală în notițe și după transfer; rămâne utilă dacă titlul produsului este tradus diferit sau trebuie să explici ce articol doreai."
+          ]
+        }
+      ],
+      "sources": [
+        "https://www.pikobuy.com/guide",
+        "https://www.pikobuy.com/contact",
+        "https://cnfansge.com/"
+      ],
+      "related": [
+        "spreadsheet-guide",
+        "how-to-use-pikobuy",
+        "size-guide"
+      ]
+    },
+    {
+      "slug": "size-guide",
+      "title": "Ghidul mărimilor Pikobuy: compară măsurătorile înainte de comandă",
+      "description": "Citește tabelele de mărimi ale vânzătorilor, compară măsurătorile hainelor și înțelege ce pot spune fotografiile din depozit despre potrivire.",
+      "category": "Verifică articolul",
+      "eyebrow": "MĂRIMI ȘI POTRIVIRE",
+      "summary": "Nu există un singur tabel de mărimi Pikobuy pentru toți vânzătorii. Folosește măsurătorile anunțului și un articol comparabil care deja îți vine bine.",
+      "sections": [
+        {
+          "id": "start-with-the-seller",
+          "title": "Folosește tabelul anunțului exact",
+          "paragraphs": [
+            "Pikobuy aduce produse de la vânzători diferiți într-un proces de comandă; nu transformă toate produsele într-un singur sistem de mărimi. O literă precum M sau XL nu ajunge pentru a compara două anunțuri fără legătură. Începe cu tabelul produsului și versiunii dorite, apoi verifică ce măsurători și unități descrie efectiv.",
+            "Caută distincția dintre măsurătorile corpului și cele ale hainei finite. O valoare a pieptului care descrie purtătorul are alt scop decât lățimea unei cămăși întinse. Dacă tabelul nu clarifică distincția, întreabă înainte de alegere. O conversie sigură pe sine între două etichete ambigue nu elimină ambiguitatea."
+          ]
+        },
+        {
+          "id": "measure-a-reference",
+          "title": "Măsoară un articol comparabil pe care îl porți deja",
+          "paragraphs": [
+            "Alege un articol cu scop și croială similare. Compară un hanorac lejer cu alt hanorac lejer, fără a folosi drept unic reper o cămașă mulată. Întinde-l fără să-l lărgești și notează aceleași dimensiuni ca în tabelul vânzătorului. Folosește centimetri dacă aceasta este unitatea tabelului; un inch este egal cu 2,54 centimetri.",
+            "Pentru partea de sus, dimensiunile utile includ frecvent lățimea pieptului, lungimea corpului, lățimea umerilor și lungimea mânecii. La pantaloni, talia, înălțimea șezutului și lungimea interioară pot conta cât mărimea etichetată. Capetele măsurării trebuie să corespundă metodei vânzătorului. O mânecă măsurată de la cusătura umărului nu poate fi comparată direct cu una măsurată din centrul gâtului."
+          ],
+          "bullets": [
+            "Articol de referință: numește haina și descrie cum îți vine.",
+            "Metoda de măsurare: notează unde începe și se termină centimetrul.",
+            "Unități: adu toate valorile la aceeași unitate înainte de comparație.",
+            "Potrivirea preferată: notează unde dorești mai mult sau mai puțin spațiu."
+          ]
+        },
+        {
+          "id": "read-width-correctly",
+          "title": "Nu confunda lățimea măsurată întins cu circumferința",
+          "paragraphs": [
+            "Imaginează-ți că tricoul de referință măsoară 54 cm peste piept când este întins, iar tabelul vânzătorului indică 108 cm la piept. Valorile pot descrie dimensiuni comparabile dacă numărul vânzătorului este circumferința. Nu sunt automat comparabile: confirmă întâi metoda tabelului. Exemplul arată de ce etichetele contează mai mult decât litera mărimii de deasupra.",
+            "Nu compara direct circumferința corpului cu o haină finită așteptând aceeași potrivire. Forma hainei, lejeritatea prevăzută și comportamentul materialului influențează confortul. Compară dimensiuni de același tip și întreabă vânzătorul despre măsurătoarea lipsă. Dacă anunțul publică o toleranță, păstreaz-o lângă tabel, fără să tratezi fiecare număr ca exact."
+          ]
+        },
+        {
+          "id": "shoes-and-accessories",
+          "title": "Aplică aceeași metodă încălțămintei și accesoriilor",
+          "paragraphs": [
+            "Pentru încălțăminte, folosește tabelul specific vânzătorului și identifică dacă valoarea în centimetri înseamnă lungimea piciorului, a branțului sau altă dimensiune. Măsurătorile nu sunt interschimbabile. O etichetă familiară EU, UK sau US poate ajuta navigarea, dar nu trebuie să înlocuiască verificarea tabelului acelui anunț.",
+            "Pentru genți, curele și alte accesorii, potrivirea poate depinde de o dimensiune utilizabilă, nu de o mărime de îmbrăcăminte. Lungimea totală a curelei diferă de distanța până la găurile de fixare; dimensiunile exterioare ale genții nu descriu neapărat deschiderea. Notează măsurătoarea importantă pentru utilizarea dorită și cere detaliul dacă lipsește."
+          ]
+        },
+        {
+          "id": "when-information-is-missing",
+          "title": "Pune o întrebare la care se poate răspunde",
+          "paragraphs": [
+            "În loc să întrebi dacă produsul respectă mărimea, formulează precis: confirmați lățimea pieptului măsurată întins sub brațe și lungimea spatelui pentru această mărime și culoare. Atașează linkul corect și identifică opțiunea. Astfel scade riscul ca răspunsul să privească altă versiune sau o recomandare generală de mărime.",
+            "Dacă eziți între două opțiuni, compară măsurătorile care afectează potrivirea preferată și verifică ce rămâne necunoscut. Nu aplica automat regula unei mărimi mai mari sau mai mici tuturor vânzătorilor. Dacă o dimensiune esențială nu poate fi confirmată, decide înainte de plată dacă accepți incertitudinea, fără să speri că fotografiile de depozit vor răspunde ulterior la tot."
+          ]
+        },
+        {
+          "id": "qc-and-fit",
+          "title": "Folosește fotografiile din depozit pentru verificările pe care le susțin",
+          "paragraphs": [
+            "Când comanda ajunge la depozit, compară eticheta de mărime vizibilă și dovezile de măsurare solicitate cu alegerea făcută. Un centimetru fotografiat oblic poate fi greu de citit, iar o imagine generală nu stabilește potrivirea. Întreabă asistența oficială despre o măsurătoare mai clară sau o fotografie suplimentară pentru o neconcordanță precisă; disponibilitatea și taxele trebuie confirmate pentru comanda ta.",
+            "Fotografiile QC nu pot arăta cum se simte haina pe corp sau garanta confortul după purtare. Păstrează tabelul original și măsurătorile de referință până la examinarea comenzii. Dacă dovezile sugerează că a sosit opțiunea greșită, folosește înregistrările pentru a descrie prompt problema și consultă condițiile actuale de retur înainte de a autoriza expedierea mai departe."
+          ]
+        }
+      ],
+      "sources": [
+        "https://www.pikobuy.com/guide",
+        "https://www.pikobuy.com/protocol/shipping",
+        "https://www.pikobuy.com/protocol/returns"
+      ],
+      "related": [
+        "qc-photos",
+        "returns-refunds",
+        "how-to-use-pikobuy"
+      ]
+    },
+    {
+      "slug": "fees-budget",
+      "title": "Taxe și costuri Pikobuy: construiește bugetul complet al comenzii",
+      "description": "Separă costurile produselor, livrarea internă, transportul internațional și taxele aplicabile, apoi reconciliază sumele efectiv percepute.",
+      "category": "Planifică livrarea",
+      "eyebrow": "COSTURI ȘI PLĂȚI",
+      "summary": "Prețul articolului este prima parte a bugetului comenzii. Păstrează separat fiecare taxă ulterioară, astfel încât estimarea să nu devină o presupunere despre suma finală.",
+      "sections": [
+        {
+          "id": "two-payment-stages",
+          "title": "Planifică dincolo de prețul de catalog",
+          "paragraphs": [
+            "Un preț mic al produsului nu îți spune costul complet al primirii comenzii. Procesul oficial Pikobuy separă cumpărarea articolului de plata coletului internațional. Prima plată nu trebuie deci considerată dovada că toate costurile ulterioare au fost acoperite.",
+            "Începe un buget înainte de plasarea comenzii și actualizează-l când apar informații mai ferme. Etichetează sumele drept preț înregistrat, estimare, ofertă sau plătit. Distincția simplă împiedică confundarea unui calcul aproximativ al transportului cu o factură. Păstrează moneda lângă fiecare valoare, mai ales când catalogul afișează o conversie convenabilă, dar comanda se decontează în altă monedă."
+          ]
+        },
+        {
+          "id": "budget-lines",
+          "title": "Acordă fiecărui tip de cost propria linie",
+          "paragraphs": [
+            "Un tabel practic are câte un rând pentru fiecare cost și coloane pentru monedă, sumă, dovadă și etapă de plată. Dovada poate fi defalcarea de la finalizare, o ofertă oficială de rută sau tranzacția decontată a furnizorului de plăți. Lasă suma necunoscută goală și marcheaz-o nerezolvată; introducerea unui zero poate face un buget incomplet să pară terminat.",
+            "Rândurile următoare sunt un cadru de planificare, nu afirmația că fiecare taxă se aplică fiecărei comenzi. Combină sau elimină un rând doar după ce verifici cum îl prezintă oferta actuală. Evită în special adăugarea aceleiași taxe de două ori când o ofertă inclusivă conține deja suma."
+          ],
+          "bullets": [
+            "Produse: prețul opțiunii selectate înmulțit cu cantitatea confirmată.",
+            "Livrarea vânzătorului: orice taxă pentru transportul bunurilor la depozit.",
+            "Servicii solicitate: ambalare, fotografii suplimentare sau alte servicii alese aplicabile.",
+            "Transport internațional: taxa ofertată pentru coletul și ruta selectate.",
+            "Taxele platformei: comisioanele de servicii din defalcarea plății aplicabile.",
+            "Costuri de plată și destinație: orice taxe aplicabile de conversie, furnizor sau destinație."
+          ]
+        },
+        {
+          "id": "published-platform-fee",
+          "title": "Citește comisionul publicat de 8% în contextul corect",
+          "paragraphs": [
+            "Acordul utilizatorului Pikobuy verificat la 20 octombrie 2026 prevede un comision de servicii al platformei calculat la 8% din taxa de transport, în secțiunea de redirecționare transfrontalieră a coletelor. Precizează și că momentul decontării și diferențele de curs pot afecta calculul. Este o prevedere legată de transport, nu un adaos universal de 8% la întreaga comandă de produse.",
+            "Citește defalcarea actuală a plății transportului înainte de a aplica singur procentul. Verifică baza comisionului și dacă totalul afișat îl include deja. Dacă etichetele sunt neclare, cere asistenței oficiale să identifice transportul internațional, comisionul platformei și totalul de plată. Nu presupune că lipsa unui comision dintr-un titlu promoțional face întreaga tranzacție fără taxe de servicii."
+          ]
+        },
+        {
+          "id": "use-estimates-carefully",
+          "title": "Înlocuiește datele aproximative de transport cu dovezi despre colet",
+          "paragraphs": [
+            "La începutul cumpărării, este posibil să nu cunoști greutatea sau dimensiunile ambalate. Notează ipotezele estimării pentru a le putea revizui ulterior. Un accesoriu mic și un articol voluminos în cutie nu trebuie comparate folosind același colet ghicit. Disponibilitatea rutelor și metodele de tarifare depind și de expedierea efectivă intenționată.",
+            "Când informațiile depozitului sunt disponibile, revino la calculatorul oficial și rutele oferite cu detaliile actuale ale coletului. Compară opțiunile folosind aceleași ipoteze despre conținut, destinație și ambalare. Dacă o ofertă include un serviciu pe care alta îl listează separat, reconciliază diferențele înainte de a decide care este mai ieftină. Păstrează oferta finală a rutei cu înregistrările comenzii."
+          ]
+        },
+        {
+          "id": "currency-and-coupons",
+          "title": "Compară sumele de plată, nu procentele promoționale",
+          "paragraphs": [
+            "Pentru un cupon, examinează eligibilitatea actuală, expirarea, cheltuiala minimă și taxa pe care o poate reduce. Un procent din titlu nu îți spune economia finală. Notează suma înainte de cupon și suma efectiv de plată după aplicare. Acest ghid nu promite o reducere la înscriere sau un cupon care poate fi indisponibil contului tău.",
+            "Când intervine conversia valutară, păstrează suma și moneda afișate la plată și suma decontată ulterior de furnizor. Acestea pot explica costul real fără a inventa un curs unic pentru toată lumea. Verifică orice taxă specifică direct cu furnizorul. Pentru taxele destinației, folosește informațiile autorității competente sau transportatorului pentru expedierea ta, fără a presupune un tratament fiscal universal."
+          ]
+        },
+        {
+          "id": "reconcile-the-order",
+          "title": "Reconciliază bugetul după fiecare plată",
+          "paragraphs": [
+            "Să presupunem că planifici două produse de la vânzători diferiți. Păstrează separat fiecare articol și taxa sa de livrare, apoi leagă oferta coletului internațional de ambele când știi cum vor fi expediate. Exemplul nu necesită un preț ghicit: arată de ce înmulțirea prețului principal al unui produs nu poate produce totalul final al comenzii.",
+            "După plată, înlocuiește estimarea relevantă cu suma efectiv percepută și păstrează referința. Menține vizibile rândurile neachitate sau nerezolvate. Dacă se emite o rambursare, înregistreaz-o ca ajustare separată, fără a șterge plata originală. Vei avea o evidență clară a angajamentelor, a sumelor rămase de plată și a sumelor pentru care asistența oficială trebuie să ofere clarificări."
+          ]
+        }
+      ],
+      "sources": [
+        "https://www.pikobuy.com/protocol/user",
+        "https://www.pikobuy.com/guide",
+        "https://www.pikobuy.com/shipping-cost",
+        "https://www.pikobuy.com/protocol/terms",
+        "https://www.pikobuy.com/contact"
+      ],
+      "related": [
+        "shipping-cost",
+        "warehouse-consolidation",
+        "how-to-use-pikobuy"
+      ]
+    },
+    {
+      "slug": "shipping-cost",
+      "title": "Costul transportului Pikobuy: de la prima estimare la plata coletului",
+      "description": "Află ce date să introduci în calculatorul de transport Pikobuy, de ce se poate modifica estimarea și ce să verifici înainte de plata coletului.",
+      "category": "Livrare",
+      "eyebrow": "Ghidul costurilor de transport",
+      "summary": "O estimare utilă a transportului este un instrument de planificare bazat pe date corecte. Ghidul explică compararea cifrelor provizorii cu coletul depus în final, fără a considera oferta inițială un preț fix cu livrare.",
+      "sections": [
+        {
+          "id": "estimate-purpose",
+          "title": "Începe cu decizia la care trebuie să răspundă estimarea",
+          "paragraphs": [
+            "Înainte să aduni un coș de articole, decide ce trebuie să afli din estimarea transportului. Poate verifici dacă întreaga comandă se încadrează în buget, compari două variante de ambalare sau decizi dacă să aștepți alt articol. Sunt întrebări diferite. Notează întâi decizia, astfel încât o valoare aparent mică să nu devină singurul motiv pentru alegerea rutei.",
+            "Calculatorul oficial cere destinația, tipul produsului, greutatea și dimensiunile. Datele descriu o expediere, nu doar o listă de cumpărături. Când o valoare este necunoscută, notează incertitudinea lângă estimare. O ofertă bazată pe dimensiuni ghicite trebuie să rămână provizorie în buget. Salvează data și datele introduse pentru o comparație semnificativă cu rezultatele ulterioare."
+          ]
+        },
+        {
+          "id": "input-checklist",
+          "title": "Pregătește un set consecvent de date",
+          "paragraphs": [
+            "Folosește aceeași destinație și aceleași informații despre articole când compari opțiuni. Calculatorul folosește kilograme pentru greutate și centimetri pentru dimensiuni. O eroare de unitate poate depăși orice mică diferență între rute. Dacă convertești o măsurătoare, păstrează în notițe valoarea originală și cea convertită; astfel observi mai ușor o virgulă deplasată sau schimbarea accidentală a unității.",
+            "Pentru planificare practică, fă un tabel mic cu un rând pentru fiecare colet posibil. Distinge măsurătorile confirmate de ipoteze. Nu eticheta dimensiunea articolului dată de vânzător drept dimensiunea exterioară finală a coletului. Când înregistrarea depozitului oferă date mai relevante, înlocuiește ipoteza și repetă comparația. Este o metodă de planificare, nu afirmația că fiecare estimare se recalculează automat."
+          ]
+        },
+        {
+          "id": "route-details",
+          "title": "Citește condițiile fiecărei rute",
+          "paragraphs": [
+            "Ghidul de cumpărături Pikobuy spune că rutele diferă ca termene și metode de tarifare. Deschide detaliile disponibile ale fiecărei rute candidate și compară lucruri echivalente. O estimare este utilă doar dacă ruta poate transporta coletul efectiv la destinația dorită. Notează orice condiție pentru care mai ai nevoie de clarificări de la asistență înainte de plată.",
+            "O comparație rezonabilă înregistrează împreună suma afișată, informațiile coletului și descrierea termenului. Dacă ruta explică un calcul al greutății taxabile, urmează regula publicată în loc să împrumuți o formulă de la alt transportator sau de pe un forum vechi. Dacă regula este neclară, întreabă cum va fi tarifat coletul propus. Evită să prezici ruta cea mai ieftină fără a verifica detaliile concrete."
+          ]
+        },
+        {
+          "id": "payment-breakdown",
+          "title": "Compară oferta cu defalcarea plății",
+          "paragraphs": [
+            "Separă cumpărarea produsului de costul aducerii coletului la tine. Construiește un buget cu linii clare pentru sumele deja plătite, următoarea plată solicitată și costurile nerezolvate. Astfel, prețul mic al produsului nu maschează o comandă care depășește suma totală dorită. Nu scădea o reducere dacă nu apare efectiv în tranzacția examinată.",
+            "Acordul de servicii enumeră un comision de platformă de 8% la transport, cu precizări de decontare. Examinează defalcarea actuală de la plată, fără a adăuga același procent de două ori. Dacă suma afișată pare să includă deja o taxă, cere clarificări în loc să reconstruiești factura din presupuneri. Păstrează defalcarea confirmată cu înregistrarea coletului."
+          ]
+        },
+        {
+          "id": "changes",
+          "title": "Investighează suma modificată înainte de aprobare",
+          "paragraphs": [
+            "Când suma ulterioară diferă de estimare, compară întâi datele introduse. Caută o modificare a conținutului coletului, măsurători revizuite, altă rută sau un serviciu adăugat. Sunt întrebări utile de investigat, nu afirmația că o anumită schimbare a avut loc. Trimite asistenței cele două înregistrări alăturat dacă nu poți identifica singur motivul.",
+            "Cea mai utilă verificare finală este simplă: poți explica pentru ce plătești, ce colet acoperă și ce incertitudini rămân? Dacă da, ai transformat estimarea aproximativă într-o decizie informată. Dacă nu, amână decizia și cere o defalcare clară. Păstrează tabelul pentru următoarea comandă, astfel încât bugetul să înceapă cu informații mai bune."
+          ]
+        }
+      ],
+      "sources": [
+        "https://www.pikobuy.com/shipping-cost",
+        "https://www.pikobuy.com/guide",
+        "https://www.pikobuy.com/protocol/user"
+      ],
+      "related": [
+        "warehouse-consolidation",
+        "order-tracking",
+        "returns-refunds"
+      ]
+    },
+    {
+      "slug": "qc-photos",
+      "title": "Fotografii QC Pikobuy: ce să verifici și ce nu pot dovedi imaginile",
+      "description": "Folosește fotografiile din depozit pentru a verifica detalii vizibile ale comenzii, a cere imagini suplimentare utile și a înțelege limitele QC vizual înainte de transport.",
+      "category": "Depozit",
+      "eyebrow": "Ghidul fotografiilor QC",
+      "summary": "Fotografiile din depozit sunt dovezi despre ce poate arăta camera. O examinare atentă începe cu propria comandă și o listă clară, apoi separă observațiile vizibile de întrebările care necesită măsurători, informații de la vânzător sau teste specializate.",
+      "sections": [
+        {
+          "id": "right-record",
+          "title": "Asigură-te că examinezi articolul corect",
+          "paragraphs": [
+            "Începe cu referința comenzii, varianta selectată și cantitatea. Compară-le cu informațiile inițiale despre ce doreai să cumperi. Ține deschisă înregistrarea cumpărăturii când examinezi imaginile, astfel încât memoria să nu devină standardul. Produsele similare pot diferi în detalii mici, iar o fotografie convingătoare de catalog nu dovedește că articolul din depozit corespunde selecției.",
+            "Acest catalog folosește conținut de pe cnfansge.com. Consideră imaginile material de descoperire și distinge-le de fotografiile atașate propriei comenzi Pikobuy. Ghidul oficial descrie fotografierea și verificarea defectelor după sosirea în depozit. Când trebuie să decizi despre articolul cumpărat, folosește dovezile comenzii reale, nu o imagine care doar ilustrează anunțul."
+          ]
+        },
+        {
+          "id": "visible-checks",
+          "title": "Verifică pe rând câte un aspect vizibil",
+          "paragraphs": [
+            "Examinează fotografiile într-o ordine repetabilă: aspect general, etichete vizibile, detalii ale variantei, cantitate și eventuale deteriorări. Înregistrează observațiile cu trimitere la imaginea relevantă. A spune că o urmă vizibilă apare lângă o cusătură este mai util decât a declara întregul produs de calitate slabă. Fii la fel de atent când imaginea este prea mică sau neclară pentru o concluzie.",
+            "Pentru haine, o întrebare utilă poate privi eticheta vizibilă de mărime sau o măsurătoare cerută. Pentru alt produs, poate privi un conector, o componentă inclusă ori starea exterioară. Sunt exemple de întrebări, nu promisiuni că fotografiile standard le acoperă. Construiește lista în jurul deciziei necesare și evită solicitarea multor fotografii care nu ar schimba acea decizie."
+          ]
+        },
+        {
+          "id": "photo-limits",
+          "title": "Separă starea vizibilă de proprietățile ascunse",
+          "paragraphs": [
+            "Condițiile de redirecționare și acordul de servicii Pikobuy limitează inspecția profesională. Nu interpreta o fotografie ca certificat de autenticitate, test de siguranță sau dovadă a performanței pe termen lung. O vedere exterioară nu poate stabili tot ce există în interior. Totodată, o imagine diferită de fotografia de studio a vânzătorului nu dovedește singură că a sosit articolul greșit.",
+            "Lumina, unghiul și calitatea imaginii influențează evaluarea. Când distincția contează, descrie direct incertitudinea: fotografia nu arată informația suficient de clar pentru a decide. Întreabă ce dovezi suplimentare există. O concluzie responsabilă poate fi mai limitată decât aprobarea sau respingerea; identificarea unui punct nerezolvat este utilă dacă previne decizia pe dovezi insuficiente."
+          ]
+        },
+        {
+          "id": "request-photos",
+          "title": "Cere o imagine care răspunde unei întrebări precise",
+          "paragraphs": [
+            "Condițiile de redirecționare descriu fotografii detaliate suplimentare contra cost. Înainte de a le solicita, identifică informația lipsă și întreabă despre disponibilitate și preț. Folosește o instrucțiune scurtă, precum o imagine lizibilă a unei etichete sau a unei zone precizate. Explică despre ce comandă este vorba și de ce imaginea existentă nu răspunde întrebării.",
+            "Dacă ajută o măsurătoare, numește cele două puncte de măsurat și unitatea necesară. Nu presupune că depozitul va deduce metoda preferată. Când sosește răspunsul, verifică dacă răspunde întrebării inițiale, nu doar adaugă alt unghi. Dacă verificarea cerută depășește serviciul de inspecție, decide dacă sunt necesare informații de la vânzător sau altă metodă de verificare."
+          ]
+        },
+        {
+          "id": "next-action",
+          "title": "Transformă examinarea într-un pas următor clar",
+          "paragraphs": [
+            "Păstrează un rezultat scurt pentru fiecare articol: nicio problemă vizibilă identificată, clarificare solicitată sau problemă de semnalat asistenței. Este evidența propriei examinări, nu o stare oficială a depozitului. Păstrează împreună imaginile utile și mesajele aferente. Dacă te gândești la retur, citește prompt politica actuală și evită schimbarea ambalajului înainte de a-i înțelege efectul asupra eligibilității.",
+            "Când raportezi o problemă, oferă referința comenzii, varianta selectată, imaginea relevantă și o descriere factuală a neconcordanței. Precizează soluția cerută fără a pretinde că a fost deja aprobată. Scopul QC este o decizie mai bună despre articolul efectiv. O evidență ordonată a dovezilor ajută la explicarea deciziei și întrebărilor rămase înainte de etapa următoare."
+          ]
+        }
+      ],
+      "sources": [
+        "https://www.pikobuy.com/guide",
+        "https://www.pikobuy.com/protocol/shipping",
+        "https://www.pikobuy.com/protocol/user",
+        "https://www.pikobuy.com/protocol/returns"
+      ],
+      "related": [
+        "returns-refunds",
+        "warehouse-consolidation",
+        "shipping-cost"
+      ]
+    },
+    {
+      "slug": "returns-refunds",
+      "title": "Retururi și rambursări Pikobuy: verifică termenul, dovezile și costurile",
+      "description": "Înțelege intervalul publicat de retur din depozit, aprobarea vânzătorului și eligibilitatea, cu un proces practic pentru taxe neclare sau diferențe între politici.",
+      "category": "Comenzi",
+      "eyebrow": "Ghidul retururilor",
+      "summary": "O cerere de retur implică întrebări distincte: dacă articolul este eligibil, dacă cererea respectă termenul, dacă vânzătorul acceptă și ce costuri se aplică. Răspunsul separat la fiecare este mai sigur decât presupunerea că un buton de retur garantează rambursarea.",
+      "sections": [
+        {
+          "id": "deadline",
+          "title": "Verifică înainte de toate ora din depozit",
+          "paragraphs": [
+            "Pagina de retururi Pikobuy specifică un interval de cinci zile, 120 de ore, după starea In Warehouse, calculat din ora următoare. Citește marca temporală a propriei comenzi și acționează prompt dacă există o problemă. Nu înlocui înregistrarea comenzii cu data la care ai observat întâmplător articolul. Intervalul publicat privește trimiterea cererii, nu promisiunea că întregul proces se încheie în acel timp.",
+            "Fă o notă scurtă cu referința comenzii, ora înregistrată a stării și motivul pentru care analizezi returul. Adaugă data contactării asistenței. Dacă ora sau fusul orar sunt neclare, întreabă imediat în loc să faci un calcul sigur pe informații incomplete. Nota ajută practic la păstrarea succesiunii; nu prelungește termenul platformei."
+          ]
+        },
+        {
+          "id": "eligibility",
+          "title": "Separă eligibilitatea de nemulțumire",
+          "paragraphs": [
+            "Politica de retur leagă eligibilitatea de participarea vânzătorului, starea pentru revânzare și termen. Identifică și excluderi, inclusiv bunuri personalizate și anumite articole ale căror etichete ori ambalaje au fost eliminate. Înainte să modifici articolul sau ambalajul, citește cerințele categoriei. Capacitatea de a descrie clar o problemă este valoroasă, dar nu stabilește singură că returul trebuie acceptat.",
+            "Bazează cererea pe fapte observabile. Compară varianta selectată cu articolul primit și identifică fotografia sau detaliul relevant al comenzii. Distinge un articol aparent greșit de o schimbare a preferinței și un defect vizibil de ceva ce fotografia nu arată clar. Descrierile exacte ajută pe toată lumea să abordeze aceeași întrebare; exagerarea poate îngreuna investigarea unei neconcordanțe simple."
+          ]
+        },
+        {
+          "id": "request",
+          "title": "Trimite o cerere concentrată și păstrează răspunsul",
+          "paragraphs": [
+            "Politica oficială cere consimțământul vânzătorului. Tratează trimiterea cererii, primirea aprobării și primirea rambursării ca evenimente separate. Păstrează corespondența care confirmă fiecare eveniment, fără a presupune că următorul pas a avut loc. Dacă asistența cere alte dovezi, răspunde cu materialul solicitat și păstrează legătura cu referința originală a comenzii.",
+            "O cerere utilă poate fi scurtă: identifică articolul, descrie motivul, indică dovezile și precizează rezultatul cerut. Întreabă ce acțiune urmează și dacă alte manipulări ar afecta eligibilitatea. Dacă răspunsul este condiționat, notează condiția. Nu descrie returul ca aprobat până când răspunsul stabilește efectiv acest lucru."
+          ]
+        },
+        {
+          "id": "cost-ambiguity",
+          "title": "Cere o explicație a taxelor pentru comanda ta",
+          "paragraphs": [
+            "Paginile publice nu sunt complet consecvente în privința tuturor costurilor de retur. Tabelul și secțiunea de taxe ale paginii de retur diferă privind transportul inițial pentru articole cu livrare inițial gratuită; acordul de servicii menționează și o limită de servicii gratuite. Diferențele justifică o clarificare, nu alegerea propoziției care produce rezultatul cel mai ieftin. Acest ghid nu le soluționează în numele Pikobuy.",
+            "Întreabă despre taxele de transport, eventualul comision de servicii și suma rambursabilă estimată pentru motivul și comanda ta. Compară explicația cu suma plătită inițial și salvează răspunsul. Dacă o taxă se modifică, cere motivul înainte de a accepta o deducere neexplicată. O defalcare clară este mai utilă decât o promisiune generală de retur gratuit sau un calcul bazat pe paragrafe contradictorii."
+          ]
+        },
+        {
+          "id": "refund-record",
+          "title": "Urmărește înregistrarea efectivă a rambursării până la final",
+          "paragraphs": [
+            "Păstrează împreună cererea și înregistrările rambursării, dar nu le considera interschimbabile. Notează suma aprobată, suma afișată ca returnată și orice diferență nerezolvată. Când destinația sau termenul rambursării sunt neclare, întreabă asistența despre tranzacția respectivă. Materialul oficial analizat nu justifică promisiunea universală că toate rambursările sosesc prin aceeași metodă în același număr de zile.",
+            "Înainte de a închide propria evidență, verifică dacă rezultatul corespunde aprobării primite. Dacă nu, trimite o singură revenire concisă cu referința comenzii, dovada aprobării și întrebarea exactă rămasă. Astfel oferi asistenței un istoric coerent, fără a o obliga să reconstruiască mesaje dispersate. La cumpărături viitoare, verifică returul înainte de plată și păstrează ambalajul cât decizi dacă articolul corespunde nevoilor."
+          ]
+        }
+      ],
+      "sources": [
+        "https://www.pikobuy.com/protocol/returns",
+        "https://www.pikobuy.com/protocol/user",
+        "https://www.pikobuy.com/contact"
+      ],
+      "related": [
+        "qc-photos",
+        "warehouse-consolidation",
+        "shipping-cost"
+      ]
+    },
+    {
+      "slug": "warehouse-consolidation",
+      "title": "Depozitul și consolidarea Pikobuy: planifică coletul înainte de expediere",
+      "description": "Analizează dovezile din depozit, distinge cumpărarea de redirecționare, compară ambalarea și evaluează consolidarea fără a presupune economii garantate.",
+      "category": "Depozit",
+      "eyebrow": "Ghidul depozitului",
+      "summary": "Etapa din depozit este un moment util de decizie între cumpărarea articolelor individuale și trimiterea coletului. Folosește-o pentru a verifica ce a sosit, a rezolva întrebări și a compara un plan practic de ambalare cu informațiile de transport disponibile.",
+      "sections": [
+        {
+          "id": "order-types",
+          "title": "Identifică felul în care fiecare articol a ajuns la depozit",
+          "paragraphs": [
+            "Un articol cumpărat prin agent și unul cumpărat independent trimis pentru redirecționare au puncte de pornire diferite. Politica de redirecționare Pikobuy descrie obținerea adresei actuale a depozitului și trimiterea informațiilor de redirecționare. Folosește instrucțiunile oficiale pentru o livrare organizată personal. Nu copia o adresă dintr-o postare veche presupunând că aceleași informații de identificare se aplică fiecărui client.",
+            "Păstrează un inventar mic care leagă fiecare articol fizic de vânzător sau expeditor, referința cumpărăturii și înregistrarea depozitului. Pentru bunurile cumpărate independent, păstrează și corespondența originală cu vânzătorul. Scopul este practic: dacă ceva lipsește sau este neclar, trebuie să poți identifica tranzacția relevantă fără a ghici la care dintre mai multe articole similare se referă mesajul."
+          ]
+        },
+        {
+          "id": "arrival-review",
+          "title": "Examinează dovezile sosirii înainte de planificarea coletului",
+          "paragraphs": [
+            "Condițiile de redirecționare descriu deschiderea și inspecția bunurilor primite. Uită-te la dovezile atașate articolului și notează orice întrebare care necesită atenție. Verificarea identității și stării vizibile înainte de discutarea ambalării separă două decizii: dacă articolul primit este acceptabil și cum vrei pregătit pentru expediere un articol acceptat.",
+            "Folosește o listă consecventă pentru toate articolele. Confirmă ce se poate stabili din înregistrarea disponibilă și marchează incertitudinile. Dacă o fotografie nu este suficientă, pune o întrebare precisă în loc să marchezi automat articolul ca satisfăcător. Când analizezi returul, rezolvă această variantă înainte de schimbări care ar elimina dovezi utile sau afecta starea pentru revânzare."
+          ]
+        },
+        {
+          "id": "packing",
+          "title": "Descrie rezultatul de ambalare de care ai nevoie",
+          "paragraphs": [
+            "Ghidul pentru începători menționează solicitări de ambalare minimă și consolidată. Începe cu scopul: poate vrei păstrarea unei cutii, protejarea unei componente vulnerabile sau să înțelegi dacă se poate elimina material exterior inutil. Întreabă ce modifică serviciul propus și cât costă. Numele opțiunilor de ambalare nu explică singure manipularea exactă a unui articol.",
+            "Evită să consideri automat mai puțin ambalaj drept o îmbunătățire. Gândește-te ce accepți să arunci, de ce are nevoie articolul și ce detalii rămân importante pentru un eventual litigiu sau retur. Dacă serviciul implică o schimbare ireversibilă, formulează cererea suficient de precis pentru a reflecta intenția. O descriere scrisă scurtă este mai ușor de verificat decât o instrucțiune vagă de a micșora totul."
+          ]
+        },
+        {
+          "id": "consolidation",
+          "title": "Compară coletul combinat cu alternative realiste",
+          "paragraphs": [
+            "Pagina de contact Pikobuy promovează combinarea produselor de la vânzători diferiți într-un colet. Aceasta stabilește ideea serviciului, nu un procent garantat de economie. Fă o listă de colet posibil care arată exact ce articole acceptate ar călători împreună. Compar-o cu alternativele importante, folosind aceleași date ale destinației și cele mai bune măsurători disponibile ale coletului.",
+            "O comparație utilă pune mai multe întrebări: este ruta disponibilă pentru expedierea propusă, ce informații susțin estimarea și ce s-ar schimba dacă un articol ar pleca separat? Notează răspunsul sau întrebarea fără răspuns lângă fiecare opțiune. Nu presupune că reunirea tuturor articolelor este mereu mai ieftină, mai rapidă sau mai potrivită. Evaluează coletul efectiv propus, fără a te baza doar pe numărul articolelor."
+          ]
+        },
+        {
+          "id": "submit-check",
+          "title": "Rezolvă întrebările de depozitare și cost înainte de depunere",
+          "paragraphs": [
+            "Paginile publice analizate nu au stabilit o perioadă universală sigură de depozitare gratuită. Dacă intenționezi să aștepți altă cumpărătură, verifică condițiile articolelor deja depozitate și întreabă asistența despre termene neclare. Nu lăsa avantajul sperat al consolidării să depindă de o perioadă de depozitare neverificată pentru propria comandă.",
+            "Înainte de depunerea coletului, examinează împreună conținutul, instrucțiunile de manipulare, datele destinatarului și defalcarea plății. Păstrează versiunea aprobată efectiv. Dacă ambalarea schimbă datele estimării anterioare, compară cifrele revizuite înainte de decizie. Scopul practic este un plan de colet explicabil: ce include, ce manipulare ai cerut, ce sumă ai acceptat și ce întrebări s-au rezolvat."
+          ]
+        }
+      ],
+      "sources": [
+        "https://www.pikobuy.com/protocol/shipping",
+        "https://www.pikobuy.com/contact",
+        "https://www.pikobuy.com/guide",
+        "https://www.pikobuy.com/shipping-cost",
+        "https://www.pikobuy.com/protocol/returns"
+      ],
+      "related": [
+        "shipping-cost",
+        "qc-photos",
+        "order-tracking"
+      ]
+    },
+    {
+      "slug": "order-tracking",
+      "title": "Urmărirea comenzilor Pikobuy: urmărește expedierea corectă și pune întrebări mai bune",
+      "description": "Separă livrarea vânzătorului de urmărirea coletului internațional, interpretează prudent actualizările incomplete și pregătește o cerere clară către asistență cu înregistrările corecte.",
+      "category": "Livrare",
+      "eyebrow": "Ghidul urmăririi comenzilor",
+      "summary": "O cumpărătură poate implica mai multe deplasări și referințe. Urmărirea devine mai ușoară când știi ce etapă verifici, ce înregistrare îi aparține și ce informații ar rezolva incertitudinea.",
+      "sections": [
+        {
+          "id": "shipment-map",
+          "title": "Separă cumpărătura de coletul internațional",
+          "paragraphs": [
+            "Începe prin identificarea evenimentului pe care vrei să-l înțelegi. Verifici dacă vânzătorul a trimis articolul, dacă a ajuns la depozit sau unde este acum un colet internațional depus? Acestea sunt distincții practice pentru notițe, nu o listă de etichete oficiale de stare. Folosește formularea efectiv afișată în cont când descrii evenimentul asistenței.",
+            "Păstrează fiecare referință disponibilă lângă partea călătoriei pe care o descrie. Referința comenzii identifică achiziția; cea a coletului identifică expedierea mai departe. Dacă sunt combinate mai multe comenzi, notează ce articole aparțin coletului. Astfel, livrarea vânzătorului nu este confundată cu dovada că pachetul internațional se apropie deja de adresa ta."
+          ]
+        },
+        {
+          "id": "first-update",
+          "title": "Distinge expedierea de prima actualizare de urmărire",
+          "paragraphs": [
+            "Ghidul de cumpărături Pikobuy spune că informațiile de urmărire devin disponibile în trei zile de la expediere. Afirmația privește disponibilitatea inițială a urmăririi; nu promite livrare în trei zile. Confirmă întâi ce înregistrare de expediere citești înainte de a o folosi ca punct de pornire al întrebării. Păstrează înregistrarea datată din cont dacă succesiunea este neclară.",
+            "O pagină de urmărire goală sau neschimbată nu explică singură ce s-a întâmplat. Evită să completezi golul cu o poveste sigură despre un colet pierdut, acțiunea vămii sau întârzierea transportatorului. Notează ce arată efectiv pagina și când ai verificat-o. Apoi pune o întrebare la care se poate răspunde, de exemplu dacă referința este corectă sau există o actualizare mai nouă."
+          ]
+        },
+        {
+          "id": "read-updates",
+          "title": "Citește fiecare actualizare ca pe un eveniment concret",
+          "paragraphs": [
+            "Când apar informații, notează textul evenimentului, marca temporală și sursa afișării. Dacă transportatorul și platforma arată date diferite, păstrează ambele înregistrări fără a înlocui în tăcere una cu interpretarea ta. Caută următoarea întrebare factuală: referințele coincid, orele folosesc același fus orar și o pagină afișează un eveniment mai vechi?",
+            "Aceste verificări ajută la organizarea solicitării; nu stabilesc un sens universal pentru toate stările transportatorilor. Folosește explicația transportatorului când există pentru expedierea efectivă. O formulare liniștitoare nu este totuna cu livrarea confirmată, la fel cum una necunoscută nu dovedește o problemă. Dacă sensul afectează pasul următor, cere clarificări."
+          ]
+        },
+        {
+          "id": "support-packet",
+          "title": "Pregătește o solicitare concisă către asistență",
+          "paragraphs": [
+            "Pagina oficială de contact Pikobuy recomandă deschiderea unui tichet. Adună referința relevantă a comenzii sau coletului, numărul de urmărire dacă apare, cea mai recentă actualizare datată și o scurtă descriere a neconcordanței. Include doar datele personale necesare solicitării, prin canalul oficial, fără a publica adresa completă ori datele contului într-o discuție publică.",
+            "O solicitare bună are o singură întrebare clară. Explică despre ce colet întrebi, ce spune înregistrarea actuală și ce trebuie confirmat. Dacă ai contactat deja asistența, include referința tichetului anterior, dacă există. Astfel istoricul rămâne împreună. Un mesaj nou care repetă întrebarea fără contextul original poate îngreuna înțelegerea verificărilor deja făcute."
+          ]
+        },
+        {
+          "id": "follow-through",
+          "title": "Separă întrebările de livrare de despăgubiri",
+          "paragraphs": [
+            "Găsirea ultimei stări a coletului și evaluarea unei cereri de despăgubire sunt sarcini diferite. Acordul de servicii condiționează despăgubirea de asigurare de acoperire și condițiile aplicabile. Nu deduce aprobarea din existența opțiunii de asigurare sau dintr-o formulare alarmantă de urmărire. Dacă o cerere devine relevantă, întreabă ce dovezi și procedură se aplică expedierii concrete.",
+            "Când coletul sosește, păstrează înregistrarea livrării și examinează ce ai primit înainte de a închide notițele. Dacă există o problemă, descrie-o cu fotografii și referințele relevante, nu printr-o acuzație generală. Dacă solicitarea rămâne deschisă, urmărește ultimul răspuns și întrebarea exactă fără răspuns. Un istoric scurt și consecvent este mai util decât o colecție tot mai mare de capturi fără legătură."
+          ]
+        }
+      ],
+      "sources": [
+        "https://www.pikobuy.com/guide",
+        "https://www.pikobuy.com/contact",
+        "https://www.pikobuy.com/protocol/shipping",
+        "https://www.pikobuy.com/protocol/user"
+      ],
+      "related": [
+        "shipping-cost",
+        "warehouse-consolidation",
+        "returns-refunds"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,975 @@
+{
+  "labels": {
+    "faq": "Ceisteanna coitianta",
+    "articles": "Ailt",
+    "faqTitle": "Ceisteanna coitianta faoi Pikobuy",
+    "faqIntro": "Freagraí soiléire faoi ordú, seiceálacha stórais, loingseoireacht agus earraí a chur ar ais, bunaithe ar threoracha agus ar bheartais oifigiúla Pikobuy. Tá nasc lena fhoinse i ngach freagra.",
+    "faqShort": "Ceisteanna agat sula n-ordaíonn tú? Tosaigh le freagraí atá seiceáilte i gcoinne leathanaigh oifigiúla Pikobuy.",
+    "articlesTitle": "Treoracha ceannaigh Pikobuy",
+    "articlesIntro": "Ón gcéad fhionnachtain sa scarbhileog go dtí an beartán ag do dhoras: treoracha praiticiúla faoi naisc táirgí, méideanna, grianghraif rialaithe cáilíochta, costais agus loingseoireacht.",
+    "allArticles": "Na 10 dtreoir ar fad",
+    "readArticle": "Léigh an treoir",
+    "checked": "Foinsí seiceáilte",
+    "questions": "ceisteanna",
+    "onThisPage": "Ar an leathanach seo",
+    "officialSources": "Foinsí oifigiúla",
+    "needHelp": "Cabhair uait le hordú?",
+    "helpText": "Déan teagmháil le Pikobuy agus uimhir d'ordaithe nó do bheartáin agat. Ní féidir leis an suíomh treoracha neamhspleách seo do chuntas a fheiceáil ná ordú a athrú.",
+    "officialSupport": "Tacaíocht Pikobuy",
+    "editorialNote": "Treoracha neamhspleácha le naisc chuig foinsí",
+    "breadcrumbs": "Conair nascleanúna",
+    "home": "Baile",
+    "editorialTeam": "Foireann eagarthóireachta Pikobuy.at",
+    "quickAnswer": "AN FREAGRA GEARR",
+    "sourceNote": "Seiceáladh fíricí a bhaineann leis an ardán i gcoinne na leathanach oifigiúil seo ar an dáta a thaispeántar. Moltaí praiticiúla eagarthóireachta iad ár seicliostaí. Deimhnigh na coinníollacha reatha i d'ordú Pikobuy sula n-íocann tú nó sula seolann tú é.",
+    "browseFinds": "Fiosraigh an scarbhileog",
+    "related": "Lean ort ag léamh",
+    "independentNote": "Suíomh neamhspleách moltaí is ea Pikobuy.at. Tagann sonraí táirgí ó cnfansge.com; is é Pikobuy a láimhseálann ceannacháin agus tacaíocht cuntais."
+  },
+  "groups": {
+    "getting-started": "Ag tosú",
+    "orders": "Orduithe agus earraí ar ais",
+    "warehouse": "Stóras agus grianghraif",
+    "shipping": "Loingseoireacht agus rianú"
+  },
+  "faqs": [
+    {
+      "id": "what-is-pikobuy",
+      "group": "getting-started",
+      "q": "Cad é Pikobuy?",
+      "a": "Cabhraíonn Pikobuy le siopadóirí táirgí a aimsiú, a cheannach agus a sheoladh ón tSín. Déanann a chomhaontú seirbhíse cur síos ar chúnamh ceannaigh seachas díolacháin mhiondíola dhíreacha. Seiceáil eolas táirge an díoltóra bhunaidh chomh maith leis na sonraí a chuirtear i láthair le linn an íocaíochta.",
+      "sources": [
+        "https://www.pikobuy.com/About",
+        "https://www.pikobuy.com/protocol/user"
+      ]
+    },
+    {
+      "id": "supported-marketplaces",
+      "group": "getting-started",
+      "q": "Cé na margaí ar líne a luaitear i dtreoir Pikobuy?",
+      "a": "Ainmníonn treoir na dtosaitheoirí Taobao, Tmall, 1688, Weidian agus Yupoo. Ní chruthaíonn lua margaidh go bhfuil gach liostú nó táirge incháilithe; seiceáil an t-earra ar leith sula n-íocann tú.",
+      "sources": [
+        "https://www.pikobuy.com/guide"
+      ]
+    },
+    {
+      "id": "open-product-link",
+      "group": "getting-started",
+      "q": "Conas a aimsím táirge ar Pikobuy?",
+      "a": "Déanann an treoir oifigiúil cur síos ar chuardach le nasc táirge nó le heochairfhocail. Tar éis duit an toradh a oscailt, cuir a shonraí aitheantais i gcomparáid leis an liostú bunaidh sula roghnaíonn tú leagan.",
+      "sources": [
+        "https://www.pikobuy.com/guide"
+      ]
+    },
+    {
+      "id": "search-from-image",
+      "group": "getting-started",
+      "q": "An féidir liom tosú le híomhá táirge?",
+      "a": "Fógraíonn leathanach baile Pikobuy íomhánna a chur isteach agus iarratais chun táirgí a aimsiú. Caith le haon toradh mar iarrthóir le seiceáil: d'fhéadfadh díoltóir, ábhar, méid nó sonraíocht dhifriúil a bheith ag earra a bhfuil cuma chosúil air.",
+      "sources": [
+        "https://www.pikobuy.com/home"
+      ]
+    },
+    {
+      "id": "choose-variation",
+      "group": "getting-started",
+      "q": "Cad ba cheart dom a sheiceáil roimh an gcéad íocaíocht?",
+      "a": "Deimhnigh dath, méid agus cainníocht, mar a ordaíonn an treoir. Má choinníonn tú an nasc foinseach agus an leagan roghnaithe le chéile, is fusa ceisteanna níos déanaí faoin ordú a mhíniú.",
+      "sources": [
+        "https://www.pikobuy.com/guide"
+      ]
+    },
+    {
+      "id": "two-payment-stages",
+      "group": "getting-started",
+      "q": "Cén fáth a bhfuil ceannach agus loingseoireacht idirnáisiúnta ar leithligh?",
+      "a": "Cuireann an treoir an íocaíocht cheannaigh roimh láimhseáil sa stóras, agus an íocaíocht loingseoireachta idirnáisiúnta tráth a chuirtear beartán isteach. Cuir an dá chéim san áireamh sa bhuiséad seachas glacadh le praghas an táirge mar an costas iomlán lena sheachadadh.",
+      "sources": [
+        "https://www.pikobuy.com/guide"
+      ]
+    },
+    {
+      "id": "out-of-stock",
+      "group": "getting-started",
+      "q": "Cad a tharlaíonn mura bhfuil earra i stoc?",
+      "a": "Deir an treoir oifigiúil siopadóireachta go n-aisíoctar ordú d'earra nach bhfuil i stoc. Ní shocraíonn sí am uilíoch chun aisíocaíocht a fháil, mar sin seiceáil taifead iarbhír an ordaithe nó cuir ceist ar an bhfoireann tacaíochta faoi d'íocaíocht.",
+      "sources": [
+        "https://www.pikobuy.com/guide"
+      ]
+    },
+    {
+      "id": "actual-product-price",
+      "group": "orders",
+      "q": "An féidir leis an bpraghas ceannaigh iarbhír a bheith difriúil ón bpraghas a thaispeántar?",
+      "a": "Is féidir. Cuireann an treoir praghsanna faoi réir an cheannaigh iarbhír. Sula nglacann tú le suim athraithe, cuir an leagan roghnaithe, an chainníocht agus miondealú an ordaithe i gcomparáid seachas brath ar phraghas catalóige sábháilte amháin.",
+      "sources": [
+        "https://www.pikobuy.com/guide"
+      ]
+    },
+    {
+      "id": "failed-payment",
+      "group": "orders",
+      "q": "An bpróiseálfar ordú má theipeann ar an íocaíocht?",
+      "a": "Deir na téarmaí ginearálta nach bpróiseáiltear ordú nuair a theipeann ar íocaíocht. Seiceáil taifid an ordaithe agus na híocaíochta sula ndéanann tú iarracht eile, ionas gur féidir leat aon idirbheart ar feitheamh nó a bhfuil cuma dhúblach air a mhíniú don fhoireann tacaíochta.",
+      "sources": [
+        "https://www.pikobuy.com/protocol/terms"
+      ]
+    },
+    {
+      "id": "payment-methods",
+      "group": "orders",
+      "q": "Cé na modhanna íocaíochta is féidir liom a úsáid?",
+      "a": "Deir an leathanach Eolas go dtacaítear le roinnt modhanna agus airgeadraí. Úsáid na roghanna a thairgtear go hiarbhír ag an tseiceáil amach; ní dheimhníonn lógónna sa bhuntásc infhaighteacht, táillí ná incháilitheacht do gach cuntas agus ceann scríbe.",
+      "sources": [
+        "https://www.pikobuy.com/About"
+      ]
+    },
+    {
+      "id": "return-deadline",
+      "group": "orders",
+      "q": "Cathain ba cheart dom earra sa stóras a iarraidh ar ais?",
+      "a": "Sonraíonn an leathanach um earraí ar ais cúig lá, nó 120 uair an chloig, tar éis stádas In Warehouse, agus tosaíonn an comhaireamh ón uair an chloig ina dhiaidh sin. Seiceáil am taifeadta an stádais agus cuir isteach go pras; tréimhse incháilitheachta atá ann, ní ceadú uathoibríoch.",
+      "sources": [
+        "https://www.pikobuy.com/protocol/returns"
+      ]
+    },
+    {
+      "id": "return-eligibility",
+      "group": "orders",
+      "q": "An bhfuil gach táirge incháilithe le cur ar ais?",
+      "a": "Níl. Tá rannpháirtíocht an díoltóra, riocht athdhíola agus tráthúlacht tábhachtach. Eisiann an beartas catagóirí amhail earraí saincheaptha nó athláimhe agus earraí a bhfuil lipéid nó pacáistiú riachtanach bainte díobh. Léigh na rialacha do d'earra féin.",
+      "sources": [
+        "https://www.pikobuy.com/protocol/returns"
+      ]
+    },
+    {
+      "id": "return-cost",
+      "group": "orders",
+      "q": "Cé mhéad a chosnaíonn earra a chur ar ais?",
+      "a": "D'fhéadfadh costais iompair ar ais agus táillí seirbhíse a bheith i gceist. Tá difríochtaí idir na leathanaigh oifigiúla maidir le roinnt táillí agus coinníollacha seirbhíse saor in aisce, mar sin fiafraigh den tsuim do d'ordú agus do chúis féin sula leanann tú ar aghaidh; ná glac leis go bhfuil gach cur ar ais saor in aisce.",
+      "sources": [
+        "https://www.pikobuy.com/protocol/returns",
+        "https://www.pikobuy.com/protocol/user"
+      ]
+    },
+    {
+      "id": "seller-approval",
+      "group": "orders",
+      "q": "An ráthaíonn iarratas chun earra a chur ar ais aisíocaíocht?",
+      "a": "Ní ráthaíonn. Éilíonn an beartas um earraí ar ais toiliú an díoltóra. Coinnigh an t-iarratas, an fhianaise agus comhfhreagras an ordaithe le chéile, agus seiceáil an méid atá ceadaithe go hiarbhír sula ndéanann tú tuilleadh pleananna don earra sin.",
+      "sources": [
+        "https://www.pikobuy.com/protocol/returns"
+      ]
+    },
+    {
+      "id": "warehouse-inspection",
+      "group": "warehouse",
+      "q": "Cad a tharlaíonn nuair a shroicheann earra ceannaithe an stóras?",
+      "a": "Déanann an treoir siopadóireachta cur síos ar chlárú teachta, grianghraif agus seiceáil lochtanna. Déan athbhreithniú ar an eolas do d'ordú féin sula roghnaíonn tú an chéad chéim eile.",
+      "sources": [
+        "https://www.pikobuy.com/guide"
+      ]
+    },
+    {
+      "id": "qc-limits",
+      "group": "warehouse",
+      "q": "An gcruthaíonn grianghraif rialaithe cáilíochta barántúlacht nó feidhmíocht theicniúil?",
+      "a": "Ní chruthaíonn. Cuireann an comhaontú seirbhíse teorainn le hiniúchadh gairmiúil earraí áirithe, agus ní féidir le grianghraif gach airí folaithe nó teicniúil a dheimhniú. Úsáid iad chun an méid atá infheicthe a mheas agus iarr soiléiriú faoi aon rud tábhachtach atá fós doiléir.",
+      "sources": [
+        "https://www.pikobuy.com/protocol/user",
+        "https://www.pikobuy.com/protocol/shipping"
+      ]
+    },
+    {
+      "id": "extra-photos",
+      "group": "warehouse",
+      "q": "An féidir liom grianghraif bhreise iniúchta a fháil?",
+      "a": "Déanann na téarmaí seolta ar aghaidh cur síos ar ghrianghraif mhionsonraithe bhreise a cheannach. Fiafraigh den radharc atá uait, den infhaighteacht agus den táille sula mbraitheann tú air. Is úsáidí iarratas beacht ná iarraidh ghinearálta ar rialú cáilíochta níos fearr.",
+      "sources": [
+        "https://www.pikobuy.com/protocol/shipping"
+      ]
+    },
+    {
+      "id": "forward-my-purchase",
+      "group": "warehouse",
+      "q": "An féidir liom earra a cheannaigh mé go neamhspleách a sheoladh chuig an stóras?",
+      "a": "Déanann na téarmaí seolta ar aghaidh cur síos ar sheoladh an stórais a fháil ón bhfoireann tacaíochta nó ón bhfoirm seolta ar aghaidh, an t-eolas riachtanach a chur isteach, agus loingseoireacht ar aghaidh a shocrú tar éis teacht. Úsáid na treoracha oifigiúla reatha do do bheartán.",
+      "sources": [
+        "https://www.pikobuy.com/protocol/shipping"
+      ]
+    },
+    {
+      "id": "combine-sellers",
+      "group": "warehouse",
+      "q": "An féidir earraí ó dhíoltóirí éagsúla a chomhcheangal?",
+      "a": "Fógraíonn leathanach teagmhála Pikobuy earraí a chomhcheangal in aon bheartán amháin. Cuir na roghanna beartáin iarbhír agus coinníollacha na mbealaí i gcomparáid; ní ráthaíonn comhcheangal earraí coigilteas do gach lastas.",
+      "sources": [
+        "https://www.pikobuy.com/contact"
+      ]
+    },
+    {
+      "id": "packaging-options",
+      "group": "warehouse",
+      "q": "An féidir liom pacáistiú íosta nó treisithe a iarraidh?",
+      "a": "Liostaíonn treoir na dtosaitheoirí an dá cheann mar iarratais fhéideartha. Pléigh an méid a bhainfear nó a chuirfear leis agus seiceáil aon táille lena mbaineann. Má d'fhéadfá earra a chur ar ais, coinnigh é sa riocht a éilíonn a bheartas um earraí ar ais.",
+      "sources": [
+        "https://www.pikobuy.com/guide",
+        "https://www.pikobuy.com/protocol/returns"
+      ]
+    },
+    {
+      "id": "storage-duration",
+      "group": "warehouse",
+      "q": "Cá fhad is féidir liom earraí a fhágáil sa stóras?",
+      "a": "Níor dheimhnigh na leathanaigh phoiblí a athbhreithníodh don treoir seo tréimhse iontaofa stórála saor in aisce ná sceideal iomlán táillí stórála. Seiceáil an spriocdháta agus na coinníollacha a thaispeántar do d'ordú féin, nó cuir ceist ar an tacaíocht oifigiúil sula gcuireann tú moill ar an seoladh.",
+      "sources": [
+        "https://www.pikobuy.com/protocol/shipping",
+        "https://www.pikobuy.com/contact"
+      ]
+    },
+    {
+      "id": "estimate-inputs",
+      "group": "shipping",
+      "q": "Cad a theastaíonn uaim le haghaidh meastachán loingseoireachta Pikobuy?",
+      "a": "Iarrann an t-áireamhán ceann scríbe, cineál táirge, meáchan agus toisí. Bailigh na sonraí sin sula gcuireann tú tairiscintí i gcomparáid, agus cuir figiúirí níos cruinne in áit na bhfigiúirí sealadacha nuair a bhíonn eolas níos cruinne faoin mbeartán ar fáil.",
+      "sources": [
+        "https://www.pikobuy.com/shipping-cost"
+      ]
+    },
+    {
+      "id": "estimate-units",
+      "group": "shipping",
+      "q": "Cé na haonaid a úsáideann an t-áireamhán loingseoireachta?",
+      "a": "Cuirtear meáchan isteach i gcileagraim; úsáidtear ceintiméadair don fhad, don leithead agus don airde. Seiceáil tiontuithe aonad go cúramach, mar tugann uimhir cheart san aonad mícheart meastachán neamhúsáideach.",
+      "sources": [
+        "https://www.pikobuy.com/shipping-cost"
+      ]
+    },
+    {
+      "id": "route-comparison",
+      "group": "shipping",
+      "q": "An bpraghsáiltear bealaí loingseoireachta agus a n-amanna ar an mbealach céanna?",
+      "a": "Ní dhéantar. Deir an treoir go mbíonn amanna seachadta agus modhanna muirir éagsúil de réir bealaigh. Léigh sonraí reatha gach bealaigh atá ar fáil seachas an praghas ceannlíne amháin a chur i gcomparáid.",
+      "sources": [
+        "https://www.pikobuy.com/guide"
+      ]
+    },
+    {
+      "id": "shipping-service-fee",
+      "group": "shipping",
+      "q": "An féidir táille ardáin a bheith ar loingseoireacht idirnáisiúnta?",
+      "a": "Liostaíonn an comhaontú foilsithe seirbhíse táille ardáin de 8% den táille loingseoireachta, faoi réir coinníollacha socraíochta. Déan athbhreithniú ar mhiondealú iarbhír na híocaíochta agus ar na téarmaí reatha seachas glacadh le seirbhís uilíoch gan táille.",
+      "sources": [
+        "https://www.pikobuy.com/protocol/user"
+      ]
+    },
+    {
+      "id": "first-tracking",
+      "group": "shipping",
+      "q": "Cathain ba cheart eolas rianaithe a bheith le feiceáil?",
+      "a": "Deir an treoir siopadóireachta laistigh de thrí lá tar éis seolta. Déanann sé sin cur síos ar an gcéad infhaighteacht rianaithe, ní ar sheachadadh laistigh de thrí lá. Má tá soiléiriú de dhíth ar do thaifead féin, seol tagairt an bheartáin agus eolas dátaithe an stádais chuig an bhfoireann tacaíochta.",
+      "sources": [
+        "https://www.pikobuy.com/guide",
+        "https://www.pikobuy.com/contact"
+      ]
+    },
+    {
+      "id": "customs-guarantee",
+      "group": "shipping",
+      "q": "An ráthaítear imréiteach custaim?",
+      "a": "Ní ráthaítear. Ní ráthaíonn an comhaontú seirbhíse imréiteach. Seiceáil incháilitheacht an earra agus riachtanais an bhealaigh roghnaithe sula seoltar é; ní dheimhníonn liostú táirge ná grianghraf stórais cead chun é a allmhairiú.",
+      "sources": [
+        "https://www.pikobuy.com/protocol/user",
+        "https://www.pikobuy.com/protocol/terms"
+      ]
+    },
+    {
+      "id": "contact-support",
+      "group": "shipping",
+      "q": "Cá háit ar cheart dom ceist a chur faoi lastas nó ordú?",
+      "a": "Úsáid leathanach teagmhála oifigiúil Pikobuy, a mholann ticéad tacaíochta a chur isteach agus a liostaíonn bealaí teagmhála eile freisin. Cuir tagairt ábhartha an ordaithe nó an bheartáin agus cur síos gairid leis. Ní féidir leis an scarbhileog neamhspleách seo rochtain a fháil ar do chuntas Pikobuy.",
+      "sources": [
+        "https://www.pikobuy.com/contact"
+      ]
+    }
+  ],
+  "articles": [
+    {
+      "slug": "spreadsheet-guide",
+      "title": "Treoir Scarbhileoige Pikobuy: Táirgí a Aimsiú agus a Chur i gComparáid",
+      "description": "Úsáid scarbhileog Pikobuy chun fíorliostuithe cnfansge a chuardach, sonraí táirgí a chur i gcomparáid agus an nasc foinseach ceart a choinneáil sula n-ordaíonn tú.",
+      "category": "Táirgí a aimsiú",
+      "eyebrow": "SCARBHILEOG PIKOBUY",
+      "summary": "Coinníonn gearrliosta úsáideach an táirge, an fhoinse, an rogha agus na ceisteanna gan fhreagra le chéile. Seo mar a dhéanann tú ceann le heolaire an tsuímh seo.",
+      "sections": [
+        {
+          "id": "what-you-are-browsing",
+          "title": "Tosaigh le ról na scarbhileoige",
+          "paragraphs": [
+            "Is éard atá i scarbhileog Pikobuy ná bailiúchán nasc táirgí atá eagraithe chun fionnachtain a dhéanamh níos éasca. Ar pikobuy.at, feictear an bailiúchán sin mar eolaire inchuardaithe seachas mar bhileog le híoslódáil. Tagann a thaifid táirgí agus a íomhánna catalóige ó cnfansge.com. Suíomh neamhspleách brabhsála is ea Pikobuy.at; ní gealltanas faoi infhaighteacht, cáilíocht ná oiriúnacht earra é a bheith le feiceáil anseo.",
+            "Úsáid an t-eolaire chun do roghanna a chúngú, ansin déan athbhreithniú ar an tairiscint reatha ar Pikobuy sula n-íocann tú. Tá an t-idirdhealú tábhachtach nuair a athraíonn praghas liostaithe shábháilte, nuair a athraíonn díoltóir na roghanna atá ar fáil, nó nuair a thaispeánann grianghraf leagan eile. Is féidir le taifead catalóige cabhrú leat táirge a aimsiú gan gach ceist faoin ordú atá beartaithe agat a fhreagairt."
+          ]
+        },
+        {
+          "id": "search-with-a-purpose",
+          "title": "Cuardaigh táirge ar féidir leat cur síos a dhéanamh air",
+          "paragraphs": [
+            "Oscail an leathanach Scarbhileog agus tosaigh le frása gairid táirge, amhail mála gualainne canbháis nó geansaí cochallach le zip. Má tá na torthaí róchúng, bain focal tuairisciúil. Má tá siad róleathan, cuir gné úsáideach leis. Is féidir le hainmneacha táirgí a bheith éagsúil idir foinsí, mar sin ní chruthaíonn frása amháin nár éirigh leis nach bhfuil earra ar fáil.",
+            "Nuair atá tú ag fiosrú seachas ag lorg earra amháin, roghnaigh catagóir. Coinníonn brabhsáil de réir catagóire táirgí cosúla le chéile agus déanann sí difríochtaí praghsanna níos fusa a scrúdú. Cuireann an chatalóg rialuithe sórtála ar fáil le haghaidh brabhsála; athraíonn siad ord na dtaifead atá ar fáil, ní a gcáilíocht bhunúsach. Leid fionnachtana is ea toradh coitianta, ní moladh neamhspleách."
+          ]
+        },
+        {
+          "id": "read-the-record",
+          "title": "Oscail na sonraí sula gcuireann tú praghsanna i gcomparáid",
+          "paragraphs": [
+            "Tugann cárta táirge íomhá, ainm agus praghas taispeánta duit. Oscail leathanach an táirge chun an gailearaí agus na naisc fhoinseacha atá ar fáil a scrúdú. Lorg sonraí atá tábhachtach do d'úsáid: oscailt mála agus ceangail a strapa, líneáil seaicéid, nó dúnadh gabhálais bhig. Ceist le réiteach is ea uillinn atá ar iarraidh, ní fianaise nach bhfuil an ghné ann.",
+            "Caith leis an tsuim a thaispeántar mar thagairt chun taifid catalóige a chur i gcomparáid. Seiceáil an t-airgeadra in aice léi agus deimhnigh praghas reatha na rogha roghnaithe ar Pikobuy. D'fhéadfadh dhá chárta chosúla tagairt a dhéanamh d'ábhair, méideanna nó cainníochtaí éagsúla. Dá bhrí sin, d'fhéadfadh comparáid idir a bpraghsanna ceannlíne amháin tuairim mhícheart a thabhairt duit faoin tairiscint is saoire."
+          ]
+        },
+        {
+          "id": "make-a-small-shortlist",
+          "title": "Coinnigh trí iarrthóir agus na ceisteanna tábhachtacha",
+          "paragraphs": [
+            "Don chéad chomparáid, is gnách go mbíonn sé níos fusa trí iarrthóir a mheas ná bailiúchán fada cluaisíní oscailte. Taifead an URL foinseach taobh leis an gcúis a bhfuil gach earra á choinneáil agat. Cuireann sé sin cosc ar mhionsamhail aithnidiúil a bheith mar an t-aon bhealach chun liostú a aithint níos déanaí. Is féidir leat na nótaí seo a choinneáil i do dhoiciméad féin; ní bhraitheann an próiseas ar ghné earraí sábháilte.",
+            "Mar shampla, d'fhéadfadh duine atá ag comparáid málaí laethúla ceann a choinneáil toisc go bhfuil a chruth oiriúnach, ceann eile toisc go bhfuil a thoisí níos soiléire, agus an tríú ceann toisc gur cosúil go bhfuil a dhúnadh níos éasca le húsáid. Is é an chéad chéim eile an t-eolas atá ar iarraidh do gach iarrthóir a líonadh, ní an cárta is saoire a roghnú go huathoibríoch."
+          ],
+          "bullets": [
+            "Táirge agus foinse: nasc na catalóige agus URL bunaidh an mhargaidh nuair atá sé ar fáil.",
+            "Rogha bheacht: an dath, an méid, an stíl agus an chainníocht atá uait.",
+            "Fianaise: na radhairc nó tomhais úsáideacha atá ar fáil, agus an méid atá fós ar iarraidh.",
+            "Buiséad: tagairt phraghas an earra agus liúntas ar leith do chostais níos déanaí."
+          ]
+        },
+        {
+          "id": "understand-the-photos",
+          "title": "Coinnigh íomhánna catalóige ar leithligh ó rialú cáilíochta an ordaithe",
+          "paragraphs": [
+            "Fianaise brabhsála iad na grianghraif atá ar fáil in eolaire. Ná glac leis gur iniúchadh ar an earra beacht a gheobhaidh tú é gailearaí catalóige. Déanann rialú cáilíochta stairiúil, nuair a aithnítear go sainráite é agus nuair atá sé ar fáil, cur síos ar earra níos luaithe freisin; ní thagann sé in áit athbhreithniú ar d'ordú féin tar éis dó an stóras a bhaint amach.",
+            "Ní chuireann an leagan seo den suíomh seirbhís fheidhmiúil cuardaigh íomhá ná aimsitheoir neamhspleách rialaithe cáilíochta ar fáil. Úsáid a chuardach téacs, a chatagóirí agus a naisc fhoinseacha le haghaidh fionnachtana. Le haghaidh iniúchta a bhaineann le d'ordú féin, úsáid an t-eolas i do chuntas oifigiúil Pikobuy agus cuir ceist ar an bhfoireann tacaíochta faoi shonra nach bhfuil infheicthe. Ní féidir le grianghraf gach airí ábhair, locht folaithe ná fadhb feidhmíochta fadtéarmaí a dheimhniú."
+          ]
+        },
+        {
+          "id": "handoff-to-pikobuy",
+          "title": "Déan na seiceálacha deiridh ar Pikobuy",
+          "paragraphs": [
+            "Úsáid nasc ceannaigh Pikobuy an táirge nuair atá sé ar fáil, ansin cuir an liostú ceann scríbe i gcomparáid le do nótaí. Seiceáil an táirge, an díoltóir, an rogha roghnaithe, an chainníocht agus an tsuim reatha. Mura bhfuil an leathanach iompórtáilte ag teacht leo, stop agus téigh ar ais chuig an bhfoinse bhunaidh seachas ordú a chríochnú ar bhonn íomhá chosúil amháin.",
+            "Nuair atá na sonraí sin soiléir, lean an próiseas oifigiúil ceannaigh. Coinnigh nótaí an ghearrliosta go dtí go dtagann an t-earra chuig an stóras: tugann siad tagairt nithiúil duit chun é a athbhreithniú. Mura lódálann taifead táirge ar an suíomh seo, bain triail eile as nó fill níos déanaí; ní ráiteas iontaofa faoi stoc an díoltóra é freagra catalóige nach bhfuil ar fáil."
+          ]
+        }
+      ],
+      "sources": [
+        "https://cnfansge.com/",
+        "https://www.pikobuy.com/guide",
+        "https://www.pikobuy.com/protocol/user"
+      ],
+      "related": [
+        "weidian-taobao-links",
+        "size-guide",
+        "how-to-use-pikobuy"
+      ]
+    },
+    {
+      "slug": "how-to-use-pikobuy",
+      "title": "Conas Pikobuy a Úsáid: Treoir Phraiticiúil don Chéad Ordú",
+      "description": "Lean an próiseas oifigiúil ceannaigh Pikobuy, le híocaíochtaí ar leith do tháirgí agus do loingseoireacht agus seicliosta do gach cinneadh.",
+      "category": "Ordú a chur isteach",
+      "eyebrow": "AN CHÉAD ORDÚ",
+      "summary": "Scarann treoir oifigiúil Pikobuy táirge a aimsiú, é a cheannach, iniúchadh stórais agus loingseoireacht idirnáisiúnta. Úsáid na céimeanna sin chun do chéad ordú a choinneáil eagraithe.",
+      "sections": [
+        {
+          "id": "prepare-your-order",
+          "title": "Ullmhaigh na sonraí sula gcláraíonn tú",
+          "paragraphs": [
+            "Tosaigh le táirge amháin ar féidir leat cur síos beacht a dhéanamh air. Coinnigh a URL foinseach agus scríobh síos an dath, an méid agus an chainníocht atá uait. Má fuair tú é trí scarbhileog Pikobuy ar an suíomh seo, cuimhnigh go dtagann catalóg na dtáirgí ó cnfansge.com. Cabhraíonn Pikobuy.at leat liostuithe a aimsiú; tarlaíonn clárú cuntais, íocaíocht agus bainistiú orduithe ar pikobuy.com.",
+            "Úsáid an nasc cláraithe oifigiúil agus cuir isteach sonraí cruinne. Seiceáil seoladh an tsuímh sula gcuireann tú eolas cuntais isteach, agus coinnigh do phasfhocal príobháideach. Ullmhaigh seoladh iomlán an fhaighteora san fhoirm a éilíonn an ceann scríbe. Is fusa cód poist neamhiomlán nó uimhir árasáin atá ar iarraidh a cheartú sula gcuirtear beartán isteach ná tar éis é a sheoladh."
+          ]
+        },
+        {
+          "id": "find-the-exact-item",
+          "title": "Meaitseáil an táirge agus an rogha roghnaithe",
+          "paragraphs": [
+            "Deir treoir Pikobuy do thosaitheoirí gur féidir cuardach a dhéanamh le nasc táirge nó le heochairfhocail. Tar éis toradh a oscailt, cuir i gcomparáid é leis an bhfoinse a shábháil tú. Ná stop ag an teideal: féach ar an díoltóir, ar ghrianghraif an táirge agus ar na roghanna inroghnaithe. D'fhéadfadh roinnt stíleanna a bheith i liostú agus an phríomhíomhá chéanna acu.",
+            "Cruthaigh nóta gairid ordaithe duit féin, amhail dúghorm, méid roghnaithe ó chairt an díoltóra, píosa amháin. Mura bhfuil na roghanna soiléir, iarr soiléiriú sula n-íocann tú. Maidir le héadaí, déan athbhreithniú ar thomhais an díoltóra; maidir le hearra ilphíosa, seiceáil a bhfuil san áireamh sa chainníocht a luaitear. Cabhraíonn an chéim seo le míthuiscint faoin rogha roghnaithe a idirdhealú ó fhadhb chomhlíonta níos déanaí."
+          ]
+        },
+        {
+          "id": "first-payment",
+          "title": "Déan athbhreithniú ar an íocaíocht cheannaigh",
+          "paragraphs": [
+            "Tosaíonn an próiseas oifigiúil an ceannach le híocaíocht as an ordú ceannaigh; is céim níos déanaí í an loingseoireacht idirnáisiúnta. Sula ndeimhníonn tú, léigh an miondealú atá á thaispeáint go hiarbhír. Tabhair faoi deara suim an táirge, aon táille seachadta ón díoltóir agus táillí eile is infheidhme, seachas glacadh leis gurb é praghas catalóige an costas iomlán chun an t-earra a fháil.",
+            "Sábháil tagairt an ordaithe agus na roghanna a thaispeántar ag an deimhniú. Má theipeann ar íocaíocht nó má tá an t-ordú fós doiléir, seiceáil taifead oifigiúil an ordaithe sula ndéanann tú iarracht ar íocaíocht eile. Píosaí éagsúla fianaise iad fógra bainc agus ordú ceannaigh críochnaithe. Deir téarmaí ginearálta an tsuímh nach ndéantar ordú a phróiseáil de thoradh íocaíochta nár éirigh léi."
+          ]
+        },
+        {
+          "id": "warehouse-review",
+          "title": "Déan athbhreithniú ar an earra nuair a shroicheann sé an stóras",
+          "paragraphs": [
+            "Céim ar leith sa treoir oifigiúil is ea iniúchadh stórais. Úsáid grianghraif an ordaithe atá ar fáil chun an t-earra faighte a chur i gcomparáid le do roghanna sábháilte. Tosaigh le haitheantas: an táirge ceart, dath infheicthe, lipéad méide, cainníocht agus páirteanna san áireamh. Ansin scrúdaigh aon fhadhb infheicthe sa riocht a d'athródh do chinneadh é a choinneáil.",
+            "Scríobh ceist shonrach nuair atá rud éigin éiginnte. Mar shampla, is úsáidí radharc níos soiléire de cheann zipe a iarraidh ná a rá go bhfuil cuma mhícheart ar an earra ar fad. Mínigh an neamhréir agus ceangail íomhá ábhartha an ordaithe. Réitigh ceisteanna tábhachtacha sula gcuireann tú an beartán idirnáisiúnta isteach, fad atá an t-earra fós ar fáil le haghaidh athbhreithniú stórais."
+          ],
+          "bullets": [
+            "Coinnigh an liostú foinseach agus deimhniú an ordaithe ar fáil le cur i gcomparáid.",
+            "Scar neamhréir infheicthe ó shonra nach dtaispeánann an grianghraf go simplí.",
+            "Seiceáil na coinníollacha reatha um earraí ar ais go pras má d'fhéadfadh cur ar ais nó malartú a bheith de dhíth ort."
+          ]
+        },
+        {
+          "id": "shipping-payment",
+          "title": "Roghnaigh loingseoireacht don bheartán iarbhír",
+          "paragraphs": [
+            "Tar éis don earra a bheith réidh, téann an treoir ar aghaidh chuig roghnú bealaigh, beartán a chur isteach agus íocaíocht as loingseoireacht idirnáisiúnta. Déan athbhreithniú ar na roghanna atá ar fáil do do cheann scríbe agus d'ábhar. Ní dhéanann praghas bealaigh amháin cur síos ar a incháilitheacht, a mhodh muirir ná na hionchais seachadta. Úsáid eolas reatha an bhealaigh seachas sean-tairiscint ó shiopadóir eile.",
+            "Sula n-íocann tú, deimhnigh eolas an fhaighteora agus an pacáistiú iarrtha. Má tá roinnt ceannachán á gcomhcheangal agat, cinntigh go bhfuil gach earra beartaithe réidh agus san áireamh. Coinnigh cóip den bhealach roghnaithe agus den táille deiridh. Míníonn an treoir meastacháin loingseoireachta conas toisí agus meáchan a ullmhú; míníonn an treoir bhuiséid conas a luíonn an dara híocaíocht seo leis an gceannach iomlán."
+          ]
+        },
+        {
+          "id": "after-dispatch",
+          "title": "Coinnigh taifid ordaithe agus beartáin ar leithligh",
+          "paragraphs": [
+            "Is turais éagsúla iad ordú táirge ag dul chuig an stóras agus beartán idirnáisiúnta ag dul chuig do sheoladh. Taifead tagairt an bheartáin agus eolas an iompróra tar éis seolta, seachas cuardach a dhéanamh le haitheantas táirge catalóige. Coinnigh an t-imeacht is déanaí agus a dháta taobh leis an tagairt ionas gur féidir leat a aithint an bhfuil leathanach rianaithe athraithe.",
+            "Má tá cabhair uait, úsáid leathanach teagmhála oifigiúil Pikobuy. Tugann teachtaireacht úsáideach uimhir an ordaithe nó an bheartáin, an t-imeacht deireanach infheicthe, an dáta agus an cheist bheacht. Ná seol do phasfhocal ná sonraí iomlána do chárta íocaíochta. Ag an seachadadh, coinnigh eolas an bheartáin agus taifead aon fhadhb infheicthe fad atá an pacáistiú fós ar fáil le cur i gcomparáid."
+          ]
+        }
+      ],
+      "sources": [
+        "https://www.pikobuy.com/guide",
+        "https://www.pikobuy.com/protocol/terms",
+        "https://www.pikobuy.com/contact"
+      ],
+      "related": [
+        "fees-budget",
+        "qc-photos",
+        "order-tracking"
+      ]
+    },
+    {
+      "slug": "weidian-taobao-links",
+      "title": "Naisc Pikobuy: Táirgí Weidian agus Taobao a Oscailt i gceart",
+      "description": "Tuig URLanna bunaidh margaidh, aitheantais táirgí agus naisc Pikobuy, le sampla nithiúil Weidian agus seiceálacha do liostuithe nach meaitseálann.",
+      "category": "Táirgí a aimsiú",
+      "eyebrow": "NAISC TÁIRGÍ",
+      "summary": "Aithníonn an margadh agus aitheantas bunaidh an táirge an liostú. Cuireann nasc Pikobuy an fhoinse sin laistigh de nasc eile ionas gur féidir leat an t-earra a athbhreithniú tríd an ngníomhaire.",
+      "sections": [
+        {
+          "id": "identify-the-source",
+          "title": "Coinnigh URL bunaidh an mhargaidh",
+          "paragraphs": [
+            "Tá cuspóirí éagsúla ag liostú foinseach agus nasc gníomhaire. Aithníonn an liostú foinseach táirge an díoltóra ar a mhargadh. Osclaíonn nasc gníomhaire an táirge sin trí sheirbhís amhail Pikobuy. Mura gcoinníonn tú ach seat scáileáin nó nasc giorraithe, d'fhéadfadh sé éirí deacair a dheimhniú cén liostú a bhí beartaithe agat a cheannach ar dtús.",
+            "Agus tú ag brabhsáil pikobuy.at, oscail sonraí an táirge agus coinnigh nasc bunaidh an mhargaidh nuair a chuirtear ceann ar fáil. Tagairt catalóige is ea taifead cnfansge; ní gá gurb ionann a uimhir thaifid áitiúil agus aitheantas táirge an mhargaidh. Ná cóipeáil uimhir ó sheoladh an eolaire agus glac leis go mbaineann sí le URL Weidian nó Taobao."
+          ]
+        },
+        {
+          "id": "weidian-example",
+          "title": "Léigh sampla Weidian ina thrí chuid",
+          "paragraphs": [
+            "Is é https://weidian.com/item.html?itemID=7755101935 an fhoinse shamplach a soláthraíodh. Anseo, aithníonn weidian.com an margadh, is é item.html leathanach an earra, agus aithníonn itemID=7755101935 an liostú foinseach. Aitheantóir liostaithe is ea an uimhir sin, ní méid, praghas, dath ná uimhir ordaithe Pikobuy. Léiríonn an sampla formáid an naisc; ní moladh é an t-earra a cheannach.",
+            "Is é an nasc gníomhaire comhfhreagrach a soláthraíodh ná https://www.pikobuy.com/product/detail?productUrl=https://weidian.com/item.html?itemID=7755101935 . Osclaíonn an seoladh seachtrach Pikobuy. Tá seoladh bunaidh Weidian sa luach productUrl. Agus nasc comhroinnte á sheiceáil agat, mar sin, ní mór duit a fhearann ceann scríbe agus an URL foinseach laistigh de a scrúdú."
+          ]
+        },
+        {
+          "id": "nested-urls",
+          "title": "Tuig cén fáth a bhféadfadh cuma dhifriúil a bheith ar URL neadaithe",
+          "paragraphs": [
+            "Ionchódaíonn roinnt nasc an URL inmheánach ionas go gcoinnítear a phoncaíocht mar aon luach paraiméadair amháin. Is féidir an sampla céanna a léiriú mar https://www.pikobuy.com/product/detail?productUrl=https%3A%2F%2Fweidian.com%2Fitem.html%3FitemID%3D7755101935 . Ní chruthaíonn na carachtair ionchódaithe aitheantas táirge nua; coinníonn siad an seoladh bunaidh laistigh den seoladh seachtrach.",
+            "Ní gá duit gnáthchnaipe ceannaigh atá ag obair a chur in eagar de láimh. Tá an t-idirdhealú seo úsáideach agus nasc comhroinnte briste á dhiagnóisiú: d'fhéadfaí comhartha & gan éalú in URL foinseach níos faide a léirmhíniú mar pharaiméadar seachtrach eile. Seachain nasc atá ionchódaithe cheana a ionchódú arís agus arís eile, agus ná bain codanna neamhaithnidiúla de sheoladh margaidh mura bhfuil a fhios agat cén chuid a aithníonn an t-earra."
+          ]
+        },
+        {
+          "id": "taobao-and-other-links",
+          "title": "Úsáid an URL foinseach seachas aitheantas a thomhas",
+          "paragraphs": [
+            "I gcás táirge Taobao, coinnigh seoladh iarbhír an táirge a thug an díoltóir nó an chatalóg duit seachas a uimhir a chur i dteimpléad Weidian. Is cuid den aitheantas iad ainmneacha na margaí. Níor cheart an tsraith chéanna digití ar dhá shuíomh éagsúla a chóireáil mar an liostú céanna.",
+            "Tacaíonn treoir oifigiúil Pikobuy le tosú le nasc táirge ina bhosca cuardaigh. Is rogha phraiticiúil chúltaca é sin nuair a theipeann ar nasc cumhdaigh comhroinnte. Oscail an fhoinse ar dtús, cóipeáil an nasc táirge iomlán agus úsáid é ar an suíomh oifigiúil. Mura féidir leat nasc giorraithe nó nasc atá don aip amháin a réiteach, iarr ar an díoltóir nó ar an tacaíocht oifigiúil an seoladh foinseach iomlán seachas ceann a chumadh."
+          ]
+        },
+        {
+          "id": "verify-the-result",
+          "title": "Seiceáil an t-earra iompórtáilte sula roghnaíonn tú rogha",
+          "paragraphs": [
+            "Ní chruthaíonn leathanach a lódálann go rathúil gurb é an táirge a bhí i gceist agat é a oscailt. Cuir an ceann scríbe i gcomparáid leis an liostú bunaidh fad atá an dá cheann ar fáil. Is féidir le díoltóir roinnt dathanna nó leaganacha a thairiscint faoi aon aitheantas táirge amháin, mar sin is seiceáil riachtanach é an t-aitheantas a mheaitseáil seachas sonraíocht iomlán ordaithe.",
+            "Mar shampla, d'fhéadfadh príomhíomhá liostaithe mála dorcha a thaispeáint agus gabhálas a bheith mar an rogha inroghnaithe is saoire. Sula n-ordaíonn tú, scrúdaigh téacs na rogha agus an praghas tar éis an rogha sin a roghnú. Coinnigh nóta den rogha bheacht ionas go mbeidh nasc an táirge ceangailte le treoir shoiléir seachas le grianghraf aithnidiúil amháin."
+          ],
+          "bullets": [
+            "Meaitseáil an margadh, an liostú foinseach agus an díoltóir nuair atá siad infheicthe.",
+            "Cuir cineál an earra, na grianghraif agus na sonraíochtaí tábhachtacha i gcomparáid.",
+            "Roghnaigh go sainráite an stíl, an dath, an méid agus an chainníocht atá uait.",
+            "Deimhnigh an tsuim reatha agus sábháil tagairt oifigiúil an ordaithe tar éis ceannaigh."
+          ]
+        },
+        {
+          "id": "troubleshoot-a-link",
+          "title": "Réitigh fadhbanna gan táirge eile a chur ina áit",
+          "paragraphs": [
+            "Má theipeann ar nasc, seiceáil an osclaíonn an liostú bunaidh fós, an bhfuil an URL cóipeáilte iomlán, agus an bhfuil an fhoinse bheartaithe fós sa nasc cumhdaigh. Bain triail eile as trí chuardach oifigiúil Pikobuy nó déan teagmháil le tacaíocht leis an URL iomlán agus seat scáileáin den neamhréir. Seachain toradh atá cosúil ó thaobh cuma de a chur ina áit gan a fhoinse agus a roghanna a sheiceáil arís.",
+            "Ní mhaíonn an suíomh seo go bhfuil tiontaire uilíoch aige do gach gníomhaire, URL giorraithe nó formáid margaidh. Seolann a naisc cheannaigh atá ar fáil tú chuig Pikobuy, áit nach mór an liostú reatha a athbhreithniú fós. Coinnigh an fhoinse bhunaidh i do nótaí fiú tar éis an aistrithe sin; beidh sí úsáideach fós má aistrítear teideal táirge ar bhealach eile nó má theastaíonn uait a mhíniú cén t-earra a bhí beartaithe agat."
+          ]
+        }
+      ],
+      "sources": [
+        "https://www.pikobuy.com/guide",
+        "https://www.pikobuy.com/contact",
+        "https://cnfansge.com/"
+      ],
+      "related": [
+        "spreadsheet-guide",
+        "how-to-use-pikobuy",
+        "size-guide"
+      ]
+    },
+    {
+      "slug": "size-guide",
+      "title": "Treoir Méideanna Pikobuy: Cuir Tomhais i gComparáid Sula nOrdaíonn Tú",
+      "description": "Léigh cairteacha méideanna na ndíoltóirí, cuir tomhais éadaí i gcomparáid agus tuig cad is féidir le grianghraif stórais a insint duit faoin bhfeistiú.",
+      "category": "D'earra a sheiceáil",
+      "eyebrow": "MÉIDEANNA AGUS FEISTIÚ",
+      "summary": "Níl aon chairt méideanna Pikobuy amháin ann do gach díoltóir. Úsáid tomhais an liostaithe féin agus earra inchomparáide a fheileann duit cheana féin.",
+      "sections": [
+        {
+          "id": "start-with-the-seller",
+          "title": "Úsáid an chairt don liostú beacht",
+          "paragraphs": [
+            "Tugann Pikobuy táirgí ó dhíoltóirí éagsúla isteach i bpróiseas ordaithe; ní chuireann sé na táirgí sin ar fad in aon chóras méideanna amháin. Ní leor litir amhail M nó XL chun dhá liostú neamhghaolmhara a chur i gcomparáid. Tosaigh leis an gcairt a bhaineann leis an táirge agus leis an leagan atá uait, ansin seiceáil cé na tomhais agus na haonaid a ndéanann sí cur síos orthu go hiarbhír.",
+            "Lorg idirdhealú idir tomhais an choirp agus tomhais an éadaigh chríochnaithe. Tá cuspóir difriúil ag figiúr cliabhraigh a dhéanann cur síos ar an té a chaitheann é seachas leithead léine leagtha cothrom. Mura ndéanann an chairt an t-idirdhealú sin soiléir, fiafraigh sula roghnaíonn tú. Ní bhaineann tiontú muiníneach ó lipéad débhríoch amháin go ceann eile an débhríocht."
+          ]
+        },
+        {
+          "id": "measure-a-reference",
+          "title": "Tomhais earra inchomparáide a chaitheann tú cheana féin",
+          "paragraphs": [
+            "Roghnaigh earra a bhfuil cuspóir agus feistiú cosúil leis aige. Cuir geansaí allais scaoilte i gcomparáid le geansaí allais scaoilte eile, seachas léine fheistithe a úsáid mar an t-aon tagairt. Leag cothrom é gan é a shíneadh agus taifead na toisí céanna atá le feiceáil i gcairt an díoltóra. Úsáid ceintiméadair más é sin aonad na cairte; is ionann orlach amháin agus 2.54 ceintiméadar.",
+            "I gcás éadaigh uachtaraigh, is minic a bhíonn leithead an chliabhraigh, fad an choirp, leithead na nguaillí agus fad na muinchille úsáideach. I gcás brístí, d'fhéadfadh an choim, airde an choim ón gcrotch agus fad na huama istigh a bheith chomh tábhachtach leis an méid ar an lipéad. Ní mór pointí deiridh na dtomhas a bheith ag teacht le modh an díoltóra. Ní féidir muinchille a thomhaistear ón uaim ghualainne a chur i gcomparáid dhíreach le ceann a thomhaistear ó lár an mhuiníl."
+          ],
+          "bullets": [
+            "Earra tagartha: ainmnigh an ball éadaigh agus déan cur síos ar an gcaoi a bhfeileann sé duit.",
+            "Modh tomhais: tabhair faoi deara cá dtosaíonn agus cá gcríochnaíonn an téip.",
+            "Aonaid: coinnigh gach figiúr san aonad céanna sula ndéanann tú comparáid.",
+            "Feistiú inmhianaithe: taifead cá bhfuil níos mó nó níos lú spáis uait."
+          ]
+        },
+        {
+          "id": "read-width-correctly",
+          "title": "Ná measc leithead cothrom agus imlíne",
+          "paragraphs": [
+            "Samhlaigh go dtomhaiseann do léine thagartha 54 cm trasna an chliabhraigh agus í leagtha cothrom, agus go liostaíonn cairt díoltóra 108 cm don chliabhrach. D'fhéadfadh na figiúirí sin cur síos a dhéanamh ar thoisí inchomparáide más imlíne atá i gceist le huimhir an díoltóra. Níl siad inchomparáide go huathoibríoch: deimhnigh modh na cairte ar dtús. Léiríonn an sampla cén fáth a bhfuil lipéid níos tábhachtaí ná litir na méide os a gcionn.",
+            "Ná cuir imlíne an choirp i gcomparáid dhíreach le ball éadaigh críochnaithe agus bí ag súil leis an bhfeistiú céanna. Bíonn tionchar ag cruth an éadaigh, ag an spás beartaithe agus ag iompar na fabraice ar chompord. Ina ionad sin, cuir a leithéidí i gcomparáid agus fiafraigh den díoltóir faoin tomhas atá ar iarraidh. Má fhoilsíonn an liostú lamháltas tomhais, coinnigh an t-eolas sin taobh leis an gcairt seachas glacadh le gach uimhir mar rud beacht."
+          ]
+        },
+        {
+          "id": "shoes-and-accessories",
+          "title": "Cuir an modh céanna i bhfeidhm ar bhróga agus ar ghabhálais",
+          "paragraphs": [
+            "Maidir le coisbheart, úsáid cairt shonrach an díoltóra agus aithin an gciallaíonn luach ceintiméadair fad na coise, fad an bhoinn istigh nó toise eile. Ní féidir na tomhais sin a mhalartú. Is féidir le lipéad aithnidiúil EU, UK nó US cabhrú leat na roghanna a bhrabhsáil, ach níor cheart dó teacht in áit seiceáil na cairte don liostú áirithe sin.",
+            "Maidir le málaí, criosanna agus gabhálais eile, d'fhéadfadh an feistiú brath ar thoise inúsáidte seachas ar mhéid éadaigh. Ní hionann fad iomlán crios agus an fad go dtí a phoill cheangail; ní gá go ndéanann toisí seachtracha mála cur síos ar a oscailt. Scríobh síos an tomhas atá tábhachtach don úsáid atá beartaithe agat agus iarr an sonra sin má fhágann an liostú ar lár é."
+          ]
+        },
+        {
+          "id": "when-information-is-missing",
+          "title": "Cuir ceist ar féidir freagra a thabhairt uirthi",
+          "paragraphs": [
+            "Seachas fiafraí an bhfuil táirge dílis dá mhéid, tabhair iarratas beacht: deimhnigh, le do thoil, leithead an chliabhraigh agus é tomhaiste cothrom faoi na hascaillí agus fad an droma don mhéid agus don dath seo. Ceangail nasc an liostaithe cheart agus aithin an rogha. Laghdaíonn sé sin an seans go mbeidh freagra ag tagairt do leagan eile nó do mholadh ginearálta méide.",
+            "Má tá tú idir dhá rogha, cuir na tomhais a théann i bhfeidhm ar an bhfeistiú atá uait i gcomparáid agus seiceáil a bhfuil fós anaithnid. Ná glac le riail uathoibríoch chun méid níos mó nó níos lú a roghnú ó gach díoltóir. Mura féidir toise ríthábhachtach a dheimhniú, socraigh an bhfuil an éiginnteacht inghlactha sula n-íocann tú, seachas a bheith ag súil go bhfreagróidh grianghraif stórais gach rud níos déanaí."
+          ]
+        },
+        {
+          "id": "qc-and-fit",
+          "title": "Úsáid grianghraif stórais do na seiceálacha ar féidir leo tacú leo",
+          "paragraphs": [
+            "Nuair a shroicheann d'ordú an stóras, cuir aon lipéad méide infheicthe agus fianaise tomhais iarrtha i gcomparáid leis an rogha a rinne tú. D'fhéadfadh téip tomhais a bhfuil grianghraf di tógtha ar uillinn a bheith deacair a léamh, agus ní dheimhníonn grianghraf ginearálta táirge an feistiú. Cuir ceist ar an tacaíocht oifigiúil faoi thomhas níos soiléire nó faoi íomhá bhreise nuair is gá neamhréir shonrach a réiteach; ba cheart infhaighteacht agus táillí a dheimhniú do d'ordú.",
+            "Ní féidir le grianghraif rialaithe cáilíochta a thaispeáint conas a mhothaíonn ball éadaigh ar do chorp ná compord tar éis caitheamh a ráthú. Coinnigh an chairt bhunaidh agus do thomhais tagartha go dtí go bhfuil an t-ordú athbhreithnithe agat. Má thugann an fhianaise le fios gur tháinig an rogha mhícheart, úsáid na taifid sin chun an fhadhb a mhíniú go pras agus féach ar na coinníollacha reatha um earraí ar ais sula gceadaíonn tú seoladh ar aghaidh."
+          ]
+        }
+      ],
+      "sources": [
+        "https://www.pikobuy.com/guide",
+        "https://www.pikobuy.com/protocol/shipping",
+        "https://www.pikobuy.com/protocol/returns"
+      ],
+      "related": [
+        "qc-photos",
+        "returns-refunds",
+        "how-to-use-pikobuy"
+      ]
+    },
+    {
+      "slug": "fees-budget",
+      "title": "Táillí agus Costais Pikobuy: Déan Buiséad Iomlán don Ordú",
+      "description": "Scar costais táirgí, seachadadh intíre, loingseoireacht idirnáisiúnta agus táillí is infheidhme, ansin réitigh na suimeanna a gearradh go hiarbhír.",
+      "category": "Loingseoireacht a phleanáil",
+      "eyebrow": "COSTAIS AGUS ÍOCAÍOCHTAÍ",
+      "summary": "Is é praghas an earra an chéad chuid de bhuiséad ordaithe. Coinnigh gach táille níos déanaí ar leithligh ionas nach n-éireoidh meastachán ina thoimhde faoin tsuim dheiridh.",
+      "sections": [
+        {
+          "id": "two-payment-stages",
+          "title": "Pleanáil thar phraghas na catalóige",
+          "paragraphs": [
+            "Ní insíonn praghas íseal táirge an costas iomlán chun ordú a fháil duit. Scarann próiseas oifigiúil Pikobuy an t-earra a cheannach ó íoc as a bheartán idirnáisiúnta. Dá bhrí sin, níor cheart glacadh leis an gcéad íocaíocht mar chruthúnas go bhfuil gach costas níos déanaí clúdaithe cheana féin.",
+            "Tosaigh buiséad sula gcuireann tú an t-ordú ceannaigh isteach agus nuashonraigh é nuair a bhíonn eolas níos daingne ar fáil. Lipéadaigh suimeanna mar phraghas taifeadta, meastachán, tairiscint nó íoctha. Cuireann an t-idirdhealú simplí sin cosc ar ríomh garbh loingseoireachta a bheith measctha le sonrasc. Coinnigh an t-airgeadra taobh le gach figiúr, go háirithe nuair a thaispeánann an chatalóg tiontú áisiúil agus ordú á shocrú in airgeadra eile."
+          ]
+        },
+        {
+          "id": "budget-lines",
+          "title": "Tabhair líne dá chuid féin do gach cineál costais",
+          "paragraphs": [
+            "Bíonn ró amháin do gach costas agus colúin d'airgeadra, suim, fianaise agus céim íocaíochta i mbileog oibre phraiticiúil. D'fhéadfadh miondealú ag an tseiceáil amach, tairiscint oifigiúil bealaigh nó idirbheart socraithe do sholáthraí íocaíochta a bheith mar fhianaise. Fág suim anaithnid bán agus lipéadaigh í mar rud gan réiteach; d'fhéadfadh nialas a chur isteach cuma chríochnaithe a chur ar bhuiséad neamhiomlán.",
+            "Creat pleanála iad na rónna seo a leanas, ní ráiteas go mbaineann gach táille le gach ordú. Ná comhcheangail ná bain ró go dtí go seiceálann tú conas a chuireann an tairiscint reatha i láthair é. Go háirithe, seachain táille a chur leis faoi dhó nuair atá an tsuim chéanna i dtairiscint uilechuimsitheach cheana féin."
+          ],
+          "bullets": [
+            "Táirgí: praghas na rogha roghnaithe iolraithe faoin gcainníocht dheimhnithe.",
+            "Seachadadh an díoltóra: aon táille chun na hearraí a aistriú chuig an stóras.",
+            "Seirbhísí iarrtha: pacáistiú, grianghraif bhreise nó seirbhísí roghnaithe eile is infheidhme.",
+            "Iompar idirnáisiúnta: an táille sa tairiscint don bheartán agus don bhealach roghnaithe.",
+            "Táillí ardáin: na táillí seirbhíse a thaispeántar sa mhiondealú íocaíochta is infheidhme.",
+            "Costais íocaíochta agus ceann scríbe: aon táillí tiontaithe, soláthraí nó ceann scríbe a bhaineann leis."
+          ]
+        },
+        {
+          "id": "published-platform-fee",
+          "title": "Léigh an táille fhoilsithe 8% ina comhthéacs ceart",
+          "paragraphs": [
+            "Deir comhaontú úsáideora Pikobuy a seiceáladh an 20 Deireadh Fómhair 2026 go ríomhtar táille seirbhíse ardáin ag 8% den táille loingseoireachta ina rannán seolta beartán trasteorann ar aghaidh. Tugann sé faoi deara freisin go bhféadfadh am na socraíochta agus difríochtaí rátaí malairte dul i bhfeidhm ar an ríomh. Foráil a bhaineann le loingseoireacht atá anseo, ní formhuirear uilíoch 8% ar an ordú iomlán táirgí.",
+            "Léigh miondealú beo na híocaíochta loingseoireachta sula gcuireann tú an figiúr sin i bhfeidhm tú féin. Seiceáil bonn na táille agus an bhfuil sí san iomlán taispeánta cheana féin. Mura bhfuil na lipéid soiléir, iarr ar an tacaíocht oifigiúil suim an lastais idirnáisiúnta, táille an ardáin agus an t-iomlán iníoctha a aithint. Ná glac leis go bhfuil an t-idirbheart iomlán saor ó tháillí seirbhíse toisc nach luaitear táille i gceannlíne fógraíochta."
+          ]
+        },
+        {
+          "id": "use-estimates-carefully",
+          "title": "Cuir fianaise beartáin in áit ionchuir gharbha loingseoireachta",
+          "paragraphs": [
+            "Go luath sa cheannach, b'fhéidir nach mbeadh meáchan nó toisí an phacáiste ar eolas agat. Taifead na toimhdí atá taobh thiar de mheastachán ionas gur féidir leat iad a leasú níos déanaí. Níor cheart gabhálas beag agus earra toirtiúil i mbosca a chur i gcomparáid leis an mbeartán measta céanna. Braitheann infhaighteacht bealaí agus modhanna muirir freisin ar an lastas iarbhír atá beartaithe agat a sheoladh.",
+            "Nuair atá eolas an stórais ar fáil, fill ar an meastóir oifigiúil agus ar na bealaí a thairgtear le sonraí reatha an bheartáin. Cuir roghanna i gcomparáid leis an ábhar, an ceann scríbe agus na toimhdí pacáistithe céanna. Má chuimsíonn tairiscint amháin seirbhís a liostaíonn ceann eile ar leithligh, réitigh na difríochtaí sin sula socraíonn tú cé acu is saoire. Coinnigh tairiscint deiridh an bhealaigh le taifid an ordaithe."
+          ]
+        },
+        {
+          "id": "currency-and-coupons",
+          "title": "Cuir suimeanna iníoctha i gcomparáid, ní céatadáin fhógraíochta",
+          "paragraphs": [
+            "I gcás cúpóin, scrúdaigh a incháilitheacht reatha, a dháta éaga, a íoschaiteachas agus an táille is féidir leis a laghdú. Ní insíonn ceannlíne céatadáin amháin an coigilteas deiridh duit. Taifead an tsuim roimh an gcúpón agus an tsuim atá iníoctha go hiarbhír tar éis é a chur i bhfeidhm. Ní gheallann an treoir seo lascaine cláraithe ná cúpón nach mbeadh ar fáil do do chuntas.",
+            "Nuair atá tiontú airgeadra i gceist, coinnigh an tsuim agus an t-airgeadra a thaispeántar ag an íocaíocht agus an tsuim a shocraíonn do sholáthraí níos déanaí. Is féidir leo sin cabhrú leat an costas fíor a thuiscint gan ráta malairte amháin a chumadh do gach duine. Seiceáil aon táille shonrach soláthraí leis an soláthraí sin go díreach. I gcás táillí ceann scríbe, úsáid eolas an údaráis oifigiúil nó an iompróra ábhartha do do lastas seachas glacadh le cóireáil chánach uilíoch."
+          ]
+        },
+        {
+          "id": "reconcile-the-order",
+          "title": "Réitigh an buiséad tar éis gach íocaíochta",
+          "paragraphs": [
+            "Cuir i gcás go bhfuil dhá tháirge ó dhíoltóirí éagsúla á bpleanáil agat. Coinnigh gach earra agus a tháille seachadta ón díoltóir ar leithligh, ansin ceangail tairiscint an bheartáin idirnáisiúnta leis an dá cheann nuair atá a fhios agat conas a sheolfar iad. Ní theastaíonn praghas measta ón sampla seo: is é a chuspóir a léiriú cén fáth nach féidir praghas ceannlíne táirge amháin a iolrú chun iomlán deiridh an ordaithe a fháil.",
+            "Tar éis íocaíochta, cuir an tsuim a gearradh go hiarbhír in áit an mheastacháin ábhartha agus coinnigh a tagairt. Coinnigh rónna gan íoc nó gan réiteach infheicthe. Má eisítear aisíocaíocht, taifead í mar choigeartú ar leith seachas an íocaíocht bhunaidh a scriosadh. Beidh cuntas soiléir agat ansin ar an méid a gheall tú, ar an méid atá fós le híoc agus ar an tsuim a dteastaíonn soiléiriú ón tacaíocht oifigiúil ina leith."
+          ]
+        }
+      ],
+      "sources": [
+        "https://www.pikobuy.com/protocol/user",
+        "https://www.pikobuy.com/guide",
+        "https://www.pikobuy.com/shipping-cost",
+        "https://www.pikobuy.com/protocol/terms",
+        "https://www.pikobuy.com/contact"
+      ],
+      "related": [
+        "shipping-cost",
+        "warehouse-consolidation",
+        "how-to-use-pikobuy"
+      ]
+    },
+    {
+      "slug": "shipping-cost",
+      "title": "Costas Loingseoireachta Pikobuy: Ón gCéad Mheastachán go hÍocaíocht an Bheartáin",
+      "description": "Foghlaim cé na sonraí atá le cur isteach in áireamhán loingseoireachta Pikobuy, cén fáth ar féidir le meastachán athrú, agus cad atá le seiceáil sula n-íocann tú as beartán.",
+      "category": "Loingseoireacht",
+      "eyebrow": "Treoir costais loingseoireachta",
+      "summary": "Uirlis phleanála bunaithe ar na hionchuir chearta is ea meastachán úsáideach loingseoireachta. Míníonn an treoir seo conas uimhreacha sealadacha a chur i gcomparáid leis an mbeartán a chuireann tú isteach sa deireadh, gan glacadh le tairiscint luath mar phraghas seasta seachadta.",
+      "sections": [
+        {
+          "id": "estimate-purpose",
+          "title": "Tosaigh leis an gcinneadh nach mór don mheastachán freagra a thabhairt air",
+          "paragraphs": [
+            "Sula mbailíonn tú ciseán earraí, socraigh cad is gá duit a fhoghlaim ón meastachán loingseoireachta. B'fhéidir go bhfuil tú ag seiceáil an luíonn an t-ordú ar fad le do bhuiséad, ag comparáid dhá rogha pacáistithe, nó ag socrú ar cheart fanacht le hearra eile. Is ceisteanna éagsúla iad seo. Scríobh an cinneadh síos ar dtús ionas nach mbeidh uimhir a bhfuil cuma íseal uirthi mar an t-aon chúis le bealach a roghnú.",
+            "Iarrann an t-áireamhán oifigiúil ceann scríbe, cineál táirge, meáchan agus toisí. Déanann na hionchuir sin cur síos ar lastas, ní ar liosta siopadóireachta amháin. Nuair atá ceann acu anaithnid, taifead an éiginnteacht sin in aice leis an meastachán. Ba cheart tairiscint bunaithe ar mhéid beartáin measta a choinneáil sealadach i do bhuiséad. Sábháil an dáta agus na hionchuir ionas gur féidir leat í a chur i gcomparáid go fóinteach le toradh níos déanaí."
+          ]
+        },
+        {
+          "id": "input-checklist",
+          "title": "Ullmhaigh tacar comhsheasmhach ionchur",
+          "paragraphs": [
+            "Úsáid an ceann scríbe agus an t-eolas earraí céanna agus roghanna á gcur i gcomparáid agat. Úsáideann an t-áireamhán cileagraim do mheáchan agus ceintiméadair do thoisí. Is féidir le botún aonaid dul thar aon difríocht bheag idir bealaí. Má thiontaíonn tú tomhas, coinnigh an figiúr bunaidh agus an figiúr tiontaithe i do nótaí; déanann sé sin i bhfad níos fusa deachúil san áit mhícheart nó athrú aonaid de thaisme a fheiceáil.",
+            "Le haghaidh pleanáil phraiticiúil, déan bileog bheag oibre le ró amháin do gach beartán féideartha. Déan idirdhealú idir tomhais dheimhnithe agus toimhdí. Ná lipéadaigh tomhas earra an díoltóra mar thomhas seachtrach deiridh an bheartáin. Nuair a sholáthraíonn taifead stórais eolas níos ábhartha, cuir in áit na toimhde é agus rith an chomparáid arís. Modh pleanála atá anseo, ní maíomh go ndéanfar gach meastachán a athríomh go huathoibríoch."
+          ]
+        },
+        {
+          "id": "route-details",
+          "title": "Léigh na coinníollacha atá taobh thiar de gach bealach",
+          "paragraphs": [
+            "Deir treoir siopadóireachta Pikobuy go mbíonn bealaí éagsúil ó thaobh ama seachadta agus modhanna muirir de. Oscail na sonraí atá ar fáil do gach bealach féideartha agus cuir a leithéidí i gcomparáid. Ní bhíonn meastachán úsáideach ach amháin más féidir leis an mbealach an beartán iarbhír a iompar chuig an gceann scríbe beartaithe. Coinnigh nóta d'aon choinníoll nach mór don fhoireann tacaíochta a shoiléiriú sula n-íocann tú.",
+            "Taifeadann comparáid chiallmhar an tsuim a thaispeántar, an t-eolas beartáin is infheidhme agus an cur síos ar an am le chéile. Má mhíníonn bealach ríomh meáchain inmhuirir, lean a riail fhoilsithe seachas foirmle a fháil ar iasacht ó iompróir eile nó ó sheanphost fóraim. Mura bhfuil an riail soiléir, fiafraigh conas a ghearrfaí táille ar an mbeartán beartaithe. Seachain a thuar cén bealach is saoire gan na sonraí sonracha sin a sheiceáil."
+          ]
+        },
+        {
+          "id": "payment-breakdown",
+          "title": "Cuir an tairiscint i gcomparáid le miondealú na híocaíochta",
+          "paragraphs": [
+            "Scar ceannach an táirge ón gcostas chun beartán a fháil chugat. Déan buiséad le línte soiléire do shuimeanna a íocadh cheana, don chéad íocaíocht eile atá á hiarraidh agus d'aon chostais gan réiteach. Cuireann sé sin cosc ar phraghas beag táirge ordú a cheilt a sháraíonn an tsuim iomlán a bhí beartaithe agat a chaitheamh. Ná bain lascaine mura léirítear í go hiarbhír san idirbheart atá á athbhreithniú agat.",
+            "Liostaíonn an comhaontú seirbhíse táille ardáin 8% ar loingseoireacht, faoi réir coinníollacha socraíochta. Caith leis an miondealú reatha ag an tseiceáil amach mar rud le scrúdú, ní mar leithscéal chun an céatadán céanna a chur leis faoi dhó. Má tá cuma ar shuim thaispeánta go bhfuil táille inti cheana féin, iarr soiléiriú seachas an bille a atógáil as toimhdí. Coinnigh an miondealú deimhnithe le taifead an bheartáin."
+          ]
+        },
+        {
+          "id": "changes",
+          "title": "Fiosraigh suim athraithe sula gceadaíonn tú í",
+          "paragraphs": [
+            "Nuair atá an tsuim níos déanaí difriúil ó do mheastachán, cuir na hionchuir i gcomparáid ar dtús. Lorg comhdhéanamh beartáin athraithe, tomhais leasaithe, bealach eile nó seirbhís bhreise. Is ceisteanna úsáideacha iad seo le fiosrú, ní dearbhú gur tharla aon athrú ar leith. Seol an dá thaifead taobh le taobh chuig an bhfoireann tacaíochta mura féidir leat an chúis a aithint tú féin.",
+            "Tá an tseiceáil dheiridh is úsáidí simplí: an féidir leat a mhíniú cad atá á íoc agat, cén beartán a chlúdaíonn sé agus cé na héiginnteachtaí atá fós ann? Más féidir, tá meastachán garbh iompaithe ina chinneadh eolasach agat. Mura féidir, cuir an cinneadh sin ar sos agus iarr miondealú soiléir. Coinnigh an bhileog oibre seo don chéad ordú eile ionas go dtosóidh a bhuiséad le heolas níos fearr."
+          ]
+        }
+      ],
+      "sources": [
+        "https://www.pikobuy.com/shipping-cost",
+        "https://www.pikobuy.com/guide",
+        "https://www.pikobuy.com/protocol/user"
+      ],
+      "related": [
+        "warehouse-consolidation",
+        "order-tracking",
+        "returns-refunds"
+      ]
+    },
+    {
+      "slug": "qc-photos",
+      "title": "Grianghraif Rialaithe Cáilíochta Pikobuy: Cad atá le Seiceáil agus Cad Nach Féidir le hÍomhánna a Chruthú",
+      "description": "Úsáid grianghraif stórais chun sonraí infheicthe ordaithe a sheiceáil, radhairc bhreise úsáideacha a iarraidh, agus teorainneacha an rialaithe cáilíochta amhairc a thuiscint sula socraíonn tú loingseoireacht.",
+      "category": "Stóras",
+      "eyebrow": "Treoir grianghraf rialaithe cáilíochta",
+      "summary": "Fianaise ar an méid is féidir le ceamara a thaispeáint iad grianghraif stórais. Tosaíonn athbhreithniú cúramach le d'ordú féin agus le seicliosta soiléir, ansin scarann sé breathnuithe infheicthe ó cheisteanna a bhfuil tomhais, eolas díoltóra nó tástáil speisialtóra de dhíth orthu.",
+      "sections": [
+        {
+          "id": "right-record",
+          "title": "Cinntigh go bhfuil an t-earra ceart á athbhreithniú agat",
+          "paragraphs": [
+            "Tosaigh le tagairt an ordaithe, an leagan roghnaithe agus an chainníocht. Cuir iad seo i gcomparáid leis an eolas bunaidh faoin méid a bhí beartaithe agat a cheannach. Coinnigh an taifead ceannaigh oscailte agus pictiúir á n-athbhreithniú agat ionas nach mbeidh an chuimhne mar chaighdeán agat. Is féidir le táirgí cosúla a bheith difriúil i mionsonraí beaga, agus ní fianaise é grianghraf catalóige áititheach go bhfuil earra áirithe sa stóras ag teacht le do rogha.",
+            "Úsáideann an scarbhileog seo ábhar catalóige ó cnfansge.com. Caith leis na híomhánna sin mar ábhar fionnachtana, agus déan idirdhealú eatarthu agus grianghraif atá ceangailte le d'ordú Pikobuy féin. Déanann an treoir oifigiúil ceannaigh cur síos ar ghrianghraif agus ar sheiceálacha lochtanna tar éis teacht chuig an stóras. Nuair atá cinneadh de dhíth ort faoin earra a cheannaigh tú, úsáid fianaise iarbhír a ordaithe seachas íomhá nach léiríonn ach an liostú."
+          ]
+        },
+        {
+          "id": "visible-checks",
+          "title": "Seiceáil ceist infheicthe amháin ag an am",
+          "paragraphs": [
+            "Déan athbhreithniú ar na grianghraif in ord in-athdhéanta: cuma fhoriomlán, lipéid infheicthe, sonraí an leagain, cainníocht agus aon damáiste dealraitheach. Taifead breathnuithe le tagairt don íomhá ábhartha. Is úsáidí a rá go bhfuil marc infheicthe gar d'uam ná a dhearbhú go bhfuil an táirge ar fad ar dhroch-cháilíocht. Bí chomh cúramach céanna nuair atá íomhá róbheag nó ródhoiléir chun tacú le conclúid.",
+            "Maidir le héadaí, d'fhéadfadh ceist úsáideach baint a bheith aici leis an lipéad méide infheicthe nó le tomhas iarrtha. Maidir le táirge eile, d'fhéadfadh sí baint a bheith aici le cónascaire, páirt san áireamh nó riocht seachtrach. Is samplaí ceisteanna athbhreithnithe iad seo, ní gealltanais go gclúdaíonn na grianghraif chaighdeánacha iad. Tóg an seicliosta timpeall an chinnidh a chaithfidh tú a dhéanamh agus seachain sraith fhada pictiúr a éileamh nach n-athródh an cinneadh sin."
+          ]
+        },
+        {
+          "id": "photo-limits",
+          "title": "Scar riocht infheicthe ó airíonna folaithe",
+          "paragraphs": [
+            "Cuireann téarmaí seolta ar aghaidh agus comhaontú seirbhíse Pikobuy teorainneacha ar iniúchadh gairmiúil. Ná léirmhínigh grianghraf mar dheimhniú barántúlachta, mar thástáil sábháilteachta ná mar chruthúnas feidhmíochta fadtéarmaí. Ní féidir le radharc ar an taobh amuigh gach rud istigh a dheimhniú. Ar an gcaoi chéanna, ní leor íomhá a bhfuil cuma dhifriúil uirthi ó ghrianghraf stiúideo an díoltóra, inti féin, chun a chruthú gur tháinig an t-earra mícheart.",
+            "Is féidir le soilsiú, uillinn agus cáilíocht íomhá dul i bhfeidhm ar an méid is féidir leat a mheas. Nuair atá an t-idirdhealú tábhachtach, déan cur síos díreach ar an éiginnteacht: ní thaispeánann an grianghraf an t-eolas go soiléir go leor chun cinneadh a dhéanamh. Fiafraigh cén fhianaise bhreise atá ar fáil. Is féidir le conclúid fhreagrach a bheith níos cúinge ná ceadú nó diúltú; tá sé úsáideach pointe gan réiteach a aithint má chuireann sé cosc ort cinneadh a dhéanamh ar fhianaise neamhleor."
+          ]
+        },
+        {
+          "id": "request-photos",
+          "title": "Iarr radharc a fhreagraíonn ceist shonrach",
+          "paragraphs": [
+            "Déanann na téarmaí seolta ar aghaidh cur síos ar ghrianghraif mhionsonraithe bhreise íoctha. Sula n-iarrann tú iad, aithin an t-eolas atá ar iarraidh agus fiafraigh den infhaighteacht agus den chostas. Úsáid treoir ghearr, amhail radharc inléite ar lipéad áirithe nó íomhá de limistéar sonraithe. Mínigh cén t-ordú lena mbaineann an t-iarratas agus cén fáth nach bhfreagraíonn an radharc atá ann do cheist.",
+            "Dá gcabhródh tomhas, ainmnigh an dá phointe ar mhaith leat iad a thomhas agus an t-aonad atá uait. Ná glac leis go mbainfidh an stóras tátal as an modh tomhais is fearr leat. Nuair a thagann an freagra, seiceáil go bhfreagraíonn sé an cheist bhunaidh seachas uillinn eile a chur leis amháin. Má tá seiceáil iarrtha lasmuigh den tseirbhís iniúchta, socraigh an bhfuil eolas díoltóra nó modh fíoraithe eile riachtanach."
+          ]
+        },
+        {
+          "id": "next-action",
+          "title": "Déan céim shoiléir eile den athbhreithniú",
+          "paragraphs": [
+            "Coinnigh toradh gairid do gach earra: níor aithníodh aon ábhar imní infheicthe, soiléiriú iarrtha, nó fadhb le hardú leis an bhfoireann tacaíochta. Seo do thaifead athbhreithnithe féin, ní stádas oifigiúil stórais. Coinnigh íomhánna úsáideacha agus na teachtaireachtaí gaolmhara le chéile. Má tá tú ag smaoineamh ar earra a chur ar ais, léigh an beartas reatha go pras agus seachain athruithe pacáistithe a iarraidh sula dtuigeann tú a dtionchar ar incháilitheacht.",
+            "Agus fadhb á tuairisciú agat, tabhair tagairt an ordaithe, an leagan roghnaithe, an pictiúr ábhartha agus cur síos fíorasach ar an neamhréir. Luaigh an réiteach atá á iarraidh agat gan a mhaíomh go bhfuil sé ceadaithe cheana féin. Is é cuspóir an rialaithe cáilíochta cinneadh níos fearr faoin earra iarbhír. Cabhraíonn taifead néata fianaise leat an cinneadh sin agus aon cheisteanna atá fágtha a mhíniú sula socraíonn tú a chéad chéim eile."
+          ]
+        }
+      ],
+      "sources": [
+        "https://www.pikobuy.com/guide",
+        "https://www.pikobuy.com/protocol/shipping",
+        "https://www.pikobuy.com/protocol/user",
+        "https://www.pikobuy.com/protocol/returns"
+      ],
+      "related": [
+        "returns-refunds",
+        "warehouse-consolidation",
+        "shipping-cost"
+      ]
+    },
+    {
+      "slug": "returns-refunds",
+      "title": "Earraí ar Ais agus Aisíocaíochtaí Pikobuy: Seiceáil an Spriocdháta, an Fhianaise agus na Costais",
+      "description": "Tuig tréimhse fhoilsithe Pikobuy chun earraí stórais a chur ar ais, ceadú díoltóra agus rialacha incháilitheachta, le próiseas praiticiúil do tháillí doiléire nó do dhifríochtaí beartais.",
+      "category": "Orduithe",
+      "eyebrow": "Treoir um earraí ar ais",
+      "summary": "Baineann roinnt ceisteanna ar leith le hiarratas chun earra a chur ar ais: an bhfuil an t-earra incháilithe, an bhfuil an t-iarratas tráthúil, an aontaíonn an díoltóir agus cé na costais a bhaineann leis. Tá sé níos iontaofa iad a fhreagairt ina n-aonar ná glacadh leis go ráthaíonn cnaipe um earraí ar ais aisíocaíocht.",
+      "sections": [
+        {
+          "id": "deadline",
+          "title": "Seiceáil am an stórais roimh aon rud eile",
+          "paragraphs": [
+            "Sonraíonn leathanach Pikobuy um earraí ar ais tréimhse cúig lá, 120 uair an chloig, tar éis stádas In Warehouse, agus comhaireamh ag tosú ón uair an chloig ina dhiaidh sin. Léigh an stampa ama ar d'ordú féin agus gníomhaigh go pras má tá fadhb ann. Ná cuir an dáta ar thug tú an t-earra faoi deara de thaisme in áit thaifead an ordaithe. Baineann an tréimhse fhoilsithe le hiarratas a chur isteach, ní le gealltanas go gcríochnóidh an próiseas ar fad laistigh den am sin.",
+            "Cruthaigh nóta gairid ina bhfuil tagairt an ordaithe, am taifeadta an stádais agus an chúis a bhfuil tú ag smaoineamh ar an earra a chur ar ais. Cuir leis an dáta ar rinne tú teagmháil leis an bhfoireann tacaíochta. Má tá stampa ama nó crios ama doiléir, fiafraigh láithreach seachas ríomh muiníneach a dhéanamh as eolas neamhiomlán. Is bealach praiticiúil é an nóta seo chun an seicheamh a choinneáil ceart; ní shíneann sé spriocdháta an ardáin."
+          ]
+        },
+        {
+          "id": "eligibility",
+          "title": "Coinnigh incháilitheacht ar leithligh ó mhíshástacht",
+          "paragraphs": [
+            "Nascann an beartas um earraí ar ais incháilitheacht le rannpháirtíocht an díoltóra, riocht athdhíola agus tráthúlacht. Aithníonn sé eisiaimh freisin, lena n-áirítear earraí saincheaptha agus earraí áirithe a bhfuil a lipéid nó a bpacáistiú bainte díobh. Sula n-athraíonn tú an t-earra nó a phacáistiú, léigh na riachtanais dá chatagóir. Tá sé luachmhar a bheith in ann ábhar imní a mhíniú go soiléir, ach ní dheimhníonn sé sin ann féin nach mór glacadh le cur ar ais áirithe.",
+            "Tóg d'iarratas ar fhíricí inbhraite. Cuir an leagan roghnaithe i gcomparáid leis an earra faighte agus aithin an grianghraf nó an sonra ordaithe ábhartha. Déan idirdhealú idir earra a bhfuil cuma mhícheart air agus athrú tosaíochta, agus idir locht infheicthe agus rud nach dtaispeánann an grianghraf go soiléir. Cabhraíonn cur síos cruinn le gach duine dul i ngleic leis an gceist chéanna; is féidir le háibhéil neamhréir shimplí a dhéanamh níos deacra a fhiosrú."
+          ]
+        },
+        {
+          "id": "request",
+          "title": "Cuir iarratas dírithe isteach agus coinnigh an freagra",
+          "paragraphs": [
+            "Éilíonn an beartas oifigiúil toiliú an díoltóra. Caith le hiarratas a chur isteach, ceadú a fháil agus aisíocaíocht a fháil mar imeachtaí ar leith. Coinnigh an comhfhreagras a dheimhníonn gach imeacht seachas glacadh leis go bhfuil an chéad chéim eile tarlaithe. Má iarrann an fhoireann tacaíochta níos mó fianaise, freagair leis an ábhar iarrtha agus coinnigh ceangailte le tagairt bhunaidh an ordaithe é.",
+            "Is féidir le hiarratas úsáideach a bheith gairid: aithin an t-earra, déan cur síos ar an gcúis, dírigh ar an bhfianaise agus luaigh an toradh atá á iarraidh agat. Fiafraigh cén gníomh atá de dhíth ina dhiaidh sin agus an mbeadh tionchar ag aon láimhseáil bhreise ar incháilitheacht. Má fhaigheann tú freagra coinníollach, taifead an coinníoll i do nótaí. Ná déan cur síos ar an gcur ar ais mar rud ceadaithe go dtí go ndeimhníonn an freagra é sin go hiarbhír."
+          ]
+        },
+        {
+          "id": "cost-ambiguity",
+          "title": "Iarr míniú táillí a bhaineann le d'ordú féin",
+          "paragraphs": [
+            "Níl na leathanaigh phoiblí go hiomlán comhsheasmhach faoi gach costas curtha ar ais. Tá difríocht idir tábla an leathanaigh um earraí ar ais agus a rannán táillí maidir le postas bunaidh earraí a raibh loingseoireacht saor in aisce orthu ar dtús; luaitear liúntas teoranta seirbhíse saor in aisce sa chomhaontú seirbhíse freisin. Is cúis iad na difríochtaí seo le soiléiriú a iarraidh, ní bonn chun cibé abairt a thugann an toradh is saoire a roghnú. Ní réitíonn an treoir seo iad thar ceann Pikobuy.",
+            "Fiafraigh de na táillí iompair, d'aon táille seirbhíse agus den tsuim inaisíoctha a bhfuiltear ag súil léi do do chúis agus d'ordú ar leith. Cuir an míniú sin i gcomparáid leis an tsuim a íocadh ar dtús agus sábháil an freagra. Má athraíonn táille, iarr an chúis sula nglacann tú le hasbhaint gan mhíniú. Is úsáidí miondealú soiléir ná gealltanas ginearálta go bhfuil earraí ar ais saor in aisce nó ríomh tógtha as míreanna contrártha."
+          ]
+        },
+        {
+          "id": "refund-record",
+          "title": "Lean an taifead aisíocaíochta iarbhír go dtí go mbeidh sé críochnaithe",
+          "paragraphs": [
+            "Coinnigh taifid an iarratais agus na haisíocaíochta le chéile, ach ná caith leo mar rudaí inmhalartaithe. Tabhair faoi deara an tsuim a ceadaíodh, an tsuim a thaispeántar mar aisíoctha agus aon difríocht gan réiteach. Nuair atá ceann scríbe nó am na haisíocaíochta doiléir, cuir ceist ar an bhfoireann tacaíochta faoin idirbheart áirithe. Ní thugann an t-ábhar oifigiúil a athbhreithníodh anseo údar le gealltanas uilíoch go dtagann gach aisíocaíocht tríd an modh céanna laistigh den líon céanna laethanta.",
+            "Sula ndúnann tú do thaifead féin, seiceáil go bhfuil an toradh ag teacht leis an gceadú a fuair tú. Mura bhfuil, seol teachtaireacht leantach ghairid amháin le tagairt an ordaithe, fianaise an cheadaithe agus an cheist bheacht atá fágtha. Tugann sé sin stair chomhleanúnach don fhoireann tacaíochta gan iallach a chur orthu teachtaireachtaí scaipthe a chur le chéile. Maidir le ceannach sa todhchaí, déan athbhreithniú ar choinníollacha curtha ar ais sula n-íocann tú agus coinnigh an pacáistiú fad a shocraíonn tú an gcomhlíonann an t-earra do riachtanais."
+          ]
+        }
+      ],
+      "sources": [
+        "https://www.pikobuy.com/protocol/returns",
+        "https://www.pikobuy.com/protocol/user",
+        "https://www.pikobuy.com/contact"
+      ],
+      "related": [
+        "qc-photos",
+        "warehouse-consolidation",
+        "shipping-cost"
+      ]
+    },
+    {
+      "slug": "warehouse-consolidation",
+      "title": "Stóras agus Comhdhlúthú Pikobuy: Pleanáil an Beartán Roimh Sheoladh",
+      "description": "Déan athbhreithniú ar fhianaise stórais, idirdhealaigh ceannach ó sheoladh ar aghaidh, cuir roghanna pacáistithe i gcomparáid agus meas comhdhlúthú gan glacadh le coigilteas ráthaithe.",
+      "category": "Stóras",
+      "eyebrow": "Treoir stórais",
+      "summary": "Is pointe úsáideach cinnteoireachta í céim an stórais idir earraí aonair a cheannach agus beartán a sheoladh. Úsáid í chun an méid a tháinig a sheiceáil, ceisteanna a réiteach agus plean praiticiúil pacáistithe a chur i gcomparáid leis an eolas loingseoireachta atá ar fáil duit.",
+      "sections": [
+        {
+          "id": "order-types",
+          "title": "Aithin conas a shroich gach earra an stóras",
+          "paragraphs": [
+            "Is pointí tosaigh éagsúla iad earra a ceannaíodh trí ghníomhaire agus earra a ceannaíodh go neamhspleách agus a seoladh le cur ar aghaidh. Déanann beartas seolta ar aghaidh Pikobuy cur síos ar a sheoladh stórais reatha a fháil agus eolas seolta ar aghaidh a chur isteach. Úsáid na treoracha oifigiúla sin le haghaidh seachadadh a shocraíonn tú féin. Ná cóipeáil seoladh ó sheanphost pobail agus glac leis go mbaineann an t-eolas aitheantais céanna le gach custaiméir.",
+            "Coinnigh fardal beag a nascann gach earra fisiciúil lena dhíoltóir nó lena sheoltóir, lena thagairt cheannaigh agus lena thaifead stórais. Maidir le hearraí a ceannaíodh go neamhspleách, coinnigh do chomhfhreagras bunaidh leis an díoltóir freisin. Tá an cuspóir praiticiúil: má tá rud éigin ar iarraidh nó doiléir, ba cheart duit a bheith in ann an t-idirbheart ábhartha a aithint gan tomhas cén ceann de roinnt earraí cosúla lena mbaineann an teachtaireacht."
+          ]
+        },
+        {
+          "id": "arrival-review",
+          "title": "Déan athbhreithniú ar fhianaise teachta sula bpleanálann tú an beartán",
+          "paragraphs": [
+            "Déanann na téarmaí seolta ar aghaidh cur síos ar earraí isteach a oscailt agus a iniúchadh. Féach ar an bhfianaise atá ceangailte le d'earra agus taifead aon cheist a dteastaíonn aird uirthi. Má sheiceálann tú aitheantas agus riocht infheicthe an ordaithe sula bpléann tú pacáistiú, coinníonn tú dhá chinneadh ar leithligh: an bhfuil an t-earra faighte inghlactha agus conas is mian leat earra inghlactha a ullmhú le haghaidh seolta ar aghaidh.",
+            "Úsáid seicliosta comhsheasmhach do d'earraí go léir. Deimhnigh an méid is féidir a dheimhniú ón taifead atá ar fáil agus marcáil an méid atá fós éiginnte. Mura leor pictiúr, cuir ceist shonrach seachas an t-earra a mharcáil mar shásúil de réir réamhshocraithe. Nuair atá tú ag smaoineamh ar chur ar ais, réitigh an bealach sin sula n-iarrann tú athruithe a d'fhéadfadh fianaise úsáideach a bhaint nó tionchar a imirt ar riocht athdhíola an earra."
+          ]
+        },
+        {
+          "id": "packing",
+          "title": "Déan cur síos ar an toradh pacáistithe atá uait",
+          "paragraphs": [
+            "Luann treoir na dtosaitheoirí iarratais ar phacáistiú íosta agus treisithe. Tosaigh le cuspóir d'iarratais: b'fhéidir gur mhaith leat bosca a choinneáil, cuid leochaileach a chosaint, nó a thuiscint an féidir ábhar seachtrach neamhriachtanach a bhaint. Fiafraigh cad a athraíonn an tseirbhís bheartaithe agus cé mhéad a chosnaíonn sí. Ní mhíníonn ainmneacha roghanna pacáistithe amháin go beacht conas a láimhseálfar earra áirithe.",
+            "Seachain glacadh leis gur feabhas uathoibríoch é níos lú pacáistithe. Smaoinigh ar an méid atá tú sásta a chaitheamh amach, ar an méid atá de dhíth ort don earra féin agus ar na sonraí atá fós tábhachtach le haghaidh díospóide nó curtha ar ais féideartha. Má tá athrú dochúlaithe i gceist leis an tseirbhís, déan an t-iarratas sách sonrach chun do rún a léiriú. Is fusa cur síos gairid scríofa a fhíorú ná treoir dhoiléir gach rud a dhéanamh níos lú."
+          ]
+        },
+        {
+          "id": "consolidation",
+          "title": "Cuir beartán comhcheangailte i gcomparáid le roghanna réadúla eile",
+          "paragraphs": [
+            "Fógraíonn leathanach teagmhála Pikobuy táirgí ó dhíoltóirí éagsúla a chomhcheangal i mbeartán. Deimhníonn sé sin smaoineamh na seirbhíse, ní céatadán coigiltis ráthaithe. Déan liosta beartáin féideartha a thaispeánann go beacht cé na hearraí inghlactha a thaistilfeadh le chéile. Cuir i gcomparáid é le haon rogha eile atá tábhachtach duit, ag úsáid eolas comhsheasmhach ceann scríbe agus na tomhais beartáin is fearr atá ar fáil.",
+            "Cuireann comparáid úsáideach roinnt ceisteanna: an bhfuil an bealach ar fáil don lastas beartaithe seo, cén t-eolas a thacaíonn leis an meastachán, agus cad a d'athródh dá seolfaí earra ar leithligh? Taifead an freagra nó an cheist gan fhreagra taobh le gach rogha. Ná glac leis go mbíonn sé níos saoire, níos tapúla nó níos oiriúnaí gach earra a chur le chéile i gcónaí. Meas an beartán beartaithe iarbhír seachas brath ar líon na n-earraí amháin."
+          ]
+        },
+        {
+          "id": "submit-check",
+          "title": "Réitigh ceisteanna stórála agus costais sula gcuireann tú isteach é",
+          "paragraphs": [
+            "Níor deimhníodh tréimhse iontaofa uilíoch stórála saor in aisce sna leathanaigh phoiblí a athbhreithníodh don treoir seo. Má tá sé beartaithe agat fanacht le ceannach eile, seiceáil na coinníollacha a thaispeántar do na hearraí atá stóráilte cheana agus cuir ceist ar an bhfoireann tacaíochta faoi aon spriocdháta doiléir. Ná lig do shochar comhdhlúthaithe a bhfuil súil agat leis brath ar liúntas stórála nach bhfuil fíoraithe agat do d'ordú féin.",
+            "Sula gcuireann tú beartán isteach, déan athbhreithniú ar a ábhar, ar threoracha láimhseála, ar shonraí an fhaighteora agus ar mhiondealú na híocaíochta le chéile. Coinnigh an leagan a cheadaigh tú go hiarbhír. Má athraíonn pacáistiú an t-eolas a úsáideadh i do mheastachán níos luaithe, cuir na figiúirí leasaithe i gcomparáid sula socraíonn tú. Is é an aidhm phraiticiúil plean beartáin ar féidir leat a mhíniú: cad atá san áireamh, cén láimhseáil a d'iarr tú, cén tsuim ar ghlac tú léi agus cé na ceisteanna atá réitithe."
+          ]
+        }
+      ],
+      "sources": [
+        "https://www.pikobuy.com/protocol/shipping",
+        "https://www.pikobuy.com/contact",
+        "https://www.pikobuy.com/guide",
+        "https://www.pikobuy.com/shipping-cost",
+        "https://www.pikobuy.com/protocol/returns"
+      ],
+      "related": [
+        "shipping-cost",
+        "qc-photos",
+        "order-tracking"
+      ]
+    },
+    {
+      "slug": "order-tracking",
+      "title": "Rianú Orduithe Pikobuy: Lean an Lastas Ceart agus Cuir Ceisteanna Níos Fearr",
+      "description": "Scar seachadadh an díoltóra ó rianú beartáin idirnáisiúnta, léirmhínigh nuashonruithe neamhiomlána go cúramach agus ullmhaigh iarratas soiléir tacaíochta leis na taifid chearta.",
+      "category": "Loingseoireacht",
+      "eyebrow": "Treoir rianaithe ordaithe",
+      "summary": "D'fhéadfadh níos mó ná gluaiseacht amháin agus níos mó ná tagairt amháin a bheith i gceist le ceannach. Éiríonn rianú níos éasca nuair atá a fhios agat cén chéim atá á seiceáil agat, cén taifead a bhaineann léi agus cén t-eolas a réiteodh an éiginnteacht.",
+      "sections": [
+        {
+          "id": "shipment-map",
+          "title": "Scar an ceannach ón mbeartán idirnáisiúnta",
+          "paragraphs": [
+            "Tosaigh tríd an imeacht ar mhaith leat a thuiscint a aithint. An bhfuil tú ag seiceáil ar sheol an díoltóir earra, ar shroich sé an stóras, nó cá bhfuil beartán idirnáisiúnta a cuireadh isteach anois? Is idirdhealuithe praiticiúla iad seo do do nótaí, ní liosta lipéad oifigiúil stádais. Úsáid an fhoclaíocht a thaispeántar go hiarbhír i do chuntas agus an t-imeacht á mhíniú don fhoireann tacaíochta agat.",
+            "Coinnigh gach tagairt atá ar fáil taobh leis an gcuid den turas a ndéanann sí cur síos uirthi. Cabhraíonn tagairt ordaithe leis an gceannach a aithint; cabhraíonn tagairt beartáin leis an lastas ar aghaidh a aithint. Má chomhcheanglaítear roinnt orduithe, tabhair faoi deara cé na hearraí a bhaineann leis an mbeartán sin. Cuireann sé sin cosc ar thaifead seachadta díoltóra a bheith measctha le fianaise go bhfuil an beartán idirnáisiúnta ag druidim le do sheoladh cheana féin."
+          ]
+        },
+        {
+          "id": "first-update",
+          "title": "Déan idirdhealú idir seoladh agus an chéad nuashonrú rianaithe",
+          "paragraphs": [
+            "Deir treoir siopadóireachta Pikobuy go mbíonn eolas rianaithe ar fáil laistigh de thrí lá tar éis seolta. Baineann an ráiteas sin le hinfhaighteacht tosaigh rianaithe; ní gealltanas seachadta trí lá é. Deimhnigh ar dtús cén taifead seolta atá á léamh agat sula n-úsáideann tú é mar phointe tosaigh do cheist. Coinnigh an taifead dátaithe cuntais má tá an seicheamh doiléir.",
+            "Ní mhíníonn radharc rianaithe folamh nó gan athrú, ann féin, cad a tharla. Seachain an bhearna sin a líonadh le scéal muiníneach faoi bheartán caillte, gníomh custaim nó moill iompróra. Taifead an méid a thaispeánann an leathanach go hiarbhír agus cathain a sheiceáil tú é. Ansin cuir ceist a d'fhéadfaí a fhreagairt, amhail an bhfuil an tagairt ceart nó an bhfuil nuashonrú níos nuaí ar fáil."
+          ]
+        },
+        {
+          "id": "read-updates",
+          "title": "Léigh gach nuashonrú mar imeacht sonrach",
+          "paragraphs": [
+            "Nuair a bhíonn eolas le feiceáil, tabhair faoi deara téacs an imeachta, a stampa ama agus an fhoinse a thaispeánann é. Má thaispeánann an t-iompróir agus an t-ardán eolas difriúil, coinnigh an dá thaifead seachas do léirmhíniú féin a chur in áit ceann acu go ciúin. Lorg an chéad cheist fhíorasach eile: an meaitseálann na tagairtí, an úsáideann na stampaí ama an crios ama céanna, agus an bhfuil imeacht níos sine á thaispeáint ar leathanach amháin?",
+            "Cabhraíonn na seiceálacha seo le fiosrúchán a eagrú; ní dheimhníonn siad brí uilíoch do stádas gach iompróra. Úsáid míniú an iompróra féin nuair atá ceann ar fáil don lastas iarbhír. Ní hionann frása rianaithe a bhfuil cuma shuaimhneach air agus seachadadh deimhnithe, díreach mar nach cruthúnas ar fhadhb é frása neamhaithnidiúil. Má théann an bhrí i bhfeidhm ar do chéad ghníomh eile, iarr soiléiriú."
+          ]
+        },
+        {
+          "id": "support-packet",
+          "title": "Ullmhaigh iarratas gairid tacaíochta",
+          "paragraphs": [
+            "Molann leathanach teagmhála oifigiúil Pikobuy ticéad a chur isteach. Bailigh tagairt ábhartha an ordaithe nó an bheartáin, an uimhir rianaithe má thaispeántar í, an nuashonrú dátaithe is déanaí agus cur síos gairid ar an neamhréir. Ná cuir san áireamh ach na sonraí pearsanta atá de dhíth don fhiosrúchán, agus úsáid an cainéal oifigiúil seachas do sheoladh iomlán nó sonraí do chuntais a phostáil i bplé poiblí.",
+            "Bíonn ceist shoiléir amháin in iarratas láidir. Mínigh cén beartán a bhfuil tú ag fiafraí faoi, cad a deir an taifead reatha agus cad atá le deimhniú duit. Má rinne tú teagmháil leis an bhfoireann tacaíochta cheana féin, cuir tagairt an ticéid níos luaithe leis má tá sí ar fáil. Coinníonn sé sin an stair le chéile. Is féidir le teachtaireacht nua a athdhéanann an cheist chéanna gan an comhthéacs bunaidh a dhéanamh níos deacra a fheiceáil cad atá seiceáilte cheana féin."
+          ]
+        },
+        {
+          "id": "follow-through",
+          "title": "Coinnigh ceisteanna seachadta ar leithligh ó chúiteamh",
+          "paragraphs": [
+            "Is tascanna éagsúla iad stádas is déanaí beartáin a aimsiú agus iarratas cúitimh a mheas. Cuireann an comhaontú seirbhíse cúiteamh árachais faoi réir an chumhdaigh agus na gcoinníollacha is infheidhme. Ná bain tátal as ceadú de bharr rogha árachais a bheith ann ná de bharr frása rianaithe scanrúil. Má éiríonn éileamh ábhartha, fiafraigh cén fhianaise agus cén próiseas a bhaineann leis an lastas sonrach.",
+            "Nuair a thagann an beartán, coinnigh a thaifead seachadta agus scrúdaigh an méid a fuair tú sula ndúnann tú do nótaí féin. Má tá fadhb ann, déan cur síos uirthi le grianghraif agus leis na tagairtí ábhartha seachas le líomhain leathan. Má tá an fiosrúchán fós oscailte, rianaigh an freagra deireanach agus an cheist bheacht gan fhreagra. Is úsáidí stair ghairid chomhsheasmhach ná bailiúchán méadaitheach seatanna scáileáin nach bhfuil nasctha lena chéile."
+          ]
+        }
+      ],
+      "sources": [
+        "https://www.pikobuy.com/guide",
+        "https://www.pikobuy.com/contact",
+        "https://www.pikobuy.com/protocol/shipping",
+        "https://www.pikobuy.com/protocol/user"
+      ],
+      "related": [
+        "shipping-cost",
+        "warehouse-consolidation",
+        "returns-refunds"
+      ]
+    }
+  ]
+}

@@ -19,3 +19,7 @@ Home, catalog, source-backed keyword search, source-backed sorting, 20-card pagi
 The default `npm run build` remains a noindex preview. Production uses Cloudflare Worker `pikobuy-at-preview`, repository branch `main`, root directory `pikobuy-at`, Node 24, build command `npm run build:production`, and deploy command `npx wrangler deploy dist/server/index.js --name pikobuy-at-preview --compatibility-date 2026-10-01`. Custom domains are managed in the Cloudflare dashboard. The production Worker redirects www.pikobuy.at to https://pikobuy.at, preserving the path and query.
 
 Read PROJECT_MEMORY.md before continuing work. The long-term GitHub folder is `hehaize88-code/cnfansge.com/pikobuy-at/`.
+
+## Restored editorial content
+
+The production source includes the researched editorial content from commit f458aa28a02d4a019d820a081b140c0bb75e18c0 on preview/pikobuy-at-pages: 28 FAQs and10 individual articles in all24 advertised languages, with FAQ/Articles header and footer links and a home-page editorial section. The shared mobile compaction styles are preserved. The build now checks all409 HTML outputs for local-link integrity, navigation, canonicals, hreflang, language-complete content and structured data. Production emits360 indexable URLs in sitemap.xml; product and unavailable visual shells stay noindex.

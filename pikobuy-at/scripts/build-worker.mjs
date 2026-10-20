@@ -1,5 +1,6 @@
 import { readdir,readFile,mkdir,writeFile,copyFile } from 'node:fs/promises';
 import { build } from 'esbuild';
+await import('./verify-output.mjs');
 const assets={};
 const production=process.env.SITE_INDEXABLE==='true';
 const origin=process.env.SITE_ORIGIN||'https://pikobuy-at-preview.hehaize88.chatgpt.site';

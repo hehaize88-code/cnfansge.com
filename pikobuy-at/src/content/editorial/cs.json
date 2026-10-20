@@ -1,0 +1,975 @@
+{
+  "labels": {
+    "faq": "FAQ",
+    "articles": "Články",
+    "faqTitle": "Časté otázky o Pikobuy",
+    "faqIntro": "Srozumitelné odpovědi k objednávání, skladovým kontrolám, dopravě a vrácení podle oficiálních návodů a pravidel Pikobuy. Každá odpověď odkazuje na zdroj.",
+    "faqShort": "Máte před nákupem otázky? Začněte odpověďmi ověřenými podle oficiálních stránek Pikobuy.",
+    "articlesTitle": "Nákupní průvodce Pikobuy",
+    "articlesIntro": "Od prvního nálezu v katalogu po balík u dveří: praktické návody k odkazům, velikostem, QC fotografiím, nákladům a dopravě.",
+    "allArticles": "Všech 10 průvodců",
+    "readArticle": "Přečíst průvodce",
+    "checked": "Zdroje ověřeny",
+    "questions": "otázek",
+    "onThisPage": "Na této stránce",
+    "officialSources": "Oficiální zdroje",
+    "needHelp": "Potřebujete pomoc s objednávkou?",
+    "helpText": "Obraťte se na Pikobuy s číslem objednávky nebo balíku. Tento nezávislý web s průvodci nemůže zobrazit váš účet ani změnit objednávku.",
+    "officialSupport": "Podpora Pikobuy",
+    "editorialNote": "Nezávislé průvodce s odkazy na zdroje",
+    "breadcrumbs": "Drobečková navigace",
+    "home": "Domů",
+    "editorialTeam": "Redakce Pikobuy.at",
+    "quickAnswer": "RYCHLÁ ODPOVĚĎ",
+    "sourceNote": "Údaje o platformě byly ověřeny podle těchto oficiálních stránek k uvedenému datu. Naše kontrolní seznamy jsou praktické redakční návrhy. Před platbou nebo odesláním potvrďte aktuální podmínky ve své objednávce Pikobuy.",
+    "browseFinds": "Prozkoumat katalog",
+    "related": "Čtěte dál",
+    "independentNote": "Pikobuy.at je nezávislý web s doporučeními. Produktová data pocházejí z cnfansge.com; nákupy a podporu účtů zajišťuje Pikobuy."
+  },
+  "groups": {
+    "getting-started": "Začínáme",
+    "orders": "Objednávky a vrácení",
+    "warehouse": "Sklad a fotografie",
+    "shipping": "Doprava a sledování"
+  },
+  "faqs": [
+    {
+      "id": "what-is-pikobuy",
+      "group": "getting-started",
+      "q": "Co je Pikobuy?",
+      "a": "Pikobuy pomáhá nakupujícím vyhledávat, kupovat a zasílat produkty z Číny. Smlouva o službách popisuje pomoc při nákupu, nikoli přímý maloobchodní prodej. Zkontrolujte informace původního prodejce i údaje uvedené při dokončení nákupu.",
+      "sources": [
+        "https://www.pikobuy.com/About",
+        "https://www.pikobuy.com/protocol/user"
+      ]
+    },
+    {
+      "id": "supported-marketplaces",
+      "group": "getting-started",
+      "q": "Která tržiště uvádí průvodce Pikobuy?",
+      "a": "Průvodce pro začátečníky jmenuje Taobao, Tmall, 1688, Weidian a Yupoo. Zmínka o tržišti neznamená, že je způsobilá každá nabídka či produkt; konkrétní položku ověřte před platbou.",
+      "sources": [
+        "https://www.pikobuy.com/guide"
+      ]
+    },
+    {
+      "id": "open-product-link",
+      "group": "getting-started",
+      "q": "Jak na Pikobuy najdu produkt?",
+      "a": "Oficiální průvodce popisuje hledání pomocí produktového odkazu nebo klíčových slov. Po otevření výsledku porovnejte jeho identifikační údaje s původní nabídkou, než vyberete variantu.",
+      "sources": [
+        "https://www.pikobuy.com/guide"
+      ]
+    },
+    {
+      "id": "search-from-image",
+      "group": "getting-started",
+      "q": "Mohu začít obrázkem produktu?",
+      "a": "Domovská stránka Pikobuy nabízí zasílání obrázků a požadavků na vyhledání produktu. Každý výsledek berte jako kandidáta k ověření: vizuálně podobný předmět může mít jiného prodejce, materiál, velikost nebo parametry.",
+      "sources": [
+        "https://www.pikobuy.com/home"
+      ]
+    },
+    {
+      "id": "choose-variation",
+      "group": "getting-started",
+      "q": "Co mám zkontrolovat před první platbou?",
+      "a": "Potvrďte barvu, velikost a množství podle průvodce. Uložení zdrojového odkazu společně s vybranou variantou usnadní vysvětlení pozdějších dotazů k objednávce.",
+      "sources": [
+        "https://www.pikobuy.com/guide"
+      ]
+    },
+    {
+      "id": "two-payment-stages",
+      "group": "getting-started",
+      "q": "Proč se nákup a mezinárodní doprava platí zvlášť?",
+      "a": "Průvodce zařazuje platbu za nákup před skladové zpracování a platbu za mezinárodní dopravu do odeslání požadavku na balík. Počítejte s oběma fázemi, místo abyste cenu produktu považovali za konečnou cenu s doručením.",
+      "sources": [
+        "https://www.pikobuy.com/guide"
+      ]
+    },
+    {
+      "id": "out-of-stock",
+      "group": "getting-started",
+      "q": "Co když položka není skladem?",
+      "a": "Oficiální nákupní průvodce uvádí, že za nedostupnou položku se peníze vracejí. Nestanoví univerzální dobu připsání vratky, proto zkontrolujte konkrétní objednávku nebo se na platbu zeptejte podpory.",
+      "sources": [
+        "https://www.pikobuy.com/guide"
+      ]
+    },
+    {
+      "id": "actual-product-price",
+      "group": "orders",
+      "q": "Může se skutečná nákupní cena lišit od zobrazené?",
+      "a": "Ano. Průvodce upřesňuje, že rozhoduje skutečný nákup. Před přijetím změněné částky porovnejte zvolenou variantu, množství a rozpis objednávky, místo abyste vycházeli jen z uložené katalogové ceny.",
+      "sources": [
+        "https://www.pikobuy.com/guide"
+      ]
+    },
+    {
+      "id": "failed-payment",
+      "group": "orders",
+      "q": "Bude objednávka zpracována, pokud platba selže?",
+      "a": "Všeobecné podmínky říkají, že při neúspěšné platbě se objednávka nezpracuje. Před další platbou zkontrolujte objednávku a platební záznamy, abyste podpoře dokázali vysvětlit čekající či zdánlivě duplicitní transakci.",
+      "sources": [
+        "https://www.pikobuy.com/protocol/terms"
+      ]
+    },
+    {
+      "id": "payment-methods",
+      "group": "orders",
+      "q": "Jaké platební metody mohu použít?",
+      "a": "Stránka O nás uvádí podporu více metod a měn. Použijte možnosti skutečně nabízené při placení; loga v zápatí nepotvrzují dostupnost, poplatky ani způsobilost pro každý účet a destinaci.",
+      "sources": [
+        "https://www.pikobuy.com/About"
+      ]
+    },
+    {
+      "id": "return-deadline",
+      "group": "orders",
+      "q": "Kdy požádat o vrácení ze skladu?",
+      "a": "Stránka vrácení stanoví pět dní neboli 120 hodin po stavu In Warehouse, počítaných od následující hodiny. Zkontrolujte zaznamenaný čas a žádost podejte rychle; jde o lhůtu pro způsobilost, nikoli automatické schválení.",
+      "sources": [
+        "https://www.pikobuy.com/protocol/returns"
+      ]
+    },
+    {
+      "id": "return-eligibility",
+      "group": "orders",
+      "q": "Lze vrátit všechny produkty?",
+      "a": "Ne. Rozhoduje účast prodejce, stav umožňující další prodej a načasování. Pravidla vylučují například zboží na míru či z druhé ruky a předměty s odstraněnými požadovanými štítky nebo obalem. Přečtěte si pravidla pro konkrétní položku.",
+      "sources": [
+        "https://www.pikobuy.com/protocol/returns"
+      ]
+    },
+    {
+      "id": "return-cost",
+      "group": "orders",
+      "q": "Kolik stojí vrácení?",
+      "a": "Může se účtovat zpáteční doprava a servisní poplatky. Oficiální stránky se u některých cen a podmínek bezplatné služby liší, proto si před pokračováním vyžádejte částku pro svou objednávku a důvod; nepředpokládejte, že každé vrácení je zdarma.",
+      "sources": [
+        "https://www.pikobuy.com/protocol/returns",
+        "https://www.pikobuy.com/protocol/user"
+      ]
+    },
+    {
+      "id": "seller-approval",
+      "group": "orders",
+      "q": "Zaručuje odeslání žádosti o vrácení vrácení peněz?",
+      "a": "Ne. Pravidla vyžadují souhlas prodejce. Uchovejte žádost, důkazy a komunikaci k objednávce společně a před dalšími plány s položkou ověřte, co bylo skutečně schváleno.",
+      "sources": [
+        "https://www.pikobuy.com/protocol/returns"
+      ]
+    },
+    {
+      "id": "warehouse-inspection",
+      "group": "warehouse",
+      "q": "Co se děje po příchodu zakoupené položky do skladu?",
+      "a": "Nákupní průvodce popisuje registraci přijetí, fotografie a kontrolu vad. Než vyberete další krok, projděte informace ke své objednávce.",
+      "sources": [
+        "https://www.pikobuy.com/guide"
+      ]
+    },
+    {
+      "id": "qc-limits",
+      "group": "warehouse",
+      "q": "Prokazují QC fotografie pravost nebo technickou funkčnost?",
+      "a": "Ne. Smlouva o službách omezuje odbornou kontrolu některého zboží a fotografie neprokazují všechny skryté či technické vlastnosti. Posuzujte podle nich viditelné skutečnosti a žádejte vysvětlení důležitých nejasností.",
+      "sources": [
+        "https://www.pikobuy.com/protocol/user",
+        "https://www.pikobuy.com/protocol/shipping"
+      ]
+    },
+    {
+      "id": "extra-photos",
+      "group": "warehouse",
+      "q": "Mohu získat další kontrolní fotografie?",
+      "a": "Podmínky přeposílání popisují nákup dalších podrobných fotografií. Než se na ně spolehnete, zeptejte se na požadovaný pohled, dostupnost a cenu. Přesný požadavek pomůže více než obecná žádost o lepší QC.",
+      "sources": [
+        "https://www.pikobuy.com/protocol/shipping"
+      ]
+    },
+    {
+      "id": "forward-my-purchase",
+      "group": "warehouse",
+      "q": "Mohu do skladu poslat samostatně zakoupenou položku?",
+      "a": "Podmínky přeposílání popisují získání adresy skladu od podpory nebo z formuláře, předání potřebných údajů a sjednání další dopravy po přijetí. Pro svůj balík použijte aktuální oficiální pokyny.",
+      "sources": [
+        "https://www.pikobuy.com/protocol/shipping"
+      ]
+    },
+    {
+      "id": "combine-sellers",
+      "group": "warehouse",
+      "q": "Lze spojit položky různých prodejců?",
+      "a": "Kontaktní stránka Pikobuy nabízí spojení položek do jednoho balíku. Porovnejte skutečné možnosti balíku a podmínky tras; spojení nezaručuje úsporu u každé zásilky.",
+      "sources": [
+        "https://www.pikobuy.com/contact"
+      ]
+    },
+    {
+      "id": "packaging-options",
+      "group": "warehouse",
+      "q": "Mohu požádat o minimální nebo zesílené balení?",
+      "a": "Průvodce pro začátečníky uvádí obě možnosti. Domluvte se, co bude odstraněno nebo přidáno, a ověřte případný poplatek. Pokud můžete položku vracet, zachovejte stav požadovaný pravidly vrácení.",
+      "sources": [
+        "https://www.pikobuy.com/guide",
+        "https://www.pikobuy.com/protocol/returns"
+      ]
+    },
+    {
+      "id": "storage-duration",
+      "group": "warehouse",
+      "q": "Jak dlouho mohu nechat položky ve skladu?",
+      "a": "Veřejné stránky prověřené pro tento průvodce neposkytly spolehlivou délku bezplatného skladování ani úplný ceník. Před odložením odeslání zkontrolujte lhůtu a podmínky své objednávky nebo se zeptejte oficiální podpory.",
+      "sources": [
+        "https://www.pikobuy.com/protocol/shipping",
+        "https://www.pikobuy.com/contact"
+      ]
+    },
+    {
+      "id": "estimate-inputs",
+      "group": "shipping",
+      "q": "Co potřebuji k odhadu dopravy Pikobuy?",
+      "a": "Kalkulátor žádá destinaci, typ produktu, hmotnost a rozměry. Shromážděte je před porovnáním nabídek a předběžné údaje nahraďte, jakmile získáte přesnější informace o balíku.",
+      "sources": [
+        "https://www.pikobuy.com/shipping-cost"
+      ]
+    },
+    {
+      "id": "estimate-units",
+      "group": "shipping",
+      "q": "Jaké jednotky používá kalkulátor dopravy?",
+      "a": "Hmotnost se zadává v kilogramech; délka, šířka a výška v centimetrech. Převody pečlivě zkontrolujte, protože správné číslo v nesprávné jednotce vede k nepoužitelnému odhadu.",
+      "sources": [
+        "https://www.pikobuy.com/shipping-cost"
+      ]
+    },
+    {
+      "id": "route-comparison",
+      "group": "shipping",
+      "q": "Mají přepravní trasy stejné ceny a termíny?",
+      "a": "Ne. Průvodce uvádí, že dodací doby a způsoby účtování se podle trasy liší. Přečtěte si aktuální podrobnosti každé dostupné trasy a neporovnávejte jen hlavní cenu.",
+      "sources": [
+        "https://www.pikobuy.com/guide"
+      ]
+    },
+    {
+      "id": "shipping-service-fee",
+      "group": "shipping",
+      "q": "Může mezinárodní doprava zahrnovat poplatek platformy?",
+      "a": "Zveřejněná smlouva o službách uvádí poplatek platformy 8 % z přepravného s upřesněním podmínek vypořádání. Projděte skutečný rozpis platby a aktuální podmínky, místo abyste předpokládali vždy bezplatnou službu.",
+      "sources": [
+        "https://www.pikobuy.com/protocol/user"
+      ]
+    },
+    {
+      "id": "first-tracking",
+      "group": "shipping",
+      "q": "Kdy se mají objevit informace o sledování?",
+      "a": "Nákupní průvodce uvádí do tří dnů od odeslání. Jde o dostupnost prvních údajů sledování, ne doručení do tří dnů. Pokud potřebujete vysvětlit svůj záznam, pošlete podpoře číslo balíku a informace o stavu s daty.",
+      "sources": [
+        "https://www.pikobuy.com/guide",
+        "https://www.pikobuy.com/contact"
+      ]
+    },
+    {
+      "id": "customs-guarantee",
+      "group": "shipping",
+      "q": "Je celní odbavení zaručeno?",
+      "a": "Ne. Smlouva o službách odbavení nezaručuje. Před odesláním zkontrolujte způsobilost položky a požadavky vybrané trasy; nabídka ani skladová fotografie nepotvrzují povolení k dovozu.",
+      "sources": [
+        "https://www.pikobuy.com/protocol/user",
+        "https://www.pikobuy.com/protocol/terms"
+      ]
+    },
+    {
+      "id": "contact-support",
+      "group": "shipping",
+      "q": "Kde se mám ptát na zásilku nebo objednávku?",
+      "a": "Použijte oficiální kontaktní stránku Pikobuy, která doporučuje podat tiket a uvádí i další kanály. Přiložte číslo příslušné objednávky nebo balíku a stručný popis. Tento nezávislý katalog nemá přístup k vašemu účtu Pikobuy.",
+      "sources": [
+        "https://www.pikobuy.com/contact"
+      ]
+    }
+  ],
+  "articles": [
+    {
+      "slug": "spreadsheet-guide",
+      "title": "Průvodce katalogem Pikobuy: vyhledávání a porovnávání produktů",
+      "description": "Vyhledávejte skutečné nabídky cnfansge v katalogu Pikobuy, porovnejte podrobnosti produktů a před objednáním si uchovejte správný zdrojový odkaz.",
+      "category": "Najít produkty",
+      "eyebrow": "KATALOG PIKOBUY",
+      "summary": "Užitečný užší výběr uchovává produkt, zdroj, variantu a nezodpovězené otázky pohromadě. Zde zjistíte, jak ho sestavit s katalogem na tomto webu.",
+      "sections": [
+        {
+          "id": "what-you-are-browsing",
+          "title": "Začněte účelem katalogu",
+          "paragraphs": [
+            "Katalog Pikobuy je sbírka produktových odkazů uspořádaná pro snazší objevování. Na pikobuy.at má podobu prohledávatelného katalogu, nikoli tabulky ke stažení. Produktové záznamy a katalogové obrázky pocházejí z cnfansge.com. Pikobuy.at je nezávislý web pro prohlížení nabídek; přítomnost položky není příslibem její dostupnosti, kvality ani vhodnosti.",
+            "Pomocí katalogu zužte výběr a před platbou prověřte aktuální nabídku na Pikobuy. Tento rozdíl je důležitý, když uložená nabídka změní cenu, prodejce upraví dostupné varianty nebo fotografie ukazuje jinou verzi. Katalogový záznam pomůže produkt najít, aniž by odpověděl na každou otázku k zamýšlené objednávce."
+          ]
+        },
+        {
+          "id": "search-with-a-purpose",
+          "title": "Hledejte produkt, který dokážete popsat",
+          "paragraphs": [
+            "Otevřete stránku katalogu a začněte krátkým popisem, například plátěná taška přes rameno nebo mikina na zip. Pokud je výsledků málo, odeberte popisné slovo. Pokud jich je příliš mnoho, přidejte užitečnou vlastnost. Názvy se mezi zdroji mohou lišit, takže jedna neúspěšná fráze neprokazuje nedostupnost položky.",
+            "Pokud spíše objevujete než hledáte konkrétní položku, vyberte kategorii. Kategorie seskupují podobné produkty a usnadňují posouzení cenových rozdílů. Katalog nabízí řazení; to mění pořadí dostupných záznamů, nikoli jejich kvalitu. Oblíbený výsledek je podnětem k prohlížení, ne nezávislým doporučením."
+          ]
+        },
+        {
+          "id": "read-the-record",
+          "title": "Před porovnáním cen otevřete podrobnosti",
+          "paragraphs": [
+            "Produktová karta uvádí obrázek, název a zobrazenou cenu. Otevřete stránku produktu a prohlédněte dostupnou galerii a zdrojové odkazy. Hledejte detaily důležité pro své použití: otvor a uchycení popruhu tašky, podšívku bundy nebo zapínání drobného doplňku. Chybějící pohled je otázkou k vyřešení, nikoli důkazem chybějící vlastnosti.",
+            "Zobrazenou částku berte jako orientační údaj pro porovnávání katalogových záznamů. Zkontrolujte uvedenou měnu a potvrďte aktuální cenu zvolené varianty na Pikobuy. Dvě podobné karty mohou označovat různé materiály, velikosti či množství. Porovnání pouze hlavních cen proto může vytvořit mylný dojem, která nabídka je levnější."
+          ]
+        },
+        {
+          "id": "make-a-small-shortlist",
+          "title": "Uchovejte tři kandidáty a důležité otázky",
+          "paragraphs": [
+            "Při prvním porovnání se obvykle snáze hodnotí tři kandidáti než velké množství otevřených karet. Vedle důvodu pro ponechání každé položky zapište zdrojovou adresu. Známá miniatura pak nebude jediným způsobem, jak nabídku později poznáte. Poznámky můžete vést ve vlastním dokumentu; postup nepotřebuje funkci ukládání položek.",
+            "Například při porovnání každodenních tašek si můžete ponechat jednu pro vhodný tvar, druhou pro jasnější rozměry a třetí pro zdánlivě pohodlnější zapínání. Dalším krokem je doplnit chybějící informace u každého kandidáta, ne automaticky zvolit nejlevnější kartu."
+          ],
+          "bullets": [
+            "Produkt a zdroj: katalogový odkaz a původní URL tržiště, pokud je dostupná.",
+            "Přesný výběr: zamýšlená barva, velikost, styl a množství.",
+            "Důkazy: dostupné užitečné pohledy či rozměry a informace, které ještě chybějí.",
+            "Rozpočet: orientační cena položky a samostatná rezerva na pozdější náklady."
+          ]
+        },
+        {
+          "id": "understand-the-photos",
+          "title": "Oddělte katalogové snímky od QC své objednávky",
+          "paragraphs": [
+            "Fotografie v katalogu slouží k prohlížení nabídek. Nepředpokládejte, že galerie představuje kontrolu přesného kusu, který dostanete. Historické QC, pokud je výslovně označené a dostupné, se rovněž týká dřívějšího kusu; nenahrazuje kontrolu vlastní objednávky po příchodu do skladu.",
+            "Tato verze webu neposkytuje funkční vyhledávání obrázkem ani samostatný vyhledávač QC. Pro objevování používejte textové hledání, kategorie a zdrojové odkazy. Při kontrole konkrétní objednávky vycházejte z údajů na oficiálním účtu Pikobuy a na neviditelné detaily se ptejte podpory. Fotografie neprokáže všechny vlastnosti materiálu, skryté vady ani dlouhodobou funkčnost."
+          ]
+        },
+        {
+          "id": "handoff-to-pikobuy",
+          "title": "Poslední kontrolu proveďte na Pikobuy",
+          "paragraphs": [
+            "Použijte nákupní odkaz Pikobuy, pokud je u produktu dostupný, a porovnejte cílovou nabídku s poznámkami. Ověřte produkt, prodejce, vybranou variantu, množství a aktuální částku. Pokud importovaná stránka neodpovídá, zastavte se a vraťte se k původnímu zdroji, místo abyste objednávku dokončili jen podle podobného obrázku.",
+            "Jakmile jsou podrobnosti jasné, postupujte podle oficiálního nákupního procesu. Poznámky k výběru uchovejte do příchodu položky do skladu: poskytnou konkrétní podklad ke kontrole. Pokud se záznam produktu na tomto webu nenačte, zkuste to znovu nebo později; nedostupná odpověď katalogu není spolehlivou informací o zásobách prodejce."
+          ]
+        }
+      ],
+      "sources": [
+        "https://cnfansge.com/",
+        "https://www.pikobuy.com/guide",
+        "https://www.pikobuy.com/protocol/user"
+      ],
+      "related": [
+        "weidian-taobao-links",
+        "size-guide",
+        "how-to-use-pikobuy"
+      ]
+    },
+    {
+      "slug": "how-to-use-pikobuy",
+      "title": "Jak používat Pikobuy: praktický průvodce první objednávkou",
+      "description": "Projděte oficiálním nákupním procesem Pikobuy se samostatnými platbami za produkty a dopravu a kontrolním seznamem pro každé rozhodnutí.",
+      "category": "Objednat",
+      "eyebrow": "PRVNÍ OBJEDNÁVKA",
+      "summary": "Oficiální průvodce Pikobuy odděluje vyhledání produktu, jeho nákup, skladovou kontrolu a mezinárodní dopravu. Tyto fáze vám pomohou udržet první objednávku přehlednou.",
+      "sections": [
+        {
+          "id": "prepare-your-order",
+          "title": "Připravte údaje ještě před registrací",
+          "paragraphs": [
+            "Začněte jedním produktem, který dokážete přesně popsat. Uchovejte jeho zdrojovou adresu a poznamenejte barvu, velikost a množství. Pokud jste jej našli v katalogu Pikobuy na tomto webu, pamatujte, že katalog pochází z cnfansge.com. Pikobuy.at pomáhá objevovat nabídky; registrace, platby a správa objednávek probíhají na pikobuy.com.",
+            "Použijte oficiální registrační odkaz a zadejte správné údaje. Před zadáním informací o účtu ověřte adresu webu a heslo uchovejte soukromé. Připravte úplnou adresu příjemce ve formátu požadovaném pro destinaci. Neúplné PSČ či chybějící číslo bytu lze snáze opravit před podáním balíku než po odeslání."
+          ]
+        },
+        {
+          "id": "find-the-exact-item",
+          "title": "Ověřte produkt i vybranou variantu",
+          "paragraphs": [
+            "Průvodce Pikobuy pro začátečníky uvádí hledání produktovým odkazem či klíčovými slovy. Otevřený výsledek porovnejte s uloženým zdrojem. Nestačí název: zkontrolujte prodejce, fotografie a volitelné varianty. Jedna nabídka může obsahovat několik stylů se společným hlavním obrázkem.",
+            "Napište si krátkou poznámku k objednávce, například tmavě modrá, velikost vybraná podle tabulky prodejce, jeden kus. Pokud jsou možnosti nejasné, vyžádejte vysvětlení před platbou. U oblečení projděte rozměry prodejce; u vícedílné položky ověřte obsah uvedeného množství. Tak rozlišíte nedorozumění o vybrané variantě od pozdější chyby při vyřízení."
+          ]
+        },
+        {
+          "id": "first-payment",
+          "title": "Projděte platbu za nákup",
+          "paragraphs": [
+            "Oficiální postup zahajuje nákup platbou za nákupní objednávku; mezinárodní doprava přichází později. Před potvrzením přečtěte skutečně zobrazený rozpis. Poznamenejte cenu produktu, případné dopravné prodejce a další poplatky, místo abyste katalogovou cenu pokládali za plné náklady na obdržení položky.",
+            "Uložte číslo objednávky a varianty uvedené při potvrzení. Pokud platba selže nebo stav zůstane nejasný, před novou platbou zkontrolujte oficiální záznam. Bankovní oznámení a dokončená nákupní objednávka jsou různé důkazy. Všeobecné podmínky webu uvádějí, že neúspěšná platba nevede ke zpracování objednávky."
+          ]
+        },
+        {
+          "id": "warehouse-review",
+          "title": "Po příchodu do skladu položku zkontrolujte",
+          "paragraphs": [
+            "Skladová kontrola je v oficiálním průvodci samostatnou fází. Pomocí dostupných fotografií porovnejte přijatý kus s uloženými volbami. Začněte totožností: správný produkt, viditelná barva, velikostní štítek, množství a přiložené části. Poté zkontrolujte viditelné vady stavu, které by změnily rozhodnutí si jej ponechat.",
+            "Pokud je něco nejisté, napište konkrétní otázku. Žádost o jasnější pohled na konec zipu je užitečnější než tvrzení, že celý předmět vypadá špatně. Vysvětlete nesoulad a přiložte příslušný snímek objednávky. Důležité otázky vyřešte před podáním mezinárodního balíku, dokud je položka dostupná ke skladové kontrole."
+          ],
+          "bullets": [
+            "Ponechte si zdrojovou nabídku a potvrzení objednávky k porovnání.",
+            "Oddělte viditelný nesoulad od detailu, který fotografie jednoduše neukazuje.",
+            "Pokud můžete potřebovat vrácení či výměnu, neprodleně ověřte aktuální podmínky."
+          ]
+        },
+        {
+          "id": "shipping-payment",
+          "title": "Vyberte dopravu pro skutečný balík",
+          "paragraphs": [
+            "Jakmile je položka připravena, průvodce přechází k výběru trasy, podání balíku a platbě mezinárodní dopravy. Projděte možnosti pro svou destinaci a obsah. Samotná cena trasy nepopisuje její způsobilost, způsob účtování ani očekávanou dodací dobu. Použijte aktuální informace, nikoli starou nabídku jiného zákazníka.",
+            "Před platbou potvrďte příjemce a požadované balení. Pokud spojujete více nákupů, ověřte, že jsou všechny zamýšlené položky připravené a zahrnuté. Uchovejte kopii zvolené trasy a konečné částky. Průvodce odhadem dopravy vysvětluje přípravu rozměrů a hmotnosti; rozpočtový průvodce ukazuje, jak druhá platba zapadá do celého nákupu."
+          ]
+        },
+        {
+          "id": "after-dispatch",
+          "title": "Záznamy objednávky a balíku uchovávejte odděleně",
+          "paragraphs": [
+            "Cesta produktové objednávky do skladu a cesta mezinárodního balíku na vaši adresu jsou různé přepravy. Po odeslání si zapište číslo balíku a dopravce, místo abyste hledali pomocí katalogového ID produktu. Vedle čísla uchovejte poslední událost a datum, abyste poznali změnu na stránce sledování.",
+            "Pokud potřebujete pomoc, použijte oficiální kontaktní stránku Pikobuy. Užitečná zpráva obsahuje číslo objednávky či balíku, poslední viditelnou událost, datum a přesnou otázku. Neposílejte heslo ani úplné údaje platební karty. Při doručení uchovejte informace o balíku a zdokumentujte viditelný problém, dokud máte obal k porovnání."
+          ]
+        }
+      ],
+      "sources": [
+        "https://www.pikobuy.com/guide",
+        "https://www.pikobuy.com/protocol/terms",
+        "https://www.pikobuy.com/contact"
+      ],
+      "related": [
+        "fees-budget",
+        "qc-photos",
+        "order-tracking"
+      ]
+    },
+    {
+      "slug": "weidian-taobao-links",
+      "title": "Odkazy Pikobuy: správné otevření produktů Weidian a Taobao",
+      "description": "Pochopte původní adresy tržišť, ID produktů a odkazy Pikobuy na konkrétním příkladu Weidian a pomocí kontroly nesprávně spárovaných nabídek.",
+      "category": "Najít produkty",
+      "eyebrow": "PRODUKTOVÉ ODKAZY",
+      "summary": "Tržiště a původní ID produktu identifikují nabídku. Odkaz Pikobuy obsahuje tento zdroj, abyste si položku mohli prohlédnout přes nákupního zprostředkovatele.",
+      "sections": [
+        {
+          "id": "identify-the-source",
+          "title": "Uchovejte původní adresu tržiště",
+          "paragraphs": [
+            "Zdrojová nabídka a odkaz zprostředkovatele mají různé účely. Zdrojová nabídka identifikuje produkt prodejce na jeho tržišti. Odkaz zprostředkovatele jej otevře přes službu jako Pikobuy. Pokud ponecháte pouze snímek obrazovky nebo zkrácený odkaz, později může být obtížné potvrdit původně zamýšlenou nabídku.",
+            "Při prohlížení pikobuy.at otevřete podrobnosti produktu a uchovejte původní odkaz na tržiště, je-li uveden. Záznam cnfansge je katalogová reference; jeho místní číslo nemusí odpovídat ID produktu na tržišti. Nekopírujte číslo z adresy katalogu s předpokladem, že patří do adresy Weidian nebo Taobao."
+          ]
+        },
+        {
+          "id": "weidian-example",
+          "title": "Přečtěte příklad Weidian ve třech částech",
+          "paragraphs": [
+            "Dodané zdrojové URL je https://weidian.com/item.html?itemID=7755101935 . Část weidian.com určuje tržiště, item.html je stránka položky a itemID=7755101935 identifikuje zdrojovou nabídku. Číslo je identifikátorem nabídky, nikoli velikostí, cenou, barvou či číslem objednávky Pikobuy. Příklad ukazuje formát odkazu; nedoporučuje nákup položky.",
+            "Odpovídající dodaný odkaz zprostředkovatele je https://www.pikobuy.com/product/detail?productUrl=https://weidian.com/item.html?itemID=7755101935 . Vnější adresa otevírá Pikobuy. Hodnota productUrl obsahuje původní adresu Weidian. Při kontrole sdíleného odkazu tedy prověřte cílovou doménu i zdrojovou adresu uvnitř."
+          ]
+        },
+        {
+          "id": "nested-urls",
+          "title": "Pochopte, proč vnořená adresa může vypadat jinak",
+          "paragraphs": [
+            "Některé odkazy vnitřní URL kódují, aby její interpunkce zůstala součástí jedné hodnoty parametru. Stejný příklad lze zapsat jako https://www.pikobuy.com/product/detail?productUrl=https%3A%2F%2Fweidian.com%2Fitem.html%3FitemID%3D7755101935 . Kódované znaky nevytvářejí nové ID produktu; zachovávají původní adresu uvnitř vnější.",
+            "Běžné funkční nákupní tlačítko nemusíte upravovat ručně. Toto rozlišení pomáhá při hledání chyby sdíleného odkazu: neescapovaný ampersand v delší zdrojové adrese může být vyložen jako další vnější parametr. Nekódujte opakovaně již kódovaný odkaz a neodstraňujte neznámé části adresy tržiště, pokud nevíte, která část identifikuje položku."
+          ]
+        },
+        {
+          "id": "taobao-and-other-links",
+          "title": "Použijte zdrojové URL místo hádání ID",
+          "paragraphs": [
+            "U produktu Taobao uchovejte skutečnou adresu dodanou prodejcem či katalogem, místo abyste jeho číslo vložili do šablony Weidian. Název tržiště je součástí identity. Stejnou řadu číslic na dvou různých webech nelze považovat za tutéž nabídku.",
+            "Oficiální průvodce Pikobuy podporuje vložení produktového odkazu do vyhledávacího pole. To je praktická záloha při selhání sdíleného obalového odkazu. Nejprve otevřete zdroj, zkopírujte úplný produktový odkaz a použijte jej na oficiálním webu. Pokud neumíte rozvinout zkrácený či pouze aplikační odkaz, požádejte prodejce nebo podporu o úplnou adresu, místo abyste si ji vytvořili odhadem."
+          ]
+        },
+        {
+          "id": "verify-the-result",
+          "title": "Před výběrem varianty ověřte importovanou položku",
+          "paragraphs": [
+            "Úspěšné načtení stránky neprokazuje, že jde o produkt, který jste chtěli otevřít. Porovnejte cílovou stránku s původní nabídkou, dokud jsou obě dostupné. Prodejce může pod jedním ID nabízet několik barev či verzí, takže shoda ID je nutnou kontrolou, nikoli úplnou specifikací objednávky.",
+            "Například hlavní snímek nabídky může ukazovat tmavou tašku, zatímco nejlevnější volitelnou variantou je doplněk. Před objednáním zkontrolujte text varianty i cenu po jejím výběru. Poznamenejte přesnou volbu, aby byl odkaz spojen s jasným pokynem, ne pouze se známou fotografií."
+          ],
+          "bullets": [
+            "Ověřte tržiště, zdrojovou nabídku a prodejce, pokud je viditelný.",
+            "Porovnejte typ předmětu, fotografie a důležité parametry.",
+            "Výslovně zvolte zamýšlený styl, barvu, velikost a množství.",
+            "Potvrďte aktuální částku a po nákupu uložte oficiální číslo objednávky."
+          ]
+        },
+        {
+          "id": "troubleshoot-a-link",
+          "title": "Řešte chybu odkazu bez nahrazení produktu",
+          "paragraphs": [
+            "Pokud odkaz selže, ověřte, zda se původní nabídka stále otevírá, zda je zkopírovaná adresa úplná a zda obalový odkaz stále obsahuje správný zdroj. Zkuste oficiální vyhledávání Pikobuy nebo kontaktujte podporu s celým URL a snímkem nesouladu. Nenahrazujte položku vizuálně podobným výsledkem bez opětovné kontroly zdroje a variant.",
+            "Tento web neslibuje univerzální převodník pro každého zprostředkovatele, zkrácené URL či formát tržiště. Dostupné nákupní odkazy předávají návštěvníka Pikobuy, kde je nutné aktuální nabídku stále prověřit. Původní zdroj uchovejte i poté; pomůže při odlišném překladu názvu nebo vysvětlení, kterou položku jste zamýšleli."
+          ]
+        }
+      ],
+      "sources": [
+        "https://www.pikobuy.com/guide",
+        "https://www.pikobuy.com/contact",
+        "https://cnfansge.com/"
+      ],
+      "related": [
+        "spreadsheet-guide",
+        "how-to-use-pikobuy",
+        "size-guide"
+      ]
+    },
+    {
+      "slug": "size-guide",
+      "title": "Průvodce velikostmi Pikobuy: porovnejte rozměry před objednáním",
+      "description": "Čtěte velikostní tabulky prodejců, porovnávejte rozměry oblečení a zjistěte, co skladové fotografie vypovídají o padnutí.",
+      "category": "Zkontrolovat položku",
+      "eyebrow": "VELIKOST A PADNUTÍ",
+      "summary": "Neexistuje jediná tabulka velikostí Pikobuy pro všechny prodejce. Použijte rozměry konkrétní nabídky a srovnatelný kus, který vám již dobře sedí.",
+      "sections": [
+        {
+          "id": "start-with-the-seller",
+          "title": "Použijte tabulku přesné nabídky",
+          "paragraphs": [
+            "Pikobuy propojuje produkty různých prodejců do objednávkového procesu; nepřevádí je všechny na jeden systém velikostí. Písmeno M nebo XL nestačí k porovnání dvou nesouvisejících nabídek. Začněte tabulkou požadovaného produktu a verze a ověřte, jaké rozměry a jednotky skutečně popisuje.",
+            "Rozlišujte tělesné rozměry a rozměry hotového oděvu. Údaj o hrudníku nositele má jiný účel než šířka naplocho položené košile. Pokud tabulka tento rozdíl neobjasňuje, před výběrem se zeptejte. Sebejistý převod jednoho nejasného označení na jiné nejasnost neodstraní."
+          ]
+        },
+        {
+          "id": "measure-a-reference",
+          "title": "Změřte srovnatelný kus, který nosíte",
+          "paragraphs": [
+            "Vyberte kus s podobným účelem a střihem. Volnou mikinu porovnávejte s jinou volnou mikinou, nikoli pouze s přiléhavou košilí. Položte ji naplocho bez natahování a zapište stejné rozměry jako v tabulce prodejce. Pokud tabulka používá centimetry, použijte je také; jeden palec je 2,54 centimetru.",
+            "U vrchního dílu bývá užitečná šířka hrudníku, délka těla, šířka ramen a délka rukávu. U kalhot mohou být pas, výška sedu a vnitřní délka nohavice stejně důležité jako uvedená velikost. Koncové body měření musí odpovídat metodě prodejce. Rukáv měřený od ramenního švu nelze přímo porovnat s rukávem měřeným od středu krku."
+          ],
+          "bullets": [
+            "Referenční kus: pojmenujte oděv a popište, jak vám sedí.",
+            "Metoda měření: poznamenejte, kde metr začíná a končí.",
+            "Jednotky: před porovnáním převeďte všechny údaje na stejnou jednotku.",
+            "Požadovaný střih: zaznamenejte, kde chcete více či méně prostoru."
+          ]
+        },
+        {
+          "id": "read-width-correctly",
+          "title": "Nezaměňujte šířku naplocho s obvodem",
+          "paragraphs": [
+            "Představte si, že referenční košile měří naplocho přes hrudník 54 cm, zatímco tabulka prodejce uvádí hrudník 108 cm. Údaje mohou být srovnatelné, pokud prodejce uvádí obvod. Nejsou srovnatelné automaticky: nejprve potvrďte metodu tabulky. Příklad ukazuje, proč jsou popisky důležitější než písmeno velikosti nad nimi.",
+            "Neporovnávejte tělesný obvod přímo s hotovým oděvem s očekáváním stejného padnutí. Tvar, zamýšlená volnost i chování látky ovlivňují pohodlí. Porovnávejte stejné typy údajů a na chybějící rozměr se zeptejte prodejce. Pokud nabídka uvádí toleranci měření, uchovejte ji u tabulky a nepovažujte každé číslo za přesné."
+          ]
+        },
+        {
+          "id": "shoes-and-accessories",
+          "title": "Stejnou metodu použijte u bot a doplňků",
+          "paragraphs": [
+            "U obuvi použijte konkrétní tabulku prodejce a zjistěte, zda hodnota v centimetrech znamená délku chodidla, stélky nebo jiný rozměr. Tyto údaje nejsou zaměnitelné. Známé označení EU, UK či US usnadní orientaci ve variantách, ale nenahrazuje kontrolu tabulky příslušné nabídky.",
+            "U tašek, pásků a dalších doplňků může vhodnost záviset na použitelném rozměru, nikoli velikosti oděvu. Celková délka pásku je jiná než vzdálenost k otvorům pro zapnutí; vnější rozměry tašky nemusí popisovat její otvor. Zapište rozměr důležitý pro zamýšlené použití a vyžádejte jej, pokud v nabídce chybí."
+          ]
+        },
+        {
+          "id": "when-information-is-missing",
+          "title": "Položte otázku, na kterou lze odpovědět",
+          "paragraphs": [
+            "Místo dotazu, zda velikost odpovídá běžnému značení, požádejte přesně: potvrďte prosím šířku pod pažemi měřenou naplocho a délku zad u této velikosti a barvy. Přiložte správný odkaz a určete variantu. Snížíte tak riziko odpovědi k jiné verzi nebo obecného doporučení velikosti.",
+            "Pokud váháte mezi dvěma možnostmi, porovnejte rozměry ovlivňující požadované padnutí a ověřte, co zůstává neznámé. Nepoužívejte automatické pravidlo větší či menší velikosti u každého prodejce. Pokud nelze potvrdit zásadní rozměr, rozhodněte o přijatelnosti nejistoty před platbou, místo abyste doufali, že skladové fotografie později vyřeší vše."
+          ]
+        },
+        {
+          "id": "qc-and-fit",
+          "title": "Používejte skladové fotografie k ověřitelným kontrolám",
+          "paragraphs": [
+            "Po příchodu objednávky do skladu porovnejte viditelný velikostní štítek a vyžádané doklady měření se svou volbou. Metr vyfotografovaný pod úhlem může být obtížně čitelný a běžná produktová fotografie nepotvrzuje padnutí. Při konkrétním nesouladu se zeptejte podpory na jasnější měření či další snímek; dostupnost a cenu potvrďte pro vlastní objednávku.",
+            "QC fotografie neukážou, jak oděv působí na vašem těle, a nezaručují pohodlí při nošení. Původní tabulku a referenční rozměry uchovejte až do kontroly objednávky. Pokud důkazy naznačují přijetí nesprávné varianty, použijte je k rychlému popisu problému a před schválením další dopravy zkontrolujte aktuální pravidla vrácení."
+          ]
+        }
+      ],
+      "sources": [
+        "https://www.pikobuy.com/guide",
+        "https://www.pikobuy.com/protocol/shipping",
+        "https://www.pikobuy.com/protocol/returns"
+      ],
+      "related": [
+        "qc-photos",
+        "returns-refunds",
+        "how-to-use-pikobuy"
+      ]
+    },
+    {
+      "slug": "fees-budget",
+      "title": "Poplatky a náklady Pikobuy: sestavte úplný rozpočet objednávky",
+      "description": "Oddělte cenu produktů, vnitrostátní dopravu, mezinárodní přepravu a příslušné poplatky a poté je porovnejte se skutečně účtovanými částkami.",
+      "category": "Naplánovat dopravu",
+      "eyebrow": "NÁKLADY A PLATBY",
+      "summary": "Cena položky je první částí rozpočtu objednávky. Každý pozdější poplatek evidujte zvlášť, aby se z odhadu nestal předpoklad konečné částky.",
+      "sections": [
+        {
+          "id": "two-payment-stages",
+          "title": "Plánujte nad rámec katalogové ceny",
+          "paragraphs": [
+            "Nízká cena produktu neříká, kolik stojí obdržení celé objednávky. Oficiální proces Pikobuy odděluje nákup položky od platby za její mezinárodní balík. První platbu proto nelze chápat jako důkaz, že jsou již pokryty všechny pozdější náklady.",
+            "Rozpočet začněte před podáním nákupní objednávky a aktualizujte jej s přesnějšími informacemi. Částky označujte jako zaznamenaná cena, odhad, nabídka nebo zaplaceno. Tento jednoduchý rozdíl zabrání záměně hrubého výpočtu dopravy za fakturu. U každé částky ponechte měnu, zvlášť když katalog ukazuje pohodlný přepočet a objednávka se vypořádává v jiné měně."
+          ]
+        },
+        {
+          "id": "budget-lines",
+          "title": "Každému druhu nákladu dejte vlastní řádek",
+          "paragraphs": [
+            "Praktická tabulka má jeden řádek na náklad a sloupce pro měnu, částku, doklad a fázi platby. Dokladem může být rozpis při placení, oficiální nabídka trasy či vypořádaná transakce poskytovatele platby. Neznámou částku nechte prázdnou a označte jako nevyřešenou; nula může vytvořit dojem hotového rozpočtu.",
+            "Následující řádky tvoří rámec plánování, ne tvrzení, že všechny poplatky platí u každé objednávky. Řádek spojte či odeberte až po ověření, jak jej uvádí aktuální nabídka. Zejména nepřičítejte poplatek dvakrát, pokud jej souhrnná cena již obsahuje."
+          ],
+          "bullets": [
+            "Produkty: cena vybrané varianty násobená potvrzeným množstvím.",
+            "Doprava prodejce: případný poplatek za přepravu zboží do skladu.",
+            "Vyžádané služby: příslušné balení, další fotografie a jiné zvolené služby.",
+            "Mezinárodní přeprava: nabídnutá cena zvoleného balíku a trasy.",
+            "Poplatky platformy: servisní poplatky uvedené v příslušném rozpisu platby.",
+            "Platební a cílové náklady: příslušné poplatky za převod měny, poskytovatele nebo v destinaci."
+          ]
+        },
+        {
+          "id": "published-platform-fee",
+          "title": "Čtěte zveřejněný poplatek 8 % ve správném kontextu",
+          "paragraphs": [
+            "Uživatelská smlouva Pikobuy ověřená 20. října 2026 uvádí v oddílu přeshraničního přeposílání balíků servisní poplatek platformy ve výši 8 % přepravného. Zároveň upozorňuje, že výpočet může ovlivnit čas vypořádání a kurzové rozdíly. Jde o ustanovení související s dopravou, ne univerzální přirážku 8 % k celé produktové objednávce.",
+            "Než údaj sami použijete, přečtěte aktuální rozpis platby dopravy. Zkontrolujte základ poplatku i to, zda jej celková částka již obsahuje. Pokud jsou popisky nejasné, požádejte oficiální podporu o označení mezinárodního přepravného, poplatku platformy a celkové splatné částky. Nepředpokládejte, že nezmíněný poplatek v reklamním titulku znamená transakci zcela bez servisních poplatků."
+          ]
+        },
+        {
+          "id": "use-estimates-carefully",
+          "title": "Hrubé údaje dopravy nahraďte údaji o balíku",
+          "paragraphs": [
+            "Na začátku nákupu nemusíte znát hmotnost ani rozměry po zabalení. Zapište předpoklady odhadu, abyste je mohli později změnit. Malý doplněk a objemný předmět v krabici nelze porovnávat pomocí stejného odhadnutého balíku. Dostupnost tras a způsoby účtování závisí i na skutečné zamýšlené zásilce.",
+            "Jakmile jsou dostupné skladové údaje, vraťte se s aktuálními parametry do oficiálního kalkulátoru a k nabízeným trasám. Porovnávejte možnosti se stejným obsahem, destinací a předpokládaným balením. Pokud jedna nabídka zahrnuje službu uvedenou v druhé zvlášť, srovnejte rozdíly před rozhodnutím o levnější variantě. Konečnou nabídku trasy uchovejte u objednávky."
+          ]
+        },
+        {
+          "id": "currency-and-coupons",
+          "title": "Porovnávejte splatné částky, ne reklamní procenta",
+          "paragraphs": [
+            "U kuponu prověřte aktuální způsobilost, platnost, minimální útratu a poplatek, který může snížit. Samotné procento v titulku neříká konečnou úsporu. Zaznamenejte částku před kuponem a skutečně splatnou částku po jeho použití. Tento průvodce neslibuje registrační slevu ani kupon, který nemusí být pro váš účet dostupný.",
+            "Při převodu měny uchovejte částku a měnu zobrazenou při platbě i částku později vypořádanou poskytovatelem. Pomohou určit skutečný náklad bez vymýšlení jednotného kurzu pro každého. Poplatky poskytovatele ověřte přímo u něj. U cílových poplatků použijte příslušné oficiální informace úřadu či dopravce pro svou zásilku, ne předpoklad univerzálního daňového zacházení."
+          ]
+        },
+        {
+          "id": "reconcile-the-order",
+          "title": "Po každé platbě rozpočet srovnejte",
+          "paragraphs": [
+            "Představte si dva produkty od různých prodejců. Každý produkt i jeho dopravu do skladu evidujte zvlášť a nabídku mezinárodního balíku přiřaďte k oběma až po vyjasnění způsobu odeslání. Příklad nepotřebuje odhadovanou cenu: ukazuje, proč násobení hlavní ceny jednoho produktu nemůže dát konečnou částku objednávky.",
+            "Po platbě nahraďte příslušný odhad skutečně účtovanou částkou a uchovejte její referenci. Nezaplacené a nevyřešené řádky ponechte viditelné. Případnou vratku zapište jako samostatnou úpravu, místo abyste původní platbu smazali. Získáte přehled o závazcích, zbývajících platbách i částce, kterou musí vysvětlit oficiální podpora."
+          ]
+        }
+      ],
+      "sources": [
+        "https://www.pikobuy.com/protocol/user",
+        "https://www.pikobuy.com/guide",
+        "https://www.pikobuy.com/shipping-cost",
+        "https://www.pikobuy.com/protocol/terms",
+        "https://www.pikobuy.com/contact"
+      ],
+      "related": [
+        "shipping-cost",
+        "warehouse-consolidation",
+        "how-to-use-pikobuy"
+      ]
+    },
+    {
+      "slug": "shipping-cost",
+      "title": "Cena dopravy Pikobuy: od prvního odhadu po platbu balíku",
+      "description": "Zjistěte, jaké údaje zadat do kalkulátoru dopravy Pikobuy, proč se odhad může změnit a co ověřit před zaplacením balíku.",
+      "category": "Doprava",
+      "eyebrow": "Průvodce cenou dopravy",
+      "summary": "Užitečný odhad dopravy je plánovací nástroj založený na správných údajích. Tento průvodce vysvětluje porovnání předběžných částek s balíkem, který nakonec podáte, aniž by z první nabídky dělal pevnou cenu s doručením.",
+      "sections": [
+        {
+          "id": "estimate-purpose",
+          "title": "Začněte rozhodnutím, které má odhad podpořit",
+          "paragraphs": [
+            "Než naplníte košík, rozhodněte, co potřebujete z odhadu dopravy zjistit. Můžete ověřovat, zda se celá objednávka vejde do rozpočtu, porovnávat dvě možnosti balení nebo zvažovat čekání na další položku. Jde o různé otázky. Nejprve si rozhodnutí zapište, aby zdánlivě nízká částka nebyla jediným důvodem pro výběr trasy.",
+            "Oficiální kalkulátor požaduje destinaci, typ produktu, hmotnost a rozměry. Tyto údaje popisují zásilku, nikoli pouze nákupní seznam. Pokud některý neznáte, poznamenejte nejistotu vedle odhadu. Nabídka založená na odhadnuté velikosti balíku má v rozpočtu zůstat předběžná. Uložte datum a vstupy, abyste je mohli smysluplně porovnat s pozdějším výsledkem."
+          ]
+        },
+        {
+          "id": "input-checklist",
+          "title": "Připravte jednotnou sadu vstupních údajů",
+          "paragraphs": [
+            "Při porovnávání možností používejte stejnou destinaci a údaje o zboží. Kalkulátor používá kilogramy pro hmotnost a centimetry pro rozměry. Chyba v jednotkách může převýšit jakýkoli drobný rozdíl mezi trasami. Pokud rozměr převádíte, uchovejte původní i převedenou hodnotu; snáze tak odhalíte posunutou desetinnou čárku či náhodnou změnu jednotky.",
+            "Pro praktické plánování si připravte malou tabulku s jedním řádkem na každý možný balík. Rozlišujte potvrzené rozměry a předpoklady. Rozměr produktu od prodejce neoznačujte za konečný vnější rozměr balíku. Jakmile skladový záznam poskytne vhodnější údaje, předpoklad nahraďte a porovnání zopakujte. Jde o plánovací metodu, ne tvrzení, že se každý odhad přepočítá automaticky."
+          ]
+        },
+        {
+          "id": "route-details",
+          "title": "Přečtěte podmínky jednotlivých tras",
+          "paragraphs": [
+            "Nákupní průvodce Pikobuy uvádí, že se trasy liší dodací dobou i způsobem účtování. Otevřete podrobnosti každé zvažované trasy a porovnávejte stejné údaje. Odhad je užitečný jen tehdy, pokud trasa může dopravit skutečný balík do požadované destinace. Poznamenejte každou podmínku, kterou ještě potřebujete před platbou vysvětlit od podpory.",
+            "Rozumné porovnání zaznamenává zobrazenou částku, příslušné údaje balíku a popis časového rámce společně. Pokud trasa vysvětluje výpočet účtované hmotnosti, postupujte podle zveřejněného pravidla místo vzorce jiného dopravce či starého příspěvku na fóru. Pokud pravidlo není jasné, zeptejte se, jak by byl navržený balík účtován. Bez ověření konkrétních údajů nepředvídejte nejlevnější trasu."
+          ]
+        },
+        {
+          "id": "payment-breakdown",
+          "title": "Porovnejte nabídku s rozpisem platby",
+          "paragraphs": [
+            "Oddělte nákup produktu od nákladů na doručení balíku k vám. Sestavte rozpočet s jasnými řádky pro již zaplacené částky, další požadovanou platbu a nevyřešené náklady. Nízká cena produktu tak nezakryje objednávku přesahující plánovanou celkovou útratu. Neodečítejte slevu, pokud se skutečně neprojevuje v kontrolované transakci.",
+            "Smlouva o službách uvádí poplatek platformy 8 % z přepravného s podmínkami vypořádání. Aktuální rozpis při placení pečlivě prohlédněte; není důvodem přidat stejné procento dvakrát. Pokud zobrazená částka již zřejmě obsahuje poplatek, požádejte o vysvětlení místo rekonstrukce účtu z předpokladů. Potvrzený rozpis uchovejte u záznamu balíku."
+          ]
+        },
+        {
+          "id": "changes",
+          "title": "Změněnou částku prozkoumejte před schválením",
+          "paragraphs": [
+            "Když se pozdější částka liší od odhadu, nejprve porovnejte vstupy. Hledejte změnu složení balíku, opravené rozměry, jinou trasu nebo přidanou službu. Jde o užitečné otázky k prozkoumání, ne tvrzení, že nastala konkrétní změna. Pokud důvod nenajdete, pošlete podpoře oba záznamy vedle sebe.",
+            "Nejužitečnější závěrečná kontrola je jednoduchá: dokážete vysvětlit, za co platíte, kterého balíku se částka týká a jaké nejistoty zbývají? Pokud ano, proměnili jste hrubý odhad v informované rozhodnutí. Pokud ne, rozhodnutí odložte a požádejte o jasný rozpis. Tabulku uchovejte pro další objednávku, aby její rozpočet vycházel z lepších informací."
+          ]
+        }
+      ],
+      "sources": [
+        "https://www.pikobuy.com/shipping-cost",
+        "https://www.pikobuy.com/guide",
+        "https://www.pikobuy.com/protocol/user"
+      ],
+      "related": [
+        "warehouse-consolidation",
+        "order-tracking",
+        "returns-refunds"
+      ]
+    },
+    {
+      "slug": "qc-photos",
+      "title": "QC fotografie Pikobuy: co zkontrolovat a co snímky nemohou prokázat",
+      "description": "Pomocí skladových fotografií kontrolujte viditelné detaily objednávky, žádejte užitečné další pohledy a před sjednáním dopravy pochopte omezení vizuálního QC.",
+      "category": "Sklad",
+      "eyebrow": "Průvodce QC fotografiemi",
+      "summary": "Skladové fotografie dokládají to, co může fotoaparát zachytit. Pečlivá kontrola začíná vlastní objednávkou a jasným seznamem a odděluje viditelné poznatky od otázek vyžadujících měření, údaje prodejce nebo odborné testování.",
+      "sections": [
+        {
+          "id": "right-record",
+          "title": "Ujistěte se, že kontrolujete správnou položku",
+          "paragraphs": [
+            "Začněte číslem objednávky, vybranou variantou a množstvím. Porovnejte je s původními informacemi o zamýšleném nákupu. Při prohlížení snímků nechte nákupní záznam otevřený, aby se měřítkem nestala paměť. Podobné produkty se mohou lišit drobnými detaily a přesvědčivá katalogová fotografie nedokládá shodu konkrétního skladového kusu s vaším výběrem.",
+            "Tento katalog používá obsah z cnfansge.com. Snímky považujte za materiál k objevování a odlišujte je od fotografií připojených k vlastní objednávce Pikobuy. Oficiální nákupní průvodce popisuje fotografování a kontrolu vad po příchodu do skladu. Při rozhodování o zakoupeném kusu použijte skutečné doklady jeho objednávky, ne obrázek, který jen ilustruje nabídku."
+          ]
+        },
+        {
+          "id": "visible-checks",
+          "title": "Kontrolujte vždy jednu viditelnou otázku",
+          "paragraphs": [
+            "Fotografie procházejte ve stejném pořadí: celkový vzhled, viditelné štítky, podrobnosti varianty, množství a patrné poškození. Poznatky zapisujte s odkazem na příslušný snímek. Popsat viditelnou stopu u švu je užitečnější než označit celý produkt za nekvalitní. Stejně opatrní buďte, pokud je snímek příliš malý či rozmazaný pro závěr.",
+            "U oblečení se užitečná otázka může týkat viditelného velikostního štítku nebo vyžádaného měření. U jiného produktu může jít o konektor, přiloženou část či vnější stav. Jsou to příklady kontrolních otázek, ne příslib, že je standardní snímky pokrývají. Seznam sestavte podle rozhodnutí, které potřebujete udělat, a nežádejte dlouhou sérii fotografií, jež by toto rozhodnutí nezměnila."
+          ]
+        },
+        {
+          "id": "photo-limits",
+          "title": "Oddělte viditelný stav od skrytých vlastností",
+          "paragraphs": [
+            "Podmínky přeposílání a smlouva o službách Pikobuy vymezují limity odborné kontroly. Fotografii nevykládejte jako certifikát pravosti, bezpečnostní test ani důkaz dlouhodobé funkčnosti. Vnější pohled nedokládá vše uvnitř. Stejně tak snímek odlišný od studiové fotografie prodejce sám o sobě neprokazuje doručení nesprávné položky.",
+            "Osvětlení, úhel a kvalita obrazu mohou ovlivnit posouzení. Pokud na rozdílu záleží, popište nejistotu přímo: fotografie nezobrazuje informaci dost jasně pro rozhodnutí. Zeptejte se na dostupné další důkazy. Odpovědný závěr může být užší než schválení či odmítnutí; označení nevyřešeného bodu pomáhá zabránit rozhodování z nedostatečných podkladů."
+          ]
+        },
+        {
+          "id": "request-photos",
+          "title": "Vyžádejte pohled odpovídající konkrétní otázce",
+          "paragraphs": [
+            "Podmínky přeposílání popisují placené další podrobné fotografie. Před objednáním určete chybějící informaci a zeptejte se na dostupnost a cenu. Použijte krátký pokyn, například čitelný pohled na určitý štítek nebo snímek konkrétní oblasti. Vysvětlete, které objednávky se žádost týká a proč stávající pohled otázku neřeší.",
+            "Pokud pomůže měření, pojmenujte oba koncové body a požadovanou jednotku. Nepředpokládejte, že sklad odhadne preferovanou metodu. Po doručení odpovědi ověřte, že řeší původní otázku, ne že jen přidává jiný úhel. Pokud požadovaná kontrola přesahuje službu, rozhodněte, zda jsou nutné údaje prodejce nebo jiný způsob ověření."
+          ]
+        },
+        {
+          "id": "next-action",
+          "title": "Proměňte kontrolu v jasný další krok",
+          "paragraphs": [
+            "U každé položky uchovejte stručný výsledek: bez zjištěné viditelné závady, vyžádáno vysvětlení nebo problém k řešení s podporou. Je to váš vlastní záznam kontroly, ne oficiální skladový stav. Užitečné snímky a související zprávy uchovávejte společně. Pokud zvažujete vrácení, rychle přečtěte aktuální pravidla a nežádejte změny balení, dokud nepochopíte dopad na způsobilost.",
+            "Při hlášení problému uveďte číslo objednávky, vybranou variantu, příslušný obrázek a věcný popis nesouladu. Napište požadované řešení, aniž byste tvrdili, že už bylo schválené. Cílem QC je lepší rozhodnutí o skutečné položce. Uspořádané důkazy pomohou vysvětlit rozhodnutí i zbývající otázky před zajištěním dalšího kroku."
+          ]
+        }
+      ],
+      "sources": [
+        "https://www.pikobuy.com/guide",
+        "https://www.pikobuy.com/protocol/shipping",
+        "https://www.pikobuy.com/protocol/user",
+        "https://www.pikobuy.com/protocol/returns"
+      ],
+      "related": [
+        "returns-refunds",
+        "warehouse-consolidation",
+        "shipping-cost"
+      ]
+    },
+    {
+      "slug": "returns-refunds",
+      "title": "Vrácení zboží a peněz Pikobuy: ověřte lhůtu, důkazy a náklady",
+      "description": "Pochopte zveřejněnou lhůtu pro vrácení ze skladu Pikobuy, souhlas prodejce a pravidla způsobilosti i praktický postup při nejasných poplatcích či rozdílech v pravidlech.",
+      "category": "Objednávky",
+      "eyebrow": "Průvodce vrácením",
+      "summary": "Žádost o vrácení zahrnuje samostatné otázky: zda je položka způsobilá, zda je žádost včasná, zda prodejce souhlasí a jaké jsou náklady. Odpovídat na ně jednotlivě je spolehlivější než předpokládat, že tlačítko vrácení zaručuje peníze zpět.",
+      "sections": [
+        {
+          "id": "deadline",
+          "title": "Nejprve ověřte čas ve skladu",
+          "paragraphs": [
+            "Stránka vrácení Pikobuy stanoví pětidenní, 120hodinovou lhůtu po stavu In Warehouse, počítanou od následující hodiny. Přečtěte časový údaj vlastní objednávky a při problému jednejte rychle. Nenahrazujte záznam datem, kdy jste si položky náhodou všimli. Zveřejněná lhůta se týká podání žádosti, nikoli příslibu dokončení celého procesu v tomto čase.",
+            "Vytvořte krátkou poznámku s číslem objednávky, zaznamenaným časem stavu a důvodem zvažovaného vrácení. Přidejte datum kontaktování podpory. Pokud je čas nebo časové pásmo nejasné, zeptejte se ihned místo sebejistého výpočtu z neúplných údajů. Poznámka prakticky zpřehledňuje posloupnost, neprodlužuje však lhůtu platformy."
+          ]
+        },
+        {
+          "id": "eligibility",
+          "title": "Oddělte způsobilost od nespokojenosti",
+          "paragraphs": [
+            "Pravidla vrácení spojují způsobilost s účastí prodejce, stavem pro další prodej a načasováním. Uvádějí také výjimky, například zboží na míru a některé položky s odstraněnými štítky nebo obalem. Před změnou předmětu či balení přečtěte požadavky jeho kategorie. Schopnost jasně popsat výhradu je cenná, ale sama neprokazuje povinnost konkrétní vrácení přijmout.",
+            "Žádost stavte na pozorovatelných skutečnostech. Porovnejte zvolenou variantu s přijatým kusem a označte příslušnou fotografii či detail objednávky. Rozlišujte zjevně nesprávný předmět od změny preference a viditelnou vadu od něčeho, co snímek neukazuje jasně. Přesné popisy pomáhají všem řešit stejnou otázku; přehánění může ztížit prošetření jednoduchého nesouladu."
+          ]
+        },
+        {
+          "id": "request",
+          "title": "Podejte konkrétní žádost a uchovejte odpověď",
+          "paragraphs": [
+            "Oficiální pravidla vyžadují souhlas prodejce. Podání žádosti, získání schválení a obdržení peněz berte jako oddělené události. Uchovejte komunikaci potvrzující každou z nich, místo abyste předpokládali uskutečnění dalšího kroku. Pokud podpora žádá další důkazy, odpovězte požadovaným materiálem a propojte jej s původním číslem objednávky.",
+            "Užitečná žádost může být stručná: určete položku, popište důvod, odkažte na důkazy a uveďte požadovaný výsledek. Zeptejte se na další potřebný krok a zda by další manipulace ovlivnila způsobilost. Podmíněnou odpověď zaznamenejte i s podmínkou. Vrácení neoznačujte za schválené, dokud to odpověď skutečně nepotvrdí."
+          ]
+        },
+        {
+          "id": "cost-ambiguity",
+          "title": "Vyžádejte vysvětlení poplatků konkrétní objednávky",
+          "paragraphs": [
+            "Veřejné stránky nejsou u všech nákladů vrácení zcela jednotné. Tabulka a oddíl poplatků na stránce vrácení se liší v původním poštovném u položek původně zaslaných zdarma; smlouva o službách navíc zmiňuje omezený nárok na bezplatnou službu. Rozdíly jsou důvodem k vyjasnění, ne základem pro výběr věty vedoucí k nejnižší ceně. Tento průvodce je za Pikobuy nerozhoduje.",
+            "Zeptejte se na přepravné, případný servisní poplatek a očekávanou vratnou částku pro svůj důvod a objednávku. Vysvětlení porovnejte s původně zaplacenou sumou a uložte odpověď. Pokud se poplatek změní, před přijetím nevysvětlené srážky žádejte důvod. Jasný rozpis je užitečnější než obecný příslib bezplatného vrácení nebo výpočet z rozporných odstavců."
+          ]
+        },
+        {
+          "id": "refund-record",
+          "title": "Sledujte skutečný záznam vratky až do konce",
+          "paragraphs": [
+            "Záznamy žádosti a vratky uchovávejte spolu, ale nepokládejte je za zaměnitelné. Zapište schválenou částku, částku uvedenou jako vrácenou i nevyřešený rozdíl. Pokud není jasné místo či načasování vratky, ptejte se podpory na konkrétní transakci. Zde prověřené oficiální materiály neopravňují k univerzálnímu příslibu, že každá vratka přijde stejnou metodou ve stejném počtu dnů.",
+            "Před uzavřením vlastního záznamu ověřte shodu výsledku s obdrženým schválením. Pokud neodpovídá, pošlete jednu stručnou navazující zprávu s číslem objednávky, dokladem schválení a přesnou zbývající otázkou. Podpora tak dostane souvislou historii bez skládání rozptýlených zpráv. Při budoucím nákupu projděte podmínky vrácení před platbou a ponechte obal, dokud se rozhodujete, zda produkt vyhovuje."
+          ]
+        }
+      ],
+      "sources": [
+        "https://www.pikobuy.com/protocol/returns",
+        "https://www.pikobuy.com/protocol/user",
+        "https://www.pikobuy.com/contact"
+      ],
+      "related": [
+        "qc-photos",
+        "warehouse-consolidation",
+        "shipping-cost"
+      ]
+    },
+    {
+      "slug": "warehouse-consolidation",
+      "title": "Sklad a slučování zásilek Pikobuy: naplánujte balík před odesláním",
+      "description": "Projděte skladové podklady, rozlište nákup a přeposílání, porovnejte balení a zhodnoťte sloučení bez předpokladu zaručené úspory.",
+      "category": "Sklad",
+      "eyebrow": "Průvodce skladem",
+      "summary": "Skladová fáze je užitečným rozhodovacím bodem mezi nákupem jednotlivých položek a odesláním balíku. Ověřte, co přišlo, vyřešte otázky a porovnejte praktický plán balení s dostupnými informacemi o dopravě.",
+      "sections": [
+        {
+          "id": "order-types",
+          "title": "Zjistěte, jak se každá položka dostala do skladu",
+          "paragraphs": [
+            "Položka koupená přes zprostředkovatele a samostatně zakoupený předmět zaslaný k přeposlání mají odlišné výchozí body. Pravidla přeposílání Pikobuy popisují získání aktuální adresy skladu a zadání údajů pro přeposlání. Pro vlastní doručení použijte oficiální pokyny. Nekopírujte adresu ze starého komunitního příspěvku s předpokladem stejných identifikačních údajů pro všechny zákazníky.",
+            "Veďte malý seznam propojující každý fyzický předmět s prodejcem či odesílatelem, referencí nákupu a skladovým záznamem. U samostatně koupeného zboží uchovejte i původní komunikaci s prodejcem. Účel je praktický: pokud něco chybí či není jasné, měli byste umět určit transakci bez hádání, kterého z několika podobných předmětů se zpráva týká."
+          ]
+        },
+        {
+          "id": "arrival-review",
+          "title": "Před plánováním balíku projděte podklady o přijetí",
+          "paragraphs": [
+            "Podmínky přeposílání popisují otevření a kontrolu přicházejícího zboží. Prohlédněte důkazy připojené k položce a zaznamenejte otázky vyžadující pozornost. Kontrola totožnosti a viditelného stavu před debatou o balení odděluje dvě rozhodnutí: zda je přijatá položka přijatelná a jak chcete přijatelný kus připravit pro další dopravu.",
+            "U všech položek používejte stejný kontrolní seznam. Potvrďte, co lze z dostupného záznamu zjistit, a označte zbývající nejistoty. Pokud snímek nestačí, položte konkrétní otázku místo automatického označení položky za vyhovující. Pokud zvažujete vrácení, vyřešte tuto cestu dříve než změny, které mohou odstranit užitečné důkazy nebo ovlivnit stav pro další prodej."
+          ]
+        },
+        {
+          "id": "packing",
+          "title": "Popište požadovaný výsledek balení",
+          "paragraphs": [
+            "Průvodce pro začátečníky zmiňuje žádosti o minimální a zesílené balení. Začněte účelem: můžete chtít zachovat krabici, chránit zranitelnou část nebo zjistit, zda lze odstranit zbytečný vnější materiál. Zeptejte se, co navržená služba změní a kolik stojí. Samotné názvy možností balení nevysvětlují přesné zacházení s konkrétní položkou.",
+            "Méně balení nepovažujte automaticky za zlepšení. Zvažte, čeho se můžete vzdát, co potřebuje samotná položka a které detaily zůstávají důležité při případném sporu či vrácení. Pokud služba zahrnuje nevratnou změnu, formulujte požadavek dostatečně přesně. Krátký písemný popis se kontroluje snáze než neurčitý pokyn všechno zmenšit."
+          ]
+        },
+        {
+          "id": "consolidation",
+          "title": "Porovnejte společný balík s reálnými alternativami",
+          "paragraphs": [
+            "Kontaktní stránka Pikobuy nabízí spojování produktů různých prodejců do balíku. Potvrzuje tím myšlenku služby, ne zaručené procento úspory. Sestavte návrh balíku s přesným seznamem přijatelných položek, které mají cestovat společně. Porovnejte jej s relevantními alternativami pomocí stejných údajů destinace a nejlepších dostupných rozměrů balíku.",
+            "Užitečné porovnání klade několik otázek: je trasa dostupná pro navrženou zásilku, jaké informace podporují odhad a co by se změnilo při samostatném odeslání položky? Odpověď nebo nezodpovězenou otázku zapište k příslušné možnosti. Nepředpokládejte, že spojení všeho je vždy levnější, rychlejší či vhodnější. Hodnoťte skutečný navržený balík, ne pouze počet předmětů."
+          ]
+        },
+        {
+          "id": "submit-check",
+          "title": "Před podáním vyřešte skladování a náklady",
+          "paragraphs": [
+            "Ve veřejných stránkách prověřených pro tento průvodce nebyla zjištěna spolehlivá univerzální doba bezplatného skladování. Pokud chcete čekat na další nákup, ověřte podmínky již uložených položek a na nejasnou lhůtu se zeptejte podpory. Naději na výhodné sloučení nestavte na době skladování, kterou jste u vlastní objednávky neověřili.",
+            "Před podáním balíku společně zkontrolujte obsah, pokyny k manipulaci, údaje příjemce a rozpis platby. Uchovejte verzi, kterou jste skutečně schválili. Pokud balení změní údaje použité v dřívějším odhadu, před rozhodnutím porovnejte nové hodnoty. Praktickým cílem je vysvětlitelný plán balíku: co obsahuje, jakou manipulaci jste požadovali, jakou částku přijali a které otázky vyřešili."
+          ]
+        }
+      ],
+      "sources": [
+        "https://www.pikobuy.com/protocol/shipping",
+        "https://www.pikobuy.com/contact",
+        "https://www.pikobuy.com/guide",
+        "https://www.pikobuy.com/shipping-cost",
+        "https://www.pikobuy.com/protocol/returns"
+      ],
+      "related": [
+        "shipping-cost",
+        "qc-photos",
+        "order-tracking"
+      ]
+    },
+    {
+      "slug": "order-tracking",
+      "title": "Sledování objednávek Pikobuy: sledujte správnou zásilku a lépe se ptejte",
+      "description": "Oddělte dopravu prodejce od sledování mezinárodního balíku, opatrně vykládejte neúplné aktualizace a připravte jasný dotaz podpoře se správnými záznamy.",
+      "category": "Doprava",
+      "eyebrow": "Průvodce sledováním objednávky",
+      "summary": "Nákup může zahrnovat více přeprav i více referenčních čísel. Sledování je snazší, pokud víte, kterou fázi prověřujete, jaký záznam k ní patří a jaké informace by odstranily nejistotu.",
+      "sections": [
+        {
+          "id": "shipment-map",
+          "title": "Oddělte nákup od mezinárodního balíku",
+          "paragraphs": [
+            "Nejprve určete událost, kterou chcete pochopit. Ověřujete, zda prodejce položku odeslal, zda dorazila do skladu, nebo kde je nyní podaný mezinárodní balík? Jde o praktická rozlišení pro poznámky, nikoli seznam oficiálních stavových názvů. Při popisu události podpoře použijte znění skutečně zobrazené v účtu.",
+            "Každou dostupnou referenci uchovejte vedle příslušné části cesty. Číslo objednávky pomáhá identifikovat nákup, číslo balíku následnou zásilku. Při spojení několika objednávek zaznamenejte, které položky do balíku patří. Tím zabráníte záměně záznamu dopravy prodejce za důkaz, že se mezinárodní balík už blíží k vaší adrese."
+          ]
+        },
+        {
+          "id": "first-update",
+          "title": "Rozlišujte odeslání a první aktualizaci sledování",
+          "paragraphs": [
+            "Nákupní průvodce Pikobuy uvádí dostupnost sledování do tří dnů od odeslání. Tvrzení se týká prvních informací o sledování; není příslibem třídenního doručení. Nejprve potvrďte, který záznam odeslání čtete, než jej použijete jako výchozí bod otázky. Pokud je posloupnost nejasná, uchovejte datovaný záznam účtu.",
+            "Prázdné či nezměněné sledování samo o sobě nevysvětluje, co se stalo. Nevyplňujte mezeru sebejistým příběhem o ztraceném balíku, celním zásahu či zpoždění dopravce. Zaznamenejte skutečný obsah stránky a čas kontroly. Potom položte zodpověditelnou otázku, například zda je reference správná nebo zda je dostupná novější aktualizace."
+          ]
+        },
+        {
+          "id": "read-updates",
+          "title": "Čtěte každou aktualizaci jako konkrétní událost",
+          "paragraphs": [
+            "Když se údaje objeví, poznamenejte text události, její čas a zdroj zobrazení. Pokud dopravce a platforma ukazují odlišné informace, uchovejte oba záznamy místo tichého nahrazení jednoho vlastním výkladem. Hledejte další věcnou otázku: shodují se čísla, používají časy stejné pásmo a nezobrazuje jedna stránka starší událost?",
+            "Tyto kontroly pomáhají uspořádat dotaz; nestanoví univerzální význam všech stavů dopravců. Pokud je pro skutečnou zásilku dostupné vysvětlení dopravce, použijte jej. Uklidňující formulace sledování není potvrzené doručení, stejně jako neznámá formulace neprokazuje problém. Pokud význam ovlivňuje další postup, požádejte o vysvětlení."
+          ]
+        },
+        {
+          "id": "support-packet",
+          "title": "Připravte stručný dotaz podpoře",
+          "paragraphs": [
+            "Oficiální kontaktní stránka Pikobuy doporučuje podat tiket. Shromážděte příslušné číslo objednávky či balíku, sledovací číslo, pokud je zobrazené, nejnovější datovanou aktualizaci a krátký popis nesouladu. Přiložte jen osobní údaje potřebné k dotazu a použijte oficiální kanál, místo abyste celou adresu či údaje účtu zveřejnili v diskusi.",
+            "Dobrý dotaz má jednu jasnou otázku. Vysvětlete, kterého balíku se týká, co říká aktuální záznam a co potřebujete potvrdit. Pokud jste podporu už kontaktovali, připojte číslo předchozího tiketu, je-li k dispozici. Historie tak zůstane pohromadě. Nová zpráva opakující otázku bez původního kontextu může ztížit rozpoznání již prověřených skutečností."
+          ]
+        },
+        {
+          "id": "follow-through",
+          "title": "Oddělte dotazy na doručení od náhrady škody",
+          "paragraphs": [
+            "Zjištění nejnovějšího stavu balíku a posouzení žádosti o náhradu jsou různé úkoly. Smlouva o službách podmiňuje pojistné plnění rozsahem krytí a příslušnými podmínkami. Nevyvozujte schválení z existence možnosti pojištění ani z alarmujícího textu sledování. Pokud bude nárok relevantní, zeptejte se, jaké důkazy a postup platí pro konkrétní zásilku.",
+            "Po doručení uchovejte záznam o převzetí a zkontrolujte obsah před uzavřením vlastních poznámek. Pokud je problém, popište jej fotografiemi a příslušnými čísly namísto obecného obvinění. Pokud dotaz zůstává otevřený, sledujte poslední odpověď a přesnou nezodpovězenou otázku. Stručná souvislá historie je užitečnější než rostoucí sbírka nesouvisejících snímků obrazovky."
+          ]
+        }
+      ],
+      "sources": [
+        "https://www.pikobuy.com/guide",
+        "https://www.pikobuy.com/contact",
+        "https://www.pikobuy.com/protocol/shipping",
+        "https://www.pikobuy.com/protocol/user"
+      ],
+      "related": [
+        "shipping-cost",
+        "warehouse-consolidation",
+        "returns-refunds"
+      ]
+    }
+  ]
+}
