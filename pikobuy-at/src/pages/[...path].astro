@@ -6,7 +6,7 @@ const {locale,page}=Astro.props;
 const text=t(locale),base=locale==='en'?'/':`/${locale}/`,href=(p='')=>`${base}${p?`${p}/`:''}`;
 const registration='https://www.pikobuy.com/?mode=register&redirect=/home';
 const title=page==='guide'?`${text.guide} — Pikobuy`:page==='visual'?`${text.visual} — Pikobuy`:`Pikobuy Spreadsheet — ${text.discover}`;
-const origin='https://pikobuy-at-preview.hehaize88.chatgpt.site';
+const origin='https://pikobuy-at-preview.hehaize88.workers.dev';
 ---
 <!doctype html>
 <html lang={locale}>

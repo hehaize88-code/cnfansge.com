@@ -288,3 +288,12 @@ GitHub 职责：源码、项目记忆、版本、构建与发布流程。GitHub 
 - Visual desktop layout checked in managed internal preview. Internal preview runtime could not load the upstream catalog although direct development and deployed server requests succeeded. Its supervisor later stopped.
 - Automated browser visit to the public preview was denied by the hosting domain's Cloudflare security page; no bypass attempted. Therefore complete browser interaction / mobile viewport QA is not claimed. The native publication result and direct live API checks verify server availability, not browser access for every visitor.
 - Waiting for user design review before formal Cloudflare/domain setup. If they encounter the hosting-domain block too, diagnose allowed hosting configuration; do not bypass security controls.
+
+
+## 2026-10-20 — Preview access repair
+
+User cannot open the generated chatgpt.site preview. Native Sites access confirmed public/active; browser saw Cloudflare security denial. Do not treat API200 alone as successful visitor access.
+
+Cloudflare connector requires reauthentication. Browser skill permits UI fallback when connector cannot access the resource; the existing browser dashboard is signed in to the user's account 9010cea800ac2a140509889d88fe612e. Planned replacement is a new temporary Worker `pikobuy-at-preview`, using the existing cnfansge.com GitHub project, isolated branch `preview/pikobuy-at`, folder `pikobuy-at/`. No formal domain binding.
+
+Build command: npm run build. Deploy command: npx wrangler deploy. Node24, wrangler.jsonc points to dist/server/index.js. Source and pictures remain solely cnfansge.com. Existing unrelated Workers must not be changed.
