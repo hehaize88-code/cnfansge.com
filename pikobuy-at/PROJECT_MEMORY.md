@@ -374,3 +374,10 @@ Four new behavior regressions verify HTML cards/escaping, localized pagination a
 - User requested adding pikobuy.at to Google Analytics. Created a dedicated GA4 property after the account picker showed no existing match. Account 405518068; property 559795917; web stream 16165325140 (pikobuy.at Web, https://pikobuy.at); measurement ID G-2WEC83HCE5. Reporting timezone China UTC+08:00, currency USD, industry Shopping; objectives traffic and engagement. Enhanced measurement enabled.
 - Shared Analytics.astro injects Google's async loader and one config into all 408 localized pages only in production builds. Runtime hostname guard limits measurement to pikobuy.at/www.pikobuy.at; ad personalization and Google signals disabled in the config. No second manual page_view is sent.
 - Clean production build passes all 14 tests and validates 409 HTML pages; all 408 localized pages contain exactly one GA4 loader. Initial reused output contained stale generated files; a clean rebuild resolved the artifact-only validation problem. Deployment and received-data verification follow.
+
+
+## 2026-10-20 — GA4 deployed and receiving real page visits
+
+- Production source commit `4282142ba09c495671fd537e92cd921f4f230c06` published through the existing main-branch deployment. Live homepage and FAQ DOM each load exactly one Google tag for G-2WEC83HCE5. Public HTML fetches confirm the same tag on /spreadsheet/ and /de/articles/spreadsheet-guide/; catalog server-rendered marker remains present.
+- After an actual Chrome visit, GA4 realtime for property 559795917 showed 1 active user, the Pikobuy homepage title, and first_visit, page_view, session_start and user_engagement. This is a verification visit, not a claim of organic traffic. Screenshot proof captured and the property realtime report left open.
+- User report: https://analytics.google.com/analytics/web/#/a405518068p559795917/realtime/overview . GA4 setup, deployment and reception verified; GSC indexing remains a separate process.
