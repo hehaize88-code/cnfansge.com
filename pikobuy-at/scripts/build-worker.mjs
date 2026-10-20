@@ -6,4 +6,8 @@ await walk('.astro-output');await mkdir('dist/server',{recursive:true});await mk
 await writeFile('.astro-output/embedded-assets.json',JSON.stringify(assets));
 await build({entryPoints:['worker/index.mjs'],bundle:true,format:'esm',platform:'browser',target:'es2022',outfile:'dist/server/index.js',minify:true,legalComments:'none'});
 await copyFile('.openai/hosting.json','dist/.openai/hosting.json');
+if (process.argv.includes('--pages')) {
+  await mkdir('.pages-output', { recursive: true });
+  await copyFile('dist/server/index.js', '.pages-output/_worker.js');
+}
 console.log(`Packaged ${Object.keys(assets).length} Astro static assets with live-source Worker.`);

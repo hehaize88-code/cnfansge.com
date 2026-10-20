@@ -308,3 +308,12 @@ Build command: npm run build. Deploy command: npx wrangler deploy dist/server/in
 - Desktop proof: docs/preview-desktop.png. No design/content changes in access repair. Image search and verified QC remain pending source endpoint confirmation, as recorded above.
 - Old chatgpt.site address is superseded because browser access was blocked even though API requests succeeded. Deliver the workers.dev address. Do not claim worldwide/network-independent reachability from one browser test.
 - User review still needed before binding pikobuy.at. Next work should start from the preview/pikobuy-at branch and merge only this domain folder when approved; avoid unrelated-site changes.
+
+## 2026-10-20 — Alternative Pages preview after repeated access reports
+
+- User repeatedly reports that the workers.dev preview cannot connect. Connected Chrome reloads show the page with eight products and nine loaded images, so the user's exact error has not been reproduced. Do not claim a confirmed network/root cause.
+- Cloudflare connector still requires reauthentication. Existing authenticated Chrome dashboard remains usable; no need for user to reconnect the connector to finish the preview task.
+- Prepare a separate Pages preview using the same source and live source adapter, on branch preview/pikobuy-at-pages. Only pikobuy-at files differ. No copied product database, fake catalog or upstream substitution.
+- Build command: npm run build -- --pages. Root: pikobuy-at. Output: .pages-output. Node24. Wrangler config uses pages_build_output_dir and the compiled module is copied to _worker.js for Pages advanced mode.
+- Intended Pages name: pikobuy-at-preview; verify the returned public URL after deployment. Existing workers.dev preview remains available. Formal pikobuy.at DNS and domain binding remain untouched pending design approval.
+- Deployment documentation verified: https://developers.cloudflare.com/pages/functions/advanced-mode/ . Product APIs and static routes use the same bundled Worker fetch handler, without relying on a cross-origin workers.dev API.
