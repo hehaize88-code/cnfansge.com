@@ -296,4 +296,15 @@ User cannot open the generated chatgpt.site preview. Native Sites access confirm
 
 Cloudflare connector requires reauthentication. Browser skill permits UI fallback when connector cannot access the resource; the existing browser dashboard is signed in to the user's account 9010cea800ac2a140509889d88fe612e. Planned replacement is a new temporary Worker `pikobuy-at-preview`, using the existing cnfansge.com GitHub project, isolated branch `preview/pikobuy-at`, folder `pikobuy-at/`. No formal domain binding.
 
-Build command: npm run build. Deploy command: npx wrangler deploy. Node24, wrangler.jsonc points to dist/server/index.js. Source and pictures remain solely cnfansge.com. Existing unrelated Workers must not be changed.
+Build command: npm run build. Deploy command: npx wrangler deploy dist/server/index.js --name pikobuy-at-preview --compatibility-date 2026-10-01. Node24, wrangler.jsonc points to dist/server/index.js. Source and pictures remain solely cnfansge.com. Existing unrelated Workers must not be changed.
+
+### Access repair verified
+
+- Replacement public preview: https://pikobuy-at-preview.hehaize88.workers.dev . Opened successfully in the user's connected Chrome browser on 2026-10-20.
+- Initial successful Cloudflare build f4a9572a-7f3b-4159-ad91-2c901a242a54, version 21f44571, built main commit f2aa1b1ff038c98457473eedb1652ef999148dc5. Version URL also opens: https://21f44571-pikobuy-at-preview.hehaize88.workers.dev .
+- Changed this temporary Worker's production build branch to preview/pikobuy-at and saved. This is the preview Worker's branch setting, not permission to launch the formal domain. Root remains pikobuy-at; Node24. No custom domains or DNS changes; no new database, runtime bindings or credentials.
+- Preview branch adds wrangler.jsonc, .nvmrc and workers.dev canonical origin. Formal production canonical/sitemap must be changed only when domain deployment is approved.
+- Browser checks: all eight homepage product photos and official logo loaded; Nike search returned real products; product 5828 rendered five images and the correct nested Weidian item 7672711503 purchase link; English-to-German switch retained the product and query. German mobile homepage checked at 390x844; no horizontal overflow (content width375, scrollWidth375), two-column product grid. Viewport reset after check.
+- Desktop proof: docs/preview-desktop.png. No design/content changes in access repair. Image search and verified QC remain pending source endpoint confirmation, as recorded above.
+- Old chatgpt.site address is superseded because browser access was blocked even though API requests succeeded. Deliver the workers.dev address. Do not claim worldwide/network-independent reachability from one browser test.
+- User review still needed before binding pikobuy.at. Next work should start from the preview/pikobuy-at branch and merge only this domain folder when approved; avoid unrelated-site changes.
