@@ -321,3 +321,13 @@ User explicitly authorized use of the connected Chrome to deploy the repaired ve
 ## 2026-10-20 — Restore missing FAQ and SEO article content
 
 User reports that FAQ and SEO articles disappeared. Root cause: production was switched to main for the pagination fix while the completed editorial implementation remained on preview/pikobuy-at-pages (content commit f458aa28a02d4a019d820a081b140c0bb75e18c0). Restored the original researched28 FAQs,10 complete localized articles, article index/detail routes, navigation and home entry points, Article/FAQPage data and compact mobile styles for all24 languages. The official and keyword research documents are restored unchanged. Kept the repaired catalog adapter/client, production origin, domain redirect, robots and sitemap build logic; output validation is environment-aware and now guards all409 HTML pages against missing editorial navigation/content. This restoration supersedes the prior note that production has no editorial section. Deployment and live verification will be recorded separately.
+
+
+## 2026-10-20 — FAQ and SEO article restoration deployed and verified
+
+- Restored production source commit: `4c137f583149b0a1d129470b65626c51853a5796`; Cloudflare build `b9004157-0a5e-46fe-9100-04a8b7f128df` reported Ready in35s, Worker version prefix `6dcbc253`.
+- All24 editorial JSON files match the completed original implementation. Production build passed10 tests and generated409 HTML pages; output validation checks content counts, navigation, canonicals, hreflang, structured data and local targets. Catalog adapter/client remain unchanged from the pagination repair.
+- Live https://pikobuy.at/faq/ returns200, renders28 questions and successfully expands answers on mobile. Live https://pikobuy.at/articles/ renders10 article cards. The spreadsheet-guide article opens; language switching preserves the article path and successfully displays its German content.
+- At390px mobile viewport, FAQ and article pages have no horizontal overflow. Temporary viewport override was reset after testing.
+- Live sitemap contains360 canonical URLs:24 FAQ pages,24 article indexes,240 individual articles and72 existing indexable pages. All24 languages restored, including header/footer editorial links.
+- Public entry points: https://pikobuy.at/faq/ and https://pikobuy.at/articles/ . Formal production restoration is complete; visual-search/QC integration remains the separate previously documented pending feature.
