@@ -260,3 +260,31 @@ GitHub 职责：源码、项目记忆、版本、构建与发布流程。GitHub 
 - Astro 官方源码包版本：https://github.com/withastro/astro/blob/main/packages/astro/package.json
 
 参考站仅作为交互和信息结构参考，不复制其商品、图片或文章。所有商品来源仍严格为 cnfansge.com。
+
+## 2026-10-20 — Public preview implementation
+
+- User requested an actual public preview before formal deployment / Cloudflare binding.
+- Source project: `pikobuy-at/`; preview checkout `/workspace/sites/pikobuy-at-preview`.
+- Temporary Site ID: `appgprj_6ad709a65b1c81919183864d93b11e7b`.
+- Preview origin: https://pikobuy-at-preview.hehaize88.chatgpt.site (publication status recorded in delivery notes).
+- Astro stable npm version verified as 7.4.1. Uses Astro SSG for 120 localized pages, plus a small read-only Worker for live cnfansge catalog HTML. No database, copied product catalog, accounts, or admin.
+- 24 languages: en,de,es,fr,it,pl,pt,ro,sv,nl,da,fi,el,cs,hu,bg,sk,hr,sl,lt,lv,et,ga,mt. Routes: home, spreadsheet, product (id query), guide, visual status. English root; other locales prefixed. Language switch preserves route/query.
+- Catalog parses original page content on demand, follows original pagination links, displays 20 per page. Search uses `/search.html?keywords=...&channelid=2`. Category sort parameters come from actual source page links. Search pages keep source ordering (no unsupported local sorting).
+- Official logo: https://www.pikobuy.com/images/header/pikobuy-logo-figma.png
+- Official favicon: https://www.pikobuy.com/images/common/pikobuy-icon-192.png
+- Original source script contains `const CNY_TO_USD_RATE=7.26`; adapter reads the source value on demand with a five-minute in-memory rate cache. No guessed exchange rate. If rate unavailable, display actual CNY with CNY label.
+- Verified source record 6681 maps to Weidian 7755101935, five gallery images, CNY169 and source-converted USD23.28. Purchase URL uses the original marketplace URL, never the source record ID.
+- Verified live latest catalog returns 60 source products; first record 6688. Verified Nike search and shoes price sorting; next source page preserves sort.
+- QC/visual search: source endpoint not verified. Explicit unavailable state, no uploads, no fake image matching. Gallery photos are explicitly not labeled verified QC.
+- Preview is noindex in metadata, response header and robots.txt. Formal pikobuy.at and Cloudflare DNS untouched pending user review.
+- Production follow-up: review design, confirm image-search/QC upstream contract, optimize source response time/caching, add production domain canonical/sitemap and optional SSR product SEO, then deploy from requested GitHub folder and bind Cloudflare after approval.
+
+### Preview verification and handoff
+
+- Public deployment succeeded on 2026-10-20: https://pikobuy-at-preview.hehaize88.chatgpt.site
+- Site version 1, deployment `appgdep_6ad70d496c5081919ae234c25b6d20e9`, source commit `3cc9d8471189d155d5da21eeac23c6a67eb7f3b1`.
+- Live public catalog API verified HTTP200, 60 real source records, first Jersey-16, USD15.01. Source retrieval from the deployed Worker succeeds.
+- Build: 120 Astro pages; three adapter tests passed (source allowlist, nested original product ID URL, missing conversion stays CNY). Bundled Worker routes and image MIME verified.
+- Visual desktop layout checked in managed internal preview. Internal preview runtime could not load the upstream catalog although direct development and deployed server requests succeeded. Its supervisor later stopped.
+- Automated browser visit to the public preview was denied by the hosting domain's Cloudflare security page; no bypass attempted. Therefore complete browser interaction / mobile viewport QA is not claimed. The native publication result and direct live API checks verify server availability, not browser access for every visitor.
+- Waiting for user design review before formal Cloudflare/domain setup. If they encounter the hosting-domain block too, diagnose allowed hosting configuration; do not bypass security controls.
