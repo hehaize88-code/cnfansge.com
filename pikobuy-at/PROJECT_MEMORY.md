@@ -331,3 +331,13 @@ User reports that FAQ and SEO articles disappeared. Root cause: production was s
 - At390px mobile viewport, FAQ and article pages have no horizontal overflow. Temporary viewport override was reset after testing.
 - Live sitemap contains360 canonical URLs:24 FAQ pages,24 article indexes,240 individual articles and72 existing indexable pages. All24 languages restored, including header/footer editorial links.
 - Public entry points: https://pikobuy.at/faq/ and https://pikobuy.at/articles/ . Formal production restoration is complete; visual-search/QC integration remains the separate previously documented pending feature.
+
+
+## 2026-10-20 — All-page mobile compaction deployed and verified
+
+- User requested tighter mobile layouts across the whole site. Production source commit `5953e6fa40d226c69c31fe92a79f3d4b360bfe49`; Cloudflare version `eb51ead2` reported Ready in30s at100% traffic.
+- Shared CSS below760px compresses header, hero, cards, catalog controls, product gallery, guide steps, FAQ rows, article headings/paragraph rhythm, sidebars and footer for all24 languages. Desktop rules, all editorial JSON, article text, catalog adapter,20-item pagination and metadata remain unchanged. Article paragraphs remain14px; FAQs retain native expandable answers.
+- Production build passed10 existing tests;409 HTML pages and415 assets built with content/navigation/SEO validation. No new implementation-mirroring tests added for this CSS-only adjustment.
+- Live before/after heights at390px viewport: home2736→2412px(-12%); article index3076→2375px(-23%); spreadsheet-guide article4851→3905px(-20%); FAQ3036→2509px(-17%); guide1451→1096px(-24%); loaded20-item catalog3071→2929px(-5%); product6640 detail1148→981px(-15%). Catalog first product moves419→374px from viewport top. Measurements are page samples, not a guarantee for every translation/article length.
+- Confirmed20 products after clicking next page,28 FAQ items and answer expansion,10 article cards, German article readability at14px, and no horizontal overflow in tested mobile layouts. Image-search status page also checked. An attempted320px override continued to report390px, so320px is not claimed as verified. Temporary viewport override reset after QA.
+- Public URL: https://pikobuy.at/ . Screenshot proof of compact article index retained locally for delivery.
