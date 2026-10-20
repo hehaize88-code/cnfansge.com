@@ -292,3 +292,12 @@ Validation: eight adapter regression tests pass; 120 localized Astro pages build
 Also removed27 stale extraneous lockfile entries that made npm ci try to install an AIX-only dependency on Linux; npm ci and build now succeed. Product data files used for read-only diagnostics remain outside the repository.
 
 Additional completeness fix: source page100 contains record584 with no actual product photo. The old adapter silently dropped it. Such records now remain in results with their title and price, without inventing an image or reusing the source placeholder. Source page100 has60 records after this fix.
+
+## 2026-10-20 16:55 Asia/Shanghai — Approved merge and publication completed
+
+- User explicitly authorized merging PR #42 and publishing the repair.
+- PR #42 merged into main: `64bf24b5a092776ec6694d087ef7351c593aa0b2`.
+- Existing public preview updated successfully to Site version2; deployment `appgdep_6ad72c69d57c8191a7608717c6b559e7`; source `9f9e3464edc4604ce997386b3ae1f00208426435`.
+- Published URL: https://pikobuy-at-preview.hehaize88.chatgpt.site
+- Post-publication live API verification: all-products first batch60 (record6640), second batch60 (record4741); shoes first batch60 (record2586), second batch60 (record2223); latest source page100 returned60 records (starting616) and a valid next link to101. All successful responses point exclusively to cnfansge.com dynamic pagination.
+- Formal pikobuy.at domain deployment/binding and the browser access block on the preview hostname remain unresolved. Successful publication and live API verification do not establish that the formal domain is working or that the preview is accessible in the connected browser. No Cloudflare account/domain changes were made.
