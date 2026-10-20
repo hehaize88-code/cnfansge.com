@@ -319,3 +319,13 @@ Build command: npm run build. Deploy command: npx wrangler deploy dist/server/in
 - Deployment documentation verified: https://developers.cloudflare.com/pages/functions/advanced-mode/ . Product APIs and static routes use the same bundled Worker fetch handler, without relying on a cross-origin workers.dev API.
 
 - Pages project created after one transient dashboard creation error. First build reached dependency installation and failed with EBADPLATFORM for extraneous astro/node_modules/@esbuild/aix-ppc64@0.28.2. Removed only lockfile entries marked extraneous; declared dependency versions and required platform packages remain unchanged. This failure concerns the new Pages build, not a proven cause of earlier workers.dev visitor access reports.
+
+### Pages delivery verified
+
+- Pages deployment 4f049563-b18f-456f-8de2-d803ff447857 succeeded at 2026-10-20 15:15 Asia/Shanghai (57 seconds), source commit 5f20320fecd95c1dc56ef6487593cde6e754daa2.
+- Public URL: https://pikobuy-at-preview.pages.dev/ . Immutable deployment URL: https://4f049563.pikobuy-at-preview.pages.dev/ .
+- Connected Chrome opened the public URL successfully; homepage showed eight real source products and nine loaded images including logo. Nike search showed real source results and remained under pages.dev, with no workers.dev API dependency. Screenshot saved as docs/preview-pages.png.
+- Clean install in a separate directory succeeded after removing 27 extraneous lockfile entries, and the clean build generated all 120 Astro pages. Cloudflare's npm10 build also passed.
+- Current active development branch for this preview: preview/pikobuy-at-pages; root pikobuy-at; build npm run build -- --pages; output .pages-output; NODE_VERSION=24. Do not merge its Pages-only Wrangler configuration into the earlier Worker branch without choosing the intended deployment target.
+- Final documentation-only commit uses Cloudflare's supported [Skip CI] prefix to avoid unnecessary preview rebuilds. Application code remains the successfully deployed 5f20320 commit.
+- User's prior access error remains unreproduced; this is an independently published alternative URL, not proof of universal reachability. Formal pikobuy.at remains unbound pending user review.
