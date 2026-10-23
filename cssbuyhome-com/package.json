@@ -1,0 +1,21 @@
+{
+  "name": "cssbuyhome-com",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "engines": {
+    "node": ">=22.23.4"
+  },
+  "scripts": {
+    "dev": "astro dev --host 0.0.0.0 --port 4173",
+    "build": "node --test tests/*.test.mjs && astro build && node scripts/build-worker.mjs",
+    "check": "node --test tests/*.test.mjs"
+  },
+  "dependencies": {
+    "astro": "7.4.2",
+    "cheerio": "1.1.2"
+  },
+  "devDependencies": {
+    "esbuild": "0.25.12"
+  }
+}
