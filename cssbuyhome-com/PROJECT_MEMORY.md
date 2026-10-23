@@ -322,3 +322,18 @@ GitHub Pages 只能托管静态输出，不能运行 SSR 或服务端代理；�
 ## 2026-10-23 GitHub Pages 临时外观预览
 
 用户反馈无法连接 Cloudflare。改用仓库独立分支 `preview/cssbuyhome`，目录 `cssbuyhome-com/`；主分支和正式域名不变。通过 GitHub Actions 构建 Astro 静态预览，构建时仅从 www.cnfansge.com 获取真实商品与图片，写入生成 HTML，不新建数据库。搜索及分类打开源站；仅供页面审阅，不能声称实时搜索、搜图及 QC 已接通。10 篇文章和 28 条 FAQ 完整保留，英文，noindex。发布状态与公开地址须以工作流和浏览器验证为准。
+
+
+## 2026-10-23 改用 GitHub Pages：已发布并打开
+
+- 用户反馈无法连接 CF；本轮未调用 Cloudflare 或绑定正式域名。
+- 公开临时预览：https://hehaize88-code.github.io/cnfansge.com/
+- 仓库独立分支：preview/cssbuyhome；项目目录：cssbuyhome-com/；main 未改动。
+- 首次源代码提交：b803a037bc649f5b7cddb090ea6b47b279384881。
+- GitHub Actions 工作流：CSSBuy preview；run 39938983221，第 2 次尝试成功发布。第一次仅发布任务被新建 Pages 环境默认 main 分支限制阻止；已为无 secrets 的 github-pages 环境加入精确分支 preview/cssbuyhome，保留其他限制。
+- 构建实际读取 60 件 cnfansge 商品，生成 8 个详情页面；主页展示 8 件，列表展示前 20 件。图片直接使用 www.cnfansge.com/uploads/。
+- 商品记录只进入本次生成的静态 HTML，不新增数据库，也不把商品 JSON 写入源代码。
+- 本版是静态外观预览：搜索和分类跳转 cnfansge 源站。实时站内搜索、排序、搜图、QC 数据接口仍不应声称已接通。英文 10 篇文章与 28 条 FAQ 完整保留，noindex。
+- 浏览器已打开首页，顶部 3 张商品图 naturalWidth 均大于 0；FAQ 页面确认 28 条。
+- 原 Sites 预览地址仍受 chatgpt.site 拦截，不再作为可用预览交付。
+- 独立 GitHub 项目的 Worker 打包支持缺少 Sites 专属 hosting.json；完整 npm run build 成功，19 个 Astro 静态页面、6 项测试通过。
