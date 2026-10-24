@@ -16,7 +16,11 @@ npm run build
 npm run check
 ```
 
-`npm run build` emits a self-contained Worker ESM at `dist/server/index.js`. `.astro-output/` and `dist/` are generated and ignored. Pure GitHub Pages cannot run the live adapter: GitHub holds source; the final hosting target must support Worker/server requests. The public review build uses Sites hosting and does not bind the user's domain.
+`npm run build` emits a self-contained Worker ESM at `dist/server/index.js`. `.astro-output/` and `dist/` are generated and ignored. Pure GitHub Pages cannot run the live adapter: GitHub holds source; the final hosting target must support Worker/server requests.
+
+Current public preview: **https://kakobuybuys-preview.hehaize88.workers.dev/**. The earlier Sites URL was blocked for the user at its hosting security entry point. The replacement runs in the user's Cloudflare account and does not bind the formal domain.
+
+Cloudflare Worker: `kakobuybuys-preview`; GitHub branch: `preview/kakobuybuys-20261024`; root: `kakobuybuys-com`; build: `npm run build && npm run check`; deploy: `npx wrangler deploy`; `NODE_VERSION=24.19.0`. `wrangler.jsonc` deploys the already bundled Worker, with no databases or bindings. Watch paths include `kakobuybuys-com/**` and exclude its `docs/**`, `PROJECT_MEMORY.md` and `README.md`. Other branches' automatic previews are disabled.
 
 ## Source contract
 

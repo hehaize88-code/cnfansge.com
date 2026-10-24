@@ -9,7 +9,7 @@
 - 每域名一个根级目录，本项目固定为 **kakobuybuys-com/**。
 - 当前隔离分支：**preview/kakobuybuys-20261024**。不修改其他域名目录，不合并main。
 - 本次授权目标：制作可公开访问的预览供用户看效果；正式域名绑定和正式上线在用户看过预览后另行进行。
-- 当前已部署预览：https://kakobuybuys-preview.hehaize88.chatgpt.site/ 。2026-10-24用户报告被chatgpt.site入口安全服务拦截，不能继续称其对用户可访问；详见下方故障记录。
+- 当前公开预览：**https://kakobuybuys-preview.hehaize88.workers.dev/**。2026-10-24已通过用户Chrome打开验证。旧chatgpt.site地址曾被入口安全服务拦截，不再作为交付链接。
 - Sites项目ID：appgprj_6adc4f0bd82c8191b163618b4f0a83c0。复用已有ID，不能重复create_site。
 - 最新已核实在线版本为 **3**，完整24语已公开发布；每语10文章、28FAQ。域名kakobuybuys.com尚未绑定。
 - 本地编辑目录：/workspace/sites/kakobuybuys-preview。冻结构建目录：/workspace/sites/kakobuybuys-review-build。GitHub是用户要求的源码保存位置，Sites源仓库仅保存对应预览快照。
@@ -129,3 +129,17 @@
 - 尝试通过Cloudflare连接检查备用临时托管，工具立即返回UNAUTHORIZED：This app connection requires reauthentication. Reconnect the app and try again. 尚未读取Cloudflare账户状态，更未创建Worker、修改DNS或绑定正式域名。
 - 下一步需要恢复Cloudflare连接，或获得用户同意后使用其已登录浏览器操作Cloudflare。连接工具失效时切换浏览器需要先征求同意（浏览器工具的回退规则）；这不是Sites技能要求新增发布确认，也不是自动审批拒绝。
 - 用户正式域名kakobuybuys.com仍未绑定。备用预览尚未发布，不应提供猜测的workers.dev地址或宣称访问已修好。
+
+## Cloudflare备用预览完成（2026-10-24，Asia/Shanghai）
+
+- 用户回复“允许”，明确同意通过已登录Chrome在Cloudflare创建临时预览；不需要重复申请同一浏览器回退许可。
+- Browser插件核实所选浏览器为Chrome，Cloudflare已登录。实际账户ID是9010cea800ac2a140509889d88fe612e，不能沿用失效Cloudflare连接工具默认的另一账户。
+- 新建Worker **kakobuybuys-preview**；实际公开URL为 **https://kakobuybuys-preview.hehaize88.workers.dev/**。Domains页面显示Production URL已启用，Anyone with this URL can visit，No custom domains。
+- Cloudflare直接通过已有GitHub集成和已有构建令牌构建，没有创建新令牌或扩大权限。正式域名、DNS、GitHub main与其他站点源码未改动。
+- 构建源提交：41e9f909c0fa17495be032000d79397e7e73039d；构建ID：68a730ff-5ad8-48b1-9ead-a73ea02c7daa。Cloudflare界面显示构建和部署成功，耗时36秒。构建命令包含全部本地严格检查，检查失败不会执行部署。
+- 创建界面默认main且没有分支选择，首次构建显式检出上面固定预览提交。随后已保存最终常规配置：Production branch=`preview/kakobuybuys-20261024`，Root directory=`kakobuybuys-com`，Build=`npm run build && npm run check`，Deploy=`npx wrangler deploy`，NODE_VERSION=24.19.0。初次检出命令已移除，不会长期锁定旧提交。
+- 自动构建仅监听`kakobuybuys-com/**`；排除`kakobuybuys-com/docs/**`、`kakobuybuys-com/PROJECT_MEMORY.md`、`kakobuybuys-com/README.md`。其他分支的自动Preview builds关闭。现有仓库其他应用可能自行监听所有分支，本次未改动那些应用设置。
+- 新增`wrangler.jsonc`与`.node-version`。Worker仍为现有Astro SSG加实时数据适配；无数据库、无绑定、无后台。
+- 用户Chrome实测：首页成功加载4张主站真实商品图片；jersey搜索返回20条源站商品并留在新域名；商品6667购买链接仍对应Weidian7648776138并带rf8x8；FAQ28条；文章索引和独立文章可打开；语言菜单24项；德语切换保留文章并显示10章节20正文段落。
+- 完成后重新打开英文首页并保留为用户浏览器交付页。页面截图保存为`docs/cloudflare-preview.jpg`。不宣称用户已经亲自确认满意。
+- 当前预览继续noindex，正式域名kakobuybuys.com未绑定。搜图/独立QC接口缺口保持原记录，没有因换托管而补齐。
