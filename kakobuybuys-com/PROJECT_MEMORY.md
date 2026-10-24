@@ -202,3 +202,14 @@
 - 通过真实浏览器访问首页和指南，GA4实时概览已显示1位活跃用户、首页标题及first_visit/page_view/session_start事件。这里是验证访问，不是自然搜索流量或购买转化；未人工调用收集接口。
 - 实时报告：https://analytics.google.com/analytics/web/#/a405518068p560584922/realtime/overview 。配置及验收记录见docs/analytics.json；本地实时报告截图docs/ga4-realtime.jpg仅供用户查看，不上传含账号信息的截图至GitHub。
 - Google Analytics用于流量统计，搜索收录仍由Search Console等搜索引擎工具处理；不能把接入GA4表述为已被Google搜索收录。
+
+
+## GSC站点地图0网址排查（2026-10-24，北京时间）
+
+- 用户截图显示总sitemap.xml成功，但24个语言子地图无法抓取、发现0网址。不能把总索引读取成功等同于已发现或已收录页面。
+- 对公开总索引和全部24个子地图逐一GET：全部200、application/xml、可严格解析；每子图19个URL、总456，无重定向/错误页。内容包含24语言及x-default，文件中不存在空地图。
+- GSC Wizard接口因账号无有效订阅拒绝，沿用用户已授权Chrome操作已验证的sc-domain:kakobuybuys.com，不重新申请订阅或修改权限。
+- GSC英文子地图详情初始无上次读取时间、不提供具体HTTP错误；17:38:19实际网址测试：Google检查工具智能手机版、允许抓取=是、网页抓取=成功。
+- 单独提交en.xml后GSC显示成功、发现19页；已依次直接提交全部24语言子地图。个别子地图刚提交时先显示未知/无法抓取/0，后续自动更新成功/19。最终核对24份子地图全部成功，各19个网页。随后重新提交一次既有sitemap.xml，总索引也从0→380→456，最终显示成功、发现456个网页。
+- 此阶段没有改动应用、地图结构、Cloudflare安全设置或任何其他站点；没有向Google提交地图XML自身的网页索引请求。
+- 验收结论：已解决用户所见“成功但0网址”及全部子图无法抓取状态；发现456页不等于456页已编入Google索引。详细结果docs/sitemap-gsc-recovery.json、截图docs/sitemap-gsc-recovery.jpg。
