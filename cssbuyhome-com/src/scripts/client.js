@@ -16,3 +16,8 @@ async function load(){
  }catch{if(detail)detail.innerHTML=errorState(t,true);else{document.querySelector('#catalog-products').innerHTML=errorState(t);const hero=document.querySelector('#hero-products');if(hero)hero.innerHTML=`<p class="loading">${esc(t.sourceError)}</p>`;}}
 }
 if(section||detail){if(!document.body.hasAttribute('data-source-rendered'))load();document.addEventListener('click',e=>{if(e.target.closest('[data-retry]')){(detail||document.querySelector('#catalog-products')).innerHTML=`<p class="loading">${esc(t.loading)}</p>`;load();}});}
+
+const photoViewer=document.querySelector('#photo-viewer');
+document.addEventListener('click',event=>{const button=event.target.closest('[data-large-image]');if(button&&photoViewer){const image=photoViewer.querySelector('img');image.src=button.dataset.largeImage;image.alt=button.querySelector('img')?.alt||'Product photo';photoViewer.showModal();}});
+photoViewer?.querySelector('.photo-close').addEventListener('click',()=>photoViewer.close());
+photoViewer?.addEventListener('click',event=>{if(event.target===photoViewer)photoViewer.close();});
