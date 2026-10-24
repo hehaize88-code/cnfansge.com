@@ -23,7 +23,7 @@ export default {async fetch(request,env,ctx) {
 
   let cache=null;
   try{cache=typeof caches!=='undefined'?caches.default:null}catch{}
-  const cacheUrl=new URL(url);cacheUrl.searchParams.set('__cache_release','production-20261024-v1');
+  const cacheUrl=new URL(url);cacheUrl.searchParams.set('__cache_release','production-ga4-20261024-v1');
   const cacheKey=new Request(cacheUrl.href,{method:'GET'});
   if(cache&&request.method==='GET') {const hit=await cache.match(cacheKey).catch(()=>null);if(hit)return hit;}
   if(url.pathname.startsWith('/api/')) {
@@ -40,6 +40,7 @@ export default {async fetch(request,env,ctx) {
   if(!production)headers.set('X-Robots-Tag','noindex,nofollow');
   if(asset.type.startsWith('text/html')) {
     const $=load(new TextDecoder().decode(bytes)),route=$('body').attr('data-route')||'';
+    if(!production)$('script[data-site-analytics]').remove();
     const canonical=canonicalFor(url,route);
     $('link[rel="canonical"]').attr('href',canonical);$('meta[property="og:url"]').attr('content',canonical);
     if(route==='product')$('link[rel="alternate"]').each((_,el)=>{const href=new URL($(el).attr('href'));if(/^\d+$/.test(url.searchParams.get('id')||''))href.searchParams.set('id',url.searchParams.get('id'));$(el).attr('href',href.href);});

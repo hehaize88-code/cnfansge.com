@@ -1,0 +1,19 @@
+<!-- Google Analytics is enabled only on the production hostname. -->
+<script is:inline data-site-analytics>
+  (() => {
+    if (location.hostname !== 'kakobuybuys.com' || window.__kakobuyAnalyticsLoaded) return;
+    window.__kakobuyAnalyticsLoaded = true;
+    window.dataLayer = window.dataLayer || [];
+    window.gtag = window.gtag || function () { window.dataLayer.push(arguments); };
+    window.gtag('js', new Date());
+    window.gtag('config', 'G-WEF871FSL0', {
+      allow_google_signals: false,
+      allow_ad_personalization_signals: false
+    });
+    const script = document.createElement('script');
+    script.async = true;
+    script.src = 'https://www.googletagmanager.com/gtag/js?id=G-WEF871FSL0';
+    script.dataset.siteAnalytics = '';
+    document.head.appendChild(script);
+  })();
+</script>

@@ -12,7 +12,7 @@ let checks=0;
 const expect=async(path,host,robots)=>{
   const response=await request(path,host);assert.equal(response.status,200,path);
   const $=load(await response.text());assert.equal($('meta[name=robots]').attr('content'),robots,path);
-  assert.equal(response.headers.get('x-robots-tag'),robots,path);checks++;
+  assert.equal(response.headers.get('x-robots-tag'),robots,path);assert.equal($('script[data-site-analytics]').length,host===origin?1:0,path+': analytics host scope');checks++;
   return $;
 };
 await expect('/guide/',origin,'index,follow,max-image-preview:large');

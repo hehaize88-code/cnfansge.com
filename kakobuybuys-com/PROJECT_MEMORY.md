@@ -188,3 +188,12 @@
 - Chrome实测：首页8商品与8张源站图片成功；jersey搜索在正式域名展示20条；商品6679购买URL使用Weidian原ID7641464690、affcode=rf8x8；注册URL保持用户指定地址。文章索引10篇，英切德保留文章slug并显示10章节20段；德语FAQ页28条。
 - 全量构建仍504页、24语言；地图包含456个规范内容页。详细HTTP证据docs/production-http-checks.json；上线摘要docs/production-qa.json；正式首页截图docs/production-home.jpg。
 - 项目记忆与证据随后以文档提交同步main。当前任务不包含GA4/GSC/Bing提交，不能宣称搜索引擎已收录。搜图上传与独立QC源接口仍未接通，沿用明确提示。
+
+## Google Analytics接入（2026-10-24）
+
+- 用户明确要求将此站添加到analytics.google.com，授权创建GA4媒体资源/网站数据流并部署统计代码。此任务是访问统计，不是Google搜索收录。
+- 已在现有账号405518068中搜索kakobuybuys.com，未发现同名媒体资源后新建，避免重复数据流。媒体资源ID **560584922**，名称kakobuybuys.com；网站数据流ID **16194007485**；衡量ID **G-WEF871FSL0**；URL https://kakobuybuys.com 。
+- 报告时区：中国GMT+08:00，币种USD。行业购物；初始化业务规模暂选小型，用户未专门提供员工人数；目标为网站流量和互动/留存。增强型衡量默认开启。
+- 统计代码通过公共Layout覆盖全部24语、504个静态页面；只在正式主机kakobuybuys.com加载。预览主机Worker会移除统计脚本，客户端也有主机和重复初始化保护。
+- 未设置User-ID、广告关联或Measurement Protocol密钥；Google signals和广告个性化信号在代码中关闭。使用默认浏览量和增强型衡量，不伪造订单/购买事件。
+- 本地完整构建检查通过；正式站代码发布和GA4实际接收验证尚待完成，不将“已创建”说成“已收到数据”。
