@@ -408,3 +408,18 @@ GitHub Actions 工作流放仓库根 .github/workflows/，通过路径过滤和 
 - 浏览器法语切换验证通过：同页切换至 /fr/faq/，HTML lang=fr、28 条完整法语 FAQ，桌面未横向溢出。
 
 - 正式商品详情 6681 浏览器验证：Sweatshirts-1，5 个图片入口，购买 URL 的 Weidian ID 为 7755101935，partnercode=ES7pVI。
+
+
+## 2026-10-24：Google Analytics 4 接入完成
+
+- 用户授权将本网站添加到 analytics.google.com；本次仅处理 superbuybuyss.com。
+- 在已有 Analytics 账号 405518068 下创建独立 GA4 媒体资源 superbuybuyss.com，属性 ID 560605819；创建前按完整域名搜索确认没有同名属性。
+- 报告时区：中国时间 UTC+08:00；币种：USD。业务类别购物，规模使用小型设置；目标为流量与用户互动度。
+- 网站数据流 superbuybuyss.com Web，网址 https://superbuybuyss.com，数据流 ID 16192760660，衡量 ID G-TDK67BX257；增强型衡量启用。
+- src/components/Layout.astro 接入 Google tag，覆盖 5 种语言全部 90 个页面；只在 hostname=superbuybuyss.com 时加载，本地与 workers.dev 不计入正式统计；Google Signals 与广告个性化信号在代码中关闭。
+- GitHub 代码提交 98d8af563d207bcb8fa4fccef813f3272e5ee146；Cloudflare 构建 d100696c-3323-48bf-9918-b7924ba242a1，活动版本前缀 b7d4f2c2，部署列表显示 100% Ready。
+- 本地 npm run build 与 npm run check 通过：90 页、2910 内链、85 个 sitemap URL；额外验证每页只有一个 GA4 config、非生产主机不加载代码。
+- 用户 Chrome 实测英文首页和法文文章均加载 G-TDK67BX257；GA4 实时报告收到 1 位测试活跃用户、2 次 page_view，并显示英文首页及法文文章标题，同时收到 first_visit、session_start 和 user_engagement。
+- GA4 首页：https://analytics.google.com/analytics/web/#/a405518068p560605819/reports/intelligenthome
+- GA4 实时报告：https://analytics.google.com/analytics/web/#/a405518068p560605819/realtime/overview
+- 本次未创建 API 密钥，未修改其他站点的统计配置，未添加广告关联或自定义购买转化。商品数据来源和站点地图内容未变。
