@@ -426,3 +426,8 @@ GitHub Actions 40057078100 / job120762306206全部成功：npm ci、8项测试�
 main当前7aad75bf81c3e941f686e034b57d51c83357e069，尚无cssbuyhome-com目录；将仅复制已验收预览分支的该目录及专属CI文件，保留main其他域名。已准备production构建：HTTPS cssbuyhome.com为canonical，启用index与408条sitemap，产品工具页/搜图占位/关键词结果noindex，临时workers.dev仍noindex，www和HTTP保留路径查询并308到HTTPS主域。24语言界面去除预览措辞，独立性说明和未接入QC/搜图的真实状态保留。
 
 本地npm run build:production成功：8项测试、456页、24语言/240文章版本/672FAQ、408 sitemap条目及域名跳转/预览排除检查通过。下一步提交main并切换CF构建分支/命令，完成绑定与公开域名验收后记录实际状态。
+
+
+## 2026-10-24 GitHub主分支与Cloudflare正式构建已配置
+
+生产代码已提交main：4cda8db37d42cd0020eac3fbe142370c619ee463；GitHub Actions 40058372368成功。仅新增cssbuyhome-com和专属工作流，其余域名目录保留。Cloudflare后台已保存Production branch=main、Build command=npm run build:production、Root directory=cssbuyhome-com，继续沿用原部署命令与cssbuyhome-com/**监听范围。此记录提交触发主分支首次正式构建；自定义域名、证书及公开验收待该构建完成后记录。
