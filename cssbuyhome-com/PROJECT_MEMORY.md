@@ -455,3 +455,13 @@ main当前7aad75bf81c3e941f686e034b57d51c83357e069，尚无cssbuyhome-com目录�
 用户要求将cssbuyhome.com添加到analytics.google.com，按访问统计接入执行。已通过现有Google Analytics账号405518068创建独立媒体资源cssbuyhome.com（560553438），未发现同域名旧资源。网站数据流CSSBuy Home Web，网址https://cssbuyhome.com，Stream ID 16192979969，Measurement ID G-0T1GYYQRZJ。报告时区中国GMT+08，币种USD；类别购物、小型1–10人（初始化分类，后续可改）；目标网站流量和用户互动，增强型衡量保留开启。无新增付费订阅或人员权限。
 
 站点代码通过统一Layout接入，456页面/24语言完整覆盖，仅正式HTTPS cssbuyhome.com加载Google tag；workers.dev和localhost排除，避免预览污染。关闭Google signals和广告个性化。24语言隐私说明补充GA4、cookies及浏览器/设备/使用数据说明。8项原测试、完整生产构建和全页面代码覆盖检查通过，沙箱脚本验证仅生产域初始化且每页只配置一次。下一步GitHub main自动部署并验证Google端安装和实时数据。
+
+
+## 2026-10-24 GA4代码已部署、Google安装检测成功
+
+GitHub main提交6d1dda2fc2afe69ea2e69f8aadf33ad8dec239ca，Cloudflare build f0ac6a13-29da-4161-bba1-8b23fa906546 Ready（33秒），版本8233e0fc，100%流量。GitHub Actions 40060082611/job120771479139全部成功，包括24语真实源站集成检查。
+
+公开站首页与/fr/实际DOM均加载且仅加载一个G-0T1GYYQRZJ Google tag；Google Analytics“测试安装情况”返回“在您的网站上正确检测到了 Google 代码”。已保存去除账号邮箱的安装成功截图cssbuyhome-ga4-proof.jpg。媒体资源直达地址：https://analytics.google.com/analytics/web/#/a405518068p560553438/reports/intelligenthome 。实时接收数据状态继续检查；安装成功与正式报表出现数据不可混淆。GA4属于流量统计，不能称为Google搜索收录。
+
+
+GA4接收验收完成：同一媒体资源首页“过去30分钟的活跃用户数”已显示2，说明已收到访问数据（包含本次测试流量，不能当作新增自然流量）。顶部历史报告初始化提示仍显示“尚未收到任何数据”，与实时卡片不同步，不据此判断安装失败。Google代码安装成功与实时接收均已验证。
