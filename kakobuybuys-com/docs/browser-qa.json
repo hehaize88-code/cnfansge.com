@@ -1,0 +1,93 @@
+{
+  "checkedAt": "2026-10-24",
+  "publicOrigin": "https://kakobuybuys-preview.hehaize88.chatgpt.site/",
+  "publicVersionAtCheck": 2,
+  "checks": [
+    {
+      "name": "Homepage real catalog images",
+      "result": "pass",
+      "loadedHeroImages": 4,
+      "host": "www.cnfansge.com"
+    },
+    {
+      "name": "Keyword form navigation",
+      "result": "pass",
+      "path": "/spreadsheet/?q=jersey"
+    },
+    {
+      "name": "Source price sorting",
+      "result": "pass",
+      "path": "/spreadsheet/?q=jersey&sort=price-up",
+      "firstItem": "jersey ami",
+      "firstUsd": 7.3
+    },
+    {
+      "name": "Search pagination",
+      "result": "pass",
+      "path": "/spreadsheet/?q=jersey&sort=price-up&page=2",
+      "items": 20
+    },
+    {
+      "name": "Locale switch retains context",
+      "result": "pass",
+      "path": "/hr/spreadsheet/?q=jersey&sort=price-up&page=2"
+    },
+    {
+      "name": "Product original ID and affiliate",
+      "result": "pass",
+      "sourceId": "6667",
+      "originalMarketplaceId": "7648776138",
+      "affcode": "rf8x8"
+    },
+    {
+      "name": "FAQ rendered count",
+      "result": "pass",
+      "path": "/hr/faq/",
+      "count": 28
+    },
+    {
+      "name": "Initial narrow homepage layout",
+      "result": "pass",
+      "method": "Internal390px iframe",
+      "clientWidth": 375,
+      "scrollWidth": 375,
+      "scope": "Before later navigation spacing adjustment; full24-language mobile visual QA not completed."
+    },
+    {
+      "name": "Top navigation to article directory",
+      "result": "pass",
+      "path": "/hr/articles/",
+      "articles": 10
+    },
+    {
+      "name": "Full independent article rendering",
+      "result": "pass",
+      "path": "/hr/articles/how-to-use-kakobuy-spreadsheet/",
+      "sections": 10,
+      "paragraphs": 20,
+      "officialSourceLinks": 4
+    },
+    {
+      "name": "Published locale menu",
+      "result": "pass",
+      "version": 3,
+      "count": 24
+    },
+    {
+      "name": "Final Maltese article route",
+      "result": "pass",
+      "version": 3,
+      "path": "/mt/articles/how-to-use-kakobuy-spreadsheet/",
+      "sections": 10,
+      "paragraphs": 20
+    }
+  ],
+  "notes": [
+    "Source integration19checks are recorded separately in integration-checks.json.",
+    "Initial default-cache permission exception was fixed in version2.",
+    "One hosting-entry500 during sorting recovered on a single reload; no corresponding application Worker exception appeared.",
+    "Public audience was confirmed through Sites get_site.",
+    "Unverified source image-search and QC remain explicitly unavailable."
+  ],
+  "finalPublicVersion": 3
+}

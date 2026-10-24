@@ -1,0 +1,13 @@
+---
+const {article,index,ui,href}=Astro.props;
+---
+<a class="article-card" href={href}>
+  <span class="article-index" aria-hidden="true">{String(index+1).padStart(2,'0')}</span>
+  <div class="article-card-content">
+    <p class="article-meta"><span>{article.category}</span><span>{article.readMinutes} {ui.minutes}</span></p>
+    <h3>{article.title}</h3>
+    <p class="article-card-description">{article.description}</p>
+    <span class="text-link">{ui.readGuide} <span aria-hidden="true">↗</span></span>
+  </div>
+  <span class="article-arrow" aria-hidden="true">↗</span>
+</a>

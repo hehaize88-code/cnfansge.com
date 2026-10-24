@@ -1,0 +1,14 @@
+{
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "name": "kakobuybuys-preview",
+  "main": "dist/server/index.js",
+  "compatibility_date": "2026-10-24",
+  "workers_dev": true,
+  "routes": [
+    {"pattern": "kakobuybuys.com", "custom_domain": true},
+    {"pattern": "www.kakobuybuys.com", "custom_domain": true}
+  ],
+  "preview_urls": false,
+  "no_bundle": true,
+  "find_additional_modules": false
+}
