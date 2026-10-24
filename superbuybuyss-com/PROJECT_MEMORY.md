@@ -12,7 +12,14 @@
 - Git 集成设置：根目录 superbuybuyss-com，构建 npm run build && npm run check，部署 npx wrangler deploy，监听范围 superbuybuyss-com/**。启用发布前的完整校验。
 - 注册链接、ES7pVI 推广码、cnfansge.com 唯一商品来源保持不变；没有自建商品库或图片副本。
 - 独立搜图、真实 QC 查询接口以及额外语言仍未完成，不应声称全部实现。
-- 此记录是提交前通过的验收；线上部署版本和浏览器验证结果将在部署完成后追加。
+- 正式代码提交：11607c2d007df58bb8426647a5473309cb6dafce，已在 GitHub main 发布，仅新增本域名的 43 个文件。
+- Cloudflare Git 构建 3b497a87-f145-4e85-81d3-ce2e8a7a6bf2 成功（2026-10-24 02:28 UTC），Worker 活动版本 c85b3e5e-1b56-4d7d-ab45-e64b344d9230。
+- 正式网址 https://superbuybuyss.com/ 已通过用户 Chrome 打开；www 域名跳转到根域并保留 /fr/faq/?q=photos 路径与查询。Cloudflare 原有域名为 Active、无 DNS 记录，本轮通过 Custom Domains 自动建立根域与 www 绑定。
+- 浏览器实测：主页 11 张 cnfansge 商品图片和 2 个品牌图片全部加载；sweatshirt 站内检索有 60 条结果；价格升序第 1 页、第 2 页均有 60 条，下一页使用真实上游游标。
+- 公开 sitemap.xml 可读取 85 条 loc、510 条语言对应链接；robots.txt 开放页面并列出正式站点地图。法语 FAQ 共 28 条，HTML lang=fr、canonical 正确、meta robots=index,follow,max-image-preview:large。
+- Cloudflare Git 配置已保存：include superbuybuyss-com/**；exclude superbuybuyss-com/PROJECT_MEMORY.md，避免仅记忆更新引发构建。沿用账户已有构建令牌；没有在仓库或项目文件保存凭证。
+- 执行环境的独立 HTTP 请求仍被返回 403；用户已连接 Chrome 的正式域名实测正常。记录此验证环境差异，不声称所有地区或搜索引擎抓取均已验证。
+- 旧 Sites 与独立临时 Worker 预览保持原状态，不作为正式发布仓库或域名；后续维护以本 GitHub 目录为准。
 
 # Superbuybuyss.com × cnfansge.com — 项目记忆与实施约定
 
@@ -399,3 +406,5 @@ GitHub Actions 工作流放仓库根 .github/workflows/，通过路径过滤和 
 - 修复后公开 API 已验证 HTTP 200：鞋类热门与最新目录均返回 60 条；商品 6681 返回 5 张真实图片及正确购买 URL。
 - 图片请求改为浏览器直接读取 cnfansge.com/uploads 原图，不经预览 Worker 图片代理。已通过浏览器核验两个真实样本均正常加载（750×750），未复制商品图片到项目。
 - 浏览器法语切换验证通过：同页切换至 /fr/faq/，HTML lang=fr、28 条完整法语 FAQ，桌面未横向溢出。
+
+- 正式商品详情 6681 浏览器验证：Sweatshirts-1，5 个图片入口，购买 URL 的 Weidian ID 为 7755101935，partnercode=ES7pVI。
