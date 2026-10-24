@@ -20,6 +20,8 @@ npm run check
 
 Current public preview: **https://kakobuybuys-preview.hehaize88.workers.dev/**. The earlier Sites URL was blocked for the user at its hosting security entry point. The replacement runs in the user's Cloudflare account and does not bind the formal domain.
 
+The V2 template uses a fixed desktop navigation rail, a compact search-first introduction, an 11-category sidebar and eight live product cards on the homepage. Mobile uses seven visible navigation links and two product columns. Editorial pages use a compact article list and chapter navigation. Deployment and responsive checks are recorded in `docs/redesign-qa.json`; screenshots are `docs/redesign-preview.jpg`, `docs/redesign-mobile.jpg` and `docs/redesign-article-mobile.jpg`.
+
 Cloudflare Worker: `kakobuybuys-preview`; GitHub branch: `preview/kakobuybuys-20261024`; root: `kakobuybuys-com`; build: `npm run build && npm run check`; deploy: `npx wrangler deploy`; `NODE_VERSION=24.19.0`. `wrangler.jsonc` deploys the already bundled Worker, with no databases or bindings. Watch paths include `kakobuybuys-com/**` and exclude its `docs/**`, `PROJECT_MEMORY.md` and `README.md`. Other branches' automatic previews are disabled.
 
 ## Source contract

@@ -155,3 +155,14 @@
 - 当前处于已构建待发布验收阶段；完成后在本文件补充GitHub提交、Cloudflare部署及浏览器实际验证结果。
 
 - 首次V2自动构建9050096678997276853181b46b57a63679931c9e在安装阶段失败，构建ID06e9c3bf-225e-411f-96cd-53face14fcf5：lockfile残留27项extraneous依赖，其中openharmony-arm64未标可选，被npm11.9.0视作必装。已清理这27项无效锁定记录，保留真实依赖版本与完整可选平台依赖。随后用全新空目录执行npm ci验证，不采用--force跳过平台检查。
+
+### V2最终发布与验收结果
+
+- 安装修复提交/本次实际构建源：`e906bfb88e1a0acae23b82c7af38f76af2964866`；Cloudflare构建ID：`1b267af0-6851-4993-8775-c88d90a2515e`。部署页显示Ready、52秒；当前Active deployment版本前缀`95934a61`、100%流量。公开预览URL保持 https://kakobuybuys-preview.hehaize88.workers.dev/ 。
+- 在全新空目录以npm ci安装215个包成功，并再次构建/严格检查全部24语言、240文章语言版本、672FAQ语言版本、504静态页面、137UI键。Cloudflare也成功完成安装、构建、检查及部署。
+- 公开Chrome桌面验收：新版导航/目录布局已显示；首页8款商品全部为www.cnfansge.com真实图片，8张图片均加载成功；页面宽度1905与scrollWidth一致，没有横向溢出。
+- 交互验收：jersey关键词搜索20条商品；提交价格升序后首价依次7.30、8.13、8.66、9.37美元；下一页保持q=jersey、sort=price-up并进入page=2，仍20条商品。商品6667详情购买URL正确对应原Weidian7648776138并带affcode=rf8x8。
+- 手机390×844外部视口、375px可用内容宽度：7个导航链接全部可见；首页两列商品；首页、文章索引、英/德语独立文章、FAQ、详情均无页面横向溢出。完整文章正文和导航保持可读，手机文章目录默认收起。
+- 文章索引显示10篇；英文文章切换德语后保留同一slug，实际10章节20正文段落；语言入口24项；FAQ页28条并验证展开交互。
+- 证据保存在docs/redesign-qa.json及redesign-preview.jpg、redesign-mobile.jpg、redesign-article-mobile.jpg。浏览器临时视口已恢复，并保留英文首页供用户查看。
+- 预览仍noindex,nofollow，正式域名未绑定；不宣称已完成全部24语言逐页视觉验收。原有搜图上传与独立QC接口缺口未改变。此轮用户尚未评价新版是否满意。
