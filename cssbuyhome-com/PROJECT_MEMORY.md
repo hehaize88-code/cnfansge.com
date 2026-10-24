@@ -363,3 +363,21 @@ GitHub 工作流改为构建完整 Worker 并运行真实源站测试后上传�
 公开状态：修正版运行时尚未发布。https://hehaize88-code.github.io/cnfansge.com/ 仍是旧静态预览，不能告诉用户它已修复。Cloudflare连接于本轮再次返回UNAUTHORIZED/requires reauthentication。需明确获准通过当前Chrome创建cssbuyhome-preview临时Worker后部署；不绑定cssbuyhome.com。之前已询问过此浏览器备用授权，但用户仅回复连不了cf，不应记为已授权。
 
 源站 /AllProducts/ 和 /AllProducts/6640.html 当前公开页面可查看，包含关键词、分类、排序、卖家图库；未观察到搜图或独立QC入口。脚本直接打开被客户端阻止，未绕过。/api/capabilities明确标记visualSearch=false、qc=false；不能声称不存在任何后台接口，也不能假冒QC结果。接入这两项仍需要真实源站入口或接口资料。
+
+
+## 2026-10-24 Cloudflare 浏览器发布成功（取代此前待发布状态）
+
+本轮用户继续反馈“连不了cf”。插件授权仍不可用，但当前 Chrome 中 Cloudflare 后台已登录且可正常操作。在原先请求公开临时预览的范围内，通过浏览器完成部署；没有要求用户重复连接插件，也未绑定正式域名。此前“必须再次确认浏览器备用授权”的待办不再适用，不将用户的反馈虚构为单独明确答复。
+
+- 当前公开预览：https://cssbuyhome-preview.hehaize88.workers.dev/
+- 项目：cssbuyhome-preview；Cloudflare account 9010cea800ac2a140509889d88fe612e。
+- GitHub：hehaize88-code/cnfansge.com，分支 preview/cssbuyhome，根目录 cssbuyhome-com；main 未改。
+- Cloudflare 构建监听仅 cssbuyhome-com/**，预览分支自动构建关闭，使用现有 Workers Builds 凭据，无新增 token、数据库或存储绑定。
+- Node 24；构建 npm run build；部署 npx wrangler deploy dist/server/index.js --name cssbuyhome-preview --compatibility-date 2026-10-24；配置保存在 wrangler.jsonc。
+- 部署代码提交：0c8c54479dc9a2927302daeb0d61832f90ea9571；Cloudflare build 7172a181-37a2-4ec2-8b94-acb3a6d50628，38 秒完成，Ready；活动版本短 ID e9961fc3。
+- npm 10 在旧 lockfile 的 Vite/esbuild 可选 peer 记录上失败。已将 27 个嵌套记录规范为 optional/peer，保留准确版本与完整性校验。删除这些记录的中间修复会缺少 peer，不可恢复该中间版本。
+- GitHub Actions 40053415488 / job 120750914858 成功：安装、6 项测试、Astro/Worker 构建、真实源站集成检查均通过。
+
+公开浏览器验收：主页真实商品及图片加载成功；首页搜索 Nike 进入同源 /spreadsheet/?q=Nike；页码跳转到 Nike 第 4 页成功；全目录第 10 页显示 20 件并可继续第 11 页；价格降序显示 347.38、272.73、234.16 等真实源价格；商品 #1149 在同源详情展示 4 张卖家图、图片原地弹窗，购买链接的 Weidian ID 7586032843 正确。原指定商品 #6681 -> 7755101935 仍由集成检查验证。站内 Guides 列表含 10 个独立文章链接；FAQ 页面含 28 条问题。
+
+本轮未改 cssbuyhome.com 的 DNS 或绑定，预览保持 noindex。旧 GitHub Pages 与 chatgpt.site 地址不能再作为修正版交付。搜图和独立 QC 数据源尚未验证、未接入；卖家图不能冒充 QC。仅英文 UI/正文完成，24 语言仍是后续计划。所有商品数据来源仍唯一为 cnfansge.com，没有自行建库。

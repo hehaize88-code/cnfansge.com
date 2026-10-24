@@ -1,6 +1,6 @@
 # CSSBuy Home preview
 
-Standalone Astro 7.4.2 project intended for the `cssbuyhome-com/` folder in `hehaize88-code/cnfansge.com`. The review preview is hosted separately; cssbuyhome.com DNS and the user's GitHub repository have not been changed.
+Standalone Astro 7.4.2 project in `cssbuyhome-com/` of `hehaize88-code/cnfansge.com`, on branch `preview/cssbuyhome`. Live review preview: https://cssbuyhome-preview.hehaize88.workers.dev/. The main branch and cssbuyhome.com DNS remain unchanged.
 
 - `npm install`, `npm run dev`, `npm run build` (Node >=22.23.4).
 - Astro pre-renders editorial pages. A compact Worker serves static output and renders real catalog/product data on each eligible request, with a shared 60-second HTTP cache.
@@ -20,6 +20,6 @@ GitHub Pages snapshots were rejected because they limited the visible catalog an
 
 Build with `npm run build`. In an environment that can reach the source, run `node scripts/check-live-source.mjs` to validate source pages 1, 4 and 10, keyword-search page 4, category pagination, price ordering, local navigation and CSSBuy product-ID mapping. The GitHub Actions workflow runs this check and uploads the complete Worker. It no longer deploys the rejected static snapshot.
 
-The live source adapter is ready for an SSR-capable host. As of this correction, a new public runtime has not been published; the previous GitHub Pages URL still serves the old snapshot. Cloudflare connector authentication requires renewal. The formal cssbuyhome.com domain has not been bound.
+The live Worker is deployed at https://cssbuyhome-preview.hehaize88.workers.dev/. Cloudflare builds the `preview/cssbuyhome` branch from root `cssbuyhome-com`, using Node 24 and `npm run build`, then deploys `dist/server/index.js` with the checked-in Wrangler configuration. Only this project folder triggers builds. The previous GitHub Pages snapshot is obsolete. The formal cssbuyhome.com domain has not been bound. Public-browser checks confirmed same-origin keyword search, page 4 search results, catalog page 10, price sorting, product details and image enlargement; GitHub Actions run 40053415488 also passed the live-source integration checks.
 
 The source's currently visible public catalog and product pages expose keyword search, categories, sorting and seller photos. A verified image-search API and a separately identified QC-photo feed have not been supplied or observed. These remain unavailable instead of using unrelated APIs, fake results or relabeled seller photos.
