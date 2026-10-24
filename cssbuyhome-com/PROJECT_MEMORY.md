@@ -404,3 +404,16 @@ GitHub 工作流改为构建完整 Worker 并运行真实源站测试后上传�
 修复了英文/qc/被宽泛两字母正则误判为语言首页的问题：现在按首页专有标记识别，文章与QC等静态页面禁止触发商品SSR。切换语言保留页面、查询与锚点。构建按语言共享压缩页脚/UI字典，减少24语言重复资源；部署包gzip约2.31MB，无新增数据库或存储绑定。默认预览origin更新为当前workers.dev地址。
 
 当前工作代码位于 /workspace/scratch/9fde59745d64/github-cssbuy-preview/cssbuyhome-com。/workspace/sites/cssbuyhome-com是旧工作副本，不可将其覆盖部署。正式cssbuyhome.com仍未绑定，当前更新仅进入preview/cssbuyhome分支的既有cssbuyhome-preview Worker；预览保持noindex。最后公开验收与部署提交将在后续记录。
+
+
+## 2026-10-24 多语言公开预览已上线（取代上述待发布状态）
+
+公开地址：https://cssbuyhome-preview.hehaize88.workers.dev/ 。顶部语言选择器现有24个选项，每种语言均提供完整界面、10篇文章和28条FAQ。内容提交40b3be0c493739c40a943d73d9922f7d33ae0257，分支preview/cssbuyhome，项目目录cssbuyhome-com。Cloudflare build 4f88dda4-ec48-4298-82b9-b9c89c348904于54秒完成，Ready，活动版本短ID a53263ea。main及正式域名DNS未修改。
+
+GitHub Actions 40057078100 / job120762306206全部成功：npm ci、8项测试、456页构建及本地化检查、24语言真实cnfansge源站集成检查、Worker上传。真实接口检查确认目录1/4/10页、Nike搜索第4页、分类第4页、价格升降序、同源导航和原始购买ID7755101935。输出明确qcVerified=false，搜图及独立QC仍未接入。
+
+公开Chrome验收：24语言选择器可见；英文切德语首页后搜Nike，使用本地页码表单到第4页，再切法语仍是/fr/spreadsheet/?q=Nike&page=4，显示20个源商品；进入#5100商品并切马耳他语保留/mt/product/?id=5100及原始Weidian购买ID7665301948。马耳他语QC指南全文显示；爱尔兰语切法语保留文章slug与#section-0锚点。爱尔兰语FAQ28条，法语Guides10篇，法语首页商品真实加载。桌面截图：/workspace/scratch/9fde59745d64/cssbuyhome-multilingual.jpg。
+
+响应式样式已包含小屏语言入口、导航换行和长文本换行；浏览器viewport能力调用390px后实际DOM仍为1905px，重新获取能力/新标签仍相同，已reset恢复。故未把手机实机验收记为通过，后续仍需真实窄屏验收。桌面宽度与scrollWidth均1905，无横向溢出。翻译是基于已研究英文内容的完整译稿，不等同于24个市场的独立搜索量调研或逐语言母语人工审校。
+
+后续保持唯一数据源cnfansge，商品标题按源站保留，不为翻译新建商品库。继续使用当前GitHub工作副本，切勿将旧/workspace/sites/cssbuyhome-com代码覆盖当前部署。正式域名绑定与索引开放仍待用户预览确认。
