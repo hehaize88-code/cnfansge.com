@@ -18,3 +18,7 @@ The GitHub Actions workflow validates both branches, enables production indexing
 See `PROJECT_MEMORY.md` for observed deployment status, `docs/I18N.md` for translation maintenance, and `docs/KEYWORD_RESEARCH.md` for the original keyword/source research. Narrow-screen browser verification remains pending because the prior test browser did not apply viewport overrides.
 
 Production deployment verified on 2026-10-24: https://cssbuyhome.com/ is live over HTTPS; www redirects to the apex. Cloudflare build `481dcc5a-98e6-4312-8a7a-384f84c7cd2a` and GitHub Actions run `40058698105` succeeded. Public checks verified same-site search/details, localized results, 24 language options, canonical/indexing, and the 408-URL sitemap.
+
+## Analytics
+
+GA4 property `560553438`, web stream `16192979969`, measurement ID `G-0T1GYYQRZJ`. The shared Analytics component runs only on the production HTTPS apex and is included across all locales. Google signals and ad personalization are disabled. Preview/local hosts do not load Google tag. Keep all localized privacy notices aligned with analytics changes.

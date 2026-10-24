@@ -1,0 +1,20 @@
+---
+import {indexable,siteOrigin} from '../data/config.mjs';
+const enabled=indexable&&siteOrigin==='https://cssbuyhome.com';
+---
+{enabled&&<script is:inline data-cssbuy-analytics>
+  (() => {
+    if (location.hostname !== 'cssbuyhome.com' || location.protocol !== 'https:') return;
+    window.dataLayer = window.dataLayer || [];
+    window.gtag = window.gtag || function(){ window.dataLayer.push(arguments); };
+    window.gtag('js', new Date());
+    window.gtag('config', 'G-0T1GYYQRZJ', {
+      allow_google_signals: false,
+      allow_ad_personalization_signals: false
+    });
+    const tag = document.createElement('script');
+    tag.async = true;
+    tag.src = 'https://www.googletagmanager.com/gtag/js?id=G-0T1GYYQRZJ';
+    document.head.appendChild(tag);
+  })();
+</script>}

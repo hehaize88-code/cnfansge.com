@@ -448,3 +448,10 @@ main当前7aad75bf81c3e941f686e034b57d51c83357e069，尚无cssbuyhome-com目录�
 仍需明确的功能边界：商品、搜索、分页、排序、卖家图库均由唯一来源cnfansge.com提供，不能把卖家图片说成QC。独立QC照片源和搜图接口尚未验证，当前未接入。24语为现有内容的完整翻译，不等同于每市场独立关键词量调查或母语人工审校；真实窄屏验收仍待完成（上轮浏览器未应用viewport）。这些不影响本轮已完成的GitHub与Cloudflare部署。
 
 后续以main/cssbuyhome-com为生产来源。修改该目录会触发CF自动构建；preview/cssbuyhome仅保留旧评审源码，不能用旧/workspace/sites/cssbuyhome-com覆盖生产。正式域名已获本轮用户授权，不再要求重复确认域名绑定。
+
+
+## 2026-10-24 GA4接入：媒体资源已创建，代码待发布
+
+用户要求将cssbuyhome.com添加到analytics.google.com，按访问统计接入执行。已通过现有Google Analytics账号405518068创建独立媒体资源cssbuyhome.com（560553438），未发现同域名旧资源。网站数据流CSSBuy Home Web，网址https://cssbuyhome.com，Stream ID 16192979969，Measurement ID G-0T1GYYQRZJ。报告时区中国GMT+08，币种USD；类别购物、小型1–10人（初始化分类，后续可改）；目标网站流量和用户互动，增强型衡量保留开启。无新增付费订阅或人员权限。
+
+站点代码通过统一Layout接入，456页面/24语言完整覆盖，仅正式HTTPS cssbuyhome.com加载Google tag；workers.dev和localhost排除，避免预览污染。关闭Google signals和广告个性化。24语言隐私说明补充GA4、cookies及浏览器/设备/使用数据说明。8项原测试、完整生产构建和全页面代码覆盖检查通过，沙箱脚本验证仅生产域初始化且每页只配置一次。下一步GitHub main自动部署并验证Google端安装和实时数据。

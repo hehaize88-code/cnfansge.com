@@ -12,6 +12,7 @@ for(const lang of publishedLocales){
  for(const route of routes){
   const path=localePath(lang,route),html=await readFile('.astro-output'+path+'index.html','utf8'),$=load(html);
   assert.equal($('html').attr('lang'),lang,path);
+  assert.equal($('script[data-cssbuy-analytics]').length,indexable&&siteOrigin==='https://cssbuyhome.com'?1:0,path+' analytics coverage');
   assert.equal($('meta[name=robots]').attr('content'),indexable?(['product/','search/visual/'].includes(route)?'noindex,follow':'index,follow'):'noindex,nofollow',path+' indexing');
   assert.equal($('#language-switch option').length,publishedLocales.length,path);
   assert.equal($('#language-switch option[selected]').attr('value'),path,path);
