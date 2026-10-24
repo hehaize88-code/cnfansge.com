@@ -6,7 +6,7 @@ Astro 7.4.2 SSG with a read-only Cloudflare Worker gateway to https://www.cnfans
 
 ## Build and deploy
 
-Use Node 24. Run `npm ci`, then `npm run build:production`. The production build generates 105 pages and `dist/server/index.js`, then verifies all 95 sitemap URLs, metadata, logo references, preview noindex behavior and the www redirect.
+Use Node 24 and npm 10.9.2 (the Cloudflare build image version). Regenerate the lockfile with npm 10.9.2; npm 11 resolves optional peer metadata differently. Run `npm ci`, then `npm run build:production`. The production build generates 105 pages and `dist/server/index.js`, then verifies all 95 sitemap URLs, metadata, logo references, preview noindex behavior and the www redirect.
 
 Cloudflare Worker: `allchinabuybuy-preview` (the existing reviewed Worker is retained). Configure Workers Builds with repository `hehaize88-code/cnfansge.com`, production branch `main`, root directory `allchinabuybuy-com`, build command `npm run build:production`, deploy command `npx wrangler deploy`, and included build-watch path `allchinabuybuy-com/**`.
 

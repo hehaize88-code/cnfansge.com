@@ -14,6 +14,8 @@ Cloudflare Builds 的根目录已设 allchinabuybuy-com，构建命令 npm run b
 
 Cloudflare 首次构建因锁文件混入 27 个 extraneous 平台依赖（含 AIX esbuild）而报 EBADPLATFORM。在无 node_modules 的独立目录用 npm install --package-lock-only 重新计算锁文件，保留实际依赖版本，移除这些无依赖关系的条目。
 
+最终改为使用 Cloudflare 相同的 npm 10.9.2 生成锁文件：331 条记录、0 extraneous；嵌套 esbuild 0.28.2 平台包正确标记 optional/peer，npm 10 clean install 通过。packageManager 固定 npm@10.9.2，后续不要用 npm 11 重写此锁文件。
+
 ## 用户指定 Logo（2026-10-24）
 
 用户上传 allchinabuy.png 并要求替换 Logo。原图 1718×253，透明 PNG，保持原始颜色、透明背景及比例，不重新绘制。全站共享 Layout 的页头、页脚和 favicon 改用 /brand/allchinabuy-user-logo.png；新文件路径避免旧 Logo 缓存。适用于全部 5 种语言、105 个页面。
