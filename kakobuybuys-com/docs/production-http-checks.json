@@ -1,0 +1,95 @@
+[
+  {
+    "name": "home",
+    "url": "https://kakobuybuys.com/",
+    "status": 200,
+    "headers": {
+      "content-type": "text/html;charset=utf-8",
+      "x-robots-tag": "index,follow,max-image-preview:large",
+      "location": null
+    }
+  },
+  {
+    "name": "robots",
+    "url": "https://kakobuybuys.com/robots.txt",
+    "status": 200,
+    "headers": {
+      "content-type": "text/plain;charset=utf-8",
+      "x-robots-tag": null,
+      "location": null
+    },
+    "body": "User-agent: *\nAllow: /\nDisallow: /api/\n\nSitemap: https://kakobuybuys.com/sitemap.xml\n"
+  },
+  {
+    "name": "sitemap-index",
+    "url": "https://kakobuybuys.com/sitemap.xml",
+    "status": 200,
+    "headers": {
+      "content-type": "application/xml;charset=utf-8",
+      "x-robots-tag": null
+    },
+    "sitemapCount": 24
+  },
+  {
+    "name": "sitemap-en",
+    "url": "https://kakobuybuys.com/sitemaps/en.xml",
+    "status": 200,
+    "headers": {
+      "content-type": "application/xml;charset=utf-8",
+      "x-robots-tag": null,
+      "location": null
+    },
+    "urlCount": 19
+  },
+  {
+    "name": "sitemap-de",
+    "url": "https://kakobuybuys.com/sitemaps/de.xml",
+    "status": 200,
+    "headers": {
+      "content-type": "application/xml;charset=utf-8",
+      "x-robots-tag": null,
+      "location": null
+    },
+    "urlCount": 19
+  },
+  {
+    "name": "www",
+    "url": "https://www.kakobuybuys.com/de/faq/?ref=launch-check",
+    "status": 308,
+    "headers": {
+      "content-type": null,
+      "x-robots-tag": null,
+      "location": "https://kakobuybuys.com/de/faq/?ref=launch-check"
+    }
+  },
+  {
+    "name": "http",
+    "url": "http://kakobuybuys.com/guide/",
+    "status": 308,
+    "headers": {
+      "content-type": null,
+      "x-robots-tag": null,
+      "location": "https://kakobuybuys.com/guide/"
+    }
+  },
+  {
+    "name": "preview",
+    "url": "https://kakobuybuys-preview.hehaize88.workers.dev/guide/",
+    "status": 200,
+    "headers": {
+      "content-type": "text/html;charset=utf-8",
+      "x-robots-tag": "noindex,nofollow",
+      "location": null
+    }
+  },
+  {
+    "name": "preview-sitemap",
+    "url": "https://kakobuybuys-preview.hehaize88.workers.dev/sitemap.xml",
+    "status": 404,
+    "headers": {
+      "content-type": "text/plain;charset=utf-8",
+      "x-robots-tag": "noindex",
+      "location": null
+    }
+  }
+]

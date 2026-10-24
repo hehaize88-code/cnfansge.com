@@ -7,11 +7,11 @@
 - 平台：仅Kakobuy；用户已准备域名 **kakobuybuys.com**。
 - 正式代码仓库：https://github.com/hehaize88-code/cnfansge.com
 - 每域名一个根级目录，本项目固定为 **kakobuybuys-com/**。
-- 当前隔离分支：**preview/kakobuybuys-20261024**。不修改其他域名目录，不合并main。
-- 本次授权目标：制作可公开访问的预览供用户看效果；正式域名绑定和正式上线在用户看过预览后另行进行。
+- 正式分支：**main**；本项目独立目录已上线。旧preview/kakobuybuys-20261024分支保留历史预览，后续发布以main为准。只修改kakobuybuys-com目录。
+- 用户已明确授权“部署到GitHub 和cf”，正式域名绑定与上线已完成。
 - 当前公开预览：**https://kakobuybuys-preview.hehaize88.workers.dev/**。2026-10-24已通过用户Chrome打开验证。旧chatgpt.site地址曾被入口安全服务拦截，不再作为交付链接。
 - Sites项目ID：appgprj_6adc4f0bd82c8191b163618b4f0a83c0。复用已有ID，不能重复create_site。
-- 最新已核实在线版本为 **3**，完整24语已公开发布；每语10文章、28FAQ。域名kakobuybuys.com尚未绑定。
+- 正式网址：**https://kakobuybuys.com/**；www以308转至主域名。当前Cloudflare版本前缀b1ae6e3b，构建源d1673a198434e562071dbb622d4b8cb037bc3575；24语、每语10文章/28FAQ。Sites版本3只是旧预览记录。
 - 本地编辑目录：/workspace/sites/kakobuybuys-preview。冻结构建目录：/workspace/sites/kakobuybuys-review-build。GitHub是用户要求的源码保存位置，Sites源仓库仅保存对应预览快照。
 
 ## 用户固定要求
@@ -89,7 +89,7 @@
 - `npm run check`严格检查所有语言内容、段落/来源一致、无整段英文回退、完整静态路径、内部链接、lang/canonical/hreflang、结构化数据和购买URL。
 - 完整24语最终构建、公开版本更新已通过；GitHub最终源码和本记录在同次提交同步。
 
-## 预览与正式上线边界
+## 预览阶段的上线计划（历史，已由后面的正式部署记录更新）
 
 当前预览一律noindex,nofollow；robots禁止抓取，不发布预览sitemap。正式域名尚未绑定，未修改DNS、生产main、GA4/GSC/Bing。
 
@@ -167,7 +167,7 @@
 - 证据保存在docs/redesign-qa.json及redesign-preview.jpg、redesign-mobile.jpg、redesign-article-mobile.jpg。浏览器临时视口已恢复，并保留英文首页供用户查看。
 - 预览仍noindex,nofollow，正式域名未绑定；不宣称已完成全部24语言逐页视觉验收。原有搜图上传与独立QC接口缺口未改变。此轮用户尚未评价新版是否满意。
 
-## 正式部署准备（2026-10-24）
+## 正式部署（2026-10-24）
 
 - 用户明确要求“部署到GitHub 和cf”，授权将当前V2发布到正式域名kakobuybuys.com，代码进入同仓库main中的独立kakobuybuys-com目录。
 - 已检查Cloudflare实际账户下该域名Active，zone ID为87d5b1aa03004cd2f0423e5db17b3235；绑定前DNS记录数为0，没有覆盖原站或邮件记录。
@@ -176,3 +176,15 @@
 - 新增按语言拆分的24个站点地图，共456个规范内容URL；排除商品参数页与搜图工具页。sitemap.xml是入口，其他文件为/sitemaps/en.xml等。地图不依赖实时主站请求。
 - www和HTTP规范到https://kakobuybuys.com，保留路径和参数；/index.html规范到尾斜杠。商品详情canonical/hreflang保留有效商品ID。
 - 本地构建和全部内容检查通过，新增16项发布检查及24份地图/456URL校验通过。真实域名绑定、Cloudflare新构建结果及公开验收待后续补充，不能提前宣称部署成功。
+
+### 正式上线结果
+
+- 已将完整项目加入GitHub main的kakobuybuys-com目录，正式源码提交`d1673a198434e562071dbb622d4b8cb037bc3575`，基于当时最新main `27e18231c06a71f1c3ceedf90907c6dba9a40a95`。仅加入本项目子树，保留仓库其他目录与并行更新。
+- Cloudflare构建生产分支已从预览分支切换为main，其余根目录、构建/部署命令、目录监听和排除规则保持不变。以后修改main中的本项目应用文件会自动构建；仅修改docs/README/项目记忆不会重复部署。
+- 主域名kakobuybuys.com和www.kakobuybuys.com均已绑定现有Worker，配置也写入wrangler.jsonc，避免后续部署丢失域名。没有新建数据库、后台、访问令牌或绑定其他站点。
+- Cloudflare构建ID `f8c726f3-205a-4bf2-baed-dfb0547b7f76`，状态Ready，约1分钟；Active deployment版本前缀`b1ae6e3b`。正式网址 **https://kakobuybuys.com/** 已经公开可访问。
+- 公开HTTP实测：首页200且X-Robots-Tag=index,follow,max-image-preview:large；robots.txt允许抓取并列出正式sitemap；sitemap.xml返回application/xml和24份语言地图；英/德地图各19URL，均200且无noindex头。www及HTTP均308规范到HTTPS主域名且保留路径/参数。
+- 预览主机/guide/仍200且noindex,nofollow，预览sitemap.xml仍404。正式站搜索页与商品详情noindex,follow符合预期，不把动态参数页混入内容地图。
+- Chrome实测：首页8商品与8张源站图片成功；jersey搜索在正式域名展示20条；商品6679购买URL使用Weidian原ID7641464690、affcode=rf8x8；注册URL保持用户指定地址。文章索引10篇，英切德保留文章slug并显示10章节20段；德语FAQ页28条。
+- 全量构建仍504页、24语言；地图包含456个规范内容页。详细HTTP证据docs/production-http-checks.json；上线摘要docs/production-qa.json；正式首页截图docs/production-home.jpg。
+- 项目记忆与证据随后以文档提交同步main。当前任务不包含GA4/GSC/Bing提交，不能宣称搜索引擎已收录。搜图上传与独立QC源接口仍未接通，沿用明确提示。
