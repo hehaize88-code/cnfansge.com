@@ -2,6 +2,21 @@
 
 更新时间：2026-10-24（用户时区 Asia/Shanghai）。本文件为后续开发事实来源；先读再改。
 
+## 正式上线状态（2026-10-24，优先于下方历史记录）
+
+用户明确要求“部署到GitHub 和cf”，正式部署已完成。
+
+- 正式网址：https://allchinabuybuy.com/ 。www.allchinabuybuy.com 以 308 跳到根域，保留路径、查询参数。
+- GitHub：https://github.com/hehaize88-code/cnfansge.com/tree/main/allchinabuybuy-com 。生产代码提交 784a70b53f096e49818db9bfdf2d8d88d972ffe4，其他域名目录未改动。
+- Cloudflare Worker：allchinabuybuy-preview（沿用原名称提供正式域名服务）；成功构建 b3e02f77，已发布版本 ae897948-22d8-4e22-9ff5-d33c60adac62。日志确认两个 custom domain 和 deploy command completed。
+- GitHub main 已连接 Cloudflare Builds；根目录 allchinabuybuy-com；监视路径 allchinabuybuy-com/**；构建 npm run build:production；部署 npx wrangler deploy；NODE_VERSION=24。后续改该目录并推送 main 自动发布。
+- npm 与 Cloudflare 对齐为 10.9.2；锁文件 331 个包记录、0 extraneous，嵌套平台包保留 optional/peer。干净安装及线上构建已通过。不要用 npm 11 重写锁文件。
+- Astro SSG 105 个页面；英文及德/西/法/意共 5 种语言；10 篇文章、28 条 FAQ。正式 sitemap.xml 含 95 个可收录 URL；robots 允许抓取并链接 sitemap，API/动态商品详情/未接通搜图保持 noindex；workers.dev 保持 noindex。
+- 正式站 Chrome 实测通过：首页及用户指定 Logo、8 个首页商品图片、shoes 搜索结果、商品 6681 的 5 张卖家图片、购买链接 Weidian 7755101935 + partnercode=wbVgOT、www 德语商品页跳转、切换法语保留商品 ID、10 篇文章目录及首篇完整正文、28 FAQ、公开 robots 和 95 URL sitemap。
+- 所有商品和图片依然直接来自 cnfansge.com；无新数据库、后台或自建商品库。
+- 未完成接口保持透明：源站独立 QC feed、搜图 API、官方可用注册入口仍未核实。现有 QC 页面是指南，卖家图不是 QC；部署不代表这些接口已接通。
+- GitHub 目录是生产代码事实来源。旧 Sites 预览是历史审阅版本，未来正式修改应在此 GitHub 目录进行。
+
 ## 正式部署（2026-10-24，用户已授权）
 
 目标 GitHub：hehaize88-code/cnfansge.com 的 allchinabuybuy-com/，保留其他域名目录。正式域名 https://allchinabuybuy.com，www 用 308 保留路径和查询参数跳根域。复用已验证的 Cloudflare Worker allchinabuybuy-preview。生产构建 npm run build:production，105 页面、95 个可收录页面进入 sitemap.xml；robots.txt 允许正式站抓取，API/动态详情/未接通搜图仍 noindex。workers.dev 保留 noindex 及 Disallow，防止与正式域名重复收录。没有数据库、后台或伪造商品。
@@ -20,7 +35,7 @@ Cloudflare 首次构建因锁文件混入 27 个 extraneous 平台依赖（含 A
 
 用户上传 allchinabuy.png 并要求替换 Logo。原图 1718×253，透明 PNG，保持原始颜色、透明背景及比例，不重新绘制。全站共享 Layout 的页头、页脚和 favicon 改用 /brand/allchinabuy-user-logo.png；新文件路径避免旧 Logo 缓存。适用于全部 5 种语言、105 个页面。
 
-## Cloudflare 备用预览（2026-10-24）
+## Cloudflare 备用预览历史（2026-10-24，以下为上线前记录）
 
 - 当前给用户审阅的地址：https://allchinabuybuy-preview.hehaize88.workers.dev/ 。
 - 用户反馈旧 chatgpt.site 预览无法打开，截图为 Cloudflare "Sorry, you have been blocked"。Sites 部署仍 active/public，属于平台域名访问阻断。
@@ -35,7 +50,7 @@ Cloudflare 首次构建因锁文件混入 27 个 extraneous 平台依赖（含 A
 
 - 本次只做 AllChinaBuy 一个平台。正式域名已确定：allchinabuybuy.com。
 - 目标仓库 https://github.com/hehaize88-code/cnfansge.com ，每域名单独目录。本项目目录 allchinabuybuy-com/。
-- 本轮先发布公开预览供用户审阅。正式域名绑定、正式仓库部署留待用户预览反馈。
+- 预览已完成；用户已授权 GitHub 与 Cloudflare 正式部署，上线结果见文件顶部。
 - 所有商品、商品图片、商品排序/搜索数据来自 cnfansge.com。不得种假商品、生成商品图片、新建产品数据库或后台。
 - 参考 kakobuypicklist.com 的商品发现与多语言结构；不复制竞争对手文章。
 - 用户购买链接 partnercode=wbVgOT；示例源记录6681对应Weidian商品7755101935，二者不可混用。
@@ -53,7 +68,7 @@ Astro 7.4.2（npm 官方版本查询确认）SSG；105静态页面，Cloudflare 
 ## 已核实与未核实边界
 
 - 官方 https://www.allchinabuy.com/ 于2026-10-24显示维护公告，不提供恢复时间。FAQ/文章不杜撰注册福利、运费、时效、仓储和退货数字。
-- 官方logo来自 https://www.allchinabuy.com/assets/allchinabuy-logo.png 。维护页未声明单独favicon，/favicon.ico返回404；预览以原logo作favicon，不声称已取得原站独立favicon。
+- 最初官方 Logo 取自维护页；现已按用户最新指示改用上传的 allchinabuy.png 作为页头、页脚及 favicon，详见 Logo 记录。
 - 注册候选 https://www.allchinabuy.com/en/page/login/?partnercode=wbVgOT&type=register 未核实正常可用，预览只提供官方状态入口，不承诺注册送券。
 - 已适配公开目录、分类、关键词搜索、源站排序、真实分页、详情卖家图片、卖家购买链接。
 - 未发现可验证的源站搜图API及独立QC feed。/api/capabilities如实false；搜图页说明未接通，QC页是指南；卖家图不冒充QC。后续若源站项目提供真实接口，只接适配层，禁止自建替代库。
