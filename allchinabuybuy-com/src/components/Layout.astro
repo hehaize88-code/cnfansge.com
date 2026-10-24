@@ -5,7 +5,19 @@ const {lang='en',path='',title,description}=Astro.props;const t=ui[lang];
 const origin=process.env.SITE_ORIGIN||'https://allchinabuybuy.com';
 const links=['spreadsheet','finds','guide','qc','shipping','faq','articles'];
 ---
-<!doctype html><html lang={lang}><head><meta charset="utf-8"/><meta name="viewport" content="width=device-width,initial-scale=1"/><title>{title} | AllChinaBuyBuy</title><meta name="description" content={description}/><meta name="robots" content={process.env.SITE_INDEXABLE==='true'?'index,follow':'noindex,follow'}/><link rel="canonical" href={origin+href(lang,path)}/>{Object.keys(languages).map(l=><link rel="alternate" hreflang={l} href={origin+href(l,path)}/>)}<link rel="alternate" hreflang="x-default" href={origin+href('en',path)}/><link rel="icon" type="image/png" href="/brand/allchinabuy-user-logo.png"/><meta name="theme-color" content="#176c3a"/><meta property="og:title" content={title}/><meta property="og:description" content={description}/><meta property="og:type" content={path.startsWith('articles/')?'article':'website'}/><meta property="og:url" content={origin+href(lang,path)}/></head><body data-lang={lang}>
+<!doctype html><html lang={lang}><head><meta charset="utf-8"/><meta name="viewport" content="width=device-width,initial-scale=1"/><title>{title} | AllChinaBuyBuy</title><meta name="description" content={description}/><meta name="robots" content={process.env.SITE_INDEXABLE==='true'?'index,follow':'noindex,follow'}/><link rel="canonical" href={origin+href(lang,path)}/>{Object.keys(languages).map(l=><link rel="alternate" hreflang={l} href={origin+href(l,path)}/>)}<link rel="alternate" hreflang="x-default" href={origin+href('en',path)}/><link rel="icon" type="image/png" href="/brand/allchinabuy-user-logo.png"/><meta name="theme-color" content="#176c3a"/><meta property="og:title" content={title}/><meta property="og:description" content={description}/><meta property="og:type" content={path.startsWith('articles/')?'article':'website'}/><meta property="og:url" content={origin+href(lang,path)}/><script is:inline>
+  if (location.hostname === 'allchinabuybuy.com') {
+    window.dataLayer = window.dataLayer || [];
+    window.gtag = function () { window.dataLayer.push(arguments); };
+    window.gtag('js', new Date());
+    window.gtag('config', 'G-4YY4TM8ZFW');
+    const tag = document.createElement('script');
+    tag.async = true;
+    tag.src = 'https://www.googletagmanager.com/gtag/js?id=G-4YY4TM8ZFW';
+    document.head.appendChild(tag);
+  }
+</script>
+</head><body data-lang={lang}>
 <a class="skip" href="#main">Skip to content</a>
 <header class="header"><div class="header-inner"><a class="brand" href={href(lang)} aria-label="AllChinaBuyBuy home"><img src="/brand/allchinabuy-user-logo.png" width="186" height="27" alt="AllChinaBuy"/><span>SPREADSHEET & FINDS</span></a><nav aria-label="Primary">{links.map((p,i)=><a class:list={{active:path===p||p==='articles'&&path.startsWith('articles/')}} href={href(lang,p)}>{t.nav.split('|')[i]}</a>)}</nav><label class="language"><span aria-hidden="true">◎</span><select aria-label="Language" id="language">{Object.entries(languages).map(([l,label])=><option value={href(l,path)} selected={lang===l}>{label}</option>)}</select></label></div></header>
 <div class="notice"><div class="wrap"><span class="dot"></span><span>{t.statusShort}</span><a href={href(lang,'status')}>{t.status} ↗</a></div></div>

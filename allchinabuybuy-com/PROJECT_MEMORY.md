@@ -2,6 +2,12 @@
 
 更新时间：2026-10-24（用户时区 Asia/Shanghai）。本文件为后续开发事实来源；先读再改。
 
+## Google Analytics 4（2026-10-24）
+
+用户要求将本域名添加到 analytics.google.com。已有账号 405518068 中新建独立资源 allchinabuybuy.com，Property ID 560578171，Web Stream ID 16193977860，Measurement ID G-4YY4TM8ZFW。中国时区（GMT+08:00）、USD；目标为流量和用户互动，增强型衡量开启。
+
+统计代码位于共享 src/components/Layout.astro 的 head，全站 105 页面及 5 种语言共用。只在 location.hostname === allchinabuybuy.com 时加载 Google tag，预览域名和本地不统计。采用一次 gtag config 默认 page_view，无重复手动 page_view。广告和 Search Console 关联未新增。提交 GitHub 后由 Cloudflare Builds 自动发布；实际接收验证结果写入独立项目记忆。
+
 ## 正式上线状态（2026-10-24，优先于下方历史记录）
 
 用户明确要求“部署到GitHub 和cf”，正式部署已完成。
