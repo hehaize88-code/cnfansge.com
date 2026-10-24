@@ -1,0 +1,36 @@
+name: CSSBuy build and live-source validation
+on:
+  push:
+    branches: [main, preview/cssbuyhome]
+    paths: ['cssbuyhome-com/**', '.github/workflows/cssbuy-preview.yml']
+  workflow_dispatch:
+permissions:
+  contents: read
+concurrency:
+  group: cssbuy-${{ github.ref }}
+  cancel-in-progress: true
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    env:
+      SITE_ORIGIN: https://cssbuyhome.com
+      SITE_INDEXABLE: ${{ github.ref == 'refs/heads/main' && 'true' || 'false' }}
+    steps:
+      - uses: actions/checkout@v6
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '24'
+          cache: npm
+          cache-dependency-path: cssbuyhome-com/package-lock.json
+      - run: npm ci
+        working-directory: cssbuyhome-com
+      - run: npm run build
+        working-directory: cssbuyhome-com
+      - name: Verify full catalog, search, sorting and same-site navigation
+        run: node scripts/check-live-source.mjs
+        working-directory: cssbuyhome-com
+      - uses: actions/upload-artifact@v4
+        with:
+          name: cssbuyhome-live-worker
+          path: cssbuyhome-com/dist/server/index.js
+          retention-days: 14

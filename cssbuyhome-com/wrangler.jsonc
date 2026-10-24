@@ -1,0 +1,17 @@
+{
+  "name": "cssbuyhome-preview",
+  "main": "dist/server/index.js",
+  "compatibility_date": "2026-10-24",
+  "workers_dev": true,
+  "preview_urls": false,
+  "routes": [
+    {
+      "pattern": "cssbuyhome.com",
+      "custom_domain": true
+    },
+    {
+      "pattern": "www.cssbuyhome.com",
+      "custom_domain": true
+    }
+  ]
+}
