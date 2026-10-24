@@ -10,6 +10,10 @@
 
 Cloudflare Builds 的根目录已设 allchinabuybuy-com，构建命令 npm run build:production，部署命令 npx wrangler deploy；监视路径只包含 allchinabuybuy-com/**。不提交 .openai、构建产物、依赖或临时凭据。
 
+### 首次 CI 安装修复
+
+Cloudflare 首次构建因锁文件混入 27 个 extraneous 平台依赖（含 AIX esbuild）而报 EBADPLATFORM。在无 node_modules 的独立目录用 npm install --package-lock-only 重新计算锁文件，保留实际依赖版本，移除这些无依赖关系的条目。
+
 ## 用户指定 Logo（2026-10-24）
 
 用户上传 allchinabuy.png 并要求替换 Logo。原图 1718×253，透明 PNG，保持原始颜色、透明背景及比例，不重新绘制。全站共享 Layout 的页头、页脚和 favicon 改用 /brand/allchinabuy-user-logo.png；新文件路径避免旧 Logo 缓存。适用于全部 5 种语言、105 个页面。
