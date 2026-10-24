@@ -196,4 +196,9 @@
 - 报告时区：中国GMT+08:00，币种USD。行业购物；初始化业务规模暂选小型，用户未专门提供员工人数；目标为网站流量和互动/留存。增强型衡量默认开启。
 - 统计代码通过公共Layout覆盖全部24语、504个静态页面；只在正式主机kakobuybuys.com加载。预览主机Worker会移除统计脚本，客户端也有主机和重复初始化保护。
 - 未设置User-ID、广告关联或Measurement Protocol密钥；Google signals和广告个性化信号在代码中关闭。使用默认浏览量和增强型衡量，不伪造订单/购买事件。
-- 本地完整构建检查通过；正式站代码发布和GA4实际接收验证尚待完成，不将“已创建”说成“已收到数据”。
+- 本地完整构建检查通过：全部504页面各包含一个正确ID的初始化脚本，预览运行时移除脚本，16项发布策略/24份地图/456URL校验通过。
+- 已发布至GitHub main，源码提交`2bb0a5e9027cd6cc72b33d6a25e504495776d683`；Cloudflare构建`c98bc3ff-7726-47f0-af8f-9a06c0dfb3bb`显示Ready、55秒，部署版本前缀`3c71ecda`。
+- 正式站HTTP实测初始化块1个、衡量ID正确；workers.dev预览块0个且不含衡量ID。Chrome实际加载gtag.js?id=G-WEF871FSL0，未观察到控制台错误。
+- 通过真实浏览器访问首页和指南，GA4实时概览已显示1位活跃用户、首页标题及first_visit/page_view/session_start事件。这里是验证访问，不是自然搜索流量或购买转化；未人工调用收集接口。
+- 实时报告：https://analytics.google.com/analytics/web/#/a405518068p560584922/realtime/overview 。配置及验收记录见docs/analytics.json；本地实时报告截图docs/ga4-realtime.jpg仅供用户查看，不上传含账号信息的截图至GitHub。
+- Google Analytics用于流量统计，搜索收录仍由Search Console等搜索引擎工具处理；不能把接入GA4表述为已被Google搜索收录。
