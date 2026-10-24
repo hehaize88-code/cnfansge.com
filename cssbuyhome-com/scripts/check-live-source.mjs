@@ -1,6 +1,8 @@
 import assert from 'node:assert/strict';
 import {load} from 'cheerio';
 import worker from '../dist/server/index.js';
+import {publishedLocales,ui} from '../src/data/content.mjs';
+import {localePath} from '../src/data/config.mjs';
 const origin='https://cssbuy-preview.test';
 async function request(path){const response=await worker.fetch(new Request(origin+path),{},{});assert.equal(response.status,200,path);return response;}
 async function json(path){const data=await (await request(path)).json();assert.ok(!data.error,path);return data;}
@@ -35,4 +37,16 @@ for(const path of ['/','/spreadsheet/?page=4','/spreadsheet/?q=Nike&page=4','/sp
  if(path.startsWith('/product/')){assert.ok($('button[data-large-image]').length>0);assert.equal($('.product-detail-gallery a').length,0);}
  assert.ok($('link[rel=canonical]').attr('href').startsWith(origin));
 }
-console.log(JSON.stringify({ok:true,source:'cnfansge.com',testedPages:[1,4,10],pageSize:20,search:'Nike / page 4',category:'shoes / page 4',sorting:['price-up','price-down'],purchaseId:'7755101935',sameSiteNavigation:true,qcVerified:false}));
+for(const lang of publishedLocales){
+ const prefix=localePath(lang),t=ui(lang);
+ for(const route of ['', 'spreadsheet/?q=Nike&page=4', 'product/?id=6681']){
+  const $=load(await (await request(prefix+route)).text());
+  assert.equal($('html').attr('lang'),lang);
+  assert.equal($('body').attr('data-source-rendered'),'true');
+  assert.equal($('.error-state').length,0,prefix+route);
+  for(const link of $('a.product-card,a.hero-product,.pagination a').toArray())assert.ok($(link).attr('href').startsWith(prefix),prefix+route);
+  if(route.startsWith('spreadsheet/')){assert.equal($('.product-card').length,20);assert.equal($('.page-jump button').text(),t.go);}
+  if(route.startsWith('product/'))assert.equal($('.photo-open').first().attr('aria-label'),t.enlargePhoto);
+ }
+}
+console.log(JSON.stringify({locales:publishedLocales.length,ok:true,source:'cnfansge.com',testedPages:[1,4,10],pageSize:20,search:'Nike / page 4',category:'shoes / page 4',sorting:['price-up','price-down'],purchaseId:'7755101935',sameSiteNavigation:true,qcVerified:false}));

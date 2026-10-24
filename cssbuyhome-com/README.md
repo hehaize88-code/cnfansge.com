@@ -7,7 +7,7 @@ Standalone Astro 7.4.2 project in `cssbuyhome-com/` of `hehaize88-code/cnfansge.
 - `worker/source.mjs` is the sole product adapter: cnfansge.com only, no database, no generated product records, no source admin access.
 - Official CSSBuy logo and favicon URLs are used without alteration. The site identifies itself as independent.
 - Preview is noindex. Production deployment requires domain/origin verification and additional source interface checks; set `SITE_ORIGIN` and `SITE_INDEXABLE=true` only after those checks.
-- English editorial is complete in this preview. The 24-language plan remains in config; a locale is published only when its full UI and editorial JSON exist. Language switching preserves page and query. No English fallback masquerades as a translation.
+- All 24 configured languages have complete interface text, ten full articles and 28 FAQs each. The build validates 456 routes, 240 article versions and 672 FAQ entries. Language switching retains the current page, search parameters and fragment. Each page has matching language, canonical and reciprocal hreflang metadata. See `docs/I18N.md` for maintenance and validation.
 - Visual search and verified QC-photo feeds are not enabled until a real cnfansge interface is documented. Seller galleries are not labeled QC.
 - Weidian purchase URLs use the original marketplace itemID, not the source content ID. Unsupported marketplace mappings retain the original listing link for pasting into CSSBuy.
 

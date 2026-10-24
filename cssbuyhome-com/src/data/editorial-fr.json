@@ -1,0 +1,1044 @@
+{
+  "faq": [
+    {
+      "id": "what-is-cssbuy",
+      "q": "Qu'est-ce que CSSBuy ?",
+      "a": "CSSBuy fournit une assistance à l'achat et des services de colis pour des produits de vendeurs tiers. Le vendeur fournit le produit ; CSSBuy aide à gérer l'achat et l'expédition. Examinez l'annonce et les conditions de la transaction avant de commander.",
+      "sourceIds": [
+        "expertbuy"
+      ]
+    },
+    {
+      "id": "independent",
+      "q": "CSSBuy Home est-il le site officiel de CSSBuy ?",
+      "a": "Non. CSSBuy Home est un site indépendant de découverte de produits et de contenu éditorial. Les commandes, paiements, demandes d'assistance pour les comptes et décisions de livraison se font sur cssbuy.com.",
+      "sourceIds": [
+        "project"
+      ]
+    },
+    {
+      "id": "spreadsheet",
+      "q": "Qu'est-ce qu'un tableau de produits CSSBuy ?",
+      "a": "C'est un moyen d'organiser des idées de produits et des liens pour les comparer. Ici, le catalogue propose un répertoire consultable. Une annonce constitue un point de départ pour examiner un produit, pas une garantie de qualité, de disponibilité ou d'adéquation.",
+      "sourceIds": [
+        "project"
+      ]
+    },
+    {
+      "id": "data",
+      "q": "D'où viennent les produits et les photos des annonces ?",
+      "a": "Le catalogue de produits et les galeries des vendeurs proviennent de cnfansge.com. CSSBuy Home ne gère pas de base de données de produits distincte et ne fabrique pas d'images de produits. Confirmez l'offre sélectionnée après avoir ouvert sa destination d'achat.",
+      "sourceIds": [
+        "catalog",
+        "project"
+      ]
+    },
+    {
+      "id": "qc",
+      "q": "Les photos des produits sont-elles des photos QC CSSBuy vérifiées ?",
+      "a": "Les galeries des vendeurs ne doivent pas être considérées comme un contrôle qualité en entrepôt. Une photo QC vérifiée propre à une commande doit être associée à l'article reçu. Cet aperçu ne présente pas les images de vendeurs de cnfansge comme des preuves d'inspection CSSBuy vérifiées.",
+      "sourceIds": [
+        "catalog",
+        "project"
+      ]
+    },
+    {
+      "id": "ordering",
+      "q": "Puis-je payer un article sur CSSBuy Home ?",
+      "a": "L'achat se fait sur CSSBuy. Utilisez le lien d'achat d'un produit, puis vérifiez l'option du vendeur, la quantité et le montant actuel avant de payer dans votre compte officiel.",
+      "sourceIds": [
+        "project",
+        "buyforme"
+      ]
+    },
+    {
+      "id": "register",
+      "q": "Où puis-je créer un compte CSSBuy ?",
+      "a": "Utilisez la destination officielle de CSSBuy à l'adresse https://www.cssbuy.com/index et suivez le parcours de création de compte. CSSBuy Home ne recueille pas votre mot de passe CSSBuy et ne traite pas les inscriptions.",
+      "sourceIds": [
+        "register",
+        "project"
+      ]
+    },
+    {
+      "id": "weidian-link",
+      "q": "Quel identifiant faut-il utiliser dans un lien d'achat Weidian ?",
+      "a": "Utilisez l'identifiant d'origine du produit sur la place de marché. L'exemple fourni est https://www.cssbuy.com/shop/goodsDetail?type=micro&id=7755101935. Un numéro de fiche du catalogue cnfansge ne remplace pas cet identifiant de la place de marché.",
+      "sourceIds": [
+        "user-link"
+      ]
+    },
+    {
+      "id": "prices",
+      "q": "Le prix du catalogue est-il le montant final que je paierai ?",
+      "a": "Non. Vérifiez l'option actuellement sélectionnée sur CSSBuy. Votre budget complet peut aussi inclure la livraison intérieure, les services, la livraison internationale et les frais applicables à destination. Un prix de catalogue ne doit pas être interprété comme un devis livré.",
+      "sourceIds": [
+        "fees",
+        "catalog"
+      ]
+    },
+    {
+      "id": "service-fee",
+      "q": "CSSBuy facture-t-il des frais de service ?",
+      "a": "La page d'aide de CSSBuy sur les coûts et frais décrit une commission fondée sur le prix du produit plus le transport en Chine ; elle affichait 6% lors de sa vérification le 23 octobre 2026. Confirmez le montant et les conditions dans votre paiement actuel.",
+      "sourceIds": [
+        "fees"
+      ]
+    },
+    {
+      "id": "payment-methods",
+      "q": "Quels moyens de paiement CSSBuy accepte-t-il ?",
+      "a": "La page officielle À propos mentionne plusieurs moyens, notamment PayPal, les cartes, Alipay, WeChat Pay, iDEAL et Wise. Utilisez les moyens actuellement proposés dans votre compte et examinez les éventuels frais du prestataire ou de conversion monétaire avant de payer.",
+      "sourceIds": [
+        "about"
+      ]
+    },
+    {
+      "id": "two-payments",
+      "q": "Pourquoi l'expédition internationale est-elle traitée séparément ?",
+      "a": "Les marchandises sont achetées avant la préparation du colis final. Le guide de CSSBuy distingue l'étape d'achat du paiement de la livraison internationale, ce qui permet de prendre en compte les mesures du colis, sa destination et le mode d'expédition dans le montant ultérieur.",
+      "sourceIds": [
+        "buyforme"
+      ]
+    },
+    {
+      "id": "estimate",
+      "q": "Comment estimer les frais de livraison CSSBuy ?",
+      "a": "Utilisez le calculateur officiel avec votre destination et une description réaliste du colis. Revoyez l'estimation lorsque le poids et les dimensions de l'entrepôt sont disponibles ; l'admissibilité du mode d'expédition et les conditions actuelles comptent.",
+      "sourceIds": [
+        "estimates"
+      ]
+    },
+    {
+      "id": "volumetric",
+      "q": "Qu'est-ce que le poids volumétrique ?",
+      "a": "C'est une façon de tarifer l'espace occupé par un colis. Vérifiez la formule et les règles de facturation du mode d'expédition choisi au lieu d'appliquer un diviseur universel ou de supposer que tous les services utilisent la même méthode.",
+      "sourceIds": [
+        "estimates"
+      ]
+    },
+    {
+      "id": "final-charge",
+      "q": "Un acompte de livraison peut-il différer du montant final ?",
+      "a": "Oui. Le guide d'achat de CSSBuy distingue l'acompte du montant final de livraison fondé sur les dimensions et le poids vérifiés du colis. Consultez la fiche officielle du colis pour connaître le montant final et tout ajustement du compte.",
+      "sourceIds": [
+        "buyforme"
+      ]
+    },
+    {
+      "id": "delivery-time",
+      "q": "Combien de temps une commande CSSBuy met-elle à arriver ?",
+      "a": "Il n'existe pas de durée garantie unique pour toutes les commandes. L'envoi par le vendeur, les décisions à l'entrepôt, la préparation du colis et le transport international sont des étapes distinctes. Consultez les estimations actuelles des modes d'expédition et suivez votre propre commande plutôt que de reprendre le calendrier d'un autre acheteur.",
+      "sourceIds": [
+        "buyforme"
+      ]
+    },
+    {
+      "id": "tracking",
+      "q": "Où suivre mon colis ou demander de l'aide pour une commande ?",
+      "a": "Utilisez votre compte CSSBuy et la fiche de commande ou de colis concernée. Indiquez son identifiant et le dernier événement confirmé dans votre demande d'aide ; un site de découverte de produits ne peut pas modifier une transaction officielle.",
+      "sourceIds": [
+        "buyforme",
+        "project"
+      ]
+    },
+    {
+      "id": "storage",
+      "q": "Combien de temps les articles ordinaires peuvent-ils rester à l'entrepôt ?",
+      "a": "La page d'aide sur le stockage vérifiée le 23 octobre 2026 indique 90 jours pour les articles ordinaires à partir du statut In Warehouse. Vérifiez votre fiche particulière, car d'autres situations de colis ont des durées différentes.",
+      "sourceIds": [
+        "storage"
+      ]
+    },
+    {
+      "id": "storage-extension",
+      "q": "Puis-je prolonger le stockage en entrepôt ?",
+      "a": "La page actuelle sur le stockage prévoit des prolongations, notamment 15 RMB par identifiant de commande et par mois pour les articles, et 30 RMB par colis et par mois pour les colis. Confirmez l'admissibilité et les frais actuels, et organisez la prolongation avant l'échéance.",
+      "sourceIds": [
+        "storage"
+      ]
+    },
+    {
+      "id": "returned-parcel",
+      "q": "Les colis retournés ou présentant une anomalie suivent-ils la même règle de stockage ?",
+      "a": "Non. La page de stockage examinée décrit des périodes de 30 jours pour certains colis présentant une anomalie et les colis retournés par le transporteur, avec une remise à zéro au retour. Vérifiez le statut et l'échéance applicables au colis concerné.",
+      "sourceIds": [
+        "storage"
+      ]
+    },
+    {
+      "id": "expired-storage",
+      "q": "Que se passe-t-il si je laisse un colis au-delà de son échéance de stockage ?",
+      "a": "La politique de stockage de CSSBuy confie au client la responsabilité d'organiser une prolongation avant expiration et décrit l'élimination possible des marchandises hors délai. Traitez l'échéance affichée comme une date d'action au lieu de supposer un stockage indéfini.",
+      "sourceIds": [
+        "storage"
+      ]
+    },
+    {
+      "id": "consolidation",
+      "q": "CSSBuy peut-il regrouper des articles dans un seul colis ?",
+      "a": "La page Ship For Me de CSSBuy décrit le regroupement. Son intérêt dépend de la compatibilité, des dimensions après emballage et des modes d'expédition admissibles ; comparez des options réalistes avant de supposer qu'un plus gros colis coûte moins cher.",
+      "sourceIds": [
+        "shipforme"
+      ]
+    },
+    {
+      "id": "packaging",
+      "q": "L'emballage sous vide ou la protection renforcée sont-ils disponibles ?",
+      "a": "CSSBuy cite l'emballage sous vide et l'emballage renforcé parmi ses services. Demandez quelles options conviennent à vos articles et leur prix. Réduire le volume et conserver la protection nécessaire font tous deux partie de la décision.",
+      "sourceIds": [
+        "shipforme"
+      ]
+    },
+    {
+      "id": "returns",
+      "q": "Puis-je retourner tous les articles achetés via CSSBuy ?",
+      "a": "Il n'existe pas de garantie générale de retour. Les conditions du vendeur, l'état de l'article, le délai et le processus CSSBuy applicable comptent. Signalez rapidement un problème et demandez quelle solution est disponible pour la commande concernée avant l'expédition internationale.",
+      "sourceIds": [
+        "returns-policy",
+        "expertbuy"
+      ]
+    },
+    {
+      "id": "return-evidence",
+      "q": "Quelles preuves conserver pour une demande de retour ?",
+      "a": "Conservez les détails de la commande, les informations pertinentes de l'annonce et des photos nettes des marchandises et de leur emballage. La politique de retour de CSSBuy décrit les documents requis et les conditions dépendant du marchand ; des frais de transport peuvent aussi intervenir.",
+      "sourceIds": [
+        "returns-policy"
+      ]
+    },
+    {
+      "id": "refund-status",
+      "q": "Un retour accepté signifie-t-il que le remboursement est déjà arrivé ?",
+      "a": "Considérez l'approbation de la demande, le transport retour et l'ajustement financier comme des événements distincts. Consultez les écritures officielles de commande et de compte pour établir l'étape réellement terminée, et demandez des précisions avec la référence concernée.",
+      "sourceIds": [
+        "returns-policy"
+      ]
+    },
+    {
+      "id": "1688-quantity",
+      "q": "Les produits 1688 ont-ils une quantité minimale de commande ?",
+      "a": "Le guide d'achat de CSSBuy avertit que de nombreux fournisseurs 1688 fixent des quantités minimales. Vérifiez l'annonce exacte, l'unité et le palier tarifaire avant de commander ; le prix unitaire affiché le plus bas peut ne pas s'appliquer à la quantité souhaitée.",
+      "sourceIds": [
+        "buyforme"
+      ]
+    },
+    {
+      "id": "sizing",
+      "q": "Faut-il toujours prendre une taille au-dessus pour les vêtements ou les chaussures ?",
+      "a": "Aucune règle universelle n'est fiable. Utilisez le tableau de l'annonce exacte, clarifiez la méthode de mesure et comparez avec un article similaire qui vous va. Sélectionnez l'option prévue par le vendeur plutôt que de vous fier uniquement à une taille familière.",
+      "sourceIds": [
+        "buyforme"
+      ]
+    }
+  ],
+  "articles": [
+    {
+      "id": "spreadsheet",
+      "slug": "cssbuy-spreadsheet-guide",
+      "title": "Comment utiliser un tableau CSSBuy : guide de l’acheteur",
+      "description": "Un guide pratique du tableau CSSBuy pour comparer les liens de produits, vérifier les variantes, lire les photos et planifier un achat complet.",
+      "category": "Premiers pas",
+      "keywords": [
+        "tableau CSSBuy",
+        "trouvailles CSSBuy",
+        "comment utiliser CSSBuy",
+        "liens de produits CSSBuy"
+      ],
+      "intro": "Un tableau CSSBuy utile doit vous aider à prendre une meilleure décision d'achat, pas simplement à allonger votre liste de courses. Un répertoire peut réunir liens, titres et prix d'annonces, mais le travail important commence quand vous vérifiez le produit réel derrière une fiche. Ce guide montre comment transformer la navigation en une courte sélection documentée, distinguer la présentation du vendeur des preuves concernant votre propre commande, et déterminer si une trouvaille reste intéressante après la livraison. CSSBuy Home est un site indépendant de découverte. Son catalogue de produits provient de cnfansge.com ; les achats et la gestion des commandes se font sur CSSBuy.",
+      "sections": [
+        {
+          "heading": "Commencez par un objectif et une sélection réaliste",
+          "paragraphs": [
+            "Avant de chercher, décrivez la fonction que le produit doit remplir. Pour une veste, il peut s'agir de laisser de la place à un pull, d'offrir une disposition particulière des poches et un tissu lavable. Pour un sac, il peut s'agir d'accueillir un ordinateur portable mesuré et de supporter un trajet sous la pluie. Ces détails constituent un plan de recherche plus utile qu'un seul nom de marque. Notez un budget total maximal et deux ou trois exigences qui rendraient l'achat intéressant.",
+            "Gardez une première sélection assez réduite pour l'examiner correctement. Trois annonces prometteuses conduisent généralement à des décisions plus claires que trente images presque identiques. Une trouvaille enregistrée est une candidate, pas une obligation d'achat. Si une annonce ne montre pas une mesure nécessaire, notez cette lacune au lieu de la combler mentalement. Le rôle d'un tableau est de rendre visibles les informations manquantes tant qu'il coûte encore peu de changer d'avis."
+          ]
+        },
+        {
+          "heading": "Lisez la fiche produit comme une entrée de répertoire",
+          "paragraphs": [
+            "Une fiche condense une annonce beaucoup plus vaste. Son titre peut être raccourci, traduit ou fourni par le catalogue source. Le prix affiché peut concerner une option plutôt que toutes les variantes. Considérez ces champs comme un moyen de retrouver l'offre d'origine, puis comparez la taille, la couleur, la quantité et la version précises que vous souhaitez. Un faible prix de départ ne suffit pas à classer équitablement deux produits si l'un inclut un accessoire et l'autre non.",
+            "Sur CSSBuy Home, les fiches produits et les galeries des vendeurs proviennent de cnfansge.com. Une image du vendeur illustre l'annonce ; elle ne prouve pas qu'un article particulier en entrepôt a été inspecté. Si le site ne peut pas fournir une fonction opérationnelle ou un type de photo vérifié, ne le déduisez pas d'une étiquette séduisante. Suivez le lien produit disponible et vérifiez ce qui est réellement présenté avant de considérer une fiche comme une preuve."
+          ]
+        },
+        {
+          "heading": "Construisez une comparaison qui distingue les offres différentes",
+          "paragraphs": [
+            "Créez cinq champs simples pour chaque candidat : option exacte, prix affiché, mesures importantes, questions en suspens et lien source. Ajoutez un sixième champ pour votre raison de le choisir. Ce dernier empêche le prix de remplacer discrètement l'objectif initial. Un produit un peu plus cher avec un tableau de mesures clair peut être un meilleur candidat qu'une annonce moins chère aux dimensions inconnues.",
+            "Séparez les exigences des préférences. Un sac doit contenir votre ordinateur portable ; une couleur de fermeture éclair préférée est négociable. Une chaussure doit vraisemblablement vous aller ; une boîte particulière peut avoir peu de valeur à vos yeux. Lorsque deux candidats échangent un avantage contre un autre, décrivez le compromis en une phrase. Par exemple : la première option a la largeur requise, mais aucune photo intérieure ; la seconde montre sa construction, mais pourrait être trop étroite. Cette phrase vous indique précisément la prochaine question à résoudre."
+          ]
+        },
+        {
+          "heading": "Ouvrez l'offre exacte avant de choisir une variante",
+          "paragraphs": [
+            "Le guide d'achat officiel de CSSBuy décrit la sélection des options du produit avant de soumettre une commande. Profitez de ce moment pour rapprocher l'annonce de votre sélection. Vérifiez les noms des options, la miniature associée à chacune et les notes éventuelles du vendeur. Une image de produit familière peut surplomber un menu de matériaux, éditions ou tailles différents. C'est l'option sélectionnée, et non l'image principale, qui définit ce que vous demandez au vendeur de fournir.",
+            "Consignez les détails d'identification en termes simples. Si une couleur possède un nom traduit inhabituel, enregistrez le nom et l'image de l'option correspondante. Si deux versions ne diffèrent que par une caractéristique, incluez-la dans vos notes. Évitez les instructions telles que « comme sur la photo » lorsqu'une page en contient beaucoup. Une instruction claire doit rester compréhensible pour quelqu'un qui ouvre la commande plus tard sans votre historique de navigation ni vos suppositions sur le produit."
+          ]
+        },
+        {
+          "heading": "Comprenez ce que chaque photographie peut vous apprendre",
+          "paragraphs": [
+            "La plupart des vérifications de photos de produits recouvrent trois questions différentes. Que propose le vendeur ? Qu'a reçu quelqu'un d'autre auparavant ? Qu'est-il arrivé pour votre commande particulière ? Les galeries des vendeurs répondent à la première question. Les photos publiques d'acheteurs peuvent contribuer à la deuxième si l'annonce et la variante correspondent. Les photos d'entrepôt propres à la commande répondent à la troisième. Mélanger ces catégories crée une confiance que les preuves ne justifient pas.",
+            "Utilisez les photographies pour vérifier un détail concret : l'emplacement d'une fermeture, le nombre de pièces, une mesure visible ou la couleur montrée sous plusieurs angles. Une photo ne peut pas établir le toucher d'un tissu après lavage ni la façon dont une chaussure vous ira. Si une décision dépend de ce que l'image ne montre pas, demandez l'information manquante ou choisissez un candidat mieux documenté. Des images supplémentaires ne sont utiles que si elles répondent à une question pertinente."
+          ]
+        },
+        {
+          "heading": "Budgétez l'achat au-delà du prix de l'annonce",
+          "paragraphs": [
+            "Établissez un total provisoire avec des lignes distinctes pour les marchandises, la livraison intérieure, les frais liés à l'achat, la livraison internationale, les services facultatifs et les éventuels frais à destination. Il s'agit d'une feuille de planification, pas d'un devis CSSBuy. Séparer les lignes rend évident ce qui est connu et ce qui est estimé. Cela évite aussi de confondre le paiement initial du produit avec le coût total pour recevoir l'article.",
+            "Utilisez une fourchette pour une livraison incertaine plutôt que de prétendre qu'un colis non pesé a un coût précis. Si un produit ne paraît intéressant qu'au bas de cette fourchette, la décision d'achat est fragile. Un article volumineux bon marché peut devenir peu avantageux après livraison ; un article compact peut présenter un autre profil de coûts. Comparez le total à une solution réaliste disponible localement, y compris la facilité des retours locaux, plutôt que de comparer seulement les deux prix annoncés."
+          ]
+        },
+        {
+          "heading": "Prévoyez une décision réfléchie avant l'expédition internationale",
+          "paragraphs": [
+            "Après l'arrivée d'une commande à l'entrepôt, faites une pause avant de l'inclure dans un colis. Comparez l'article visible à vos exigences enregistrées et à l'option commandée. Résolvez l'absence d'une pièce, une étiquette peu claire ou une interrogation sur une mesure tant que l'article reste accessible à l'inspection. Ne supposez pas qu'acheter plusieurs articles ensemble rend chacun d'entre eux digne d'être conservé.",
+            "Une note de décision utile comporte trois parties : ce que vous attendiez, ce que montrent les preuves et ce que vous souhaitez ensuite. Par exemple, vous attendiez une ouverture de sac assez large pour un ordinateur portable mesuré, mais les photos actuelles ne montrent pas cette ouverture. L'action suivante est une demande de mesure, pas une plainte générale selon laquelle le sac semble incorrect. Des notes claires réduisent les échanges répétitifs et permettent de distinguer un véritable écart d'une question sans réponse."
+          ]
+        },
+        {
+          "heading": "Gardez le tableau utile après la première commande",
+          "paragraphs": [
+            "Une fois l'article reçu, ajoutez un bref bilan à votre sélection : l'option reçue, la coupe réelle, ce que les photos ne montraient pas et si vous le choisiriez à nouveau. Séparez impressions subjectives et faits mesurables. « Trop court pour moi » est un retour personnel utile ; « manche mesurée à 58 centimètres selon ma méthode » est une mesure que quelqu'un d'autre peut interpréter. Aucune des deux ne doit devenir une affirmation universelle sur toutes les commandes futures de cette annonce.",
+            "Revérifiez un lien enregistré avant de recommander. Les annonces peuvent changer, les vendeurs ajouter des options et les détails utilisés la dernière fois ne plus être présents. Un bon tableau est un historique daté de décisions, pas une garantie permanente. Au fil du temps, la partie la plus précieuse est le raisonnement conservé : quelles mesures comptaient, quelles questions ont évité des erreurs et quels produits ont réellement rempli l'objectif fixé avant la recherche."
+          ]
+        }
+      ],
+      "takeaways": [
+        "Utilisez le catalogue pour découvrir des candidats, puis vérifiez l'option exacte du vendeur.",
+        "Distinguez les galeries des vendeurs des preuves d'entrepôt propres à votre commande.",
+        "Comparez un budget réaliste incluant la livraison et notez les questions non résolues avant de payer."
+      ],
+      "sourceIds": [
+        "buyforme",
+        "expertbuy",
+        "catalog"
+      ]
+    },
+    {
+      "id": "weidian",
+      "slug": "how-to-buy-weidian-cssbuy",
+      "title": "Comment acheter sur Weidian avec CSSBuy",
+      "description": "Suivez un produit Weidian depuis son identifiant d'origine jusqu'à la bonne option CSSBuy, avec des vérifications pratiques des notes, photos et décisions de commande.",
+      "category": "Guides d'achat",
+      "keywords": [
+        "comment acheter sur Weidian avec CSSBuy",
+        "CSSBuy Weidian",
+        "Weidian vers CSSBuy",
+        "liens CSSBuy"
+      ],
+      "intro": "Un lien Weidian est le point de départ d'une commande, pas une instruction de commande complète. Vous devez encore identifier l'annonce exacte, sélectionner la bonne option et décider si son prix, ses mesures et les conditions du vendeur répondent à vos besoins. Les erreurs les plus évitables surviennent quand un lien est correctement converti, mais que l'acheteur suppose que l'image, le nom de taille ou la sélection par défaut décrivent déjà l'article souhaité. Ce parcours se concentre sur ces décisions. Il utilise la structure de lien CSSBuy fournie pour CSSBuy Home tout en maintenant les actions de compte, paiements et échanges après-vente sur CSSBuy même.",
+      "sections": [
+        {
+          "heading": "Identifiez l'article d'origine sur la place de marché",
+          "paragraphs": [
+            "Commencez par l'identifiant d'origine de l'article Weidian, pas par un numéro interne de répertoire. Un site de recommandations peut attribuer son propre identifiant de fiche pour afficher un produit ; ce numéro est utile dans le répertoire, mais peut n'avoir aucun sens pour la place de marché. Dans ce projet, l'exemple fourni utilise l'identifiant produit Weidian 7755101935. Sa destination CSSBuy est https://www.cssbuy.com/shop/goodsDetail?type=micro&id=7755101935. La valeur après id identifie l'article de la place de marché, tandis que type=micro sélectionne ce format source.",
+            "Ne remplacez pas cet identifiant par un numéro de page du catalogue et ne supposez pas que tous les longs nombres d'une URL sont interchangeables. Conservez le lien d'origine à côté du lien converti quand vous enregistrez un candidat. Si la destination ouvre un produit inattendu, arrêtez-vous et comparez les titres, images d'options et identifiants. Une page qui fonctionne ne prouve pas à elle seule que la conversion a conservé l'article que vous vouliez commander."
+          ]
+        },
+        {
+          "heading": "Confirmez l'annonce avant d'interpréter le prix",
+          "paragraphs": [
+            "Lisez la destination comme un nouvel examen de l'annonce. Vérifiez que le titre, les images et les informations du vendeur correspondent à votre source. Modifiez ensuite les sélecteurs d'options et observez si la description ou le prix change. Certaines annonces organisent plusieurs produits apparentés sur une même page. D'autres utilisent des choix distinguant un ensemble d'une pièce unique. Comparer le prix affiché le plus bas à l'ensemble complet d'un autre vendeur serait trompeur.",
+            "Décrivez le contenu attendu en une phrase avant de poursuivre. Par exemple : un sac bleu marine de la plus grande taille, avec la bandoulière montrée pour cette option. Il s'agit d'une instruction illustrative, pas d'une description du produit exemple. La phrase vous oblige à identifier quantité, couleur, taille et pièces incluses. Si l'annonce ne permet pas de soutenir clairement cette phrase, résolvez l'incertitude avant de traiter le prix actuel comme votre prix d'achat."
+          ]
+        },
+        {
+          "heading": "Rendez les instructions de variante sans ambiguïté",
+          "paragraphs": [
+            "Les noms de couleurs et les tailles peuvent devenir peu clairs après traduction. Conservez si possible le libellé d'option du vendeur et ajoutez une courte précision en langage simple. Si plusieurs images montrent des couleurs semblables, référez-vous à l'option sélectionnée plutôt qu'à la position d'une image dans une galerie défilante. Les mises en page peuvent changer ; un nom d'option et une image enregistrée constituent une référence plus durable.",
+            "Pour les vêtements, reliez la taille du vendeur choisie au tableau de mesures utilisé. Pour les autres marchandises, identifiez les dimensions ou informations de compatibilité pertinentes. Évitez de combiner deux instructions contradictoires, comme choisir une taille dans le menu et en demander une autre dans une note. Si vous devez changer la sélection, explicitez l'instruction finale et vérifiez que la commande la reflète. Un agent ne devrait pas devoir décider laquelle de vos notes contradictoires est actuelle."
+          ]
+        },
+        {
+          "heading": "Vérifiez le risque avant de payer un vendeur inconnu",
+          "paragraphs": [
+            "La page Expert Buy de CSSBuy avertit que certains canaux de vendeurs peuvent limiter le recouvrement si le vendeur ne livre pas ou refuse un retour. Voyez-y une raison d'examiner la transaction particulière plutôt qu'une promesse qu'un agent peut annuler tout paiement. Un lien de place de marché et une galerie d'aspect professionnel ne remplacent pas des conditions de vente claires et une offre de produit compréhensible.",
+            "Demandez-vous quelle preuve changerait votre décision. Si c'est une mesure, demandez-la. Si c'est la preuve qu'une caractéristique est incluse, demandez une description claire. Si la réponse du vendeur reste ambiguë, limitez votre exposition en renonçant à l'achat plutôt qu'en inventant une interprétation favorable. Un prix bas peut faire paraître une commande incertaine inoffensive, mais des achats incertains répétés peuvent consommer le budget et le temps disponibles pour les articles que vous voulez réellement."
+          ]
+        },
+        {
+          "heading": "Séparez financièrement la commande initiale du colis",
+          "paragraphs": [
+            "Distinguez votre décision d'achat de votre décision de livraison. Notez le total des marchandises et tout montant de livraison intérieure affiché pour la commande, puis réservez de l'argent pour les étapes suivantes. Cette réserve doit refléter l'incertitude sur le colis final plutôt qu'un mode d'expédition supposé le moins cher. Un article peut coûter peu à l'achat et beaucoup à l'envoi en raison de sa forme, de son emballage ou des restrictions d'expédition.",
+            "Une feuille simple peut comporter une colonne de montant et une colonne de degré de certitude. Ne marquez le prix de l'article sélectionné comme confirmé qu'après examen de la commande actuelle ; indiquez une première estimation internationale comme provisoire. Lorsque des frais changent, mettez à jour cette ligne au lieu d'ajuster mentalement un total global. Cette approche aide aussi à expliquer un écart inattendu : il devient clair si le changement vient de l'option produit, de la livraison, d'un service facultatif ou de la conversion monétaire."
+          ]
+        },
+        {
+          "heading": "Utilisez la conversation de commande pour résoudre un point à la fois",
+          "paragraphs": [
+            "Un message efficace identifie la commande, décrit l'écart et demande une action précise. « Veuillez confirmer que l'option sélectionnée inclut la bandoulière amovible » est plus facile à traiter que « Est-ce bien ? ». Gardez chaque message suffisamment ciblé pour qu'une réponse puisse clore la question. Lorsqu'une réponse introduit un nouveau prix ou une option de remplacement, comparez-la à vos exigences initiales avant d'accepter.",
+            "Conservez une courte trace des décisions de modification. Notez ce qui a changé, pourquoi vous l'avez accepté et la date. C'est particulièrement utile lorsqu'un article devient indisponible et qu'une alternative est proposée. Des photos semblables ne prouvent pas que le remplacement possède les mêmes mesures ou matériaux. Traitez un substitut sensiblement différent comme un nouveau candidat, avec ses propres vérifications, plutôt que de laisser la commodité de poursuivre une commande existante déterminer l'achat."
+          ]
+        },
+        {
+          "heading": "Examinez l'article reçu par rapport à votre propre commande",
+          "paragraphs": [
+            "Quand les preuves d'entrepôt sont disponibles, comparez-les à l'option et aux exigences enregistrées. Commencez par l'identité et la quantité, puis l'état visible, les étiquettes, les accessoires et les mesures importantes pour vous. Les images de la galerie du vendeur restent une référence utile, mais ne sont pas des photos de votre article reçu. De même, les photos d'un autre acheteur peuvent concerner une autre taille ou une version antérieure.",
+            "Si une photo manque de clarté, distinguez l'incertitude d'un défaut confirmé. Une ombre peut ressembler à une tache ; une manche pliée peut masquer sa longueur. Demandez une vue qui résout la question au lieu de conclure à partir d'un angle ambigu. Lorsqu'un problème est visible, documentez-le précisément et demandez une réponse propre à la commande avant d'inclure l'article dans un colis international. Votre décision doit reposer sur les preuves disponibles et vos exigences, pas sur la pression de terminer un achat groupé."
+          ]
+        },
+        {
+          "heading": "Sachez quand le lien a terminé son travail",
+          "paragraphs": [
+            "Une fois le bon article commandé, le lien d'origine devient une référence plutôt que l'endroit où gérer la transaction. Gardez les numéros de commande, paiements, décisions d'entrepôt et suivi de colis dans le compte officiel. Un site de découverte ne peut pas résoudre un problème d'envoi du vendeur simplement parce qu'il a fourni le premier lien. Si vous avez besoin d'aide, donnez l'identifiant officiel de commande et les preuves pertinentes pour celle-ci.",
+            "Après livraison, comparez le résultat à la description enregistrée et notez les enseignements pour un prochain achat. Peut-être que les options étaient clairement nommées, mais que le tableau des tailles utilisait une méthode de mesure inhabituelle. Peut-être que l'emballage a davantage influencé le budget de livraison que prévu. Ces observations sont plus utiles que de déclarer toute une place de marché bonne ou mauvaise sur la base d'une commande. Un achat Weidian soigneux est une série de petites décisions vérifiées, commençant par le bon identifiant et aboutissant à un produit qui remplit votre objectif déclaré."
+          ]
+        }
+      ],
+      "takeaways": [
+        "Utilisez l'identifiant produit Weidian d'origine dans la destination CSSBuy.",
+        "Clarifiez la variante, la taille et le contenu avant de soumettre une commande.",
+        "Gardez les vérifications du risque vendeur et les décisions d'entrepôt propres à la transaction."
+      ],
+      "sourceIds": [
+        "buyforme",
+        "expertbuy",
+        "user-link"
+      ]
+    },
+    {
+      "id": "qc",
+      "slug": "cssbuy-qc-photos-guide",
+      "title": "Photos QC CSSBuy : liste pratique de vérification",
+      "description": "Une méthode structurée pour examiner les photos de l'entrepôt, distinguer les images du vendeur et demander des mesures utiles avant l'envoi d'un colis.",
+      "category": "Entrepôt et QC",
+      "keywords": [
+        "QC CSSBuy",
+        "photos QC CSSBuy",
+        "contrôle qualité CSSBuy",
+        "photos d’entrepôt"
+      ],
+      "intro": "Les photographies de contrôle qualité sont surtout utiles lorsqu'on les aborde avec une question. Cet article correspond-il à l'option commandée ? Les accessoires nécessaires sont-ils présents ? La mesure convient-elle à vos besoins ? Parcourir simplement une galerie et décider qu'un article semble correct peut laisser passer des détails importants après la livraison. Ce guide explique un ordre d'examen pratique et les limites des preuves visuelles. Les pages officielles de service de CSSBuy décrivent l'inspection en entrepôt et les photographies. CSSBuy Home ne considère pas les galeries de vendeurs fournies par cnfansge.com comme du QC d'entrepôt vérifié, et une fiche produit ne doit jamais être lue comme un certificat d'inspection.",
+      "sections": [
+        {
+          "heading": "Identifiez à qui appartient l'article et quelle image vous regardez",
+          "paragraphs": [
+            "Avant d'inspecter les détails, identifiez la preuve. Une photographie du vendeur présente une offre. Une photographie publique d'acheteur consigne l'achat de quelqu'un d'autre. Une photographie d'entrepôt associée à votre commande montre votre article reçu à un moment particulier. Ces catégories peuvent se compléter, mais répondent à des questions différentes. Une image publique détaillée ne prouve pas l'état d'une unité qui n'est pas encore arrivée pour vous.",
+            "Vérifiez la référence de commande et l'option sélectionnée avant de comparer les images. Deux articles peuvent porter le même nom de modèle tout en différant par la couleur, la taille, les matériaux ou les composants inclus. Si vous ne pouvez pas associer une image à l'option pertinente, gardez-la comme information de contexte. Cela évite qu'une image particulièrement séduisante devienne la norme utilisée pour juger une variante sans rapport. La comparaison la plus solide commence par une trace claire de ce que vous avez exactement demandé à acheter."
+          ]
+        },
+        {
+          "heading": "Vérifiez l'identité et la quantité avant les petits détails",
+          "paragraphs": [
+            "Commencez par les faits qui pourraient rendre toute la commande incorrecte : type d'article, couleur choisie, étiquette de taille, nombre de pièces et accessoires essentiels. Un gros plan des coutures détourne l'attention si le colis contient la mauvaise taille. Allez de l'article entier vers ses composants et marquez chaque caractéristique requise comme visible, peu claire ou incompatible avec la commande. « Peu clair » est un résultat légitime : il indique où une autre vue pourrait être utile.",
+            "Pour un produit composé de plusieurs pièces, comptez les éléments par rapport à la description de l'annonce. Une paire, un ensemble et un article unique peuvent sembler semblables sur une photographie chargée. Pour un sac ou un vêtement, vérifiez les parties amovibles séparément de l'article principal. Ne supposez pas qu'un accessoire est inclus parce qu'il apparaît dans une image de mise en scène sans rapport. L'option commandée et son contenu déclaré sont la référence, tandis que les photographies d'entrepôt montrent ce qui a réellement été présenté à l'inspection."
+          ]
+        },
+        {
+          "heading": "Distinguez un problème visible d'un problème d'éclairage",
+          "paragraphs": [
+            "La couleur et l'aspect de surface dépendent de l'éclairage, des réglages de l'appareil et de l'écran utilisé pour voir l'image. Cela ne rend pas les photographies inutiles ; cela signifie que les petites différences ont besoin de contexte. Recherchez une cohérence entre plusieurs angles. Une marque visible au même endroit sur plusieurs photographies appelle une réponse différente d'une zone sombre qui se déplace avec une ombre.",
+            "Décrivez l'observation avant d'en nommer la cause. « Il y a une zone sombre à côté de la couture gauche sur la vue de face » est plus précis que « Le tissu est taché ». La première formulation permet à quelqu'un d'examiner la zone et de déterminer s'il s'agit d'une marque, d'une ombre ou d'un pli. Si la couleur exacte est essentielle à l'achat, des photographies ordinaires peuvent ne pas résoudre entièrement la question. Décidez si cette incertitude résiduelle est acceptable plutôt que de traiter une image à l'écran comme une mesure de couleur normalisée."
+          ]
+        },
+        {
+          "heading": "Demandez des mesures qui répondent à une question de taille",
+          "paragraphs": [
+            "Choisissez les mesures en fonction de la décision à prendre. Pour un haut, la question utile peut être de savoir si la largeur de poitrine et la longueur ressemblent à un vêtement que vous portez déjà confortablement. Pour un sac, ce peut être l'ouverture utilisable plutôt que la largeur extérieure. Pour des chaussures, précisez si un chiffre concerne le pied, la semelle intérieure ou une autre partie avant de le comparer à votre référence.",
+            "Une demande utile nomme la dimension, les points de départ et d'arrivée et la position de l'article. « Veuillez montrer la largeur de poitrine avec le vêtement posé à plat » constitue une tâche plus claire que « Veuillez vérifier la taille ». Ne demandez pas toutes les dimensions possibles par habitude. Donnez la priorité aux mesures qui changeraient réellement votre décision et demandez à CSSBuy si le service supplémentaire souhaité est disponible et payant avant de supposer qu'il est inclus."
+          ]
+        },
+        {
+          "heading": "Utilisez une référence cohérente plutôt qu'une règle universelle de taille",
+          "paragraphs": [
+            "Mesurez un article comparable que vous possédez avec la même méthode que la mesure demandée à l'entrepôt. Une veste ample est une meilleure référence pour une autre veste ample qu'une chemise ajustée. Pour un pantalon, le tour de taille seul n'explique pas toujours la coupe ; la hauteur de fourche et l'aisance des cuisses peuvent compter autant. L'objectif est une comparaison à paramètres identiques qui relie un chiffre visible à votre propre expérience.",
+            "Tenez compte des limites de la mesure manuelle et du fait que les matières souples changent de forme. Une petite différence de positionnement peut modifier la lecture. Évitez de donner à un chiffre photographié plus de précision que la méthode ne le permet. Si votre plage acceptable de taille est extrêmement étroite, expliquez cette exigence avant d'acheter ou choisissez un produit essayable localement. Les photographies réduisent certaines incertitudes, mais ne simulent ni le mouvement, ni le confort, ni le tombé du tissu sur votre corps."
+          ]
+        },
+        {
+          "heading": "Formulez des demandes assez précises pour clore une question",
+          "paragraphs": [
+            "Regroupez vos observations dans une note courte et organisée plutôt que d'envoyer une série de messages décousus. Identifiez l'article, désignez la photo pertinente et demandez une action concrète. Par exemple : « L'étiquette est masquée dans la vue actuelle. Veuillez confirmer la taille sélectionnée et montrer l'étiquette. » Si deux questions dépendent de la même vue supplémentaire, combinez-les. Si une réponse résout la question, consignez le résultat et poursuivez.",
+            "Évitez les formulations exigeant une garantie générale, comme demander si l'article est parfait ou s'il vous ira à coup sûr. Ce sont des conclusions que la photographie ne peut pas établir. Interrogez plutôt la caractéristique observable à l'origine de votre inquiétude. Cela rend l'assistance plus efficace et vous laisse des preuves à évaluer. Une inspection utile aboutit à une décision ou à une incertitude restante clairement définie, plutôt qu'à une recherche sans fin de réassurance."
+          ]
+        },
+        {
+          "heading": "Choisissez de conserver, d'examiner davantage ou de demander un retour",
+          "paragraphs": [
+            "Une fois les preuves pertinentes examinées, attribuez une décision à l'article. Conserver signifie que l'article visible répond suffisamment à vos exigences pour poursuivre. Examiner davantage signifie qu'une question précise sans réponse pourrait modifier cette décision. Demander un retour signifie que les preuves disponibles identifient un problème ou que l'article ne répond plus à vos besoins, sous réserve du processus applicable du vendeur et de CSSBuy.",
+            "Ne laissez pas le montant déjà dépensé imposer la décision suivante. Avoir payé un article indésirable ne rend pas raisonnable de payer son expédition internationale. De même, une petite différence esthétique qui vous importe peu ne justifie pas forcément le temps et le coût d'un retour. Comparez les options disponibles à partir de maintenant. Notez la raison de votre choix pour qu'une décision ultérieure concernant le colis reflète ce que vous avez réellement accepté, plutôt qu'un vague souvenir de photos qui semblaient correctes."
+          ]
+        },
+        {
+          "heading": "Comprenez les limites d'une vérification par photographie",
+          "paragraphs": [
+            "Une inspection visuelle ne peut pas prouver la durabilité à long terme, la construction interne, la sécurité électronique ou l'authenticité. Une apparence soignée n'établit pas qu'un article respecte les normes pertinentes pour son usage prévu. Pour les produits dont la défaillance pourrait causer un préjudice, recherchez une documentation appropriée et des conseils qualifiés plutôt que de vous fier à une galerie d'entrepôt. Une image prouve une apparence, elle ne remplace pas des essais.",
+            "Après livraison, comparez votre expérience à ce que montraient les photographies. Si un problème était invisible, notez cette limite pour des achats similaires. Si une demande de mesure a évité une erreur de taille, réutilisez la méthode. Cette boucle de retour améliore les décisions futures sans prétendre qu'une inspection peut éliminer toute incertitude. L'intérêt du QC est de poser des questions auxquelles on peut répondre à un moment utile du processus et d'agir sur les réponses avant que le produit devienne plus difficile à retourner ou à examiner."
+          ]
+        }
+      ],
+      "takeaways": [
+        "Distinguez les images du vendeur, les photos publiques d'acheteurs et vos propres photos d'entrepôt.",
+        "Donnez la priorité à l'identité, à la quantité et aux mesures susceptibles de changer votre décision.",
+        "Traitez les photographies comme des preuves de détails visibles, pas comme des garanties de taille ou d'authenticité."
+      ],
+      "sourceIds": [
+        "buyforme",
+        "shipforme",
+        "catalog"
+      ]
+    },
+    {
+      "id": "cost",
+      "slug": "cssbuy-shipping-cost",
+      "title": "Frais de livraison CSSBuy : comment estimer votre total",
+      "description": "Comprenez les paramètres des coûts de colis et comparez emballage, poids facturable et devis d'expédition sans vous fier à un prix fixe au kilogramme.",
+      "category": "Livraison",
+      "keywords": [
+        "frais de livraison CSSBuy",
+        "calculateur de livraison CSSBuy",
+        "poids volumétrique CSSBuy",
+        "estimation de livraison CSSBuy"
+      ],
+      "intro": "Il n'existe pas de réponse universelle utile à « Combien coûte la livraison CSSBuy ? » sans destination, mode d'expédition admissible et description du colis emballé. Un prix repris de la commande de quelqu'un d'autre peut être un exemple intéressant, mais ne constitue pas un devis pour la vôtre. Ce guide montre comment établir une estimation qui reste utile à mesure que les informations s'améliorent. Il ne s'agit pas de prédire au centime près un colis non préparé, mais de comprendre quels paramètres peuvent changer le résultat, de réserver un budget suffisant et de comparer les options finales sur une base équivalente.",
+      "sections": [
+        {
+          "heading": "Séparez la question en paramètres connus et inconnus",
+          "paragraphs": [
+            "Commencez par lister ce que vous savez : pays et région de destination, quantités de produits, dimensions approximatives des articles et besoins particuliers de manutention. Listez ensuite ce qui reste incertain : poids après emballage, dimensions du carton, modes d'expédition disponibles et services facultatifs. Un calculateur ne peut être plus informatif que ces paramètres. Saisir un poids deviné avec optimisme produit un résultat optimiste, pas plus précis.",
+            "Datez chaque estimation enregistrée et conservez les paramètres qui l'ont produite. Vous pourrez ainsi expliquer une modification ultérieure sans supposer un problème. Un devis pour une destination ou une taille de colis ne doit pas être comparé directement à un autre scénario. Si les marchandises contiennent des batteries, liquides, composants fragiles ou autres caractéristiques potentiellement restreintes, vérifiez d'abord l'admissibilité à l'expédition. Le mode affiché le moins cher est sans intérêt si le colis réel ne peut pas l'emprunter."
+          ]
+        },
+        {
+          "heading": "Distinguez le poids physique du poids utilisé pour tarifer l'expédition",
+          "paragraphs": [
+            "Un colis possède une masse physique, mais un transporteur peut aussi tarifer l'espace qu'il occupe. Les règles du mode d'expédition applicable déterminent comment ces mesures deviennent un prix. Ne supposez pas que tous les modes utilisent le même diviseur volumétrique, le même pas d'arrondi ou la même règle de comparaison. Consultez les détails actuels du calculateur et de l'expédition, et conservez la règle avec l'estimation.",
+            "Prenez un carton hypothétique mesurant 40 sur 30 sur 25 centimètres. Son volume est de 30,000 centimètres cubes. Avec un diviseur illustratif de 6,000, cela correspondrait à 5 kilogrammes de poids volumétrique ; avec un diviseur illustratif de 5,000, à 6 kilogrammes. Ce sont des exemples mathématiques, pas des caractéristiques d'un mode d'expédition CSSBuy. Ils montrent pourquoi copier un diviseur depuis un guide de livraison sans rapport peut modifier sensiblement votre budget alors que le colis physique ne change pas."
+          ]
+        },
+        {
+          "heading": "Tenez compte de l'emballage, pas seulement du contenu",
+          "paragraphs": [
+            "La somme des poids des produits n'est pas nécessairement celle d'un colis prêt à partir. La protection, l'emballage extérieur, les boîtes commerciales conservées et l'espace vide influencent le résultat. Un ensemble compact de vêtements souples n'a pas les mêmes besoins d'emballage qu'un objet fragile. Pensez au colis physique que vous accepteriez de recevoir plutôt que de supposer que tout emballage peut être retiré sans conséquence.",
+            "Identifiez l'emballage qui a de la valeur pour vous. Une boîte commerciale peut servir au rangement, à un cadeau ou à protéger une forme délicate. Une autre boîte peut ajouter du volume sans servir votre usage prévu. Si vous demandez des changements, décrivez-les article par article et demandez s'ils sont appropriés. La comparaison pertinente n'oppose pas simplement plus petit et plus grand ; elle associe la différence de coût à la protection et à l'utilité abandonnées. Ne retirez pas des matériaux importants uniquement pour atteindre un seuil de poids supposé."
+          ]
+        },
+        {
+          "heading": "Testez plusieurs scénarios réalistes",
+          "paragraphs": [
+            "Construisez un scénario de base et un scénario plausible plus coûteux avant de vous engager sur les marchandises. Le premier doit utiliser vos meilleures estimations disponibles, le second prévoir un poids ou volume emballé supérieur et un mode admissible moins favorable. Si les deux restent abordables, l'achat est plus robuste. Si seul le scénario le plus optimiste fonctionne, envisagez de réduire la commande ou de choisir un produit moins encombrant.",
+            "Gardez les scénarios précis. Au lieu d'ajouter partout un pourcentage inexpliqué, identifiez l'incertitude : taille de carton inconnue, manteau non mesuré ou mode d'expédition susceptible de refuser un article. Vous pourrez ensuite réduire cette incertitude par une question ciblée. Une fourchette sert à guider une décision, pas à donner à l'estimation une apparence sophistiquée. Deux scénarios bien expliqués sont plus utiles qu'un grand tableau de chiffres sans fondement."
+          ]
+        },
+        {
+          "heading": "Comparez les modes d'expédition avec la même description de colis",
+          "paragraphs": [
+            "Lorsque les options d'expédition deviennent disponibles, comparez-les pour la même destination, le même poids et les mêmes dimensions. Lisez ce qui est inclus et ce qui reste séparé. Un montant annoncé plus bas peut s'accompagner de restrictions, d'attentes de service ou de garanties facultatives différentes. Notez le montant proposé, les limites de colis applicables et les conditions importantes pour vos marchandises. Évitez de classer les services uniquement selon la notoriété de leur nom.",
+            "Le délai doit faire partie de cette comparaison sans devenir une promesse. Si vous avez besoin des marchandises pour un événement fixe, évaluez les conséquences d'un retard plutôt que de choisir un mode parce qu'un autre acheteur a signalé une livraison rapide. Distinguez aussi le devis d'expédition des éventuels frais à destination propres à votre situation. Si le traitement d'un montant facturé n'est pas clair, demandez une précision avant de payer ; ne le déduisez pas du nom commercial du mode d'expédition."
+          ]
+        },
+        {
+          "heading": "Évaluez le regroupement par une vraie comparaison",
+          "paragraphs": [
+            "Regrouper des articles peut réduire les emballages en double ou les frais de départ répétés, mais le colis regroupé peut aussi franchir une limite de taille ou de poids. La question utile est de savoir s'il fonctionne mieux selon les règles d'expédition disponibles. Comparez un colis regroupé plausible à des colis séparés plausibles, en incluant emballage et manutention supplémentaire. Ne comparez pas un colis regroupé entièrement emballé à des articles individuels imaginaires sans emballage.",
+            "Pensez à la compatibilité autant qu'au prix. Un objet fragile et un article lourd et dense peuvent nécessiter des protections différentes. Un seul article restreint peut limiter les modes disponibles pour tout ce qui est emballé avec lui. Séparer les articles peut parfois préserver une meilleure option pour les autres, tandis que les regrouper peut parfois simplifier la manutention. Il n'existe pas de meilleure réponse universelle ; la décision doit venir des articles réels, des devis actuels et de votre volonté d'accepter les compromis concernés."
+          ]
+        },
+        {
+          "heading": "Rapprochez les estimations du montant finalement facturé",
+          "paragraphs": [
+            "Le guide d'achat de CSSBuy distingue l'acompte de livraison internationale du montant final fondé sur les mesures vérifiées du colis. Conservez cette distinction dans vos notes. Une première estimation, un acompte et un montant final sont des écritures différentes, même si leurs montants coïncident. Lorsque le compte est mis à jour, comparez la variation aux détails du colis plutôt que de traiter l'estimation initiale comme un tarif garanti.",
+            "Gardez assez d'informations pour poser une question précise si une différence reste obscure. Les détails utiles comprennent l'identifiant du colis, les mesures estimées et finales, le mode choisi et les lignes affichées dans le compte. Un message contenant ces faits est plus exploitable qu'une remarque disant que la livraison est devenue chère. Vérifiez si un ajustement de solde ou un autre paiement est enregistré avant de supposer le résultat, et fiez-vous au compte officiel pour l'état de tout mouvement d'argent."
+          ]
+        },
+        {
+          "heading": "Évaluez l'intérêt au niveau du produit livré",
+          "paragraphs": [
+            "Le test final consiste à voir si le produit reste intéressant une fois le budget complet de livraison pris en compte. Un article volumineux bon marché peut coûter plus cher à recevoir qu'une solution locale. Un article compact plus cher peut aboutir à un autre résultat. Incluez la valeur de votre temps et la difficulté pratique d'un retour, surtout lorsque la taille ou l'adéquation du produit restent incertaines.",
+            "Après livraison, conservez les mesures et coûts du colis comme référence personnelle. Ils peuvent améliorer la prochaine estimation d'un colis similaire, mais doivent rester datés et identifiés comme historiques. Tarifs, modes d'expédition et emballages de produits peuvent changer. Le meilleur calculateur de livraison fait donc partie d'un processus de décision : il aide à tester tôt vos hypothèses, à les actualiser lorsque les informations de l'entrepôt s'améliorent et à choisir un mode actuel selon le colis que vous comptez réellement envoyer."
+          ]
+        }
+      ],
+      "takeaways": [
+        "Conservez la destination, les dimensions, le poids et la date avec chaque estimation.",
+        "Utilisez les règles réelles de chaque mode d'expédition ; les diviseurs illustratifs ne sont pas des tarifs en vigueur.",
+        "Comparez des scénarios complets de colis et rapprochez-les du montant final facturé au compte."
+      ],
+      "sourceIds": [
+        "buyforme",
+        "estimates",
+        "shipforme"
+      ]
+    },
+    {
+      "id": "time",
+      "slug": "cssbuy-shipping-time",
+      "title": "Combien de temps prend CSSBuy ? Le calendrier d’une commande",
+      "description": "Distinguez l'envoi du vendeur, les décisions d'entrepôt, le transit international et la livraison finale pour mieux planifier et poser vos questions de suivi.",
+      "category": "Livraison",
+      "keywords": [
+        "délai de livraison CSSBuy",
+        "combien de temps prend CSSBuy",
+        "statut de commande CSSBuy",
+        "suivi CSSBuy"
+      ],
+      "intro": "Une estimation de livraison est difficile à interpréter sans savoir quand son décompte commence. Le temps passé à attendre un vendeur, examiner un article en entrepôt ou décider quoi regrouper diffère du temps de transit international. Ce guide décompose le parcours en étapes pratiques et montre comment examiner un retard sans transformer l'expérience d'un autre acheteur en promesse pour votre commande. Pour une transaction particulière, utilisez les informations actuelles de votre compte CSSBuy ; le calendrier présenté ici est un cadre de planification, pas un délai garanti.",
+      "sections": [
+        {
+          "heading": "Tracez le calendrier avant de comparer les délais annoncés",
+          "paragraphs": [
+            "Décrivez le parcours comme une séquence : commande soumise, achat organisé, envoi par le vendeur, réception à l'entrepôt, inspection et décisions, préparation du colis, transport international et livraison finale. Le guide d'achat officiel de CSSBuy décrit ces étapes distinctes. Dire qu'un colis est arrivé en un certain nombre de jours peut ne mesurer qu'une partie de cette séquence. Avant de comparer les exemples, demandez quels événements de départ et de fin ont été retenus.",
+            "Cette distinction compte pour prévoir un cadeau ou un événement. Un service international rapide ne peut pas rattraper le temps passé à attendre un produit qui n'est pas prêt à partir. De même, un colis en attente de votre propre approbation ne subit pas un retard du transporteur. Ajoutez votre temps de décision au plan et choisissez une date d'arrivée limite acceptable. Si manquer cette date rendrait l'achat inutile, une commande internationale incertaine peut être inadaptée, quelle que soit l'estimation de transit annoncée."
+          ]
+        },
+        {
+          "heading": "Distinguez une commande d'un produit expédié",
+          "paragraphs": [
+            "Soumettre une commande vous indique ce que vous avez demandé. Cela ne prouve pas, à lui seul, qu'un vendeur a remis un colis. Des questions de stock, des précisions de variante ou des modifications de l'offre peuvent exiger une réponse avant que l'achat avance. Lisez le statut réel et les messages au lieu de déduire un mouvement de la date de paiement.",
+            "Lorsqu'un achat semble bloqué, posez une question propre à l'étape : l'article a-t-il été acheté, le vendeur a-t-il confirmé sa disponibilité, ou a-t-on besoin d'informations de ma part ? Indiquez l'identifiant de commande et l'option concernée. Évitez d'ouvrir plusieurs conversations déconnectées sur le même sujet. Une courte trace du dernier événement confirmé et de la prochaine action nécessaire permet de voir plus facilement si la situation a changé et évite des questions répétées sans le contexte nécessaire à l'assistance."
+          ]
+        },
+        {
+          "heading": "Considérez l'entrepôt comme une étape de décision",
+          "paragraphs": [
+            "L'arrivée à l'entrepôt est un jalon utile, mais n'équivaut pas au départ vers votre adresse. Vous devrez peut-être encore examiner les photos, résoudre un problème, attendre un autre article ou choisir l'emballage et le mode d'expédition. Chacune de ces décisions a un but. Prévoyez du temps pour elles au lieu de traiter l'entrepôt comme un lieu où une commande doit instantanément devenir un colis international.",
+            "Fixez-vous un rappel d'examen quand un article arrive. Vérifiez rapidement les informations et identifiez toute question pouvant influencer la conservation ou le retour. Si vous attendez une autre commande, comparez l'avantage de la regrouper au coût et à l'incertitude de l'attente. Un dernier article lent ne doit pas automatiquement imposer le calendrier de tout le reste. Vérifiez les échéances de stockage applicables dans le compte avant de laisser se développer un plan de regroupement sans limite."
+          ]
+        },
+        {
+          "heading": "Comprenez ce qu'un événement de suivi indique réellement",
+          "paragraphs": [
+            "Lisez ensemble le texte, le lieu et l'horodatage de l'événement. Une étiquette ou un identifiant de suivi peut exister avant qu'un colis ait terminé toutes les remises. Un événement ultérieur peut refléter le traitement dans un centre plutôt qu'un déplacement direct vers la destination. La question utile est de savoir quelle étape physique ou administrative l'événement confirme, pas si sa formulation paraît rassurante.",
+            "Conservez le numéro de suivi et le dernier événement significatif quand vous demandez de l'aide. Indiquez la date de consultation, car une capture d'écran sans contexte peut devenir vite obsolète. Une période silencieuse n'en identifie pas à elle seule la cause. Si les indications propres au mode d'expédition justifient une enquête, fournissez les faits nécessaires. Ne supposez pas qu'actualiser sans cesse la page ou comparer des suivis sans rapport révélera un événement qui n'a pas encore été signalé."
+          ]
+        },
+        {
+          "heading": "Planifiez avec l'incertitude plutôt que d'annoncer une date",
+          "paragraphs": [
+            "Utilisez une fourchette pour planifier et gardez visibles les conséquences d'un retard. Si vous commandez des vêtements du quotidien sans date limite, une arrivée tardive peut être un désagrément. Si vous avez besoin d'équipement pour un voyage précis, le même retard peut rendre l'achat inutile. Votre tolérance à l'incertitude doit influencer l'achat avant le paiement, pas seulement le choix du mode d'expédition après l'arrivée à l'entrepôt.",
+            "Ne prenez pas un ancien témoignage de livraison communautaire pour un engagement de service actuel. Des destinations, saisons, marchandises et modes d'expédition différents créent des conditions différentes. Même une estimation officielle actuelle doit être lue avec sa portée et ses limites. Pour un besoin urgent, envisagez une solution de secours qui ne dépend pas du même envoi. Le but pratique est d'empêcher une seule livraison incertaine de conditionner un projet important, plutôt que de prédire chaque événement de transport."
+          ]
+        },
+        {
+          "heading": "Tenez un historique de livraison fondé sur des preuves",
+          "paragraphs": [
+            "Conservez un journal compact indiquant la date, l'étape confirmée et toute action effectuée. Quelques lignes dans vos notes peuvent suffire. Séparez les faits observés des attentes : « photos d'entrepôt disponibles » est un fait, tandis que « devrait partir demain » est une attente sauf confirmation dans le compte officiel. Cette distinction clarifie les questions ultérieures et permet d'évaluer où le temps est réellement passé.",
+            "Après livraison, notez la durée totale de la commande à la porte et la durée du transit international si les dates pertinentes sont disponibles. Utilisez le résultat comme exemple historique, pas comme prévision. Lors d'une nouvelle commande, l'amélioration la plus utile peut être de répondre plus vite aux questions ou de choisir des articles à la disponibilité plus claire, plutôt que de rechercher un mode ayant un jour produit le délai anecdotique le plus court. Une bonne planification se concentre sur les étapes compréhensibles et les décisions que vous pouvez prendre."
+          ]
+        }
+      ],
+      "takeaways": [
+        "Demandez où commence et où finit une estimation de livraison.",
+        "Distinguez les temps du vendeur, de l'entrepôt, des décisions de l'acheteur et du transporteur.",
+        "Utilisez les identifiants officiels de commande et de colis dans vos demandes d'aide."
+      ],
+      "sourceIds": [
+        "buyforme",
+        "storage"
+      ]
+    },
+    {
+      "id": "warehouse",
+      "slug": "cssbuy-warehouse-consolidation",
+      "title": "Stockage en entrepôt et regroupement de colis CSSBuy",
+      "description": "Planifiez le stockage, examinez les articles et regroupez les colis de façon réfléchie selon les marchandises réelles, les échéances et les contraintes d'expédition.",
+      "category": "Entrepôt et QC",
+      "keywords": [
+        "entrepôt CSSBuy",
+        "regroupement CSSBuy",
+        "stockage CSSBuy",
+        "emballage de colis CSSBuy"
+      ],
+      "intro": "L'entrepôt est l'endroit où des achats séparés deviennent un plan de colis. Cette souplesse est précieuse, mais accumuler des commandes sans limite peut rendre coûts et échéances plus difficiles à gérer. Un bon plan identifie les articles prêts, ceux qui nécessitent une décision et ceux qui ont réellement intérêt à voyager ensemble. CSSBuy décrit le regroupement et plusieurs services d'emballage sur sa page officielle Ship For Me. Ce guide explique comment déterminer vos besoins sans supposer que le plus gros colis possible est toujours le meilleur.",
+      "sections": [
+        {
+          "heading": "Créez un inventaire fondé sur les décisions",
+          "paragraphs": [
+            "Pour chaque article en entrepôt, notez l'identifiant de commande, la date d'arrivée, la décision actuelle et l'action suivante. Les décisions utiles comprennent prêt à envoyer, en attente d'une mesure, retour demandé et en attente d'un autre article. Ces étiquettes sont plus exploitables qu'une simple liste de vos possessions. Elles montrent quels articles peuvent avancer et lesquels retarderaient un colis.",
+            "Associez une raison à chaque article volontairement conservé en stockage. Peut-être qu'un autre achat est déjà en transit intérieur ou que vous devez comparer deux mesures. Une raison assortie d'une date de réexamen est un plan ; attendre indéfiniment autre chose à acheter n'en est pas un. Revoyez régulièrement l'inventaire et supprimez les hypothèses qui ne sont plus vraies. Si l'article compagnon attendu devient indisponible, réévaluez le colis plutôt que de laisser un ancien plan se poursuivre automatiquement."
+          ]
+        },
+        {
+          "heading": "Séparez les échéances de stockage des décisions de retour",
+          "paragraphs": [
+            "La page d'aide actuelle de CSSBuy sur le stockage distingue les articles ordinaires stockés de certains colis présentant une anomalie ou retournés, avec des périodes et règles de prolongation différentes. Vérifiez l'échéance de votre article ou colis et organisez toute prolongation autorisée avant expiration. Une longue durée de stockage autorisée n'établit pas un délai de retour vendeur équivalent.",
+            "Gardez deux rappels si nécessaire : un pour résoudre un problème d'achat et un autre pour l'échéance de stockage. Examinez rapidement les preuves d'entrepôt même si vous prévoyez d'expédier bien plus tard. Sinon, une décision qui aurait pu être prise alors qu'une solution du vendeur était disponible risque d'être repoussée simplement parce que l'article est encore physiquement stocké. Si une date ou un statut manque de clarté, interrogez l'identifiant de commande précis. Ne généralisez pas une règle d'article normal à un colis retourné ou exceptionnel."
+          ]
+        },
+        {
+          "heading": "Regroupez selon la compatibilité avant d'optimiser le coût",
+          "paragraphs": [
+            "Demandez-vous d'abord si les marchandises peuvent raisonnablement partager un emballage. Les objets lourds peuvent devoir être séparés des formes délicates ; un liquide ou une batterie peut influencer l'admissibilité à l'expédition ; une boîte de présentation peut compter pour un article et pas pour un autre. Regrouper selon les besoins physiques et de transport donne un point de départ plus réaliste qu'un regroupement fondé seulement sur la date d'achat.",
+            "Comparez ensuite des configurations d'emballage plausibles. Un colis regroupé peut réduire les emballages extérieurs en double, mais aussi devenir encombrant ou dépasser une limite d'expédition. Demandez-vous s'il resterait pratique à manipuler et à recevoir à destination. Le regroupement est un outil pour organiser efficacement des marchandises compatibles, pas une règle imposant que tout le compte parte ensemble. Le meilleur regroupement respecte les contraintes réelles de manutention, d'expédition et de budget."
+          ]
+        },
+        {
+          "heading": "Choisissez l'emballage selon ce que vous devez protéger",
+          "paragraphs": [
+            "Listez les parties vulnérables de chaque article : une forme à ne pas écraser, une surface qui peut se rayer ou des composants susceptibles de se déplacer les uns contre les autres. Réfléchissez ensuite à l'emballage répondant à ces risques précis. CSSBuy propose notamment l'emballage sous vide et le renforcement, mais disponibilité, adéquation et frais doivent être confirmés pour votre colis.",
+            "Rendez les instructions concrètes. Dire qu'une boîte commerciale peut être retirée diffère d'une demande de jeter toutes les couches de protection. Dire qu'un vêtement peut être comprimé diffère de supposer qu'un accessoire structuré tolère le même traitement. Si vous hésitez, demandez une option adaptée au lieu de prescrire une technique d'emballage que vous ne comprenez pas. Un colis apparemment moins cher est peu avantageux si la décision d'emballage compromet la raison même de l'achat."
+          ]
+        },
+        {
+          "heading": "Comparez le coût de l'attente au bénéfice du regroupement",
+          "paragraphs": [
+            "Imaginez que la plupart des articles soient prêts, mais qu'une commande n'ait aucun envoi confirmé. Deux questions distinctes se posent : attendre améliore-t-il le coût probable du colis, et le délai est-il acceptable ? Vous n'avez peut-être pas assez d'informations pour calculer précisément le premier point. Rendez cette incertitude explicite au lieu de supposer qu'une collection plus importante coûte forcément moins cher au total.",
+            "Envisagez une date de réexamen à laquelle vous déciderez de nouveau avec les dernières informations. À ce moment-là, comparez les articles prêts, les échéances restantes, les options d'expédition actuelles et l'importance de recevoir les marchandises. Cette approche évite à la fois de précipiter un colis sans inspection et de le retarder sans cesse pour une liste d'achats toujours plus longue. L'entrepôt doit soutenir un plan d'achat à l'objectif défini. Il ne doit pas devenir une raison d'ajouter des marchandises uniquement pour justifier celles qui y sont déjà."
+          ]
+        },
+        {
+          "heading": "Effectuez un examen final du colis avant de le soumettre",
+          "paragraphs": [
+            "Vérifiez que chaque article sélectionné fait l'objet d'une décision définitive de conservation. Contrôlez les coordonnées de livraison, les quantités, les demandes d'emballage et les notes non résolues. Lisez les options d'expédition disponibles pour les marchandises et la destination réelles. Si un article fait l'objet d'un échange actif sur un retour, clarifiez son statut avant de l'inclure. L'examen final doit rapprocher le contenu physique des décisions déjà prises.",
+            "Enregistrez l'identifiant du colis et les choix affichés dans le compte. Après l'expédition, gardez l'inventaire comme trace de ce que contient ce colis. À l'arrivée, utilisez la même trace pour vérifier le contenu et documenter rapidement tout problème. Cela boucle le lien entre commandes individuelles et colis livré. Un processus d'entrepôt bien géré ne se définit pas par le nombre d'articles regroupés, mais par des décisions claires, un emballage adapté et un colis dont vous comprenez le contenu et les coûts."
+          ]
+        }
+      ],
+      "takeaways": [
+        "Suivez la prochaine décision pour chaque article en entrepôt.",
+        "Séparez les échéances de stockage des décisions sur les recours auprès du vendeur.",
+        "Regroupez les marchandises compatibles après avoir comparé des options de colis réalistes."
+      ],
+      "sourceIds": [
+        "shipforme",
+        "storage",
+        "buyforme"
+      ]
+    },
+    {
+      "id": "returns",
+      "slug": "cssbuy-returns-refunds",
+      "title": "Retours et remboursements CSSBuy : préparer une demande",
+      "description": "Apprenez à documenter un problème de produit, distinguer un retour d'un remboursement et poser les bonnes questions avant l'expédition internationale.",
+      "category": "Commandes et paiements",
+      "keywords": [
+        "retours CSSBuy",
+        "remboursement CSSBuy",
+        "politique de retour CSSBuy",
+        "mauvais article CSSBuy"
+      ],
+      "intro": "Un problème de retour est plus facile à traiter quand vous pouvez expliquer exactement ce qui a été commandé, ce qui est arrivé et le résultat demandé. Cela devient plus difficile quand les preuves sont dispersées ou qu'une inquiétude vague est présentée comme un défaut confirmé. Les informations officielles de CSSBuy sur les retours décrivent des conditions après-vente dépendant du marchand et la documentation nécessaire. Ce guide vous aide à organiser une demande et à évaluer les prochaines étapes possibles. Il ne promet pas que chaque produit peut être retourné ni que chaque paiement peut être récupéré.",
+      "sections": [
+        {
+          "heading": "Définissez le problème avant de choisir la solution",
+          "paragraphs": [
+            "Commencez par la catégorie du problème. L'article diffère-t-il de l'option sélectionnée, est-il visiblement endommagé, incomplet, de taille inadaptée ou simplement devenu indésirable ? Ces situations peuvent exiger des preuves différentes et être traitées différemment selon les conditions du vendeur. Décrivez d'abord l'observation et évitez d'attribuer une cause qui n'a pas été établie.",
+            "Par exemple, une étiquette portant une taille différente de la commande constitue un écart concret. Un vêtement qui paraît étroit sur une photo où il est plié soulève une question de mesure non résolue. Le premier cas peut soutenir une demande de retour ; le second peut nécessiter une autre vue avant de décider. Définir exactement le problème évite une escalade inutile et rend l'action demandée plus compréhensible. Séparez votre préférence personnelle d'une affirmation selon laquelle le vendeur a livré autre chose que l'offre convenue."
+          ]
+        },
+        {
+          "heading": "Réunissez un petit dossier de preuves pertinentes",
+          "paragraphs": [
+            "Enregistrez l'identifiant de commande, l'option choisie, la partie de l'annonce qui soutient votre attente et la photographie qui montre le problème. Ajoutez des images de l'emballage ou de l'étiquette lorsqu'elles permettent d'établir l'identité ou l'état. La politique de retour de CSSBuy demande des preuves du produit et de l'emballage dans les cas après-vente concernés. Conservez les éléments dont vous pourriez avoir besoin au lieu de les modifier ou de les jeter tant qu'une question reste ouverte.",
+            "Utilisez une explication chronologique courte. Indiquez ce que vous avez commandé, quand le problème est devenu visible et ce que montrent les preuves. Si plusieurs photos répètent le même point, choisissez les plus nettes et expliquez quoi regarder. Une grande galerie sans légendes peut masquer le problème. Évitez les informations personnelles sans rapport dans les captures d'écran et gardez les références de paiement ou détails privés du compte dans la conversation d'assistance officielle où ils sont nécessaires."
+          ]
+        },
+        {
+          "heading": "Demandez si le retour est possible tant que l'article reste accessible",
+          "paragraphs": [
+            "Examinez les conditions actuelles de la commande concernée et contactez rapidement CSSBuy. N'utilisez pas la durée de stockage autorisée comme substitut au délai de retour du vendeur. Le fait qu'un article reste dans un bâtiment ne prouve pas qu'un marchand l'acceptera encore. Si une limite de temps est peu claire, demandez quelle date s'applique et quelle action doit être terminée avant cette date.",
+            "Distinguez l'envoi d'une demande de son approbation. Une réponse peut être nécessaire avant de renvoyer un article, et les options disponibles peuvent dépendre de son état et de la position du vendeur. Évitez de modifier davantage l'article ou son emballage pendant l'évaluation de l'admissibilité. Des questions claires et rapides donnent une meilleure base de décision que de supposer une promesse générale de retour à partir d'un résumé sur un site de recommandations sans rapport."
+          ]
+        },
+        {
+          "heading": "Comparez les résultats disponibles et leurs coûts",
+          "paragraphs": [
+            "Les résultats possibles peuvent inclure une inspection supplémentaire, un retour approuvé par le vendeur, une discussion sur un remplacement ou la conservation de l'article. Demandez quelles options sont réellement disponibles au lieu de supposer votre résultat préféré garanti. Pour tout retour proposé, clarifiez les frais de transport et les autres montants qui ne seraient pas récupérés. La politique de CSSBuy précise que des frais de transport peuvent survenir et que les conditions du marchand comptent.",
+            "Évaluez les options depuis votre situation actuelle. Si l'article est utilisable mais imparfait, le coût et l'incertitude d'un retour peuvent modifier votre décision. S'il ne respecte pas une exigence essentielle, payer davantage pour l'expédier à l'international peut avoir peu de sens. Ne laissez pas la frustration remplacer la comparaison. Notez le résultat attendu, le coût connu et le risque non résolu de chaque option disponible, puis choisissez celle qui répond le mieux au problème réel."
+          ]
+        },
+        {
+          "heading": "Séparez le mouvement du retour de la comptabilisation du remboursement",
+          "paragraphs": [
+            "Un vendeur qui accepte une demande, un article qui repart, sa réception par le vendeur et l'apparition d'argent sur un compte sont des événements différents. Demandez lequel a eu lieu lorsque vous vérifiez l'avancement. Un statut confirmant un mouvement physique ne confirme pas nécessairement qu'un ajustement financier est terminé, et une prochaine étape estimée ne doit pas être confondue avec une transaction enregistrée.",
+            "Gardez ensemble les références de commande, de retour et de paiement concernées. Lorsqu'un montant apparaît, comparez-le au remboursement annoncé plutôt qu'au seul total initial. Certains éléments de la commande peuvent recevoir un traitement distinct. En cas de différence, demandez une explication ligne par ligne à partir des montants du compte officiel. Ne lancez pas continuellement de nouvelles demandes alors qu'un processus existant est actif sans d'abord comprendre son statut."
+          ]
+        },
+        {
+          "heading": "Utilisez cette expérience pour améliorer le prochain achat",
+          "paragraphs": [
+            "Après résolution du problème, notez ce qui aurait permis de l'éviter. Peut-être que les noms d'options étaient ambigus, qu'une mesure manquait ou qu'un accessoire montré en photo n'était pas inclus dans l'offre sélectionnée. Transformez cette leçon en vérification concrète avant achat. Évitez de tirer d'un seul résultat l'affirmation non étayée que tous les vendeurs ou toutes les commandes se comporteront pareil.",
+            "Pour vos achats futurs, gardez une description plus claire de l'article souhaité et examinez les preuves d'entrepôt peu après leur disponibilité. Un achat bien documenté ne garantit pas une décision de retour favorable, mais facilite l'explication des désaccords et vous aide à agir tant que des options peuvent encore exister. La stratégie de retour la plus utile commence avant le problème : comprendre ce que vous achetez, garder les preuves pertinentes et savoir quelle conversation du compte officiel correspond à la transaction."
+          ]
+        }
+      ],
+      "takeaways": [
+        "Décrivez l'écart ou l'inquiétude avec la commande et les photographies pertinentes.",
+        "Vérifiez rapidement l'admissibilité propre au vendeur ; le stockage n'est pas une promesse de retour.",
+        "Suivez l'approbation de la demande, le retour physique et l'ajustement financier comme des événements distincts."
+      ],
+      "sourceIds": [
+        "returns-policy",
+        "expertbuy"
+      ]
+    },
+    {
+      "id": "payments",
+      "slug": "cssbuy-payment-fees",
+      "title": "Frais et paiements CSSBuy : planifiez votre budget complet",
+      "description": "Séparez les coûts du produit, de la livraison intérieure, des services, du paiement et du colis, puis rapprochez les montants affichés dans votre compte CSSBuy officiel.",
+      "category": "Commandes et paiements",
+      "keywords": [
+        "frais CSSBuy",
+        "moyens de paiement CSSBuy",
+        "frais de service CSSBuy",
+        "coût total CSSBuy"
+      ],
+      "intro": "Le prix de l'annonce ne répond qu'à une partie de la question d'un achat transfrontalier. Un budget utile suit l'argent du produit choisi jusqu'au colis reçu tout en distinguant frais confirmés et estimations. Ce guide propose une méthode comptable utilisable sans dépendre d'un taux de change fixe ou d'une ancienne capture de frais. Les pages d'aide actuelles de CSSBuy décrivent les composantes produit, transport intérieur, transport international et service. Les montants et moyens présentés dans votre propre paiement doivent guider la transaction que vous allez effectuer.",
+      "sections": [
+        {
+          "heading": "Attribuez une ligne à chaque coût",
+          "paragraphs": [
+            "Commencez par l'option du produit et la quantité sélectionnées. Ajoutez le montant de livraison intérieure du vendeur, les éventuels frais du service d'achat, les services facultatifs, la livraison internationale et les frais à destination applicables. Gardez visibles les coûts du prestataire de paiement ou les effets de conversion monétaire lorsqu'ils existent. Cela ne signifie pas que chaque commande comporte chaque élément ; votre feuille prévoit simplement un endroit pour les consigner au lieu de cacher l'incertitude dans un total unique.",
+            "Utilisez trois étiquettes : confirmé, estimé et encore inconnu. Un montant actuel à payer peut être confirmé pour l'action en cours, tandis qu'une première estimation de colis reste provisoire. Si vous changez la taille, la quantité ou l'emballage, actualisez la ligne concernée. Cette méthode rend les variations de budget explicables. Vous voyez si la différence vient des marchandises, d'un service demandé ou d'une hypothèse d'expédition qui s'est révélée fausse."
+          ]
+        },
+        {
+          "heading": "Lisez l'assiette des frais aussi attentivement que le pourcentage",
+          "paragraphs": [
+            "Un pourcentage est incomplet sans connaître le montant auquel il s'applique. La page d'aide sur les coûts de CSSBuy décrit actuellement un calcul de service utilisant le montant des produits et le transport en Chine. Confirmez le calcul actuel et les conditions applicables au paiement plutôt que d'appliquer un chiffre mémorisé à toutes les lignes de votre budget.",
+            "Dans un exemple purement hypothétique, si un service appliquait un taux de 5 pour cent aux marchandises plus la livraison intérieure, des marchandises de 200 unités et une livraison de 20 unités produiraient des frais de 11 unités. C'est un exemple mathématique, pas le tarif de CSSBuy. Il montre pourquoi la base compte : appliquer le même taux aux seules marchandises donnerait un résultat différent. Quand un montant facturé manque de clarté, demandez quels paramètres l'ont produit plutôt que de vous concentrer uniquement sur le pourcentage affiché."
+          ]
+        },
+        {
+          "heading": "Comparez les paiements selon le montant réellement reçu",
+          "paragraphs": [
+            "Un taux de paiement annoncé ou un nom de prestataire familier ne révèle pas à lui seul le coût effectif du financement d'un achat. Comparez le montant sortant de votre moyen de paiement au montant utilisable crédité ou appliqué à la transaction, en tenant compte de la devise affichée. Confirmez les frais du prestataire et la conversion avant d'autoriser un paiement. La disponibilité peut dépendre du parcours actuel du compte et de l'option proposée.",
+            "Ne choisissez pas une méthode uniquement parce qu'un article tiers la dit la moins chère. Une comparaison établie pour un autre pays, une autre devise ou une autre date peut ne pas convenir à votre situation. Gardez une trace de la méthode, du montant, de la devise et de la référence de transaction. Ces détails aident à résoudre un écart et à évaluer correctement votre propre expérience. Ils sont plus utiles qu'une affirmation générale selon laquelle un paiement est toujours le meilleur pour chaque client CSSBuy."
+          ]
+        },
+        {
+          "heading": "Réservez de l'argent pour les décisions suivantes",
+          "paragraphs": [
+            "Évitez de consacrer tout le budget aux marchandises avant de bien connaître le colis. Vous devrez peut-être choisir l'emballage, payer la livraison internationale ou réagir à un problème qui modifie le plan. Une réserve ne prédit pas un incident ; elle reconnaît que certains coûts ne seront connus que plus tard. Choisissez sa taille selon l'incertitude de votre commande réelle.",
+            "Si la réserve nécessaire à un scénario d'expédition plausible rend la commande inabordable, réduisez l'achat avant de vous engager. Il est plus facile de retirer un candidat d'une sélection que de gérer un article indésirable déjà acheté. Pensez aussi au moment où vos fonds seront disponibles. Un plan qui suppose de retarder une décision d'entrepôt jusqu'à disposer de plus d'argent doit tenir compte des échéances applicables plutôt que de supposer un temps illimité pour finir l'achat."
+          ]
+        },
+        {
+          "heading": "Rapprochez le compte avant de répéter un paiement",
+          "paragraphs": [
+            "Si votre prestataire de paiement affiche un débit mais que l'écriture attendue du compte manque de clarté, recueillez la référence de transaction et vérifiez les relevés officiels de paiement et de commande. Identifiez si vous alimentiez un compte, payiez des marchandises ou un colis. Ce sont des actions différentes, et la référence doit être associée à la bonne dans une demande d'assistance.",
+            "Ne supposez pas que répéter immédiatement le même paiement résoudra l'écart. Établissez d'abord si la transaction initiale est en attente, terminée ou rejetée selon les relevés du prestataire concerné et de CSSBuy. Gardez les informations sensibles de paiement hors des commentaires publics ou formulaires de sites de découverte. Utilisez le canal officiel d'assistance pour la transaction et fournissez-y les références nécessaires. Le but est d'identifier le mouvement d'argent existant, pas d'en créer un second qui complique la question."
+          ]
+        },
+        {
+          "heading": "Évaluez l'intérêt avec un total complet et daté",
+          "paragraphs": [
+            "Quand l'achat est terminé, notez les montants réellement payés pour les marchandises, les services et la livraison, ainsi que les ajustements éventuels. Indiquez explicitement les devises. Si vous voulez un total personnel dans une seule devise, utilisez la conversion reflétée dans vos paiements réels ou identifiez clairement le taux de comparaison choisi. Mélanger un taux actuel avec des frais historiques peut faire paraître un ancien achat moins ou plus cher qu'il ne l'était.",
+            "Comparez le résultat à ce que le produit vous a apporté, notamment la taille, l'utilité et le travail nécessaire au processus. Cette réflexion vaut plus que de célébrer un prix d'annonce bas en ignorant le reste de la facture. Conservez la date et les informations pertinentes du colis pour planifier à l'avenir, sans transformer ce résultat en budget garanti pour un autre acheteur. Un budget CSSBuy solide est précis, détaillé et actualisé à mesure que des informations réelles remplacent les estimations."
+          ]
+        }
+      ],
+      "takeaways": [
+        "Distinguez les frais confirmés des estimations et des montants inconnus.",
+        "Vérifiez à la fois le taux des frais et le montant sur lequel ils sont calculés.",
+        "Conservez les références de paiement et clarifiez les transactions incertaines avant de les répéter."
+      ],
+      "sourceIds": [
+        "fees",
+        "about",
+        "buyforme"
+      ]
+    },
+    {
+      "id": "links",
+      "slug": "cssbuy-taobao-1688-links",
+      "title": "Liens Taobao, Weidian et 1688 : guide d’achat CSSBuy",
+      "description": "Comprenez les identifiants des places de marché, les variantes, les quantités minimales et les informations de commande manuelle sans supposer que tous les liens source fonctionnent pareil.",
+      "category": "Guides d'achat",
+      "keywords": [
+        "CSSBuy Taobao",
+        "CSSBuy 1688",
+        "convertisseur de liens CSSBuy",
+        "Taobao Weidian 1688"
+      ],
+      "intro": "Un lien de produit porte un contexte de place de marché ainsi qu'un identifiant d'article. Perdre ce contexte peut mener à la mauvaise destination, tandis que le conserver laisse encore d'importantes questions de quantités et d'options. Taobao, Weidian et 1688 ne doivent pas être considérés comme des étiquettes interchangeables attachées à une photographie. Ce guide explique comment examiner un lien source, comparer les offres et préparer assez d'informations pour un achat. La documentation officielle d'achat de CSSBuy décrit la commande par URL et un parcours Expert Buy pour les cas nécessitant davantage d'informations.",
+      "sections": [
+        {
+          "heading": "Conservez ensemble la source et l'identifiant",
+          "paragraphs": [
+            "Lorsque vous enregistrez une trouvaille, notez le nom de la place de marché, l'URL d'origine et l'identifiant du produit à côté de votre note personnelle. L'identifiant interne d'un répertoire appartient à ce répertoire ; il n'est pas automatiquement celui de l'article du vendeur. De même, une destination convertie exige le bon type de source et le bon numéro. Gardez la référence d'origine pour pouvoir examiner un écart plus tard.",
+            "Si un lien partagé comporte des redirections ou des informations de suivi supplémentaires, confirmez le produit de destination avant de l'utiliser. Ne supprimez pas au hasard des paramètres inconnus en supposant que le résultat identifie toujours la même offre. Une vérification utile compare le titre, les images d'options et le contexte de l'article après ouverture de la destination. Si ces détails divergent, arrêtez la conversion et examinez le problème plutôt que de vous fier au fait qu'une page s'est chargée."
+          ]
+        },
+        {
+          "heading": "Comparez des offres complètes plutôt que des stéréotypes de places de marché",
+          "paragraphs": [
+            "Évitez de supposer qu'une place de marché est toujours la moins chère, de meilleure qualité ou la plus facile pour les retours. La décision pratique concerne un vendeur et une option précis. Comparez les mêmes quantités, dimensions, pièces incluses et conditions pertinentes. Deux photographies principales semblables peuvent représenter des offres sensiblement différentes, et la réputation favorable d'une place de marché ne comble pas les lacunes d'une annonce individuelle.",
+            "Notez ce que chaque candidat établit réellement. L'un peut fournir un tableau de mesures ; un autre montrer une construction détaillée ; un troisième avoir un menu d'options peu clair. Cette comparaison indique quoi demander ensuite. Elle empêche aussi un prix de départ bas de l'emporter avant de savoir ce qu'il achète. Une place de marché est le cadre de la transaction, tandis que l'annonce précise contient les informations dont votre achat doit dépendre."
+          ]
+        },
+        {
+          "heading": "Lisez attentivement les quantités et les paliers de prix sur 1688",
+          "paragraphs": [
+            "Le guide d'achat de CSSBuy demande expressément aux acheteurs de tenir compte des quantités minimales des fournisseurs pour les produits 1688. Vérifiez si le montant affiché s'applique à une unité, une commande minimale ou un palier de quantité. Établissez aussi si différentes options peuvent être combinées pour atteindre un seuil ou doivent l'atteindre séparément ; ne déduisez pas ce détail de la seule mise en page.",
+            "Considérez une offre hypothétique affichant un prix unitaire plus faible au-delà d'un seuil de quantité supérieur. Acheter des pièces supplémentaires uniquement pour atteindre ce palier peut augmenter la facture totale, les besoins de stockage et le volume d'expédition. Comparez le total pour la quantité dont vous avez vraiment besoin plutôt que le chiffre le plus bas de la page. Si l'unité de l'annonce est ambiguë, demandez si le montant concerne une pièce, une paire, un ensemble ou un paquet. Résoudre cette question est plus important que calculer une remise à partir d'une base incertaine."
+          ]
+        },
+        {
+          "heading": "Traitez le menu d'options comme une partie du produit",
+          "paragraphs": [
+            "Examinez chaque option sélectionnée avant de soumettre une commande. Une seule annonce peut regrouper différentes tailles, matières, configurations ou accessoires. L'image source rencontrée en premier peut n'en représenter qu'une. Faites correspondre l'article souhaité au libellé d'option pertinent et enregistrez les informations qui expliquent le choix.",
+            "Si une traduction est ambiguë, conservez le texte d'option d'origine et ajoutez une précision concise au lieu de le remplacer par une supposition. Pour les produits dépendant de la taille, utilisez le tableau rattaché à l'annonce ou à la version précise. Pour la compatibilité technique, exigez la spécification pertinente plutôt que de supposer qu'un article d'apparence similaire fonctionnera. Si la page ne donne pas assez d'informations, la bonne suite est une question ou un autre candidat, pas une interprétation plus assurée de la même image incomplète."
+          ]
+        },
+        {
+          "heading": "Préparez une demande complète si l'importation automatique échoue",
+          "paragraphs": [
+            "L'échec d'une importation de produit ne dit pas si l'article est indisponible, non pris en charge ou s'il manque simplement des informations attendues par le formulaire normal. CSSBuy propose une page Expert Buy avec des champs de détails produit. Avant d'utiliser un parcours manuel, confirmez que l'achat peut être traité et comprenez le contexte du vendeur. Ne voyez pas dans l'existence d'un formulaire une promesse inconditionnelle d'acheter n'importe quel article.",
+            "Préparez le lien d'origine, le titre de l'article, l'option exacte, la quantité, le prix, les informations de livraison intérieure et les détails vendeur requis. Gardez vos notes cohérentes entre elles. Un prix copié d'un palier de quantité à côté d'une quantité demandée plus petite peut créer une confusion. Si un fait important est inconnu, indiquez-le et demandez confirmation. Des informations complètes signifient des preuves claires et des lacunes claires, pas chaque champ rempli d'une supposition optimiste."
+          ]
+        },
+        {
+          "heading": "Reliez les traces de découverte, de conversion et de transaction",
+          "paragraphs": [
+            "Un dossier personnel solide contient l'annonce source, la destination CSSBuy et l'identifiant final de commande. Chacun a un rôle différent. La source explique ce qui était proposé, la destination est l'endroit où vous avez examiné l'option d'achat, et la fiche de commande suit ce que vous avez réellement demandé. Si une annonce change ensuite, vos détails enregistrés peuvent expliquer la base de la décision d'origine.",
+            "Utilisez ce dossier pour comparer les preuves d'entrepôt ou discuter d'un écart. Il est bien plus facile d'identifier une mauvaise option lorsque le libellé sélectionné et l'image ont été conservés. Après l'achat, actualisez le dossier avec vos enseignements sur la quantité, les tailles ou la communication du vendeur. Le but n'est pas de déclarer un vainqueur universel entre Taobao, Weidian et 1688. Il est de rendre chaque lien source traçable et chaque décision d'achat compréhensible à partir des informations dont vous disposiez alors."
+          ]
+        }
+      ],
+      "takeaways": [
+        "Conservez ensemble le type de place de marché et l'identifiant d'origine de l'article.",
+        "Vérifiez les unités, les quantités minimales et les paliers avant de comparer les prix.",
+        "Fournissez des détails produit clairs pour les demandes manuelles et conservez la fiche finale de commande."
+      ],
+      "sourceIds": [
+        "buyforme",
+        "expertbuy",
+        "user-link"
+      ]
+    },
+    {
+      "id": "sizing",
+      "slug": "cssbuy-size-guide",
+      "title": "Guide des tailles CSSBuy : mesurez avant de commander",
+      "description": "Utilisez les tableaux propres aux annonces, des articles comparables et des demandes de mesure claires pour réduire les erreurs évitables de taille de vêtements et de chaussures.",
+      "category": "Guides d'achat",
+      "keywords": [
+        "guide des tailles CSSBuy",
+        "pointure CSSBuy",
+        "tailles Weidian",
+        "taille de vêtements Taobao"
+      ],
+      "intro": "Il n'existe pas de taille vestimentaire CSSBuy universelle : le produit vient de l'annonce d'un vendeur et le tableau pertinent appartient à cette offre. Une lettre ou une pointure familière peut donc être une mauvaise base de choix. Une méthode plus utile part d'un article qui vous va déjà, identifie les dimensions importantes et les compare selon la même méthode de mesure. Ce guide propose un processus pratique pour vêtements et chaussures sans promettre qu'un tableau ou une photographie peut garantir le confort.",
+      "sections": [
+        {
+          "heading": "Définissez la coupe souhaitée avant de lire le tableau",
+          "paragraphs": [
+            "Décrivez comment vous comptez porter l'article. Une veste portée sur une couche épaisse demande une comparaison différente d'une chemise d'été près du corps. Un pantalon pour travailler assis peut nécessiter une aisance différente d'un style choisi principalement pour sa silhouette. Ce sont des exigences personnelles, et l'étiquette de taille du vendeur ne peut pas les décider à votre place.",
+            "Choisissez un article comparable que vous possédez et appréciez déjà. Faites correspondre autant que possible le type de vêtement, les superpositions prévues et la coupe générale. Un grand sweat-shirt n'est pas une référence fiable pour un manteau structuré simplement parce que les deux portent une étiquette grande taille. Notez ce que vous aimez dans la référence et ce que vous changeriez. La recherche de taille devient ainsi une comparaison de dimensions liée à une expérience réelle de port plutôt qu'une quête de la bonne lettre."
+          ]
+        },
+        {
+          "heading": "Vérifiez ce que signifie chaque mesure du tableau",
+          "paragraphs": [
+            "Avant de comparer les nombres, identifiez la méthode de mesure et les unités. Une mesure de poitrine peut être une largeur à plat ou une circonférence ; une longueur peut commencer à un autre point que celui que vous avez mesuré. Un tableau peut paraître précis tout en employant une convention inhabituelle. Lisez les schémas ou explications du vendeur et demandez une définition manquante si la différence influence votre choix.",
+            "Ne convertissez pas silencieusement une mesure à plat en mesure corporelle et ne supposez pas que tous les tableaux utilisent les mêmes points. Mesurez si possible votre vêtement de référence dans la position montrée par le vendeur. Gardez les unités près des valeurs dans vos notes. Cette discipline simple évite de nombreuses erreurs dues à la comparaison de nombres différents par nature. Si la méthode reste floue, considérez le tableau comme une information incomplète au lieu d'utiliser le calcul pour créer une fausse certitude."
+          ]
+        },
+        {
+          "heading": "Priorisez les dimensions qui déterminent la coupe du vêtement",
+          "paragraphs": [
+            "Pour un haut, l'aisance de poitrine et la longueur totale peuvent être les premières vérifications, les épaules et les manches comptant selon la coupe. Pour un pantalon, la taille seule peut être insuffisante ; hauteur de fourche, aisance des cuisses et entrejambe peuvent changer la sensation au porté. La combinaison pertinente dépend de votre corps, du modèle et de l'objectif identifié. Concentrez-vous sur les dimensions qui rendraient le produit inadapté si elles étaient incorrectes.",
+            "Comparez l'ensemble des mesures plutôt que de choisir la taille correspondant à un seul chiffre favori. Une taille qui résout la largeur de poitrine peut produire une longueur excessive ; une taille adaptée à la ceinture peut encore manquer d'espace aux cuisses. Si chaque taille disponible exige un compromis inacceptable, l'annonce n'offre peut-être pas la forme nécessaire. Choisir un autre produit peut être plus raisonnable que d'attendre d'une étiquette familière qu'elle résolve des proportions incompatibles."
+          ]
+        },
+        {
+          "heading": "Abordez les chaussures comme un problème de mesure distinct",
+          "paragraphs": [
+            "Choisir une pointure demande plus que de convertir un numéro entre systèmes. Lisez les propres informations de taille du vendeur et clarifiez ce que représente chaque longueur : longueur de pied recommandée, longueur de semelle intérieure ou autre mesure. Elles ne sont pas automatiquement interchangeables. Tenez compte du type de chaussures, des chaussettes prévues et de la ressemblance de la forme avec des chaussures déjà confortables pour vous.",
+            "Mesurez les deux pieds avec une méthode cohérente et gardez à l'esprit la dimension pertinente la plus grande, sans traiter ce seul nombre comme une garantie de confort. La largeur, la forme des orteils et le volume intérieur peuvent compter même si la longueur paraît convenable. Si l'annonce ne fournit qu'un tableau de conversion générique sans information propre au modèle, reconnaissez l'incertitude. Pour un achat sensible à la taille, surtout si un retour facile compte pour vous, cette incertitude peut justifier le choix d'une option mieux documentée."
+          ]
+        },
+        {
+          "heading": "Rédigez une demande de mesure à laquelle on peut répondre",
+          "paragraphs": [
+            "Si une vérification d'entrepôt modifierait votre décision, précisez clairement la dimension et la méthode. Pour les vêtements, une demande peut décrire les points de départ et d'arrivée avec le vêtement posé à plat. Pour les chaussures, demandez quelle mesure est réalisable et ce qu'elle représente avant de la comparer à une autre grandeur. Confirmez si un service de mesure supplémentaire est disponible et s'il est facturé.",
+            "Évitez les demandes générales comme « assurez-vous que cela m'aille ». La personne tenant l'article ne peut pas éprouver sa coupe sur votre corps. Demandez plutôt les preuves observables nécessaires et jugez vous-même. Gardez ensemble la mesure de référence, la mesure demandée et le résultat. Cette trace aide à distinguer une mauvaise étiquette de taille, un écart de mesure et un produit conforme à son tableau mais simplement inadapté à votre coupe préférée."
+          ]
+        },
+        {
+          "heading": "Acceptez l'incertitude et apprenez de l'article livré",
+          "paragraphs": [
+            "Les matières souples, la technique de mesure et la construction peuvent produire de petites variations. N'attribuez pas à une règle photographiée une précision que le dispositif ne permet pas. Décidez si l'incertitude restante est acceptable selon la sensibilité de la coupe. Si une dimension doit rester dans une plage très étroite pour que l'article convienne, un achat à distance peut nécessiter plus de preuves que l'annonce ne peut fournir.",
+            "Après livraison, mesurez et essayez l'article, puis notez le résultat avec le même système de référence. Indiquez si le tableau était utile, si le vêtement de comparaison choisi était adapté et quelle dimension comptait le plus. Séparez la préférence personnelle d'une conclusion universelle sur les tailles du vendeur. Au fil des achats, cela crée un dossier pratique de coupe fondé sur votre propre expérience. Il est plus fiable que d'appliquer sans cesse le conseil de prendre plus grand ou plus petit sans connaître l'article, le tableau ou la personne qui le porte."
+          ]
+        }
+      ],
+      "takeaways": [
+        "Utilisez le tableau de l'annonce exacte et définissez la méthode de mesure.",
+        "Comparez plusieurs dimensions pertinentes avec un article similaire que vous possédez.",
+        "Traitez les mesures d'entrepôt comme des preuves et gardez une marge pour l'incertitude de taille."
+      ],
+      "sourceIds": [
+        "buyforme",
+        "expertbuy"
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "id": "buyforme",
+      "title": "CSSBuy — Buy For Me : processus officiel d’achat",
+      "url": "https://m.cssbuy.com/buyforme",
+      "accessedAt": "2026-10-23"
+    },
+    {
+      "id": "expertbuy",
+      "title": "CSSBuy — Expert Buy : informations produit et avertissement sur les risques liés au vendeur",
+      "url": "https://m.cssbuy.com/expertbuy",
+      "accessedAt": "2026-10-23"
+    },
+    {
+      "id": "about",
+      "title": "CSSBuy — À propos : moyens de paiement et services",
+      "url": "https://m.cssbuy.com/aboutus",
+      "accessedAt": "2026-10-23"
+    },
+    {
+      "id": "shipforme",
+      "title": "CSSBuy — Ship For Me : services de regroupement et d’emballage",
+      "url": "https://m.cssbuy.com/shipforme",
+      "accessedAt": "2026-10-23"
+    },
+    {
+      "id": "fees",
+      "title": "Centre d’aide CSSBuy — Coûts et frais",
+      "url": "https://www.cssbuy.com/shop/helpCenter?id=12",
+      "accessedAt": "2026-10-23"
+    },
+    {
+      "id": "storage",
+      "title": "Centre d’aide CSSBuy — Échéance de stockage",
+      "url": "https://www.cssbuy.com/shop/helpCenter?id=81&refush=1",
+      "accessedAt": "2026-10-23"
+    },
+    {
+      "id": "returns-policy",
+      "title": "Centre d’aide CSSBuy — Politique de retour",
+      "url": "https://www.cssbuy.com/shop/helpCenter?id=80&refush=1",
+      "accessedAt": "2026-10-23"
+    },
+    {
+      "id": "estimates",
+      "title": "CSSBuy — Calculateur des frais de livraison",
+      "url": "https://new.cssbuy.com/estimates",
+      "accessedAt": "2026-10-23"
+    },
+    {
+      "id": "catalog",
+      "title": "cnfansge.com — Source du catalogue de produits",
+      "url": "https://cnfansge.com/",
+      "accessedAt": "2026-10-23"
+    },
+    {
+      "id": "project",
+      "title": "CSSBuy Home — Présentation du site indépendant et de la source des données",
+      "url": "/about/",
+      "accessedAt": "2026-10-23"
+    },
+    {
+      "id": "user-link",
+      "title": "CSSBuy — Exemple fourni de lien d’achat Weidian",
+      "url": "https://www.cssbuy.com/shop/goodsDetail?type=micro&id=7755101935",
+      "accessedAt": "2026-10-23"
+    },
+    {
+      "id": "register",
+      "title": "CSSBuy — Destination officielle du compte",
+      "url": "https://www.cssbuy.com/index",
+      "accessedAt": "2026-10-23"
+    }
+  ]
+}

@@ -1,7 +1,7 @@
 import {catalogMarkup,productMarkup,errorState,esc} from '../../worker/render.mjs';
 const t=JSON.parse(document.querySelector('#ui-data').textContent),prefix=document.body.dataset.prefix,lang=document.body.dataset.lang;
 const menu=document.querySelector('.menu-toggle');menu?.addEventListener('click',()=>{const nav=document.querySelector('#mobile-nav'),open=menu.getAttribute('aria-expanded')==='true';menu.setAttribute('aria-expanded',String(!open));nav.hidden=open;});
-document.querySelector('#language-switch')?.addEventListener('change',e=>{location.href=e.target.value+location.search;});
+document.querySelector('#language-switch')?.addEventListener('change',e=>{location.href=e.target.value+location.search+location.hash;});
 document.querySelector('#faq-search')?.addEventListener('input',e=>{let count=0;for(const row of document.querySelectorAll('.faq-item')){const show=row.textContent.toLocaleLowerCase().includes(e.target.value.toLocaleLowerCase());row.hidden=!show;if(show)count++;}document.querySelector('#faq-no-results').hidden=!!count;});
 const section=document.querySelector('[data-catalog]'),detail=document.querySelector('#product-detail'),url=new URL(location.href);
 const form=document.querySelector('#catalog-form');if(form){for(const key of ['q','category','sort']){if(url.searchParams.has(key))form.elements[key].value=url.searchParams.get(key);}if(url.searchParams.get('q')){form.elements.sort.disabled=true;document.querySelector('#catalog-status').innerHTML=`${esc(t.searchResults)}: <strong>${esc(url.searchParams.get('q'))}</strong> · <a href="${prefix}spreadsheet/">${esc(t.clear)}</a><br>${esc(t.searchSort)}`;}for(const key of ['category','sort'])form.elements[key].addEventListener('change',()=>form.requestSubmit());}
@@ -18,6 +18,6 @@ async function load(){
 if(section||detail){if(!document.body.hasAttribute('data-source-rendered'))load();document.addEventListener('click',e=>{if(e.target.closest('[data-retry]')){(detail||document.querySelector('#catalog-products')).innerHTML=`<p class="loading">${esc(t.loading)}</p>`;load();}});}
 
 const photoViewer=document.querySelector('#photo-viewer');
-document.addEventListener('click',event=>{const button=event.target.closest('[data-large-image]');if(button&&photoViewer){const image=photoViewer.querySelector('img');image.src=button.dataset.largeImage;image.alt=button.querySelector('img')?.alt||'Product photo';photoViewer.showModal();}});
+document.addEventListener('click',event=>{const button=event.target.closest('[data-large-image]');if(button&&photoViewer){const image=photoViewer.querySelector('img');image.src=button.dataset.largeImage;image.alt=button.querySelector('img')?.alt||t.photoLabel;photoViewer.showModal();}});
 photoViewer?.querySelector('.photo-close').addEventListener('click',()=>photoViewer.close());
 photoViewer?.addEventListener('click',event=>{if(event.target===photoViewer)photoViewer.close();});
