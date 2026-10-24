@@ -1,0 +1,9 @@
+---
+import {path,ui} from '../data/site';
+import Icon from './Icon.astro';
+const {article,index=0,lang='en'}=Astro.props;const t=ui(lang);
+---
+<a class="article-card" href={path(lang,'articles/'+article.slug)} data-article-text={(article.title+' '+article.description+' '+article.keywords.join(' ')).toLowerCase()}>
+<div class={'article-art art-'+(index%4)}><span class="art-category">{article.category}</span><span class="art-number">{String(index+1).padStart(2,'0')}</span><span class="art-icon"><Icon name={['book','link','box','camera'][index%4]} size={46}/></span></div>
+<div class="article-card-copy"><div class="meta">{article.readMinutes} {t.minutes}</div><h3>{article.title}</h3><p>{article.description}</p><span class="text-link">{t.readArticle}<Icon size={16}/></span></div>
+</a>

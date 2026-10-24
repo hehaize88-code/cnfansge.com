@@ -1,0 +1,13 @@
+{
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "name": "superbuybuyss-com",
+  "main": "dist/server/index.js",
+  "compatibility_date": "2026-10-24",
+  "workers_dev": true,
+  "preview_urls": false,
+  "routes": [
+    { "pattern": "superbuybuyss.com", "custom_domain": true },
+    { "pattern": "www.superbuybuyss.com", "custom_domain": true }
+  ],
+  "observability": { "enabled": true }
+}

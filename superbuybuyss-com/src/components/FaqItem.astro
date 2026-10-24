@@ -1,0 +1,5 @@
+---
+import {ui,path} from '../data/site';import Icon from './Icon.astro';
+const {faq,lang='en',index=0}=Astro.props;const t=ui(lang);
+---
+<details class="faq-item" data-faq-text={(faq.question+' '+faq.answer+' '+faq.category).toLowerCase()}><summary><span class="faq-number">{String(index+1).padStart(2,'0')}</span><span>{faq.question}</span><Icon name="plus" size={19}/></summary><div class="faq-answer"><p>{faq.answer}</p><a href={faq.source.url.startsWith('/')?path(lang):faq.source.url} target={faq.source.url.startsWith('/')?undefined:'_blank'} rel="noopener">{t.source}: {faq.source.label}<span>↗</span></a></div></details>

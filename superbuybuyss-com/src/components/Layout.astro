@@ -1,0 +1,35 @@
+---
+import {ui,locales,path,signup} from '../data/site';
+import Icon from './Icon.astro';
+import '../styles.css';
+const {lang='en',route='',title,description,article}=Astro.props;
+const t=ui(lang),base=path(lang),canonical='https://superbuybuyss.com'+path(lang,route);
+const navigation=[['spreadsheet',t.navCatalog],['guide',t.navGuide],['qc',t.navQc],['shipping',t.navShipping],['faq',t.navFaq],['articles',t.navArticles]];
+const jsonLd=article?{'@context':'https://schema.org','@type':'Article',headline:article.title,description:article.description,inLanguage:lang,mainEntityOfPage:canonical,author:{'@type':'Organization',name:'Superbuybuyss'},publisher:{'@type':'Organization',name:'Superbuybuyss'},dateModified:'2026-10-23'}:{'@context':'https://schema.org','@type':'WebSite',name:'Superbuybuyss',url:'https://superbuybuyss.com',inLanguage:lang};
+---
+<!doctype html>
+<html lang={lang}>
+<head>
+<meta charset="UTF-8"/><meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>{title}</title><meta name="description" content={description}/><meta name="robots" content={route==='product'?'noindex,follow':'index,follow,max-image-preview:large'}/>
+<link rel="canonical" href={canonical}/>
+{locales.map(l=><link rel="alternate" hreflang={l} href={'https://superbuybuyss.com'+path(l,route)}/>)}
+<link rel="alternate" hreflang="x-default" href={'https://superbuybuyss.com'+path('en',route)}/>
+<link rel="icon" href="/brand/superbuy-favicon.svg" type="image/svg+xml"/><link rel="icon" href="/brand/superbuy-favicon-32.png" sizes="32x32"/>
+<meta property="og:title" content={title}/><meta property="og:description" content={description}/><meta property="og:type" content={article?'article':'website'}/><meta property="og:url" content={canonical}/><meta name="theme-color" content="#076bdd"/>
+<script type="application/ld+json" set:html={JSON.stringify(jsonLd).replace(/</g,'\u003c')}/>
+</head>
+<body data-lang={lang} data-base={base} data-route={route}>
+<a class="skip-link" href="#main">{t.skip}</a>
+<div class="announcement"><span>{t.announcement}</span><a href={path(lang,'guide')}>{t.announcementLink}<Icon size={14}/></a></div>
+<header class="header"><div class="header-inner">
+<a class="brand" href={base} aria-label="Superbuybuyss home"><img src="/brand/superbuy-logo.svg" width="160" height="32" alt="Superbuy"/><span>{t.siteTag}</span></a>
+<nav class="desktop-nav" aria-label={t.menu}>{navigation.map(([p,label])=><a href={path(lang,p)} class:list={{active:route===p||route.startsWith(p+'/')}}>{label}</a>)}</nav>
+<div class="header-actions"><details class="languages"><summary aria-label={t.language}><Icon name="globe" size={17}/><span>{lang.toUpperCase()}</span><Icon name="chevron" size={13}/></summary><div class="language-panel">{locales.map(l=><a data-language href={path(l,route)} lang={l} hreflang={l} aria-current={l===lang?'true':undefined}>{ui(l).langName}<span>{l.toUpperCase()}</span></a>)}</div></details><a class="button small register" href={signup} target="_blank" rel="noopener">{t.register}<Icon size={15}/></a><button class="menu-button" aria-label={t.menu} aria-expanded="false" aria-controls="mobile-nav"><Icon name="menu"/></button></div>
+</div><nav id="mobile-nav" class="mobile-nav" hidden>{navigation.map(([p,label])=><a href={path(lang,p)}>{label}<Icon size={16}/></a>)}<a href={signup} target="_blank" rel="noopener">{t.register}</a></nav></header>
+<main id="main"><slot/></main>
+<footer><div class="container footer-main"><div class="footer-brand"><a href={base}><img src="/brand/superbuy-logo.svg" width="144" height="29" alt="Superbuy"/></a><p>{t.footerDescription}</p></div><div><h3>{t.footerExplore}</h3><a href={path(lang,'spreadsheet')}>{t.navCatalog}</a><a href={path(lang,'spreadsheet')+'?category=shoes'}>{t.shoes}</a><a href={path(lang,'spreadsheet')+'?category=accessories'}>{t.accessories}</a></div><div><h3>{t.footerLearn}</h3><a href={path(lang,'articles')}>{t.navArticles}</a><a href={path(lang,'guide')}>{t.navGuide}</a><a href={path(lang,'faq')}>{t.navFaq}</a></div><div><h3>{t.footerOfficial}</h3><a href="https://www.superbuy.com/en/page/query/freight/" target="_blank" rel="noopener">{t.calculator}<span>↗</span></a><a href="https://www.superbuy.com/en/page/query/package/" target="_blank" rel="noopener">{t.tracking}<span>↗</span></a></div></div><div class="container footer-bottom"><p>{t.footerDisclaimer}</p><div><span>{t.footerCopyright}</span><span>{t.footerSourceNote}</span></div></div></footer>
+<dialog id="image-dialog"><button class="dialog-close" aria-label={t.close}>×</button><Icon name="camera" size={30}/><h2>{t.imageSearchTitle}</h2><p>{t.imageSearchBody}</p><button class="button dialog-dismiss">{t.close}</button></dialog>
+<script id="ui-data" type="application/json" set:html={JSON.stringify(t).replace(/</g,'\u003c')}/>
+<script>import '../client';</script>
+</body></html>

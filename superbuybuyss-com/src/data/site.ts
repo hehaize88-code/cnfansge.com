@@ -1,0 +1,12 @@
+import en from './ui.en.json';
+const uiModules=import.meta.glob('./ui.*.json',{eager:true,import:'default'});
+const articleModules=import.meta.glob('./articles.*.json',{eager:true,import:'default'});
+const faqModules=import.meta.glob('./faq.*.json',{eager:true,import:'default'});
+export const locales=Object.keys(uiModules).map(x=>x.match(/ui\.([a-z]+)\.json$/)![1]).filter(l=>articleModules['./articles.'+l+'.json']&&faqModules['./faq.'+l+'.json']).sort((a,b)=>a==='en'?-1:b==='en'?1:a.localeCompare(b));
+export const ui=(lang:string):typeof en=>uiModules['./ui.'+lang+'.json'] as typeof en;
+export const articles=(lang:string):any[]=>articleModules['./articles.'+lang+'.json'] as any[];
+export const faqs=(lang:string):any[]=>faqModules['./faq.'+lang+'.json'] as any[];
+export const path=(lang:string,p='')=>(lang==='en'?'/':'/'+lang+'/')+(p?p.replace(/^\/+|\/+$/g,'')+'/':'');
+export const signup='https://www.superbuy.com/en/page/login/?ref=https%3A%2F%2Fwww.superbuy.com%2Fen%2F%3FnTag%3Dpc.shell.header.logo%26trackPayload%3Dpc_shell_header_logo';
+export const categoryKeys=['all','shoes','hoodies-sweaters','t-shirts','jackets','pants-shorts','headwear','accessories','short-sets','electronics','other-stuff','jersey'];
+export const articleOrder=['superbuy-spreadsheet-guide','superbuy-weidian-buying-guide','superbuy-taobao-1688-guide','superbuy-qc-photo-guide','superbuy-shipping-cost-guide','superbuy-shipping-time-tracking','superbuy-warehouse-consolidation','superbuy-fees-budget-guide','superbuy-sizing-measurements-guide','superbuy-returns-refunds-guide'];
