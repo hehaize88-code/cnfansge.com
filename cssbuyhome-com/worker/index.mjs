@@ -17,7 +17,7 @@ export default {async fetch(request,env,context){
  if(a.type.startsWith('text/html')){
  let html=new TextDecoder().decode(body);const home=u.pathname==='/',catalog=/\/spreadsheet\/$/.test(u.pathname),product=/\/product\/$/.test(u.pathname);
  if(home||catalog||product){
- const apiUrl=new URL(product?'/api/product':'/api/catalog',u);for(const k of (product?['id']:['q','category','sort','cursor']))if(u.searchParams.has(k))apiUrl.searchParams.set(k,u.searchParams.get(k));if(home)apiUrl.searchParams.set('sort','latest');
+ const apiUrl=new URL(product?'/api/product':'/api/catalog',u);for(const k of (product?['id']:['q','category','sort','page','cursor','slice']))if(u.searchParams.has(k))apiUrl.searchParams.set(k,u.searchParams.get(k));if(home)apiUrl.searchParams.set('sort','latest');
  const response=await sourceData(new Request(apiUrl),context);const data=await response.json();const $=load(html);
  if(!response.ok){$(product?'#product-detail':'#catalog-products').html(errorState(ui,product));if(home)$('#hero-products').html(`<p class="loading">${esc(ui.sourceError)}</p>`);headers.set('Cache-Control','no-store');}
  else{
@@ -26,7 +26,7 @@ export default {async fetch(request,env,context){
  }
  $('body').attr('data-source-rendered','true');html=$.html();
  }
- body=html;
+ body=__PRODUCTION__?html:html.replaceAll(__SITE_ORIGIN__,u.origin);
  }
  return new Response(request.method==='HEAD'?null:body,{headers});
 }};

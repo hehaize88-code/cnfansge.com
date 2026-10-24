@@ -337,3 +337,14 @@ GitHub Pages 只能托管静态输出，不能运行 SSR 或服务端代理；�
 - 浏览器已打开首页，顶部 3 张商品图 naturalWidth 均大于 0；FAQ 页面确认 28 条。
 - 原 Sites 预览地址仍受 chatgpt.site 拦截，不再作为可用预览交付。
 - 独立 GitHub 项目的 Worker 打包支持缺少 Sites 专属 hosting.json；完整 npm run build 成功，19 个 Astro 静态页面、6 项测试通过。
+
+
+## 2026-10-24 用户纠正：必须子站内全量调用
+
+用户明确拒绝静态少量商品，以及搜索/分类跳转主站。必须所有商品目录、搜索、排序和详情都留在 CSSBuy 子站，仅数据从 cnfansge.com 读取。已删除 build-github-preview.mjs，禁止恢复静态截断导出或主站跳转作为替代。
+
+修正为 Astro 静态内容 + 同源 Worker 读取接口；每页 20 件，新增 page 参数与页码跳转（第 4 页读取源第 2 批，第 10 页读取源第 4 批），保留源站的搜索与排序。商品详情可读取任意有效源站记录，不限于先前 8 个。页面和 API 使用短期内存缓存，无新数据库。
+
+已在源站公开目录 /AllProducts/ 与产品 /AllProducts/6640.html 检查，看到关键词、分类、排序及卖家商品图库，未看到搜图或独立 QC 入口。源站脚本直接浏览被客户端阻止，不能声称已经验证搜图/QC接口，也不能把卖家图标成QC。
+
+GitHub 工作流改为构建完整 Worker 并运行真实源站测试后上传产物，不再发布错误的 Pages 静态导出。新运行时尚未发布；GitHub Pages 旧公开链接尚未改变。Cloudflare 工具本轮再次返回 UNAUTHORIZED / requires reauthentication，需解决发布途径，不能声称已上线。正式域名与其他项目未改动。

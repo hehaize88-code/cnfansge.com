@@ -9,6 +9,6 @@ const robots=production?`User-agent: *\nAllow: /\nDisallow: /api/\nDisallow: /pr
 assets['/robots.txt']={body:Buffer.from(robots).toString('base64'),type:'text/plain'};
 if(production)assets['/sitemap.xml']={body:Buffer.from(`<?xml version="1.0" encoding="UTF-8"?><urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">${pages.map(p=>`<url><loc>${origin}${p}</loc></url>`).join('')}</urlset>`).toString('base64'),type:'application/xml'};
 await mkdir('dist/server',{recursive:true});await mkdir('dist/.openai',{recursive:true});await writeFile('.astro-output/embedded-assets.json',JSON.stringify(assets));
-await build({entryPoints:['worker/index.mjs'],bundle:true,format:'esm',platform:'browser',target:'es2022',outfile:'dist/server/index.js',minify:true,legalComments:'none',define:{__PRODUCTION__:JSON.stringify(production)}});
+await build({entryPoints:['worker/index.mjs'],bundle:true,format:'esm',platform:'browser',target:'es2022',outfile:'dist/server/index.js',minify:true,legalComments:'none',define:{__PRODUCTION__:JSON.stringify(production),__SITE_ORIGIN__:JSON.stringify(origin)}});
 try{await copyFile('.openai/hosting.json','dist/.openai/hosting.json');}catch(error){if(error.code!=='ENOENT')throw error;}
 console.log(`Packaged ${Object.keys(assets).length} compressed Astro assets with a live-source Worker; no database.`);

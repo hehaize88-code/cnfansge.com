@@ -16,7 +16,10 @@ test('source pagination continues beyond first sixty records',()=>{
  const d=parseCatalog(html,7,'/AllProducts/');assert.ok(d.nextPath.includes('page=2'));
  const products=Array.from({length:60},(_,i)=>({id:String(i),name:'test'}));
  const r=catalogMarkup({...d,products,sourcePage:1},new URL('https://test.example/spreadsheet/?slice=2'), '/',ui());
- assert.match(r.pagination,/cursor=/);assert.match(r.pagination,/page%3D2/);assert.match(r.pagination,/Page 3/);
+ assert.match(r.pagination,/page=4/);assert.match(r.pagination,/Page 3/);
+ const fourth=catalogMarkup({...d,products,sourcePage:2,previousPath:'/index.php?m=home&c=Lists&a=index&tid=1&page=1'},new URL('https://test.example/spreadsheet/?page=4&q=Nike'), '/',ui());
+ assert.match(fourth.pagination,/page=5/);assert.match(fourth.pagination,/page=3/);assert.match(fourth.pagination,/q=Nike/);assert.match(fourth.pagination,/name="page"/);
+ assert.equal((fourth.products.match(/class="product-card"/g)||[]).length,20);
 });
 test('CSSBuy content has ten complete articles and 28 sourced FAQs',()=>{
  assert.ok(publishedLocales.includes('en'));

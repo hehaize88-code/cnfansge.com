@@ -75,6 +75,7 @@ export function parseProduct(html,rate,id){
 }
 export async function api(request){
  const u=new URL(request.url);try{
+ if(u.pathname==='/api/capabilities')return Response.json({catalog:true,search:true,sorting:true,visualSearch:false,qc:false,source:SOURCE,reason:'The source public pages do not expose a verified visual-search or QC interface.'});
  if(u.pathname==='/api/product'){
  const id=u.searchParams.get('id');if(!/^\d{1,10}$/.test(id||''))return Response.json({error:'Invalid product'},{status:400});
  const html=await read(`${SOURCE}/AllProducts/${id}.html`,request.signal);return Response.json(parseProduct(html,await getRate(load(html),request.signal),id),{headers:{'Cache-Control':'public,max-age=60'}});
@@ -82,16 +83,23 @@ export async function api(request){
  if(u.pathname==='/api/catalog'){
  const cat=u.searchParams.get('category')||'all';if(!categories.includes(cat))return Response.json({error:'Invalid category'},{status:400});
  const q=(u.searchParams.get('q')||'').trim().slice(0,120),sort=u.searchParams.get('sort')||'popular';
- const cursor=u.searchParams.get('cursor');
+ const requestedPage=u.searchParams.get('page');
+ if(requestedPage&&!/^[1-9]\d{0,4}$/.test(requestedPage))return Response.json({error:'Invalid page'},{status:400});
+ const displayPage=requestedPage?Number(requestedPage):null;
+ const batchPage=displayPage?Math.floor((displayPage-1)/3)+1:null;
+ const cursor=displayPage?null:u.searchParams.get('cursor');
  const legacy=cursor&&new URL(cursor,SOURCE).pathname.match(/^\/(?:index\.php|[a-z-]+)\/list_(\d+)_(\d+)\/$/);
  let url=sourceUrl((!legacy&&cursor)||(q?`/search.html?${new URLSearchParams({keywords:q,channelid:'2'})}`:cat==='all'?'/AllProducts/':`/${cat}/`));
+ if(q&&batchPage>1)url.searchParams.set('page',String(batchPage));
  let html=await read(url,request.signal);let $=load(html);
  if(!q&&(!cursor||legacy)){
  url=catalogSortUrl(html,sort);
  if(legacy){if(url.searchParams.get('tid')!==legacy[1])throw new Error('Invalid category cursor');url.searchParams.set('page',legacy[2]);}
+ if(batchPage>1)url.searchParams.set('page',String(batchPage));
  html=await read(url,request.signal);$=load(html);
  }
- return Response.json(parseCatalog(html,await getRate($,request.signal),url.pathname+url.search),{headers:{'Cache-Control':'public,max-age=60'}});
+ const data=parseCatalog(html,await getRate($,request.signal),url.pathname+url.search);
+ return Response.json({...data,displayPage:displayPage||((data.sourcePage-1)*3+Math.max(0,Math.min(2,Number(u.searchParams.get('slice'))||0))+1),pageSize:20},{headers:{'Cache-Control':'public,max-age=60'}});
  }
  return Response.json({error:'Not found'},{status:404});
  }catch(error){return Response.json({error:'The source catalog is temporarily unavailable. Please retry.',code:'SOURCE_UNAVAILABLE',detail:String(error.message)},{status:502,headers:{'Cache-Control':'no-store'}});}

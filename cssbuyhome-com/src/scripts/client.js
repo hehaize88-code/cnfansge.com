@@ -8,7 +8,7 @@ const form=document.querySelector('#catalog-form');if(form){for(const key of ['q
 async function load(){
  const bootstrap=document.querySelector('#source-data');let data;
  try{
- if(bootstrap){data=JSON.parse(bootstrap.textContent);bootstrap.remove();}else{const apiUrl=new URL(detail?'/api/product':'/api/catalog',location.origin);for(const key of (detail?['id']:['q','category','sort','cursor']))if(url.searchParams.has(key))apiUrl.searchParams.set(key,url.searchParams.get(key));if(section?.dataset.catalog==='home')apiUrl.searchParams.set('sort','latest');const response=await fetch(apiUrl);if(!response.ok)throw new Error('Source unavailable');data=await response.json();}
+ if(bootstrap){data=JSON.parse(bootstrap.textContent);bootstrap.remove();}else{const apiUrl=new URL(detail?'/api/product':'/api/catalog',location.origin);for(const key of (detail?['id']:['q','category','sort','page','cursor','slice']))if(url.searchParams.has(key))apiUrl.searchParams.set(key,url.searchParams.get(key));if(section?.dataset.catalog==='home')apiUrl.searchParams.set('sort','latest');const response=await fetch(apiUrl);if(!response.ok)throw new Error('Source unavailable');data=await response.json();}
  if(data.error)throw new Error(data.error);
  if(detail){detail.innerHTML=productMarkup(data,prefix,t,lang);document.title=`${data.name} | CSSBuy Home`;}
  else{const rendered=catalogMarkup(data,url,prefix,t,lang,section.dataset.catalog==='home');document.querySelector('#catalog-products').innerHTML=rendered.products;const hero=document.querySelector('#hero-products');if(hero)hero.innerHTML=rendered.hero;const pager=document.querySelector('#catalog-pagination');if(pager)pager.innerHTML=rendered.pagination;}
