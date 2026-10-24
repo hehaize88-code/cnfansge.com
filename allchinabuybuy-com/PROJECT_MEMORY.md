@@ -8,7 +8,7 @@
 
 修复：首页、finds、spreadsheet 五语言页面由 Worker 在请求时调用原有 cnfansge.com 只读适配器，把真实商品和分页写入 HTML；所有用户同样输出，不按爬虫区分。浏览器保留首屏内容，不再清空后重新请求。仍只有 60 秒临时内存缓存，无数据库、无持久商品快照、无虚构商品。取消 robots 的 /api/ 抓取屏蔽，JSON API 保留 X-Robots-Tag: noindex。源站故障返回 503 + Retry-After + no-store；无结果搜索 noindex，超出范围页 404，非法参数 400。筛选/搜索/分页变体 noindex，基础目录页面 index。
 
-验证：8 项自动测试，105 页构建，95 个站点地图 URL 检查；使用只在测试中导入的源站 fixture，不把测试商品放入生产。涵盖五语言 HTML 商品、分页、XSS 转义、源站故障状态、QC/运费静态正文、28 FAQ。上线及 Google 实测结果另记。
+验证：8 项自动测试，105 页构建，95 个站点地图 URL 检查；使用只在测试中导入的源站 fixture，不把测试商品放入生产。涵盖五语言 HTML 商品、分页、XSS 转义、源站故障状态、QC/运费静态正文、28 FAQ。修复提交 bc7d02115e382c119fb6fb7304f47c3c7303e30f 已发布，Cloudflare 构建 4279623b-b0f0-46e7-b7d4-395ef90e664b 成功，版本 e286bcb5-67eb-45b1-8f9a-d05da18da8d8。线上首屏 20 商品，分页与德语切换已验证。Google 实时测试：QC 16:59、Shipping 17:02、FAQ 17:04、Finds 17:05，全部绿色“网址可编入 Google 索引”；Articles 16:57 也已通过。手动请求受每日配额限制，未宣称已经收录。Shipping/FAQ/Finds 的索引信息已列出 sitemap.xml。
 
 ## Google Analytics 4（2026-10-24）
 
