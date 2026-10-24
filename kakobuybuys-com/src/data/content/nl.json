@@ -1,0 +1,914 @@
+{
+  "ui": {
+    "nav": {
+      "spreadsheet": "Spreadsheet",
+      "finds": "Vondsten",
+      "guide": "Handleiding",
+      "qc": "QC",
+      "shipping": "Verzending",
+      "faq": "Veelgestelde vragen",
+      "articles": "Artikelen"
+    },
+    "siteLabel": "Onafhankelijke koopgids",
+    "register": "Aanmelden bij Kakobuy",
+    "browse": "Ontdek de spreadsheet",
+    "search": "Zoeken",
+    "searchPlaceholder": "Zoek producten, merken of categorieën",
+    "imageSearch": "Zoeken met een afbeelding",
+    "menu": "Menu",
+    "language": "Taal",
+    "home": "Home",
+    "readGuide": "Lees de gids",
+    "viewAll": "Alles bekijken",
+    "viewProduct": "Product bekijken",
+    "buy": "Kopen via Kakobuy",
+    "backCatalog": "Terug naar de spreadsheet",
+    "loading": "Actuele producten laden…",
+    "sourceError": "Het productaanbod is tijdelijk niet beschikbaar. Probeer het opnieuw.",
+    "retry": "Opnieuw proberen",
+    "noResults": "Geen passende producten gevonden. Probeer een ander zoekwoord of een andere categorie.",
+    "noPhoto": "Foto niet beschikbaar",
+    "pricePending": "Controleer de actuele prijs",
+    "estimatedPrice": "Geschatte artikelprijs",
+    "priceNote": "Alleen de artikelprijs. Verzendkosten en eventuele toeslagen worden op Kakobuy bevestigd.",
+    "sellerPhotos": "Productfoto’s van de verkoper",
+    "previous": "Vorige",
+    "next": "Volgende",
+    "page": "Pagina",
+    "go": "Ga",
+    "category": "Categorie",
+    "sort": "Sorteren op",
+    "sorts": {
+      "latest": "Nieuwste toevoegingen",
+      "popular": "Populair",
+      "price-up": "Prijs: laag naar hoog",
+      "price-down": "Prijs: hoog naar laag"
+    },
+    "categories": {
+      "all": "Alle producten",
+      "shoes": "Schoenen",
+      "hoodies-sweaters": "Hoodies en gebreide kleding",
+      "t-shirts": "T-shirts",
+      "jackets": "Jassen",
+      "pants-shorts": "Broeken en shorts",
+      "headwear": "Hoofddeksels",
+      "accessories": "Accessoires",
+      "short-sets": "Bijpassende sets",
+      "electronics": "Elektronica",
+      "other-stuff": "Overige vondsten",
+      "jersey": "Sportshirts"
+    },
+    "catalogEyebrow": "DE ACTUELE CATALOGUS",
+    "catalogTitle": "Vind je volgende favoriet.",
+    "catalogIntro": "Bekijk actuele aanbiedingen, vergelijk artikelprijzen en controleer verkopersfoto’s voordat je het juiste product op Kakobuy opent.",
+    "catalogStatus": "20 producten per pagina · Blader verder met de paginaknoppen",
+    "resultsFor": "Resultaten voor",
+    "clearFilters": "Filters wissen",
+    "heroEyebrow": "EEN BETERE MANIER OM JE BESTELLING SAMEN TE STELLEN",
+    "heroTitle": "Kakobuy spreadsheet.",
+    "heroAccent": "Mooie vondsten. Duidelijke keuzes.",
+    "heroIntro": "Ontdek productaanbiedingen, vergelijk geschatte prijzen in USD en leer waar je vóór aankoop op moet letten. Je volgende vondst begint hier.",
+    "heroGuide": "Nieuw hier? Begin met de handleiding",
+    "heroNote": "Vrij rondkijken · Zorgvuldig vergelijken · Bestellen op Kakobuy",
+    "heroCollection": "DE ACTUELE SELECTIE",
+    "heroCaption": "Nieuwe aanbiedingen voor je shortlist.",
+    "categoryEyebrow": "BEGIN BIJ WAT JE LEUK VINDT",
+    "categoryTitle": "Net iets minder zoeken.",
+    "latestEyebrow": "ONLANGS TOEGEVOEGD",
+    "latestTitle": "Nieuw in de spreadsheet.",
+    "latestIntro": "Echte aanbiedingen, originele foto’s en een directe route naar het artikel op Kakobuy.",
+    "stepsEyebrow": "VAN ONTDEKKING NAAR BESLISSING",
+    "stepsTitle": "Drie stappen. Een duidelijkere aankoop.",
+    "steps": [
+      {
+        "title": "Vind je artikel",
+        "text": "Gebruik categorieën en de zoekfunctie om aanbiedingen te vergelijken. Open de productdetails en controleer de originele foto’s."
+      },
+      {
+        "title": "Controleer de details",
+        "text": "Bekijk de maatvoering, de exacte uitvoering, je budget en het QC-proces. Een productfoto vertelt maar een deel van het verhaal."
+      },
+      {
+        "title": "Ga verder op Kakobuy",
+        "text": "Kies je opties en bevestig de uiteindelijke prijs op Kakobuy. Bekijk de magazijnfoto’s vóór internationale verzending."
+      }
+    ],
+    "journalEyebrow": "HET KOOPJOURNAAL",
+    "journalTitle": "Je volgende bestelling, beter voorbereid.",
+    "journalIntro": "Praktische gidsen over productlinks, maten, QC, magazijnkeuzes en verzendkosten.",
+    "allArticles": "Alle 10 gidsen",
+    "minutes": "min leestijd",
+    "articleLabel": "KOOPGIDS",
+    "contents": "In deze gids",
+    "officialSources": "Officiële bronnen",
+    "reviewed": "Gecontroleerd op 24 oktober 2026",
+    "sourceNote": "Voorwaarden en beschikbare diensten kunnen veranderen. Controleer vóór betaling de actuele voorwaarden van je bestelling of verzendofferte.",
+    "relatedTitle": "Ontdek meer",
+    "backArticles": "Alle artikelen",
+    "faqEyebrow": "VOORDAT JE BESTELT",
+    "faqTitle": "Duidelijke antwoorden op je vragen.",
+    "faqIntro": "Praktische antwoorden op basis van Kakobuy-helpinformatie. Controleer exacte kosten, routes en bestelvoorwaarden in je huidige account.",
+    "faqLink": "Bekijk alle vragen",
+    "guideEyebrow": "JE EERSTE BESTELLING",
+    "guideTitle": "Begin met een plan, zonder giswerk.",
+    "guideIntro": "Maak een shortlist, bevestig je maat en begrijp de twee verzendfasen voordat je bestelt. Deze gidsen helpen je bij iedere keuze.",
+    "findsEyebrow": "GERICHT RONDKIJKEN",
+    "findsTitle": "Vondsten voor je volgende shortlist.",
+    "findsIntro": "Verken de actuele catalogus per categorie. Vergelijk productdetails en prijzen voordat je een aankoopbeslissing neemt.",
+    "qcEyebrow": "BEKIJK ALLES VÓÓR VERZENDING",
+    "qcTitle": "Bekijk de foto’s. Controleer de details.",
+    "qcIntro": "Magazijnfoto’s van de inspectie kunnen helpen om zichtbare details vóór verzending te beoordelen. Leer welke hoeken en maten je moet controleren en wat een afbeelding niet kan aantonen.",
+    "qcUnavailable": "In deze preview is geen geverifieerde bron met QC-referentiefoto’s aangesloten. Productpagina’s tonen momenteel duidelijk als zodanig aangeduide verkopersfoto’s.",
+    "qcChecklist": [
+      "Vergelijk de zichtbare kleur, het model en de gekozen uitvoering met je bestelling.",
+      "Controleer labels en aangevraagde metingen aan de hand van je eigen maateisen.",
+      "Let op zichtbare beschadigingen of ontbrekende onderdelen; vraag waar nodig duidelijkere foto’s.",
+      "Gebruik de inspectiefoto’s van je eigen bestelling wanneer je beslist of je wilt verzenden."
+    ],
+    "shippingEyebrow": "BEGRIJP DE TOTALE KOSTEN",
+    "shippingTitle": "Plan verder dan de artikelprijs.",
+    "shippingIntro": "De prijs in de aanbieding is het uitgangspunt. Binnenlandse bezorging, internationaal transport en gekozen diensten kunnen het totaalbedrag veranderen.",
+    "shippingCards": [
+      {
+        "title": "Voordat je bestelt",
+        "text": "Controleer de artikelprijs, gekozen opties, binnenlandse bezorging en eventuele betaalkosten die bij het afrekenen staan."
+      },
+      {
+        "title": "In het magazijn",
+        "text": "Controleer de artikelen en verpakkingskeuzes. Het werkelijke gewicht en de pakketafmetingen kunnen de offerte beïnvloeden."
+      },
+      {
+        "title": "Vóór verzending",
+        "text": "Vergelijk beschikbare routes naar jouw bestemming en de actuele offerte, voorwaarden en toepasselijke kosten."
+      }
+    ],
+    "visualTitle": "Zoeken met een afbeelding",
+    "visualIntro": "Zoeken met een afbeelding zal dezelfde productbron gebruiken als de catalogus.",
+    "visualUnavailable": "De beeldzoekinterface van de bron is nog niet geverifieerd. Afbeeldingen uploaden is niet beschikbaar in deze preview; zoeken op trefwoord en bladeren per categorie zijn wel beschikbaar.",
+    "aboutTitle": "Een nuttig vertrekpunt.",
+    "aboutIntro": "Kakobuy Buys is een onafhankelijke website voor productontdekking en koopgidsen. We helpen je aanbiedingen te verkennen en te begrijpen welke vragen je moet stellen voordat je bestelt.",
+    "aboutBody": "Bestellingen, betalingen, magazijndiensten en verzending worden via Kakobuy afgehandeld. Deze website neemt geen betalingen aan en beheert je Kakobuy-account niet. Sommige uitgaande registratie- of aankooplinks zijn affiliatelinks en kunnen ons een commissie opleveren.",
+    "ctaTitle": "Een goede vondst begint met beter kijken.",
+    "ctaBody": "Verken de catalogus. Controleer de details. Koop wanneer je er klaar voor bent.",
+    "footerIntro": "Producten ontdekken, met wat meer inzicht.",
+    "independent": "Onafhankelijke, niet-officiële website voor productontdekking. Aankopen en verzending worden door Kakobuy afgehandeld.",
+    "affiliate": "Sommige links zijn affiliatelinks en kunnen deze website een commissie opleveren.",
+    "about": "Over ons en transparantie",
+    "photoNote": "Verkopersfoto’s zijn geen geverifieerde QC-foto’s uit het magazijn.",
+    "close": "Sluiten",
+    "checklist": "Vóór je aankoop",
+    "productChecks": [
+      "Bevestig de exacte uitvoering en maat op Kakobuy.",
+      "Neem verzending en eventuele toeslagen mee in je budget.",
+      "Bekijk vóór verzending de magazijninspectiefoto’s van je eigen bestelling."
+    ],
+    "top": "Terug naar boven"
+  },
+  "articles": [
+    {
+      "slug": "how-to-use-kakobuy-spreadsheet",
+      "title": "Een Kakobuy-spreadsheet gebruiken: van zoeken naar een bruikbare shortlist",
+      "description": "Leer productvermeldingen lezen, oorspronkelijke links controleren, opties vergelijken en een shortlist maken voordat je via Kakobuy bestelt.",
+      "category": "Spreadsheet",
+      "readMinutes": 8,
+      "intro": "Een Kakobuy-spreadsheet is vooral nuttig als hij je helpt een beslissing te nemen, niet als hij alleen een eindeloze reeks afbeeldingen toont. Zie elke vermelding als een route naar een verkopersadvertentie die enkele controles vereist: wat is het artikel, welke uitvoering wil je, wat omvat de prijs en welk bewijs is beschikbaar? Deze gids beschrijft een herhaalbare methode om een brede zoekopdracht terug te brengen tot een kleine, praktische shortlist, zonder een aanbeveling voor een belofte aan te zien.",
+      "sections": [
+        {
+          "heading": "Begrijp de functie van het overzicht",
+          "paragraphs": [
+            "Een productoverzicht ordent verwijzingen. Het kan een titel, foto, prijsindicatie en een link tonen waarmee je de advertentie via Kakobuy opent. Die gegevens versnellen het zoeken, maar vervangen het actuele aanbod van de verkoper niet. Voorraad, uitvoeringen en prijzen kunnen veranderen nadat een vermelding is toegevoegd. Open daarom het daadwerkelijke product en vergelijk de informatie die voor jouw aankoop van belang is.",
+            "Houd de rollen duidelijk. Deze onafhankelijke website helpt je producten te ontdekken en informatie te lezen. De verkoper levert het artikel. Kakobuy verzorgt de diensten die je op zijn platform afspreekt. Een aantrekkelijke productkaart betekent niet dat deze website de goederen bezit, ze persoonlijk heeft geïnspecteerd of je bestelling kan aanpassen. Dit onderscheid helpt bepalen waar je een vraag stelt en op welk scherm je het definitieve antwoord moet vinden."
+          ]
+        },
+        {
+          "heading": "Begin met een gerichte zoekopdracht",
+          "paragraphs": [
+            "Kies voor het zoeken een paar bruikbare woorden. Een productsoort met een praktisch detail levert doorgaans beter te beoordelen resultaten op dan een zeer brede zoekterm. Zo geeft een zoektocht naar een hoodie met rits een duidelijker vergelijkingsgroep dan zoeken op kleding. Zijn de resultaten te beperkt, verwijder dan telkens één detail in plaats van de hele zoekopdracht door een ongerelateerde term te vervangen.",
+            "Gebruik categoriefilters om afleiding te beperken en bekijk daarna hoe sorteren de resultaten verandert. Sortering op populariteit helpt bij het bladeren, maar is geen kwaliteitscertificaat. Sortering op prijs vertelt alleen welke getoonde prijs lager is, niet of de juiste uitvoering beschikbaar is of bezorging de aankoop voordelig maakt. Houd dezelfde filters aan wanneer je meerdere vermeldingen vergelijkt, zodat je een samenhangende groep beoordeelt."
+          ]
+        },
+        {
+          "heading": "Lees de vermelding als afzonderlijke bewijsstukken",
+          "paragraphs": [
+            "Begin bij de titel en vergelijk vervolgens de foto en de oorspronkelijke productverwijzing. Een titel kan voor een compacte kaart zijn ingekort. De foto kan één kleur of een representatieve uitvoering tonen, in plaats van alle opties. De prijs kan betrekking hebben op één variant, een vanafprijs of een schatting. Door deze gegevens afzonderlijk te lezen, maak je van een handig overzicht geen claim die de verkoper nooit heeft gedaan.",
+            "Let zowel op ontbrekende als aanwezige informatie. Heeft een pagina geen bevestigd gewicht, maattabel of QC-fotoset, laat die vraag dan open. Vul de ontbrekende gegevens niet in gedachten aan met details van een vergelijkbaar product. Twee advertenties met dezelfde fotostijl kunnen andere leveranciers, materialen of opties hebben. Je vergelijking wordt betrouwbaarder als je in je aantekeningen vastgelegde feiten van aannames onderscheidt."
+          ]
+        },
+        {
+          "heading": "Bewaar de oorspronkelijke link bij de gekozen uitvoering",
+          "paragraphs": [
+            "De oorspronkelijke marktplaatslink is het anker van je shortlist. Bewaar hem samen met de artikelnaam, de gewenste kleur en de overwogen maat of uitvoering. Een product-ID identificeert een advertentie, maar niet noodzakelijk een bepaalde combinatie van kleur en maat binnen die advertentie. De volledige keuze is daarom net zo belangrijk als de link.",
+            "Controleer na het openen van Kakobuy via een koopknop of het geïmporteerde artikel overeenkomt met de oorspronkelijke verwijzing. Vergelijk, waar zichtbaar, de verkopersgegevens, hoofdfoto, namen van opties en oorspronkelijke ID. Is de bestemmingspagina leeg, niet beschikbaar of duidelijk anders, stop dan vóór het betalen. Een werkende knop is onvoldoende: de bestemming moet het bedoelde artikel tonen. Kies geen vertrouwd ogende vervanger alleen omdat de foto lijkt op wat je hebt opgeslagen."
+          ]
+        },
+        {
+          "heading": "Vergelijk prijzen en bereken daarna je werkelijke budget",
+          "paragraphs": [
+            "Een schatting in USD is een handig eerste filter. Daarmee beoordeel je of een artikel binnen je budgetcategorie valt, maar het is geen totaalbedrag inclusief bezorging. Kakobuys kosteninformatie onderscheidt goederen en binnenlands vervoer van internationale vracht en eventuele verpakking of aanvullende diensten. Controleer de actuele bedragen op de bestel- en pakketschermen.",
+            "Noteer voor elke kandidaat de prijs van de gekozen uitvoering en eventuele zichtbare binnenlandse verzendkosten. Houd in je vergelijking ruimte voor de latere internationale verzending. Vermijd schijnprecisie, bijvoorbeeld één artikel het goedkoopst in totaal noemen omdat de getoonde productprijs enkele centen lager is. Een andere verpakkingsmaat, uitvoering of benodigde dienst kan de uitkomst veranderen. Vergelijk complete keuzes zodra de benodigde offerte beschikbaar is en markeer onvolledige schattingen als onvolledig."
+          ]
+        },
+        {
+          "heading": "Onderscheid verkopersfoto’s van QC-bewijs",
+          "paragraphs": [
+            "Verkopersfoto’s verduidelijken het aanbod. Ze kunnen styling, details, etiketten of een maattabel tonen. QC-foto’s horen bij een inspectie van een ontvangen artikel. Deze bronnen beantwoorden verschillende vragen: een grote verzameling verkopersfoto’s wordt niet vanzelf een QC-galerij. Lees de fotolabels en zoek een duidelijk verband tussen de inspectiefoto’s en de betreffende productverwijzing.",
+            "Historische QC kan laten zien wat iemand eerder heeft ontvangen, maar bewijst niet wat jouw eigen bestelling zal bevatten. Kakobuy beschrijft in zijn dienstverlening een fase met magazijninspectie en foto’s. Bekijk na bestellen het bewijs dat aan jouw eigen artikel is gekoppeld en de reikwijdte van die inspectie. Laat een onbeantwoorde vraag open als de beschikbare foto’s het te beoordelen kenmerk niet laten zien."
+          ]
+        },
+        {
+          "heading": "Vergelijk de pasvorm vóór de uitstraling",
+          "paragraphs": [
+            "Een goede shortlist bevat artikelen die redelijkerwijs bij jouw behoeften passen. Begin bij kleding met de maten van de specifieke verkoper en vergelijk ze met een soortgelijk kledingstuk dat je al draagt. Controleer bij schoenen het maatsysteem en de betekenis van eventuele centimetermaten. Kakobuys maathulp vermeldt dat verkopers verschillende standaarden kunnen gebruiken; dezelfde letter of hetzelfde nummer in twee advertenties is dus niet voldoende.",
+            "Schrijf de specifieke onzekerheid op. “Borstbreedte van maat M nodig” is nuttiger dan “onzeker over de maat”. “Is de vermelde lengte inclusief handvat?” is duidelijker dan “is deze tas groot?”. Met zulke vragen bepaal je of de advertentie het antwoord al geeft of dat je vóór bestellen verduidelijking nodig hebt. Bewaar de vraag naast de opgeslagen link, zodat je haar tijdens het afrekenen niet vergeet."
+          ]
+        },
+        {
+          "heading": "Maak een shortlist die een tweede blik doorstaat",
+          "paragraphs": [
+            "Beperk je actieve shortlist tot enkele kandidaten per behoefte. Geef elke kandidaat dezelfde kleine set velden: oorspronkelijke link, gekozen uitvoering, getoonde prijs, bekende extra kosten, benodigde maat en openstaande vraag. Je hebt geen ingewikkeld puntensysteem nodig. Consequente aantekeningen laten beter zien of een advertentie daadwerkelijk sterker bewijs levert of alleen een overtuigender foto heeft.",
+            "Bekijk de shortlist na een pauze opnieuw. Open de actuele links, verwijder dubbele vermeldingen en controleer of een opgeslagen uitvoering nog beschikbaar is. Blijft een kandidaat na meerdere controles onduidelijk, dan is ook dat nuttige informatie. Misschien kun je beter een duidelijkere advertentie kiezen dan meer moeite steken in het verdedigen van een onzekere keuze. Een shortlist moet onzekerheid verminderen, geen extra tabbladen verzamelen."
+          ]
+        },
+        {
+          "heading": "Gebruik dezelfde methode op je telefoon",
+          "paragraphs": [
+            "Vergelijk op een klein scherm bewust in plaats van tijdens het scrollen op je geheugen te vertrouwen. Open één artikel, bekijk de belangrijkste velden en bewaar de relevante link voordat je verdergaat. Inzoomen op een foto helpt bij zichtbare details, maar kan informatie die nooit in de foto stond niet terughalen. Een onscherp etiket blijft een onbeantwoorde vraag.",
+            "Houd bij terugkeer naar het overzicht je categorie en sortering gelijk. Controleer na een taalwissel of je nog op het bedoelde product of de bedoelde resultatenpagina zit. De vertaling moet de interface begrijpelijker maken, niet de productidentiteit veranderen. Controleer vóór betalen nogmaals je gekozen uitvoering op Kakobuy zelf. Die laatste controle is extra zinvol wanneer je tijdens dezelfde sessie meerdere vergelijkbare advertenties hebt geopend."
+          ]
+        },
+        {
+          "heading": "Hanteer een duidelijke stopregel",
+          "paragraphs": [
+            "Je bent klaar om van onderzoek naar bestellen over te gaan wanneer de oorspronkelijke advertentie overeenkomt met de bestemming, je uitvoering expliciet is gekozen, de pasvormvraag voldoende is beantwoord en je weet welke kosten nog moeten worden berekend. Dat neemt niet ieder risico weg, maar geeft je een doordachte basis voor de volgende stap.",
+            "Zijn die voorwaarden niet vervuld, zoek dan verder of laat het artikel weg. Beschouw de omvang van een overzicht, een enthousiaste kop of een lage productprijs niet als vervanging voor bewijs. Een bruikbare Kakobuy-spreadsheet ondersteunt beslissingen die je kunt uitleggen: waarom deze advertentie, waarom deze uitvoering en wat controleer je opnieuw wanneer het artikel in het magazijn aankomt?"
+          ]
+        }
+      ],
+      "sources": [
+        "https://www.kakobuy.com/index/information?information_id=3",
+        "https://kakobuy.com/service/help/question?cid=35&id=74",
+        "https://www.kakobuy.com/index/information?information_id=12",
+        "https://www.kakobuy.com/service/help/question?id=91"
+      ],
+      "wordCount": 1450
+    },
+    {
+      "slug": "how-to-buy-on-kakobuy",
+      "title": "Kopen op Kakobuy: stap voor stap je eerste bestelling",
+      "description": "Volg je bestelling van verkoperslink tot magazijncontrole en pakketverzending, met duidelijke controles vóór elke betaling.",
+      "category": "Koopgids",
+      "readMinutes": 7,
+      "intro": "Kopen via Kakobuy bestaat uit meerdere samenhangende beslissingen. Je kiest een artikel bij een verkoper, regelt de aankoop, beoordeelt wat in het magazijn aankomt en organiseert daarna internationale bezorging. Als je die volgorde begrijpt, zijn de schermen makkelijker te interpreteren en voorkom je dat je een stap goedkeurt voordat de belangrijke details duidelijk zijn. Deze gids volgt het gepubliceerde dienstverleningsproces; actuele prijzen, beschikbaarheid en routevoorwaarden controleer je op de live pagina’s van Kakobuy.",
+      "sections": [
+        {
+          "heading": "Begin bij het artikel, niet bij je accountsaldo",
+          "paragraphs": [
+            "Bepaal vóór het opladen van je saldo of plaatsen van een bestelling wat je wilt kopen. Bewaar de oorspronkelijke verkopers-URL en noteer de exacte keuze: maat, kleur, model, aantal en eventuele versieaanduiding. Eén marktplaatsadvertentie kan veel opties met verschillende prijzen bevatten. Alleen de hoofdfoto bewaren laat later te veel ruimte voor verwarring.",
+            "Open de advertentie zorgvuldig en benoem alles wat je beslissing beïnvloedt. Voor kleding heb je een bruikbare maatverwijzing nodig. Bij een tas kunnen afmetingen belangrijk zijn. Een elektronisch artikel kan een specificatie vereisen die een foto niet bevestigt. Schrijf een korte vraag op als informatie ontbreekt. Dat vóór betalen doen is eenvoudiger dan achteraf uit je geheugen reconstrueren wat je verwachtte."
+          ]
+        },
+        {
+          "heading": "Gebruik de officiële accountbestemming",
+          "paragraphs": [
+            "De registratielink op deze website leidt naar Kakobuy. Rond je accountinstellingen daar af en houd je inloggegevens daar. Deze onafhankelijke gidswebsite heeft je Kakobuy-wachtwoord, betaalgegevens of toegang tot bestellingen niet nodig om je te helpen zoeken. Controleer bij een inlogscherm het adres en of het werkelijk de dienst is die je wilt gebruiken.",
+            "Lees de actuele informatie over accounts, betalingen en diensten voordat je geld vastlegt. Neem niet aan dat een aanbieding uit een ouder bericht vandaag op een nieuw account van toepassing is. Verschijnt er bij registratie een voordeel, lees dan de voorwaarden, vervaldatum en toepasselijke dienst. Begrijpen wat de gewone kosten zijn helpt meer dan een budget baseren op een onbevestigde coupon of beloofde korting."
+          ]
+        },
+        {
+          "heading": "Vergelijk het geïmporteerde product met de oorspronkelijke advertentie",
+          "paragraphs": [
+            "Open het artikel via de productlink in Kakobuy en vergelijk het resultaat met je opgeslagen verwijzing. Controleer de productidentiteit, foto’s, zichtbare verkopersinformatie en optielabels. Een marktplaats-ID is niet hetzelfde als het interne recordnummer van een overzicht. De bestemming moet de oorspronkelijke verkopersadvertentie openen, niet alleen een aannemelijk nummer bevatten.",
+            "Ga niet op een gok verder wanneer het artikel niet kan worden geïmporteerd, niet beschikbaar is of een onverwacht product toont. Controleer de oorspronkelijke URL opnieuw en verwijder alleen ongerelateerde tracking- of paginafragmenten als je het echte productadres begrijpt. Vervang de advertentie niet zonder de eigen maten en voorwaarden van de vervanger te lezen. Een vervanging is een nieuwe aankoopbeslissing, ook als beide foto’s bijna identiek zijn."
+          ]
+        },
+        {
+          "heading": "Kies de exacte uitvoering en maak concrete notities",
+          "paragraphs": [
+            "Kies elke optie bewust. Lees de maat- en kleurlabels in plaats van op de positie van miniaturen te vertrouwen: de volgorde kan per scherm verschillen. Controleer het aantal en de prijs die bij jouw keuze hoort. Gebruikt de verkoper een modelcode, bewaar die dan in je notities. Die kan nauwkeuriger zijn dan een losjes vertaalde kleurnaam.",
+            "Gebruik een beschikbaar instructieveld voor een korte, toetsbare vraag. “Bevestig graag dat de gekozen uitvoering zwart, maat M is” is duidelijker dan “stuur de beste”. Neem met een notitie niet aan dat een onbeschikbare uitvoering toch geleverd kan worden. Wijzigt je verzoek het aanbod van de verkoper, vraag dan eerst bevestiging. Bestelnotities moeten je keuze verduidelijken, niet stilzwijgend de werkelijk geselecteerde optie vervangen."
+          ]
+        },
+        {
+          "heading": "Beoordeel de artikelbetaling als afzonderlijke fase",
+          "paragraphs": [
+            "Kakobuys gepubliceerde aankoopproces beschrijft betaling van goederen en binnenlandse porto vóór de latere internationale pakketfase. Lees het actuele totaal en benoem de onderdelen die daarin zitten. Betaling van het artikel betekent niet dat het al naar je huis is verzonden en stelt evenmin de uiteindelijke internationale bezorgkosten vast.",
+            "Bewaar een overzicht van het gekozen artikel en het goedgekeurde bedrag. Verandert een prijs of uitvoering voordat de aankoop is voltooid, lees dan de uitleg en bevestig de gewenste reactie. Pauzeren is verstandig als het gewijzigde aanbod niet meer bij je budget of eisen past. Een zorgvuldige controle hier kan een ingewikkelder gesprek voorkomen nadat het artikel al binnenlands onderweg is."
+          ]
+        },
+        {
+          "heading": "Lees bestelstatussen als fasen, niet als aankomstbeloften",
+          "paragraphs": [
+            "Een bestelling doorloopt verschillende activiteiten: aankoopverwerking, verzending door de verkoper, binnenlands transport en magazijnontvangst. Een wijziging in één fase betekent niet automatisch dat de volgende voltooid is. Lees de daadwerkelijke status en het bericht bij je artikel. Verwar een binnenlands trackingnummer bijvoorbeeld niet met de latere tracking van het internationale pakket.",
+            "Is de voortgang onduidelijk, stel dan een gerichte vraag met de bestelreferentie en de laatste zichtbare gebeurtenis. “Verzending door de verkoper is nog niet bevestigd; moet ik iets doen?” is nuttiger dan een ongefundeerde schatting van wanneer het pakket zou moeten aankomen. Baseer reis- of cadeauplannen niet op één optimistisch getal. Uitvoering door de verkoper en internationale bezorging hangen van verschillende gebeurtenissen af en kunnen aparte tijdsmarges vereisen."
+          ]
+        },
+        {
+          "heading": "Beoordeel het ontvangen artikel vóór pakketindiening",
+          "paragraphs": [
+            "Kakobuy beschrijft magazijninspectie en foto’s als onderdelen van zijn dienstverlening. Vergelijk het beschikbare bewijs voor je artikel met de bestelde uitvoering. Begin met identiteit en volledigheid: het juiste artikel, maatlabel, kleur of versie en onderdelen die je op basis van de advertentie verwacht. Bekijk daarna de zichtbare delen die voor jouw gebruik belangrijk zijn.",
+            "Begrijp de grenzen van de inspectie. Een foto toont mogelijk een etiket of naad, maar bewijst niet alle aspecten van pasvorm, comfort, duurzaamheid of werking. Ontbreekt een noodzakelijk beeld, vraag dan of de passende extra controle beschikbaar is en wat die kost. Houd een onopgelost probleem gescheiden van toestemming voor verzending. Naarmate een pakket verder in het proces komt, kunnen de praktische mogelijkheden om een verkopersprobleem op te lossen veranderen."
+          ]
+        },
+        {
+          "heading": "Los vragen op met duidelijk bewijs",
+          "paragraphs": [
+            "Beschrijf een mogelijke afwijking in een kort bericht met de relevante referentie. Vermeld wat je hebt besteld, wat het ontvangen bewijs laat zien en wat je verduidelijkt wilt hebben. Verwijs waar nuttig naar een specifieke foto of verkopersoptie. Daarmee kan men beter aan de slag dan met de algemene mededeling dat een artikel er verkeerd uitziet, vooral als een kleur of maat onduidelijk kan zijn.",
+            "Vraag naar de actuele retour- of ruilmogelijkheden voordat je een uitkomst veronderstelt. Kakobuys hulpinformatie behandelt verkopersgerelateerde service na aankoop, maar voorwaarden, termijnen en kosten moet je voor de daadwerkelijke bestelling controleren. Beloof jezelf niet dat elke zorg kosteloos kan worden opgelost. Weeg het beschikbare bewijs, de reactie van support en alle gevolgen af voordat je besluit het artikel te houden, ruilen, retourneren of uit een zending weg te laten."
+          ]
+        },
+        {
+          "heading": "Stel het pakket samen op basis van de werkelijke inhoud",
+          "paragraphs": [
+            "Bekijk de pakketkeuzes in Kakobuy wanneer de artikelen die je wilt versturen klaar zijn. Controleer afleveradres, ontvangergegevens, inhoudsbeperkingen, verpakkingsopties en beschikbare routes. Het uiteindelijke pakket is een nieuwe vergelijkingseenheid: meerdere afzonderlijk goedkope artikelen kunnen een omvangrijke doos vormen, terwijl andere verpakkingskeuzes de offerte of bescherming veranderen.",
+            "Vergelijk routes met dezelfde inhoud en aannames. Lees de actuele voorwaarden, niet alleen de prijs bovenaan. Wordt verzekering, extra verpakking of een andere dienst aangeboden, bekijk dan de dekking en kosten vóór selectie. Neem niet aan dat elke dienst nodig of inbegrepen is. De nuttige vraag is of de gekozen combinatie past bij het artikel, jouw bestemming en de gewenste bescherming."
+          ]
+        },
+        {
+          "heading": "Bevestig de verzending en bewaar het bewijs bij elkaar",
+          "paragraphs": [
+            "Controleer vóór het indienen van het pakket het volledige te betalen bedrag en eventuele aangiftegegevens die je moet invullen. Gebruik juiste informatie en volg de geldende eisen voor route en bestemming. Vraag bij een onduidelijk veld uitleg aan de dienst die de verzending verzorgt, in plaats van een willekeurige waarde uit andermans bestelling over te nemen.",
+            "Bewaar na indiening de pakketreferentie, route en trackinggegevens samen met je aankoopgegevens. Interpreteer trackingupdates binnen de daadwerkelijke gebeurtenissenreeks van de vervoerder. Gebruik bij een probleem het juiste bestel- of pakketkanaal en beschrijf de laatst bevestigde gebeurtenis. Het doel is een traceerbaar proces: één bevestigde verkopersverwijzing, één expliciete uitvoering, een beoordeeld magazijnartikel en een bewust gekozen internationale zending."
+          ]
+        }
+      ],
+      "sources": [
+        "https://www.kakobuy.com/index/information?information_id=3",
+        "https://www.kakobuy.com/index/information?information_id=12",
+        "https://kakobuy.com/service/help/question?cid=35&id=74",
+        "https://kakobuy.com/service/help/question?cid=35&id=76",
+        "https://www.kakobuy.com/service/help/question?id=95",
+        "https://www.kakobuy.com/service/help/question?id=51",
+        "https://www.kakobuy.com/service/help/question?id=69"
+      ],
+      "wordCount": 1388
+    },
+    {
+      "slug": "kakobuy-qc-photos-guide",
+      "title": "Gids voor Kakobuy-QC-foto’s: wat controleer je vóór verzending?",
+      "description": "Beoordeel magazijnfoto’s systematisch, onderscheid verkopersbeelden van QC-bewijs en bepaal welke extra details verduidelijking verdienen.",
+      "category": "QC-gids",
+      "readMinutes": 8,
+      "intro": "Kakobuy-QC-foto’s zijn nuttig wanneer je ze koppelt aan een concrete vraag over het ontvangen artikel van jouw bestelling. Ze helpen minder als je snel scrolt, de algemene vorm herkent en aanneemt dat de rest klopt. Een gestructureerde beoordeling begint bij de identiteit, controleert daarna zichtbare constructie en maten en eindigt met openstaande vragen. Deze gids beschrijft dat proces zonder een foto als garantie voor authenticiteit, werking of perfecte pasvorm te behandelen.",
+      "sections": [
+        {
+          "heading": "Weet welk soort afbeelding je bekijkt",
+          "paragraphs": [
+            "Een verkopersfoto presenteert het productaanbod. Het kan een gestileerde foto, detailbeeld, maattabel of voorbeeld van een beschikbare uitvoering zijn. Een QC-foto uit het magazijn documenteert een artikel dat ter inspectie is ontvangen. Dat onderscheid is belangrijk: beide beelden kunnen verschillende momenten betreffen en hoeven niet hetzelfde fysieke exemplaar te tonen.",
+            "Een oudere inspectiefoto kan context geven bij een advertentie, maar jouw bestelling vereist een eigen beoordeling. Controleer de productverwijzing en koppeling aan de bestelling voordat je op een foto vertrouwt. Is een galerij niet aangeduid als bevestigde QC, behandel haar dan als productbeelden in plaats van inspectiebewijs. Meer beelden betekenen niet automatisch beter bewijs; nuttige beelden tonen precies het kenmerk dat je moet beoordelen."
+          ]
+        },
+        {
+          "heading": "Begin bij identiteit en de gekozen uitvoering",
+          "paragraphs": [
+            "Controleer vóór kleine details of het artikel is wat je wilde bestellen. Vergelijk productsoort, kleur of versie, zichtbaar maatlabel en meegeleverde onderdelen met je opgeslagen keuze. Vergelijk modelcodes uit de advertentie waar ze leesbaar zijn. Deze eerste ronde kan een eenvoudige verwisseling aan het licht brengen voordat je tijd besteedt aan stikwerk of afwerking.",
+            "Beoordeel het artikel als geheel. Bij schoenen moeten beide schoenen aanwezig zijn; bij een kledingset de onderdelen uit de gekozen uitvoering; bij een accessoire met afneembare delen de verwachte componenten. Neem niet aan dat een verborgen onderdeel is meegeleverd alleen omdat het op de reclamefoto staat. Kun je volledigheid niet uit de beschikbare beelden bevestigen, vraag dan specifiek naar dat onderdeel."
+          ]
+        },
+        {
+          "heading": "Bekijk het hele artikel voordat je inzoomt",
+          "paragraphs": [
+            "Begin met een totaalbeeld om vorm en uitlijning te begrijpen. Kijk of het artikel gelijkmatig is neergelegd en of perspectief een zichtbaar verschil kan verklaren. Een gevouwen mouw, gekantelde schoen of schuine camera kan één kant anders laten lijken zonder een gebrek te bewijzen. Zoek een ander beeld voordat je uit één foto een stellige conclusie trekt.",
+            "Ga daarna naar de delen die voor de categorie belangrijk zijn. Bekijk bij kleding de zichtbare naden, sluitingen en algemene uitlijning van panden. Vergelijk bij schoenen links en rechts vanuit soortgelijke hoeken. Controleer bij tassen de omtrek, bevestiging van handvatten en zichtbare sluitingen. Beschrijf waarnemingen precies. “De naad lijkt op deze foto ongelijk” vormt een betere vraagbasis dan een uitspraak over productiekwaliteit die de foto niet kan bewijzen."
+          ]
+        },
+        {
+          "heading": "Bekijk detailfoto’s met een concrete vraag",
+          "paragraphs": [
+            "Inzoomen helpt wanneer de bronfoto scherp genoeg is. Bekijk het relevante etiket, de bevestiging, rand of het oppervlak en vraag je af wat de foto werkelijk toont. Misschien herken je een vlek, ontbrekend onderdeel of onverwacht etiket. Meestal kun je materiaalopbouw, duurzaamheid op lange termijn of verborgen constructie niet uit alleen een detailfoto vaststellen.",
+            "Gebruik digitaal vergroten niet als vervanging voor een ontbrekend aanzicht. Een klein onscherp etiket wordt geen betrouwbaar bewijs doordat het het hele scherm vult. Is dat etiket belangrijk voor je beslissing, vraag dan of een duidelijkere foto mogelijk is. Beperk de vraag tot het onzekere detail. Zo onderscheid je een noodzakelijke controle van herhaalde foto’s die geen nieuwe vraag beantwoorden."
+          ]
+        },
+        {
+          "heading": "Behandel kleur en belichting als onzekerheid",
+          "paragraphs": [
+            "Een tint kan anders lijken door magazijnlicht, camerabelichting en scherminstellingen. Vergelijk meerdere beelden en kijk of nabije oppervlakken ook van kleur lijken te verschuiven. Kakobuys inspectie-informatie noemt kleurverschillen als beperking van de dienstverlening. Eén foto mag daarom niet als een nauwkeurige kleurmeting worden beschouwd.",
+            "Is een bepaalde kleur belangrijk, beschrijf dan de verwachte verkopersoptie en vraag of het ontvangen artikel daarmee overeenkomt. Dat is nuttiger dan eisen dat het eruitziet als een anders belichte reclamefoto. Blijft het onderscheid onduidelijk, bepaal dan of je de onzekerheid aanvaardbaar vindt. Sommige aankopen vereisen een exactere overeenkomst dan andere; voorzichtig beslissen kan passend zijn als foto’s die eis niet kunnen bevestigen."
+          ]
+        },
+        {
+          "heading": "Controleer maten met overeenkomstige meetmethoden",
+          "paragraphs": [
+            "Een maat is pas bruikbaar als je beginpunt, eindpunt en eenheden begrijpt. Een kledingstuk op een rasterachtergrond geeft context, maar is niet altijd gelijkwaardig aan een meetlint langs precies de naad die je wilt beoordelen. Vergelijk waar mogelijk metingen die op dezelfde manier zijn uitgevoerd als in de verkoperstabel of bij je referentiekledingstuk.",
+            "Bij een shirt verschilt een plat gemeten breedte van een lichaamsomtrek. Bij een broek verschilt een ongerekte tailleband van een uitgerekte meting. Bij een schoen is buitenzoollengte iets anders dan voetlengte of de lengte van een uitneembare binnenzool. Stel een concrete vraag als de betekenis onduidelijk is. Kakobuys maathulp raadt metingen aan, terwijl de inspectiebeperkingen ook waarschuwen om meetcontroles niet als onvoorwaardelijke garantie te zien."
+          ]
+        },
+        {
+          "heading": "Vraag alleen extra bewijs dat een beslissing kan veranderen",
+          "paragraphs": [
+            "Een nuttig verzoek benoemt het artikel, het benodigde beeld en waarom het belangrijk is. Vraag bijvoorbeeld een leesbaar maatlabel, beide schoenen vanuit dezelfde hoek of een meting tussen benoemde punten. Vraag Kakobuy of het verzoek voor dit artikel wordt ondersteund en of er kosten gelden. Beschikbaarheid en prijs controleer je op het moment van aanvragen.",
+            "Geef voorrang aan vragen die je keuze om het artikel te houden of versturen kunnen veranderen. Een extra foto van een al duidelijk oppervlak voegt weinig toe. Een ontbrekende maat bij nauwsluitende kleding kan veel belangrijker zijn. Gerichte verzoeken maken de latere reactie ook makkelijker te beoordelen: je kunt controleren of het nieuwe bewijs de oorspronkelijke vraag beantwoordt, zonder de hele beoordeling opnieuw te beginnen."
+          ]
+        },
+        {
+          "heading": "Begrijp wat een visuele inspectie niet bewijst",
+          "paragraphs": [
+            "Zichtbaar QC-bewijs heeft grenzen. Een foto toont niet het comfort gedurende een dag, de reactie van stof op wassen, de levensduur van een sluiting of de interne veiligheid van elektronica. Kakobuys gepubliceerde inspectie-informatie bevat uitzonderingen voor bepaalde functionele en elektronische controles. Maak van een geslaagde visuele beoordeling geen bredere certificering.",
+            "Authenticiteit vaststellen is bovendien iets anders dan een ontvangen artikel bekijken. Een zichtbaar logo of bekende vorm bewijst op zichzelf geen herkomst of licentie. Is je aankoop afhankelijk van een bepaalde certificering, materiaalspecificatie of prestatienorm, verkrijg dan vóór bestellen passende documentatie van de relevante bron. Ontbreekt dat bewijs, gebruik dan geen verzameling QC-foto’s om het gat op te vullen."
+          ]
+        },
+        {
+          "heading": "Maak problemen eenvoudig bespreekbaar",
+          "paragraphs": [
+            "Houd je bericht feitelijk wanneer je iets zorgelijks ziet. Identificeer de bestelling of het magazijnartikel, beschrijf de gekozen uitvoering en leg het waargenomen verschil uit. Verwijs naar de foto waarop het zichtbaar is en geef aan welke verduidelijking je nodig hebt. Zo ontstaat een duidelijk dossier waarop support kan reageren zonder te hoeven raden welk artikel of kenmerk je bedoelt.",
+            "Scheid vragen van gewenste uitkomsten. Stel eerst vast of een ogenschijnlijke vlek een lichteffect of fysiek probleem is, of een ontbrekend onderdeel buiten beeld ligt, of dat de verkeerde uitvoering is ontvangen. Vraag daarna naar toepasselijke vervolgstappen. Retour-, ruil- en andere verwerkingsvoorwaarden hangen af van de actuele bestelling en verkopersvoorwaarden; een QC-zorg geeft niet automatisch recht op een bepaalde oplossing."
+          ]
+        },
+        {
+          "heading": "Doe een laatste controle vóór pakketgoedkeuring",
+          "paragraphs": [
+            "Bekijk vóór verzending opnieuw de vragen die je vóór aankoop opschreef. Zijn identiteit, uitvoering, belangrijke zichtbare kenmerken en relevante maten gecontroleerd? Wachten openstaande berichten nog op een antwoord? Bewaar inspectiebewijs bij de productverwijzing zodat de reden achter je beslissing duidelijk blijft.",
+            "Je hoeft niet in elke foto een gebrek te zoeken. Het doel is bepalen of het bewijs voor jouw beoogde gebruik voldoende is en belangrijke onzekerheden zijn behandeld. Blijft een vraag onbeantwoord, pauzeer dan in plaats van stilte als bevestiging te zien. Een zorgvuldige QC-beoordeling is een praktisch controlemoment tussen ontvangst van een artikel en het vastleggen van internationaal transport."
+          ]
+        }
+      ],
+      "sources": [
+        "https://www.kakobuy.com/index/information?information_id=12",
+        "https://kakobuy.com/service/help/question?cid=35&id=76",
+        "https://www.kakobuy.com/service/help/question?id=95",
+        "https://www.kakobuy.com/service/help/question?id=91",
+        "https://www.kakobuy.com/service/help/question?id=89",
+        "https://www.kakobuy.com/service/help/question?id=51"
+      ],
+      "wordCount": 1409
+    },
+    {
+      "slug": "kakobuy-shipping-costs",
+      "title": "Kakobuy-verzendkosten: een budget van artikelprijs tot bezorging",
+      "description": "Splits productprijs, binnenlands vervoer, internationale vracht en optionele diensten en vergelijk pakketoffertes met dezelfde aannames.",
+      "category": "Verzending",
+      "readMinutes": 8,
+      "intro": "Het bedrag op een productkaart is slechts één onderdeel van het budget bij een aankoopagent. Een bruikbare schatting van Kakobuy-verzendkosten begint met het scheiden van de artikelprijs en de kosten om het pakket te vervoeren en verwerken. Ook maakt zij onderscheid tussen een planningsschatting en de werkelijke offerte voor jouw bestemming en inhoud. Deze gids laat zien hoe je kosten ordent, opties vergelijkt en bepaalt welke informatie vóór verzending nog ontbreekt.",
+      "sections": [
+        {
+          "heading": "Scheid de artikelfase van de pakketfase",
+          "paragraphs": [
+            "Kakobuys gepubliceerde kosten- en bestelinformatie onderscheidt goederen en binnenlandse porto van de latere internationale verzendfase. Dat vormt de basis van een betrouwbaar budget. Noteer een productschatting in USD tijdens het zoeken als verwijzing voor de goederenprijs. Behandel die niet stilzwijgend als het bedrag waarmee het product op jouw adres aankomt.",
+            "Maak aparte regels voor het artikel, binnenlandse bezorging, internationale vracht, gekozen verpakking of diensten en andere toepasselijke kosten op de bestelling of route. Sommige bedragen blijven voorlopig onbekend. Een eerlijk leeg veld is nuttiger dan een gegokt getal dat nauwkeurig lijkt. Vervang je aanname zodra het live bestel- of pakketscherm het bedrag toont en noteer welke beslissing of dienst de verandering veroorzaakte."
+          ]
+        },
+        {
+          "heading": "Vergelijk precies de gekozen uitvoering",
+          "paragraphs": [
+            "Eén advertentie kan verschillende maten, versies of bundels tegen verschillende prijzen bevatten. Controleer vóór een verzendschatting of de goederenprijs bij jouw gewenste uitvoering hoort. Een lage vanafprijs kan voor een accessoire of andere versie gelden. Lees het totaal van de geselecteerde uitvoering in plaats van de eerst zichtbare prijs op de productpagina te vermenigvuldigen.",
+            "De uitvoering kan ook de verpakking beïnvloeden. Een set, een artikel in een doos en een los onverpakt exemplaar kunnen andere praktische eisen hebben. Ontbreekt een betrouwbaar gewicht of formaat, houd de verzendschatting dan ruim totdat betere gegevens beschikbaar zijn. Neem geen gewicht van een vergelijkbaar ogend artikel over om de uitkomst als offerte voor jouw aankoop te presenteren. Het verband tussen gekozen artikel en schatting moet expliciet blijven."
+          ]
+        },
+        {
+          "heading": "Begrijp binnenlands vervoer als apart traject",
+          "paragraphs": [
+            "Binnenlands vervoer brengt het gekochte artikel van de verkoper naar de ontvangstlocatie van de agent. Controleer of dit in het verkopersaanbod zit of op het geïmporteerde bestelscherm wordt toegevoegd. Overweeg je meerdere artikelen uit verschillende advertenties, controleer dan de werkelijke behandeling van elke bestelling in plaats van aan te nemen dat iedere verkoper dezelfde regeling gebruikt.",
+            "Deze kosten staan los van internationale verzending vanuit het magazijn. Door beide fasen te scheiden begrijp je waarom een betaalde bestelling later nog een pakketbetaling vraagt. Veranderingen worden ook duidelijker: een aangepast goederen- of binnenlands bedrag is niet noodzakelijk een wijziging van de internationale routeprijs. Vraag bij een onduidelijk bedrag welk procesdeel het dekt voordat je het goedkeurt."
+          ]
+        },
+        {
+          "heading": "Behandel gewicht en afmetingen als verschillende vragen",
+          "paragraphs": [
+            "Naast massa kan pakketformaat van belang zijn. Een compact zwaar artikel en een licht maar omvangrijk artikel vragen ander vervoer en andere verpakking. Vraagt een routeofferte afmetingen of toont zij een methode voor berekenbaar gewicht, lees dan de feitelijke regel. Neem niet aan dat een formule van een andere vervoerder of route op jouw zending van toepassing is.",
+            "Noteer voor je planning wat je over het artikel weet en wat over het verpakte pakket nog onbekend is. Het artikelgewicht van de verkoper omvat mogelijk geen beschermingsmateriaal of verzenddoos. Productafmetingen zijn niet noodzakelijk uiteindelijke pakketafmetingen. Vraag de beschikbare pakketgegevens op wanneer ze relevant worden en vergelijk routes op diezelfde basis. Zo behandel je schattingen met andere verpakkingsaannames niet alsof ze rechtstreeks vergelijkbaar zijn."
+          ]
+        },
+        {
+          "heading": "Beoordeel verpakking op kosten én bescherming",
+          "paragraphs": [
+            "Verpakkingskeuzes moeten bij het artikel passen. Een omvangrijke winkeldoos verwijderen kan de afmetingen veranderen, maar de doos kan ook bescherming bieden of onderdeel zijn van wat je wilde ontvangen. Extra versteviging of beschermingsmateriaal kan kosten én pakketformaat wijzigen. Controleer de opties en actuele kosten voor het daadwerkelijke pakket voordat je beslist.",
+            "Formuleer de keuze praktisch. Een breekbaar voorwerp, vormvaste tas en soepel kledingstuk vereisen niet noodzakelijk dezelfde aanpak. Vraag wat beschermd wordt, wat wordt verwijderd en of de uiteindelijke verpakking geschikt is voor de gekozen route. Kies niet iedere extra dienst alleen omdat ze bestaat en wijs niet alle bescherming af omdat de eerste offerte daardoor lager wordt. Vergelijk de volledige optie waarmee je gerust wilt verzenden."
+          ]
+        },
+        {
+          "heading": "Vergelijk routes met dezelfde aannames",
+          "paragraphs": [
+            "Een nuttige routevergelijking houdt inhoud, bestemming en verpakkingsaannames gelijk. Lees vervolgens het geoffreerde bedrag, de actuele leveringsschatting, toegestane artikelen, trackinginformatie en voorwaarden van Kakobuy. Het laagste hoofdprijsbedrag is niet per se de geschiktste optie voor jouw pakket, terwijl een hogere prijs op zichzelf geen betere behandeling bewijst.",
+            "Noteer de twee of drie routes die je werkelijk overweegt en waarom elke route kan passen. Is een optie niet beschikbaar voor inhoud of bestemming, verwijder haar dan in plaats van de prijs als maatstaf te bewaren. Controleer de actuele route-informatie vlak vóór indiening: beschikbaarheid en voorwaarden kunnen veranderen. Een schermafbeelding van andermans verzending geeft context, maar vervangt niet de offerte voor jouw eigen pakket."
+          ]
+        },
+        {
+          "heading": "Houd diensten zichtbaar in het totaal",
+          "paragraphs": [
+            "Verpakking, extra verwerking en andere selecteerbare diensten horen als afzonderlijke beslissingen in je budget te staan. Lees wat een dienst inhoudt voordat je betaalt. Een vergelijkbaar label op twee pagina’s garandeert geen gelijke inhoud. Is onduidelijk of een bedrag optioneel, inbegrepen of verplicht is voor een route, vraag dan verduidelijking voordat je verdergaat.",
+            "Wordt verzekering of bescherming aangeboden, lees dan de relevante dekking, uitzonderingen en claimvoorwaarden. Beoordeel dit niet alleen op de premie en neem niet aan dat ieder mogelijk probleem gedekt is. Bewaar bij keuze van de optie een kopie van de voor die zending getoonde voorwaarden. Het doel is niet zoveel mogelijk diensten kiezen, maar begrijpen wat iedere gekozen dienst verandert en welke verantwoordelijkheden bij jou blijven."
+          ]
+        },
+        {
+          "heading": "Behandel douaneregelingen als routespecifiek",
+          "paragraphs": [
+            "Kakobuys hulpinformatie onderscheidt verzendregelingen met verschillende douaneafhandeling. Neem niet aan dat de beschrijving van één route ook voor een andere route, bestemming of latere datum geldt. Lees de actuele voorwaarden bij de beschikbare optie en bepaal welke kosten of handelingen mogelijk jouw verantwoordelijkheid blijven.",
+            "Verstrek juiste artikel- en verzendgegevens wanneer dat wordt gevraagd. Raadpleeg bij onduidelijke aangiftevelden of bestemmingseisen de relevante officiële informatie of de dienst die het pakket behandelt. Kopieer geen willekeurige waarden uit het voorbeeld van een andere koper. Deze gids berekent geen universeel belasting- of invoerrechtenbedrag: de juiste behandeling hangt af van de daadwerkelijke goederen, bestemming en toepasselijke regels. Leg die onzekerheden vast in je budget in plaats van ze in een verzonnen verzendtotaal te verbergen."
+          ]
+        },
+        {
+          "heading": "Vergelijk gecombineerde en losse pakketten zorgvuldig",
+          "paragraphs": [
+            "Aankopen combineren kan handig zijn, maar is geen universele besparingsregel. Een gecombineerd pakket kan afmetingen, gewichtsklassen, verpakkingskeuzes en routetoelating veranderen. Losse pakketten kunnen terugkerende kosten veroorzaken. Je hebt werkelijke vergelijkbare opties nodig om te bepalen welke indeling bij de aangekomen artikelen past.",
+            "Begin met de artikelen die klaar zijn om te versturen en vergelijk de beschikbare verwerkingskeuzes op dezelfde basis. Voeg geen onnodig product toe alleen om een groter pakket te rechtvaardigen of een veronderstelde besparingsdrempel te halen. Is één artikel vertraagd, overweeg dan of wachten je prioriteiten of beschikbare dienstvoorwaarden verandert. Kies een zending die bij de aankoop past, in plaats van een speculatieve verzendberekening tot meer aankopen te laten leiden."
+          ]
+        },
+        {
+          "heading": "Werk de schatting bij op ieder beslismoment",
+          "paragraphs": [
+            "Een praktisch budget heeft controlemomenten. Noteer eerst de goederenraming tijdens onderzoek. Vervang haar vóór aankoop door de gekozen uitvoering en het binnenlandse totaal. Voeg na aankomst relevante pakketgegevens en de actuele routeofferte toe. Controleer tot slot bij indiening het volledige totaal, inclusief de bewust gekozen diensten.",
+            "Stel je ter illustratie twee kandidaten met soortgelijke productprijzen voor. De ene vereist een grotere verpakking of andere verwerking; de andere is makkelijker te combineren met artikelen die je al wilde versturen. Alleen uit productkaarten kun je de laagste totaalprijs inclusief bezorging niet bepalen. Houd de vergelijking open tot de benodigde offerte beschikbaar is. Een bruikbaar verzendbudget is helder over aannames, wordt aangepast zodra feiten veranderen en hoort bij het pakket dat je daadwerkelijk indient."
+          ]
+        }
+      ],
+      "sources": [
+        "https://kakobuy.com/service/help/question?cid=35&id=74",
+        "https://www.kakobuy.com/index/information?information_id=3",
+        "https://www.kakobuy.com/service/help/question?id=69",
+        "https://www.kakobuy.com/index/information?information_id=12"
+      ],
+      "wordCount": 1401
+    },
+    {
+      "slug": "kakobuy-sizing-guide",
+      "title": "Kakobuy-maatgids: vergelijk verkopersmaten met je gewenste pasvorm",
+      "description": "Gebruik de juiste verkoperstabellen, vergelijkbare kledingmaten en gerichte magazijnvragen om maatproblemen vóór internationale verzending te beperken.",
+      "category": "Maten",
+      "readMinutes": 8,
+      "intro": "Er bestaat geen enkele maattabel voor alles wat je via Kakobuy bestelt. Het platform verbindt je met verkopersadvertenties, en die verkopers kunnen verschillende labels, patronen en meetmethoden gebruiken. Een betere aanpak is de maten van het exacte product vergelijken met een geschikte referentie, je gekozen uitvoering vastleggen en het ontvangen artikel controleren zodra bruikbaar bewijs beschikbaar is. Deze gids richt zich op dat proces, in plaats van het algemene advies een maat groter of kleiner te nemen.",
+      "sections": [
+        {
+          "heading": "Begin met de exacte verkoperstabel",
+          "paragraphs": [
+            "Kakobuys officiële maathulp vermeldt dat verkopers eigen standaarden kunnen hanteren en raadt aan op basis van metingen te kiezen. Open de tabel bij precies de advertentie en versie die je wilt bestellen. Een tabel van een vergelijkbaar ogend product is geen betrouwbare vervanging. Zelfs bekende maatlabels kunnen tussen verkopers of productlijnen andere afmetingen betekenen.",
+            "Controleer wat elk getal betekent. Sommige tabellen geven lichaamsmaten, andere de afgewerkte kleding plat neergelegd. Ook eenheden en meetpunten zijn belangrijk. Is de tabel een afbeelding, vergroot haar dan totdat je de kolomkoppen kunt lezen in plaats van uit een rij cijfers te gokken. Vraag vóór bestellen verduidelijking wanneer een label onduidelijk blijft. De tabel moet een pasvormvraag beantwoorden, niet alleen geruststellende documentatie lijken."
+          ]
+        },
+        {
+          "heading": "Kies een referentie die bij het product past",
+          "paragraphs": [
+            "Voor kleding is een vergelijkbaar kledingstuk dat je al draagt vaak een bruikbare referentie. Kies iets met de pasvorm en het gebruik dat je van het nieuwe artikel verwacht. Een aansluitend overhemd en een ruime sweater zijn verschillende uitgangspunten. Elk bovenstuk met dezelfde referentie vergelijken kan het effect van stijl, laagjes en rekbaarheid verbergen.",
+            "Meet de referentie consequent op een plat oppervlak, zonder haar buiten de natuurlijke vorm te trekken tenzij je bewust een uitgerekte meting vergelijkt. Noteer de gebruikte punten, niet alleen het getal. Leg bijvoorbeeld vast waar breedte of lengte is gemeten. Zo vergelijk je gelijkwaardige maten bij het lezen van een verkoperstabel of aanvragen van een magazijnmeting. Enkele duidelijke metingen zijn nuttiger dan een lange lijst die inconsistent is opgenomen."
+          ]
+        },
+        {
+          "heading": "Geef voorrang aan de maten die de pasvorm bepalen",
+          "paragraphs": [
+            "Niet elke maat is voor ieder artikel even belangrijk. Bij een bovenstuk kunnen breedte, lengte en mouwbereik vooropstaan. Bij een broek beïnvloeden tailleband, kruishoogte, dijbreedte en pijplengte verschillende delen van de pasvorm. Een jas kan ruimte nodig hebben voor de lagen die je eronder wilt dragen.",
+            "Bepaal welke verkeerde maat het artikel ongeschikt zou maken. Dat wordt je eerste vergelijkingspunt. Controleer vervolgens de andere belangrijke maten, zodat het oplossen van één probleem geen ander veroorzaakt. Een groter maatlabel kan de gewenste breedte geven terwijl mouwen of lengte minder passend worden. Zie maatkeuze daarom als een kleine reeks afwegingen gekoppeld aan je gebruik, niet als één getal."
+          ]
+        },
+        {
+          "heading": "Onderscheid kledingmaten van lichaamsmaten",
+          "paragraphs": [
+            "Een lichaamsomtrek en de platte breedte van een kledingstuk zijn niet onderling uitwisselbaar. Een ontspannen elastische tailleband en een uitgerekte tailleband beschrijven evenmin dezelfde toestand. Controleer vóór het vergelijken of twee getallen hetzelfde beschrijven. Meet de ene bron rondom het lichaam en de andere over een plat kledingstuk, begrijp dat verschil dan voordat je een conclusie trekt.",
+            "Wees voorzichtig met automatische omrekenadviezen die het product negeren. Een algemene tabel helpt misschien bij eenheden of bekende maatsystemen, maar vervangt de daadwerkelijke verkopersmaten niet. Bewaar waar mogelijk de oorspronkelijke eenheden en maak omrekeningen expliciet. De nuttigste notitie vermeldt wat is gemeten, hoe en bij welke uitvoering het hoort. Een los getal zonder die context is later makkelijk verkeerd te lezen."
+          ]
+        },
+        {
+          "heading": "Houd rekening met stof en pasvorm zonder specificaties te verzinnen",
+          "paragraphs": [
+            "Het gedrag van een kledingstuk beïnvloedt hoe de maten aanvoelen, maar gebruik alleen specificaties die de advertentie werkelijk geeft. Neem niet aan dat stof rekt omdat de foto zacht oogt, of dat een model in oversized kleding betekent dat elke maat ruim valt. Styling, lichaamsverhoudingen van het model en de gekozen voorbeeldmaat kunnen allemaal het uiterlijk beïnvloeden.",
+            "Vraag de relevante informatie als je beslissing afhangt van een materiaaleigenschap. Maten vergelijken beperkt onzekerheid, maar bewijst niet hoe een ongedocumenteerde stof na rekken herstelt of na wassen verandert. Pas niet op ieder artikel een algemene marge toe op basis van een uitspraak over alle producten uit één land. Gebruik de verkopersinformatie, een vergelijkbare referentie en jouw gewenste pasvorm voor dit specifieke kledingstuk."
+          ]
+        },
+        {
+          "heading": "Controleer schoenen met het juiste maatsysteem",
+          "paragraphs": [
+            "Bepaal bij schoenen of de verkoper EU, UK, US of een centimeterreferentie gebruikt en controleer of een US-label bij het bedoelde maatbereik hoort. Kakobuys advies is beide voeten te meten en de grootste meting te gebruiken. Vergelijk die met de tabel van de exacte verkoper, in plaats van aan te nemen dat dezelfde gedrukte maat altijd dezelfde pasvorm betekent.",
+            "Zoek uit wat een centimetergetal beschrijft. Voetlengte, binnenzoollengte en buitenzoollengte zijn verschillende metingen. Een foto van de buitenzool bevestigt niet rechtstreeks de binnenruimte voor je voet. Ook breedte en vorm kunnen comfort bepalen wanneer de lengte geschikt lijkt. Beantwoordt de verkopersinformatie een belangrijke pasvormeis niet, houd die onzekerheid dan zichtbaar in plaats van de omrekentabel als garantie te behandelen."
+          ]
+        },
+        {
+          "heading": "Leg de uitvoering vast vóór betaling",
+          "paragraphs": [
+            "Bewaar de gekozen maat en eventuele versiecode samen met de oorspronkelijke productlink. Eén advertentie kan aparte optiegroepen hebben, met hetzelfde maatlabel onder verschillende modellen. Controleer de geselecteerde combinatie op Kakobuy vóór betalen zodat je notities en de geïmporteerde bestelling hetzelfde artikel beschrijven.",
+            "Maak een instructie specifiek en in overeenstemming met de daadwerkelijke selectie. Een notitie moet de gekozen uitvoering verduidelijken, niet stilzwijgend een andere vragen. Biedt de advertentie de benodigde maat niet aan, vraag dan bevestiging over beschikbaarheid in plaats van aan te nemen dat een opmerking haar beschikbaar maakt. Deze vastlegging geeft ook een helder vergelijkingspunt wanneer het artikel het magazijn bereikt en het label zichtbaar is."
+          ]
+        },
+        {
+          "heading": "Gebruik magazijnbewijs voor een gerichte vraag",
+          "paragraphs": [
+            "Begin bij foto’s van je eigen bestelling met het vergelijken van het zichtbare maatlabel en je gekozen uitvoering. Blijft een cruciale maat onzeker, vraag Kakobuy dan of een passende meting of extra foto mogelijk is en of er kosten gelden. Benoem begin- en eindpunt, eenheden en of het artikel ontspannen of onder een andere omschreven conditie gemeten moet worden.",
+            "Vertrouw bij een nauw luisterende beslissing niet op de fotoachtergrond als exact meetinstrument. Perspectief, vouwen en plaatsing beïnvloeden de interpretatie. Kakobuys inspectie-informatie beschrijft ook beperkingen rond meetfouten: behandel een foto als te interpreteren bewijs, niet als belofte van perfecte pasvorm. Gebruikt de nieuwe meting een andere methode dan je referentie, los dat verschil dan op voordat je het artikel te groot of te klein noemt."
+          ]
+        },
+        {
+          "heading": "Reageer op afwijkingen vóór verzendplanning",
+          "paragraphs": [
+            "Vergelijk eerst de gegevens wanneer ontvangen label of maat niet met de bestelling lijkt overeen te komen. Controleer oorspronkelijke tabel, geselecteerde uitvoering, meetmethode en relevante foto. Een duidelijke afwijking en een onduidelijke foto vragen verschillende vragen. Beschrijf wat je verwachtte en wat het huidige bewijs toont zonder de oorzaak aan te nemen.",
+            "Vraag naar actuele verwerkingsmogelijkheden terwijl het artikel nog in de relevante bestel- of magazijnfase zit. Retour- en ruilvoorwaarden hangen van de verkoper en toepasselijke voorwaarden af; ze zijn niet automatisch of kosteloos. Overweeg praktische opties en hun kosten vóór goedkeuring voor internationale verzending. De vraag vroeg oplossen is eenvoudiger dan verwachten dat het internationale bezorgproces een in het magazijn al zichtbaar pasvormprobleem oplost."
+          ]
+        },
+        {
+          "heading": "Maak een herbruikbare maatnotitie",
+          "paragraphs": [
+            "Bewaar na je beslissing een compacte notitie voor later: verkoperslink, artikelversie, gekozen maat, tabelwaarden, maten van je referentiekledingstuk en waargenomen resultaat. Dat is nuttiger dan onthouden dat één merk je meestal in een bepaalde letter past. Het verbindt het pasvormresultaat met een specifieke advertentie en meetmethode.",
+            "Twee hoodies kunnen bijvoorbeeld hetzelfde maatlabel hebben, terwijl de ene de gewenste breedte heeft en de andere de gewenste lengte. Je notitie moet uitleggen welke afweging je accepteerde. Past geen van beide goed bij je behoeften, dan is een andere advertentie kiezen mogelijk verstandiger dan ertussen gokken. Een maatproces moet onzekerheid verkleinen en expliciet maken, niet beloven dat iedere online aankoop perfect past."
+          ]
+        }
+      ],
+      "sources": [
+        "https://www.kakobuy.com/service/help/question?id=91",
+        "https://www.kakobuy.com/service/help/question?id=95",
+        "https://www.kakobuy.com/index/information?information_id=12",
+        "https://www.kakobuy.com/service/help/question?id=51"
+      ],
+      "wordCount": 1440
+    },
+    {
+      "slug": "kakobuy-warehouse-consolidation",
+      "title": "Kakobuy-magazijn en samenvoegen: plan een logisch pakket",
+      "description": "Begrijp magazijnfasen, opslagtermijnen, verpakkingskeuzes en afwegingen bij samenvoegen voordat je een Kakobuy-pakket indient.",
+      "category": "Magazijn",
+      "readMinutes": 7,
+      "intro": "Het Kakobuy-magazijn is een beslismoment tussen de aankoop van een artikel en betaling voor internationale verzending. Meerdere verkopersbestellingen kunnen daar op verschillende momenten aankomen, met andere verpakkingen, maten en openstaande vragen. Samenvoegen betekent bepalen welke toegestane artikelen samen reizen. Dat kan verzending efficiënter maken, maar een groter pakket is niet automatisch goedkoper of beter. Deze gids helpt je magazijnartikelen ordenen, verpakkingsopties vergelijken en een pakket indienen zonder een termijn of een vóór vertrek eenvoudiger op te lossen probleem over het hoofd te zien.",
+      "sections": [
+        {
+          "heading": "Begrijp de twee reizen",
+          "paragraphs": [
+            "Een artikel reist normaal eerst van de verkoper naar het magazijn van de agent en begint daarna aan de internationale reis naar jou. Houd beide fasen in je notities gescheiden. Een binnenlandse trackingupdate vertelt niet of het artikel klaar is om China te verlaten en een aankoopbewijs bevat niet alle toekomstige verzendkosten. Kakobuys openbare dienstbeschrijving legt uit dat gebruikers magazijnartikelen voor een gecombineerd pakket kunnen selecteren; de beschikbare accountopties bepalen wat werkelijk kan worden ingediend.",
+            "Behandel iedere verkopersbestelling als afzonderlijk dossier totdat je haar bewust aan een pakket toevoegt. Bewaar productlink, gekozen uitvoering, aantal en bestelreferentie bij elkaar. Maak vervolgens een apart pakketdossier voor de te versturen artikelen. Zo herken je makkelijker een betaald maar nog niet aangekomen artikel of een voorbereid pakket dat nog betaling of informatiecontrole vereist."
+          ]
+        },
+        {
+          "heading": "Maak een bruikbare magazijnlijst",
+          "paragraphs": [
+            "Een bruikbare lijst beantwoordt drie vragen: wat is er, wat is klaar en wat vereist een beslissing? Noteer per artikel magazijnstatus, aankomstdatum, zichtbare maten, openstaand probleem en beoogd pakket. Koop je twee vergelijkbare kleuren of meerdere maten, gebruik dan de exacte optienaam in plaats van “zwarte top”. Vermeld behalve de artikelnaam ook het aantal, want één bestelling kan meerdere exemplaren bevatten.",
+            "Voeg een kort actieveld toe, zoals “mouwmaat controleren”, “ontbrekend accessoire bevestigen” of “klaar na retourbesluit”. Deze notities helpen je eigen organisatie en vervangen geen instructies via Kakobuy. Moet personeel handelen, stuur het verzoek dan via het relevante bestel- of supportkanaal. Een opmerking in je persoonlijke spreadsheet vertelt het magazijn niet dat het een artikel moet vasthouden of de verpakking moet bewaren."
+          ]
+        },
+        {
+          "heading": "Scheid aankomst van verzendgereedheid",
+          "paragraphs": [
+            "Een aankomstscan is goed nieuws, maar niet hetzelfde als een afgeronde inspectie en bruikbaar verzenddossier. Kakobuys aankomstinformatie beschrijft extra magazijnverwerking voordat een artikel voor pakketindiening in aanmerking komt. Lees de actuele bestelstatus en eventuele toelichting, in plaats van aan te nemen dat elk zichtbaar magazijnartikel meteen kan worden ingepakt.",
+            "Controleer het referentienummer wanneer de koerier “bezorgd” meldt maar je account onveranderd lijkt. Verkopers-tracking, bestelreferenties en magazijnreferenties kunnen verschillende fasen van dezelfde aankoop identificeren. Geef support bij onduidelijkheid de relevante identificaties en de specifieke afwijking. Herhaaldelijk een vervangende bestelling plaatsen voordat je de oorspronkelijke status begrijpt kan een ongewenst dubbel exemplaar opleveren. Bewaar een gedateerde notitie van het antwoord zodat je weet waarop je wacht."
+          ]
+        },
+        {
+          "heading": "Los artikelvragen op vóór samenvoegen",
+          "paragraphs": [
+            "Bekijk vóór pakketvorming voor elk voorgesteld artikel de beschikbare inspectiegegevens. Controleer zichtbare kleur, etiketten, aantal en uitvoering tegen de daadwerkelijk geplaatste bestelling. Zijn maten belangrijk, vergelijk ze dan met een eigen kledingstuk of product volgens dezelfde meetmethode. Foto’s ondersteunen beslissingen over zichtbare details, maar bewijzen niet iedere materiaaleigenschap, functionaliteit of authenticiteitsclaim.",
+            "Houd artikelen met openstaande vragen buiten de gereedgroep tot je antwoord krijgt. Een ontbrekende riem of onzekere maat is bijvoorbeeld vaak makkelijker te bespreken terwijl het artikel nog in het magazijn ligt. Toevoeging aan een pakket creëert een nieuwe verwerkingsfase en kan een retourbesluit ingewikkelder maken. Historische foto’s van een andere koper geven context, maar je eigen bestelgegevens moeten deze laatste controle bepalen."
+          ]
+        },
+        {
+          "heading": "Vergelijk gewicht en volume samen",
+          "paragraphs": [
+            "Een pakket kan licht maar groot zijn, vooral met dozen, gewatteerde goederen of onhandige vormen. Bekijk bij vergelijking van verzendopties zowel het gemeten gewicht als de verwachte verpakte afmetingen. Gebruik de tariefregels van die specifieke route. Pas geen volumegewichtformule van een andere vervoerder toe en neem niet aan dat elke lijn dezelfde limieten en afrondingsregels hanteert.",
+            "Denk aan een paar schoenen in een grote winkeldoos naast enkele zachte kledingstukken. Een doos verwijderen kan volume verminderen, terwijl beschermende verpakking afmetingen of gewicht kan verhogen. Geen van beide garandeert een bepaalde besparing. Vraag naar de beschikbare inpak- of meetdienst wanneer de onzekerheid ertoe doet en vergelijk de resulterende offertes. Kakobuys uitleg vermeldt dat maten vóór en na definitief inpakken kunnen verschillen; houd voorlopige cijfers dus los van de uiteindelijke kosten."
+          ]
+        },
+        {
+          "heading": "Groepeer op geschiktheid, niet alleen op aantal",
+          "paragraphs": [
+            "Begin met bestemming en geschiktheid voor de route. Artikelen voor verschillende adressen, met andere behandelingseisen of uitgesloten van dezelfde vervoersoptie horen mogelijk niet bij elkaar. Controleer de actuele beperkingen voor de werkelijke inhoud. Een alledaags klinkende naam beslist dit niet: batterijen, vloeistoffen of kwetsbare onderdelen kunnen behandelingseisen beïnvloeden en beschikbare routes kunnen veranderen na beoordeling van de goederen.",
+            "Denk daarna aan fysieke bescherming. Een zwaar artikel kan op een kwetsbaar artikel drukken, scherpe onderdelen kunnen zachte stof beschadigen en een stevige doos kan ruimte innemen die anders samendrukbaar was. Vraag hoe de voorgestelde groep wordt beschermd in plaats van aan te nemen dat een grotere doos alles oplost. Bieden twee kleinere pakketten duidelijkere behandeling of geschiktere routes, vergelijk dan hun gezamenlijke te betalen bedrag met één pakket vóór je beslist."
+          ]
+        },
+        {
+          "heading": "Geef precieze verpakkingsinstructies",
+          "paragraphs": [
+            "Kies verpakking op basis van het artikel en wat je wilt behouden. Heeft de winkeldoos waarde voor je, zeg dit dan voordat je verwijdering vraagt. Heeft het artikel kwetsbare afwerking, leg uit welk deel bescherming nodig heeft. Vermijd tegenstrijdige instructies zoals alle dozen behouden én de kleinst mogelijke verpakking vragen. Geef je prioriteit en laat het magazijn uitleggen welke opties bestaan.",
+            "Controleer kosten voor optionele inpak- of inspectiediensten vóór selectie. Extra diensten zijn niet automatisch voor ieder pakket nodig en hun namen bewijzen geen bepaald beschermingsniveau. Bewaar bevestigde instructies bij het pakketdossier. Dat is extra nuttig als één artikel anders moet worden behandeld dan de rest of als je wilt begrijpen waarom de uiteindelijke afmetingen veranderden."
+          ]
+        },
+        {
+          "heading": "Beslis wat je met een laat artikel doet",
+          "paragraphs": [
+            "Een ontbrekende bestelling vraagt een afweging tussen wachten en het versturen van wat al klaar is. Schat de gevolgen met de gegevens die je echt hebt: laatste verkopersreactie, magazijntermijnen, actuele pakketoffertes en je eigen leveringsbehoeften. Behandel een onbevestigde verzendbelofte niet als gegarandeerde aankomstdatum. Zelfs een goedkoop extra artikel kan een dure vertraging veroorzaken als het een tijdgevoelige groep ophoudt.",
+            "Je kunt een direct gereed pakket vergelijken met een later voorgesteld pakket zonder je aan één optie te binden. Noteer welke artikelen in elk scenario zitten en welke kosten nog onbekend zijn. Is het late artikel essentieel voor de groep, vraag dan een duidelijkere status vóór betaling voor definitief inpakken. Is het optioneel, overweeg dan of een aanvullende losse verzending de aankoop nog de moeite waard maakt."
+          ]
+        },
+        {
+          "heading": "Volg opslag- en retourtermijnen afzonderlijk",
+          "paragraphs": [
+            "Opslagduur en retourmogelijkheid beantwoorden verschillende vragen. Een artikel kan nog opgeslagen zijn nadat de termijn waarin de verkoper een retour zou overwegen is verstreken. Kakobuy publiceert opslagregels, maar controleer de toepasselijke termijn en status tegen je eigen magazijndossier en actuele hulpinformatie. Gebruik het dagenaantal uit een oud artikel niet als enige herinnering.",
+            "Plan herinneringen ruim vóór de vroegste relevante datum, met tijd voor een supportantwoord en je eigen beslissing. Noteer vanaf welke datum elke regel loopt: aankoop, verzending, ontvangst en magazijninvoer zijn niet noodzakelijk uitwisselbaar. Is opslagverlenging beschikbaar, controleer prijs, duur en voorwaarden voordat je daarop rekent. Neem niet aan dat een onbeantwoord bericht of je voornemen later te verzenden een termijn pauzeert."
+          ]
+        },
+        {
+          "heading": "Beoordeel het pakket als nieuwe transactie",
+          "paragraphs": [
+            "Lees vóór indiening de geselecteerde artikellijst helemaal door en vergelijk haar met je magazijnplan. Controleer aantallen, ontvangergegevens, routetoelating, verpakkingsinstructies en het gevraagde bedrag. Bepaal wat een schatting is, wat al is betaald en wat nog kan worden aangepast. Iedere aangifte moet de inhoud waarheidsgetrouw beschrijven en de voor bestemming en route vereiste gegevens gebruiken.",
+            "Bewaar na indiening de pakketreferentie en let op verzoeken waarop je moet reageren. Een verstandig samenvoegplan blijft na inpakken nuttig: het vertelt precies wat samen moet aankomen en wat nog in het magazijn ligt. Vergelijk de ontvangen inhoud bij aankomst met dat dossier. Het doel is een zending die je kunt uitleggen en volgen, niet simpelweg de grootst mogelijke haul."
+          ]
+        }
+      ],
+      "sources": [
+        "https://kakobuy.com/enquiry",
+        "https://www.kakobuy.com/service/help/question?id=1",
+        "https://kakobuy.com/service/help/question?cid=35&id=84",
+        "https://www.kakobuy.com/service/help/question?id=95",
+        "https://www.kakobuy.com/service/help/question?id=37"
+      ],
+      "wordCount": 1514
+    }
+  ],
+  "faqs": [
+    {
+      "id": "what-is-kakobuy",
+      "question": "Wat is Kakobuy?",
+      "answer": "Kakobuy is een aankoopagent: je dient een ondersteunde verkopersaanbieding in, regelt de aankoop via Kakobuy en organiseert later de levering vanuit het magazijn. Productkeuze, inspectie en internationale verzending zijn afzonderlijke beslissingen.",
+      "sources": [
+        "https://www.kakobuy.com/index/information?information_id=3",
+        "https://www.kakobuy.com/index/information?information_id=12"
+      ]
+    },
+    {
+      "id": "independent-site",
+      "question": "Is Kakobuy Buys de officiële Kakobuy-website?",
+      "answer": "Nee. Kakobuy Buys is een onafhankelijke website voor productontdekking en gidsen. Registratie, betaling, bestelwijzigingen en pakketdiensten verlopen via Kakobuy. Sommige uitgaande links zijn affiliatelinks.",
+      "sources": []
+    },
+    {
+      "id": "what-is-spreadsheet",
+      "question": "Wat is een Kakobuy-spreadsheet?",
+      "answer": "Het is een geordende catalogus met productverwijzingen waarmee je aanbiedingen kunt vergelijken voordat je ze op Kakobuy opent. Een vermelding is een startpunt voor onderzoek, geen garantie voor beschikbaarheid, kwaliteit of de uiteindelijke kosten.",
+      "sources": []
+    },
+    {
+      "id": "need-account",
+      "question": "Heb ik een account nodig om deze site te bekijken?",
+      "answer": "Je kunt de catalogus bekijken en gidsen lezen zonder hier een account aan te maken. Gebruik de Kakobuy-registratielink wanneer je de besteldiensten wilt gebruiken. Wij verzamelen je Kakobuy-wachtwoord niet.",
+      "sources": []
+    },
+    {
+      "id": "how-order",
+      "question": "Hoe bestel ik een product dat ik hier vind?",
+      "answer": "Open de productdetails, controleer de oorspronkelijke aanbieding en de gekozen uitvoering en gebruik vervolgens de aankoopknop voor Kakobuy. Controleer het geïmporteerde artikel, de verkopersprijs, maat, kleur, hoeveelheid en binnenlandse verzendkosten voordat je betaalt.",
+      "sources": [
+        "https://www.kakobuy.com/index/information?information_id=3"
+      ]
+    },
+    {
+      "id": "source-link",
+      "question": "Waarom moet ik de oorspronkelijke verkoperslink bewaren?",
+      "answer": "Die identificeert de aanbieding achter de aanbeveling. Bewaar hem samen met je gekozen maat en kleur, zodat je de verkoperspagina, het geïmporteerde Kakobuy-artikel en latere gesprekken over de bestelling kunt vergelijken zonder vergelijkbare producten te verwarren.",
+      "sources": []
+    },
+    {
+      "id": "wrong-product",
+      "question": "Wat als de aankooplink het verkeerde artikel opent?",
+      "answer": "Stop voordat je betaalt. Vergelijk de marktplaats, het oorspronkelijke artikel-ID, de verkoper en de gekozen uitvoering. Een vergelijkbare afbeelding of titel is niet voldoende. Kies een andere gecontroleerde aanbieding als de oorspronkelijke aanbieding niet overeenkomt.",
+      "sources": []
+    },
+    {
+      "id": "prices-usd",
+      "question": "Waarom worden productprijzen in USD weergegeven?",
+      "answer": "USD-schattingen maken aanbiedingen eenvoudiger te vergelijken. De verkopersprijs, valutaomrekening, gekozen uitvoering en kosten op Kakobuy kunnen afwijken van een catalogusschatting. Bevestig het te betalen bedrag op het daadwerkelijke bestelscherm.",
+      "sources": [
+        "https://kakobuy.com/service/help/question?cid=35&id=74"
+      ]
+    },
+    {
+      "id": "price-includes-shipping",
+      "question": "Is internationale verzending inbegrepen in de productprijs?",
+      "answer": "Ga daar niet van uit. Kakobuys kosteninformatie maakt onderscheid tussen artikelen en binnenlands vervoer enerzijds en internationale vracht, toepasselijke verpakkingskosten en optionele diensten anderzijds. Lees de werkelijke artikel- en pakkettotalen voordat je betaalt.",
+      "sources": [
+        "https://kakobuy.com/service/help/question?cid=35&id=74"
+      ]
+    },
+    {
+      "id": "two-payments",
+      "question": "Waarom verlopen aankoop en verzending afzonderlijk?",
+      "answer": "Kakobuys gepubliceerde werkwijze scheidt de aankoop van het artikel en binnenlandse verzendkosten van het indienen van een magazijnpakket voor internationale verzending. Die pakketstap hangt af van wat is aangekomen en welke verzendmogelijkheden daarvoor beschikbaar zijn.",
+      "sources": [
+        "https://www.kakobuy.com/index/information?information_id=3"
+      ]
+    },
+    {
+      "id": "domestic-shipping",
+      "question": "Wat is binnenlandse verzending?",
+      "answer": "Dat is het vervoer van de verkoper in China naar de ontvangstlocatie van de aankoopagent. Controleer of de verkoper of de geïmporteerde bestelling deze kosten toevoegt; ze staan los van internationale bezorging op jouw adres.",
+      "sources": [
+        "https://kakobuy.com/service/help/question?cid=35&id=74"
+      ]
+    },
+    {
+      "id": "warehouse-arrival",
+      "question": "Wat gebeurt er wanneer een artikel bij het magazijn aankomt?",
+      "answer": "Kakobuy beschrijft een inspectie bij aankomst en verstrekt foto’s ter beoordeling binnen de reikwijdte van die inspectie. Vergelijk het ontvangen artikel met je bestelling en los vragen op voordat je het voor internationale verzending indient.",
+      "sources": [
+        "https://kakobuy.com/service/help/question?cid=35&id=76",
+        "https://www.kakobuy.com/index/information?information_id=12"
+      ]
+    },
+    {
+      "id": "what-is-qc",
+      "question": "Wat zijn QC-foto’s?",
+      "answer": "QC-foto’s zijn inspectiebeelden van een ontvangen artikel. Ze kunnen je helpen zichtbare details te beoordelen, maar verschillen van promotiefoto’s van de verkoper en bewijzen niet alle aspecten van de werking van een product.",
+      "sources": [
+        "https://www.kakobuy.com/index/information?information_id=12",
+        "https://www.kakobuy.com/service/help/question?id=95"
+      ]
+    },
+    {
+      "id": "qc-where",
+      "question": "Waar controleer ik de QC van mijn eigen bestelling?",
+      "answer": "Gebruik de foto’s en berichten bij je eigen Kakobuy-bestelling of magazijnartikel. Oudere referentiebeelden van een andere aankoop kunnen helpen bij het vergelijken, maar bewijzen niet welk artikel voor jou is toegewezen.",
+      "sources": [
+        "https://www.kakobuy.com/index/information?information_id=12"
+      ]
+    },
+    {
+      "id": "all-products-qc",
+      "question": "Heeft iedere aanbieding hier geverifieerde QC-foto’s?",
+      "answer": "Daar wordt geen garantie voor gegeven. Een aanbieding kan verkopersbeelden hebben zonder een geverifieerde QC-reeks. Alleen beelden met een bevestigde QC-bron mogen als inspectiereferentie worden gebruikt.",
+      "sources": []
+    },
+    {
+      "id": "qc-authentication",
+      "question": "Garandeert QC de authenticiteit of werking van een product?",
+      "answer": "Nee. Een visuele inspectie is geen algemene echtheids- of functietest. Kakobuys inspectie-informatie beschrijft uitsluitingen, waaronder beperkingen voor functionele en elektronische producten. Bespreek bijzondere controles rechtstreeks voordat je bestelt.",
+      "sources": [
+        "https://www.kakobuy.com/service/help/question?id=95",
+        "https://www.kakobuy.com/service/help/question?id=89"
+      ]
+    },
+    {
+      "id": "extra-photo",
+      "question": "Kan ik om een specifieke foto of meting vragen?",
+      "answer": "Vraag Kakobuy of je huidige bestelling de gewenste foto of meting ondersteunt en of er kosten gelden. Beschrijf de hoek, meetpunten en eenheden duidelijk. Ga er niet van uit dat ieder verzoek inbegrepen is.",
+      "sources": [
+        "https://www.kakobuy.com/index/information?information_id=12",
+        "https://www.kakobuy.com/service/help/question?id=95"
+      ]
+    },
+    {
+      "id": "colour-difference",
+      "question": "Waarom kunnen kleuren anders lijken op foto’s?",
+      "answer": "Licht, cameraverwerking en je scherm kunnen de weergave veranderen. Kakobuys inspectie-uitsluitingen noemen kleurverschillen. Vergelijk meerdere aanzichten en vraag om verduidelijking als de exacte tint belangrijk is voor je keuze.",
+      "sources": [
+        "https://www.kakobuy.com/service/help/question?id=95"
+      ]
+    },
+    {
+      "id": "size-standard",
+      "question": "Is er één universele Kakobuy-kledingmaat?",
+      "answer": "Nee. Kakobuys maatadvies vermeldt dat verkopers hun eigen normen gebruiken. Vergelijk de metingen van de exacte aanbieding met een kledingstuk dat goed past, in plaats van alleen op een bekend S-, M- of L-label af te gaan.",
+      "sources": [
+        "https://www.kakobuy.com/service/help/question?id=91"
+      ]
+    },
+    {
+      "id": "shoe-sizing",
+      "question": "Hoe kies ik mijn schoenmaat?",
+      "answer": "Meet beide voeten en vergelijk de grootste meting met de maattabel van de betreffende verkoper. Controleer welk maatsysteem de aanbieding gebruikt en of het getal in centimeters de voetlengte of een andere maat aangeeft.",
+      "sources": [
+        "https://www.kakobuy.com/service/help/question?id=91"
+      ]
+    },
+    {
+      "id": "shipping-cost",
+      "question": "Hoeveel kost verzending?",
+      "answer": "Er is geen enkel tarief dat voor ieder pakket geldt. Gebruik Kakobuys actuele offerte voor jouw bestemming, inhoud en gekozen route en controleer vervolgens inbegrepen en optionele kosten voordat je de zending indient.",
+      "sources": [
+        "https://kakobuy.com/service/help/question?cid=35&id=74",
+        "https://www.kakobuy.com/index/information?information_id=3"
+      ]
+    },
+    {
+      "id": "delivery-time",
+      "question": "Hoe lang duurt de levering?",
+      "answer": "Gebruik de actuele schatting voor de specifieke route die Kakobuy toont. Verzending door de verkoper, magazijnverwerking, internationaal transport en eindbezorging zijn afzonderlijke fasen; een routeschatting is geen gegarandeerde totale aankomstdatum.",
+      "sources": [
+        "https://www.kakobuy.com/index/information?information_id=3"
+      ]
+    },
+    {
+      "id": "combine-items",
+      "question": "Moet ik al mijn artikelen in één pakket combineren?",
+      "answer": "Vergelijk de werkelijk beschikbare verpakkings- en routeopties. Artikelen combineren kan de pakketafmetingen, het gewicht en beperkingen veranderen. Vraag de toepasselijke offerte op voordat je aanneemt dat één groot pakket goedkoper is.",
+      "sources": [
+        "https://www.kakobuy.com/index/information?information_id=3",
+        "https://kakobuy.com/service/help/question?cid=35&id=74"
+      ]
+    },
+    {
+      "id": "customs",
+      "question": "Zijn douanekosten altijd inbegrepen?",
+      "answer": "Ga daar niet van uit. Kakobuys helpinformatie maakt onderscheid tussen routes met verschillende douaneregelingen. Lees de actuele voorwaarden van de gekozen route en de vereisten voor jouw bestemming voordat je een pakket indient.",
+      "sources": [
+        "https://www.kakobuy.com/service/help/question?id=69"
+      ]
+    },
+    {
+      "id": "return-exchange",
+      "question": "Kan ik een artikel retourneren of ruilen?",
+      "answer": "Of dat kan, hangt af van de verkoper, het artikel, de fase van de bestelling en de toepasselijke Kakobuy-voorwaarden. Neem snel contact op met de klantenservice terwijl het artikel nog in de relevante verwerkingsfase zit en bevestig kosten en deadlines voordat je instemt met een retour.",
+      "sources": [
+        "https://www.kakobuy.com/service/help/question?id=51"
+      ]
+    },
+    {
+      "id": "missing-stock",
+      "question": "Wat als de aanbieding niet beschikbaar is of de prijs verandert?",
+      "answer": "Vertrouw niet op een oude catalogusprijs of screenshot. Controleer de verkopersaanbieding en het geïmporteerde Kakobuy-artikel opnieuw. Bevestig een vervanging uitdrukkelijk als een uitvoering niet beschikbaar is, in plaats van een verondersteld alternatief te accepteren.",
+      "sources": [
+        "https://www.kakobuy.com/index/information?information_id=3"
+      ]
+    },
+    {
+      "id": "image-search",
+      "question": "Kan ik met een afbeelding zoeken?",
+      "answer": "Beeldzoeken vereist een beschikbare, geverifieerde dienst bij de gegevensbron. Alleen een uploadknop bewijst niet dat overeenkomende resultaten werken. Gebruik een productnaam, categorie of bekende verkoperslink als de functie niet beschikbaar is.",
+      "sources": []
+    },
+    {
+      "id": "language-switch",
+      "question": "Veranderen de producten als ik van taal wissel?",
+      "answer": "De taal van de interface en redactionele inhoud hoort te veranderen, terwijl dezelfde productverwijzing, categorie, zoekopdracht en paginakeuze behouden blijven. Product-ID’s, bronfoto’s en de onderliggende prijsgegevens blijven gelijk.",
+      "sources": []
+    }
+  ]
+}

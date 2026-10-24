@@ -1,0 +1,914 @@
+{
+  "ui": {
+    "nav": {
+      "spreadsheet": "Katalóg",
+      "finds": "Objavy",
+      "guide": "Sprievodca",
+      "qc": "QC",
+      "shipping": "Doprava",
+      "faq": "FAQ",
+      "articles": "Články"
+    },
+    "siteLabel": "Nezávislý nákupný sprievodca",
+    "register": "Pridajte sa ku Kakobuy",
+    "browse": "Preskúmať katalóg",
+    "search": "Hľadať",
+    "searchPlaceholder": "Hľadajte produkty, značky alebo kategórie",
+    "imageSearch": "Hľadať pomocou obrázka",
+    "menu": "Menu",
+    "language": "Jazyk",
+    "home": "Domov",
+    "readGuide": "Čítať sprievodcu",
+    "viewAll": "Zobraziť všetko",
+    "viewProduct": "Zobraziť produkt",
+    "buy": "Kúpiť na Kakobuy",
+    "backCatalog": "Späť do katalógu",
+    "loading": "Načítavanie aktuálnych produktov…",
+    "sourceError": "Zoznam produktov je dočasne nedostupný. Skúste to znova.",
+    "retry": "Skúsiť znova",
+    "noResults": "Nenašli sa zodpovedajúce produkty. Skúste iné kľúčové slovo alebo kategóriu.",
+    "noPhoto": "Fotografia nie je dostupná",
+    "pricePending": "Overiť aktuálnu cenu",
+    "estimatedPrice": "Odhadovaná cena produktu",
+    "priceNote": "Len cena produktu. Dopravu a prípadné poplatky potvrdíte na Kakobuy.",
+    "sellerPhotos": "Fotografie z ponuky predajcu",
+    "previous": "Predchádzajúca",
+    "next": "Ďalšia",
+    "page": "Stránka",
+    "go": "Prejsť",
+    "category": "Kategória",
+    "sort": "Zoradiť podľa",
+    "sorts": {
+      "latest": "Najnovšie prírastky",
+      "popular": "Obľúbené",
+      "price-up": "Cena: od najnižšej",
+      "price-down": "Cena: od najvyššej"
+    },
+    "categories": {
+      "all": "Všetky produkty",
+      "shoes": "Obuv",
+      "hoodies-sweaters": "Mikiny a pletené oblečenie",
+      "t-shirts": "Tričká",
+      "jackets": "Bundy",
+      "pants-shorts": "Nohavice a šortky",
+      "headwear": "Pokrývky hlavy",
+      "accessories": "Doplnky",
+      "short-sets": "Súpravy",
+      "electronics": "Elektronika",
+      "other-stuff": "Ďalšie objavy",
+      "jersey": "Dresy"
+    },
+    "catalogEyebrow": "AKTUÁLNY KATALÓG",
+    "catalogTitle": "Nájdite svoj ďalší obľúbený kúsok.",
+    "catalogIntro": "Prezerajte aktuálne ponuky, porovnávajte ceny a preskúmajte fotografie predajcu pred otvorením konkrétneho produktu na Kakobuy.",
+    "catalogStatus": "20 produktov na stránku · Pokračujte pomocou ovládania stránok",
+    "resultsFor": "Výsledky pre",
+    "clearFilters": "Vymazať filtre",
+    "heroEyebrow": "LEPŠÍ SPÔSOB PLÁNOVANIA NÁKUPOV",
+    "heroTitle": "Kakobuy spreadsheet.",
+    "heroAccent": "Dobré objavy. Jasné rozhodnutia.",
+    "heroIntro": "Prezerajte ponuky produktov, porovnávajte odhadované ceny v USD a zistite, čo overiť pred nákupom. Vaše ďalšie hľadanie sa začína tu.",
+    "heroGuide": "Ste tu prvýkrát? Začnite sprievodcom",
+    "heroNote": "Prezerajte voľne · Porovnávajte pozorne · Objednávajte na Kakobuy",
+    "heroCollection": "AKTUÁLNY VÝBER",
+    "heroCaption": "Nové ponuky priamo do vášho výberu.",
+    "categoryEyebrow": "ZAČNITE TÝM, ČO MÁTE RADI",
+    "categoryTitle": "O niečo menej hľadania.",
+    "latestEyebrow": "NEDÁVNO PRIDANÉ",
+    "latestTitle": "Novinky z katalógu.",
+    "latestIntro": "Skutočné ponuky, pôvodné fotografie a priama cesta k produktu na Kakobuy.",
+    "stepsEyebrow": "OD OBJAVU K ROZHODNUTIU",
+    "stepsTitle": "Tri kroky. Informovanejší nákup.",
+    "steps": [
+      {
+        "title": "Nájdite svoj produkt",
+        "text": "Porovnávajte ponuky pomocou kategórií a vyhľadávania. Otvorte podrobnosti produktu a prezrite si pôvodné fotografie."
+      },
+      {
+        "title": "Overte podrobnosti",
+        "text": "Skontrolujte veľkosť, konkrétny variant, rozpočet aj proces QC. Fotografia v ponuke predstavuje len časť informácií."
+      },
+      {
+        "title": "Pokračujte na Kakobuy",
+        "text": "Vyberte varianty a potvrďte konečnú cenu na Kakobuy. Pred medzinárodnou dopravou prezrite skladové fotografie."
+      }
+    ],
+    "journalEyebrow": "NÁKUPNÝ DENNÍK",
+    "journalTitle": "Ďalšia objednávka s lepšími informáciami.",
+    "journalIntro": "Praktickí sprievodcovia odkazmi na produkty, veľkosťami, QC, skladovými rozhodnutiami a nákladmi na dopravu.",
+    "allArticles": "Všetkých 10 sprievodcov",
+    "minutes": "min čítania",
+    "articleLabel": "NÁKUPNÝ SPRIEVODCA",
+    "contents": "V tomto sprievodcovi",
+    "officialSources": "Oficiálne zdroje",
+    "reviewed": "Overené 24. októbra 2026",
+    "sourceNote": "Pravidlá a dostupné služby sa môžu meniť. Pred platbou skontrolujte aktuálne podmienky príslušnej objednávky alebo cenovej ponuky dopravy.",
+    "relatedTitle": "Pokračovať v objavovaní",
+    "backArticles": "Všetky články",
+    "faqEyebrow": "PRED OBJEDNANÍM",
+    "faqTitle": "Otázky s jasnými odpoveďami.",
+    "faqIntro": "Praktické odpovede vychádzajúce z nápovedy Kakobuy. Presné poplatky, trasy a podmienky objednávky si overte vo svojom aktuálnom účte.",
+    "faqLink": "Zobraziť všetky otázky",
+    "guideEyebrow": "VAŠA PRVÁ OBJEDNÁVKA",
+    "guideTitle": "Začnite plánom, nie odhadom.",
+    "guideIntro": "Vytvorte užší výber, potvrďte svoju veľkosť a pred objednaním pochopte obe fázy dopravy. Títo sprievodcovia vás prevedú každým rozhodnutím.",
+    "findsEyebrow": "PREZERAJTE S CIEĽOM",
+    "findsTitle": "Objavy pre váš ďalší výber.",
+    "findsIntro": "Preskúmajte aktuálny katalóg podľa kategórií. Pred rozhodnutím o nákupe porovnajte podrobnosti ponúk a ceny.",
+    "qcEyebrow": "PREZRITE PRED ODOSLANÍM",
+    "qcTitle": "Preskúmajte fotografie. Overte podrobnosti.",
+    "qcIntro": "Fotografie zo skladovej kontroly vám môžu pomôcť posúdiť viditeľné podrobnosti pred odoslaním. Zistite, aké uhly a rozmery skontrolovať a čo sa z fotografie určiť nedá.",
+    "qcUnavailable": "V tomto náhľade nie je pripojený overený zdroj referenčných fotografií QC. Produktové stránky teraz zobrazujú jasne označené fotografie z ponúk predajcov.",
+    "qcChecklist": [
+      "Porovnajte viditeľnú farbu, model a zvolený variant so svojou objednávkou.",
+      "Skontrolujte štítky a požadované merania vzhľadom na svoje rozmerové požiadavky.",
+      "Hľadajte viditeľné poškodenie alebo chýbajúce súčasti; podľa potreby požiadajte o jasnejšie fotografie.",
+      "Pri rozhodovaní o odoslaní použite kontrolné fotografie vlastnej objednávky."
+    ],
+    "shippingEyebrow": "POCHOPTE CELKOVÉ NÁKLADY",
+    "shippingTitle": "Počítajte s viac než cenou produktu.",
+    "shippingIntro": "Cena v ponuke je východiskovým bodom. Vnútroštátne doručenie, medzinárodná preprava a zvolené služby môžu zmeniť konečnú sumu.",
+    "shippingCards": [
+      {
+        "title": "Pred objednaním",
+        "text": "Skontrolujte cenu produktu, vybrané varianty, vnútroštátne doručenie a platobné poplatky zobrazené pri platení."
+      },
+      {
+        "title": "V sklade",
+        "text": "Prezrite produkty a možnosti balenia. Skutočná hmotnosť a rozmery balíka môžu ovplyvniť cenovú ponuku."
+      },
+      {
+        "title": "Pred odoslaním",
+        "text": "Porovnajte dostupné trasy do svojej cieľovej krajiny aj aktuálnu ponuku, podmienky a príslušné poplatky."
+      }
+    ],
+    "visualTitle": "Hľadať pomocou obrázka",
+    "visualIntro": "Obrázkové vyhľadávanie bude používať rovnaký zdroj produktov ako katalóg.",
+    "visualUnavailable": "Rozhranie obrázkového vyhľadávania zdroja zatiaľ nebolo overené. Nahrávanie obrázkov je v tomto náhľade nedostupné; možno vyhľadávať podľa slov a prechádzať kategórie.",
+    "aboutTitle": "Užitočný východiskový bod.",
+    "aboutIntro": "Kakobuy Buys je nezávislý web na objavovanie produktov a nákupných sprievodcov. Pomáhame vám prechádzať ponuky a rozumieť otázkam, ktoré položiť pred objednávkou.",
+    "aboutBody": "Objednávky, platby, skladové služby a dopravu zabezpečuje Kakobuy. Tento web neprijíma platby ani nespravuje váš účet Kakobuy. Niektoré odchádzajúce registračné či nákupné odkazy sú partnerské a môžu nám priniesť províziu.",
+    "ctaTitle": "Dobrý objav sa začína bližším pohľadom.",
+    "ctaBody": "Prezrite katalóg. Overte podrobnosti. Nakúpte, keď budete pripravení.",
+    "footerIntro": "Objavovanie produktov so širším pohľadom.",
+    "independent": "Nezávislý, neoficiálny web na objavovanie produktov. Nákupy a dopravu zabezpečuje Kakobuy.",
+    "affiliate": "Niektoré odkazy sú partnerské a môžu tomuto webu priniesť províziu.",
+    "about": "O nás a partnerské odkazy",
+    "photoNote": "Fotografie predajcu nie sú overené skladové fotografie QC.",
+    "close": "Zavrieť",
+    "checklist": "Pred nákupom",
+    "productChecks": [
+      "Na Kakobuy potvrďte konkrétny variant a veľkosť.",
+      "Do rozpočtu zahrňte dopravu a všetky príslušné poplatky.",
+      "Pred odoslaním skontrolujte skladové kontrolné fotografie svojej vlastnej objednávky."
+    ],
+    "top": "Späť hore"
+  },
+  "articles": [
+    {
+      "slug": "how-to-use-kakobuy-spreadsheet",
+      "title": "Ako používať prehľad Kakobuy: od vyhľadávania k užitočnému užšiemu výberu",
+      "description": "Naučte sa čítať produktové záznamy, overovať pôvodné odkazy, porovnávať varianty a zostaviť výber pred objednaním cez Kakobuy.",
+      "category": "Prehľad produktov",
+      "readMinutes": 8,
+      "intro": "Prehľad Kakobuy je najužitočnejší, keď pomáha rozhodnúť sa, nie keď ponúka nekonečný zoznam obrázkov. Každý záznam vnímajte ako cestu k ponuke predajcu, pri ktorej treba overiť niekoľko vecí: o aký produkt ide, ktorý variant chcete, čo zahŕňa cena a aké podklady sú dostupné. Tento návod vysvetľuje opakovateľný postup od širokého vyhľadávania k malému praktickému výberu bez zamieňania odporúčania za prísľub.",
+      "sections": [
+        {
+          "heading": "Pochopte úlohu katalógu",
+          "paragraphs": [
+            "Produktový katalóg usporadúva odkazy. Môže zobrazovať názov, fotografiu, odhad ceny a odkaz, ktorý otvorí ponuku cez Kakobuy. Tieto údaje urýchľujú prezeranie, ale nenahrádzajú aktuálnu ponuku predajcu. Dostupnosť, varianty a ceny sa od pridania záznamu môžu zmeniť. Rozumným ďalším krokom je otvoriť samotný produkt a porovnať informácie dôležité pre váš nákup.",
+            "Rozlišujte jednotlivé úlohy. Tento nezávislý web pomáha objavovať produkty a čítať informácie. Tovar dodáva predajca. Kakobuy zabezpečuje služby, ktoré si dohodnete na jeho platforme. Pútavá karta v katalógu neznamená, že tento web tovar vlastní, osobne ho skontroloval alebo môže zmeniť vašu objednávku. Toto rozlíšenie uľahčuje určenie, kde položiť otázku a na ktorej obrazovke hľadať konečnú odpoveď."
+          ]
+        },
+        {
+          "heading": "Začnite konkrétnym vyhľadávaním",
+          "paragraphs": [
+            "Pred prezeraním vyberte niekoľko užitočných slov. Typ produktu s praktickým detailom sa zvyčajne hodnotí ľahšie než veľmi široký dopyt. Napríklad vyhľadávanie mikiny na zips poskytuje jasnejšiu skupinu na porovnanie než vyhľadávanie oblečenia. Ak sú výsledky príliš úzke, odoberajte podrobnosti jednotlivo namiesto nahradenia celého dopytu nesúvisiacim výrazom.",
+            "Filtre kategórií obmedzia rušivé výsledky, potom skontrolujte vplyv zoradenia. Popularita pomáha pri prezeraní, ale nie je osvedčením kvality. Zoradenie od najnižšej ceny hovorí iba o nižšej zobrazenej cene; neodpovie, či ponuka má správny variant ani či bude po započítaní dopravy výhodná. Pri porovnávaní viacerých záznamov zachovajte rovnaké filtre, aby ste hodnotili súrodú skupinu."
+          ]
+        },
+        {
+          "heading": "Čítajte záznam ako samostatné podklady",
+          "paragraphs": [
+            "Začnite názvom, potom porovnajte fotografiu a pôvodný odkaz na produkt. Názov môže byť na malej karte skrátený. Fotografia môže zobrazovať jednu farbu alebo príklad verzie namiesto všetkých variantov. Cena môže patriť jednému variantu, byť počiatočná alebo odhadovaná. Oddelené čítanie týchto údajov zabraňuje tomu, aby ste z praktického súhrnu vytvárali tvrdenie, ktoré predajca nevyslovil.",
+            "Všímajte si chýbajúce aj dostupné informácie. Ak stránka nemá overenú hmotnosť, tabuľku veľkostí alebo súpravu QC, nechajte túto otázku otvorenú. Nepreberajte si v mysli údaje z podobného produktu. Dve ponuky s podobným štýlom fotografie môžu mať odlišných dodávateľov, materiály alebo usporiadanie variantov. Porovnanie je spoľahlivejšie, keď v poznámkach oddelíte zaznamenané fakty od predpokladov."
+          ]
+        },
+        {
+          "heading": "Uložte pôvodný odkaz spolu s vybraným variantom",
+          "paragraphs": [
+            "Pôvodný odkaz na trhovisko je základom užšieho výberu. Uložte ho spolu s názvom produktu, zamýšľanou farbou a zvažovanou veľkosťou či verziou. ID produktu označuje ponuku, ale nemusí určovať konkrétnu kombináciu farby a veľkosti v nej. Úplná voľba variantu je preto rovnako dôležitá ako odkaz.",
+            "Keď nákupné tlačidlo otvorí Kakobuy, overte zhodu načítaného produktu s pôvodným odkazom. Porovnajte dostupné údaje predajcu, hlavný obrázok, názvy variantov a pôvodné ID. Ak je cieľová stránka prázdna, nedostupná alebo zjavne iná, zastavte sa pred platbou. Funkčné tlačidlo nestačí: cieľ musí predstavovať zamýšľaný produkt. Nepoužívajte povedome vyzerajúcu náhradu iba preto, že jej obrázok pripomína uložený."
+          ]
+        },
+        {
+          "heading": "Porovnajte ceny a zostavte skutočný rozpočet",
+          "paragraphs": [
+            "Odhad v USD je praktický prvý filter. Pomáha rozhodnúť, či produkt patrí do vášho rozpočtu, ale nie je celkovou cenou s doručením. Informácie Kakobuy o nákladoch oddeľujú tovar a vnútroštátnu prepravu od medzinárodnej dopravy a prípadného balenia či doplnkových služieb. Aktuálne sumy treba overiť na obrazovkách objednávky a zásielky.",
+            "Pri každom kandidátovi zaznamenajte cenu zvoleného variantu a viditeľné vnútroštátne poštovné. V porovnaní nechajte priestor pre neskoršiu medzinárodnú zásielku. Vyhnite sa falošnej presnosti, napríklad označeniu produktu za celkovo najlacnejší len preto, že jeho zobrazená cena je o pár centov nižšia. Iná veľkosť balíka, variant alebo potrebná služba môžu výsledok zmeniť. Keď máte potrebnú cenovú ponuku, porovnávajte úplné voľby a neúplné odhady tak aj označte."
+          ]
+        },
+        {
+          "heading": "Oddeľujte fotografie predajcu od dôkazov QC",
+          "paragraphs": [
+            "Fotografie predajcu vysvetľujú ponuku. Môžu ukazovať styling, podrobnosti, štítky alebo tabuľku veľkostí. Snímky QC súvisia s kontrolou prijatého kusu. Tieto zdroje odpovedajú na odlišné otázky a rozsiahla galéria fotografií predajcu sa automaticky nestáva galériou QC. Čítajte popisy a hľadajte jasnú súvislosť medzi kontrolnými zábermi a príslušným produktom.",
+            "Staršie QC môže ukázať, čo niekto predtým dostal, ale neurčuje obsah vašej objednávky. Kakobuy vo svojom procese opisuje kontrolu a fotografovanie v sklade. Po objednaní si prezrite podklady priradené k vlastnému kusu a rozsah kontroly. Ak dostupné fotografie nezobrazujú vlastnosť, ktorú potrebujete posúdiť, ponechajte otázku nevyriešenú."
+          ]
+        },
+        {
+          "heading": "Pred vzhľadom porovnávajte vhodnosť a rozmery",
+          "paragraphs": [
+            "Dobrý užší výber má obsahovať produkty, ktoré môžu reálne vyhovovať vašim potrebám. Pri oblečení začnite rozmermi konkrétneho predajcu a porovnajte ich s podobným odevom, ktorý nosíte. Pri obuvi potvrďte veľkostný systém a význam údaja v centimetroch. Pomoc Kakobuy upozorňuje, že predajcovia môžu používať rôzne normy, takže rovnaké písmeno alebo číslo v dvoch ponukách nestačí.",
+            "Zapíšte si konkrétnu nejasnosť. „Potrebujem šírku hrudníka pre veľkosť M“ je užitočnejšie než „neviem, akú veľkosť“. „Zahŕňa uvedená dĺžka rukoväť?“ je jasnejšie než „je táto taška veľká?“. Tieto otázky pomôžu zistiť, či ponuka už obsahuje odpoveď, alebo potrebujete vysvetlenie pred objednaním. Otázka uložená vedľa odkazu sa navyše pri platbe nestratí z pamäti."
+          ]
+        },
+        {
+          "heading": "Vytvorte výber, ktorý obstojí aj druhýkrát",
+          "paragraphs": [
+            "Aktívny výber obmedzte na niekoľko kandidátov pre každú potrebu. Každému priraďte rovnaké základné polia: pôvodný odkaz, zvolený variant, zobrazenú cenu, známe príplatky, potrebný rozmer a otvorenú otázku. Nepotrebujete zložitý bodovací systém. Jednotné poznámky pomôžu rozpoznať, či ponuka skutočne poskytuje lepšie podklady, alebo má iba presvedčivejšiu fotografiu.",
+            "K výberu sa vráťte po prestávke. Opäť otvorte aktuálne odkazy, odstráňte duplicity a skontrolujte dostupnosť uloženého variantu. Ak jeden kandidát zostáva nejasný aj po niekoľkých kontrolách, je to užitočná informácia. Jasnejšia ponuka môže byť lepšia než ďalšie obhajovanie neistej voľby. Výber má zmenšovať neistotu, nie zhromažďovať ďalšie karty prehliadača."
+          ]
+        },
+        {
+          "heading": "Rovnaký postup používajte na telefóne",
+          "paragraphs": [
+            "Na malej obrazovke porovnávajte zámerne, nespoliehajte sa pri posúvaní na pamäť. Otvorte jeden produkt, skontrolujte jeho kľúčové údaje a uložte príslušný odkaz, až potom prejdite na ďalší. Zväčšenie fotografie pomôže s viditeľnými detailmi, ale neobnoví informácie, ktoré snímka nikdy neobsahovala. Rozmazaný štítok zostáva nezodpovedanou otázkou.",
+            "Po návrate do katalógu zachovajte kategóriu aj zoradenie. Ak prepnete jazyk, overte, že ste stále na zamýšľanom produkte alebo výsledkoch. Preklad má pomôcť porozumieť rozhraniu, nie vytvoriť inú identitu produktu. Pred zaplatením sa vráťte k vybranému variantu priamo v Kakobuy. Táto posledná kontrola je zvlášť užitočná, ak ste počas jednej návštevy otvorili viac podobných ponúk."
+          ]
+        },
+        {
+          "heading": "Stanovte jasné pravidlo ukončenia hľadania",
+          "paragraphs": [
+            "Od prieskumu k objednávke môžete prejsť, keď pôvodná ponuka zodpovedá cieľovej stránke, zamýšľaný variant je jednoznačný, otázka vhodnosti je dostatočne vyriešená a viete, ktoré náklady ešte čakajú na vyčíslenie. Neodstráni to všetky riziká, ale poskytne rozumný základ pre ďalší krok.",
+            "Ak tieto podmienky nie sú splnené, pokračujte v hľadaní alebo produkt vynechajte. Veľkosť katalógu, nadšený titulok ani nízka cena nenahrádzajú podklady. Užitočný prehľad Kakobuy podporuje rozhodnutia, ktoré viete vysvetliť: prečo táto ponuka, prečo tento variant a čo znovu skontrolujete po doručení produktu do skladu."
+          ]
+        }
+      ],
+      "sources": [
+        "https://www.kakobuy.com/index/information?information_id=3",
+        "https://kakobuy.com/service/help/question?cid=35&id=74",
+        "https://www.kakobuy.com/index/information?information_id=12",
+        "https://www.kakobuy.com/service/help/question?id=91"
+      ],
+      "wordCount": 1450
+    },
+    {
+      "slug": "how-to-buy-on-kakobuy",
+      "title": "Ako nakupovať na Kakobuy: prvá objednávka krok za krokom",
+      "description": "Prejdite objednávkou od odkazu predajcu cez kontrolu v sklade až po odoslanie balíka s jasnými kontrolami pred každou platbou.",
+      "category": "Nákupný sprievodca",
+      "readMinutes": 7,
+      "intro": "Nákup cez Kakobuy zahŕňa viacero prepojených rozhodnutí, nie jedinú platbu. Vyberiete produkt predajcu, zariadite nákup, preveríte prijatie v sklade a potom dohodnete medzinárodné doručenie. Pochopenie tejto postupnosti uľahčuje čítanie obrazoviek a bráni schváleniu kroku, kým sú dôležité podrobnosti nejasné. Tento sprievodca vychádza zo zverejneného postupu služby; aktuálne ceny, dostupnosť a podmienky trás treba overiť priamo na stránkach Kakobuy.",
+      "sections": [
+        {
+          "heading": "Začnite produktom, nie zostatkom účtu",
+          "paragraphs": [
+            "Pred vložením peňazí či objednaním rozhodnite, čo chcete kúpiť. Uchovajte pôvodnú adresu predajcu a zapíšte presný variant: veľkosť, farbu, model, množstvo a označenie verzie. Jedna ponuka na trhovisku môže obsahovať veľa variantov s rôznymi cenami. Uloženie iba hlavného obrázka necháva priveľa priestoru na neskoršie nedorozumenia.",
+            "Pozorne otvorte ponuku a identifikujte všetko, čo ovplyvňuje rozhodnutie. Oblečenie potrebuje použiteľný údaj o veľkosti. Taška môže vyžadovať rozmery. Elektronika môže potrebovať špecifikáciu, ktorú fotografia nepotvrdí. Ak niečo chýba, zapíšte krátku otázku. Pred platbou je to jednoduchšie než po kúpe rekonštruovať očakávania z pamäti."
+          ]
+        },
+        {
+          "heading": "Používajte oficiálnu stránku účtu",
+          "paragraphs": [
+            "Registračný odkaz na tomto webe vedie do Kakobuy. Nastavenie účtu dokončite tam a prihlasovacie údaje ponechajte v danej službe. Tento nezávislý informačný web nepotrebuje heslo Kakobuy, platobné údaje ani prístup k objednávkam, aby vám pomohol prehliadať. Pri zobrazení prihlasovania skontrolujte adresu a overte, že ide o zamýšľanú službu.",
+            "Pred vložením prostriedkov si prečítajte aktuálne informácie o účte, platbách a službách. Nepredpokladajte, že akcia zo staršieho príspevku platí pre dnešný nový účet. Ak sa pri registrácii objaví výhoda, prečítajte jej podmienky, platnosť a príslušnú službu. Pochopenie bežných nákladov je užitočnejšie než rozpočet postavený na neoverenom kupóne alebo sľúbenej zľave."
+          ]
+        },
+        {
+          "heading": "Porovnajte načítaný produkt s pôvodnou ponukou",
+          "paragraphs": [
+            "Cez produktový odkaz otvorte položku v Kakobuy a porovnajte ju s uloženým podkladom. Skontrolujte totožnosť produktu, fotografie, dostupné údaje predajcu a označenia variantov. ID trhoviska nie je totožné s interným číslom záznamu katalógu. Cieľová stránka má otvoriť pôvodnú ponuku predajcu, nie iba obsahovať dôveryhodne vyzerajúce číslo.",
+            "Ak produkt nemožno načítať, nie je dostupný alebo sa zobrazí nečakaná položka, nepokračujte odhadom. Opäť overte pôvodnú URL; nesúvisiace sledovacie časti či fragmenty odstráňte iba vtedy, ak rozumiete skutočnej adrese produktu. Nenahrádzajte ponuku inou bez posúdenia jej rozmerov a podmienok. Náhrada je nové nákupné rozhodnutie, aj keď fotografie vyzerajú takmer rovnako."
+          ]
+        },
+        {
+          "heading": "Vyberte presný variant a píšte konkrétne poznámky",
+          "paragraphs": [
+            "Každý variant vyberajte vedome. Čítajte označenia veľkosti a farby, nespoliehajte sa na poradie náhľadov, ktoré sa môže medzi obrazovkami líšiť. Potvrďte množstvo a cenu spojenú s výberom. Ak predajca používa kód modelu, uložte si ho do poznámok. Môže byť presnejší než voľne preložený názov farby.",
+            "Do prípadného poľa pokynov napíšte krátku overiteľnú požiadavku. „Prosím potvrďte čierny variant vo veľkosti M“ je jasnejšie než „pošlite najlepší kus“. Poznámka neznamená, že nedostupný variant možno dodať. Ak požiadavka mení ponuku predajcu, najprv si vyžiadajte potvrdenie. Poznámky majú objasniť voľbu, nie potichu nahradiť skutočne zvolený variant."
+          ]
+        },
+        {
+          "heading": "Platbu za produkt posudzujte ako samostatnú etapu",
+          "paragraphs": [
+            "Zverejnený nákupný postup Kakobuy opisuje platbu za tovar a vnútroštátne poštovné pred neskoršou medzinárodnou zásielkou. Prečítajte aktuálnu sumu a zistite jej zložky. Zaplatenie produktu neznamená, že už bol odoslaný k vám domov, ani neurčuje konečnú cenu medzinárodného doručenia.",
+            "Uchovajte záznam vybraného produktu a schválenej sumy. Ak sa pred dokončením kúpy zmení cena alebo variant, prečítajte vysvetlenie a potvrďte zamýšľaný postup. Je rozumné zastaviť sa, ak nová ponuka už nezodpovedá rozpočtu alebo požiadavkám. Dôkladná kontrola môže zabrániť zložitejšiemu riešeniu, keď už je tovar vo vnútroštátnej preprave."
+          ]
+        },
+        {
+          "heading": "Stavy objednávky čítajte ako etapy, nie sľuby doručenia",
+          "paragraphs": [
+            "Objednávka prechádza spracovaním nákupu, odoslaním predajcom, vnútroštátnou prepravou a prijatím do skladu. Zmena jednej etapy automaticky neznamená dokončenie ďalšej. Čítajte skutočný stav a správu pri vlastnej položke. Napríklad domáce sledovacie číslo si nezamieňajte s budúcim sledovaním medzinárodného balíka.",
+            "Ak postup nie je jasný, položte cielenú otázku s číslom objednávky a poslednou viditeľnou udalosťou. „Odoslanie predajcom stále nie je potvrdené; mám niečo urobiť?“ je užitočnejšie než nepodložený odhad doručenia. Nestavajte cestovné plány ani darčeky na jednom optimistickom čísle. Vybavenie predajcom a medzinárodné doručenie závisia od odlišných udalostí a môžu potrebovať samostatné časové rezervy."
+          ]
+        },
+        {
+          "heading": "Pred odoslaním balíka skontrolujte prijatý kus",
+          "paragraphs": [
+            "Kakobuy opisuje skladovú kontrolu a fotografie ako súčasť služby. Keď sú podklady dostupné, porovnajte ich s objednaným variantom. Začnite totožnosťou a úplnosťou: správny produkt, štítok veľkosti, farba alebo verzia a súčasti očakávané podľa ponuky. Potom prezrite viditeľné miesta dôležité pre zamýšľané použitie.",
+            "Rozumejte obmedzeniam kontroly. Fotografia môže ukázať štítok či šev, ale nepotvrdí všetky aspekty strihu, pohodlia, životnosti alebo funkčnosti. Ak chýba potrebný pohľad, opýtajte sa na dostupnosť a cenu príslušnej doplnkovej kontroly. Nevyriešený problém oddeľte od súhlasu s odoslaním. Po ďalšom postupe balíka sa praktické možnosti riešiť problém u predajcu môžu zmeniť."
+          ]
+        },
+        {
+          "heading": "Otázky riešte jasnými podkladmi",
+          "paragraphs": [
+            "Ak si všimnete možný nesúlad, stručne ho opíšte s príslušným číslom. Uveďte, čo ste objednali, čo ukazujú prijaté podklady a čo potrebujete objasniť. Podľa potreby odkážte na konkrétnu fotografiu alebo variant predajcu. To umožňuje konať lepšie než všeobecné tvrdenie, že produkt vyzerá zle, najmä pri nejednoznačnej farbe alebo rozmere.",
+            "Pred predpokladaním výsledku sa opýtajte na aktuálne možnosti vrátenia alebo výmeny. Pomoc Kakobuy opisuje popredajné dohody s predajcami, ale oprávnenosť, lehoty a poplatky sa musia overiť pre konkrétnu objednávku. Nesľubujte si, že každý problém možno odstrániť zadarmo. Pred rozhodnutím ponechať, vymeniť, vrátiť či vynechať produkt zo zásielky zvážte podklady, odpoveď podpory a celkové dôsledky."
+          ]
+        },
+        {
+          "heading": "Zostavujte balík podľa skutočného obsahu",
+          "paragraphs": [
+            "Keď sú zamýšľané položky pripravené, prezrite možnosti zásielky v Kakobuy. Skontrolujte doručovaciu adresu, údaje príjemcu, obmedzenia obsahu, balenie a dostupné trasy. Výsledný balík je novou jednotkou porovnávania: viacero samostatne lacných vecí môže vytvoriť objemnú zásielku a rôzne balenie mení cenu alebo ochranu.",
+            "Trasy porovnávajte pri rovnakom obsahu a predpokladoch. Čítajte aktuálne podmienky, nielen cenu na začiatku zoznamu. Ak sa ponúka poistenie, doplnkové balenie alebo iná služba, pred výberom preskúmajte rozsah a cenu. Nepredpokladajte, že každá služba je nutná či zahrnutá. Podstatné je, či kombinácia vyhovuje tovaru, cieľu doručenia a požadovanej ochrane."
+          ]
+        },
+        {
+          "heading": "Potvrďte zásielku a uchovajte podklady spolu",
+          "paragraphs": [
+            "Pred zadaním balíka skontrolujte celkovú splatnú sumu a povinné deklarované údaje. Použite presné informácie a dodržte požiadavky trasy aj cieľovej krajiny. Ak je pole nejasné, požiadajte o vysvetlenie službu zabezpečujúcu zásielku namiesto kopírovania náhodnej hodnoty z cudzej objednávky.",
+            "Po zadaní uchovajte číslo zásielky, trasu a sledovanie spolu so záznamami nákupu. Aktualizácie sledovania vykladajte podľa skutočnej postupnosti udalostí dopravcu. Pri probléme použite príslušný kanál objednávky alebo zásielky a opíšte poslednú potvrdenú udalosť. Cieľom je dohľadateľný postup: jeden overený odkaz predajcu, jednoznačná voľba variantu, skontrolovaný skladový kus a vedome vybraná medzinárodná preprava."
+          ]
+        }
+      ],
+      "sources": [
+        "https://www.kakobuy.com/index/information?information_id=3",
+        "https://www.kakobuy.com/index/information?information_id=12",
+        "https://kakobuy.com/service/help/question?cid=35&id=74",
+        "https://kakobuy.com/service/help/question?cid=35&id=76",
+        "https://www.kakobuy.com/service/help/question?id=95",
+        "https://www.kakobuy.com/service/help/question?id=51",
+        "https://www.kakobuy.com/service/help/question?id=69"
+      ],
+      "wordCount": 1388
+    },
+    {
+      "slug": "kakobuy-qc-photos-guide",
+      "title": "Fotografie QC Kakobuy: čo skontrolovať pred odoslaním",
+      "description": "Prezerajte skladové fotografie systematicky, oddeľujte snímky predajcu od dôkazov QC a určte podrobnosti, ktoré treba objasniť.",
+      "category": "Sprievodca QC",
+      "readMinutes": 8,
+      "intro": "Fotografie QC Kakobuy sú užitočné, keď ich spojíte s konkrétnou otázkou o kuse prijatom pre vašu objednávku. Pomáhajú menej, ak rýchlo posúvate, spoznáte všeobecný tvar a predpokladáte, že ostatné je správne. Usporiadaná kontrola začína totožnosťou, pokračuje viditeľnou konštrukciou a rozmermi a končí nevyriešenými otázkami. Tento sprievodca vysvetľuje postup bez považovania fotografie za záruku pravosti, výkonu či dokonalého sadnutia.",
+      "sections": [
+        {
+          "heading": "Rozpoznajte druh prezeraného obrázka",
+          "paragraphs": [
+            "Fotografia predajcu predstavuje ponuku produktu. Môže ísť o štylizovanú snímku, detail, tabuľku veľkostí alebo príklad dostupného variantu. Skladová fotografia QC dokumentuje kus prijatý na kontrolu. Rozlíšenie je dôležité, pretože obrázky môžu pochádzať z odlišných okamihov a nemusia ukazovať rovnaký fyzický kus.",
+            "Staršia kontrolná snímka môže ponuke poskytnúť kontext, ale vlastná objednávka potrebuje vlastné posúdenie. Pred spoľahnutím sa na fotografiu overte odkaz na produkt a spojenie s objednávkou. Ak galéria nie je označená ako overené QC, považujte ju za produktové obrázky, nie dôkaz kontroly. Viac snímok automaticky neznamená lepšie podklady; užitočné sú tie, ktoré ukazujú presne posudzovanú vlastnosť."
+          ]
+        },
+        {
+          "heading": "Začnite totožnosťou a zhodou variantu",
+          "paragraphs": [
+            "Pred skúmaním drobných detailov overte, že ide o zamýšľaný produkt. Porovnajte typ, farbu či verziu, viditeľný veľkostný štítok a priložené súčasti s uloženou voľbou. Ak ponuka používa kódy modelu, porovnajte ich tam, kde sú čitateľné. Prvá kontrola môže zachytiť jednoduchý nesúlad, než strávite čas švami alebo povrchovou úpravou.",
+            "Posudzujte produkt ako celok. Pár topánok vyžaduje obe topánky; súprava oblečenia časti opísané vo vybranom variante; doplnok s oddeliteľnými dielmi očakávané súčasti. Nepredpokladajte prítomnosť skrytého dielu iba preto, že je na reklamnej fotografii predajcu. Ak úplnosť nemožno potvrdiť dostupnými pohľadmi, opýtajte sa na konkrétnu časť."
+          ]
+        },
+        {
+          "heading": "Pred priblížením prezrite celý produkt",
+          "paragraphs": [
+            "Začnite celkovým pohľadom, aby ste pochopili tvar a zarovnanie. Skontrolujte rovnomerné rozloženie a zvážte, či rozdiel vo vzhľade nevysvetľuje perspektíva. Zložený rukáv, naklonená topánka alebo fotoaparát pod uhlom môžu meniť vzhľad jednej strany bez dokazovania chyby. Pred pevným záverom z jednej fotografie hľadajte ďalší pohľad.",
+            "Potom prejdite k miestam dôležitým pre kategóriu. Pri oblečení skúmajte viditeľné švy, zapínanie a celkové zarovnanie dielov. Pri obuvi porovnajte ľavú a pravú topánku z podobných uhlov. Pri taškách prezrite obrys, pripevnenie rukovätí a viditeľné uzávery. Pozorovania opisujte presne. „Šev na tomto obrázku vyzerá nerovno“ je lepší základ otázky než tvrdenie o výrobnej kvalite, ktorú fotografia nemôže dokázať."
+          ]
+        },
+        {
+          "heading": "Detailné snímky čítajte s jasnou otázkou",
+          "paragraphs": [
+            "Priblíženie pomáha, ak je pôvodný obraz dostatočne ostrý. Pozrite príslušný štítok, zapínanie, okraj či povrch a pýtajte sa, čo snímka skutočne ukazuje. Môžete rozoznať stopu, chýbajúcu súčasť alebo nečakaný štítok. Samotný detail zvyčajne nepotvrdí zloženie materiálu, dlhodobú životnosť ani skrytú konštrukciu.",
+            "Nenahrádzajte chýbajúci pohľad digitálnym zväčšením. Malý rozmazaný štítok sa nestáva spoľahlivým dôkazom tým, že vyplní obrazovku. Ak je dôležitý pre rozhodnutie, opýtajte sa na možnosť ostrejšej snímky. Žiadosť obmedzte na neistý detail. Pomôže to rozlíšiť potrebnú kontrolu od opakovaných fotografií, ktoré nezodpovedajú novú otázku."
+          ]
+        },
+        {
+          "heading": "Farbu a osvetlenie vnímajte ako neistotu",
+          "paragraphs": [
+            "Odtieň môže pri skladovom svetle, expozícii fotoaparátu a nastavení obrazovky vyzerať inak. Porovnajte viac pohľadov a zvážte, či sa farebne neposunuli aj okolité povrchy. Informácie Kakobuy o kontrole uvádzajú farebné rozdiely medzi obmedzeniami služby. Jedinú fotografiu preto nepovažujte za presné meranie farby.",
+            "Ak záleží na konkrétnej farbe, opíšte očakávaný variant predajcu a opýtajte sa, či prijatý kus zodpovedá výberu. Je to užitočnejšie než vyžadovať zhodu s inak osvetlenou reklamnou snímkou. Ak rozdiel zostáva nejasný, rozhodnite, či neistotu prijmete. Niektoré nákupy závisia od presnej zhody viac než iné; ak fotografie požiadavku nevyriešia, môže byť vhodné opatrné rozhodnutie."
+          ]
+        },
+        {
+          "heading": "Rozmery kontrolujte rovnakými metódami",
+          "paragraphs": [
+            "Meranie je užitočné iba vtedy, ak poznáte jeho začiatok, koniec a jednotku. Odev odfotený na podkladovej mriežke môže dať kontext, ale nemusí zodpovedať pásmu priloženému pozdĺž presného švu, ktorý vás zaujíma. Ak sa dá, porovnávajte merania vykonané rovnako ako v tabuľke predajcu alebo na vašom referenčnom odeve.",
+            "Plochá šírka trička cez trup sa líši od obvodu tela. Uvoľnený pás nohavíc sa líši od natiahnutého merania. Vonkajšia dĺžka podrážky nie je dĺžka chodidla ani vyberateľnej stielky. Ak významy nie sú jasné, položte konkrétnu otázku. Veľkostné pokyny Kakobuy odporúčajú rozmery, no obmedzenia kontroly zároveň varujú pred chápaním merania ako bezpodmienečnej záruky."
+          ]
+        },
+        {
+          "heading": "Ďalšie podklady žiadajte, ak menia rozhodnutie",
+          "paragraphs": [
+            "Užitočná žiadosť identifikuje produkt, potrebný pohľad a jeho význam. Môžete napríklad požiadať o čitateľný veľkostný štítok, obe topánky z rovnakého uhla alebo meranie pásmom medzi pomenovanými bodmi. Opýtajte sa Kakobuy, či je požiadavka pri danom produkte podporovaná a či je spoplatnená. Dostupnosť aj cenu overte v čase žiadosti.",
+            "Uprednostnite otázky, ktoré môžu zmeniť rozhodnutie ponechať či odoslať produkt. Ďalšia fotografia už jasne viditeľného povrchu nemusí veľa priniesť. Chýbajúci rozmer priliehavého odevu môže byť oveľa dôležitejší. Cielené žiadosti uľahčujú aj výklad odpovede: overíte, či nové podklady riešia pôvodnú otázku, namiesto začínania celej kontroly znova."
+          ]
+        },
+        {
+          "heading": "Pochopte, čo vizuálna kontrola nedokazuje",
+          "paragraphs": [
+            "Viditeľné dôkazy QC majú hranice. Fotografia nepreukáže celodenné pohodlie, reakciu látky na pranie, životnosť zapínania ani vnútornú bezpečnosť elektronického zariadenia. Zverejnené informácie Kakobuy o kontrole vylučujú niektoré funkčné a elektronické skúšky. Úspešnú vizuálnu kontrolu nemeňte na širšiu certifikáciu.",
+            "Overenie pravosti je iné tvrdenie než pozorovanie prijatého kusu. Viditeľné logo alebo známy tvar samy nedokazujú pôvod ani licenciu. Ak nákup závisí od konkrétneho certifikátu, materiálovej špecifikácie alebo výkonnostnej normy, získajte vhodnú dokumentáciu z príslušného zdroja pred objednaním. Ak nie je dostupná, zbierka QC fotografií túto medzeru nenahradí."
+          ]
+        },
+        {
+          "heading": "Uľahčite diskusiu o problémoch",
+          "paragraphs": [
+            "Keď nájdete problém, držte sa v správe faktov. Označte objednávku alebo skladový kus, opíšte zvolený variant a pozorovaný rozdiel. Odkážte na fotografiu, ktorá ho ukazuje, a uveďte potrebné objasnenie. Vytvoríte jasný záznam, na ktorý podpora odpovie bez odhadovania, o ktorý produkt či vlastnosť ide.",
+            "Oddeľte otázky od požadovaných výsledkov. Najprv zistite, či zdanlivá stopa vznikla osvetlením alebo fyzickým problémom, či chýbajúca časť nie je iba mimo záberu alebo či prišiel nesprávny variant. Potom sa pýtajte na ďalšie kroky. Vrátenie, výmena a iné postupy závisia od konkrétnej objednávky a podmienok predajcu; výhrada QC automaticky nezakladá nárok na určitú nápravu."
+          ]
+        },
+        {
+          "heading": "Pred schválením balíka vykonajte záverečnú kontrolu",
+          "paragraphs": [
+            "Pred zadaním produktu na prepravu sa vráťte k otázkam zapísaným pred nákupom. Boli skontrolované totožnosť, variant, dôležité viditeľné vlastnosti a príslušné rozmery? Čakajú niektoré správy ešte na odpoveď? Uchovávajte kontrolné podklady spolu s odkazom na produkt, aby dôvody rozhodnutia zostali jasné.",
+            "Nemusíte hľadať chybu na každej fotografii. Cieľom je rozhodnúť, či dôkazy postačujú na zamýšľané použitie a či sa vyriešili dôležité neistoty. Ak otázka zostáva otvorená, zastavte sa namiesto chápania mlčania ako potvrdenia. Dôkladná kontrola QC je praktickým kontrolným bodom medzi prijatím produktu a objednaním jeho medzinárodnej prepravy."
+          ]
+        }
+      ],
+      "sources": [
+        "https://www.kakobuy.com/index/information?information_id=12",
+        "https://kakobuy.com/service/help/question?cid=35&id=76",
+        "https://www.kakobuy.com/service/help/question?id=95",
+        "https://www.kakobuy.com/service/help/question?id=91",
+        "https://www.kakobuy.com/service/help/question?id=89",
+        "https://www.kakobuy.com/service/help/question?id=51"
+      ],
+      "wordCount": 1409
+    },
+    {
+      "slug": "kakobuy-shipping-costs",
+      "title": "Náklady na dopravu Kakobuy: rozpočet od ceny produktu po doručenie",
+      "description": "Oddeľte cenu tovaru, vnútroštátnu prepravu, medzinárodnú dopravu a voliteľné služby, potom porovnávajte ponuky pri rovnakých predpokladoch.",
+      "category": "Doprava",
+      "readMinutes": 8,
+      "intro": "Číslo na karte produktu je iba časťou rozpočtu nákupu cez sprostredkovateľa. Užitočný odhad dopravy Kakobuy začína oddelením platby za tovar od nákladov na prepravu a spracovanie zásielky. Rozlišuje aj plánovací odhad od skutočnej cenovej ponuky pre váš cieľ a obsah. Tento sprievodca ukazuje, ako náklady usporiadať, porovnať možnosti a určiť informácie chýbajúce pred zadaním zásielky.",
+      "sections": [
+        {
+          "heading": "Oddeľte fázu produktu od fázy balíka",
+          "paragraphs": [
+            "Zverejnené informácie Kakobuy o cenách a objednávaní oddeľujú tovar a vnútroštátne poštovné od neskoršej medzinárodnej prepravy. Toto rozlíšenie je základ spoľahlivého rozpočtu. Odhad produktu v USD zaznamenajte ako údaj o tovare. Nepovažujte ho automaticky za sumu potrebnú na prijatie produktu na svojej adrese.",
+            "Vytvorte samostatné riadky pre tovar, domáce doručenie, medzinárodnú dopravu, zvolené balenie alebo služby a ďalšie príslušné poplatky pri objednávke či trase. Niektoré zostanú dočasne neznáme. Poctivo prázdne pole je užitočnejšie než odhadnuté číslo tváriace sa presne. Keď obrazovka objednávky alebo zásielky poskytne sumu, nahraďte predpoklad a zaznamenajte rozhodnutie či službu, ktorá spôsobila zmenu."
+          ]
+        },
+        {
+          "heading": "Porovnávajte presne vybraný variant",
+          "paragraphs": [
+            "Jedna ponuka môže obsahovať rozličné veľkosti, verzie alebo súpravy s rôznymi cenami. Pred odhadom prepravy overte, že cena tovaru patrí zamýšľanému variantu. Nízka počiatočná cena môže označovať doplnok alebo inú verziu. Čítajte súčet vybraného variantu namiesto násobenia prvej ceny viditeľnej na produktovej stránke.",
+            "Variant môže ovplyvniť aj potreby balenia. Súprava, výrobok v škatuli a samostatný nebalený kus môžu mať iné praktické požiadavky. Ak ponuka neuvádza spoľahlivú hmotnosť či rozmery, ponechajte odhad prepravy široký do získania lepších údajov. Nepreberajte hmotnosť vzhľadovo podobného predmetu a nepredkladajte výsledok ako cenovú ponuku vlastného nákupu. Spojenie vybraného produktu s odhadom musí zostať výslovné."
+          ]
+        },
+        {
+          "heading": "Vnútroštátnu prepravu vnímajte ako samostatný úsek",
+          "paragraphs": [
+            "Domáca preprava dopraví kúpený produkt od predajcu na príjmové miesto sprostredkovateľa. Overte, či je zahrnutá v ponuke predajcu, alebo pridaná na obrazovke načítanej objednávky. Pri viacerých produktoch z odlišných ponúk skontrolujte skutočný postup každej objednávky namiesto predpokladu jednotných pravidiel všetkých predajcov.",
+            "Tento náklad sa líši od medzinárodného odoslania skladového balíka. Oddelenie etáp pomáha, keď objednávka vyzerá zaplatená, ale neskôr vyžaduje platbu za zásielku. Zjednodušuje aj pochopenie zmien: upravená cena tovaru alebo domácej prepravy nemusí znamenať zmenu medzinárodnej trasy. Ak je suma nejasná, pred schválením sa opýtajte, ktorú časť procesu pokrýva."
+          ]
+        },
+        {
+          "heading": "Hmotnosť a rozmery riešte ako rozdielne otázky",
+          "paragraphs": [
+            "Veľkosť balíka môže byť rovnako dôležitá ako hmotnosť. Kompaktný ťažký predmet a ľahký objemný výrobok vytvárajú iné požiadavky na prepravu a balenie. Ak cenová ponuka trasy žiada rozmery alebo ukazuje metódu účtovanej hmotnosti, prečítajte skutočné pravidlo. Nepredpokladajte, že vzorec iného dopravcu či trasy platí pre vašu zásielku.",
+            "Na plánovanie si zapíšte známe údaje o produkte a neznáme údaje o zabalenom balíku. Hmotnosť výrobku od predajcu nemusí zahŕňať ochranný materiál ani prepravný kartón. Rozmery produktu sa nemusia rovnať hotovému balíku. Keď to bude podstatné, vyžiadajte si dostupné údaje zásielky a porovnávajte trasy na jednotnom základe. Vyhnete sa zdanlivo priamemu porovnávaniu odhadov s rozdielnymi predpokladmi balenia."
+          ]
+        },
+        {
+          "heading": "Balenie posudzujte podľa ceny aj ochrany",
+          "paragraphs": [
+            "Voľba balenia má zodpovedať produktu. Odstránenie objemnej predajnej škatule môže zmeniť rozmery, no škatuľa môže aj chrániť obsah alebo byť súčasťou toho, čo chcete dostať. Pridané spevnenie či ochranný materiál môžu meniť cenu aj veľkosť. Pred rozhodnutím overte možnosti konkrétneho balíka a aktuálne poplatky.",
+            "Rozhodujte prakticky. Krehký predmet, tvarovaná taška a pružný odev nepotrebujú nevyhnutne rovnaký postup. Pýtajte sa, čo bude chránené, čo odstránené a či výsledné balenie vyhovuje trase. Nevyberajte všetky príplatkové služby iba preto, že existujú, ani neodmietajte všetku ochranu len pre nižšiu počiatočnú cenu. Porovnávajte kompletnú možnosť, ktorú ste ochotní odoslať."
+          ]
+        },
+        {
+          "heading": "Trasy porovnávajte pri rovnakých predpokladoch",
+          "paragraphs": [
+            "Užitočné porovnanie zachová rovnaký obsah, cieľ aj predpoklady balenia. Potom čítajte cenu, aktuálny odhad doručenia, prijímané položky, sledovanie a podmienky uvedené Kakobuy. Najnižšia hlavná cena nemusí byť najvhodnejšia pre daný balík, kým vyššia cena sama nedokazuje lepšie zaobchádzanie.",
+            "Zapíšte dve alebo tri skutočne zvažované trasy a dôvod vhodnosti každej. Ak možnosť nie je dostupná pre obsah či cieľ, vyraďte ju namiesto zachovania jej ceny ako meradla. Aktuálne informácie overte tesne pred zadaním, keďže dostupnosť a podmienky sa menia. Snímka obrazovky cudzej zásielky je kontext, nie náhrada ponuky pre vlastný balík."
+          ]
+        },
+        {
+          "heading": "Voľby služieb nechajte viditeľné v súčte",
+          "paragraphs": [
+            "Balenie, doplnková manipulácia a ostatné voliteľné služby majú byť v rozpočte samostatnými rozhodnutiami. Pred platbou čítajte rozsah služby. Podobný názov na dvoch stránkach nezaručuje rovnaký obsah. Ak neviete, či je poplatok voliteľný, zahrnutý alebo na trase povinný, najprv si vyžiadajte vysvetlenie.",
+            "Ak sa ponúka poistenie či ochrana, prečítajte krytie, výluky a podmienky nárokov. Nehodnoťte ich iba podľa poistného a nepredpokladajte pokrytie každého problému. Ak možnosť zvolíte, uchovajte kópiu podmienok predložených pre zásielku. Cieľ nie je najvyšší počet služieb, ale pochopenie, čo každá vybraná služba mení a ktoré povinnosti zostávajú vám."
+          ]
+        },
+        {
+          "heading": "Colný režim posudzujte pre konkrétnu trasu",
+          "paragraphs": [
+            "Pomoc Kakobuy rozlišuje prepravné možnosti s rozdielnym colným spracovaním. Nepredpokladajte, že opis jednej trasy platí pre inú trasu, cieľ či neskorší dátum. Čítajte aktuálne podmienky dostupnej možnosti a určte platby alebo kroky, ktoré môžu zostať vašou zodpovednosťou.",
+            "Keď sa to vyžaduje, uvádzajte presné informácie o tovare aj zásielke. Ak je deklarované pole alebo požiadavka cieľa nejasná, obráťte sa na príslušné oficiálne pokyny či službu zabezpečujúcu balík. Nekopírujte náhodné hodnoty z príkladu iného kupujúceho. Sprievodca nepočíta univerzálnu daň či clo, keďže správny postup závisí od skutočného tovaru, cieľa a platných pravidiel. Rozpočet má neistoty zaznamenať, nie skryť do vymyslenej celkovej prepravy."
+          ]
+        },
+        {
+          "heading": "Zlúčené a oddelené balíky porovnávajte dôkladne",
+          "paragraphs": [
+            "Spojenie nákupov môže byť praktické, nie je však univerzálne pravidlo úspory. Zlúčený balík môže meniť rozmery, hmotnostné pásma, balenie aj oprávnenosť trás. Oddelené balíky môžu opakovať poplatky. Na rozhodnutie, čo dáva zmysel pre prijaté produkty, potrebujete skutočné porovnateľné možnosti.",
+            "Začnite položkami pripravenými na odoslanie a potom porovnajte dostupné spracovanie na rovnakom základe. Nepridávajte nepotrebný produkt iba na zdôvodnenie väčšieho balíka alebo dosiahnutie domnelej hranice úspory. Ak jedna položka mešká, zvážte, či čakanie mení priority alebo podmienky služieb. Cieľom je zásielka zodpovedajúca nákupu, nie ďalšie nakupovanie vyvolané špekulatívnym výpočtom dopravy."
+          ]
+        },
+        {
+          "heading": "Odhad aktualizujte pri každom rozhodnutí",
+          "paragraphs": [
+            "Praktický rozpočet má kontrolné body. Pri prieskume najprv zaznamenajte odhad tovaru. Pred kúpou ho nahraďte vybraným variantom a domácim súčtom. Po príchode produktu doplňte príslušné údaje balíka a aktuálnu ponuku trasy. Nakoniec pri zadaní skontrolujte úplný súčet vrátane vedome zvolených služieb.",
+            "Predstavte si dvoch kandidátov s podobnou cenou produktu. Jeden potrebuje väčšie balenie či inú manipuláciu; druhý sa ľahšie spojí s vecami, ktoré už plánujete poslať. Nižšiu cenu s doručením nemožno určiť iba z produktových kariet. Porovnanie nechajte otvorené do získania potrebnej ponuky. Užitočný prepravný rozpočet uvádza predpoklady otvorene, aktualizuje sa pri zmene faktov a vzťahuje sa na konkrétny zadávaný balík."
+          ]
+        }
+      ],
+      "sources": [
+        "https://kakobuy.com/service/help/question?cid=35&id=74",
+        "https://www.kakobuy.com/index/information?information_id=3",
+        "https://www.kakobuy.com/service/help/question?id=69",
+        "https://www.kakobuy.com/index/information?information_id=12"
+      ],
+      "wordCount": 1401
+    },
+    {
+      "slug": "kakobuy-sizing-guide",
+      "title": "Veľkosti Kakobuy: porovnajte rozmery predajcu s požadovaným strihom",
+      "description": "Pomocou presných tabuliek predajcu, porovnateľných meraní odevov a jasných otázok do skladu znížte neistotu veľkosti pred medzinárodným odoslaním.",
+      "category": "Veľkosti",
+      "readMinutes": 8,
+      "intro": "Pre všetky produkty objednávané cez Kakobuy neexistuje jedna tabuľka veľkostí. Platforma prepája ponuky predajcov, ktorí môžu používať rôzne označenia, strihy a metódy merania. Lepšie je porovnať rozmery konkrétneho produktu s vhodným vzorom, zaznamenať vybraný variant a pri dostupných užitočných podkladoch skontrolovať prijatý kus. Sprievodca sa sústreďuje na tento postup namiesto univerzálnej rady zvoliť väčšiu či menšiu veľkosť.",
+      "sections": [
+        {
+          "heading": "Začnite presnou tabuľkou predajcu",
+          "paragraphs": [
+            "Oficiálne odporúčanie Kakobuy uvádza, že predajcovia môžu mať vlastné štandardy, a odporúča vyberať podľa rozmerov. Otvorte tabuľku spojenú s presnou ponukou a verziou, ktorú chcete objednať. Tabuľka podobne vyzerajúceho produktu nie je spoľahlivou náhradou. Aj známe veľkostné označenia môžu u rozličných predajcov alebo produktových radov znamenať iné rozmery.",
+            "Overte význam každého čísla. Niektoré tabuľky opisujú telesné miery, iné hotový odev položený naplocho. Záleží aj na jednotkách a meracích bodoch. Ak je tabuľka obrázok, zväčšite ho na prečítanie hlavičiek namiesto hádania podľa riadka čísel. Ak označenie ostáva nejasné, požiadajte o vysvetlenie pred objednaním. Tabuľka má riešiť otázku sadnutia, nie iba vyzerať ako upokojujúca dokumentácia."
+          ]
+        },
+        {
+          "heading": "Vyberte vzor zodpovedajúci produktu",
+          "paragraphs": [
+            "Pri oblečení býva užitočné porovnanie s podobným odevom, ktorý už nosíte. Vyberte vzor so strihom a použitím, aké chcete od novej veci. Priliehavá košeľa a voľná mikina sú odlišné východiská. Porovnávanie všetkých vrchných dielov s rovnakým vzorom môže skryť vplyv štýlu, vrstiev a pružnosti látky.",
+            "Vzor merajte jednotne na rovnej ploche a nenaťahujte ho za prirodzený tvar, pokiaľ výslovne neporovnávate natiahnutý rozmer. Zapisujte použité body, nielen číslo. Napríklad uveďte, kde bola meraná šírka alebo dĺžka. Potom možno porovnávať rovnaké veličiny pri čítaní tabuľky či žiadosti o skladové meranie. Niekoľko jasných rozmerov je užitočnejších než dlhý, nejednotne zmeraný zoznam."
+          ]
+        },
+        {
+          "heading": "Uprednostnite rozmery rozhodujúce o sadnutí",
+          "paragraphs": [
+            "Nie každý rozmer je rovnako dôležitý pre každý produkt. Pri vrchnom diele môže záležať hlavne na šírke trupu, dĺžke a dosahu rukáva. Pri nohaviciach ovplyvňujú rôzne časti sadnutia pás, sed, šírka stehna a dĺžka nohavice. Bunda môže potrebovať priestor pre vrstvy, ktoré pod ňou chcete nosiť.",
+            "Určte rozmer, ktorý by pri chybe urobil produkt nevhodným. To bude prvý bod porovnania. Potom overte ďalšie dôležité rozmery, aby riešenie jedného problému nevytvorilo iný. Väčšie označenie môže dať požadovanú šírku trupu, ale zhoršiť vhodnosť rukávov či dĺžky. Veľkosť teda nevnímajte ako jedno číslo, ale ako niekoľko kompromisov spojených s používaním odevu."
+          ]
+        },
+        {
+          "heading": "Rozlišujte telesné miery a rozmery odevu",
+          "paragraphs": [
+            "Obvod tela a plochá šírka odevu nie sú zameniteľné hodnoty. Podobne uvoľnený a natiahnutý pružný pás opisujú iné podmienky. Pred porovnaním dvoch čísel overte, že vyjadrujú to isté. Ak jeden zdroj meria okolo tela a druhý naprieč položeným odevom, musíte rozdiel pochopiť pred vyvodením záveru.",
+            "Dávajte pozor na automatické prevody ignorujúce produkt. Všeobecná tabuľka môže vysvetliť jednotky alebo známe systémy, ale nenahradí skutočné rozmery predajcu. Ak sa dá, uchovajte pôvodné jednotky v poznámkach a prevody vykonávajte výslovne. Najužitočnejší záznam hovorí, čo a ako sa meralo a ku ktorému variantu patrí. Samotné číslo bez súvislostí sa dá neskôr ľahko zle vyložiť."
+          ]
+        },
+        {
+          "heading": "Zohľadnite látku a strih bez vymýšľania špecifikácií",
+          "paragraphs": [
+            "Správanie odevu ovplyvňuje pocit z jeho rozmerov, používajte však iba špecifikácie skutočne uvedené v ponuke. Nepredpokladajte pružnosť podľa mäkkého vzhľadu látky ani to, že fotografia oversized oblečenia na modeli znamená voľný strih každej veľkosti. Styling, proporcie modelu a veľkosť vzorky môžu vzhľad ovplyvniť.",
+            "Ak rozhodnutie závisí od vlastnosti materiálu, vyžiadajte si príslušnú informáciu. Porovnanie rozmerov zúži neistotu, ale nezistí, ako sa neopísaná látka vracia po natiahnutí či mení praním. Nepridávajte všetkým produktom paušálnu rezervu podľa všeobecného tvrdenia o tovare z jednej krajiny. Použite informácie predajcu, porovnateľný vzor a požadované sadnutie konkrétneho odevu."
+          ]
+        },
+        {
+          "heading": "Obuv kontrolujte v správnom veľkostnom systéme",
+          "paragraphs": [
+            "Pri obuvi zistite, či predajca používa EU, UK, US alebo centimetre a či označenie US zodpovedá zamýšľanej veľkostnej skupine. Kakobuy odporúča zmerať obe chodidlá a pri výbere použiť väčšiu hodnotu. Porovnajte ju s tabuľkou konkrétneho predajcu namiesto predpokladu, že rovnaké vytlačené číslo vždy rovnako sadne.",
+            "Zistite význam centimetrovej hodnoty. Dĺžka chodidla, stielky a vonkajšej podrážky sú rôzne miery. Fotografia podrážky priamo nepotvrdí vnútorný priestor pre nohu. Šírka a tvar môžu ovplyvniť pohodlie aj pri vhodnej dĺžke. Ak informácie predajcu neriešia dôležitú požiadavku, ponechajte neistotu viditeľnú namiesto považovania prevodnej tabuľky za záruku."
+          ]
+        },
+        {
+          "heading": "Pred platbou zaznamenajte variant",
+          "paragraphs": [
+            "Uložte zvolenú veľkosť a súvisiaci kód verzie s pôvodným produktovým odkazom. Jedna ponuka môže mať samostatné skupiny variantov a rovnaké označenie veľkosti pri odlišných modeloch. Pred platbou skontrolujte vybranú kombináciu v Kakobuy, aby poznámky a načítaná objednávka opisovali rovnaký kus.",
+            "Ak posielate pokyn, formulujte ho konkrétne a v súlade so skutočným výberom. Poznámka má spresniť variant, nie potichu žiadať iný. Ak predajca neponúka potrebnú veľkosť, potvrďte dostupnosť namiesto predpokladu, že ju zabezpečí komentár. Záznam tiež poskytne jasný porovnávací bod po príchode produktu do skladu a sprístupnení štítku."
+          ]
+        },
+        {
+          "heading": "Skladovými podkladmi riešte presnú otázku",
+          "paragraphs": [
+            "Keď máte fotografie vlastnej objednávky, najprv porovnajte viditeľný veľkostný štítok s vybraným variantom. Ak kľúčový rozmer ostáva nejasný, opýtajte sa Kakobuy na vhodné meranie alebo dodatočný pohľad a prípadný poplatok. Určte začiatok, koniec, jednotky aj to, či sa má vec merať uvoľnená alebo pri inej definovanej podmienke.",
+            "Pri tesnom rozhodovaní nepovažujte pozadie fotografie za presný merací nástroj. Výklad ovplyvňuje perspektíva, záhyby aj poloha. Informácie Kakobuy o kontrole tiež opisujú obmedzenia chýb merania, preto snímku berte ako podklad na interpretáciu, nie prísľub dokonalého sadnutia. Ak nové meranie používa inú metódu než vzor, vyjasnite rozdiel pred záverom, že je produkt priveľký alebo primalý."
+          ]
+        },
+        {
+          "heading": "Nesúlad riešte pred plánovaním zásielky",
+          "paragraphs": [
+            "Ak prijatý štítok či rozmer vyzerá nezlučiteľne s objednávkou, najprv porovnajte záznamy. Skontrolujte pôvodnú tabuľku, zvolený variant, metódu merania a príslušnú fotografiu. Jasný nesúlad a nejasná snímka potrebujú iné otázky. Opíšte očakávanie a aktuálne podklady bez predpokladania príčiny.",
+            "Na aktuálne možnosti postupu sa pýtajte, kým je kus v príslušnej fáze objednávky alebo skladu. Podmienky vrátenia a výmeny závisia od predajcu a platných pravidiel; nie sú automatické ani nutne bezplatné. Pred schválením medzinárodnej prepravy zvážte praktické možnosti a náklady. Včasné objasnenie je ľahšie než očakávanie, že medzinárodné doručenie opraví veľkostný problém viditeľný už v sklade."
+          ]
+        },
+        {
+          "heading": "Vytvorte opakovane použiteľnú poznámku o veľkosti",
+          "paragraphs": [
+            "Po rozhodnutí uchovajte stručný záznam: odkaz predajcu, verziu produktu, veľkosť, hodnoty tabuľky, rozmery referenčného odevu a pozorovaný výsledok. Je užitočnejší než pamätať si, že určitá značka obvykle sadne v jednom písmene. Spája výsledok s konkrétnou ponukou a meracou metódou.",
+            "Dve mikiny napríklad môžu mať rovnakú veľkosť, no jedna požadovanú šírku a druhá obľúbenú dĺžku. Poznámka má vysvetliť prijatý kompromis. Ak ani jedna dobre nevyhovuje, môže byť rozumnejšie vybrať inú ponuku než medzi nimi hádať. Zmysel postupu je zmenšiť a výslovne ukázať neistotu, nie sľúbiť dokonalé sadnutie každého internetového nákupu."
+          ]
+        }
+      ],
+      "sources": [
+        "https://www.kakobuy.com/service/help/question?id=91",
+        "https://www.kakobuy.com/service/help/question?id=95",
+        "https://www.kakobuy.com/index/information?information_id=12",
+        "https://www.kakobuy.com/service/help/question?id=51"
+      ],
+      "wordCount": 1440
+    },
+    {
+      "slug": "kakobuy-warehouse-consolidation",
+      "title": "Sklad a zlučovanie Kakobuy: naplánujte zmysluplný balík",
+      "description": "Pred zadaním zásielky Kakobuy pochopte skladové etapy, lehoty uskladnenia, možnosti balenia a kompromisy zlučovania.",
+      "category": "Sklad",
+      "readMinutes": 7,
+      "intro": "Sklad Kakobuy je rozhodovací bod medzi kúpou produktu a zaplatením medzinárodnej dopravy. Viac objednávok predajcov tam môže doraziť v rôznom čase, s odlišným balením, rozmermi a nevyriešenými otázkami. Zlučovanie znamená vybrať oprávnené položky, ktoré pocestujú spolu. Môže zefektívniť zásielku, väčší balík však nie je automaticky lacnejší ani lepší. Sprievodca ukazuje praktické usporiadanie skladových položiek, porovnanie balenia a zadanie zásielky bez prehliadnutia termínu či problému, ktorý sa ľahšie rieši pred odoslaním.",
+      "sections": [
+        {
+          "heading": "Pochopte dve cesty produktu",
+          "paragraphs": [
+            "Produkt zvyčajne putuje od predajcu do skladu sprostredkovateľa a až potom začína medzinárodnú cestu k vám. V poznámkach tieto etapy oddeľte. Domáce sledovanie nehovorí, či je kus pripravený opustiť Čínu, a doklad o kúpe nezahŕňa všetky budúce náklady prepravy. Verejný opis služby Kakobuy vysvetľuje možnosť výberu skladových položiek do spoločného balíka; skutočné zadanie určia dostupné možnosti účtu.",
+            "Každú objednávku predajcu veďte samostatne, kým ju zámerne nepridáte do balíka. Uchovajte spolu produktový odkaz, variant, množstvo a číslo objednávky. Potom vytvorte samostatný záznam balíka pre plánované položky. Toto jednoduché rozlíšenie pomáha odhaliť zaplatený produkt, ktorý neprišiel, alebo pripravenú zásielku stále čakajúcu na platbu či kontrolu údajov."
+          ]
+        },
+        {
+          "heading": "Vytvorte užitočný skladový zoznam",
+          "paragraphs": [
+            "Užitočný zoznam odpovedá na tri otázky: čo je tu, čo je pripravené a čo potrebuje rozhodnutie? Zaznamenajte skladový stav, dátum príchodu, viditeľné rozmery, otvorený problém a zamýšľaný balík každej položky. Pri dvoch podobných farbách alebo viacerých veľkostiach používajte presný názov variantu namiesto neurčitého „čierny top“. Pri názve uveďte množstvo, pretože jedna objednávka môže mať viac kusov.",
+            "Pridajte krátke pole úlohy, napríklad „overiť dĺžku rukáva“, „potvrdiť chýbajúci doplnok“ či „pripravené po rozhodnutí o vrátení“. Poznámky slúžia vlastnej organizácii a nenahrádzajú pokyny odovzdané cez Kakobuy. Ak potrebujete zásah pracovníkov, pošlite požiadavku príslušným kanálom objednávky alebo podpory. Poznámka v osobnej tabuľke neprikáže skladu zadržať produkt či zachovať balenie."
+          ]
+        },
+        {
+          "heading": "Oddeľte príchod od pripravenosti",
+          "paragraphs": [
+            "Sken príchodu je povzbudivý, ale nie je to isté ako ukončená kontrola a použiteľný prepravný záznam. Pokyny Kakobuy k príjmu opisujú ďalšie skladové spracovanie pred oprávnenosťou na zadanie balíka. Čítajte aktuálny stav objednávky a sprievodné správy namiesto predpokladu, že každý produkt zobrazený v sklade možno hneď zabaliť.",
+            "Ak kuriér uvádza doručenie, ale účet sa nezmenil, overte číslo. Sledovanie predajcu, objednávkové a skladové odkazy môžu označovať iné fázy toho istého nákupu. Ak treba vysvetlenie, pošlite podpore príslušné identifikátory a konkrétny nesúlad. Opakované náhradné objednávky pred pochopením pôvodného stavu môžu vytvoriť nechcený duplikát. Odpoveď si zapíšte s dátumom, aby ste vedeli, na čo čakáte."
+          ]
+        },
+        {
+          "heading": "Pred zoskupením vyriešte otázky položiek",
+          "paragraphs": [
+            "Pred zostavením balíka prezrite dostupné kontrolné údaje každého navrhovaného kusa. Porovnajte viditeľnú farbu, štítky, množstvo a variant so skutočne zadanou objednávkou. Ak sú rozmery dôležité, porovnajte ich s vlastným odevom či produktom rovnakou metódou. Fotografie podporujú rozhodnutie o viditeľných detailoch; nepotvrdzujú všetky materiálové vlastnosti, funkcie ani pravosť.",
+            "Nevyriešené položky ponechajte mimo pripravenej skupiny do prijatia odpovede. Chýbajúci opasok alebo neistú veľkosť môže byť ľahké prerokovať, keď produkt ešte leží v sklade. Zaradenie do balíka pridáva ďalšiu manipuláciu a môže skomplikovať vrátenie. Staršie fotografie iného kupujúceho dávajú kontext, ale záverečnú kontrolu majú riadiť údaje vašej objednávky."
+          ]
+        },
+        {
+          "heading": "Porovnávajte hmotnosť aj objem",
+          "paragraphs": [
+            "Balík môže byť ľahký, ale objemný, najmä so škatuľami, vypchatými výrobkami alebo nepravidelnými tvarmi. Pri porovnávaní prepravy zohľadnite nameranú hmotnosť aj pravdepodobné zabalené rozmery. Používajte účtovacie pravidlá konkrétnej trasy. Nepreberajte vzorec objemovej hmotnosti iného dopravcu ani nepredpokladajte rovnaké limity a zaokrúhľovanie všetkých liniek.",
+            "Príkladom je pár topánok vo veľkej predajnej škatuli vedľa niekoľkých mäkkých odevov. Odstránenie škatule môže znížiť objem, ochranné balenie naopak zväčšiť rozmery či hmotnosť. Ani jedna zmena nezaručuje konkrétnu úsporu. Ak neistota záleží, požiadajte o dostupné balenie alebo meranie a porovnajte výsledné ponuky. Kakobuy upozorňuje na možné rozdiely merania pred konečným balením a po ňom; predbežné čísla teda oddeľujte od konečnej ceny."
+          ]
+        },
+        {
+          "heading": "Zoskupujte podľa zlučiteľnosti, nielen počtu",
+          "paragraphs": [
+            "Začnite zlučiteľnosťou cieľa a trasy. Položky na rôzne adresy, s inými nárokmi manipulácie alebo vylúčené z rovnakej dopravy nemusia patriť spolu. Skontrolujte aktuálne obmedzenia pre skutočný obsah. Bežne znejúci názov vec nerieši: batérie, tekutiny či jemné súčasti ovplyvňujú požiadavky a dostupné trasy sa môžu po posúdení tovaru zmeniť.",
+            "Potom zvážte fyzickú ochranu. Ťažký kus môže tlačiť na krehký; ostré kovanie poškodiť mäkkú látku; pevná škatuľa zaberať priestor, ktorý by šiel stlačiť. Pýtajte sa, ako bude skupina chránená, namiesto predpokladu, že väčší kartón vyrieši všetko. Ak dva menšie balíky ponúkajú jasnejšiu manipuláciu či vhodnejšie trasy, pred rozhodnutím porovnajte ich súhrnné splatné sumy s jedným balíkom."
+          ]
+        },
+        {
+          "heading": "Zadávajte presné pokyny k baleniu",
+          "paragraphs": [
+            "Balenie vyberajte podľa produktu a vecí, ktoré chcete zachovať. Ak má predajná škatuľa pre vás hodnotu, povedzte to pred žiadosťou o odstránenie. Pri jemných ozdobách vysvetlite, ktorá oblasť potrebuje ochranu. Vyhnite sa protichodným pokynom, napríklad zachovať všetky škatule a zároveň vytvoriť najmenší možný balík. Uveďte prioritu a nechajte sklad vysvetliť dostupné možnosti.",
+            "Pred výberom overte poplatky za voliteľné balenie alebo kontrolu. Doplnkové služby nie sú automaticky potrebné pre každý balík a ich názvy nedokazujú určitú úroveň ochrany. Potvrdené pokyny uchovajte pri zázname zásielky. Je to zvlášť užitočné pri odlišnom zaobchádzaní s jedným kusom alebo pri snahe pochopiť zmenu konečných rozmerov."
+          ]
+        },
+        {
+          "heading": "Rozhodnite o oneskorenom produkte",
+          "paragraphs": [
+            "Chýbajúca objednávka vytvára kompromis medzi čakaním a odoslaním hotových položiek. Dôsledky odhadujte zo skutočných informácií: poslednej odpovede predajcu, skladových termínov, aktuálnych cien zásielok a vlastných potrieb doručenia. Nepotvrdený prísľub odoslania nevnímajte ako garantovaný dátum príchodu. Lacná doplnková položka môže spôsobiť drahé zdržanie, ak blokuje časovo citlivú skupinu.",
+            "Balík pripravený teraz môžete porovnať s navrhovaným neskorším bez záväzku k niektorému. Zapíšte položky v každom scenári aj doteraz neznáme náklady. Ak je oneskorená vec pre skupinu nevyhnutná, pred platením konečného balenia požiadajte o jasnejší stav. Ak je voliteľná, zvážte, či ďalšia samostatná preprava stále robí nákup výhodným."
+          ]
+        },
+        {
+          "heading": "Lehoty skladovania a vrátenia sledujte oddelene",
+          "paragraphs": [
+            "Čas skladovania a oprávnenosť vrátenia odpovedajú na iné otázky. Produkt môže zostať uložený aj po období, v ktorom by predajca zvažoval vrátenie. Kakobuy zverejňuje pravidlá skladovania, ale príslušný termín a stav overujte vo vlastnom skladovom zázname a aktuálnej pomoci. Počet dní zo starého článku nepoužívajte ako jedinú pripomienku.",
+            "Nastavte pripomienky dostatočne pred najskorším dôležitým dátumom, s rezervou na odpoveď podpory aj vlastné rozhodnutie. Zaznamenajte začiatok každej lehoty: kúpa, odoslanie, doručenie či skladový príjem nie sú nevyhnutne zameniteľné. Ak je dostupné predĺženie, pred spoliehaním sa naň overte cenu, dĺžku a podmienky. Nevyriešená správa ani úmysel poslať neskôr automaticky nezastavujú lehotu."
+          ]
+        },
+        {
+          "heading": "Posúďte balík ako novú transakciu",
+          "paragraphs": [
+            "Pred zadaním prezrite celý zoznam položiek a porovnajte ho so skladovým plánom. Potvrďte množstvá, príjemcu, oprávnenosť trasy, baliace pokyny a požadovanú sumu. Overte, čo je odhad, čo už bolo zaplatené a čo možno ešte upraviť. Deklarácia má pravdivo opisovať obsah a používať údaje požadované cieľom a trasou.",
+            "Po zadaní uchovajte číslo balíka a sledujte žiadosti vyžadujúce odpoveď. Rozumný plán zlučovania ostáva užitočný aj po zabalení: presne ukazuje, čo má prísť spolu a čo zostáva v sklade. Po doručení porovnajte obsah so záznamom. Cieľ je vysvetliteľná a sledovateľná zásielka, nie jednoducho najväčší možný nákup."
+          ]
+        }
+      ],
+      "sources": [
+        "https://kakobuy.com/enquiry",
+        "https://www.kakobuy.com/service/help/question?id=1",
+        "https://kakobuy.com/service/help/question?cid=35&id=84",
+        "https://www.kakobuy.com/service/help/question?id=95",
+        "https://www.kakobuy.com/service/help/question?id=37"
+      ],
+      "wordCount": 1514
+    }
+  ],
+  "faqs": [
+    {
+      "id": "what-is-kakobuy",
+      "question": "Čo je Kakobuy?",
+      "answer": "Kakobuy je nákupný agent: zadáte podporovanú ponuku predajcu, zabezpečíte nákup prostredníctvom Kakobuy a neskôr doručenie z jeho skladu. Výber produktu, kontrola a medzinárodná doprava sú samostatné rozhodnutia.",
+      "sources": [
+        "https://www.kakobuy.com/index/information?information_id=3",
+        "https://www.kakobuy.com/index/information?information_id=12"
+      ]
+    },
+    {
+      "id": "independent-site",
+      "question": "Je Kakobuy Buys oficiálny web Kakobuy?",
+      "answer": "Nie. Kakobuy Buys je nezávislý web na objavovanie produktov a sprievodcov. Registrácia, platby, zmeny objednávok a služby pre zásielky prebiehajú na Kakobuy. Niektoré odchádzajúce odkazy sú partnerské.",
+      "sources": []
+    },
+    {
+      "id": "what-is-spreadsheet",
+      "question": "Čo je Kakobuy spreadsheet?",
+      "answer": "Ide o usporiadaný katalóg odkazov na produkty, ktorý pomáha porovnávať ponuky pred ich otvorením na Kakobuy. Položka v katalógu je východiskom pre prieskum, nie zárukou dostupnosti, kvality alebo konečných nákladov.",
+      "sources": []
+    },
+    {
+      "id": "need-account",
+      "question": "Potrebujem na prezeranie tohto webu účet?",
+      "answer": "Katalóg môžete prechádzať a sprievodcov čítať bez vytvorenia účtu tu. Keď budete chcieť využiť objednávkové služby Kakobuy, použite jeho registračný odkaz. Vaše heslo ku Kakobuy nezhromažďujeme.",
+      "sources": []
+    },
+    {
+      "id": "how-order",
+      "question": "Ako objednám produkt, ktorý tu nájdem?",
+      "answer": "Otvorte podrobnosti produktu, skontrolujte pôvodnú ponuku a vybraný variant a potom použite nákupné tlačidlo Kakobuy. Pred zaplatením overte importovaný produkt, cenu predajcu, veľkosť, farbu, množstvo a vnútroštátne poštovné.",
+      "sources": [
+        "https://www.kakobuy.com/index/information?information_id=3"
+      ]
+    },
+    {
+      "id": "source-link",
+      "question": "Prečo si mám ponechať pôvodný odkaz predajcu?",
+      "answer": "Určuje ponuku, ku ktorej sa odporúčanie vzťahuje. Uložte si ho spolu s vybranou veľkosťou a farbou, aby ste mohli porovnávať stránku predajcu, importovaný produkt Kakobuy a neskoršiu komunikáciu o objednávke bez zámeny podobných produktov.",
+      "sources": []
+    },
+    {
+      "id": "wrong-product",
+      "question": "Čo ak nákupný odkaz otvorí nesprávny produkt?",
+      "answer": "Pred zaplatením sa zastavte. Porovnajte trhovisko, pôvodné ID produktu, predajcu a vybraný variant. Podobný obrázok alebo názov nestačí. Ak pôvodnú ponuku nemožno spoľahlivo priradiť, vyberte inú overenú ponuku.",
+      "sources": []
+    },
+    {
+      "id": "prices-usd",
+      "question": "Prečo sú ceny produktov uvedené v USD?",
+      "answer": "Odhady v USD uľahčujú porovnávanie ponúk. Cena predajcu, menový prepočet, zvolený variant a poplatky na Kakobuy sa môžu od katalógového odhadu líšiť. Sumu na úhradu potvrďte na skutočnej obrazovke objednávky.",
+      "sources": [
+        "https://kakobuy.com/service/help/question?cid=35&id=74"
+      ]
+    },
+    {
+      "id": "price-includes-shipping",
+      "question": "Zahŕňa cena produktu medzinárodnú dopravu?",
+      "answer": "Nepredpokladajte to. Informácie Kakobuy o nákladoch oddeľujú tovar a vnútroštátnu prepravu od medzinárodného dopravného a prípadného balenia alebo voliteľných služieb. Pred platbou si prečítajte skutočné súčty za produkt a zásielku.",
+      "sources": [
+        "https://kakobuy.com/service/help/question?cid=35&id=74"
+      ]
+    },
+    {
+      "id": "two-payments",
+      "question": "Prečo nákup a doprava prebiehajú samostatne?",
+      "answer": "Zverejnený postup Kakobuy oddeľuje nákup produktu a vnútroštátne poštovné od zadania skladovej zásielky na medzinárodnú prepravu. Tento krok závisí od toho, čo už dorazilo, a od dostupných možností dopravy.",
+      "sources": [
+        "https://www.kakobuy.com/index/information?information_id=3"
+      ]
+    },
+    {
+      "id": "domestic-shipping",
+      "question": "Čo je vnútroštátna doprava?",
+      "answer": "Ide o prepravu od predajcu v Číne do miesta príjmu nákupného agenta. Skontrolujte, či predajca alebo importovaná objednávka tento poplatok pridáva; ide o inú službu než medzinárodné doručenie na vašu adresu.",
+      "sources": [
+        "https://kakobuy.com/service/help/question?cid=35&id=74"
+      ]
+    },
+    {
+      "id": "warehouse-arrival",
+      "question": "Čo sa stane, keď produkt dorazí do skladu?",
+      "answer": "Kakobuy opisuje kontrolu pri prijatí a poskytuje fotografie na prezretie podľa rozsahu svojej kontroly. Porovnajte prijatý produkt so svojou objednávkou a vyjasnite otázky pred zadaním na medzinárodnú dopravu.",
+      "sources": [
+        "https://kakobuy.com/service/help/question?cid=35&id=76",
+        "https://www.kakobuy.com/index/information?information_id=12"
+      ]
+    },
+    {
+      "id": "what-is-qc",
+      "question": "Čo sú fotografie QC?",
+      "answer": "Fotografie QC sú kontrolné snímky spojené s prijatým produktom. Pomáhajú posúdiť viditeľné podrobnosti, ale líšia sa od reklamných fotografií predajcu a nepreukazujú všetky aspekty funkčnosti produktu.",
+      "sources": [
+        "https://www.kakobuy.com/index/information?information_id=12",
+        "https://www.kakobuy.com/service/help/question?id=95"
+      ]
+    },
+    {
+      "id": "qc-where",
+      "question": "Kde mám kontrolovať QC vlastnej objednávky?",
+      "answer": "Použite fotografie a správy pripojené k vašej vlastnej objednávke Kakobuy alebo skladovej položke. Staršie referenčné snímky z iného nákupu môžu pomôcť pri porovnaní, ale nie sú dôkazom o kuse pridelenom vám.",
+      "sources": [
+        "https://www.kakobuy.com/index/information?information_id=12"
+      ]
+    },
+    {
+      "id": "all-products-qc",
+      "question": "Má tu každá ponuka overené fotografie QC?",
+      "answer": "Takúto záruku neposkytujeme. Ponuka môže obsahovať fotografie predajcu bez overenej sady QC. Za kontrolné referencie považujte iba snímky s potvrdeným zdrojom QC.",
+      "sources": []
+    },
+    {
+      "id": "qc-authentication",
+      "question": "Zaručuje QC pravosť alebo funkčnosť produktu?",
+      "answer": "Nie. Vizuálna kontrola nie je univerzálnym overením pravosti ani testom funkčnosti. Informácie o kontrole Kakobuy opisujú výnimky vrátane obmedzení pre funkčné či elektronické produkty. Pred objednaním si priamo potvrďte prípadné osobitné kontroly.",
+      "sources": [
+        "https://www.kakobuy.com/service/help/question?id=95",
+        "https://www.kakobuy.com/service/help/question?id=89"
+      ]
+    },
+    {
+      "id": "extra-photo",
+      "question": "Môžem požiadať o konkrétnu fotografiu alebo meranie?",
+      "answer": "Spýtajte sa Kakobuy, či aktuálna objednávka umožňuje požadovanú fotografiu či meranie a či sa zaň platí. Jasne určite uhol, meracie body a jednotky. Nepredpokladajte, že je každá požiadavka zahrnutá v cene.",
+      "sources": [
+        "https://www.kakobuy.com/index/information?information_id=12",
+        "https://www.kakobuy.com/service/help/question?id=95"
+      ]
+    },
+    {
+      "id": "colour-difference",
+      "question": "Prečo môžu farby na fotografiách vyzerať inak?",
+      "answer": "Osvetlenie, spracovanie fotoaparátom a váš displej môžu vzhľad farieb meniť. Výnimky z kontroly Kakobuy spomínajú farebné rozdiely. Porovnajte viac pohľadov a požiadajte o spresnenie, ak presný odtieň ovplyvňuje vaše rozhodnutie.",
+      "sources": [
+        "https://www.kakobuy.com/service/help/question?id=95"
+      ]
+    },
+    {
+      "id": "size-standard",
+      "question": "Existuje univerzálna veľkosť oblečenia Kakobuy?",
+      "answer": "Nie. Sprievodca veľkosťami Kakobuy upozorňuje, že predajcovia používajú vlastné štandardy. Porovnajte rozmery z konkrétnej ponuky s oblečením, ktoré vám sedí, namiesto spoliehania sa iba na známe označenie S, M alebo L.",
+      "sources": [
+        "https://www.kakobuy.com/service/help/question?id=91"
+      ]
+    },
+    {
+      "id": "shoe-sizing",
+      "question": "Ako si vybrať veľkosť obuvi?",
+      "answer": "Zmerajte obe chodidlá a väčší rozmer porovnajte s tabuľkou konkrétneho predajcu. Skontrolujte, aký systém veľkostí ponuka používa a či údaj v centimetroch opisuje dĺžku chodidla alebo iný rozmer.",
+      "sources": [
+        "https://www.kakobuy.com/service/help/question?id=91"
+      ]
+    },
+    {
+      "id": "shipping-cost",
+      "question": "Koľko bude stáť doprava?",
+      "answer": "Neexistuje jedna cena vhodná pre každý balík. Použite aktuálnu ponuku Kakobuy pre svoju cieľovú krajinu, obsah a vybranú trasu a pred zadaním zásielky si overte zahrnuté aj voliteľné poplatky.",
+      "sources": [
+        "https://kakobuy.com/service/help/question?cid=35&id=74",
+        "https://www.kakobuy.com/index/information?information_id=3"
+      ]
+    },
+    {
+      "id": "delivery-time",
+      "question": "Ako dlho trvá doručenie?",
+      "answer": "Použite aktuálny odhad konkrétnej trasy uvedený na Kakobuy. Odoslanie predajcom, spracovanie v sklade, medzinárodná preprava a konečné doručenie sú samostatné fázy; odhad trasy nie je garantovaným celkovým dátumom doručenia.",
+      "sources": [
+        "https://www.kakobuy.com/index/information?information_id=3"
+      ]
+    },
+    {
+      "id": "combine-items",
+      "question": "Mám všetky produkty spojiť do jednej zásielky?",
+      "answer": "Porovnajte skutočne dostupné možnosti balenia a prepravy. Spojenie produktov môže zmeniť rozmery balíka, hmotnosť aj obmedzenia. Skôr než predpokladáte, že jeden veľký balík bude lacnejší, vyžiadajte si príslušnú cenovú ponuku.",
+      "sources": [
+        "https://www.kakobuy.com/index/information?information_id=3",
+        "https://kakobuy.com/service/help/question?cid=35&id=74"
+      ]
+    },
+    {
+      "id": "customs",
+      "question": "Sú colné poplatky vždy zahrnuté?",
+      "answer": "Nepredpokladajte to. Nápoveda Kakobuy rozlišuje trasy s rôznymi colnými podmienkami. Pred zadaním balíka si prečítajte aktuálne podmienky vybranej trasy a požiadavky cieľovej krajiny.",
+      "sources": [
+        "https://www.kakobuy.com/service/help/question?id=69"
+      ]
+    },
+    {
+      "id": "return-exchange",
+      "question": "Môžem produkt vrátiť alebo vymeniť?",
+      "answer": "Nárok závisí od predajcu, produktu, fázy objednávky a príslušných podmienok Kakobuy. Kontaktujte podporu včas, kým je produkt v zodpovedajúcej fáze spracovania, a pred súhlasom s vrátením si potvrďte náklady a lehoty.",
+      "sources": [
+        "https://www.kakobuy.com/service/help/question?id=51"
+      ]
+    },
+    {
+      "id": "missing-stock",
+      "question": "Čo ak ponuka nie je dostupná alebo sa zmení cena?",
+      "answer": "Nespoliehajte sa na staršiu katalógovú cenu alebo snímku obrazovky. Znovu overte ponuku predajcu a importovaný produkt na Kakobuy. Ak variant nie je dostupný, náhradu výslovne potvrďte namiesto prijatia predpokladanej alternatívy.",
+      "sources": [
+        "https://www.kakobuy.com/index/information?information_id=3"
+      ]
+    },
+    {
+      "id": "image-search",
+      "question": "Môžem hľadať pomocou fotografie?",
+      "answer": "Obrázkové vyhľadávanie závisí od dostupnej a overenej zdrojovej služby. Samotné tlačidlo na nahratie nedokazuje, že vyhľadávanie zhôd funguje. Ak funkcia nie je dostupná, použite názov produktu, kategóriu alebo známy odkaz predajcu.",
+      "sources": []
+    },
+    {
+      "id": "language-switch",
+      "question": "Zmení prepnutie jazyka produkty?",
+      "answer": "Malo by zmeniť jazyk rozhrania a redakčného obsahu pri zachovaní rovnakého produktu, kategórie, vyhľadávania a zvolenej stránky. Identifikátory produktov, zdrojové fotografie a podkladové cenové údaje zostávajú rovnaké.",
+      "sources": []
+    }
+  ]
+}
