@@ -6,7 +6,9 @@
 
 目标 GitHub：hehaize88-code/cnfansge.com 的 allchinabuybuy-com/，保留其他域名目录。正式域名 https://allchinabuybuy.com，www 用 308 保留路径和查询参数跳根域。复用已验证的 Cloudflare Worker allchinabuybuy-preview。生产构建 npm run build:production，105 页面、95 个可收录页面进入 sitemap.xml；robots.txt 允许正式站抓取，API/动态详情/未接通搜图仍 noindex。workers.dev 保留 noindex 及 Disallow，防止与正式域名重复收录。没有数据库、后台或伪造商品。
 
-Cloudflare Builds 的根目录应设 allchinabuybuy-com，构建命令 npm run build:production，部署命令 npx wrangler deploy；监视路径只包含 allchinabuybuy-com/**。不提交 .openai、构建产物、依赖或临时凭据。
+已连接 GitHub main 分支，并保留现有 Workers Builds 令牌；Node 版本设为 24，关闭其他分支预览构建。此提交触发第一次自动构建。
+
+Cloudflare Builds 的根目录已设 allchinabuybuy-com，构建命令 npm run build:production，部署命令 npx wrangler deploy；监视路径只包含 allchinabuybuy-com/**。不提交 .openai、构建产物、依赖或临时凭据。
 
 ## 用户指定 Logo（2026-10-24）
 
