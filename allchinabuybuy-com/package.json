@@ -1,0 +1,23 @@
+{
+  "name": "allchinabuybuy-com",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "engines": {
+    "node": ">=22.23.4"
+  },
+  "scripts": {
+    "dev": "node worker/dev.mjs",
+    "build": "node scripts/assemble-editorial.mjs && node --test tests/*.test.mjs && astro build && node scripts/build-worker.mjs",
+    "check": "node --test tests/*.test.mjs",
+    "build:production": "node scripts/build-production.mjs",
+    "verify:production": "node scripts/verify-production.mjs"
+  },
+  "dependencies": {
+    "astro": "7.4.2",
+    "cheerio": "1.1.2"
+  },
+  "devDependencies": {
+    "esbuild": "0.25.12"
+  }
+}
