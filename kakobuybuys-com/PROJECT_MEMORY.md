@@ -9,7 +9,7 @@
 - 每域名一个根级目录，本项目固定为 **kakobuybuys-com/**。
 - 当前隔离分支：**preview/kakobuybuys-20261024**。不修改其他域名目录，不合并main。
 - 本次授权目标：制作可公开访问的预览供用户看效果；正式域名绑定和正式上线在用户看过预览后另行进行。
-- 当前可访问预览：https://kakobuybuys-preview.hehaize88.chatgpt.site/
+- 当前已部署预览：https://kakobuybuys-preview.hehaize88.chatgpt.site/ 。2026-10-24用户报告被chatgpt.site入口安全服务拦截，不能继续称其对用户可访问；详见下方故障记录。
 - Sites项目ID：appgprj_6adc4f0bd82c8191b163618b4f0a83c0。复用已有ID，不能重复create_site。
 - 最新已核实在线版本为 **3**，完整24语已公开发布；每语10文章、28FAQ。域名kakobuybuys.com尚未绑定。
 - 本地编辑目录：/workspace/sites/kakobuybuys-preview。冻结构建目录：/workspace/sites/kakobuybuys-review-build。GitHub是用户要求的源码保存位置，Sites源仓库仅保存对应预览快照。
@@ -119,3 +119,13 @@
 - 部署后浏览器核实24个语言入口，并打开Maltese独立文章，实际10章节/20段落。
 - GitHub当前分支HEAD即本轮最终源代码提交，保存完整项目和这份最终结果；未合并main或更改正式域名。
 - 保留的真实缺口仍是主站搜图/独立QC接口；完整24语移动端逐页目视验收未做。不要在后续回复中把这些说成已完成。
+
+## 公开预览访问故障（2026-10-24，Asia/Shanghai）
+
+- 用户两次报告打不开，并提供截图：`Sorry, you have been blocked / You are unable to access chatgpt.site`。这是预览托管入口的安全拦截；仅凭截图无法确定具体触发规则。
+- Sites管理接口再次核实：项目active、disabled_by为null、access_mode为public、版本3部署succeeded。没有把私有权限误设为公开的问题。
+- 最近30分钟应用日志只返回预览sitemap.xml的404；预览不提供sitemap是当前设计。没有相关应用崩溃记录，但日志不能解释上游入口安全拦截。
+- 现有完整Worker文件已核实仍在，5,636,209字节，SHA256为1289e6186fe247e8d53d1bef23c63aa5cfbe9b268b5406d97336f6a22ef37925。未修改应用内容、重新创建Sites项目或重复发布无关修复。
+- 尝试通过Cloudflare连接检查备用临时托管，工具立即返回UNAUTHORIZED：This app connection requires reauthentication. Reconnect the app and try again. 尚未读取Cloudflare账户状态，更未创建Worker、修改DNS或绑定正式域名。
+- 下一步需要恢复Cloudflare连接，或获得用户同意后使用其已登录浏览器操作Cloudflare。连接工具失效时切换浏览器需要先征求同意（浏览器工具的回退规则）；这不是Sites技能要求新增发布确认，也不是自动审批拒绝。
+- 用户正式域名kakobuybuys.com仍未绑定。备用预览尚未发布，不应提供猜测的workers.dev地址或宣称访问已修好。
