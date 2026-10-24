@@ -20,7 +20,7 @@ npm run check
 
 ## Source contract
 
-The site uses `https://www.cnfansge.com` only for product data. The source currently returns60 items per page; UI pages contain20. Search and sorting go to source queries, not a local subset. Category selection applies to browsing; keyword search uses the source's global search. Source errors remain errors and never become invented products or successful empty results. Short-lived request/cache entries are not a separate database.
+The site uses `https://www.cnfansge.com` only for product data. The source currently returns 60 items per page; UI pages contain 20. Search and sorting go to source queries, not a local subset. Category selection applies to browsing; keyword search uses the source's global search. Source errors remain errors and never become invented products or successful empty results. Short-lived request/cache entries are not a separate database.
 
 Purchase buttons preserve the original marketplace URL and use `https://item2.kakobuy.com/item/details` with `affcode=rf8x8`. Registration is exactly `https://item2.kakobuy.com/register`. Source record IDs and original marketplace IDs are separate.
 
@@ -28,8 +28,10 @@ Purchase buttons preserve the original marketplace URL and use `https://item2.ka
 
 ## Content and languages
 
-English uses `/`;23 other locales use language prefixes. JSON content lives in `src/data/content/`. Each published locale must contain10 complete articles,28 FAQs and the same UI keys. Language switching retains route, query parameters and section anchors. Product names/brands remain source data; translation never invents attributes.
+English uses `/`;23 other locales use language prefixes. JSON content lives in `src/data/content/`. Each published locale must contain 10 complete articles,28 FAQs and the same UI keys. Language switching retains route, query parameters and section anchors. Product names/brands remain source data; translation never invents attributes.
 
 Official help research, competitor keyword observations and current integration evidence are in `docs/`. The durable project decisions and continuation checklist are in `PROJECT_MEMORY.md`. Official brand assets are recorded in `docs/brand-assets.json`.
 
 All review-host pages use `noindex,nofollow`; `robots.txt` disallows crawling and no preview sitemap is published. Production indexing, canonical/query handling, sitemap generation, final hosting and domain binding must be implemented and verified as the next deployment phase, after design review.
+
+Run `node scripts/check-source.mjs` only when changing the source adapter or investigating a live-feed issue; it performs real public-source reads. The default check is local and deterministic.
