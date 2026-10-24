@@ -348,3 +348,18 @@ GitHub Pages 只能托管静态输出，不能运行 SSR 或服务端代理；�
 已在源站公开目录 /AllProducts/ 与产品 /AllProducts/6640.html 检查，看到关键词、分类、排序及卖家商品图库，未看到搜图或独立 QC 入口。源站脚本直接浏览被客户端阻止，不能声称已经验证搜图/QC接口，也不能把卖家图标成QC。
 
 GitHub 工作流改为构建完整 Worker 并运行真实源站测试后上传产物，不再发布错误的 Pages 静态导出。新运行时尚未发布；GitHub Pages 旧公开链接尚未改变。Cloudflare 工具本轮再次返回 UNAUTHORIZED / requires reauthentication，需解决发布途径，不能声称已上线。正式域名与其他项目未改动。
+
+
+## 2026-10-24 修正版已通过真实数据测试，待发布运行时
+
+用户纠正：数据全部读取 cnfansge.com，但商品浏览、搜索、分类、排序、分页、图片查看都必须留在 CSSBuy 子站，不能跳回主站。上一版 Pages 静态导出被明确拒绝，不能再作为替代方案。
+
+已提交独立分支 preview/cssbuyhome，最新功能提交 df3e06b552ad6d016e977a52ea66965f8d85918b。删除 build-github-preview.mjs；工作流改为构建完整 Worker，并通过真实源站验收后上传运行文件。main、正式域名和其他项目没有修改。
+
+实测通过：GitHub Actions run 40052386649，商品第 1、4、10 页，Nike 搜索第 4 页，shoes 分类第 4 页，源站价格升降序，任意有效产品详情，CSSBuy购买ID 7755101935，同站内表单/卡片/分页链接，以及图片原地放大（不打开主站）。页面20件仅为分页大小，不限制总目录或只有三页。仍使用短期内存响应缓存，无商品数据库。
+
+初次实时测试遇到部分源商品没有有效价格，测试已正确区分缺失价格，并检查其余有效价格排序，不伪造补价。最新完整检查及运行时构建成功，19个Astro基础页面和10篇文章、28条FAQ保留。
+
+公开状态：修正版运行时尚未发布。https://hehaize88-code.github.io/cnfansge.com/ 仍是旧静态预览，不能告诉用户它已修复。Cloudflare连接于本轮再次返回UNAUTHORIZED/requires reauthentication。需明确获准通过当前Chrome创建cssbuyhome-preview临时Worker后部署；不绑定cssbuyhome.com。之前已询问过此浏览器备用授权，但用户仅回复连不了cf，不应记为已授权。
+
+源站 /AllProducts/ 和 /AllProducts/6640.html 当前公开页面可查看，包含关键词、分类、排序、卖家图库；未观察到搜图或独立QC入口。脚本直接打开被客户端阻止，未绕过。/api/capabilities明确标记visualSearch=false、qc=false；不能声称不存在任何后台接口，也不能假冒QC结果。接入这两项仍需要真实源站入口或接口资料。
