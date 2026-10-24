@@ -19,10 +19,14 @@
 7. 注册地址原样使用：https://item2.kakobuy.com/register
 8. 购买示例：https://item2.kakobuy.com/item/details?url=https%3A%2F%2Fweidian.com%2Fitem.html%3FitemID%3D7617402324&affcode=rf8x8
 9. 示例中 7617402324 是 Weidian 商品 ID，推广参数为 affcode=rf8x8。
+10. 后续明确要求：部署代码固定到 hehaize88-code/cnfansge.com；每域名一个单独文件夹，结构与截图中的 cssbuyhome-com 相同。
+11. 后续明确要求：参考 https://kakobuypicklist.com/ 的体验和多语言；商品数据唯一来源仍为 cnfansge.com。
+12. 不建数据库，不建设或操作管理后台。所有商品与商品图片均使用主站真实内容；用户“不要有任务图片,商品等等”结合上下文按不使用自行编造/占位商品和商品图处理，不理解为删除真实商品图片。
+13. 已给出的官方LOGO/favicon要求继续有效：商品图片来自cnfansge.com，品牌标识来自Kakobuy官方，二者来源用途不同。
 
 ## 2. 项目边界与组织方式
 
-- 沿用此前关联的 hehaize88-code/cnfansge.com 仓库。当前根目录确有多个域名目录，包括 cssbuyhome-com、pikobuy-at、superbuybuyss-com 及既有 Kakobuy 站点目录。
+- 用户于2026-10-24再次明确指定部署代码仓库 https://github.com/hehaize88-code/cnfansge.com ，并提供截图，红框示例为根目录 cssbuyhome-com/。最终每个域名一个根级独立文件夹；本次仅做Kakobuy，其他已有站点不混入此项目。
 - 当前读取的是子站代码仓库，不能据此宣称已获得 cnfansge.com 后台源代码或完整 API。
 - 新域名确认后使用一个对应的独立目录；若采用推荐域名，建议为 kakobuytab-com/。
 - 每个域名有自己的 package.json、lockfile、Astro 配置、品牌素材、内容、部署配置和 PROJECT_MEMORY.md。
@@ -237,10 +241,20 @@ SEO 基础：
 - 日期只反映实际内容更新。
 - 本次未取得 GSC/Bing/GA4 的新站数据，不把竞品研究说成本站分析。
 
-多语言建议（待本轮实施范围确定）：
-保留此前同类项目的多语言习惯，架构从开始支持语言路由。建议先确定实际要完整维护的语言清单；可用 EN/DE/ES/FR/IT 为起点，需要20+语时统一扩展内容模型。
-所有启用语言具有同等页面与内容；切换语言保留当前页面、查询和分页；设置正确 HTML lang、hreflang 与 x-default。不要生成空翻译占位页。
-本轮用户没有指定语言数量，因此“五语/二十多语”目前属于建议，不能记录成新确认要求。
+多语言实施方案（2026-10-24 根据用户指定参考站具体化）：
+用户要求参考 https://kakobuypicklist.com/ 并由助手安排多语言。已读取其首页HTML和德语/葡萄牙语页面，确认24种语言及独立路径；本项目据此采用24语方案。24这个数字是核查参考站后确定的实施方案，不是用户原话指定的数字。
+语言代码：en、de、es、fr、it、pl、pt、ro、sv、nl、da、fi、el、cs、hu、bg、sk、hr、sl、lt、lv、et、ga、mt。
+英文使用根目录 /，其余使用 /de/、/es/ 等路径；同一页面的内部稳定标识共用，只切换语言前缀。
+- 首页、导航、分类标签、按钮、错误提示、Guide、Shipping、FAQ和已发布文章均有完整译文，按相同内容模型维护，不能只翻译导航。
+- 所有语言共用 cnfansge.com 的商品集合、商品ID、图片、QC来源、价格和原始商品链接；不按语言复制商品数据库或缩减目录。
+- 商品事实来自主站；品牌、型号和商品ID原样保留，显示文字的本地化不能创造主站不存在的材质、尺码、库存、价格或QC信息。若源站无某字段翻译，实施时记录显示策略，不将原文冒充完整译文。
+- 切换语言保留当前产品/文章/分类、搜索词、排序、分页和有效片段。用真实a链接；首选语言可保存到浏览器，但不强制把访问者跳回首页。
+- 每个语言页有正确的HTML lang、独立title/description和自指canonical；hreflang互相对应，x-default指向同一内容的英文版本。
+- 静态正文、语言字典、文章译文放GitHub文件，属于前端内容，不需要后台或数据库。
+- 价格统一USD；同一来源数据版本在不同语言下数值一致，按当地习惯格式化。
+- 发布检查比较24语的页面/文章标识、段落或内容块和翻译键；所有可见语言选项必须可用，不能出现英文完整而其他语言缺内容。
+- 语言菜单用可读的语言自称与代码，手机端易点击，布局不横向溢出。
+技术依据：https://docs.astro.build/en/guides/internationalization/ 。
 
 ## 10. 缓存、错误处理与完整性
 
@@ -288,6 +302,14 @@ SEO 基础：
 2026-10-24 第二阶段：
 完成注册局复核、npm/官方版本核对、竞品与官方资料整理、当前公开页面与链接验证，并更新完整规划。未购买域名、未建站、未发布。
 
+2026-10-24 第三阶段（用户补充仓库截图和参考站）：
+- 已查看截图，确认每域名一个根级独立目录；仓库目标由此前关联升级为本轮明确指定。
+- 已通过HTTP读取参考站首页（200），核实24个语言入口和hreflang；另外读取德语及葡萄牙语正文。原先“先5语、以后再扩展”的建议由24语完整方案取代。
+- 参考站可见目录、文字搜索、搜图入口和商品详情结构；此观察不证明其接口可用于cnfansge.com，也不意味着本项目搜图/QC已接通。
+- 参考站是交互与语言结构参考，不作为商品数据、图片或QC的第二来源。
+- 明确无需后台、数据库、商品上传或管理模块；静态SEO内容和翻译文件保存在GitHub。
+- 仍处规划阶段，域名尚未由用户选定，网站尚未搭建或发布。
+
 以后每次工作：
 - 开始前读取本文件及实际最新代码。
 - 实施中记录决策、真实接口、文件变化和未解问题。
@@ -314,6 +336,12 @@ SEO 基础：
 - https://item2.kakobuy.com/register
 - https://item2.kakobuy.com/index/information?information_id=3
 - https://kakobuy.com/service/help/question?id=74
+
+用户指定体验参考：
+- https://kakobuypicklist.com/
+- https://kakobuypicklist.com/de/
+- https://kakobuypicklist.com/pt/
+- https://docs.astro.build/en/guides/internationalization/
 
 竞品页面仅用于关键词和结构观察：
 - https://kakobuy-spreadsheet.com/
