@@ -2,6 +2,14 @@
 
 更新时间：2026-10-24（用户时区 Asia/Shanghai）。本文件为后续开发事实来源；先读再改。
 
+## 收录排查与商品列表服务端渲染（2026-10-24）
+
+用户报告 /finds/、/qc/、/shipping/、/faq/、/articles/ 请求收录失败。须区分实时测试软 404 和手动请求额度/提交故障：截图中的 /finds/ 抓取成功、允许索引但被判软 404；/articles/ 截图已是绿色可编入索引，提交时报错。复测 /qc/ 于北京时间 16:59 已显示可编入索引；请求收录被 Google 明确以“超出了每日配额”拒绝，不能宣称提交成功或已经收录。
+
+修复：首页、finds、spreadsheet 五语言页面由 Worker 在请求时调用原有 cnfansge.com 只读适配器，把真实商品和分页写入 HTML；所有用户同样输出，不按爬虫区分。浏览器保留首屏内容，不再清空后重新请求。仍只有 60 秒临时内存缓存，无数据库、无持久商品快照、无虚构商品。取消 robots 的 /api/ 抓取屏蔽，JSON API 保留 X-Robots-Tag: noindex。源站故障返回 503 + Retry-After + no-store；无结果搜索 noindex，超出范围页 404，非法参数 400。筛选/搜索/分页变体 noindex，基础目录页面 index。
+
+验证：8 项自动测试，105 页构建，95 个站点地图 URL 检查；使用只在测试中导入的源站 fixture，不把测试商品放入生产。涵盖五语言 HTML 商品、分页、XSS 转义、源站故障状态、QC/运费静态正文、28 FAQ。上线及 Google 实测结果另记。
+
 ## Google Analytics 4（2026-10-24）
 
 用户要求将本域名添加到 analytics.google.com。已有账号 405518068 中新建独立资源 allchinabuybuy.com，Property ID 560578171，Web Stream ID 16193977860，Measurement ID G-4YY4TM8ZFW。中国时区（GMT+08:00）、USD；目标为流量和用户互动，增强型衡量开启。

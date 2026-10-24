@@ -1,5 +1,6 @@
 import bundle from '../.astro-output/embedded-assets.json';
 import {api} from './source.mjs';
+import {catalogRoute,renderCatalog} from './catalog.mjs';
 import {createResponseCache} from './cache.mjs';
 const cachedApi=createResponseCache(api);
 function bytes(encoded){return Uint8Array.from(atob(encoded),c=>c.charCodeAt(0));}
@@ -10,4 +11,6 @@ export default{async fetch(request){const u=new URL(request.url);const officialO
  let path;try{path=decodeURIComponent(u.pathname);}catch{return new Response('Invalid URL',{status:400});}
  if(!path.includes('.')&&!path.endsWith('/'))return Response.redirect(u.origin+path+'/'+u.search,308);
  const key=path.endsWith('/')?path+'index.html':path,asset=bundle.assets[key];if(!asset)return new Response('Page not found',{status:404,headers:{'Content-Type':'text/plain;charset=utf-8','X-Robots-Tag':'noindex'}});
- const headers={'Content-Type':asset.type,'Cache-Control':asset.type.startsWith('text/html')?'public,max-age=60':'public,max-age=3600','X-Content-Type-Options':'nosniff','Referrer-Policy':'strict-origin-when-cross-origin'};if(!__PRODUCTION__||!officialHost||/\/(product|search\/visual)\//.test(path))headers['X-Robots-Tag']='noindex, follow';return new Response(request.method==='HEAD'?null:await assetBody(asset,key),{headers});}};
+ const headers={'Content-Type':asset.type,'Cache-Control':asset.type.startsWith('text/html')?'public,max-age=60':'public,max-age=3600','X-Content-Type-Options':'nosniff','Referrer-Policy':'strict-origin-when-cross-origin'};if(!__PRODUCTION__||!officialHost||/\/(product|search\/visual)\//.test(path))headers['X-Robots-Tag']='noindex, follow';const route=catalogRoute(path);
+ if(route){const rendered=await renderCatalog(new TextDecoder().decode(await assetBody(asset,key)),request,route,cachedApi);return new Response(request.method==='HEAD'?null:rendered.html,{status:rendered.status,headers:{...headers,...rendered.headers}});}
+ return new Response(request.method==='HEAD'?null:await assetBody(asset,key),{headers});}};
