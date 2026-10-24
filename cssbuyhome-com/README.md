@@ -11,8 +11,10 @@ Astro 7.4.2 project in `cssbuyhome-com/` of `hehaize88-code/cnfansge.com`. Produ
 
 ## Deployment
 
-Existing Cloudflare Worker: `cssbuyhome-preview` (internal name retained to preserve the working integration). Configure its GitHub production branch to `main`, root to `cssbuyhome-com`, build command to `npm run build:production`, and deploy command to `npx wrangler deploy dist/server/index.js --name cssbuyhome-preview --compatibility-date 2026-10-24`. Only `cssbuyhome-com/**` should trigger builds. `wrangler.jsonc` declares the apex and www custom domains.
+Existing Cloudflare Worker: `cssbuyhome-preview` (internal name retained to preserve the working integration). Its GitHub production branch is configured as `main`, root `cssbuyhome-com`, build command `npm run build:production`, and deploy command `npx wrangler deploy dist/server/index.js --name cssbuyhome-preview --compatibility-date 2026-10-24`. Only `cssbuyhome-com/**` should trigger builds. `wrangler.jsonc` declares the apex and www custom domains.
 
 The GitHub Actions workflow validates both branches, enables production indexing only for main, and runs real-source integration checks across all 24 languages. `npm run build:production` also checks all page metadata, sitemap count, preview exclusion, and canonical redirects. Do not restore the rejected GitHub Pages snapshot or copy the stale Sites checkout over this project.
 
 See `PROJECT_MEMORY.md` for observed deployment status, `docs/I18N.md` for translation maintenance, and `docs/KEYWORD_RESEARCH.md` for the original keyword/source research. Narrow-screen browser verification remains pending because the prior test browser did not apply viewport overrides.
+
+Production deployment verified on 2026-10-24: https://cssbuyhome.com/ is live over HTTPS; www redirects to the apex. Cloudflare build `481dcc5a-98e6-4312-8a7a-384f84c7cd2a` and GitHub Actions run `40058698105` succeeded. Public checks verified same-site search/details, localized results, 24 language options, canonical/indexing, and the 408-URL sitemap.

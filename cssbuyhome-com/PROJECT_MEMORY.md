@@ -431,3 +431,20 @@ main当前7aad75bf81c3e941f686e034b57d51c83357e069，尚无cssbuyhome-com目录�
 ## 2026-10-24 GitHub主分支与Cloudflare正式构建已配置
 
 生产代码已提交main：4cda8db37d42cd0020eac3fbe142370c619ee463；GitHub Actions 40058372368成功。仅新增cssbuyhome-com和专属工作流，其余域名目录保留。Cloudflare后台已保存Production branch=main、Build command=npm run build:production、Root directory=cssbuyhome-com，继续沿用原部署命令与cssbuyhome-com/**监听范围。此记录提交触发主分支首次正式构建；自定义域名、证书及公开验收待该构建完成后记录。
+
+
+## 2026-10-24 正式域名上线并验收通过（当前权威状态）
+
+- 正式站：https://cssbuyhome.com/ ，Cloudflare HTTPS公开访问正常。www.cssbuyhome.com已绑定同一Worker并跳转HTTPS主域，保留路径和查询参数。
+- GitHub：hehaize88-code/cnfansge.com，main分支，cssbuyhome-com目录；生产功能提交4cda8db37d42cd0020eac3fbe142370c619ee463，实际发布提交ca392ae79319c1eccd42b4638e5ca6047e5ac812。其他域名目录未改。
+- Cloudflare：既有cssbuyhome-preview Worker（内部名称保留），account 9010cea800ac2a140509889d88fe612e。Production branch=main，root=cssbuyhome-com，build=npm run build:production，部署命令和NODE_VERSION=24沿用，监听cssbuyhome-com/**。
+- Cloudflare build 481dcc5a-98e6-4312-8a7a-384f84c7cd2a为Ready，版本短ID 5ed97570。主域与www均在Domains表显示Production；Zone ID 796b48fe8eabf22c6d35c50243e4d5cf。未新增数据库、后台、R2或token。
+- GitHub Actions 40058698105 / job120767276383全部成功：npm ci、8项内容/数据契约测试、456页构建、24语本地化与生产SEO检查、24语真实cnfansge集成检查。真实数据检查覆盖目录1/4/10页、Nike搜索第4页、鞋分类第4页、价格升降序、同源链接及原始购买ID7755101935。
+
+正式域名Chrome验收：首页实际加载源商品与图片，语言选项24个，canonical=https://cssbuyhome.com/，robots=index,follow，25条hreflang（含x-default）。主页搜索Nike留在本站，切Deutsch保留q=Nike并显示20项。访问https://www.cssbuyhome.com/fr/spreadsheet/?q=Nike&page=4跳转到HTTPS主域相同路径/参数，法语第4页显示20项；点进#5100详情仍在本站，购买链接原始Weidian ID7665301948，工具详情页noindex,follow。法语FAQ28条、Guides10篇。
+
+公开robots.txt允许正式站抓取并声明https://cssbuyhome.com/sitemap.xml；sitemap实际包含408个URL，全部属于cssbuyhome.com。workers.dev临时地址仍返回noindex,nofollow且canonical指向正式域，避免重复索引。截图：/workspace/scratch/9fde59745d64/cssbuyhome-production.jpg。
+
+仍需明确的功能边界：商品、搜索、分页、排序、卖家图库均由唯一来源cnfansge.com提供，不能把卖家图片说成QC。独立QC照片源和搜图接口尚未验证，当前未接入。24语为现有内容的完整翻译，不等同于每市场独立关键词量调查或母语人工审校；真实窄屏验收仍待完成（上轮浏览器未应用viewport）。这些不影响本轮已完成的GitHub与Cloudflare部署。
+
+后续以main/cssbuyhome-com为生产来源。修改该目录会触发CF自动构建；preview/cssbuyhome仅保留旧评审源码，不能用旧/workspace/sites/cssbuyhome-com覆盖生产。正式域名已获本轮用户授权，不再要求重复确认域名绑定。
