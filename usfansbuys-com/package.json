@@ -1,0 +1,21 @@
+{
+  "name": "usfansbuys-com",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "node scripts/dev.mjs",
+    "build": "astro build && node scripts/build-worker.mjs",
+    "check": "node scripts/check.mjs",
+    "deploy": "npm run build && wrangler deploy",
+    "check:production": "node scripts/check-production.mjs"
+  },
+  "dependencies": {
+    "astro": "7.4.2",
+    "cheerio": "1.2.0"
+  },
+  "devDependencies": {
+    "esbuild": "0.25.12",
+    "wrangler": "4.45.1"
+  }
+}

@@ -1,0 +1,56 @@
+name: USFans Buys build and deploy
+on:
+  push:
+    branches: [main]
+    paths: ['usfansbuys-com/**', '.github/workflows/usfansbuys.yml']
+  workflow_dispatch:
+permissions:
+  contents: read
+concurrency:
+  group: usfansbuys-production
+  cancel-in-progress: false
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: usfansbuys-com
+    env:
+      SITE_ORIGIN: https://usfansbuys.com
+      PREVIEW: 'false'
+    steps:
+      - uses: actions/checkout@v6
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '24'
+          cache: npm
+          cache-dependency-path: usfansbuys-com/package-lock.json
+      - run: npm ci
+      - run: npm run build
+      - run: npm run check
+      - run: npm run check:production
+      - uses: actions/upload-artifact@v4
+        with:
+          name: usfansbuys-cloudflare-worker
+          path: |
+            usfansbuys-com/dist/server/index.js
+            usfansbuys-com/wrangler.jsonc
+          retention-days: 14
+      - name: Check Cloudflare deployment connection
+        id: cf
+        env:
+          CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+        run: |
+          if [ -n "$CLOUDFLARE_API_TOKEN" ] && [ -n "$CLOUDFLARE_ACCOUNT_ID" ]; then
+            echo "ready=true" >> "$GITHUB_OUTPUT"
+          else
+            echo "ready=false" >> "$GITHUB_OUTPUT"
+            echo "Cloudflare deployment pending: repository credentials are not configured. The validated bundle is attached to this run." >> "$GITHUB_STEP_SUMMARY"
+          fi
+      - name: Deploy Worker and bind custom domains
+        if: steps.cf.outputs.ready == 'true'
+        env:
+          CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+        run: npx wrangler deploy

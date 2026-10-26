@@ -1,0 +1,19 @@
+{
+  "$schema": "./node_modules/wrangler/config-schema.json",
+  "name": "usfansbuys-com",
+  "main": "dist/server/index.js",
+  "compatibility_date": "2026-10-26",
+  "no_bundle": true,
+  "workers_dev": false,
+  "preview_urls": false,
+  "routes": [
+    {
+      "pattern": "usfansbuys.com",
+      "custom_domain": true
+    },
+    {
+      "pattern": "www.usfansbuys.com",
+      "custom_domain": true
+    }
+  ]
+}
