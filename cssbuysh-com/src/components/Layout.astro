@@ -1,0 +1,30 @@
+---
+import '../styles/site.css';
+import {siteOrigin,indexable,registerUrl,localePath,locales} from '../data/config.mjs';
+import {publishedLocales} from '../data/content.mjs';
+const {title,description,lang='en',path='',t,article}=Astro.props;
+const href=(p='')=>localePath(lang,p),canonical=siteOrigin+href(path);
+const pageIndexable=indexable&&!['product/','search/visual/'].includes(path);
+const nav=[['spreadsheet/',t.navShop],['finds/',t.navFinds],['guide/',t.navGuide],['qc/',t.navQc],['shipping/',t.navShipping],['faq/',t.navFaq],['articles/',t.navArticles]];
+const structured=article?{'@context':'https://schema.org','@type':'Article',headline:article.title,description:article.description,inLanguage:lang,dateModified:'2026-10-23',author:{'@type':'Organization',name:'CSSBuy SH'},publisher:{'@type':'Organization',name:'CSSBuy SH'},mainEntityOfPage:canonical}:null;
+---
+<!doctype html><html lang={lang}><head>
+<meta charset="utf-8"/><meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>{title} | CSSBuy SH</title><meta name="description" content={description}/>
+<meta name="robots" content={pageIndexable?'index,follow':indexable?'noindex,follow':'noindex,nofollow'}/><link rel="canonical" href={canonical}/>
+{publishedLocales.map(l=><link rel="alternate" hreflang={l} href={siteOrigin+localePath(l,path)}/>)}<link rel="alternate" hreflang="x-default" href={siteOrigin+localePath('en',path)}/>
+<link rel="icon" href="/brand/cssbuy-favicon.png"/><meta name="theme-color" content="#f4f2e9"/>
+<meta property="og:type" content={article?'article':'website'}/><meta property="og:title" content={title}/><meta property="og:description" content={description}/><meta property="og:url" content={canonical}/><meta property="og:site_name" content="CSSBuy SH"/>
+{structured&&<script type="application/ld+json" set:html={JSON.stringify(structured).replace(/</g,'\\u003c')}/>}
+</head><body data-lang={lang} data-prefix={href()}>
+<a class="skip" href="#main">{t.skip}</a>
+<header class="header"><div class="nav-wrap">
+<a href={href()} class="brand" aria-label="CSSBuy SH"><img src="https://assets.cssbuy.com/static/icon/logo.svg" alt="CSSBuy" width="121" height="34"/><span>SH</span></a>
+<nav aria-label={t.mainNavigation} class="desktop-nav">{nav.map(([url,label])=><a href={href(url)} aria-current={path.startsWith(url)?'page':undefined}>{label}</a>)}</nav>
+<div class="nav-actions"><label class="language-wrap"><span aria-hidden="true">◎</span><select class="language" aria-label={t.language} id="language-switch">{publishedLocales.map(l=><option value={localePath(l,path)} selected={l===lang}>{locales[l]}</option>)}</select></label><a class="button button-small" href={registerUrl} target="_blank" rel="noopener noreferrer">{t.join} ↗</a><button class="menu-toggle" aria-expanded="false" aria-controls="mobile-nav" aria-label={t.menu}>☰</button></div>
+</div><nav id="mobile-nav" class="mobile-nav" aria-label={t.mobileNavigation} hidden>{nav.map(([url,label])=><a href={href(url)}>{label}</a>)}</nav></header>
+<main id="main"><slot/></main>
+<footer><div class="footer-grid wrap"><div class="footer-brand"><a href={href()} class="brand"><img src="https://assets.cssbuy.com/static/icon/logo.svg" alt="CSSBuy" width="121" height="34"/><span>SH</span></a><p>{t.footerIntro}</p><span class="independent">{t.preview}</span></div><div><h3>{t.explore}</h3><a href={href('spreadsheet/')}>{t.navShop}</a><a href={href('finds/')}>{t.navFinds}</a><a href={href('search/visual/')}>{t.visualTitle}</a><a href={href('about/')}>{t.aboutTitle}</a></div><div><h3>{t.learn}</h3><a href={href('articles/')}>{t.navArticles}</a><a href={href('qc/')}>{t.navQc}</a><a href={href('shipping/')}>{t.navShipping}</a><a href={href('faq/')}>{t.navFaq}</a></div><div><h3>{t.official}</h3><a href={registerUrl} target="_blank" rel="noopener noreferrer">{t.join} ↗</a><a href="https://www.cssbuy.com/shop/helpCenter?id=12" target="_blank" rel="noopener noreferrer">{t.officialHelp} ↗</a><a href={href('privacy/')}>{t.privacyTitle}</a></div></div><div class="footer-bottom wrap"><span>© 2026 {t.copyright}</span><span>CSSBUY SH</span></div></footer>
+<dialog id="photo-viewer" aria-label={t.photoLabel}><button type="button" class="photo-close" aria-label={t.closePhoto}>×</button><img alt=""/><p>{t.sellerPhotoNote}</p></dialog>
+<script type="application/json" id="ui-data" set:html={JSON.stringify(t).replace(/</g,'\\u003c')}/><script src="../scripts/client.js"></script>
+</body></html>

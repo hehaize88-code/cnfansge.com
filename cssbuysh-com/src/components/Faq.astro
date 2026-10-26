@@ -1,0 +1,5 @@
+---
+import {localePath} from '../data/config.mjs';
+const {faq,sources,t,lang='en'}=Astro.props;
+---
+<div class="faq-list">{faq.map((f,i)=><details class="faq-item"><summary><span class="faq-number">{String(i+1).padStart(2,'0')}</span><span>{f.q}</span><span class="faq-plus" aria-hidden="true">+</span></summary><div class="faq-answer"><p>{f.a}</p><div class="faq-sources">{(f.sourceIds||[]).map(id=>{const s=sources.find(s=>s.id===id);return s&&<a href={s.url.startsWith('/')?localePath(lang,s.url.slice(1)):s.url} target="_blank" rel="noopener noreferrer">{s.id==='project'||s.id==='catalog'?t.sourceGeneric:t.sourceLink}: {s.title} ↗</a>})}</div></div></details>)}</div>

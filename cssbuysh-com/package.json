@@ -1,0 +1,22 @@
+{
+  "name": "cssbuysh-com",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "engines": {
+    "node": ">=22.23.4"
+  },
+  "scripts": {
+    "dev": "astro dev --host 0.0.0.0 --port 4173",
+    "build": "node --test tests/*.test.mjs && astro build && node scripts/build-worker.mjs && node scripts/check-localized-build.mjs",
+    "check": "node --test tests/*.test.mjs",
+    "build:production": "SITE_ORIGIN=https://cssbuysh.com SITE_INDEXABLE=true npm run build"
+  },
+  "dependencies": {
+    "astro": "7.4.2",
+    "cheerio": "1.1.2"
+  },
+  "devDependencies": {
+    "esbuild": "0.25.12"
+  }
+}
