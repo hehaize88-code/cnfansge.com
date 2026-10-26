@@ -106,4 +106,8 @@
 - 共享Layout在全部24语言528页接入同一个GA4，Google signals和广告个性化信号关闭。预览Worker响应移除统计代码，避免混入生产数据。
 - 24语言隐私说明同步补充GA4和Cookie用途。生产构建及9项测试通过，所有语言统计标签、正确衡量ID、预览无标签检查通过。
 - 报告入口：https://analytics.google.com/analytics/web/#/a405518068p560775323/reports/intelligenthome 。
-- 正在通过GitHub main自动部署至Cloudflare，随后验证线上标签及实时接收状态。
+- 已通过GitHub main提交3fd18778d1e153dca76529fe6d39fd4c4f4eb715部署；Cloudflare版本cd6830f6，Ready，45秒。
+- 正式首页及德语首页均实测加载2段GA4标签，Measurement ID正确，首页8件真实商品保持正常。
+- Google安装检测显示“恭喜！Google 代码已添加到https://cssbuysh.com中”，截图docs/ga4-installed.png。
+- GA4实时报告已收到测试访问：过去30分钟/5分钟活跃用户均为1；CSSBuy首页浏览1次；first_visit、page_view、session_start各1次。标准报表仍可能延迟更新。
+- 实时报告：https://analytics.google.com/analytics/web/#/a405518068p560775323/realtime/overview?restoreUserState=true 。这次任务为统计接入，不代表搜索引擎已收录。
