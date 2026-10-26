@@ -1,9 +1,9 @@
 ---
 import '../styles/site.css';
-import {siteOrigin,indexable,registerUrl,localePath,locales} from '../data/config.mjs';
+import {siteOrigin,indexable,registerUrl,localePath,locales,canonicalPath} from '../data/config.mjs';
 import {publishedLocales} from '../data/content.mjs';
 const {title,description,lang='en',path='',t,article}=Astro.props;
-const href=(p='')=>localePath(lang,p),canonical=siteOrigin+href(path);
+const href=(p='')=>localePath(lang,p),preferredPath=canonicalPath(path),canonical=siteOrigin+href(preferredPath);
 const pageIndexable=indexable&&!['product/','search/visual/'].includes(path);
 const nav=[['spreadsheet/',t.navShop],['finds/',t.navFinds],['guide/',t.navGuide],['qc/',t.navQc],['shipping/',t.navShipping],['faq/',t.navFaq],['articles/',t.navArticles]];
 const structured=article?{'@context':'https://schema.org','@type':'Article',headline:article.title,description:article.description,inLanguage:lang,dateModified:'2026-10-23',author:{'@type':'Organization',name:'CSSBuy SH'},publisher:{'@type':'Organization',name:'CSSBuy SH'},mainEntityOfPage:canonical}:null;
@@ -12,7 +12,7 @@ const structured=article?{'@context':'https://schema.org','@type':'Article',head
 <meta charset="utf-8"/><meta name="viewport" content="width=device-width, initial-scale=1"/>
 <title>{title} | CSSBuy SH</title><meta name="description" content={description}/>
 <meta name="robots" content={pageIndexable?'index,follow':indexable?'noindex,follow':'noindex,nofollow'}/><link rel="canonical" href={canonical}/>
-{publishedLocales.map(l=><link rel="alternate" hreflang={l} href={siteOrigin+localePath(l,path)}/>)}<link rel="alternate" hreflang="x-default" href={siteOrigin+localePath('en',path)}/>
+{publishedLocales.map(l=><link rel="alternate" hreflang={l} href={siteOrigin+localePath(l,preferredPath)}/>)}<link rel="alternate" hreflang="x-default" href={siteOrigin+localePath('en',preferredPath)}/>
 <link rel="icon" href="/brand/cssbuy-favicon.png"/><meta name="theme-color" content="#f4f2e9"/>
 <meta property="og:type" content={article?'article':'website'}/><meta property="og:title" content={title}/><meta property="og:description" content={description}/><meta property="og:url" content={canonical}/><meta property="og:site_name" content="CSSBuy SH"/>
 {structured&&<script type="application/ld+json" set:html={JSON.stringify(structured).replace(/</g,'\\u003c')}/>}

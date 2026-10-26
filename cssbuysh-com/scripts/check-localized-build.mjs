@@ -2,7 +2,7 @@ import assert from 'node:assert/strict';
 import {readFile} from 'node:fs/promises';
 import {load} from 'cheerio';
 import {publishedLocales,content,ui} from '../src/data/content.mjs';
-import {localePath,siteOrigin,indexable} from '../src/data/config.mjs';
+import {localePath,siteOrigin,indexable,canonicalPath} from '../src/data/config.mjs';
 import worker from '../dist/server/index.js';
 const origin=indexable?siteOrigin:'https://language-preview.test';
 let checked=0;
@@ -17,8 +17,8 @@ for(const lang of publishedLocales){
   assert.equal($('#language-switch option').length,publishedLocales.length,path);
   assert.equal($('#language-switch option[selected]').attr('value'),path,path);
   assert.equal($('link[hreflang]').length,publishedLocales.length+1,path);
-  for(const other of publishedLocales)assert.ok($(`link[hreflang="${other}"]`).attr('href').endsWith(localePath(other,route)),path+' '+other);
-  assert.equal($('link[hreflang="x-default"]').attr('href').endsWith(localePath('en',route)),true,path);
+  for(const other of publishedLocales)assert.ok($(`link[hreflang="${other}"]`).attr('href').endsWith(localePath(other,canonicalPath(route))),path+' '+other);
+  assert.equal($('link[hreflang="x-default"]').attr('href').endsWith(localePath('en',canonicalPath(route))),true,path);
   assert.ok(!$('title').text().includes('undefined'),path);
   if(route==='faq/')assert.equal($('details.faq-item').length,28,path);
   if(route==='articles/')assert.equal($('.guide-card').length,10,path);
@@ -32,7 +32,7 @@ for(const lang of publishedLocales){
    assert.equal(response.status,200,path+' runtime');
    assert.equal(live('body').attr('data-source-rendered'),undefined,path+' editorial must not fetch products');
    assert.equal(live('html').attr('lang'),lang,path+' runtime language');
-   assert.equal(live('link[rel=canonical]').attr('href'),origin+path,path+' runtime canonical');
+   assert.equal(live('link[rel=canonical]').attr('href'),origin+localePath(lang,canonicalPath(route)),path+' runtime canonical');
    for(const link of live('link[hreflang]').toArray())assert.ok(live(link).attr('href').startsWith(origin+'/'),path+' runtime alternate');
   }
   checked++;
@@ -57,8 +57,11 @@ if(indexable){
  assert.ok(robots.includes('Sitemap: '+origin+'/sitemap.xml'));
  assert.ok(!robots.includes('Disallow: /\n'));
  const sitemap=await (await worker.fetch(new Request(origin+'/sitemap.xml'),{},{})).text(),xml=load(sitemap,{xmlMode:true});
- assert.equal(xml('loc').length,publishedLocales.length*20);
- for(const loc of xml('loc').toArray())assert.ok(xml(loc).text().startsWith(origin+'/'));
+ assert.equal(xml('loc').length,publishedLocales.length*18);
+ for(const loc of xml('loc').toArray()){
+  assert.ok(xml(loc).text().startsWith(origin+'/'));
+  assert.ok(!/\/(guide|shipping)\/$/.test(new URL(xml(loc).text()).pathname));
+ }
  const redirected=await worker.fetch(new Request('https://www.'+new URL(origin).hostname+'/fr/spreadsheet/?q=Nike&page=4'),{},{});
  assert.equal(redirected.status,308);assert.equal(redirected.headers.get('location'),origin+'/fr/spreadsheet/?q=Nike&page=4');
  const preview=await worker.fetch(new Request('https://preview.test/fr/articles/'),{},{});

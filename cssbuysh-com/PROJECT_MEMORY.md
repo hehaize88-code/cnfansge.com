@@ -1,12 +1,12 @@
 # CSSBuySH / cnfansge 项目记忆
 
 更新：2026-10-26，Asia/Shanghai。
-阶段：公开预览已发布，正式域名未绑定。
+阶段：用户已授权正式发布，正在部署GitHub main并绑定Cloudflare正式域名。
 
 ## 固定要求
 - 用户已准备域名 cssbuysh.com。此项目独立于已有 cssbuyhome.com。
 - 用户指定最终GitHub仓库 https://github.com/hehaize88-code/cnfansge.com ，每域名独立文件夹；本项目目录 cssbuysh-com/。
-- 当前只交付公开预览，用户看过后再正式部署/绑定域名。
+- 用户2026-10-26明确要求“帮我部署到GitHub和cf”，授权正式发布及域名绑定。
 - 数据唯一来源 https://cnfansge.com 。不新建商品数据库、后台、模拟数据、示例商品或图片。
 - 商品搜索、分类、排序、分页、详情留在子站；注册与购买进入CSSBuy。
 - 注册入口 https://www.cssbuy.com/index 。购买模板 https://www.cssbuy.com/shop/goodsDetail?type=micro&id={productId} 。样本主站记录6681对应Weidian商品7755101935，禁止混用ID。
@@ -21,7 +21,7 @@
 - 搜索排序保留 keywords/channelid，并传递sort/ sort_asc给真实源站；不能只排序当前20项。
 - 首页SEO、Spreadsheet、Finds、Guide、QC、Shipping、FAQ、Articles独立入口。
 - 来源图库只是卖家图片。已核对旧CSSBuy、Kakobuy、Pikobuy、AllChinaBuy同源适配器，均未发现可用独立QC或搜图接口；两项保留准确未接通说明，不能宣称完成。
-- 预览noindex，不接GA4，不绑定cssbuysh.com。公开预览及验收结果见下文。
+- 预览域名保持noindex；正式cssbuysh.com允许索引；当前未接GA4。历史预览及验收结果见下文。
 
 ## 后续验收
 真实商品及图片、目录第4/10页、关键词搜索与价格排序、购买ID、24语相同内容和链接、390px无横向溢出、公开匿名访问。源站失败显示可重试状态，不能回填假商品。
@@ -77,3 +77,11 @@
 - 浏览器验收截图保存docs/preview-check.png。QC/搜图仍未验证接入，保持准确提示。
 - 只发布临时Worker与GitHub预览分支。cssbuysh.com和www未绑定，main未更新。
 - 后续以本GitHub预览分支为继续开发源；旧Sites仓库和chatgpt.site地址仅留历史，不作为交付入口。
+
+## 正式发布准备（2026-10-26）
+- 用户明确授权部署GitHub和Cloudflare。当前操作只涉及cssbuysh-com目录及对应Worker和域名。
+- 生产源切换到GitHub main/cssbuysh-com，复用已验证的cssbuysh-preview Worker；Node24，build=npm run build:production，deploy=npx wrangler deploy，root=cssbuysh-com，watch=cssbuysh-com/**。
+- 生产canonical=https://cssbuysh.com，www保留路径和查询跳转根域；workers.dev继续noindex。
+- Guide与Shipping保留独立入口，以对应文章地址作为canonical及hreflang首选地址。sitemap排除重复别名以及noindex的商品/搜图页，24语共432条。
+- Cloudflare API仍要求重新授权，沿用用户已允许的Chrome部署方式，不创建新凭据或数据库。
+- 等待生产构建和正式域名浏览器验收完成后补充部署结果。

@@ -11,7 +11,9 @@ Astro 7.4.2 static editorial pages with a Worker that reads public product pages
 
 ## Deployment
 
-Preview: Cloudflare Worker `cssbuysh-preview`, built from GitHub branch `preview/cssbuysh`. The earlier Sites URL is blocked for the user. Production destination after user review: `hehaize88-code/cnfansge.com/cssbuysh-com/`. Domain DNS and production deployment have not been changed. GitHub stores source; the runtime Worker must run on an SSR-capable host, not plain GitHub Pages.
+Production: `https://cssbuysh.com/`, with `www` redirecting to the apex. Reuse Cloudflare Worker `cssbuysh-preview`; the historical internal Worker name does not affect its production domain. Source: `hehaize88-code/cnfansge.com`, branch `main`, root directory `cssbuysh-com`, Node 24, build `npm run build:production`, deploy `npx wrangler deploy`, watch `cssbuysh-com/**`.
+
+GitHub stores source; the runtime Worker must run on an SSR-capable host, not plain GitHub Pages. The workers.dev address remains noindex. Production sitemap is `/sitemap.xml` with 432 canonical URLs across 24 languages. Guide/shipping aliases canonicalize to their corresponding full articles and are excluded from the sitemap.
 
 The output `dist/server/index.js` embeds the Astro pages and public assets. Product information is requested from cnfansge.com at runtime with brief in-memory caching. No product snapshots are committed.
 
