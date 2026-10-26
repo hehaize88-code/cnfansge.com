@@ -1,7 +1,7 @@
 # CSSBuySH / cnfansge 项目记忆
 
 更新：2026-10-26，Asia/Shanghai。
-阶段：用户已授权正式发布，正在部署GitHub main并绑定Cloudflare正式域名。
+阶段：已正式发布，GitHub main与Cloudflare联动，cssbuysh.com及www已绑定并验收。
 
 ## 固定要求
 - 用户已准备域名 cssbuysh.com。此项目独立于已有 cssbuyhome.com。
@@ -84,4 +84,17 @@
 - 生产canonical=https://cssbuysh.com，www保留路径和查询跳转根域；workers.dev继续noindex。
 - Guide与Shipping保留独立入口，以对应文章地址作为canonical及hreflang首选地址。sitemap排除重复别名以及noindex的商品/搜图页，24语共432条。
 - Cloudflare API仍要求重新授权，沿用用户已允许的Chrome部署方式，不创建新凭据或数据库。
-- 等待生产构建和正式域名浏览器验收完成后补充部署结果。
+- 已完成生产构建和正式域名浏览器验收，结果见下文。
+
+## 正式发布完成（2026-10-26）
+- 正式入口：https://cssbuysh.com/ 。www.cssbuysh.com已绑定相同Worker，自动308至根域并保留路径和查询。
+- GitHub主分支提交f49aa2bd561d17f686c878c42f742c6856f5f5c8；目录cssbuysh-com/。只新增本域名目录，其他站点不变。
+- Cloudflare构建368c631a-e258-4ee8-8527-d11b31bcde84成功，44秒，版本0a202c31，状态Ready，main自动构建链路已验证。
+- 配置保存确认：main，cssbuysh-com，npm run build:production，npx wrangler deploy，Node24，watch=cssbuysh-com/**。
+- 本地生产构建通过9项测试和24语528页校验；240文章页、672 FAQ，生产canonical及预览noindex检查通过。
+- 用户连接的Chrome正式域名：首页8件真实商品、3张主站首图正常；24语言，robots=index,follow，canonical=https://cssbuysh.com/。
+- 实测https://www.cssbuysh.com/de/spreadsheet/?q=Nike&sort=price-up&page=4跳转根域，保留全部参数，德语第4页20件真实商品。
+- https://cssbuysh.com/sitemap.xml实测可读取432个loc，全部使用正式域名，不包含guide/shipping重复别名。
+- robots.txt允许抓取公开页面，禁抓/api/并声明正式sitemap。
+- 正式验收截图docs/production-check.png。QC与搜图接口仍未接通，保持准确说明。GA4/GSC/Bing尚未在本项目配置或提交。
+- 后续以GitHub main/cssbuysh-com作为唯一开发源。preview/cssbuysh分支及旧Sites仓库只是历史，不再作为生产源。
