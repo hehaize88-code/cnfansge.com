@@ -269,3 +269,20 @@ GitHub 保存源码和自动构建配置；GitHub Pages 只能托管静态产物
 - Cloudflare 连接返回 requires reauthentication / UNAUTHORIZED；本地 Wrangler 未登录。本轮未创建 Worker、未绑定域名、未改 DNS。
 - 下一步：恢复 Cloudflare 连接，或取得用户同意后改用已连接 Chrome 创建 usfansbuys-com Worker、关联 GitHub 目录并绑定 apex/www。工具回退规则要求连接失效改用浏览器前取得同意；本轮尚未使用浏览器进入 Cloudflare。
 - 继续使用已验证的公开预览链接查看；正式 usfansbuys.com 尚未验收，不应提交其 sitemap 作为已上线链接。
+
+## Cloudflare 正式上线完成（2026-10-26）
+
+- 用户回复“允许”，明确授权在 Cloudflare API 失效后使用已连接 Chrome 完成部署。实际登录账户 ID=9010cea800ac2a140509889d88fe612e；连接器旧预设账户不用于本项目。
+- 正式网站 https://usfansbuys.com/ 已公开上线，HTTPS 正常。usfansbuys.com 与 www.usfansbuys.com 都已绑定 Worker usfansbuys-com；workers.dev 和 Preview URLs 保持关闭。
+- Cloudflare 使用现有 GitHub 连接，repo=hehaize88-code/cnfansge.com，production branch=main，root=usfansbuys-com；build=`npm run build && npm run check:production`；deploy=`npx wrangler deploy`；NODE_VERSION=24。无新增数据库、存储绑定或独立后台。
+- 自动构建只包含 usfansbuys-com/**，排除 usfansbuys-com/*.md。预览分支构建关闭。只修改本项目配置，未更改其他站点或域名。
+- 首次构建因 Cloudflare 默认 npm10.9.2 对锁文件解析不同而失败。package.json 固定 packageManager=npm@11.9.0，与本地/GitHub 已验证环境一致；没有放宽依赖版本或移除 lockfile。实际 Cloudflare 构建确认 Node24.22.1/npm11.9.0，npm clean-install 成功。
+- 发布代码 commit=2587598ff94cb3ce2a57f5da0282f0d35dd088c1。Cloudflare 成功 build=8c48e9f7-45bf-4c33-accc-2085014cf76e；生产 version 前缀 e47546f5，状态 Ready，100% 流量。
+- Cloudflare 构建记录：https://dash.cloudflare.com/9010cea800ac2a140509889d88fe612e/workers/services/view/usfansbuys-com/production/builds/8c48e9f7-45bf-4c33-accc-2085014cf76e 。
+- 最新 GitHub Actions run40298211945 成功：https://github.com/hehaize88-code/cnfansge.com/actions/runs/40298211945 。GitHub workflow 的凭据部署步骤仍可跳过；现在由 Cloudflare 原生 Git 构建负责自动发布，不需要补填 GitHub secrets。
+- 正式站验收：首页4条真实商品初始 HTML；Chrome 源站图片 naturalWidth>0；shoes 搜索20项；价格升序正常；第10页前后页9/11；商品6681返回200、noindex,follow，购买地址精确为 https://www.usfans.com/product/3/7755101935?ref=SWD92F。
+- 英德西法意页面 HTTP200；canonical/hreflang 正确；编辑内容允许索引；robots.txt 允许抓取；https://usfansbuys.com/sitemap.xml 包含90条URL。HTTPS www 实测308到apex并保留路径参数；HTTP在Chrome中成功到达相同HTTPS地址。本地HTTP网络请求受环境代理断开，未据此虚报HTTP线上状态码；Worker单元测试已验证HTTP308。
+- 本轮不新增搜索引擎提交任务；可在后续接入/确认 Search Console 属性后提交 sitemap。不得承诺索引、排名或流量。
+- 搜图及独立仓库QC能力仍为 false，等待 cnfansge 可验证接口；seller galleries不标为QC。已上线5语言、每语言28 FAQ与10文章，不代表该两项接口已接通。
+- 既有 Sites 公开预览维持原版本和 noindex，正式Cloudflare站与预览分开维护。本节覆盖上文“Cloudflare待部署/正式站尚未验收”等历史状态。
+

@@ -1,10 +1,10 @@
 # USFans Buys — usfansbuys.com
 
-Astro 7.4.2 editorial SSG with live catalog SSR in a Cloudflare Worker. Source folder: `hehaize88-code/cnfansge.com/usfansbuys-com/`. The reviewed public preview is https://usfansbuys-preview.hehaize88.chatgpt.site/.
+Astro 7.4.2 editorial SSG with live catalog SSR in a Cloudflare Worker. Source folder: `hehaize88-code/cnfansge.com/usfansbuys-com/`. Production is live at https://usfansbuys.com/. The reviewed public preview remains https://usfansbuys-preview.hehaize88.chatgpt.site/ with noindex.
 
 ## Build and validate
 
-Node >=22.23.4 (Node 24 recommended), npm >=9.6.5.
+Verified deployment toolchain: Node 24.22.1 and npm 11.9.0. `packageManager` pins npm 11.9.0; Cloudflare build variable `NODE_VERSION=24` selects Node 24.
 
 ```sh
 npm ci
@@ -23,7 +23,9 @@ Worker entry is `dist/server/index.js`; all editorial HTML and static brand asse
 npm run deploy
 ```
 
-GitHub Actions builds and validates only this directory. If `CLOUDFLARE_API_TOKEN` and `CLOUDFLARE_ACCOUNT_ID` repository secrets are available, it also publishes from main; otherwise it records that Cloudflare deployment is pending and uploads a ready-to-deploy bundle. Never put credentials in this repository. Alternatively, Cloudflare Workers Builds can use root directory `usfansbuys-com`, build command `npm run build`, deploy command `npx wrangler deploy`.
+Cloudflare Workers Builds is connected to this repository's `main` branch and publishes automatically. Settings: root directory `usfansbuys-com`, build command `npm run build && npm run check:production`, deploy command `npx wrangler deploy`, include watch path `usfansbuys-com/**`, exclude `usfansbuys-com/*.md`. Preview builds are disabled. Apex and www are bound; workers.dev URLs are disabled.
+
+GitHub Actions separately builds and validates this directory. Its optional credential-based deploy step is skipped when repository secrets are absent; Cloudflare's native Git integration already handles production deployment. Do not add a second deployment path unless intentionally replacing that integration. Never put credentials in this repository.
 
 ## Source and content
 
