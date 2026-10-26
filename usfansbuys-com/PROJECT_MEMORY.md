@@ -258,3 +258,14 @@ GitHub 保存源码和自动构建配置；GitHub Pages 只能托管静态产物
 - 公开预览继续保持原版本与 noindex。正式配置和代码不影响其他子站。
 - 正式发布检查已通过：独立目录 npm ci 全新安装、100 语言路由与实时源数据测试、90 sitemap URL 和 canonical/hreflang/robots 检查、HTTPS/www 308、Wrangler dry-run。部署包约 1,959.57 KiB，gzip 359.10 KiB，无 bindings。
 - 清理 Astro 包锁中 27 条 extraneous 的非当前平台 esbuild 记录后，npm ci 可复现；未改变固定 Astro 7.4.2 版本。
+
+
+## GitHub 部署完成，Cloudflare 待恢复连接（2026-10-26）
+
+- 正式代码已提交 main：2b0ed49e22f18b954d347925ec5203435431885b。
+- 项目目录：https://github.com/hehaize88-code/cnfansge.com/tree/main/usfansbuys-com 。仅新增该域名目录及 .github/workflows/usfansbuys.yml，其他子站未改动。
+- GitHub Actions run 40295212985 成功：https://github.com/hehaize88-code/cnfansge.com/actions/runs/40295212985 。npm ci、构建、全部实时数据测试与 production SEO 验证均成功；部署产物已上传。
+- Deploy Worker and bind custom domains 步骤明确 skipped：仓库缺少可用 CLOUDFLARE_API_TOKEN / CLOUDFLARE_ACCOUNT_ID 凭据。CI success 只证明构建和检查通过，不等于 Cloudflare 已部署。
+- Cloudflare 连接返回 requires reauthentication / UNAUTHORIZED；本地 Wrangler 未登录。本轮未创建 Worker、未绑定域名、未改 DNS。
+- 下一步：恢复 Cloudflare 连接，或取得用户同意后改用已连接 Chrome 创建 usfansbuys-com Worker、关联 GitHub 目录并绑定 apex/www。工具回退规则要求连接失效改用浏览器前取得同意；本轮尚未使用浏览器进入 Cloudflare。
+- 继续使用已验证的公开预览链接查看；正式 usfansbuys.com 尚未验收，不应提交其 sitemap 作为已上线链接。
