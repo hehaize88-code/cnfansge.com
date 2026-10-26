@@ -60,3 +60,20 @@
 
 ## 2026-10-26 用户已授权 Chrome 临时预览
 用户明确回复“允许”，授权通过Chrome在Cloudflare创建cssbuysh-preview临时Worker。为完成预览，准备GitHub独立preview/cssbuysh分支、cssbuysh-com目录，Cloudflare从该分支构建，main及正式DNS不变。
+
+## Cloudflare 发布进度
+- 账户9010cea800ac2a140509889d88fe612e（页面确认Hehaize88账户），创建cssbuysh-preview。
+- GitHub预览源提交0f7fe0ccb3265ced7d9b46df0227e0095c24248e，main未变。
+- 初始创建界面不提供分支选择，首次构建中显式检出preview/cssbuysh；构建e145a296-14b9-47cb-85fb-8935fff7bb86通过，版本dddd5583，Ready。随后正式保存构建设置：Production branch=preview/cssbuysh，root=cssbuysh-com，build=npm run build，deploy=npx wrangler deploy，Node24，watch=cssbuysh-com/**，其他分支Preview builds关闭。
+- 复用现有Workers Builds凭据，不创建token、数据库、R2或其他绑定。
+- Domains页已打开Production Worker URL开关，显示Anyone with this URL can visit；无自定义域名绑定。新公开地址https://cssbuysh-preview.hehaize88.workers.dev/，浏览器验收中。
+
+## 新预览已完成验收（2026-10-26）
+- https://cssbuysh-preview.hehaize88.workers.dev/ 已在用户连接的Chrome真实打开，不再遇到chatgpt.site安全拦截。
+- 首页8件商品、3张首屏商品图片正常，24语言选项齐全，meta robots=noindex,nofollow。
+- 首页搜索Nike留在新预览域名，显示20件；切换德语保留q=Nike并正常显示20件。
+- 全目录第10页20件，继续存在上一页/下一页及页码跳转。
+- 商品6681显示5张主站图片，购买链接精确指向type=micro&id=7755101935。
+- 浏览器验收截图保存docs/preview-check.png。QC/搜图仍未验证接入，保持准确提示。
+- 只发布临时Worker与GitHub预览分支。cssbuysh.com和www未绑定，main未更新。
+- 后续以本GitHub预览分支为继续开发源；旧Sites仓库和chatgpt.site地址仅留历史，不作为交付入口。
