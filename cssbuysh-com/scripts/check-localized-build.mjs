@@ -12,7 +12,8 @@ for(const lang of publishedLocales){
  for(const route of routes){
   const path=localePath(lang,route),html=await readFile('.astro-output'+path+'index.html','utf8'),$=load(html);
   assert.equal($('html').attr('lang'),lang,path);
-  assert.equal($('script[data-cssbuy-analytics]').length,0,path+' analytics coverage');
+  assert.equal($('script[data-cssbuy-analytics]').length,indexable?2:0,path+' analytics coverage');
+  if(indexable)assert.equal($('script[data-cssbuy-analytics][src]').attr('src'),'https://www.googletagmanager.com/gtag/js?id=G-WXZK6H99JM',path+' analytics stream');
   assert.equal($('meta[name=robots]').attr('content'),indexable?(['product/','search/visual/'].includes(route)?'noindex,follow':'index,follow'):'noindex,nofollow',path+' indexing');
   assert.equal($('#language-switch option').length,publishedLocales.length,path);
   assert.equal($('#language-switch option[selected]').attr('value'),path,path);
@@ -32,6 +33,7 @@ for(const lang of publishedLocales){
    assert.equal(response.status,200,path+' runtime');
    assert.equal(live('body').attr('data-source-rendered'),undefined,path+' editorial must not fetch products');
    assert.equal(live('html').attr('lang'),lang,path+' runtime language');
+   assert.equal(live('script[data-cssbuy-analytics]').length,indexable?2:0,path+' runtime analytics');
    assert.equal(live('link[rel=canonical]').attr('href'),origin+localePath(lang,canonicalPath(route)),path+' runtime canonical');
    for(const link of live('link[hreflang]').toArray())assert.ok(live(link).attr('href').startsWith(origin+'/'),path+' runtime alternate');
   }
@@ -66,6 +68,8 @@ if(indexable){
  assert.equal(redirected.status,308);assert.equal(redirected.headers.get('location'),origin+'/fr/spreadsheet/?q=Nike&page=4');
  const preview=await worker.fetch(new Request('https://preview.test/fr/articles/'),{},{});
  assert.equal(preview.headers.get('X-Robots-Tag'),'noindex,nofollow');
- assert.equal(load(await preview.text())('meta[name=robots]').attr('content'),'noindex,nofollow');
+ const previewHtml=load(await preview.text());
+ assert.equal(previewHtml('meta[name=robots]').attr('content'),'noindex,nofollow');
+ assert.equal(previewHtml('script[data-cssbuy-analytics]').length,0,'preview must not send analytics');
 }
 console.log(JSON.stringify({ok:true,locales:publishedLocales.length,pages:checked,articles:publishedLocales.length*10,faq:publishedLocales.length*28,runtimeErrorLocalization:true}));

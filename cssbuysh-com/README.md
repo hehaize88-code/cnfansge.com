@@ -24,3 +24,5 @@ Catalog, keyword search, source sorting, 20-item pagination, and real product ph
 Official CSSBuy logo is referenced from its CDN; official favicon is stored in public/brand.
 
 Read PROJECT_MEMORY.md before continuing the project.
+
+GA4: property `560775323`, web stream `16203811453`, measurement ID `G-WXZK6H99JM`. All production locale pages share the same tag. Preview hosts strip analytics tags; Google signals and ad personalization signals are disabled. Property timezone is China (UTC+8), reporting currency USD.

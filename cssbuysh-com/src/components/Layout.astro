@@ -10,6 +10,15 @@ const structured=article?{'@context':'https://schema.org','@type':'Article',head
 ---
 <!doctype html><html lang={lang}><head>
 <meta charset="utf-8"/><meta name="viewport" content="width=device-width, initial-scale=1"/>
+{indexable&&<>
+<script is:inline async data-cssbuy-analytics src="https://www.googletagmanager.com/gtag/js?id=G-WXZK6H99JM"></script>
+<script is:inline data-cssbuy-analytics>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-WXZK6H99JM', {allow_google_signals:false, allow_ad_personalization_signals:false});
+</script>
+</>}
 <title>{title} | CSSBuy SH</title><meta name="description" content={description}/>
 <meta name="robots" content={pageIndexable?'index,follow':indexable?'noindex,follow':'noindex,nofollow'}/><link rel="canonical" href={canonical}/>
 {publishedLocales.map(l=><link rel="alternate" hreflang={l} href={siteOrigin+localePath(l,preferredPath)}/>)}<link rel="alternate" hreflang="x-default" href={siteOrigin+localePath('en',preferredPath)}/>

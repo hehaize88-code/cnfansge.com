@@ -21,7 +21,7 @@
 - 搜索排序保留 keywords/channelid，并传递sort/ sort_asc给真实源站；不能只排序当前20项。
 - 首页SEO、Spreadsheet、Finds、Guide、QC、Shipping、FAQ、Articles独立入口。
 - 来源图库只是卖家图片。已核对旧CSSBuy、Kakobuy、Pikobuy、AllChinaBuy同源适配器，均未发现可用独立QC或搜图接口；两项保留准确未接通说明，不能宣称完成。
-- 预览域名保持noindex；正式cssbuysh.com允许索引；当前未接GA4。历史预览及验收结果见下文。
+- 预览域名保持noindex且不发送GA4；正式cssbuysh.com允许索引并接入独立GA4。历史预览及验收结果见下文。
 
 ## 后续验收
 真实商品及图片、目录第4/10页、关键词搜索与价格排序、购买ID、24语相同内容和链接、390px无横向溢出、公开匿名访问。源站失败显示可重试状态，不能回填假商品。
@@ -98,3 +98,12 @@
 - robots.txt允许抓取公开页面，禁抓/api/并声明正式sitemap。
 - 正式验收截图docs/production-check.png。QC与搜图接口仍未接通，保持准确说明。GA4/GSC/Bing尚未在本项目配置或提交。
 - 后续以GitHub main/cssbuysh-com作为唯一开发源。preview/cssbuysh分支及旧Sites仓库只是历史，不再作为生产源。
+
+## Google Analytics 4（2026-10-26）
+- 用户明确要求把本站添加到analytics.google.com，已在用户连接的Chrome完成GA4属性和Web数据流创建，复用现有Analytics账号405518068。
+- 媒体资源cssbuysh.com，Property ID=560775323；数据流cssbuysh.com Web，Stream ID=16203811453；Measurement ID=G-WXZK6H99JM；URL=https://cssbuysh.com。
+- 属性时区中国时间（UTC+8），币种USD；业务目标为网站流量及用户互动。增强型衡量保持开启。
+- 共享Layout在全部24语言528页接入同一个GA4，Google signals和广告个性化信号关闭。预览Worker响应移除统计代码，避免混入生产数据。
+- 24语言隐私说明同步补充GA4和Cookie用途。生产构建及9项测试通过，所有语言统计标签、正确衡量ID、预览无标签检查通过。
+- 报告入口：https://analytics.google.com/analytics/web/#/a405518068p560775323/reports/intelligenthome 。
+- 正在通过GitHub main自动部署至Cloudflare，随后验证线上标签及实时接收状态。

@@ -32,7 +32,7 @@ export default {async fetch(request,env,context){
  }
  $('body').attr('data-source-rendered','true');html=$.html();
  }
- if(previewHost)html=html.replace(/(<meta name="robots" content=")[^"]*/, '$1noindex,nofollow');
+ if(previewHost)html=html.replace(/(<meta name="robots" content=")[^"]*/, '$1noindex,nofollow').replace(/<script\b[^>]*data-cssbuy-analytics[^>]*>[\s\S]*?<\/script>/g,'');
  body=__PRODUCTION__?html:html.replaceAll(__SITE_ORIGIN__,u.origin);
  }
  return new Response(request.method==='HEAD'?null:body,{headers});
