@@ -3,19 +3,23 @@ import {api} from './source.mjs';
 
 const escape=value=>String(value??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 const apiKeys=['q','category','sort','cursor'];
+function catalogParams(request){const url=new URL(request.url),params=new URLSearchParams(url.search),category=url.pathname.match(/\/category\/(shoes|hoodies-sweaters|jersey)(?:\/index\.html|\/)?$/)?.[1];if(category)params.set('category',category);return params;}
+
 
 // Render the same live cnfansge results for visitors and crawlers. No product
 // database or build-time catalog snapshot; only short-lived HTTP responses.
 export function renderCatalogHtml(template,request,data){
  const $=load(template),text=JSON.parse($('#translations').text());
- const base=$('body').attr('data-base')||'/',params=new URL(request.url).searchParams;
+ const base=$('body').attr('data-base')||'/',params=catalogParams(request);
  const lastOffset=Math.max(0,Math.ceil(data.products.length/20)-1)*20;
  const offset=params.get('offset')==='last'?lastOffset:Math.min(lastOffset,Math.max(0,Math.floor((Number(params.get('offset'))||0)/20)*20));
  const products=data.products.slice(offset,offset+20),current=Math.max(1,Number(params.get('page'))||1);
  const pageUrl=(cursor,nextOffset,page)=>{
   const q=new URLSearchParams(params);q.set('page',String(page));q.set('offset',String(nextOffset));
   if(cursor)q.set('cursor',cursor);else q.delete('cursor');
-  return `${base}spreadsheet/?${q}`;
+  const path=new URL(request.url).pathname.replace(/index\.html$/,'');
+  if(path.includes('/category/'))q.delete('category');
+  return `${path.endsWith('/')?path:path+'/'}?${q}`;
  };
  const cards=products.map((p,i)=>{
   const href=`${base}product/?id=${encodeURIComponent(p.id)}`;
@@ -28,10 +32,11 @@ export function renderCatalogHtml(template,request,data){
  else $('#catalog-status').removeAttr('hidden').text(text.noResults);
  const q=params.get('q')||'',category=params.get('category')||'all';
  $('input[name="q"]').attr('value',q);
- $('[data-category]').each((_,el)=>$(el).toggleClass('active',!q&&$(el).attr('data-category')===category));
- $('#result-title').text(q?`“${q}”`:$('[data-category].active').text().replace('↗','').trim()||text.all);
+ $('[data-category]').filter('a').each((_,el)=>$(el).toggleClass('active',!q&&$(el).attr('data-category')===category));
+ $('#result-title').text(q?`“${q}”`:$('a[data-category].active').text().replace('↗','').trim()||text.all);
  $('#sort option').removeAttr('selected').filter((_,el)=>$(el).attr('value')===(params.get('sort')||'popular')).attr('selected','');
- if(q){$('#sort').parent().attr('hidden','');$('meta[name="robots"]').attr('content','noindex,follow');}
+ if(q)$('#sort').parent().attr('hidden','');
+ if(q||params.has('sort')||params.has('cursor')||params.has('offset')||Number(params.get('page')||1)>1)$('meta[name="robots"]').attr('content','noindex,follow');
  if(products.length){
   const nav=(label,href,id='')=>href?`<a ${id?`id="${id}"`:''} href="${escape(href)}">${escape(label)}</a>`:`<span class="page-disabled" aria-disabled="true">${escape(label)}</span>`;
   const previous=offset>0?pageUrl(data.source,offset-20,current-1):data.previousPath?pageUrl(data.previousPath,'last',Math.max(1,current-1)):null;
@@ -50,7 +55,7 @@ export async function catalogResponse(template,request,headers,{cache,waitUntil,
  const cacheKey=new Request(request.url,{method:'GET'});
  const head=response=>request.method==='HEAD'?new Response(null,{status:response.status,headers:response.headers}):response;
  if(cache){const hit=await cache.match(cacheKey);if(hit)return head(hit);}
- const endpoint=new URL('/api/catalog',request.url),params=new URL(request.url).searchParams;
+ const endpoint=new URL('/api/catalog',request.url),params=catalogParams(request);
  for(const key of apiKeys)if(params.has(key))endpoint.searchParams.set(key,params.get(key));
  let data,errorStatus=503;
  try{

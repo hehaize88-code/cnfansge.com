@@ -12,6 +12,25 @@ const enabled = import.meta.env.SITE_INDEXABLE === 'true';
         allow_google_signals: false,
         allow_ad_personalization_signals: false
       });
+      document.addEventListener('click', function(event) {
+        const link=event.target instanceof Element?event.target.closest('a[href]'):null;
+        if(!link)return;
+        const url=new URL(link.href,location.href),language=document.documentElement.lang;
+        if(url.origin===location.origin&&/\/product\/$/.test(url.pathname)) {
+          const item=url.searchParams.get('id');
+          if(item&&/^\d{1,10}$/.test(item))gtag('event','product_click',{item_id:item,language,category:document.body.dataset.category||Array.from(document.querySelectorAll('a[data-category].active')).map(a=>a.getAttribute('data-category'))[0]||'all'});
+        } else if(url.origin===location.origin&&(url.pathname.includes('/category/')||link.hasAttribute('data-category'))) {
+          gtag('event','category_click',{category:url.pathname.split('/category/')[1]?.split('/')[0]||url.searchParams.get('category')||'all',language});
+        } else if(url.hostname==='www.pikobuy.com'&&url.pathname==='/product/detail') {
+          gtag('event','pikobuy_buy_click',{language});
+        }
+      });
+      document.addEventListener('submit',function(event){
+        const form=event.target;
+        if(!(form instanceof HTMLFormElement)||!form.classList.contains('search'))return;
+        const value=String(new FormData(form).get('q')||'').trim();
+        if(value)gtag('event','site_search',{query_length:Math.min(value.length,120),language:document.documentElement.lang});
+      });
     }
   </script>
 </>}

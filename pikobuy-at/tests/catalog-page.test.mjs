@@ -56,3 +56,19 @@ test('successful HTML cache is URL-specific, HEAD stays empty and SSR only calls
  assert.equal(await two.text(),'');assert.equal(calls,1);
  await catalogResponse(template,request('&offset=20&page=2'),headers,options);assert.equal(calls,2);
 });
+
+test('category landing requests its own products and keeps pagination on the localized category path',async()=>{
+ const path='https://pikobuy.at/de/category/shoes/?category=jersey&sort=price-up';
+ const response=await catalogResponse(template,new Request(path),{'Content-Type':'text/html'},{apiHandler:async request=>{
+  assert.equal(new URL(request.url).searchParams.get('category'),'shoes');
+  return Response.json(data);
+ }});
+ const $=load(await response.text());
+ assert.equal($('.product-card').length,20);
+ assert.equal($('#result-title').text(),'Schuhe');
+ const next=new URL($('#next').attr('href'),'https://pikobuy.at');
+ assert.equal(next.pathname,'/de/category/shoes/');
+ assert.equal(next.searchParams.get('category'),null);
+ assert.equal(next.searchParams.get('sort'),'price-up');
+ assert.equal($('meta[name="robots"]').attr('content'),'noindex,follow');
+});

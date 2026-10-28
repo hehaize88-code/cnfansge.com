@@ -6,7 +6,7 @@ const production=process.env.SITE_INDEXABLE==='true';
 const pages=[];
 async function walk(dir){for(const entry of await readdir(dir,{withFileTypes:true})){const path=join(dir,entry.name);if(entry.isDirectory())await walk(path);else if(path.endsWith('.html'))pages.push(path);}}
 await walk(root);
-if(pages.length!==409)throw new Error(`Expected 408 localized pages and 404, found ${pages.length}`);
+if(pages.length!==553)throw new Error(`Expected 552 localized pages and 404, found ${pages.length}`);
 const exists=new Set();
 for(const file of pages){
  const $=load(await readFile(file,'utf8'));
@@ -18,9 +18,12 @@ for(const file of pages){
  const expectedRobots=production?(/\/(product|visual)\/$/.test(path)?'noindex,follow':'index,follow'):'noindex,nofollow';
  check($('meta[name="robots"]').attr('content')===expectedRobots,'incorrect indexing policy');
  check($('.main-nav a').length===4,'missing navigation entry');
+ check(!/cnfansge/i.test($('body').clone().find('script').remove().end().text()),'visible upstream brand');
+ if(path.includes('/category/'))check($('.category-help li').length===3,'missing category checks');
+ check($('script[src*="googletagmanager.com/gtag/js"]').length===(production?1:0),'analytics loader count');
  if(!path.endsWith('/product/'))check($('h1').length===1,'expected one main heading');
  if(path.endsWith('/faq/'))check($('.faq-item').length===28,'FAQ count mismatch');
- if(path.endsWith('/articles/'))check($('.article-card').length===10,'article index count mismatch');
+ if(path.endsWith('/articles/'))check($('.article-card').length===13,'article index count mismatch');
  for(const element of $('script[type="application/ld+json"]').toArray())JSON.parse($(element).text());
  for(const element of $('a[href^="/"],a[href^="#"],link[href^="/"],script[src^="/"],img[src^="/"]').toArray()){
   const href=$(element).attr('href')||$(element).attr('src');

@@ -11,9 +11,9 @@ const shape=content=>({
   articles:content.articles.map(a=>({slug:a.slug,sources:a.sources,related:a.related,sections:a.sections.map(s=>({id:s.id,paragraphs:s.paragraphs.length,bullets:s.bullets?.length||0}))}))
 });
 test('Every advertised language contains complete, structurally equivalent editorial content',async()=>{
-  assert.equal(en.articles.length,10);
+  assert.equal(en.articles.length,13);
   assert.ok(en.faqs.length>=21);
-  assert.equal(new Set(en.articles.map(a=>a.slug)).size,10);
+  assert.equal(new Set(en.articles.map(a=>a.slug)).size,13);
   assert.equal(new Set(en.faqs.map(f=>f.id)).size,en.faqs.length);
   assert.deepEqual((await readdir(directory)).filter(f=>f.endsWith('.json')).sort(),locales.map(l=>`${l}.json`).sort());
   for(const locale of locales){
@@ -34,13 +34,34 @@ test('Articles have distinct content, working related slugs and official source 
   for(const article of en.articles){
     assert.ok(article.sections.length>=4,article.slug);
     const body=[article.summary,...article.sections.flatMap(s=>[s.title,...s.paragraphs,...(s.bullets||[])])].join(' ');
-    assert.ok(body.split(/\s+/).length>=500,`Article is incomplete: ${article.slug}`);
+    assert.ok(body.split(/\s+/).length>=(article.reviewedDate==='2026-10-28'?1200:500),`Article is incomplete: ${article.slug}`);
     assert.equal(new Set(article.sections.map(s=>s.id)).size,article.sections.length);
     assert.ok(article.related.length>=2);
     article.related.forEach(slug=>assert.ok(slug!==article.slug&&en.articles.some(a=>a.slug===slug),`Bad related link: ${slug}`));
   }
   for(const item of [...en.articles,...en.faqs]){
     assert.ok(item.sources.length);
-    item.sources.forEach(url=>assert.ok(['https://www.pikobuy.com','https://cnfansge.com'].includes(new URL(url).origin)));
+    item.sources.forEach(url=>assert.ok(['https://www.pikobuy.com','https://cnfansge.com','https://www.dhl.de','https://www.bundesfinanzministerium.de','https://www.help.cbp.gov','https://content.govdelivery.com'].includes(new URL(url).origin)));
   }
+});
+
+test('All languages include distinct discovery pages and the same category guidance',async()=>{
+ const enDiscovery=JSON.parse(await readFile(new URL('../src/content/discovery/en.json',import.meta.url),'utf8'));
+ for(const locale of locales){
+  const copy=JSON.parse(await readFile(new URL(`../src/content/discovery/${locale}.json`,import.meta.url),'utf8'));
+  assert.deepEqual(Object.keys(copy),Object.keys(enDiscovery));
+  assert.notEqual(copy.homeTitle,copy.catalogTitle);
+  assert.deepEqual(Object.keys(copy.categories),['shoes','hoodies-sweaters','jersey']);
+  for(const [slug,category] of Object.entries(copy.categories)){
+   assert.ok(category.description.length>100,`${locale}/${slug}: missing category explanation`);
+   assert.equal(category.checks.length,3);
+   assert.deepEqual(category.related,enDiscovery.categories[slug].related);
+   if(locale!=='en')assert.notEqual(category.description,enDiscovery.categories[slug].description);
+  }
+  const content=JSON.parse(await readFile(new URL(`${locale}.json`,directory),'utf8'));
+  for(const article of content.articles.filter(a=>a.reviewedDate==='2026-10-28')){
+   assert.ok(article.publishedDate<=article.reviewedDate);
+   assert.ok(article.sections.every(s=>s.paragraphs.every(p=>p.length>100)));
+  }
+ }
 });

@@ -4,7 +4,7 @@
   "type": "module",
   "scripts": {
     "dev": "astro dev",
-    "build": "node --test tests/*.test.mjs && astro build && node scripts/build-worker.mjs",
+    "build": "node scripts/clean.mjs && node --test tests/*.test.mjs && astro build && node scripts/build-worker.mjs",
     "build:production": "SITE_ORIGIN=https://pikobuy.at SITE_INDEXABLE=true npm run build",
     "check": "node --test tests/*.test.mjs"
   },
@@ -14,5 +14,9 @@
   },
   "devDependencies": {
     "esbuild": "0.25.12"
+  },
+  "packageManager": "npm@10.9.2",
+  "engines": {
+    "node": ">=22.22.0"
   }
 }
