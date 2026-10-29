@@ -216,7 +216,79 @@ GitHub Pages 只能托管静态输出，不能运行 SSR 或服务端代理；�
 ### 实际查看结果
 
 - 读取参考站英文首页、德文首页、目录页和搜图页。英文目录可见分类、细分类下拉、排序、商品卡和分页；桌面设计为浅色背景、简洁顶部导航、搜索框和商品卡网格。
-- 参考站语言菜单共 24 种；浏览器实际从 /spreadsheet/ 切到 /de/spreadsheet/，德文标题为“Kakobuy-Produktlinks durchs…2551 tokens truncated…0能完成独立预览；不操作正式域名 DNS，不向用户 GitHub main 推送。
+- 参考站语言菜单共 24 种；浏览器实际从 /spreadsheet/ 切到 /de/spreadsheet/，德文标题为“Kakobuy-Produktlinks durchsuchen”。证明此次目录切换保留页型；没有测试其全部商品、分页、查询参数的切换行为。
+- 参考站提供搜图上传界面，标注 JPG、PNG、WebP 和 5 MB。此为参考站能力及限制，不应自动套用到 cnfansge；本轮未执行任何图片上传。
+- 参考站英文与德文首页有部分正文差异；CSSBuy 新站使用内容键和段落对齐校验，避免只翻译导航或漏正文，不照搬其翻译。
+- 浏览器直接打开 cnfansge.com/AllProducts/ 可展示实际商品和图片；没有进入后台。
+- 在 cnfansge 目录搜索 Nike 后曾看到“Found 545 matching products”及结果，后续页面到了 https://www.cnfansge.com/ 首页。不能把这次操作记录为端到端稳定通过；原因未确认，后续检查查询 URL、跳转与翻页。
+- 当前 DOM 首次读取出现带美元符号的原始样式数值；未完成源币种和客户端换算一致性验证。价格仍须按主站数据契约验证，不直接把读取数值标 USD。
+- 已复读同源旧子站 worker/source.mjs；里面仍返回 qcVerified:false，未出现已经验证的独立 QC/搜图接入。本项目不能借参考站的工具外观声称这些功能已接通。
+
+### 24 种语言与目录
+
+| 代码 | 语言 | 路径前缀 |
+| --- | --- | --- |
+| en | English / 英语 | / |
+| de | Deutsch / 德语 | /de/ |
+| es | Español / 西班牙语 | /es/ |
+| fr | Français / 法语 | /fr/ |
+| it | Italiano / 意大利语 | /it/ |
+| pl | Polski / 波兰语 | /pl/ |
+| pt | Português / 葡萄牙语 | /pt/ |
+| ro | Română / 罗马尼亚语 | /ro/ |
+| sv | Svenska / 瑞典语 | /sv/ |
+| nl | Nederlands / 荷兰语 | /nl/ |
+| da | Dansk / 丹麦语 | /da/ |
+| fi | Suomi / 芬兰语 | /fi/ |
+| el | Ελληνικά / 希腊语 | /el/ |
+| cs | Čeština / 捷克语 | /cs/ |
+| hu | Magyar / 匈牙利语 | /hu/ |
+| bg | Български / 保加利亚语 | /bg/ |
+| sk | Slovenčina / 斯洛伐克语 | /sk/ |
+| hr | Hrvatski / 克罗地亚语 | /hr/ |
+| sl | Slovenščina / 斯洛文尼亚语 | /sl/ |
+| lt | Lietuvių / 立陶宛语 | /lt/ |
+| lv | Latviešu / 拉脱维亚语 | /lv/ |
+| et | Eesti / 爱沙尼亚语 | /et/ |
+| ga | Gaeilge / 爱尔兰语 | /ga/ |
+| mt | Malti / 马耳他语 | /mt/ |
+
+执行规则：
+
+1. 一套商品源、同一组商品标识和价格；不同语言不各抓取或保存一套商品库。语言无关的公开数据缓存可共享，正文和 UI 翻译按语言独立输出。
+2. 导航、按钮、筛选标签、错误/空状态、首页、指南、FAQ、文章、SEO title 和 description 均按语言提供。文章使用稳定 contentId/slug 对齐，所有语言段落语义和内容范围一致。
+3. 商品品牌、型号、原始商品 ID、图片、价格保持主站事实。商品原名保留，通用分类和控件本地化；源站没有的尺寸、材质或描述不为翻译而编造。需要翻译动态商品名称时在展示层处理，保留可追溯原名，不创建商品副本库。
+4. 语言切换仅修改语言路径前缀，保留页面类型、商品 ID、文章 slug、搜索词、分类、排序和页码。切换到不存在的正文版本不得悄悄回首页；未完成的对应语言不标记为已发布。
+5. 每个已发布语言页面设置自身 canonical，并通过统一清单生成互相对应的 hreflang；x-default 指向同内容的英文版本，不是所有页面都指首页。未发布和错误页面不进入 hreflang 或 sitemap。
+6. 语言选择器使用本地语言名称，电脑端紧凑下拉，手机端可展开选择；点击区域清晰，颜色有足够对比。无需访问时强制按 IP 跳语言，可记住用户主动选择。
+7. USD 币种不随语言更改；仅本地化千分位和小数格式。所有语言使用同一来源价格和换算策略。
+8. 采用 Astro 路由和静态翻译内容实现，不依赖客户端翻译插件才出现正文；首页和文章可预渲染，动态目录 SSR。构建检查语言键缺失、链接 404、跨语言正文缺段及 canonical 错域名。
+
+### 参考布局的采用范围
+
+采用搜索突出、分类可达、商品网格、商品详情、清晰分页和同页语言切换。首页保持 CSSBuy SEO 定位，手机端压缩标题区和装饰留白，目录默认每页 20 件。分类数量和名称由 cnfansge 实际分类决定，不复制参考站并不存在于主站的细分类。图片使用主站对应商品真实图片；缺图不拿其他商品图替换。
+
+源站一时不可读时使用明确错误状态；不生成模拟数据。只有 CSSBuy 官方 Logo/favicon 按先前用户要求来自 CSSBuy 官方，其余商品及商品图片以 cnfansge 为唯一来源。
+
+### 第二轮状态
+
+已完成：域名和目录固定、参考站结构与语言菜单检查、英德目录切换验证、主站公开页面查看、项目记忆更新。
+未完成：Astro 项目初始化、可访问预览、24 语言正文、正式 Logo/favicon 提取、源站程序接入复测、搜图/QC 接通、GitHub 提交及生产部署。
+下一步：按已确定配置进入首版实现，优先验证真实数据读取与完整分页，再做 24 语言首页/目录模板。无需索取主站后台账号，不更换商品数据源，不另建数据库。
+
+新增来源：
+- https://kakobuypicklist.com/
+- https://kakobuypicklist.com/de/
+- https://kakobuypicklist.com/spreadsheet/
+- https://kakobuypicklist.com/de/spreadsheet/
+- https://kakobuypicklist.com/search/visual/
+- https://developers.google.com/search/docs/specialty/international/localized-versions
+- https://docs.astro.build/en/guides/internationalization/
+
+
+## 2026-10-23 公开预览实施（第三轮）
+
+用户明确授权先做公开预览，确认外观后再准备 cssbuyhome.com 域名部署。本轮使用 Sites 技能完成独立预览；不操作正式域名 DNS，不向用户 GitHub main 推送。
 
 - 预览项目 ID：appgprj_6adb295356288191ad2e09eb1a6417c6。
 - 预览预期地址：https://cssbuyhome-preview.hehaize88.chatgpt.site （实际发布成功以部署结果为准）。
