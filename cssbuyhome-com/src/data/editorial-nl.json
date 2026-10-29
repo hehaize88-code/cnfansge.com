@@ -27,7 +27,7 @@
     {
       "id": "data",
       "q": "Waar komen de producten en aanbiedingsfoto’s vandaan?",
-      "a": "De productcatalogus en verkopersgalerijen komen van cnfansge.com. CSSBuy Home houdt geen afzonderlijke productdatabase bij en maakt geen productafbeeldingen. Bevestig de geselecteerde aanbieding nadat je de aankoopbestemming hebt geopend.",
+      "a": "De productcatalogus en verkopersgalerijen komen van Productcatalogus. CSSBuy Home houdt geen afzonderlijke productdatabase bij en maakt geen productafbeeldingen. Bevestig de geselecteerde aanbieding nadat je de aankoopbestemming hebt geopend.",
       "sourceIds": [
         "catalog",
         "project"
@@ -36,7 +36,7 @@
     {
       "id": "qc",
       "q": "Zijn de productfoto’s geverifieerde CSSBuy-QC-foto’s?",
-      "a": "Galerijen van verkopers moet je niet als magazijn-QC beschouwen. Een geverifieerde QC-foto van een specifieke bestelling moet gekoppeld zijn aan het ontvangen artikel. Deze preview bestempelt verkopersfoto’s van cnfansge niet als geverifieerd bewijs van een CSSBuy-inspectie.",
+      "a": "Galerijen van verkopers moet je niet als magazijn-QC beschouwen. Een geverifieerde QC-foto van een specifieke bestelling moet gekoppeld zijn aan het ontvangen artikel. Deze preview bestempelt verkopersfoto’s van Productcatalogus niet als geverifieerd bewijs van een CSSBuy-inspectie.",
       "sourceIds": [
         "catalog",
         "project"
@@ -63,7 +63,7 @@
     {
       "id": "weidian-link",
       "q": "Welk ID hoort in een Weidian-kooplink?",
-      "a": "Gebruik het oorspronkelijke product-ID van de marktplaats. Het aangeleverde voorbeeld is https://www.cssbuy.com/shop/goodsDetail?type=micro&id=7755101935. Een recordnummer uit de cnfansge-catalogus vervangt dat marktplaats-ID niet.",
+      "a": "Gebruik het oorspronkelijke product-ID van de marktplaats. Het aangeleverde voorbeeld is https://www.cssbuy.com/shop/goodsDetail?type=micro&id=7755101935. Een recordnummer uit de Productcatalogus-catalogus vervangt dat marktplaats-ID niet.",
       "sourceIds": [
         "user-link"
       ]
@@ -236,8 +236,8 @@
     {
       "id": "spreadsheet",
       "slug": "cssbuy-spreadsheet-guide",
-      "title": "Een CSSBuy-spreadsheet gebruiken: een kopersgids",
-      "description": "Een praktische gids voor CSSBuy-spreadsheets om productlinks te vergelijken, varianten te controleren, foto’s te beoordelen en een volledige aankoop te plannen.",
+      "title": "CSSBuy-spreadsheet: vind links, controleer maten en bestel",
+      "description": "Gebruik de CSSBuy-spreadsheet om productlinks te vinden, de verkoper en maat te controleren, magazijnfoto's te bekijken en de totale kosten inclusief bezorging te plannen.",
       "category": "Aan de slag",
       "keywords": [
         "cssbuy spreadsheet",
@@ -245,7 +245,7 @@
         "hoe gebruik je cssbuy",
         "cssbuy productlinks"
       ],
-      "intro": "Een bruikbare CSSBuy-spreadsheet moet je helpen een betere aankoopbeslissing te nemen, niet alleen een langere boodschappenlijst te maken. Een overzicht kan links, titels en aanbiedingsprijzen samenbrengen, maar het belangrijke werk begint wanneer je het echte product achter een kaart controleert. Deze gids laat zien hoe je van rondkijken naar een kleine, gedocumenteerde shortlist gaat, hoe je de presentatie van een verkoper scheidt van bewijs over je eigen bestelling, en hoe je bepaalt of een vondst na verzending nog steeds zinvol is. CSSBuy Home is een onafhankelijke ontdekkingssite. De productcatalogus komt van cnfansge.com; aankopen en bestelbeheer vinden plaats op CSSBuy.",
+      "intro": "Begin met een categorie of zoekopdracht in de CSSBuy-spreadsheet, open een product en controleer de oorspronkelijke aanbieding. Controleer de maat, kleur, hoeveelheid en actuele prijs voordat je doorgaat naar CSSBuy. De catalogus helpt je producten te ontdekken; het officiële bestelscherm bevestigt wat je kunt kopen. Gebruik deze handleiding om van een opgeslagen link naar een gecontroleerd magazijnartikel en een realistisch verzendbudget te gaan.",
       "sections": [
         {
           "heading": "Begin met een doel en een realistische shortlist",
@@ -258,7 +258,7 @@
           "heading": "Lees de productkaart als een indexvermelding",
           "paragraphs": [
             "Een kaart vat een veel grotere aanbieding samen. De titel kan ingekort, vertaald of door de broncatalogus aangeleverd zijn. De getoonde prijs kan één optie beschrijven in plaats van elke variant. Gebruik die velden om de oorspronkelijke aanbieding te vinden en vergelijk vervolgens de specifieke maat, kleur, hoeveelheid en versie die je wilt. Een lage vanafprijs is onvoldoende om twee producten eerlijk te vergelijken als het ene een accessoire bevat en het andere niet.",
-            "Op CSSBuy Home komen productrecords en verkopersgalerijen van cnfansge.com. Een verkopersfoto illustreert de aanbieding; die toont niet aan dat een specifiek magazijnartikel is geïnspecteerd. Als de site geen werkende functie of geverifieerd fototype kan aanbieden, leid dat dan niet af uit een aantrekkelijk label. Volg de beschikbare productlink en controleer wat er daadwerkelijk wordt getoond voordat je een kaart als bewijs beschouwt."
+            "Op CSSBuy Home komen productrecords en verkopersgalerijen van Productcatalogus. Een verkopersfoto illustreert de aanbieding; die toont niet aan dat een specifiek magazijnartikel is geïnspecteerd. Als de site geen werkende functie of geverifieerd fototype kan aanbieden, leid dat dan niet af uit een aantrekkelijk label. Volg de beschikbare productlink en controleer wat er daadwerkelijk wordt getoond voordat je een kaart als bewijs beschouwt."
           ]
         },
         {
@@ -313,7 +313,8 @@
         "buyforme",
         "expertbuy",
         "catalog"
-      ]
+      ],
+      "updatedAt": "2026-10-29"
     },
     {
       "id": "weidian",
@@ -400,8 +401,8 @@
     {
       "id": "qc",
       "slug": "cssbuy-qc-photos-guide",
-      "title": "CSSBuy-QC-foto’s: een praktische inspectiechecklist",
-      "description": "Een gestructureerde manier om magazijnfoto’s te beoordelen, verkopersfoto’s te onderscheiden en nuttige metingen te vragen voordat je een pakket verstuurt.",
+      "title": "CSSBuy-QC-foto's: wat je moet controleren vóór verzending",
+      "description": "Controleer je CSSBuy-magazijnfoto's op het juiste artikel, de maat, kleur, hoeveelheid en zichtbare schade. Ontdek wanneer je om een duidelijkere foto of meting moet vragen.",
       "category": "Magazijn en QC",
       "keywords": [
         "cssbuy qc",
@@ -409,14 +410,42 @@
         "cssbuy kwaliteitscontrole",
         "magazijnfoto’s"
       ],
-      "intro": "Foto’s voor kwaliteitscontrole zijn het nuttigst wanneer je ze met een vraag bekijkt. Komt dit artikel overeen met de bestelde optie? Zijn de benodigde accessoires aanwezig? Past de maat bij je behoeften? Alleen door een galerij bladeren en besluiten dat een artikel er goed uitziet, kan details missen die na bezorging belangrijk blijken. Deze gids legt een praktische beoordelingsvolgorde en de grenzen van visueel bewijs uit. De officiële servicepagina’s van CSSBuy beschrijven magazijninspectie en foto’s. CSSBuy Home beschouwt de door cnfansge.com aangeleverde verkopersgalerijen niet als geverifieerde magazijn-QC, en een productkaart mag nooit als inspectiecertificaat worden gelezen.",
+      "intro": "Bekijk foto's van jouw daadwerkelijke magazijnartikel voordat je het voor internationale verzending aanmeldt. Vergelijk het artikel, de kleur, het maatlabel, de hoeveelheid en de zichtbare staat met je bestelling. Vraag om een gerichte close-up of meting wanneer de bestaande foto's een specifieke vraag niet kunnen beantwoorden. Verkopersafbeeldingen in een spreadsheet zijn foto's uit de aanbieding; het zijn geen QC-foto's van jouw bestelling of bewijzen van echtheid.",
       "sections": [
         {
           "heading": "Stel vast van wie het artikel is en welke afbeelding je bekijkt",
           "paragraphs": [
             "Identificeer het bewijs voordat je details inspecteert. Een verkopersfoto presenteert een aanbieding. Een openbare kopersfoto legt de aankoop van iemand anders vast. Een magazijnfoto die bij je bestelling hoort, legt jouw ontvangen artikel op een bepaald moment vast. Deze categorieën kunnen elkaar aanvullen, maar beantwoorden verschillende vragen. Een gedetailleerde openbare foto toont niet de staat van een exemplaar dat nog niet voor jou is aangekomen.",
             "Controleer de bestelreferentie en de geselecteerde optie voordat je foto’s vergelijkt. Twee artikelen kunnen dezelfde modelnaam hebben maar verschillen in kleur, maat, materialen of meegeleverde onderdelen. Kun je een foto niet aan de relevante optie koppelen, bewaar die dan als achtergrondinformatie. Zo voorkom je dat een bijzonder aantrekkelijke afbeelding de norm wordt waaraan je een niet-gerelateerde variant beoordeelt. De sterkste vergelijking begint met een duidelijk overzicht van precies wat je hebt gevraagd te kopen."
-          ]
+          ],
+          "table": {
+            "headers": [
+              "Controlepunt",
+              "Als het onduidelijk is"
+            ],
+            "rows": [
+              [
+                "Artikel en optie",
+                "Vergelijk met je opgeslagen aanbieding en bestelgegevens."
+              ],
+              [
+                "Maatlabel",
+                "Vraag om een leesbare foto van het label en de meting die je nodig hebt."
+              ],
+              [
+                "Kleur en staat",
+                "Vraag om een duidelijke close-up van de specifieke plek."
+              ],
+              [
+                "Hoeveelheid en onderdelen",
+                "Controleer elk besteld onderdeel, niet alleen het hoofdartikel."
+              ],
+              [
+                "Beslissing",
+                "Zorg dat de vraag is beantwoord voordat je internationale verzending goedkeurt."
+              ]
+            ]
+          }
         },
         {
           "heading": "Controleer identiteit en hoeveelheid vóór kleine details",
@@ -477,13 +506,14 @@
         "buyforme",
         "shipforme",
         "catalog"
-      ]
+      ],
+      "updatedAt": "2026-10-29"
     },
     {
       "id": "cost",
       "slug": "cssbuy-shipping-cost",
-      "title": "CSSBuy-verzendkosten: zo schat je het totaal",
-      "description": "Begrijp welke gegevens pakketkosten bepalen en vergelijk verpakking, facturatiegewicht en routeprijzen zonder op een vaste prijs per kilogram te vertrouwen.",
+      "title": "CSSBuy-verzendcalculator: schat de kosten en het pakketgewicht",
+      "description": "Schat de CSSBuy-verzendkosten met je bestemming, verpakt gewicht en afmetingen. Vergelijk geschikte routes, volumegewicht en de definitieve pakketofferte.",
       "category": "Verzending",
       "keywords": [
         "cssbuy verzendkosten",
@@ -491,14 +521,46 @@
         "cssbuy volumegewicht",
         "cssbuy verzendschatting"
       ],
-      "intro": "Er is geen bruikbaar universeel antwoord op “Hoeveel kost CSSBuy-verzending?” zonder bestemming, toegestane route en beschrijving van het verpakte pakket. Een prijs uit de bestelling van iemand anders kan een interessant voorbeeld zijn, maar is geen prijsopgave voor jouw pakket. Deze gids laat zien hoe je een schatting maakt die bruikbaar blijft naarmate de informatie verbetert. Het doel is niet een nog niet voorbereid pakket tot op de laatste cent te voorspellen. Het is begrijpen welke gegevens de uitkomst kunnen veranderen, voldoende budget reserveren en de uiteindelijke opties op gelijke voorwaarden vergelijken.",
+      "intro": "Gebruik de officiële CSSBuy-verzendcalculator met je bestemming, het geschatte gewicht inclusief verpakking en de pakketafmetingen. Controleer welke routes je goederen accepteren en vergelijk vervolgens offertes met dezelfde invoergegevens. Er bestaat geen universele prijs per kilogram: de verpakking, routeregels en het definitief gemeten pakket kunnen het bedrag veranderen. Deze handleiding legt de berekening uit en geeft je een checklist voor voordat je betaalt.",
       "sections": [
         {
           "heading": "Verdeel de vraag in bekende en onbekende gegevens",
           "paragraphs": [
             "Begin met een lijst van wat je weet: land en regio van bestemming, productaantallen, globale artikelafmetingen en eventuele bijzondere behandelingseisen. Noteer daarna wat onzeker blijft: verpakt gewicht, doosafmetingen, beschikbare routes en optionele diensten. Een calculator is maar zo informatief als die invoer. Een optimistisch gegokt gewicht invoeren geeft een optimistische uitkomst, geen nauwkeurigere.",
             "Zet een datum bij elke opgeslagen schatting en bewaar de invoer waarmee die is gemaakt. Zo kun je een latere verandering verklaren zonder aan te nemen dat er iets misging. Een prijsopgave voor één bestemming of pakketgrootte mag je niet rechtstreeks vergelijken met een ander scenario. Controleer bij batterijen, vloeistoffen, breekbare onderdelen of andere mogelijk beperkte kenmerken eerst of de route geschikt is. De goedkoopste getoonde route is irrelevant als het echte pakket die niet mag gebruiken."
-          ]
+          ],
+          "table": {
+            "headers": [
+              "Invoer voor de calculator",
+              "Wat je moet controleren"
+            ],
+            "rows": [
+              [
+                "Bestemming",
+                "Gebruik het land en de regio waar het pakket wordt ontvangen."
+              ],
+              [
+                "Gewicht inclusief verpakking",
+                "Neem beschermende verpakking en eventuele dozen die je behoudt mee."
+              ],
+              [
+                "Pakketafmetingen",
+                "Gebruik lengte, breedte en hoogte in de eenheden van de calculator."
+              ],
+              [
+                "Goederen en route",
+                "Controleer beperkingen voordat je prijzen vergelijkt."
+              ],
+              [
+                "Factureerbaar gewicht",
+                "Lees de regels en afrondingswijze van de gekozen route."
+              ],
+              [
+                "Definitief bedrag",
+                "Vergelijk de offerte met het gecontroleerde pakket en het in je account berekende bedrag."
+              ]
+            ]
+          }
         },
         {
           "heading": "Onderscheid fysiek gewicht van het gewicht waarmee een route wordt geprijsd",
@@ -559,13 +621,14 @@
         "buyforme",
         "estimates",
         "shipforme"
-      ]
+      ],
+      "updatedAt": "2026-10-29"
     },
     {
       "id": "time",
       "slug": "cssbuy-shipping-time",
-      "title": "Hoe lang duurt CSSBuy? Het tijdpad van een bestelling",
-      "description": "Scheid verzending door de verkoper, magazijnbeslissingen, internationaal transport en uiteindelijke bezorging om beter te plannen en gerichtere trackingvragen te stellen.",
+      "title": "CSSBuy-verzendtijd: van verkoper naar magazijn tot bezorging",
+      "description": "Begrijp elke fase van een CSSBuy-bezorging, waar je je pakket kunt controleren en wat je moet vragen als de voortgang bij de verkoper, het magazijn of de vervoerder stopt.",
       "category": "Verzending",
       "keywords": [
         "cssbuy verzendtijd",
@@ -573,7 +636,7 @@
         "cssbuy bestelstatus",
         "cssbuy tracking"
       ],
-      "intro": "Een bezorgschatting is lastig te interpreteren als je niet weet wanneer de klok begint te lopen. Wachten op een verkoper, een artikel in het magazijn controleren of beslissen wat je samenvoegt is andere tijd dan internationaal transport. Deze gids verdeelt de reis in praktische fasen en laat zien hoe je een vertraging onderzoekt zonder de ervaring van een andere koper om te zetten in een belofte voor je eigen bestelling. Gebruik voor een specifieke transactie de actuele informatie in je CSSBuy-account; het tijdpad hier is een planningskader, geen gegarandeerd bezorgschema.",
+      "intro": "De bezorgtijd van CSSBuy omvat verschillende afzonderlijke fasen: verzending door de verkoper, aankomst in het magazijn, jouw controle en verzendkeuzes, voorbereiding van het pakket en internationaal vervoer. Controleer de fase in je account voordat je een schatting vergelijkt. Een geschatte vervoerstijd voor een route omvat niet alle eerdere stappen, en er geldt geen vaste bezorgtijd voor elke bestemming of elk pakket.",
       "sections": [
         {
           "heading": "Teken het tijdpad voordat je bezorgclaims vergelijkt",
@@ -626,13 +689,14 @@
       "sourceIds": [
         "buyforme",
         "storage"
-      ]
+      ],
+      "updatedAt": "2026-10-29"
     },
     {
       "id": "warehouse",
       "slug": "cssbuy-warehouse-consolidation",
-      "title": "CSSBuy-magazijnopslag en pakketten samenvoegen",
-      "description": "Plan opslag, beoordeel artikelen en voeg pakketten doordacht samen op basis van de echte goederen, deadlines en routebeperkingen.",
+      "title": "CSSBuy-magazijn: opslag, QC en pakketten samenvoegen",
+      "description": "Bepaal welke magazijnartikelen klaar zijn voor verzending, wat je moet controleren voordat je bestellingen samenvoegt en hoe de verpakking je pakketkosten kan veranderen.",
       "category": "Magazijn en QC",
       "keywords": [
         "cssbuy magazijn",
@@ -640,14 +704,42 @@
         "cssbuy opslag",
         "cssbuy pakketverpakking"
       ],
-      "intro": "In het magazijn worden afzonderlijke aankopen een pakketplan. Die flexibiliteit is waardevol, maar een eindeloos groeiende verzameling bestellingen kan ook kosten en deadlines moeilijker beheersbaar maken. Een goed plan geeft aan welke artikelen klaar zijn, welke een beslissing nodig hebben en welke er werkelijk baat bij hebben samen te reizen. CSSBuy beschrijft samenvoegen en verschillende verpakkingsdiensten op de officiële Ship For Me-pagina. Deze gids legt uit hoe je bepaalt wat je nodig hebt zonder aan te nemen dat het grootst mogelijke pakket altijd het beste is.",
+      "intro": "Controleer voordat je een CSSBuy-pakket samenstelt of elk opgenomen artikel is aangekomen, met je bestelling overeenkomt en de door jou gevraagde controles heeft doorstaan. Los een verkeerde maat of een ontbrekend onderdeel op voordat je het internationaal verzendt. Vergelijk daarna het gecombineerde pakket met afzonderlijke pakketten op basis van het werkelijke gewicht, de afmetingen en de geschikte routes. Samenvoegen is een beslissing over het complete pakket, geen automatische garantie op goedkopere bezorging.",
       "sections": [
         {
           "heading": "Maak een inventaris op basis van beslissingen",
           "paragraphs": [
             "Noteer voor elk magazijnartikel het bestelnummer, de aankomstdatum, de huidige beslissing en de volgende actie. Nuttige beslissingen zijn klaar voor verzending, wachten op een meting, retour aangevraagd en wachten op een ander artikel. Deze labels geven meer houvast voor actie dan één lijst van je bezittingen. Ze laten zien welke artikelen verder kunnen en welke een pakket zouden ophouden.",
             "Koppel een reden aan elk artikel dat je bewust in opslag houdt. Misschien is een andere aankoop al binnenlands onderweg of moet je twee metingen vergelijken. Een reden met een beoordelingsdatum is een plan; onbeperkt wachten op iets anders om te kopen is dat niet. Bekijk de inventaris regelmatig opnieuw en verwijder aannames die niet langer kloppen. Wordt het verwachte bijpassende artikel onbeschikbaar, beoordeel het pakket dan opnieuw in plaats van een oud plan automatisch voort te zetten."
-          ]
+          ],
+          "table": {
+            "headers": [
+              "Voordat je artikelen samenvoegt",
+              "Beslissing"
+            ],
+            "rows": [
+              [
+                "Alle artikelen ontvangen?",
+                "Laat ontbrekende artikelen en artikelen met onopgeloste kwesties buiten het pakket."
+              ],
+              [
+                "QC-vragen beantwoord?",
+                "Vraag vóór verzending om het ontbrekende bewijs."
+              ],
+              [
+                "Verpakking afgesproken?",
+                "Behoud de bescherming die elk artikel nodig heeft."
+              ],
+              [
+                "Routes geschikt?",
+                "Controleer of één artikel beperkingen oplegt aan het hele pakket."
+              ],
+              [
+                "Kosten vergeleken?",
+                "Vergelijk de mogelijkheden van een gecombineerd pakket en afzonderlijke pakketten, inclusief verpakking."
+              ]
+            ]
+          }
         },
         {
           "heading": "Houd opslagdeadlines los van retourbeslissingen",
@@ -694,7 +786,8 @@
         "shipforme",
         "storage",
         "buyforme"
-      ]
+      ],
+      "updatedAt": "2026-10-29"
     },
     {
       "id": "returns",
@@ -965,6 +1058,186 @@
         "buyforme",
         "expertbuy"
       ]
+    },
+    {
+      "id": "tracking",
+      "slug": "cssbuy-tracking-not-updating",
+      "title": "CSSBuy-tracking wordt niet bijgewerkt? Controleer je pakket stap voor stap",
+      "description": "Vind je CSSBuy-trackingnummer, onderscheid een verzendlabel van een scan door de vervoerder en stel de juiste hulpvraag op wanneer pakketupdates uitblijven.",
+      "category": "Verzending",
+      "keywords": [
+        "cssbuy tracking",
+        "cssbuy tracking not updating",
+        "cssbuy parcel tracking",
+        "cssbuy tracking number"
+      ],
+      "intro": "Als je CSSBuy-tracking niet wordt bijgewerkt, controleer dan eerst of het pakket daadwerkelijk het magazijn heeft verlaten. Open de pakketgegevens in je officiële account, kopieer het trackingnummer en vergelijk de laatste gedateerde gebeurtenis met de vervoerder die daar wordt vermeld. Een aangemaakt label, een artikel in het magazijn en een pakket dat door een vervoerder is aangenomen, zijn verschillende fasen. Deze handleiding helpt je de fase te bepalen, nuttig bewijs te verzamelen en te beslissen wat je vervolgens moet vragen. De handleiding belooft geen bezorgdatum en geeft geen toegang tot je privébestelling.",
+      "sections": [
+        {
+          "heading": "1. Zoek de pakketgegevens voordat je een trackingwebsite raadpleegt",
+          "paragraphs": [
+            "CSSBuy verwijst kopers na verzending naar het gedeelte My Parcel. Begin in je eigen account, zodat de pakketidentificatie, de gekozen verzenddienst en het trackingnummer bij dezelfde zending horen. Een bestelnummer van een artikel kan betrekking hebben op de aankoop bij de verkoper; het is niet noodzakelijk het nummer dat voor internationaal vervoer wordt gebruikt. Als je meerdere aankopen hebt samengevoegd, zoek dan het pakket met die artikelen in plaats van elke aankoop afzonderlijk te controleren.",
+            "Kopieer het volledige nummer in plaats van het over te typen. Controleer of je bij het selecteren van tekst op een telefoon niet per ongeluk spaties hebt meegenomen. Noteer de laatste gebeurtenis en de bijbehorende datum en tijd precies zoals ze worden weergegeven. Bewaar schermafbeeldingen voor je eigen administratie, maar verwijder je naam, adres en volledige trackingnummer voordat je iets openbaar plaatst. Een openbare discussie kan helpen een status uit te leggen; ze kan de privégegevens van het pakket niet vervangen en evenmin vaststellen wie je pakket op dat moment in bezit heeft."
+          ]
+        },
+        {
+          "heading": "2. Maak onderscheid tussen het aanmaken van een label en aanname door de vervoerder",
+          "paragraphs": [
+            "Een label of trackingnummer kan al bestaan voordat een vervoerder registreert dat hij een pakket in bezit heeft. Lees de gebeurtenis zelf: informatie ontvangen en aangenomen voor vervoer leveren verschillend bewijs. Als de gegevens alleen elektronische informatie tonen, vraag dan of het pakket nog wordt voorbereid of al is overgedragen. Ga er niet van uit dat het verschijnen van het eerste nummer betekent dat een vliegtuig is vertrokken.",
+            "Controleer ook of er in je account nog een actie openstaat. Een onbeantwoorde vraag over de verpakking, een onvoltooide verzendbetaling of een adrescorrectie kan aandacht vereisen voordat de volgende stap mogelijk is. Dit zijn punten om te controleren, geen diagnose van jouw specifieke vertraging. Als het scherm geen uitleg geeft, vraag de klantenservice dan om de huidige fase en de volgende verwachte gebeurtenis te bevestigen. Dat is een nuttigere vraag dan vragen waarom een niet nader genoemde zending zo lang duurt."
+          ]
+        },
+        {
+          "heading": "3. Vergelijk de vervoerder en de laatste gedateerde gebeurtenis",
+          "paragraphs": [
+            "Gebruik de vervoerder die in je pakketgegevens wordt genoemd. Als een latere vermelding een ander nummer voor de lokale bezorging geeft, bewaar dan beide nummers en noteer welk deel van de reis elk nummer beschrijft. Een nummer dat door de ene vervoerder niet wordt herkend, kan bij een andere dienst horen of nog geen openbare gebeurtenis hebben. Probeer niet willekeurig vervoerders totdat er een ongerelateerd resultaat verschijnt: alleen een overeenkomstig nummer is niet genoeg om je zending te identificeren.",
+            "Wanneer twee schermen elkaar tegenspreken, vergelijk dan de daadwerkelijke datums en tijden van de gebeurtenissen en de beschrijvingen van de locaties. Het tijdstip waarop je een pagina vernieuwt, is niet het tijdstip waarop het pakket zich heeft verplaatst. Bewaar de oorspronkelijke statustekst en een eventuele automatische vertaling, omdat een vertaalde logistieke term stelliger kan klinken dan het oorspronkelijke bericht. Vraag CSSBuy om een onbekende gebeurtenis aan de hand van de pakketgegevens toe te lichten. Een kaartillustratie of een geschatte voortgangsbalk bewijst niet dat het pakket zich fysiek op dat punt bevindt."
+          ]
+        },
+        {
+          "heading": "4. Bepaal of je beter kunt wachten of een vraag kunt stellen",
+          "paragraphs": [
+            "Er is geen vast aantal dagen waarna elk CSSBuy-pakket te laat is. De relevante vergelijking is met de actuele informatie voor de gekozen verzenddienst en de specifieke fase die in je account wordt getoond. Controleer of de dienst een termijn voor verzending, een geschatte vervoerstijd of beide publiceert. Een geschatte vervoerstijd mag niet stilzwijgend veranderen in een belofte voor de volledige periode vanaf de dag waarop je voor een product hebt betaald.",
+            "Neem contact op met de klantenservice wanneer om een actie wordt gevraagd, de gegevens een afwijking bevatten die je niet begrijpt of de relevante termijn van de dienst zonder uitleg is overschreden. Als de toepasselijke voorwaarden een uiterste datum voor een claim of onderzoeksverzoek vermelden, bewaar die datum dan apart in plaats van aan te nemen dat je onbeperkt kunt wachten. Vraag welke termijn voor jouw pakket geldt. Steeds hetzelfde scherm vernieuwen of meerdere identieke gesprekken openen, zorgt niet voor een nieuwe scan door de vervoerder."
+          ]
+        },
+        {
+          "heading": "5. Stel één duidelijk bericht voor de klantenservice op",
+          "paragraphs": [
+            "Gebruik de notitie- of ondersteuningsoptie die in je officiële account aan het pakket is gekoppeld. Houd het bericht kort genoeg om te lezen, maar gedetailleerd genoeg om de zaak te onderzoeken. Leg uit welke volgende stap je verwachtte en welke gegevens niet meer veranderen. Vraag om een specifiek antwoord: bevestiging van de overdracht, duidelijkheid over de vervoerder, vaststelling van een ontbrekende actie of instructies voor het openen van een onderzoek. Stuur geen wachtwoorden of betaalkaartgegevens.",
+            "Bijvoorbeeld: in mijn pakketgegevens staat een trackingnummer, maar de laatste gebeurtenis is nog steeds informatie ontvangen. Wilt u bevestigen of het pakket aan de vervoerder is overgedragen, welke vervoerder dit nummer zou moeten herkennen en of ik iets moet doen? Voeg de werkelijke datums en de pakketidentificatie privé toe. Dit voorbeeld is een sjabloon voor een vraag, geen bewering dat elk pakket zonder trackingupdates nog in het magazijn ligt."
+          ],
+          "bullets": [
+            "De pakketidentificatie en de in je account gekozen verzenddienst.",
+            "De laatste gebeurtenis, de bijbehorende datum en tijd en waar je deze hebt gezien.",
+            "Eventuele accountberichten of betaalstappen waarvoor nog actie nodig is.",
+            "De specifieke bevestiging of volgende stap die je nodig hebt."
+          ]
+        },
+        {
+          "heading": "6. Ga zorgvuldig om met een afwijking of bezorgprobleem",
+          "paragraphs": [
+            "Als de gegevens een adresprobleem, een bezorgpoging of een afhaalverzoek melden, controleer dan de officiële instructies van de vervoerder voor die zending. Verifieer onverwachte betaalverzoeken via je account of via de website van de vervoerder die je zelf hebt geopend. Ook een bericht met je pakketnummer kan misleidend zijn. Volg geen onbekende link alleen omdat die binnenkomt terwijl je op een pakket wacht.",
+            "Als de status bezorgd aangeeft maar je het pakket niet kunt vinden, controleer dan de bezorglocatie en eventueel beschikbaar bezorgbewijs. Neem vervolgens met de feiten contact op met de betreffende vervoerder en CSSBuy. Als het pakket beschadigd aankomt of onvolledig lijkt, bewaar dan de buitenverpakking en maak duidelijke foto's voordat je iets weggooit. Beschrijf wat ontbreekt of beschadigd is aan de hand van je bestelgegevens. Bewijs helpt bij een onderzoek, maar garandeert op zichzelf geen terugbetaling of schadevergoeding."
+          ]
+        },
+        {
+          "heading": "7. Houd tracking, verzendkosten en bezorgtijd van elkaar gescheiden",
+          "paragraphs": [
+            "Een trackinggebeurtenis beantwoordt een vraag over de voortgang. Ze verklaart niet elke kostenpost, bevestigt niet de inhoud van het pakket en garandeert geen volgende bezorgdatum. Bewaar de verzendofferte, de definitieve pakketafmetingen en de trackinggeschiedenis als afzonderlijke gegevens. Als je ook een vraag over de kosten hebt, vraag dan om de betreffende kostenspecificatie in plaats van aan te nemen dat een onverklaarde vertraging in de tracking de prijswijziging heeft veroorzaakt.",
+            "Ook het kopen van een product, wachten op de verkoper, bekijken van magazijnfoto's en versturen van het internationale pakket zijn verschillende onderdelen van het besteltraject. Vergelijk deze fasen afzonderlijk wanneer je een toekomstige bestelling plant. Houd ruimte voor onzekerheid als je het artikel nodig hebt voor een verjaardag, reis of andere gebeurtenis op een vaste datum. Een eerdere geslaagde bezorging is een nuttig persoonlijk referentiepunt, maar geen bewijs dat een nieuw pakket hetzelfde tijdschema zal volgen."
+          ]
+        },
+        {
+          "heading": "8. Zorg dat de volgende controle nuttig is",
+          "paragraphs": [
+            "Noteer na ontvangst van een antwoord welke volgende update is beloofd of welke actie je moet uitvoeren. Controleer of het antwoord betrekking heeft op jouw daadwerkelijke pakket en verzenddienst. Als het antwoord onduidelijk is, vraag dan in hetzelfde gesprek naar het ontbrekende feit in plaats van opnieuw te beginnen met een andere beschrijving. Bewaar een eventuele uiterste termijn voor een onderzoeksverzoek en het bewijs dat je hebt aangeleverd.",
+            "Bevestig voordat je de kwestie afsluit wat er is veranderd: er is een eerste scan door de vervoerder verschenen, een lokaal nummer beschikbaar gekomen, een adres gecorrigeerd of een onderzoek geopend. Dit zijn verschillende uitkomsten en slechts sommige wijzen erop dat het pakket zich heeft verplaatst. CSSBuy Home is een onafhankelijke website met artikelen en productinspiratie. Wij kunnen je account niet inzien of bij een zending ingrijpen; de officiële pakketgegevens en het verantwoordelijke ondersteuningsteam blijven de aangewezen plekken om de kwestie op te lossen."
+          ]
+        }
+      ],
+      "takeaways": [
+        "Zoek de gegevens van het internationale pakket en kopieer het exacte trackingnummer.",
+        "Lees de laatste gedateerde gebeurtenis voordat je concludeert dat een pakket vertraagd is.",
+        "Gebruik het officiële gesprek bij het pakket en bewaar relevant bewijs."
+      ],
+      "sourceIds": [
+        "buyforme",
+        "project"
+      ],
+      "publishedAt": "2026-10-29",
+      "updatedAt": "2026-10-29"
+    },
+    {
+      "id": "link-help",
+      "slug": "cssbuy-link-not-working",
+      "title": "CSSBuy-link werkt niet? Herstel links van Weidian, Taobao en 1688",
+      "description": "Los problemen met een CSSBuy-productlink op: vind de oorspronkelijke aanbieding terug, controleer het artikel en de variant en bereid een Expert Buy-aanvraag voor als importeren mislukt.",
+      "category": "Koopgidsen",
+      "keywords": [
+        "cssbuy link not working",
+        "cssbuy link converter",
+        "weidian to cssbuy",
+        "taobao link cssbuy",
+        "1688 cssbuy"
+      ],
+      "intro": "Als een CSSBuy-productlink niet werkt, begin dan bij de oorspronkelijke aanbieding van de verkoper. Controleer of die opent, het gewenste product toont en de juiste optie nog aanbiedt. Plak vervolgens de URL van die aanbieding in CSSBuy. Een gekopieerde spreadsheetpagina, de homepage van een winkel en een productaanbieding zijn verschillende links. Als automatisch importeren mislukt, verwijst de officiële koopgids naar Expert Buy. Deze handleiding laat zien wat je vóór het betalen moet controleren, zonder linkconversie te beschouwen als bewijs dat een artikel beschikbaar of veilig te kopen is.",
+      "sections": [
+        {
+          "heading": "1. Bepaal welk soort link je hebt gekopieerd",
+          "paragraphs": [
+            "Een pagina om producten te ontdekken kan naar verschillende plekken verwijzen: een detailpagina op deze site, een vermelding in de broncatalogus, een oorspronkelijke aanbieding op een handelsplatform en een kooplink. Bepaal eerst welke je hebt. Een productadres op CSSBuy Home verwijst naar een vermelding in deze catalogus. Het is handig om een gevonden product terug te vinden, maar het is niet de aanbieding van de verkoper die CSSBuy nodig heeft om de aankoop te begrijpen.",
+            "Open de productdetails en zoek de oorspronkelijke aanbieding of de officiële koopbestemming. Controleer of de productafbeelding, de verkoper en de beschikbare opties overeenkomen met wat je wilde kopen. Een zoekresultaat of winkelhomepage kan veel artikelen bevatten en hoeft geen specifiek artikel aan te wijzen. Als je alleen een schermafbeelding hebt, zoek dan eerst de exacte aanbieding terug of vraag om volledige verkopers- en artikelinformatie. Kies niet zomaar een vergelijkbaar resultaat alleen om het importeren te laten werken."
+          ]
+        },
+        {
+          "heading": "2. Vind de volledige oorspronkelijke product-URL terug",
+          "paragraphs": [
+            "Bij delen op een telefoon kan verklarende tekst samen met een link worden gekopieerd. Scheid de daadwerkelijke URL van het omliggende bericht voordat je deze in het aankoopveld plakt. Als een verkorte link een tussenpagina opent, ga dan naar het bedoelde product en controleer de bestemming. Bewaar de oorspronkelijke link in je notities, zodat je kunt uitleggen waar deze vandaan kwam als de uiteindelijke pagina niet klopt.",
+            "Verwijder de artikelidentificatie niet wanneer je een link opschoont. Sommige queryparameters identificeren het product in plaats van een bezoek te volgen. Door alles na een vraagteken te verwijderen, kun je dus het deel weghalen dat nodig is om het artikel te vinden. Tegelijkertijd is een accountgebonden afrekenpagina of een privébesteladres geen openbare aanbieding. Deel alleen de openbare productinformatie die voor de aankoop nodig is en kopieer nooit een wachtwoord, inlogcode of privébetaallink naar een productaanvraag."
+          ]
+        },
+        {
+          "heading": "3. Vergelijk een Weidian-link met het oorspronkelijke artikel",
+          "paragraphs": [
+            "Controleer voor een vondst op Weidian de oorspronkelijke artikelidentificatie en de verkoper in de aanbieding. Een registratienummer uit de broncatalogus is een aparte identificatie. Als je dat registratienummer in een koop-URL gebruikt, kan die naar het verkeerde artikel verwijzen of een fout opleveren. De kooplink op deze site wordt alleen aangemaakt als de oorspronkelijke gegevens van een ondersteund handelsplatform beschikbaar zijn; je moet deze nog steeds vergelijken met het product dat je wilt.",
+            "Vergelijk meer dan alleen de eerste afbeelding. Controleer de titel, beschikbare maten, kleuren en alle details die vergelijkbare aanbiedingen van elkaar onderscheiden. Een verkoper kan één aanbieding gebruiken voor meerdere uitvoeringen of accessoires. Als de pagina laadt maar de gewenste uitvoering ontbreekt, werkt de link technisch wel, terwijl de aankoop nog steeds niet geschikt is. Vraag naar die exacte uitvoering in plaats van een succesvol geladen pagina op te vatten als toestemming om een willekeurige optie te kiezen."
+          ]
+        },
+        {
+          "heading": "4. Controleer Taobao- en 1688-opties voordat je prijzen vergelijkt",
+          "paragraphs": [
+            "Als een Taobao- of 1688-aanbieding wordt geïmporteerd, controleer dan de geselecteerde optie voordat je het getoonde bedrag met een spreadsheet vergelijkt. De vanafprijs kan gelden voor een andere maat, kleur, hoeveelheid of onderdeel. Noteer de naam van de optie en de hoeveelheid die je werkelijk wilt bestellen. Een prijsverschil is een reden om de selectie te onderzoeken, geen bewijs op zichzelf dat de import niet werkt.",
+            "Controleer bij 1688 de minimale bestelhoeveelheid van de leverancier en de prijs die voor die hoeveelheid geldt. CSSBuy raadt kopers uitdrukkelijk aan deze voorwaarden te bekijken. Een los proefexemplaar, een verpakking met meerdere stuks en een groothandelshoeveelheid zijn mogelijk niet uitwisselbaar. Als de geïmporteerde pagina de eis niet duidelijk maakt, zoek dit dan uit voordat je betaalt. Vraag ook of de exacte goederen met een geschikte bezorgdienst naar jouw bestemming kunnen worden verzonden; een geldige aanbieding bewijst niet dat internationale verzending mogelijk is."
+          ]
+        },
+        {
+          "heading": "5. Onderscheid een importfout van een niet-beschikbare aanbieding",
+          "paragraphs": [
+            "Als de oorspronkelijke aanbieding correct opent maar de aankooppagina deze niet kan lezen, is een importprobleem één mogelijkheid. Als de oorspronkelijke pagina is verwijderd, doorverwijst naar een winkel of het artikel niet meer aanbiedt, zal het herhaaldelijk wijzigen van de koop-URL de ontbrekende aanbieding niet herstellen. Vergelijk deze twee situaties voordat je tijd aan een converter besteedt. Noteer de exacte foutmelding en de oorspronkelijke openbare URL voor de klantenservice.",
+            "Ook een inlogscherm of een melding om een app te openen moet zorgvuldig worden geïnterpreteerd. Dat bewijst niet dat een artikel is uitverkocht, en deze handleiding kan niet bepalen of de verkoperspagina voor de aankoopagent toegankelijk is. Gebruik de normale toegang tot het handelsplatform en vraag CSSBuy zo nodig de aanbieding te controleren. Voer geen inloggegevens van het handelsplatform in bij een onbekende converter en sta niet toe dat een externe pagina toegang tot je winkelaccount vraagt."
+          ]
+        },
+        {
+          "heading": "6. Bereid een Expert Buy-aanvraag met volledige informatie voor",
+          "paragraphs": [
+            "CSSBuy biedt Expert Buy als handmatige aankoopmethode wanneer de gewone zoekfunctie een artikel niet kan verwerken. Verzamel de oorspronkelijke product-URL, titel, relevante afbeelding, gewenste maat of kleur, hoeveelheid, artikelprijs en informatie over binnenlandse verzending. Maak onderscheid tussen bevestigde informatie van de verkoper en gegevens die je alleen hebt geschat. Een leeg of op een gok ingevuld veld kan tot een onjuiste bestelling leiden, ook als de aanvraag zelf succesvol wordt ingediend.",
+            "Gebruik het notitieveld om de exacte optie te beschrijven en de onbeantwoorde vraag te stellen. Vraag bijvoorbeeld of de getoonde prijs voor één artikel of een set geldt, of dat een bepaalde maat beschikbaar is. Controleer vóór het betalen de ontvangen bestelgegevens aan de hand van je notities. Handmatig kopen maakt een niet-geverifieerde verkoper niet betrouwbaar en stelt geen retourrechten vast. Lees de actuele waarschuwing over verkopersrisico's en beslis of de resterende onzekerheid voor jouw aankoop aanvaardbaar is."
+          ],
+          "bullets": [
+            "Bewaar de oorspronkelijke openbare aanbieding en verkopersinformatie.",
+            "Leg de exacte optie en hoeveelheid schriftelijk vast.",
+            "Houd de artikelprijs gescheiden van de binnenlandse bezorging en de latere internationale verzending.",
+            "Vul ontbrekende informatie aan voordat je toestemming voor de aankoop geeft."
+          ]
+        },
+        {
+          "heading": "7. Begrijp wat een linkconverter wel en niet kan",
+          "paragraphs": [
+            "Een converter zet een ondersteund linkformaat om in een link naar een andere bestemming. Hij kan geen voorraad bevestigen, de echtheid van een product vaststellen, het artikel dat zal aankomen inspecteren of een retour garanderen. Zelfs een correcte conversie kan een aanbieding openen die is gewijzigd sinds deze aan een spreadsheet werd toegevoegd. Beschouw de geconverteerde pagina als het begin van de controle en bewaar een registratie van de gekozen uitvoering.",
+            "Deze website biedt geen universele tool voor linkconversie. Ondersteunde productpagina's kunnen een directe link naar CSSBuy aanbieden, terwijl andere artikelen de oorspronkelijke aanbieding en een handmatige controle vereisen. Als er geen directe koopknop is, is dat geen aanwijzing om een productidentificatie te verzinnen. Gebruik de oorspronkelijke aanbieding en het officiële aankoopproces. Wees extra voorzichtig wanneer een tool beweert elke link van een handelsplatform te herstellen zonder te tonen welk product daadwerkelijk is geselecteerd."
+          ]
+        },
+        {
+          "heading": "8. Controleer de bestelling nogmaals voordat je verdergaat met verzending",
+          "paragraphs": [
+            "Bewaar na acceptatie van een aankoopaanvraag de oorspronkelijke aanbieding, de gekozen optie en het bevestigde bedrag. Deze gegevens maken de magazijncontrole nuttiger: je kunt het ontvangen artikel vergelijken met de uitvoering die je hebt aangevraagd. De galerij van de verkoper is een referentie voor de aanbieding, terwijl foto's van jouw artikel in het magazijn ander bewijs leveren. Geen van beide mag worden omschreven als bewijs van echtheid of als garantie voor prestaties die niet zichtbaar zijn.",
+            "Als het ontvangen artikel afwijkt van de bevestigde bestelling, vraag dan naar de beschikbare oplossing voordat je het in een internationaal pakket laat opnemen. Beschrijf het probleem specifiek en voeg het relevante bewijs privé toe. Ga er niet van uit dat je na verzending naar het buitenland in de praktijk dezelfde retourmogelijkheden houdt. Zodra de productdetails kloppen, kun je de handleidingen over verzendkosten en het magazijn gebruiken om volledige pakketopties te vergelijken. De link herstellen is slechts de eerste stap naar het ontvangen van het artikel dat je wilde kopen."
+          ]
+        }
+      ],
+      "takeaways": [
+        "Gebruik de oorspronkelijke productaanbieding, niet een registratienummer uit de catalogus.",
+        "Controleer de variant, hoeveelheid en verkoper voordat je een geïmporteerde prijs accepteert.",
+        "Gebruik Expert Buy voor een volledige handmatige aanvraag als automatisch importeren mislukt."
+      ],
+      "sourceIds": [
+        "buyforme",
+        "expertbuy",
+        "project"
+      ],
+      "publishedAt": "2026-10-29",
+      "updatedAt": "2026-10-29"
     }
   ],
   "sources": [
@@ -972,13 +1245,13 @@
       "id": "buyforme",
       "title": "CSSBuy — Buy For Me: officieel koopproces",
       "url": "https://m.cssbuy.com/buyforme",
-      "accessedAt": "2026-10-23"
+      "accessedAt": "2026-10-29"
     },
     {
       "id": "expertbuy",
       "title": "CSSBuy — Expert Buy: productinformatie en waarschuwing voor verkopersrisico",
       "url": "https://m.cssbuy.com/expertbuy",
-      "accessedAt": "2026-10-23"
+      "accessedAt": "2026-10-29"
     },
     {
       "id": "about",
@@ -1018,7 +1291,7 @@
     },
     {
       "id": "catalog",
-      "title": "cnfansge.com — Bron van de productcatalogus",
+      "title": "Productcatalogus",
       "url": "https://cnfansge.com/",
       "accessedAt": "2026-10-23"
     },

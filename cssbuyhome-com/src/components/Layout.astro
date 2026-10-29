@@ -7,8 +7,8 @@ const {title,description,lang='en',path='',t,article}=Astro.props;
 const href=(p='')=>localePath(lang,p);
 const canonical=siteOrigin+href(path);
 const pageIndexable=indexable&&!['product/','search/visual/'].includes(path);
-const nav=[['spreadsheet/',t.navShop],['guides/',t.navGuides],['qc/',t.navQc],['faq/',t.navFaq]];
-const structured=article?{'@context':'https://schema.org','@type':'Article',headline:article.title,description:article.description,inLanguage:lang,dateModified:'2026-10-23',author:{'@type':'Organization',name:'CSSBuy Home'},publisher:{'@type':'Organization',name:'CSSBuy Home'},mainEntityOfPage:canonical}:null;
+const nav=[['spreadsheet/',t.navShop],['guides/',t.navGuides],['guides/cssbuy-shipping-cost/',t.navShipping],['qc/',t.navQc],['faq/',t.navFaq]];
+const structured=article?{'@context':'https://schema.org','@type':'Article',headline:article.title,description:article.description,inLanguage:lang,datePublished:article.publishedAt||'2026-10-23',dateModified:article.updatedAt||'2026-10-23',author:{'@type':'Organization',name:'CSSBuy Home'},publisher:{'@type':'Organization',name:'CSSBuy Home'},mainEntityOfPage:canonical}:null;
 ---
 <!doctype html>
 <html lang={lang}>
@@ -23,15 +23,15 @@ const structured=article?{'@context':'https://schema.org','@type':'Article',head
 <meta name="theme-color" content="#f5a81c"/><meta property="og:type" content={article?'article':'website'}/><meta property="og:title" content={title}/><meta property="og:description" content={description}/><meta property="og:url" content={canonical}/><meta property="og:site_name" content="CSSBuy Home"/>
 {structured&&<script type="application/ld+json" set:html={JSON.stringify(structured).replace(/</g,'\\u003c')}/>}
 </head>
-<body data-lang={lang} data-prefix={href()}>
+<body data-lang={lang} data-prefix={href()} data-page-type={article?'article':path.split('/')[0]||'home'}>
 <a class="skip" href="#main">{t.skip}</a>
 <header class="header"><div class="nav-wrap">
 <a href={href()} class="brand" aria-label="CSSBuy Home"><img src="https://assets.cssbuy.com/static/icon/logo.svg" alt="CSSBuy" width="121" height="34"/><span>HOME</span></a>
 <nav aria-label={t.mainNavigation} class="desktop-nav">{nav.map(([url,label])=><a href={href(url)} aria-current={path.startsWith(url)?'page':undefined}>{label}</a>)}</nav>
-<div class="nav-actions">{publishedLocales.length>1&&<select class="language" aria-label={t.language} id="language-switch">{publishedLocales.map(l=><option value={localePath(l,path)} selected={l===lang}>{locales[l]}</option>)}</select>}<a class="button button-small button-dark" href={registerUrl} target="_blank" rel="noopener noreferrer">{t.join}<span aria-hidden="true">↗</span></a><button class="menu-toggle" aria-expanded="false" aria-controls="mobile-nav" aria-label={t.menu}>☰</button></div>
+<div class="nav-actions">{publishedLocales.length>1&&<select class="language" aria-label={t.language} id="language-switch">{publishedLocales.map(l=><option value={localePath(l,path)} selected={l===lang}>{locales[l]}</option>)}</select>}<a class="button button-small button-dark" href={registerUrl} data-track="signup_click" target="_blank" rel="noopener noreferrer">{t.join}<span aria-hidden="true">↗</span></a><button class="menu-toggle" aria-expanded="false" aria-controls="mobile-nav" aria-label={t.menu}>☰</button></div>
 </div><nav id="mobile-nav" class="mobile-nav" aria-label={t.mobileNavigation} hidden>{nav.map(([url,label])=><a href={href(url)}>{label}</a>)}</nav></header>
 <main id="main"><slot/></main>
-<footer><div class="footer-grid wrap"><div class="footer-brand"><a href={href()} class="brand"><img src="https://assets.cssbuy.com/static/icon/logo.svg" alt="CSSBuy" width="121" height="34"/><span>HOME</span></a><p>{t.footerIntro}</p><span class="independent">{t.preview}</span></div><div><h3>{t.explore}</h3><a href={href('spreadsheet/')}>{t.navShop}</a><a href={href('search/visual/')}>{t.visualTitle}</a><a href={href('about/')}>{t.aboutTitle}</a></div><div><h3>{t.learn}</h3><a href={href('guides/')}>{t.navGuides}</a><a href={href('qc/')}>{t.navQc}</a><a href={href('faq/')}>{t.navFaq}</a></div><div><h3>{t.official}</h3><a href={registerUrl} target="_blank" rel="noopener noreferrer">{t.join} ↗</a><a href="https://www.cssbuy.com/shop/helpCenter?id=12" target="_blank" rel="noopener noreferrer">{t.officialHelp} ↗</a><a href={href('privacy/')}>{t.privacyTitle}</a></div></div><div class="footer-bottom wrap"><span>© 2026 {t.copyright}</span><span>{t.catalogLabel} · <span>cnfansge.com</span></span></div></footer>
+<footer><div class="footer-grid wrap"><div class="footer-brand"><a href={href()} class="brand"><img src="https://assets.cssbuy.com/static/icon/logo.svg" alt="CSSBuy" width="121" height="34"/><span>HOME</span></a><p>{t.footerIntro}</p><span class="independent">{t.preview}</span></div><div><h3>{t.explore}</h3><a href={href('spreadsheet/')}>{t.navShop}</a><a href={href('search/visual/')}>{t.visualTitle}</a><a href={href('about/')}>{t.aboutTitle}</a></div><div><h3>{t.learn}</h3><a href={href('guides/')}>{t.navGuides}</a><a href={href('qc/')}>{t.navQc}</a><a href={href('faq/')}>{t.navFaq}</a></div><div><h3>{t.official}</h3><a href={registerUrl} data-track="signup_click" target="_blank" rel="noopener noreferrer">{t.join} ↗</a><a href="https://www.cssbuy.com/shop/helpCenter?id=12" target="_blank" rel="noopener noreferrer">{t.officialHelp} ↗</a><a href={href('privacy/')}>{t.privacyTitle}</a></div></div><div class="footer-bottom wrap"><span>© 2026 {t.copyright}</span><span>{t.catalogLabel}</span></div></footer>
 <dialog id="photo-viewer" aria-label={t.photoLabel}><button type="button" class="photo-close" aria-label={t.closePhoto}>×</button><img alt=""/><p>{t.sellerPhotoNote}</p></dialog>
 <script type="application/json" id="ui-data" set:html={JSON.stringify(t).replace(/</g,'\\u003c')}/>
 <script src="../scripts/client.js"></script>

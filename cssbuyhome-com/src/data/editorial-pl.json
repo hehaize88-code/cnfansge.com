@@ -27,7 +27,7 @@
     {
       "id": "data",
       "q": "Skąd pochodzą produkty i zdjęcia w ofertach?",
-      "a": "Katalog produktów i galerie sprzedawców pochodzą z cnfansge.com. CSSBuy Home nie prowadzi osobnej bazy produktów ani nie tworzy zdjęć produktów. Potwierdź wybraną ofertę po otwarciu strony zakupu.",
+      "a": "Katalog produktów i galerie sprzedawców pochodzą z Katalog produktów. CSSBuy Home nie prowadzi osobnej bazy produktów ani nie tworzy zdjęć produktów. Potwierdź wybraną ofertę po otwarciu strony zakupu.",
       "sourceIds": [
         "catalog",
         "project"
@@ -36,7 +36,7 @@
     {
       "id": "qc",
       "q": "Czy zdjęcia produktów są zweryfikowanymi zdjęciami kontroli jakości CSSBuy?",
-      "a": "Galerii sprzedawców nie należy traktować jako magazynowej kontroli jakości. Zweryfikowane zdjęcie kontroli jakości konkretnego zamówienia musi być powiązane z otrzymanym produktem. Ten podgląd nie oznacza zdjęć sprzedawców cnfansge jako zweryfikowanych dowodów kontroli CSSBuy.",
+      "a": "Galerii sprzedawców nie należy traktować jako magazynowej kontroli jakości. Zweryfikowane zdjęcie kontroli jakości konkretnego zamówienia musi być powiązane z otrzymanym produktem. Ten podgląd nie oznacza zdjęć sprzedawców Katalog produktów jako zweryfikowanych dowodów kontroli CSSBuy.",
       "sourceIds": [
         "catalog",
         "project"
@@ -63,7 +63,7 @@
     {
       "id": "weidian-link",
       "q": "Który identyfikator należy umieścić w linku zakupowym Weidian?",
-      "a": "Użyj oryginalnego identyfikatora produktu z platformy handlowej. Podany przykład to https://www.cssbuy.com/shop/goodsDetail?type=micro&id=7755101935. Numer rekordu katalogu cnfansge nie zastępuje tego identyfikatora produktu.",
+      "a": "Użyj oryginalnego identyfikatora produktu z platformy handlowej. Podany przykład to https://www.cssbuy.com/shop/goodsDetail?type=micro&id=7755101935. Numer rekordu katalogu Katalog produktów nie zastępuje tego identyfikatora produktu.",
       "sourceIds": [
         "user-link"
       ]
@@ -236,8 +236,8 @@
     {
       "id": "spreadsheet",
       "slug": "cssbuy-spreadsheet-guide",
-      "title": "Jak korzystać z arkusza CSSBuy: poradnik kupującego",
-      "description": "Praktyczny poradnik po arkuszu CSSBuy: porównywanie linków do produktów, sprawdzanie wariantów, odczytywanie zdjęć i planowanie całego zakupu.",
+      "title": "Arkusz CSSBuy: znajdź linki, sprawdź rozmiary i zamów",
+      "description": "Użyj arkusza CSSBuy, aby znaleźć linki do produktów, zweryfikować sprzedawcę i rozmiar, obejrzeć zdjęcia magazynowe i zaplanować pełny koszt z dostawą.",
       "category": "Pierwsze kroki",
       "keywords": [
         "arkusz cssbuy",
@@ -245,7 +245,7 @@
         "jak korzystać z cssbuy",
         "linki do produktów cssbuy"
       ],
-      "intro": "Przydatny arkusz CSSBuy powinien pomagać w podjęciu lepszej decyzji zakupowej, a nie tylko tworzyć dłuższą listę zakupów. Katalog może zgromadzić linki, tytuły i ceny ofert, ale najważniejsza praca zaczyna się, gdy sprawdzasz rzeczywisty produkt kryjący się za kartą. Ten poradnik pokazuje, jak zamienić przeglądanie w krótką, udokumentowaną listę, jak odróżnić prezentację sprzedawcy od dowodów dotyczących własnego zamówienia i jak ocenić, czy znalezisko nadal ma sens po uwzględnieniu wysyłki. CSSBuy Home jest niezależną stroną do odkrywania produktów. Jej katalog pochodzi z cnfansge.com; zakupy i zarządzanie zamówieniami odbywają się w CSSBuy.",
+      "intro": "Zacznij od kategorii lub wyszukiwania w arkuszu CSSBuy, otwórz produkt i zweryfikuj jego oryginalną ofertę. Sprawdź rozmiar, kolor, ilość i aktualną cenę, zanim przejdziesz do CSSBuy. Katalog pomaga odkrywać produkty; oficjalny ekran zamówienia potwierdza, co możesz kupić. Ten poradnik przeprowadzi Cię od zapisanego linku do sprawdzonego produktu w magazynie i realistycznego budżetu na wysyłkę.",
       "sections": [
         {
           "heading": "Zacznij od celu i realistycznej krótkiej listy",
@@ -258,7 +258,7 @@
           "heading": "Czytaj kartę produktu jak wpis w indeksie",
           "paragraphs": [
             "Karta streszcza znacznie obszerniejszą ofertę. Jej tytuł może być skrócony, przetłumaczony lub dostarczony przez katalog źródłowy. Wyświetlana cena może dotyczyć jednego wariantu, a nie wszystkich odmian. Traktuj te pola jako sposób dotarcia do oryginalnej oferty, a następnie porównaj konkretny rozmiar, kolor, liczbę sztuk i wersję, których potrzebujesz. Niska cena początkowa nie wystarcza do uczciwego porównania dwóch produktów, jeśli jeden zawiera akcesorium, a drugi nie.",
-            "W CSSBuy Home rekordy produktów i galerie sprzedawców pochodzą z cnfansge.com. Zdjęcie sprzedawcy ilustruje ofertę; nie dowodzi, że konkretny produkt w magazynie został skontrolowany. Jeśli strona nie udostępnia działającej funkcji lub zweryfikowanego rodzaju zdjęć, nie wnioskuj o ich istnieniu z atrakcyjnej etykiety. Przejdź przez dostępny link do produktu i sprawdź, co faktycznie przedstawiono, zanim uznasz kartę za dowód."
+            "W CSSBuy Home rekordy produktów i galerie sprzedawców pochodzą z Katalog produktów. Zdjęcie sprzedawcy ilustruje ofertę; nie dowodzi, że konkretny produkt w magazynie został skontrolowany. Jeśli strona nie udostępnia działającej funkcji lub zweryfikowanego rodzaju zdjęć, nie wnioskuj o ich istnieniu z atrakcyjnej etykiety. Przejdź przez dostępny link do produktu i sprawdź, co faktycznie przedstawiono, zanim uznasz kartę za dowód."
           ]
         },
         {
@@ -313,7 +313,8 @@
         "buyforme",
         "expertbuy",
         "catalog"
-      ]
+      ],
+      "updatedAt": "2026-10-29"
     },
     {
       "id": "weidian",
@@ -400,8 +401,8 @@
     {
       "id": "qc",
       "slug": "cssbuy-qc-photos-guide",
-      "title": "Zdjęcia kontroli jakości CSSBuy: praktyczna lista kontrolna",
-      "description": "Uporządkowany sposób przeglądania zdjęć magazynowych, odróżniania zdjęć sprzedawcy i zamawiania przydatnych pomiarów przed wysłaniem paczki.",
+      "title": "Zdjęcia QC w CSSBuy: co sprawdzić przed wysyłką",
+      "description": "Sprawdź na zdjęciach magazynowych CSSBuy zgodność produktu, rozmiar, kolor, ilość i widoczne uszkodzenia. Dowiedz się, kiedy poprosić o wyraźniejsze zdjęcie lub pomiar.",
       "category": "Magazyn i kontrola jakości",
       "keywords": [
         "cssbuy qc",
@@ -409,14 +410,42 @@
         "kontrola jakości cssbuy",
         "zdjęcia magazynowe"
       ],
-      "intro": "Zdjęcia kontroli jakości są najbardziej przydatne, gdy podchodzisz do nich z pytaniem. Czy produkt odpowiada zamówionemu wariantowi? Czy są wszystkie wymagane akcesoria? Czy wymiar pasuje do Twoich potrzeb? Samo obejrzenie galerii i uznanie, że produkt wygląda dobrze, może prowadzić do przeoczenia szczegółów ważnych po dostawie. Ten poradnik wyjaśnia praktyczną kolejność sprawdzania i ograniczenia dowodów wizualnych. Oficjalne strony usług CSSBuy opisują kontrolę magazynową i zdjęcia. CSSBuy Home nie traktuje galerii sprzedawców dostarczanych przez cnfansge.com jako zweryfikowanej magazynowej kontroli jakości, a karta produktu nigdy nie powinna być odczytywana jako certyfikat kontroli.",
+      "intro": "Obejrzyj zdjęcia swojego rzeczywistego produktu w magazynie, zanim zlecisz jego wysyłkę międzynarodową. Porównaj produkt, kolor, metkę z rozmiarem, ilość i widoczny stan z zamówieniem. Poproś o konkretne zbliżenie lub pomiar, gdy obecne zdjęcia nie odpowiadają na określone pytanie. Zdjęcia sprzedawcy w arkuszu to zdjęcia z oferty; nie są zdjęciami QC Twojego zamówienia ani dowodem autentyczności.",
       "sections": [
         {
           "heading": "Ustal, czyj produkt i jakie zdjęcie oglądasz",
           "paragraphs": [
             "Zanim zaczniesz sprawdzać szczegóły, zidentyfikuj materiał dowodowy. Zdjęcie sprzedawcy przedstawia ofertę. Publiczne zdjęcie kupującego dokumentuje zakup kogoś innego. Zdjęcie magazynowe powiązane z Twoim zamówieniem przedstawia otrzymany produkt w konkretnym momencie. Kategorie te mogą się uzupełniać, ale odpowiadają na różne pytania. Szczegółowe publiczne zdjęcie nie określa stanu egzemplarza, który jeszcze do Ciebie nie dotarł.",
             "Przed porównaniem zdjęć sprawdź numer zamówienia i wybrany wariant. Dwa produkty mogą mieć tę samą nazwę modelu, a różnić się kolorem, rozmiarem, materiałami lub dołączonymi elementami. Jeżeli nie możesz powiązać zdjęcia z odpowiednim wariantem, potraktuj je jako informację ogólną. Zapobiega to sytuacji, w której szczególnie atrakcyjne zdjęcie staje się wzorcem oceny niezwiązanego z nim wariantu. Najmocniejsze porównanie zaczyna się od jasnego zapisu tego, o co dokładnie poproszono przy zakupie."
-          ]
+          ],
+          "table": {
+            "headers": [
+              "Element do sprawdzenia",
+              "Jeśli coś jest niejasne"
+            ],
+            "rows": [
+              [
+                "Produkt i opcja",
+                "Porównaj z zapisaną ofertą i szczegółami zamówienia."
+              ],
+              [
+                "Metka z rozmiarem",
+                "Poproś o czytelne zdjęcie metki i potrzebny pomiar."
+              ],
+              [
+                "Kolor i stan",
+                "Poproś o wyraźne zbliżenie konkretnego miejsca."
+              ],
+              [
+                "Ilość i elementy",
+                "Sprawdź każdą zamówioną część, nie tylko główny produkt."
+              ],
+              [
+                "Decyzja",
+                "Wyjaśnij wątpliwość przed zatwierdzeniem wysyłki międzynarodowej."
+              ]
+            ]
+          }
         },
         {
           "heading": "Sprawdź tożsamość produktu i liczbę sztuk przed drobnymi szczegółami",
@@ -477,13 +506,14 @@
         "buyforme",
         "shipforme",
         "catalog"
-      ]
+      ],
+      "updatedAt": "2026-10-29"
     },
     {
       "id": "cost",
       "slug": "cssbuy-shipping-cost",
-      "title": "Koszt wysyłki CSSBuy: jak oszacować całą kwotę",
-      "description": "Poznaj dane wpływające na koszty paczek i porównuj opakowanie, wagę rozliczeniową oraz wyceny tras bez polegania na stałej cenie za kilogram.",
+      "title": "Kalkulator wysyłki CSSBuy: oszacuj koszt i wagę paczki",
+      "description": "Oszacuj koszt wysyłki CSSBuy na podstawie miejsca docelowego, wagi po zapakowaniu i wymiarów. Porównaj dostępne trasy, wagę objętościową i ostateczną wycenę paczki.",
       "category": "Wysyłka",
       "keywords": [
         "koszt wysyłki cssbuy",
@@ -491,14 +521,46 @@
         "waga gabarytowa cssbuy",
         "szacunek wysyłki cssbuy"
       ],
-      "intro": "Nie ma przydatnej uniwersalnej odpowiedzi na pytanie „Ile kosztuje wysyłka CSSBuy?” bez miejsca docelowego, dostępnej trasy i opisu zapakowanej paczki. Cena skopiowana z cudzego zamówienia może być ciekawym przykładem, ale nie jest wyceną Twojego. Ten poradnik pokazuje, jak stworzyć szacunek, który pozostaje przydatny wraz z uzyskiwaniem lepszych informacji. Celem nie jest przewidzenie kosztu nieprzygotowanej paczki co do centa. Chodzi o zrozumienie, które dane mogą zmienić wynik, zarezerwowanie wystarczającego budżetu i porównanie ostatecznych możliwości na równych zasadach.",
+      "intro": "Skorzystaj z oficjalnego kalkulatora wysyłki CSSBuy, podając miejsce docelowe, szacowaną wagę po zapakowaniu i wymiary paczki. Sprawdź, które trasy przyjmują Twoje towary, a następnie porównaj wyceny przy tych samych danych wejściowych. Nie ma uniwersalnej ceny za kilogram: opakowanie, zasady danej trasy i ostateczne pomiary paczki mogą zmienić kwotę. Ten poradnik wyjaśnia sposób obliczania kosztów i zawiera listę rzeczy do sprawdzenia przed zapłatą.",
       "sections": [
         {
           "heading": "Podziel dane na znane i nieznane",
           "paragraphs": [
             "Zacznij od listy tego, co wiesz: kraju i regionu docelowego, liczby produktów, przybliżonych wymiarów przedmiotów i wszelkich specjalnych wymagań obsługi. Następnie wypisz niewiadome: wagę po zapakowaniu, wymiary pudełka, dostępne trasy i usługi opcjonalne. Kalkulator jest tak użyteczny jak wprowadzone dane. Wpisanie optymistycznie zgadniętej wagi daje optymistyczny wynik, a nie dokładniejszy.",
             "Przy każdym zapisanym szacunku umieść datę i zachowaj dane, na podstawie których powstał. Pozwala to wyjaśnić późniejszą zmianę bez zakładania, że coś poszło nie tak. Wyceny dla jednego miejsca docelowego lub rozmiaru paczki nie należy bezpośrednio porównywać z innym scenariuszem. Jeżeli towary zawierają baterie, płyny, delikatne elementy lub inne potencjalnie ograniczone cechy, najpierw sprawdź dopuszczalność trasy. Najtańsza wyświetlana trasa jest nieistotna, jeśli rzeczywista paczka nie może z niej skorzystać."
-          ]
+          ],
+          "table": {
+            "headers": [
+              "Dane do kalkulatora",
+              "Co sprawdzić"
+            ],
+            "rows": [
+              [
+                "Miejsce docelowe",
+                "Podaj kraj i region, do których ma trafić paczka."
+              ],
+              [
+                "Waga po zapakowaniu",
+                "Uwzględnij opakowanie ochronne i wszystkie zachowane pudełka."
+              ],
+              [
+                "Wymiary paczki",
+                "Podaj długość, szerokość i wysokość w jednostkach używanych przez kalkulator."
+              ],
+              [
+                "Towary i trasa",
+                "Sprawdź ograniczenia przed porównaniem cen."
+              ],
+              [
+                "Waga rozliczeniowa",
+                "Zapoznaj się z zasadami wybranej trasy i sposobem zaokrąglania."
+              ],
+              [
+                "Ostateczna kwota",
+                "Porównaj wycenę ze zweryfikowanymi danymi paczki i opłatą na koncie."
+              ]
+            ]
+          }
         },
         {
           "heading": "Odróżniaj fizyczną wagę od wagi używanej do wyceny trasy",
@@ -559,13 +621,14 @@
         "buyforme",
         "estimates",
         "shipforme"
-      ]
+      ],
+      "updatedAt": "2026-10-29"
     },
     {
       "id": "time",
       "slug": "cssbuy-shipping-time",
-      "title": "Ile trwa zamówienie CSSBuy? Przebieg zamówienia w czasie",
-      "description": "Rozróżniaj wysyłkę sprzedawcy, decyzje magazynowe, transport międzynarodowy i końcową dostawę, aby lepiej planować i zadawać trafniejsze pytania o śledzenie.",
+      "title": "Czas wysyłki CSSBuy: od sprzedawcy przez magazyn do dostawy",
+      "description": "Poznaj każdy etap dostawy CSSBuy, dowiedz się, gdzie sprawdzić przesyłkę i o co zapytać, gdy postęp zatrzyma się u sprzedawcy, w magazynie lub u przewoźnika.",
       "category": "Wysyłka",
       "keywords": [
         "czas wysyłki cssbuy",
@@ -573,7 +636,7 @@
         "status zamówienia cssbuy",
         "śledzenie cssbuy"
       ],
-      "intro": "Szacowany czas dostawy trudno zinterpretować, jeśli nie wiadomo, od którego momentu jest liczony. Czas oczekiwania na sprzedawcę, sprawdzania produktu w magazynie lub decydowania, co połączyć w paczkę, różni się od czasu transportu międzynarodowego. Ten poradnik dzieli drogę na praktyczne etapy i pokazuje, jak zbadać opóźnienie bez przekształcania doświadczenia innego kupującego w obietnicę dla własnego zamówienia. W przypadku konkretnej transakcji korzystaj z aktualnych informacji na swoim koncie CSSBuy; przedstawiona tutaj oś czasu jest ramą planowania, a nie gwarantowanym harmonogramem dostawy.",
+      "intro": "Czas dostawy CSSBuy obejmuje kilka odrębnych etapów: wysyłkę przez sprzedawcę, dotarcie do magazynu, Twoją kontrolę i wybory dotyczące wysyłki, przygotowanie paczki oraz transport międzynarodowy. Sprawdź etap na swoim koncie przed porównywaniem jakichkolwiek szacunków. Szacowany czas transportu na danej trasie nie obejmuje wszystkich wcześniejszych kroków, a jeden termin dostawy nie odnosi się do każdego miejsca docelowego ani każdej paczki.",
       "sections": [
         {
           "heading": "Rozpisz oś czasu przed porównywaniem deklaracji dostawy",
@@ -626,13 +689,14 @@
       "sourceIds": [
         "buyforme",
         "storage"
-      ]
+      ],
+      "updatedAt": "2026-10-29"
     },
     {
       "id": "warehouse",
       "slug": "cssbuy-warehouse-consolidation",
-      "title": "Przechowywanie w magazynie CSSBuy i konsolidacja paczek",
-      "description": "Planuj przechowywanie, sprawdzaj produkty i łącz paczki świadomie, uwzględniając rzeczywiste towary, terminy i ograniczenia tras.",
+      "title": "Magazyn CSSBuy: przechowywanie, kontrola jakości i łączenie przesyłek",
+      "description": "Zdecyduj, które produkty w magazynie są gotowe do wysyłki, co sprawdzić przed połączeniem zamówień i jak opakowanie może zmienić koszt paczki.",
       "category": "Magazyn i kontrola jakości",
       "keywords": [
         "magazyn cssbuy",
@@ -640,14 +704,42 @@
         "przechowywanie cssbuy",
         "pakowanie paczek cssbuy"
       ],
-      "intro": "Magazyn to miejsce, w którym oddzielne zakupy stają się planem paczki. Ta elastyczność jest cenna, ale bezterminowo gromadzony zbiór zamówień może też utrudniać zarządzanie kosztami i terminami. Dobry plan określa, które produkty są gotowe, które wymagają decyzji i które rzeczywiście skorzystają na wspólnej podróży. CSSBuy opisuje konsolidację i kilka usług pakowania na oficjalnej stronie Ship For Me. Ten poradnik wyjaśnia, jak zdecydować, czego potrzebujesz, bez założenia, że największa możliwa paczka jest zawsze najlepsza.",
+      "intro": "Przed połączeniem produktów w jedną paczkę CSSBuy sprawdź, czy każdy z nich dotarł, jest zgodny z zamówieniem i przeszedł zlecone kontrole. Wyjaśnij niewłaściwy rozmiar lub brakującą część przed wysyłką międzynarodową. Następnie porównaj wspólną paczkę z osobnymi przesyłkami na podstawie rzeczywistej wagi, wymiarów i dostępnych tras. Łączenie produktów to decyzja dotycząca całej paczki, a nie automatyczna gwarancja tańszej dostawy.",
       "sections": [
         {
           "heading": "Utwórz spis oparty na decyzjach",
           "paragraphs": [
             "Dla każdego produktu w magazynie zapisz identyfikator zamówienia, datę przybycia, aktualną decyzję i następne działanie. Przydatne decyzje to: gotowy do wysyłki, oczekiwanie na pomiar, wniosek o zwrot i oczekiwanie na inny produkt. Te oznaczenia ułatwiają działanie bardziej niż pojedyncza lista posiadanych rzeczy. Pokazują, które produkty mogą przejść dalej, a które wstrzymałyby paczkę.",
             "Dodaj powód do każdego produktu, który świadomie pozostawiasz w magazynie. Być może inny zakup jest już w transporcie krajowym albo musisz porównać dwa pomiary. Powód z datą ponownego sprawdzenia jest planem; nieograniczone czekanie na znalezienie czegoś jeszcze do kupienia nim nie jest. Regularnie przeglądaj spis i usuwaj założenia, które przestały być prawdziwe. Jeśli oczekiwany produkt towarzyszący stanie się niedostępny, ponownie oceń paczkę zamiast pozwalać, aby stary plan trwał automatycznie."
-          ]
+          ],
+          "table": {
+            "headers": [
+              "Przed połączeniem produktów",
+              "Decyzja"
+            ],
+            "rows": [
+              [
+                "Wszystkie produkty dotarły?",
+                "Nie dodawaj do paczki brakujących produktów ani tych z nierozwiązanymi problemami."
+              ],
+              [
+                "Wątpliwości dotyczące QC wyjaśnione?",
+                "Poproś o brakujące dowody przed wysyłką."
+              ],
+              [
+                "Opakowanie uzgodnione?",
+                "Zachowaj zabezpieczenie wymagane przez każdy produkt."
+              ],
+              [
+                "Trasy spełniają wymagania?",
+                "Sprawdź, czy jeden produkt nie ogranicza wysyłki całej paczki."
+              ],
+              [
+                "Koszty porównane?",
+                "Porównaj warianty wspólnej i osobnych paczek po zapakowaniu."
+              ]
+            ]
+          }
         },
         {
           "heading": "Traktuj terminy przechowywania oddzielnie od decyzji o zwrocie",
@@ -694,7 +786,8 @@
         "shipforme",
         "storage",
         "buyforme"
-      ]
+      ],
+      "updatedAt": "2026-10-29"
     },
     {
       "id": "returns",
@@ -965,6 +1058,186 @@
         "buyforme",
         "expertbuy"
       ]
+    },
+    {
+      "id": "tracking",
+      "slug": "cssbuy-tracking-not-updating",
+      "title": "Śledzenie CSSBuy się nie aktualizuje? Sprawdź przesyłkę krok po kroku",
+      "description": "Znajdź numer śledzenia CSSBuy, odróżnij utworzenie etykiety od skanu przewoźnika i przygotuj właściwe zgłoszenie do pomocy, gdy aktualizacje przesyłki ustaną.",
+      "category": "Wysyłka",
+      "keywords": [
+        "cssbuy tracking",
+        "cssbuy tracking not updating",
+        "cssbuy parcel tracking",
+        "cssbuy tracking number"
+      ],
+      "intro": "Jeśli śledzenie CSSBuy się nie aktualizuje, najpierw sprawdź, czy paczka rzeczywiście opuściła magazyn. Otwórz szczegóły przesyłki na swoim oficjalnym koncie, skopiuj numer śledzenia i porównaj ostatnie zdarzenie z datą z danymi wskazanego tam przewoźnika. Utworzenie etykiety, przechowywanie towaru w magazynie i przyjęcie paczki przez przewoźnika to różne etapy. Ten poradnik pomoże Ci ustalić etap, zebrać przydatne dowody i zdecydować, o co zapytać w następnej kolejności. Nie obiecuje daty dostawy ani nie daje dostępu do Twojego prywatnego zamówienia.",
+      "sections": [
+        {
+          "heading": "1. Znajdź szczegóły przesyłki, zanim sprawdzisz stronę do śledzenia",
+          "paragraphs": [
+            "Po wysyłce CSSBuy kieruje kupujących do sekcji My Parcel. Zacznij od swojego konta, aby mieć pewność, że identyfikator przesyłki, wybrana usługa wysyłkowa i numer śledzenia dotyczą tej samej paczki. Numer zamówienia produktu może odnosić się do zakupu u sprzedawcy; nie musi być numerem używanym w transporcie międzynarodowym. Jeśli połączono kilka zakupów, znajdź przesyłkę zawierającą te produkty, zamiast sprawdzać każdy zakup osobno.",
+            "Skopiuj cały numer zamiast przepisywać go ręcznie. Sprawdź, czy podczas zaznaczania tekstu na telefonie nie skopiowano przypadkowo spacji. Zapisz ostatnie zdarzenie oraz jego datę i godzinę dokładnie tak, jak są wyświetlane. Zachowaj zrzuty ekranu do własnego użytku, ale przed opublikowaniem czegokolwiek usuń imię i nazwisko, adres oraz pełny numer śledzenia. Publiczna dyskusja może pomóc wyjaśnić status, ale nie zastąpi prywatnych szczegółów przesyłki ani nie pozwoli ustalić, kto obecnie ma Twoją paczkę."
+          ]
+        },
+        {
+          "heading": "2. Odróżnij utworzenie etykiety od przyjęcia przez przewoźnika",
+          "paragraphs": [
+            "Etykieta lub numer śledzenia mogą istnieć, zanim przewoźnik zarejestruje przejęcie paczki. Przeczytaj treść samego zdarzenia: otrzymanie danych i przyjęcie do transportu potwierdzają różne rzeczy. Jeśli historia pokazuje tylko dane elektroniczne, zapytaj, czy paczka jest nadal przygotowywana, czy została już przekazana. Nie zakładaj, że pojawienie się pierwszego numeru oznacza odlot samolotu.",
+            "Sprawdź też, czy na Twoim koncie jest coś, co wymaga działania. Pytanie o pakowanie bez odpowiedzi, niedokończona płatność za wysyłkę lub poprawka adresu mogą wymagać uwagi przed kolejnym etapem. To elementy do sprawdzenia, a nie diagnoza przyczyny Twojego opóźnienia. Jeśli na ekranie nie ma wyjaśnienia, poproś pomoc techniczną o potwierdzenie obecnego etapu i następnego oczekiwanego zdarzenia. Taka prośba jest bardziej przydatna niż pytanie, dlaczego bliżej nieokreślona przesyłka trwa tak długo."
+          ]
+        },
+        {
+          "heading": "3. Porównaj przewoźnika i ostatnie zdarzenie z datą",
+          "paragraphs": [
+            "Korzystaj z danych przewoźnika wskazanego w szczegółach przesyłki. Jeśli późniejszy wpis podaje inny numer dostawy lokalnej, zachowaj oba numery i zanotuj, jakiego odcinka drogi dotyczy każdy z nich. Numer nierozpoznawany przez jednego przewoźnika może należeć do innej usługi albo nie mieć jeszcze żadnego publicznego zdarzenia. Nie sprawdzaj przypadkowych przewoźników, aż pojawi się niepowiązany wynik: samo dopasowanie numeru nie wystarczy do zidentyfikowania Twojej przesyłki.",
+            "Gdy informacje na dwóch ekranach się różnią, porównaj rzeczywiste daty i godziny zdarzeń oraz opisy lokalizacji. Godzina odświeżenia strony nie jest godziną przemieszczenia paczki. Zachowaj oryginalny tekst statusu oraz jego automatyczne tłumaczenie, ponieważ przetłumaczone określenie logistyczne może brzmieć bardziej definitywnie niż oryginalny komunikat. Poproś CSSBuy o wyjaśnienie nieznanego zdarzenia na podstawie szczegółów przesyłki. Ani ilustracja na mapie, ani szacunkowy pasek postępu nie dowodzą, że paczka fizycznie znajduje się w danym miejscu."
+          ]
+        },
+        {
+          "heading": "4. Zdecyduj, czy poczekać, czy zadać pytanie",
+          "paragraphs": [
+            "Nie ma jednej liczby dni, po której każda przesyłka CSSBuy jest opóźniona. Właściwym punktem odniesienia są aktualne informacje dla wybranej usługi wysyłkowej i konkretny etap widoczny na koncie. Sprawdź, czy usługa podaje przedział czasu na nadanie, szacowany czas transportu, czy oba te terminy. Szacowanego czasu transportu nie należy bez wyjaśnienia traktować jako obietnicy dotyczącej całego okresu od dnia zapłaty za produkt.",
+            "Skontaktuj się z pomocą, gdy wymagane jest działanie, w historii pojawia się niezrozumiała nieprawidłowość albo przekroczono odpowiedni termin podany dla usługi bez wyjaśnienia. Jeśli obowiązujące warunki wskazują termin złożenia reklamacji lub zapytania, zapisz tę datę osobno, zamiast zakładać, że możesz czekać bez końca. Zapytaj, jaki termin dotyczy Twojej przesyłki. Ciągłe odświeżanie tego samego ekranu lub otwieranie kilku identycznych rozmów nie spowoduje pojawienia się nowego skanu przewoźnika."
+          ]
+        },
+        {
+          "heading": "5. Przygotuj jedną jasną wiadomość do pomocy",
+          "paragraphs": [
+            "Skorzystaj z opcji notatki lub kontaktu z pomocą przypisanej do przesyłki na swoim oficjalnym koncie. Wiadomość powinna być na tyle krótka, by łatwo ją przeczytać, ale wystarczająco szczegółowa, by można było zbadać sprawę. Wyjaśnij, jakiego kolejnego kroku oczekiwano i który wpis przestał się zmieniać. Poproś o konkretną odpowiedź: potwierdzenie przekazania paczki, wyjaśnienie, kto jest przewoźnikiem, wskazanie brakującego działania lub instrukcję wszczęcia postępowania wyjaśniającego. Nie wysyłaj haseł ani danych karty płatniczej.",
+            "Na przykład: w szczegółach mojej przesyłki widnieje numer śledzenia, ale ostatnie zdarzenie to nadal otrzymanie danych. Proszę potwierdzić, czy paczka została przekazana przewoźnikowi, który przewoźnik powinien rozpoznawać ten numer i czy muszę coś zrobić. Rzeczywiste daty i identyfikator przesyłki podaj prywatnie. Ten przykład jest wzorem pytania, a nie stwierdzeniem, że każda paczka bez aktualizacji śledzenia nadal znajduje się w magazynie."
+          ],
+          "bullets": [
+            "Identyfikator przesyłki i usługa wysyłkowa wybrana na koncie.",
+            "Ostatnie zdarzenie, jego data i godzina oraz miejsce, w którym je wyświetlono.",
+            "Wszelkie wiadomości na koncie lub etapy płatności, które nadal wymagają działania.",
+            "Konkretne potwierdzenie lub następny krok, którego potrzebujesz."
+          ]
+        },
+        {
+          "heading": "6. Ostrożnie postępuj w razie nieprawidłowości lub problemu z dostawą",
+          "paragraphs": [
+            "Jeśli w historii widnieje problem z adresem, próba doręczenia lub konieczność odbioru, sprawdź oficjalne instrukcje przewoźnika dotyczące tej przesyłki. Nieoczekiwane żądania płatności zweryfikuj na swoim koncie lub na stronie przewoźnika, na którą wejdziesz samodzielnie. Wiadomość zawierająca numer Twojej paczki również może wprowadzać w błąd. Nie otwieraj nieznanego linku tylko dlatego, że przyszedł akurat wtedy, gdy czekasz na paczkę.",
+            "Jeśli status wskazuje doręczenie, ale nie możesz znaleźć paczki, sprawdź miejsce dostawy i dostępne dowody doręczenia, a następnie przekaż fakty właściwemu przewoźnikowi i CSSBuy. Jeśli paczka dotrze uszkodzona lub wydaje się niekompletna, zachowaj opakowanie zewnętrzne i zrób wyraźne zdjęcia, zanim cokolwiek wyrzucisz. Opisz braki lub uszkodzenia w odniesieniu do szczegółów zamówienia. Dowody pomagają wyjaśnić sprawę, ale same w sobie nie gwarantują zwrotu pieniędzy ani odszkodowania."
+          ]
+        },
+        {
+          "heading": "7. Rozpatruj osobno śledzenie, koszt wysyłki i czas dostawy",
+          "paragraphs": [
+            "Zdarzenie w śledzeniu odpowiada na pytanie o postęp przesyłki. Nie wyjaśnia każdej opłaty, nie poświadcza zawartości paczki ani nie gwarantuje następnej daty doręczenia. Przechowuj wycenę wysyłki, ostateczne wymiary paczki i historię śledzenia jako osobne dokumenty. Jeśli masz także pytanie o koszt, poproś o odpowiednie zestawienie opłat, zamiast zakładać, że niewyjaśniony brak aktualizacji śledzenia spowodował zmianę ceny.",
+            "Podobnie zakup produktu, oczekiwanie na sprzedawcę, przeglądanie zdjęć magazynowych i nadanie przesyłki międzynarodowej to różne części realizacji zamówienia. Planując przyszły zakup, porównuj te etapy osobno. Uwzględnij niepewność, jeśli produkt jest potrzebny na urodziny, wyjazd lub inne wydarzenie o ustalonej dacie. Poprzednia udana dostawa jest przydatnym osobistym punktem odniesienia, ale nie dowodzi, że nowa paczka dotrze według tego samego harmonogramu."
+          ]
+        },
+        {
+          "heading": "8. Zadbaj, by następne sprawdzenie było przydatne",
+          "paragraphs": [
+            "Po otrzymaniu odpowiedzi zapisz, jaka kolejna aktualizacja została zapowiedziana lub jakie działanie masz wykonać. Sprawdź, czy odpowiedź dotyczy Twojej konkretnej przesyłki i usługi wysyłkowej. Jeśli jest niejasna, dopytaj o brakującą informację w tej samej rozmowie, zamiast zaczynać od nowa z innym opisem. Zachowaj obowiązujący termin złożenia zapytania oraz przekazane dowody.",
+            "Zanim uznasz sprawę za zakończoną, potwierdź, co się zmieniło: pojawił się pierwszy skan przewoźnika, udostępniono numer lokalny, poprawiono adres lub wszczęto postępowanie wyjaśniające. To różne rezultaty i tylko niektóre wskazują na przemieszczenie paczki. CSSBuy Home to niezależny serwis z poradnikami i inspiracjami zakupowymi. Nie możemy sprawdzić Twojego konta ani interweniować w sprawie przesyłki; miejscem rozwiązania problemu pozostają oficjalne szczegóły paczki i odpowiedzialny zespół pomocy."
+          ]
+        }
+      ],
+      "takeaways": [
+        "Znajdź szczegóły przesyłki międzynarodowej i skopiuj jej dokładny numer śledzenia.",
+        "Przeczytaj ostatnie zdarzenie z datą, zanim uznasz paczkę za opóźnioną.",
+        "Korzystaj z oficjalnej rozmowy dotyczącej przesyłki i zachowuj istotne dowody."
+      ],
+      "sourceIds": [
+        "buyforme",
+        "project"
+      ],
+      "publishedAt": "2026-10-29",
+      "updatedAt": "2026-10-29"
+    },
+    {
+      "id": "link-help",
+      "slug": "cssbuy-link-not-working",
+      "title": "Link CSSBuy nie działa? Napraw linki Weidian, Taobao i 1688",
+      "description": "Rozwiąż problem z linkiem do produktu w CSSBuy: odzyskaj oryginalną ofertę, sprawdź produkt i wariant oraz przygotuj zlecenie Expert Buy, gdy import się nie powiedzie.",
+      "category": "Poradniki zakupowe",
+      "keywords": [
+        "cssbuy link not working",
+        "cssbuy link converter",
+        "weidian to cssbuy",
+        "taobao link cssbuy",
+        "1688 cssbuy"
+      ],
+      "intro": "Gdy link do produktu w CSSBuy nie działa, zacznij od oryginalnej oferty sprzedawcy. Sprawdź, czy się otwiera, wskazuje właściwy produkt i nadal oferuje odpowiedni wariant. Następnie wklej adres URL tej oferty do CSSBuy. Skopiowana strona arkusza, strona główna sklepu i oferta produktu to różne linki. Jeśli automatyczny import się nie powiedzie, oficjalny poradnik zakupowy wskazuje Expert Buy. Ten poradnik pokazuje, co sprawdzić przed zapłatą, bez traktowania konwersji linku jako dowodu dostępności produktu lub bezpieczeństwa zakupu.",
+      "sections": [
+        {
+          "heading": "1. Ustal, jaki rodzaj linku skopiowano",
+          "paragraphs": [
+            "Strona służąca do wyszukiwania produktów może prowadzić w kilka miejsc: do szczegółów w tym serwisie, wpisu w katalogu źródłowym, oryginalnej oferty na platformie handlowej i strony zakupu. Zacznij od ustalenia, którym z nich dysponujesz. Adres produktu w CSSBuy Home wskazuje wpis w tym katalogu. Przydaje się do powrotu do znalezionego produktu, ale nie jest ofertą sprzedawcy, której CSSBuy potrzebuje do rozpoznania zakupu.",
+            "Otwórz szczegóły produktu i poszukaj oryginalnej oferty lub oficjalnego odnośnika do zakupu. Potwierdź, że zdjęcie produktu, sprzedawca i dostępne opcje odpowiadają temu, co zamierzasz kupić. Wynik wyszukiwania lub strona główna sklepu mogą zawierać wiele produktów i nie wskazywać jednego konkretnego. Jeśli masz tylko zrzut ekranu, najpierw odnajdź dokładną ofertę lub poproś o pełne informacje o sprzedawcy i produkcie. Nie wybieraj podobnie wyglądającego wyniku wyłącznie po to, by import zadziałał."
+          ]
+        },
+        {
+          "heading": "2. Odzyskaj pełny oryginalny adres URL produktu",
+          "paragraphs": [
+            "Funkcja udostępniania na telefonie może skopiować tekst objaśniający razem z linkiem. Oddziel właściwy adres URL od otaczającej go wiadomości, zanim wkleisz go w pole zakupu. Jeśli skrócony link otwiera stronę pośrednią, przejdź do właściwego produktu i sprawdź stronę docelową. Zachowaj oryginalny link w notatkach, aby móc wyjaśnić, skąd pochodzi, jeśli otrzymana strona wygląda niewłaściwie.",
+            "Podczas porządkowania linku nie usuwaj identyfikatora produktu. Niektóre parametry zapytania służą do identyfikacji produktu, a nie do śledzenia wizyty. Usunięcie wszystkiego po znaku zapytania może więc usunąć część potrzebną do odnalezienia produktu. Jednocześnie adres płatności przypisany do konta lub prywatny adres zamówienia nie jest publiczną ofertą. Udostępniaj wyłącznie publiczne informacje o produkcie wymagane do zakupu i nigdy nie kopiuj hasła, kodu logowania ani prywatnego linku do płatności do zlecenia zakupu produktu."
+          ]
+        },
+        {
+          "heading": "3. Porównaj link Weidian z oryginalnym produktem",
+          "paragraphs": [
+            "W przypadku produktu znalezionego na Weidian sprawdź oryginalny identyfikator produktu i sprzedawcę w ofercie. Numer wpisu w katalogu źródłowym to odrębny identyfikator. Podstawienie tego numeru do adresu zakupu może wskazać niewłaściwy produkt lub wywołać błąd. Link zakupowy na tej stronie jest tworzony tylko wtedy, gdy dostępne są oryginalne dane obsługiwanej platformy handlowej; mimo to należy go porównać z produktem, który chcesz kupić.",
+            "Porównaj więcej niż pierwsze zdjęcie. Sprawdź tytuł, dostępne rozmiary, kolory i wszelkie szczegóły odróżniające podobne oferty. Sprzedawca może wykorzystywać jedną ofertę dla kilku wersji lub akcesoriów. Jeśli strona się ładuje, ale nie ma na niej wybranej wersji, link technicznie działa, lecz zakup nadal nie jest odpowiedni. Zapytaj o tę konkretną wersję, zamiast traktować poprawne otwarcie strony jako powód do wyboru dowolnej opcji."
+          ]
+        },
+        {
+          "heading": "4. Sprawdź opcje Taobao i 1688 przed porównaniem cen",
+          "paragraphs": [
+            "Po zaimportowaniu oferty z Taobao lub 1688 sprawdź wybraną opcję, zanim porównasz wyświetloną kwotę z arkuszem. Cena początkowa może dotyczyć innego rozmiaru, koloru, ilości lub elementu. Zapisz nazwę opcji i ilość, którą rzeczywiście zamierzasz zamówić. Różnica w cenie jest powodem do sprawdzenia wyboru, ale sama w sobie nie dowodzi, że import działa nieprawidłowo.",
+            "W przypadku 1688 sprawdź minimalną ilość wymaganą przez dostawcę i cenę obowiązującą dla tej ilości. CSSBuy wyraźnie zaleca kupującym zapoznanie się z tymi warunkami. Pojedyncza próbka, opakowanie zbiorcze i ilość hurtowa nie muszą oznaczać tego samego. Jeśli zaimportowana strona nie wyjaśnia wymogu, ustal go przed dokonaniem płatności. Zapytaj też, czy dokładnie te towary można wysłać odpowiednią usługą dostawy do Twojego miejsca docelowego; prawidłowa oferta nie potwierdza możliwości wysyłki międzynarodowej."
+          ]
+        },
+        {
+          "heading": "5. Odróżnij błąd importu od niedostępnej oferty",
+          "paragraphs": [
+            "Jeśli oryginalna oferta otwiera się poprawnie, ale strona zakupowa nie potrafi jej odczytać, jedną z możliwości jest problem z importem. Jeśli oryginalną stronę usunięto, przekierowuje ona do sklepu lub nie oferuje już produktu, wielokrotne zmienianie adresu zakupu nie przywróci brakującej oferty. Porównaj te dwie sytuacje, zanim poświęcisz czas na konwerter. Zapisz dokładny błąd i oryginalny publiczny adres URL dla zespołu pomocy.",
+            "Ekran logowania lub komunikat zachęcający do otwarcia aplikacji również wymagają ostrożnej interpretacji. Nie dowodzą, że produkt jest wyprzedany, a ten poradnik nie pozwala ustalić, czy strona sprzedawcy jest dostępna dla pośrednika zakupowego. Skorzystaj ze zwykłego sposobu dostępu do platformy i w razie potrzeby poproś CSSBuy o sprawdzenie oferty. Nie wpisuj danych logowania do platformy w nieznanym konwerterze ani nie pozwalaj stronie zewnętrznej żądać dostępu do Twojego konta zakupowego."
+          ]
+        },
+        {
+          "heading": "6. Przygotuj zlecenie Expert Buy z pełnymi informacjami",
+          "paragraphs": [
+            "CSSBuy oferuje Expert Buy jako ręczną ścieżkę zakupu, gdy zwykłe wyszukiwanie nie potrafi obsłużyć produktu. Przygotuj oryginalny adres URL produktu, tytuł, odpowiednie zdjęcie, wybrany rozmiar lub kolor, ilość, cenę produktu i informacje o wysyłce krajowej. Oddziel potwierdzone informacje od sprzedawcy od danych jedynie szacowanych. Puste lub uzupełnione na podstawie domysłu pole może doprowadzić do nieprawidłowego zamówienia, nawet jeśli samo zlecenie zostanie poprawnie wysłane.",
+            "W polu uwag opisz dokładną opcję i zadaj nierozstrzygnięte pytanie. Na przykład zapytaj, czy podana cena obejmuje jedną sztukę, czy zestaw, albo czy dostępny jest konkretny rozmiar. Przed zapłatą porównaj otrzymane szczegóły zamówienia ze swoimi notatkami. Ręczny zakup nie sprawia, że niesprawdzony sprzedawca staje się godny zaufania, ani nie ustanawia prawa do zwrotu. Przeczytaj aktualny komunikat o ryzyku związanym ze sprzedawcą i zdecyduj, czy pozostała niepewność jest akceptowalna przy tym zakupie."
+          ],
+          "bullets": [
+            "Zachowaj oryginalną publiczną ofertę i informacje o sprzedawcy.",
+            "Podaj na piśmie dokładną opcję i ilość.",
+            "Rozdziel cenę produktu, dostawę krajową i późniejszą wysyłkę międzynarodową.",
+            "Uzupełnij brakujące informacje przed zatwierdzeniem zakupu."
+          ]
+        },
+        {
+          "heading": "7. Dowiedz się, co konwerter linków potrafi, a czego nie",
+          "paragraphs": [
+            "Konwerter zmienia obsługiwany format linku na odnośnik do innego miejsca. Nie może potwierdzić stanu magazynowego, autentyczności produktu, sprawdzić egzemplarza, który otrzymasz, ani zagwarantować zwrotu. Nawet poprawna konwersja może otworzyć ofertę, która zmieniła się od czasu dodania jej do arkusza. Traktuj przekonwertowaną stronę jako początek weryfikacji i zachowaj zapis wybranej wersji.",
+            "Ta strona nie udostępnia uniwersalnego narzędzia do konwersji linków. Strony obsługiwanych produktów mogą oferować bezpośredni odnośnik do CSSBuy, natomiast inne produkty wymagają oryginalnej oferty i ręcznej weryfikacji. Brak bezpośredniego przycisku zakupu nie oznacza, że należy wymyślić identyfikator produktu. Skorzystaj z oryginalnej oferty i oficjalnej procedury zakupu. Zachowaj szczególną ostrożność, gdy narzędzie twierdzi, że naprawia każdy link z platform handlowych, ale nie pokazuje, jaki produkt rzeczywiście wybrało."
+          ]
+        },
+        {
+          "heading": "8. Sprawdź zamówienie ponownie, zanim przejdziesz do wysyłki",
+          "paragraphs": [
+            "Po przyjęciu zlecenia zakupu zachowaj oryginalną ofertę, wybraną opcję i potwierdzoną kwotę. Te zapisy ułatwiają kontrolę w magazynie: możesz porównać otrzymany produkt z zamówioną wersją. Galeria sprzedawcy stanowi punkt odniesienia dla oferty, natomiast zdjęcia Twojego produktu w magazynie dostarczają innych dowodów. Żadnych z nich nie należy opisywać jako dowodu autentyczności ani gwarancji niewidocznych na zdjęciach właściwości użytkowych.",
+            "Jeśli otrzymany produkt różni się od potwierdzonego zamówienia, zapytaj o dostępne rozwiązania przed umieszczeniem go w przesyłce międzynarodowej. Opisz konkretny problem i dołącz odpowiednie dowody prywatnie. Nie zakładaj, że po wysłaniu produktu za granicę praktyczne możliwości zwrotu pozostaną takie same. Gdy szczegóły produktu będą się zgadzać, skorzystaj z poradników o kosztach wysyłki i magazynie, aby porównać kompletne warianty przesyłki. Naprawienie linku to dopiero pierwszy krok do otrzymania produktu, który zamierzasz kupić."
+          ]
+        }
+      ],
+      "takeaways": [
+        "Używaj oryginalnej oferty produktu, a nie numeru wpisu w katalogu.",
+        "Sprawdź wariant, ilość i sprzedawcę, zanim zaakceptujesz zaimportowaną cenę.",
+        "Gdy automatyczny import zawiedzie, użyj Expert Buy, aby złożyć kompletne zlecenie ręczne."
+      ],
+      "sourceIds": [
+        "buyforme",
+        "expertbuy",
+        "project"
+      ],
+      "publishedAt": "2026-10-29",
+      "updatedAt": "2026-10-29"
     }
   ],
   "sources": [
@@ -972,13 +1245,13 @@
       "id": "buyforme",
       "title": "CSSBuy — Buy For Me: oficjalny proces zakupu",
       "url": "https://m.cssbuy.com/buyforme",
-      "accessedAt": "2026-10-23"
+      "accessedAt": "2026-10-29"
     },
     {
       "id": "expertbuy",
       "title": "CSSBuy — Expert Buy: informacje o produktach i ostrzeżenie o ryzyku związanym ze sprzedawcą",
       "url": "https://m.cssbuy.com/expertbuy",
-      "accessedAt": "2026-10-23"
+      "accessedAt": "2026-10-29"
     },
     {
       "id": "about",
@@ -1018,7 +1291,7 @@
     },
     {
       "id": "catalog",
-      "title": "cnfansge.com — Źródło katalogu produktów",
+      "title": "Katalog produktów",
       "url": "https://cnfansge.com/",
       "accessedAt": "2026-10-23"
     },

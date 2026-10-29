@@ -27,7 +27,7 @@
     {
       "id": "data",
       "q": "Where do the products and listing photos come from?",
-      "a": "The product catalog and seller galleries come from cnfansge.com. CSSBuy Home does not maintain a separate product database or manufacture product images. Confirm the selected offer after opening its purchasing destination.",
+      "a": "The product catalog and seller galleries come from Product catalog. CSSBuy Home does not maintain a separate product database or manufacture product images. Confirm the selected offer after opening its purchasing destination.",
       "sourceIds": [
         "catalog",
         "project"
@@ -36,7 +36,7 @@
     {
       "id": "qc",
       "q": "Are the product photos verified CSSBuy QC photos?",
-      "a": "Seller galleries should not be treated as warehouse QC. A verified order-specific QC photo must be associated with the received item. This preview does not label cnfansge seller images as verified CSSBuy inspection evidence.",
+      "a": "Seller galleries should not be treated as warehouse QC. A verified order-specific QC photo must be associated with the received item. This preview does not label Product catalog seller images as verified CSSBuy inspection evidence.",
       "sourceIds": [
         "catalog",
         "project"
@@ -63,7 +63,7 @@
     {
       "id": "weidian-link",
       "q": "Which ID belongs in a Weidian buying link?",
-      "a": "Use the original marketplace product ID. The supplied example is https://www.cssbuy.com/shop/goodsDetail?type=micro&id=7755101935. A cnfansge catalog record number is not a substitute for that marketplace ID.",
+      "a": "Use the original marketplace product ID. The supplied example is https://www.cssbuy.com/shop/goodsDetail?type=micro&id=7755101935. A Product catalog catalog record number is not a substitute for that marketplace ID.",
       "sourceIds": [
         "user-link"
       ]
@@ -236,8 +236,8 @@
     {
       "id": "spreadsheet",
       "slug": "cssbuy-spreadsheet-guide",
-      "title": "How to Use a CSSBuy Spreadsheet: A Buyer’s Guide",
-      "description": "A practical CSSBuy spreadsheet guide to comparing product links, checking variants, reading photos and planning a complete purchase.",
+      "title": "CSSBuy Spreadsheet: Find Links, Check Sizes and Order",
+      "description": "Use the CSSBuy spreadsheet to find product links, verify the seller and size, review warehouse photos and plan the full delivered cost.",
       "category": "Getting started",
       "keywords": [
         "cssbuy spreadsheet",
@@ -245,7 +245,7 @@
         "how to use cssbuy",
         "cssbuy product links"
       ],
-      "intro": "A useful CSSBuy spreadsheet should help you make a better buying decision, not simply produce a longer shopping list. A directory can bring links, titles and listing prices together, but the important work begins when you check the actual product behind a card. This guide shows how to turn browsing into a small, documented shortlist, how to separate a seller's presentation from evidence about your own order, and how to decide whether a find still makes sense after shipping. CSSBuy Home is an independent discovery site. Its product catalog comes from cnfansge.com; purchasing and order management take place on CSSBuy.",
+      "intro": "Start with a category or search in the CSSBuy spreadsheet, open a product and verify its original listing. Check the size, color, quantity and current price before continuing to CSSBuy. The catalog helps you discover products; the official order screen confirms what you can buy. Use this guide to move from a saved link to an inspected warehouse item and a realistic shipping budget.",
       "sections": [
         {
           "heading": "Start with a purpose and a realistic shortlist",
@@ -258,7 +258,7 @@
           "heading": "Read the product card as an index entry",
           "paragraphs": [
             "A card condenses a much larger listing. Its title may be shortened, translated or supplied by the source catalog. Its displayed price may describe one option rather than every variation. Treat those fields as a way to find the original offer, then compare the specific size, color, quantity and version you want. A low starting price is not enough to rank two products fairly if one includes an accessory and the other does not.",
-            "On CSSBuy Home, product records and seller galleries originate from cnfansge.com. A seller image illustrates the listing; it does not establish that a particular warehouse item has been inspected. If the site cannot provide a working feature or a verified photo type, do not infer it from an attractive label. Follow the available product link and check what is actually presented before treating a card as evidence."
+            "On CSSBuy Home, product records and seller galleries originate from Product catalog. A seller image illustrates the listing; it does not establish that a particular warehouse item has been inspected. If the site cannot provide a working feature or a verified photo type, do not infer it from an attractive label. Follow the available product link and check what is actually presented before treating a card as evidence."
           ]
         },
         {
@@ -313,7 +313,8 @@
         "buyforme",
         "expertbuy",
         "catalog"
-      ]
+      ],
+      "updatedAt": "2026-10-29"
     },
     {
       "id": "weidian",
@@ -400,8 +401,8 @@
     {
       "id": "qc",
       "slug": "cssbuy-qc-photos-guide",
-      "title": "CSSBuy QC Photos: A Practical Inspection Checklist",
-      "description": "A structured way to review warehouse photos, distinguish seller images and request useful measurements before sending a parcel.",
+      "title": "CSSBuy QC Photos: What to Check Before You Ship",
+      "description": "Inspect your CSSBuy warehouse photos for the correct item, size, color, quantity and visible damage. Learn when to request a clearer photo or measurement.",
       "category": "Warehouse & QC",
       "keywords": [
         "cssbuy qc",
@@ -409,14 +410,42 @@
         "cssbuy quality check",
         "warehouse photos"
       ],
-      "intro": "Quality-control photographs are most useful when you approach them with a question. Does this item match the ordered option? Are the required accessories present? Is the measurement compatible with your needs? Simply looking through a gallery and deciding that an item looks fine can miss the details that matter after delivery. This guide explains a practical review sequence and the limits of visual evidence. CSSBuy's official service pages describe warehouse inspection and photographs. CSSBuy Home does not treat the seller galleries supplied by cnfansge.com as verified warehouse QC, and a product card should never be read as an inspection certificate.",
+      "intro": "Review photos of your actual warehouse item before submitting it for international shipping. Compare the item, color, size label, quantity and visible condition with your order. Request a targeted close-up or measurement when the existing photos cannot answer a specific question. Seller images on a spreadsheet are listing photos; they are not QC photos of your order or proof of authenticity.",
       "sections": [
         {
           "heading": "Identify whose item and which image you are viewing",
           "paragraphs": [
             "Before inspecting details, identify the evidence. A seller photograph presents an offer. A public buyer photograph records someone else's purchase. A warehouse photograph associated with your order records your received item at a particular moment. These categories can complement one another, but they answer different questions. A detailed public picture does not establish the condition of a unit that has not yet arrived for you.",
             "Check the order reference and the selected option before comparing pictures. Two items can share a model name while differing in color, size, materials or included components. If you cannot match a picture to the relevant option, keep it as background information. This prevents an especially attractive image from becoming the standard against which you judge an unrelated variant. The strongest comparison begins with a clear record of exactly what you asked to buy."
-          ]
+          ],
+          "table": {
+            "headers": [
+              "Check",
+              "If it is unclear"
+            ],
+            "rows": [
+              [
+                "Item and option",
+                "Compare with your saved listing and order details."
+              ],
+              [
+                "Size label",
+                "Ask for a readable label photo and the measurement you need."
+              ],
+              [
+                "Color and condition",
+                "Request a clear close-up of the specific area."
+              ],
+              [
+                "Quantity and components",
+                "Check every ordered piece, not only the main item."
+              ],
+              [
+                "Decision",
+                "Resolve the question before approving international shipping."
+              ]
+            ]
+          }
         },
         {
           "heading": "Review identity and quantity before minor details",
@@ -477,13 +506,14 @@
         "buyforme",
         "shipforme",
         "catalog"
-      ]
+      ],
+      "updatedAt": "2026-10-29"
     },
     {
       "id": "cost",
       "slug": "cssbuy-shipping-cost",
-      "title": "CSSBuy Shipping Cost: How to Estimate Your Total",
-      "description": "Understand the inputs behind parcel costs and compare packaging, chargeable weight and route quotes without relying on a fixed price per kilogram.",
+      "title": "CSSBuy Shipping Calculator: Estimate Cost and Parcel Weight",
+      "description": "Estimate CSSBuy shipping with your destination, packed weight and dimensions. Compare eligible routes, volumetric weight and the final parcel quote.",
       "category": "Shipping",
       "keywords": [
         "cssbuy shipping cost",
@@ -491,14 +521,46 @@
         "cssbuy volumetric weight",
         "cssbuy shipping estimate"
       ],
-      "intro": "There is no useful universal answer to “How much is CSSBuy shipping?” without a destination, eligible route and description of the packed parcel. A price copied from another person's order can be an interesting example, but it is not a quote for yours. This guide shows how to build an estimate that remains useful as information improves. The aim is not to predict an unprepared parcel to the last cent. It is to understand which inputs can change the result, reserve enough budget and compare the final options on equal terms.",
+      "intro": "Use the official CSSBuy shipping calculator with your destination, estimated packed weight and parcel dimensions. Check which routes accept your goods, then compare quotes using the same inputs. There is no universal price per kilogram: packaging, route rules and the final measured parcel can change the amount. This guide explains the calculation and gives you a checklist to use before paying.",
       "sections": [
         {
           "heading": "Separate the question into known and unknown inputs",
           "paragraphs": [
             "Start by listing what you know: destination country and region, product quantities, approximate item dimensions and any special handling needs. Then list what remains uncertain: packed weight, box dimensions, available routes and optional services. A calculator is only as informative as those inputs. Entering an optimistic guessed weight produces an optimistic output, not a more accurate one.",
             "Use a date beside each saved estimate and preserve the inputs that generated it. This allows you to explain a later change without assuming something went wrong. A quote made for one destination or package size should not be compared directly with a different scenario. If the goods include batteries, liquids, fragile components or other potentially restricted features, check route eligibility first. The cheapest displayed route is irrelevant if the actual parcel cannot use it."
-          ]
+          ],
+          "table": {
+            "headers": [
+              "Calculator input",
+              "What to check"
+            ],
+            "rows": [
+              [
+                "Destination",
+                "Use the country and region that will receive the parcel."
+              ],
+              [
+                "Packed weight",
+                "Include protective packaging and any boxes you keep."
+              ],
+              [
+                "Parcel dimensions",
+                "Use length, width and height in the calculator units."
+              ],
+              [
+                "Goods and route",
+                "Check restrictions before comparing prices."
+              ],
+              [
+                "Chargeable weight",
+                "Read the selected route rules and rounding."
+              ],
+              [
+                "Final amount",
+                "Compare the quote with the verified package and account charge."
+              ]
+            ]
+          }
         },
         {
           "heading": "Distinguish physical weight from the weight used to price a route",
@@ -559,13 +621,14 @@
         "buyforme",
         "estimates",
         "shipforme"
-      ]
+      ],
+      "updatedAt": "2026-10-29"
     },
     {
       "id": "time",
       "slug": "cssbuy-shipping-time",
-      "title": "How Long Does CSSBuy Take? An Order Timeline",
-      "description": "Separate seller dispatch, warehouse decisions, international transit and final delivery so you can plan and ask better tracking questions.",
+      "title": "CSSBuy Shipping Time: From Seller to Warehouse to Delivery",
+      "description": "Understand each stage of CSSBuy delivery, where to check your parcel and what to ask when seller, warehouse or carrier progress stops.",
       "category": "Shipping",
       "keywords": [
         "cssbuy shipping time",
@@ -573,7 +636,7 @@
         "cssbuy order status",
         "cssbuy tracking"
       ],
-      "intro": "A delivery estimate is difficult to interpret unless you know where its clock starts. Time spent waiting for a seller, checking an item in the warehouse or deciding what to consolidate is different from time spent in international transit. This guide breaks the journey into practical stages and shows how to investigate a delay without turning another buyer's experience into a promise for your own order. Use the current information in your CSSBuy account for a specific transaction; the timeline here is a planning framework, not a guaranteed delivery schedule.",
+      "intro": "CSSBuy delivery time includes several separate stages: seller dispatch, arrival at the warehouse, your inspection and shipping choices, parcel preparation and international transport. Check the stage in your account before comparing any estimate. A route transit estimate does not cover every earlier step, and no single delivery time applies to every destination or parcel.",
       "sections": [
         {
           "heading": "Draw the timeline before comparing delivery claims",
@@ -626,13 +689,14 @@
       "sourceIds": [
         "buyforme",
         "storage"
-      ]
+      ],
+      "updatedAt": "2026-10-29"
     },
     {
       "id": "warehouse",
       "slug": "cssbuy-warehouse-consolidation",
-      "title": "CSSBuy Warehouse Storage and Parcel Consolidation",
-      "description": "Plan storage, review items and combine parcels thoughtfully using the actual goods, deadlines and route constraints.",
+      "title": "CSSBuy Warehouse: Storage, QC and Parcel Consolidation",
+      "description": "Decide which warehouse items are ready to ship, what to check before combining orders and how packaging can change your parcel cost.",
       "category": "Warehouse & QC",
       "keywords": [
         "cssbuy warehouse",
@@ -640,14 +704,42 @@
         "cssbuy storage",
         "cssbuy parcel packing"
       ],
-      "intro": "The warehouse is where separate purchases become a parcel plan. That flexibility is valuable, but an open-ended collection of orders can also make costs and deadlines harder to manage. A good plan identifies which items are ready, which need a decision and which genuinely benefit from traveling together. CSSBuy describes consolidation and several packing services on its official Ship For Me page. This guide explains how to decide what you need without assuming that the largest possible parcel is always the best one.",
+      "intro": "Before consolidating a CSSBuy parcel, check that every included item has arrived, matches your order and has passed the checks you requested. Resolve a wrong size or missing part before shipping it internationally. Then compare the combined package with separate parcels using actual weight, dimensions and eligible routes. Consolidation is a decision about the complete package, not an automatic guarantee of cheaper delivery.",
       "sections": [
         {
           "heading": "Create an inventory based on decisions",
           "paragraphs": [
             "For each warehouse item, record its order identifier, arrival date, current decision and next action. Useful decisions include ready to send, awaiting a measurement, return requested and waiting for another item. These labels are more actionable than a single list of things you own. They show which items can move forward and which ones would hold up a parcel.",
             "Attach a reason to any item you are deliberately keeping in storage. Perhaps another purchase is already moving domestically, or you need to compare two measurements. A reason with a review date is a plan; waiting indefinitely for something else to buy is not. Revisit the inventory regularly and remove assumptions that are no longer true. If the expected companion item becomes unavailable, reassess the parcel rather than allowing an old plan to continue automatically."
-          ]
+          ],
+          "table": {
+            "headers": [
+              "Before combining items",
+              "Decision"
+            ],
+            "rows": [
+              [
+                "All items received?",
+                "Leave missing or unresolved items out of the parcel."
+              ],
+              [
+                "QC questions resolved?",
+                "Ask for the missing evidence before shipping."
+              ],
+              [
+                "Packaging agreed?",
+                "Keep the protection required by each item."
+              ],
+              [
+                "Routes eligible?",
+                "Check whether one item restricts the whole parcel."
+              ],
+              [
+                "Cost compared?",
+                "Compare packed combined and separate parcel scenarios."
+              ]
+            ]
+          }
         },
         {
           "heading": "Treat storage deadlines as separate from return decisions",
@@ -694,7 +786,8 @@
         "shipforme",
         "storage",
         "buyforme"
-      ]
+      ],
+      "updatedAt": "2026-10-29"
     },
     {
       "id": "returns",
@@ -965,6 +1058,186 @@
         "buyforme",
         "expertbuy"
       ]
+    },
+    {
+      "id": "tracking",
+      "slug": "cssbuy-tracking-not-updating",
+      "title": "CSSBuy Tracking Not Updating? Check Your Parcel Step by Step",
+      "description": "Find your CSSBuy tracking number, distinguish a label from a carrier scan, and prepare the right support request when parcel updates stop.",
+      "category": "Shipping",
+      "keywords": [
+        "cssbuy tracking",
+        "cssbuy tracking not updating",
+        "cssbuy parcel tracking",
+        "cssbuy tracking number"
+      ],
+      "intro": "If your CSSBuy tracking is not updating, first check whether the parcel has actually left the warehouse. Open the parcel record in your official account, copy its tracking number and compare the latest dated event with the carrier shown there. A created label, a warehouse item and a parcel accepted by a carrier are different stages. This guide helps you identify the stage, collect useful evidence and decide what to ask next. It does not promise a delivery date or provide access to your private order.",
+      "sections": [
+        {
+          "heading": "1. Find the parcel record before checking a tracking website",
+          "paragraphs": [
+            "CSSBuy directs buyers to the My Parcel area after dispatch. Start inside your own account so that the parcel identifier, selected shipping line and tracking number belong to the same shipment. An item order number may describe the purchase from the seller; it is not necessarily the number used for international transport. If you combined several purchases, look for the parcel containing those items rather than checking each purchase separately.",
+            "Copy the complete number instead of retyping it. Check for spaces accidentally included when selecting text on a phone. Record the latest event and its timestamp exactly as displayed. Keep screenshots for your own records, but remove your name, address and complete tracking number before posting anything publicly. A public discussion can help explain a status; it cannot replace the private parcel record or establish who currently holds your package."
+          ]
+        },
+        {
+          "heading": "2. Separate label creation from carrier acceptance",
+          "paragraphs": [
+            "A label or tracking number can exist before a carrier records possession of a parcel. Read the event itself: information received and accepted for transport describe different evidence. If the record only shows electronic information, ask whether the parcel is still being prepared or has already been handed over. Do not assume that the first number appearing means an aircraft has departed.",
+            "Also check whether there is an outstanding action in your account. An unanswered packaging question, an incomplete shipping payment or an address correction may need attention before the next step. These are things to inspect, not a diagnosis of your particular delay. If the screen gives no explanation, ask support to confirm the present stage and the next expected event. That is a more useful request than asking why an unspecified shipment is taking too long."
+          ]
+        },
+        {
+          "heading": "3. Compare the carrier and the latest dated event",
+          "paragraphs": [
+            "Use the carrier identified in your parcel details. If a later record provides a different local delivery number, save both numbers and note which part of the journey each describes. A number that is not recognized by one carrier may belong to another service or may not yet have a public event. Avoid trying random carriers until an unrelated result appears: matching a number alone is not enough to identify your shipment.",
+            "When two screens disagree, compare the actual event timestamps and location descriptions. The time you refreshed a page is not the time the parcel moved. Keep the original status text as well as any automatic translation, since a translated logistics phrase can sound more final than the underlying message. Ask CSSBuy to clarify an unfamiliar event using the parcel record. Neither a map illustration nor an estimated progress bar proves the parcel is physically at that point."
+          ]
+        },
+        {
+          "heading": "4. Decide whether waiting or asking a question is appropriate",
+          "paragraphs": [
+            "There is no single number of days after which every CSSBuy parcel is late. The relevant comparison is the current guidance for the line you selected and the specific stage shown in your account. Check whether the service publishes a dispatch window, a transit estimate or both. A transit estimate should not silently become a promise for the entire period from the day you paid for a product.",
+            "Contact support when an action is requested, the record contains an exception you do not understand, or the relevant service guidance has been exceeded without an explanation. If a claim or inquiry deadline is displayed in the applicable terms, keep that date separately rather than assuming you can wait indefinitely. Ask which deadline applies to your parcel. Repeatedly refreshing the same screen or opening several identical conversations will not create a new carrier scan."
+          ]
+        },
+        {
+          "heading": "5. Prepare one clear support message",
+          "paragraphs": [
+            "Use the note or support option associated with the parcel in your official account. Keep the message short enough to read but detailed enough to investigate. Explain what you expected to happen next and which record has stopped changing. Ask for a specific answer: confirmation of handover, clarification of the carrier, identification of a missing action, or instructions for opening an inquiry. Do not send passwords or payment card details.",
+            "For example: my parcel record shows a tracking number, but the latest event is still information received. Please confirm whether it has been handed to the carrier, which carrier should recognize this number, and whether I need to take any action. Add the actual dates and parcel identifier privately. This example is a question template, not a claim that every quiet tracking record is still in the warehouse."
+          ],
+          "bullets": [
+            "Parcel identifier and the shipping line selected in your account.",
+            "The latest event, its timestamp and where you saw it.",
+            "Any account message or payment step still awaiting action.",
+            "The specific confirmation or next step you need."
+          ]
+        },
+        {
+          "heading": "6. Handle an exception or a delivery problem carefully",
+          "paragraphs": [
+            "If the record reports an address issue, attempted delivery or collection requirement, check the official carrier instructions associated with that shipment. Verify unexpected payment requests through your account or the carrier website you reached independently. A message containing your parcel number can still be misleading. Do not follow an unfamiliar link merely because it arrives while you are waiting for a package.",
+            "If the status says delivered but you cannot find the parcel, check the delivery location and any available delivery evidence, then contact the relevant carrier and CSSBuy with the facts. If the parcel arrives damaged or appears incomplete, preserve the outer packaging and take clear photos before discarding anything. Describe what is missing or damaged against your order record. Evidence helps an investigation, but it does not by itself guarantee a refund or compensation."
+          ]
+        },
+        {
+          "heading": "7. Keep tracking, shipping cost and delivery time separate",
+          "paragraphs": [
+            "A tracking event answers a question about progress. It does not explain every charge, certify the contents of the package or guarantee the next delivery date. Keep the shipping quote, final parcel measurements and tracking history as separate records. If you also have a cost question, ask for the relevant charge breakdown instead of assuming an unexplained tracking delay caused the price change.",
+            "Likewise, buying a product, waiting for the seller, reviewing warehouse photos and sending the international parcel are different parts of the order timeline. When planning a future order, compare those stages separately. Leave room for uncertainty if the item is needed for a birthday, trip or other fixed event. A previous successful delivery is a useful personal reference, but it is not evidence that a new parcel will follow the same schedule."
+          ]
+        },
+        {
+          "heading": "8. Make the next check useful",
+          "paragraphs": [
+            "After receiving an answer, write down the promised next update or the action you were asked to complete. Check that the response refers to your actual parcel and shipping line. If the answer is unclear, follow up in the same conversation with the missing fact rather than beginning again with a different description. Save any applicable inquiry deadline and the evidence you supplied.",
+            "Before closing the issue, confirm what changed: a first carrier scan appeared, a local number became available, an address was corrected, or an investigation was opened. Those outcomes are different, and only some indicate that the parcel has moved. CSSBuy Home is an independent reading and product discovery site. We cannot inspect your account or intervene in a shipment; the official parcel record and the responsible support team remain the places to resolve it."
+          ]
+        }
+      ],
+      "takeaways": [
+        "Find the international parcel record and copy its exact tracking number.",
+        "Read the latest dated event before deciding that a parcel is delayed.",
+        "Use the official parcel conversation and preserve relevant evidence."
+      ],
+      "sourceIds": [
+        "buyforme",
+        "project"
+      ],
+      "publishedAt": "2026-10-29",
+      "updatedAt": "2026-10-29"
+    },
+    {
+      "id": "link-help",
+      "slug": "cssbuy-link-not-working",
+      "title": "CSSBuy Link Not Working? Fix Weidian, Taobao and 1688 Links",
+      "description": "Troubleshoot a CSSBuy product link: recover the original listing, check the item and variant, and prepare an Expert Buy request when import fails.",
+      "category": "Buying guides",
+      "keywords": [
+        "cssbuy link not working",
+        "cssbuy link converter",
+        "weidian to cssbuy",
+        "taobao link cssbuy",
+        "1688 cssbuy"
+      ],
+      "intro": "When a CSSBuy product link does not work, start with the original seller listing. Check that it opens, identifies the product you want and still offers the correct option. Then paste that listing URL into CSSBuy. A copied spreadsheet page, a shop homepage and a product listing are different links. If automatic import fails, the official buying guide points to Expert Buy. This guide shows what to verify before paying, without treating link conversion as proof that an item is available or safe to purchase.",
+      "sections": [
+        {
+          "heading": "1. Identify the kind of link you copied",
+          "paragraphs": [
+            "A product discovery page may contain several destinations: a local detail page, a source catalog record, an original marketplace listing and a buying link. Begin by identifying which one you have. A CSSBuy Home product address identifies an entry in this catalog. It is useful for returning to the find, but it is not the seller listing that CSSBuy needs to understand the purchase.",
+            "Open the product detail and look for its original listing or official buying destination. Confirm that the product image, seller and available options agree with what you intended to buy. A search result or shop homepage can contain many items and may not identify a particular one. If you only have a screenshot, first recover a precise listing or ask for complete seller and item information. Do not select a similar-looking result simply to make the import work."
+          ]
+        },
+        {
+          "heading": "2. Recover the full original product URL",
+          "paragraphs": [
+            "A mobile share action may copy explanatory text together with a link. Separate the actual URL from the surrounding message before pasting it into the buying field. If a short link opens an intermediate page, navigate to the intended product and inspect the destination. Keep the original link in your notes so that you can explain where it came from if the resulting page looks wrong.",
+            "Do not remove the item identifier while cleaning a link. Some query parameters identify the product rather than track a visit. Deleting everything after a question mark can therefore remove the part needed to find the item. At the same time, an account-specific checkout or private order address is not a public listing. Share only the public product information required for the purchase, and never copy a password, login code or private payment link into a product request."
+          ]
+        },
+        {
+          "heading": "3. Check a Weidian link against the original item",
+          "paragraphs": [
+            "For a Weidian find, verify the original item identifier and seller on the listing. A source catalog record number is a separate identifier. Substituting that record number into a buying URL can point to the wrong item or produce an error. The buying link on this site is built only when the original supported marketplace information is available; it should still be checked against the product you want.",
+            "Compare more than the first image. Check the title, available sizes, colors and any details that distinguish similar listings. A seller may use one listing for several versions or accessories. If the page loads but the intended version is absent, the link is technically working while the purchase is still unsuitable. Ask about that exact version instead of treating a successful page load as permission to select an arbitrary option."
+          ]
+        },
+        {
+          "heading": "4. Check Taobao and 1688 options before comparing prices",
+          "paragraphs": [
+            "When a Taobao or 1688 listing imports, inspect the selected option before comparing the displayed amount with a spreadsheet. The starting price may apply to a different size, color, quantity or component. Record the option name and the quantity you actually intend to order. A price difference is a reason to investigate the selection, not evidence by itself that the import is broken.",
+            "For 1688, check the supplier minimum quantity and the price applicable to that quantity. CSSBuy specifically advises buyers to review those conditions. An individual sample, a pack and a wholesale quantity may not be interchangeable. If the imported page does not make the requirement clear, resolve it before submitting payment. Also ask whether the exact goods can use a suitable delivery service to your destination; a valid listing does not establish international shipping eligibility."
+          ]
+        },
+        {
+          "heading": "5. Distinguish an import failure from an unavailable listing",
+          "paragraphs": [
+            "If the original listing opens correctly but the buying page cannot read it, an import problem is one possibility. If the original page is removed, redirects to a shop or no longer offers the item, repeatedly changing the buying URL will not restore the missing offer. Compare those two situations before spending time on a converter. Record the exact error and the original public URL for support.",
+            "A login screen or an app prompt also needs careful interpretation. It does not prove that an item is sold out, and this guide cannot tell whether the seller page is accessible to the purchasing agent. Use normal access to the marketplace and ask CSSBuy to check the listing if necessary. Avoid entering marketplace credentials into an unfamiliar converter or allowing a third-party page to request access to your shopping account."
+          ]
+        },
+        {
+          "heading": "6. Prepare an Expert Buy request with complete information",
+          "paragraphs": [
+            "CSSBuy offers Expert Buy as a manual purchasing route when ordinary search cannot handle an item. Prepare the original product URL, title, relevant image, requested size or color, quantity, item price and domestic shipping information. Distinguish confirmed seller information from anything you have only estimated. A blank or guessed field can create an incorrect order even when the request itself submits successfully.",
+            "Use the notes field to describe the exact option and ask the unresolved question. For example, ask whether the shown price covers one item or a set, or whether a particular size is available. Before paying, check the returned order details against your notes. Manual purchasing does not make an unverified seller trustworthy or establish return rights. Read the current seller-risk notice and decide whether the remaining uncertainty is acceptable for your purchase."
+          ],
+          "bullets": [
+            "Keep the original public listing and seller information.",
+            "Specify the exact option and quantity in writing.",
+            "Separate item price from domestic delivery and later international shipping.",
+            "Resolve missing information before authorizing the purchase."
+          ]
+        },
+        {
+          "heading": "7. Understand what a link converter can and cannot do",
+          "paragraphs": [
+            "A converter changes a supported link format into another destination. It cannot confirm stock, authenticate a product, inspect the item that will arrive or guarantee a return. Even a correct conversion may open a listing that has changed since it was added to a spreadsheet. Treat the converted page as the beginning of verification and keep a record of the version you selected.",
+            "This website does not provide a universal link conversion tool. Supported product pages may offer a direct CSSBuy destination, while other items require the original listing and manual checking. If there is no direct buying button, that is not an instruction to invent a product identifier. Use the original listing and the official buying process. Be especially careful when a tool claims to fix every marketplace link without showing which product it has actually selected."
+          ]
+        },
+        {
+          "heading": "8. Check the order once more before moving to shipping",
+          "paragraphs": [
+            "After a purchase request is accepted, preserve the original listing, chosen option and confirmed amount. These records make warehouse inspection more useful: you can compare the received item with the version you requested. A seller gallery is a reference for the offer, while photos of your warehouse item provide different evidence. Neither should be described as proof of authenticity or a guarantee of hidden performance.",
+            "If the received item differs from the confirmed order, ask about the available resolution before putting it into an international parcel. Keep the problem specific and attach the relevant evidence privately. Do not assume that shipping the item overseas leaves the same practical return options. Once the product details are correct, use the shipping cost and warehouse guides to compare complete parcel choices. Fixing the link is only the first step toward receiving the item you intended to buy."
+          ]
+        }
+      ],
+      "takeaways": [
+        "Use the original product listing, not a catalog record number.",
+        "Check the variant, quantity and seller before accepting an imported price.",
+        "Use Expert Buy for a complete manual request when automatic import fails."
+      ],
+      "sourceIds": [
+        "buyforme",
+        "expertbuy",
+        "project"
+      ],
+      "publishedAt": "2026-10-29",
+      "updatedAt": "2026-10-29"
     }
   ],
   "sources": [
@@ -972,13 +1245,13 @@
       "id": "buyforme",
       "title": "CSSBuy — Buy For Me: official buying process",
       "url": "https://m.cssbuy.com/buyforme",
-      "accessedAt": "2026-10-23"
+      "accessedAt": "2026-10-29"
     },
     {
       "id": "expertbuy",
       "title": "CSSBuy — Expert Buy: product information and seller-risk notice",
       "url": "https://m.cssbuy.com/expertbuy",
-      "accessedAt": "2026-10-23"
+      "accessedAt": "2026-10-29"
     },
     {
       "id": "about",
@@ -1018,7 +1291,7 @@
     },
     {
       "id": "catalog",
-      "title": "cnfansge.com — Product catalog source",
+      "title": "Product catalog",
       "url": "https://cnfansge.com/",
       "accessedAt": "2026-10-23"
     },

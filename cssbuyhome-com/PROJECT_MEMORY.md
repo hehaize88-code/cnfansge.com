@@ -465,3 +465,12 @@ GitHub main提交6d1dda2fc2afe69ea2e69f8aadf33ad8dec239ca，Cloudflare build f0a
 
 
 GA4接收验收完成：同一媒体资源首页“过去30分钟的活跃用户数”已显示2，说明已收到访问数据（包含本次测试流量，不能当作新增自然流量）。顶部历史报告初始化提示仍显示“尚未收到任何数据”，与实时卡片不同步，不据此判断安装失败。Google代码安装成功与实时接收均已验证。
+
+## 2026-10-29 SEO/content release
+
+- Continued the interrupted research-driven update in `cssbuyhome-com/`; preserved the original cnfansge catalog adapter, same-site search/details and CSSBuy purchase destinations.
+- Added tracking-not-updating and link-not-working guides in all 24 languages (48 new article URLs); revised spreadsheet, shipping cost, shipping time, warehouse and QC introductions/metadata across all languages.
+- Added three practical check tables, contextual related links, six homepage guide cards, shipping navigation and intent analytics. Removed the upstream catalog brand from visible site copy while retaining its real data and source URLs.
+- Fixed catalog pagination canonical/OG URLs and reciprocal hreflang; retained noindex for search/sorting utilities and preview hosts. Updated Article publication/modification metadata and article sitemap lastmod.
+- Production build validation: 12 tests passed; 504 rendered pages, 288 article versions, 672 FAQs, 456 sitemap entries. Runtime localized upstream-failure handling, canonical routing, 24-way language links and preview exclusion passed. Real catalog network validation is also required in the existing GitHub workflow.
+- Existing Cloudflare GitHub integration remains the production release path. No new site, database, hosting account or domain is created.

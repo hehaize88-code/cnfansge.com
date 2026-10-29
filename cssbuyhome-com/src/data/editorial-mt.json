@@ -27,7 +27,7 @@
     {
       "id": "data",
       "q": "Minn fejn jiġu l-prodotti u r-ritratti tal-offerti?",
-      "a": "Il-katalgu tal-prodotti u l-galleriji tal-bejjiegħa jiġu minn cnfansge.com. CSSBuy Home ma jżommx bażi tad-data separata tal-prodotti u ma joħloqx immaġnijiet tal-prodotti. Ikkonferma l-offerta magħżula wara li tiftaħ id-destinazzjoni tax-xiri tagħha.",
+      "a": "Il-katalgu tal-prodotti u l-galleriji tal-bejjiegħa jiġu minn Katalgu tal-prodotti. CSSBuy Home ma jżommx bażi tad-data separata tal-prodotti u ma joħloqx immaġnijiet tal-prodotti. Ikkonferma l-offerta magħżula wara li tiftaħ id-destinazzjoni tax-xiri tagħha.",
       "sourceIds": [
         "catalog",
         "project"
@@ -36,7 +36,7 @@
     {
       "id": "qc",
       "q": "Ir-ritratti tal-prodotti huma ritratti QC ivverifikati ta' CSSBuy?",
-      "a": "Il-galleriji tal-bejjiegħa m'għandhomx jitqiesu bħala kontroll tal-kwalità fil-maħżen. Ritratt QC ivverifikat speċifiku għal ordni għandu jkun assoċjat mal-oġġett riċevut. Din il-previżjoni ma timmarkax l-immaġnijiet tal-bejjiegħa ta' cnfansge bħala evidenza vverifikata ta' spezzjoni ta' CSSBuy.",
+      "a": "Il-galleriji tal-bejjiegħa m'għandhomx jitqiesu bħala kontroll tal-kwalità fil-maħżen. Ritratt QC ivverifikat speċifiku għal ordni għandu jkun assoċjat mal-oġġett riċevut. Din il-previżjoni ma timmarkax l-immaġnijiet tal-bejjiegħa ta' Katalgu tal-prodotti bħala evidenza vverifikata ta' spezzjoni ta' CSSBuy.",
       "sourceIds": [
         "catalog",
         "project"
@@ -63,7 +63,7 @@
     {
       "id": "weidian-link",
       "q": "Liema ID għandu jintuża f'link tax-xiri Weidian?",
-      "a": "Uża l-ID oriġinali tal-prodott fuq is-suq online. L-eżempju pprovdut huwa https://www.cssbuy.com/shop/goodsDetail?type=micro&id=7755101935. Numru ta' rekord tal-katalgu cnfansge mhuwiex sostitut għal dak l-ID tas-suq online.",
+      "a": "Uża l-ID oriġinali tal-prodott fuq is-suq online. L-eżempju pprovdut huwa https://www.cssbuy.com/shop/goodsDetail?type=micro&id=7755101935. Numru ta' rekord tal-katalgu Katalgu tal-prodotti mhuwiex sostitut għal dak l-ID tas-suq online.",
       "sourceIds": [
         "user-link"
       ]
@@ -236,8 +236,8 @@
     {
       "id": "spreadsheet",
       "slug": "cssbuy-spreadsheet-guide",
-      "title": "Kif tuża folja ta' kalkolu CSSBuy: gwida għax-xerrej",
-      "description": "Gwida prattika għall-folja ta' kalkolu CSSBuy biex tqabbel links ta' prodotti, tiċċekkja varjanti, tifhem ir-ritratti u tippjana xiri sħiħ.",
+      "title": "Spreadsheet CSSBuy: sib links, iċċekkja d-daqsijiet u ordna",
+      "description": "Uża l-ispreadsheet CSSBuy biex issib links tal-prodott, tivverifika l-bejjiegħ u d-daqs, tirrevedi r-ritratti tal-maħżen u tippjana l-ispiża sħiħa mogħtija.",
       "category": "L-ewwel passi",
       "keywords": [
         "folja ta' kalkolu CSSBuy",
@@ -245,7 +245,7 @@
         "kif tuża CSSBuy",
         "links ta’ prodotti CSSBuy"
       ],
-      "intro": "Folja ta' kalkolu CSSBuy utli għandha tgħinek tieħu deċiżjoni tax-xiri aħjar, mhux sempliċement toħloq lista tax-xiri itwal. Direttorju jista' jiġbor links, titli u prezzijiet ta' offerti flimkien, iżda x-xogħol importanti jibda meta tiċċekkja l-prodott reali wara karta. Din il-gwida turi kif tbiddel l-ibbrawżjar f'għażla żgħira u dokumentata, kif tissepara l-preżentazzjoni tal-bejjiegħ mill-evidenza dwar l-ordni tiegħek stess, u kif tiddeċiedi jekk skoperta tibqax tagħmel sens wara t-tbaħħir. CSSBuy Home huwa sit indipendenti ta' skoperta. Il-katalgu tal-prodotti tiegħu ġej minn cnfansge.com; ix-xiri u l-ġestjoni tal-ordnijiet isiru fuq CSSBuy.",
+      "intro": "Ibda b'kategorija jew fittex fl-ispreadsheet CSSBuy, iftaħ prodott u vverifika l-elenkar oriġinali tiegħu. Iċċekkja d-daqs, il-kulur, il-kwantità u l-prezz kurrenti qabel ma tkompli CSSBuy. Il-katalgu jgħinek tiskopri prodotti; l-iskrin tal-ordni uffiċjali jikkonferma dak li tista'tixtri. Uża din il-gwida biex timxi minn link salvat għal oġġett tal-maħżen spezzjonat u baġit realistiku tat-tbaħħir.",
       "sections": [
         {
           "heading": "Ibda bi skop u għażla preliminari realistika",
@@ -258,7 +258,7 @@
           "heading": "Aqra l-karta tal-prodott bħala entrata f'indiċi",
           "paragraphs": [
             "Karta tiġbor fil-qosor paġna tal-prodott ferm akbar. It-titlu tagħha jista' jkun imqassar, tradott jew ipprovdut mill-katalgu tas-sors. Il-prezz muri jista' jiddeskrivi għażla waħda minflok kull varjant. Ittratta dawk l-oqsma bħala mod kif issib l-offerta oriġinali, imbagħad qabbel id-daqs, il-kulur, il-kwantità u l-verżjoni speċifiċi li trid. Prezz inizjali baxx mhuwiex biżżejjed biex tikklassifika żewġ prodotti b'mod ġust jekk wieħed jinkludi aċċessorju u l-ieħor le.",
-            "Fuq CSSBuy Home, ir-rekords tal-prodotti u l-galleriji tal-bejjiegħa jiġu minn cnfansge.com. Immaġni tal-bejjiegħ turi l-offerta; ma tistabbilixxix li oġġett partikolari fil-maħżen ġie spezzjonat. Jekk is-sit ma jistax jipprovdi funzjoni li taħdem jew tip ta' ritratt ivverifikat, tiddeduċihx minn tikketta attraenti. Segwi l-link tal-prodott disponibbli u ċċekkja x'inhu ppreżentat tassew qabel tqis karta bħala evidenza."
+            "Fuq CSSBuy Home, ir-rekords tal-prodotti u l-galleriji tal-bejjiegħa jiġu minn Katalgu tal-prodotti. Immaġni tal-bejjiegħ turi l-offerta; ma tistabbilixxix li oġġett partikolari fil-maħżen ġie spezzjonat. Jekk is-sit ma jistax jipprovdi funzjoni li taħdem jew tip ta' ritratt ivverifikat, tiddeduċihx minn tikketta attraenti. Segwi l-link tal-prodott disponibbli u ċċekkja x'inhu ppreżentat tassew qabel tqis karta bħala evidenza."
           ]
         },
         {
@@ -313,7 +313,8 @@
         "buyforme",
         "expertbuy",
         "catalog"
-      ]
+      ],
+      "updatedAt": "2026-10-29"
     },
     {
       "id": "weidian",
@@ -400,8 +401,8 @@
     {
       "id": "qc",
       "slug": "cssbuy-qc-photos-guide",
-      "title": "Ritratti QC ta' CSSBuy: lista prattika għall-ispezzjoni",
-      "description": "Mod strutturat biex teżamina ritratti tal-maħżen, tiddistingwi l-immaġnijiet tal-bejjiegħ u titlob qisien utli qabel tibgħat pakkett.",
+      "title": "Ritratti QC ta’ CSSBuy: x’għandek tiċċekkja qabel it-tbaħħir",
+      "description": "Spezzjona r-ritratti tal-maħżen CSSBuy tiegħek għall-oġġett korrett, id-daqs, il-kulur, il-kwantità u l-ħsara viżibbli. Tgħallem meta titlob ritratt jew kejl aktar ċar.",
       "category": "Maħżen u kontroll tal-kwalità",
       "keywords": [
         "QC CSSBuy",
@@ -409,14 +410,42 @@
         "kontroll tal-kwalità CSSBuy",
         "ritratti tal-maħżen"
       ],
-      "intro": "Ir-ritratti tal-kontroll tal-kwalità huma l-aktar utli meta tħares lejhom b'mistoqsija. Dan l-oġġett jaqbel mal-għażla ordnata? L-aċċessorji meħtieġa huma preżenti? Il-qies huwa kompatibbli mal-ħtiġijiet tiegħek? Jekk sempliċement tgħaddi minn gallerija u tiddeċiedi li oġġett jidher tajjeb, tista' titlef id-dettalji li huma importanti wara l-kunsinna. Din il-gwida tispjega sekwenza prattika ta' eżami u l-limiti tal-evidenza viżiva. Il-paġni uffiċjali tas-servizzi ta' CSSBuy jiddeskrivu l-ispezzjoni u r-ritratti fil-maħżen. CSSBuy Home ma jqisx il-galleriji tal-bejjiegħa pprovduti minn cnfansge.com bħala QC ivverifikat tal-maħżen, u karta tal-prodott qatt m'għandha tinqara bħala ċertifikat ta' spezzjoni.",
+      "intro": "Irrevedi r-ritratti tal-oġġett tal-maħżen attwali tiegħek qabel ma tissottomettih għat-tbaħħir internazzjonali. Qabbel l-oġġett, il-kulur, it-tikketta tad-daqs, il-kwantità u l-kundizzjoni viżibbli mal-ordni tiegħek. Itlob għal għeluq jew kejl immirat meta r-ritratti eżistenti ma jkunux jistgħu jwieġbu mistoqsija speċifika. Stampi tal-bejjiegħ fuq spreadsheet qed jelenkaw ritratti; mhumiex ritratti QC tal-ordni tiegħek jew prova tal-awtentiċità.",
       "sections": [
         {
           "heading": "Identifika ta' min hu l-oġġett u liema immaġni qed tara",
           "paragraphs": [
             "Qabel tispezzjona d-dettalji, identifika l-evidenza. Ritratt tal-bejjiegħ jippreżenta offerta. Ritratt pubbliku ta' xerrej jirreġistra x-xiri ta' xi ħadd ieħor. Ritratt tal-maħżen assoċjat mal-ordni tiegħek jirreġistra l-oġġett li rċevejt f'mument partikolari. Dawn il-kategoriji jistgħu jikkomplementaw lil xulxin, iżda jwieġbu mistoqsijiet differenti. Stampa pubblika dettaljata ma tistabbilixxix il-kundizzjoni ta' unità li għadha ma waslitx għalik.",
             "Iċċekkja r-referenza tal-ordni u l-għażla magħżula qabel tqabbel l-istampi. Żewġ oġġetti jistgħu jaqsmu l-istess isem ta' mudell iżda jkunu differenti fil-kulur, id-daqs, il-materjali jew il-komponenti inklużi. Jekk ma tistax tqabbel stampa mal-għażla rilevanti, żommha bħala informazzjoni ta' sfond. Dan jipprevjeni immaġni partikolarment attraenti milli ssir l-istandard li bih tiġġudika varjant mhux relatat. L-aktar tqabbil b'saħħtu jibda b'rekord ċar ta' eżattament dak li tlabt tixtri."
-          ]
+          ],
+          "table": {
+            "headers": [
+              "Iċċekkja",
+              "Jekk mhux ċar"
+            ],
+            "rows": [
+              [
+                "Oġġett u għażla",
+                "Qabbel mal-lista ssejvjata tiegħek u d-dettalji tal-ordni."
+              ],
+              [
+                "Tikketta tad-daqs",
+                "Staqsi għal ritratt tat-tikketta li tinqara u l-kejl li għandek bżonn."
+              ],
+              [
+                "Kulur u kundizzjoni",
+                "Itlob għal għeluq ċar taż-żona speċifika."
+              ],
+              [
+                "Kwantità u komponenti",
+                "Iċċekkja kull biċċa ordnata, mhux biss l-oġġett prinċipali."
+              ],
+              [
+                "Deċiżjoni",
+                "Issolvi l-mistoqsija qabel ma tapprova t-tbaħħir internazzjonali."
+              ]
+            ]
+          }
         },
         {
           "heading": "Eżamina l-identità u l-kwantità qabel dettalji żgħar",
@@ -477,13 +506,14 @@
         "buyforme",
         "shipforme",
         "catalog"
-      ]
+      ],
+      "updatedAt": "2026-10-29"
     },
     {
       "id": "cost",
       "slug": "cssbuy-shipping-cost",
-      "title": "L-ispiża tat-tbaħħir ta' CSSBuy: kif tistma t-total tiegħek",
-      "description": "Ifhem id-data li tiddetermina l-ispejjeż tal-pakketti u qabbel l-ippakkjar, il-piż fatturabbli u l-kwotazzjonijiet tar-rotot mingħajr ma tiddependi fuq prezz fiss għal kull kilogramma.",
+      "title": "Kalkulatur tat-tbaħħir CSSBuy: stima l-ispiża u l-piż tal-pakkett",
+      "description": "Stima t-tbaħħir ta’ CSSBuy skont id-destinazzjoni, il-piż ippakkjat u d-dimensjonijiet. Qabbel ir-rotot eliġibbli, il-piż volumetriku u l-kwotazzjoni finali.",
       "category": "Tbaħħir",
       "keywords": [
         "spiża tat-tbaħħir CSSBuy",
@@ -491,14 +521,46 @@
         "piż volumetriku CSSBuy",
         "stima tat-tbaħħir CSSBuy"
       ],
-      "intro": "M'hemmx tweġiba universali utli għal «Kemm jiswa t-tbaħħir ta' CSSBuy?» mingħajr destinazzjoni, rotta eliġibbli u deskrizzjoni tal-pakkett ippakkjat. Prezz ikkupjat minn ordni ta' persuna oħra jista' jkun eżempju interessanti, iżda mhuwiex kwotazzjoni għal tiegħek. Din il-gwida turi kif tibni stima li tibqa' utli hekk kif titjieb l-informazzjoni. L-għan mhuwiex li tbassar sal-aħħar ċenteżmu pakkett li għadu ma tħejjiex. Huwa li tifhem liema data mdaħħla tista' tbiddel ir-riżultat, tirriżerva baġit biżżejjed u tqabbel l-għażliet finali fuq l-istess bażi.",
+      "intro": "Uża l-kalkulatur uffiċjali tat-tbaħħir CSSBuy mad-destinazzjoni tiegħek, il-piż ippakkjat stmat u d-dimensjonijiet tal-pakketti. Iċċekkja liema rotot jaċċettaw l-oġġetti tiegħek, imbagħad qabbel il-kwotazzjonijiet billi tuża l-istess inputs. M'hemm l-ebda prezz universali għal kull kilogramma: l-ippakkjar, ir-regoli tar-rotta u l-pakkett imkejjel finali jistgħu jibdlu l-ammont. Din il-gwida tispjega l-kalkolu u tagħtik lista ta'kontroll li tuża qabel ma tħallas.",
       "sections": [
         {
           "heading": "Issepara l-mistoqsija f'data magħrufa u mhux magħrufa",
           "paragraphs": [
             "Ibda billi telenka dak li taf: il-pajjiż u r-reġjun tad-destinazzjoni, il-kwantitajiet tal-prodotti, id-dimensjonijiet approssimattivi tal-oġġetti u kwalunkwe ħtieġa ta' mmaniġġjar speċjali. Imbagħad elenka dak li għadu inċert: il-piż wara l-ippakkjar, id-dimensjonijiet tal-kaxxa, ir-rotot disponibbli u s-servizzi fakultattivi. Kalkulatur jagħti informazzjoni utli biss daqs kemm tkun tajba d-data mdaħħla. Li ddaħħal piż maħsub b'mod ottimist jipproduċi riżultat ottimist, mhux wieħed aktar preċiż.",
             "Poġġi data ma' kull stima salvata u żomm id-data mdaħħla li ġġeneratha. Dan jippermettilek tispjega bidla aktar tard mingħajr ma tassumi li xi ħaġa marret ħażin. Kwotazzjoni għal destinazzjoni jew daqs ta' pakkett wieħed m'għandhiex titqabbel direttament ma' xenarju differenti. Jekk il-merkanzija tinkludi batteriji, likwidi, komponenti fraġli jew karatteristiċi oħra li jistgħu jkunu ristretti, iċċekkja l-eliġibbiltà tar-rotta l-ewwel. L-irħas rotta murija hija irrilevanti jekk il-pakkett reali ma jistax jużaha."
-          ]
+          ],
+          "table": {
+            "headers": [
+              "Input tal-kalkulatur",
+              "X'għandek tiċċekkja"
+            ],
+            "rows": [
+              [
+                "Destinazzjoni",
+                "Uża l-pajjiż u r-reġjun li se jirċievu l-pakkett."
+              ],
+              [
+                "Piż ippakkjat",
+                "Inkludi imballaġġ protettiv u kwalunkwe kaxxa li żżomm."
+              ],
+              [
+                "Dimensjonijiet tal-pakketti",
+                "Uża t-tul, il-wisa'u l-għoli fl-unitajiet tal-kalkulatur."
+              ],
+              [
+                "Oġġetti u rotta",
+                "Iċċekkja r-restrizzjonijiet qabel tqabbel il-prezzijiet."
+              ],
+              [
+                "Piż impost",
+                "Aqra r-regoli tar-rotta magħżula u l-arrotondament."
+              ],
+              [
+                "Ammont finali",
+                "Qabbel il-kwotazzjoni mal-pakkett verifikat u l-ħlas tal-kont."
+              ]
+            ]
+          }
         },
         {
           "heading": "Iddistingwi l-piż fiżiku mill-piż użat għall-prezz tar-rotta",
@@ -559,13 +621,14 @@
         "buyforme",
         "estimates",
         "shipforme"
-      ]
+      ],
+      "updatedAt": "2026-10-29"
     },
     {
       "id": "time",
       "slug": "cssbuy-shipping-time",
-      "title": "Kemm idum CSSBuy? Il-kalendarju ta’ ordni",
-      "description": "Ifred id-dispaċċ tal-bejjiegħ, id-deċiżjonijiet fil-maħżen, it-tranżitu internazzjonali u l-kunsinna finali biex tippjana u tistaqsi mistoqsijiet aħjar dwar it-traċċar.",
+      "title": "Żmien tat-tbaħħir CSSBuy: mill-bejjiegħ għall-maħżen sal-kunsinna",
+      "description": "Ifhem kull stadju Tal-kunsinna CSSBuy, fejn tiċċekkja l-pakkett tiegħek u x'għandek tistaqsi meta jieqaf il-progress tal-bejjiegħ, maħżen jew trasportatur.",
       "category": "Tbaħħir",
       "keywords": [
         "ħin tat-tbaħħir cssbuy",
@@ -573,7 +636,7 @@
         "status tal-ordni cssbuy",
         "traċċar cssbuy"
       ],
-      "intro": "Stima tal-kunsinna diffiċli tinterpretaha jekk ma tafx minn fejn jibda jingħadd il-ħin tagħha. Il-ħin li tqatta’ tistenna bejjiegħ, tiċċekkja oġġett fil-maħżen jew tiddeċiedi x’se tgħaqqad huwa differenti mill-ħin fit-tranżitu internazzjonali. Din il-gwida taqsam il-vjaġġ fi stadji prattiċi u turi kif tinvestiga dewmien mingħajr ma tibdel l-esperjenza ta’ xerrej ieħor f’wegħda għall-ordni tiegħek. Għal tranżazzjoni speċifika, uża l-informazzjoni attwali fil-kont tiegħek ta’ CSSBuy; il-kalendarju hawnhekk huwa qafas għall-ippjanar, mhux skeda ta’ kunsinna garantita.",
+      "intro": "Il-ħin tal-kunsinna CSSBuy jinkludi diversi stadji separati: dispaċċ tal-bejjiegħ, wasla fil-maħżen, l-għażliet ta'spezzjoni u tbaħħir tiegħek, preparazzjoni tal-pakketti u trasport internazzjonali. Iċċekkja l-istadju fil-kont tiegħek qabel ma tqabbel kwalunkwe stima. Stima ta'transitu tar-rotta ma tkoprix kull pass preċedenti, u l-ebda ħin ta'kunsinna wieħed ma japplika għal kull destinazzjoni jew pakkett.",
       "sections": [
         {
           "heading": "Fassal il-kalendarju qabel tqabbel stqarrijiet dwar il-kunsinna",
@@ -626,13 +689,14 @@
       "sourceIds": [
         "buyforme",
         "storage"
-      ]
+      ],
+      "updatedAt": "2026-10-29"
     },
     {
       "id": "warehouse",
       "slug": "cssbuy-warehouse-consolidation",
-      "title": "Il-ħażna fil-maħżen u l-konsolidazzjoni tal-pakketti ta’ CSSBuy",
-      "description": "Ippjana l-ħażna, irrevedi l-oġġetti u għaqqad il-pakketti bil-ħsieb abbażi tal-oġġetti reali, l-iskadenzi u r-restrizzjonijiet tar-rotot.",
+      "title": "Maħżen CSSBuy: ħażna, QC u konsolidazzjoni tal-pakketti",
+      "description": "Iddeċiedi liema oġġetti tal-maħżen huma lesti biex jintbagħtu, x'għandek tiċċekkja qabel ma tgħaqqad l-ordnijiet u kif l-imballaġġ jista'jbiddel l-ispiża tal-pakkett tiegħek.",
       "category": "Maħżen u kontroll tal-kwalità",
       "keywords": [
         "maħżen cssbuy",
@@ -640,14 +704,42 @@
         "ħażna cssbuy",
         "ippakkjar tal-pakketti cssbuy"
       ],
-      "intro": "Il-maħżen huwa fejn xiri separat isir pjan għal pakkett. Din il-flessibbiltà hija siewja, iżda ġabra ta’ ordnijiet mingħajr tmiem definit tista’ tagħmel l-ispejjeż u l-iskadenzi aktar diffiċli biex timmaniġġjahom. Pjan tajjeb jidentifika liema oġġetti huma lesti, liema jeħtieġu deċiżjoni u liema verament jibbenefikaw minn vjaġġ flimkien. CSSBuy jiddeskrivi l-konsolidazzjoni u diversi servizzi tal-ippakkjar fuq il-paġna uffiċjali tiegħu Ship For Me. Din il-gwida tispjega kif tiddeċiedi x’teħtieġ mingħajr ma tassumi li l-akbar pakkett possibbli huwa dejjem l-aħjar.",
+      "intro": "Qabel ma tikkonsolida pakkett CSSBuy, iċċekkja li kull oġġett inkluż ikun wasal, jaqbel mal-ordni tiegħek u jkun għadda mill-kontrolli li tlabt. Issolvi daqs ħażin jew parti nieqsa qabel ma tibgħatha internazzjonalment. Imbagħad qabbel il-pakkett ikkombinat ma'pakketti separati billi tuża piż attwali, dimensjonijiet u rotot eliġibbli. Il-konsolidazzjoni hija deċiżjoni dwar il-pakkett sħiħ, mhux garanzija awtomatika ta'kunsinna orħos.",
       "sections": [
         {
           "heading": "Oħloq inventarju bbażat fuq deċiżjonijiet",
           "paragraphs": [
             "Għal kull oġġett fil-maħżen, irreġistra l-identifikatur tal-ordni, id-data tal-wasla, id-deċiżjoni attwali u l-azzjoni li jmiss. Deċiżjonijiet utli jinkludu lest biex jintbagħat, qed jistenna kejl, ritorn mitlub u qed jistenna oġġett ieħor. Dawn it-tikketti jwasslu aktar għal azzjoni minn lista waħda ta’ affarijiet li għandek. Juru liema oġġetti jistgħu jimxu ’l quddiem u liema jżommu pakkett lura.",
             "Orbot raġuni ma’ kull oġġett li qed iżżomm apposta fil-ħażna. Forsi xiri ieħor diġà qed jiċċaqlaq domestikament, jew għandek bżonn tqabbel żewġ kejlijiet. Raġuni b’data ta’ reviżjoni hija pjan; stennija indefinita għal xi ħaġa oħra x’tixtri mhijiex. Erġa’ ara l-inventarju regolarment u neħħi suppożizzjonijiet li m’għadhomx veri. Jekk l-oġġett li kont qed tistenna biex jingħaqad mal-oħrajn ma jibqax disponibbli, erġa’ evalwa l-pakkett minflok tħalli pjan antik ikompli awtomatikament."
-          ]
+          ],
+          "table": {
+            "headers": [
+              "Qabel ma tgħaqqad oġġetti",
+              "Deċiżjoni"
+            ],
+            "rows": [
+              [
+                "L-oġġetti kollha riċevuti?",
+                "Ħalli oġġetti nieqsa jew mhux solvuti barra mill-pakkett."
+              ],
+              [
+                "Mistoqsijiet QC solvuti?",
+                "Staqsi għall-evidenza nieqsa qabel it-tbaħħir."
+              ],
+              [
+                "Ippakkjar miftiehem?",
+                "Żomm il-protezzjoni meħtieġa minn kull oġġett."
+              ],
+              [
+                "Rotot eliġibbli?",
+                "Iċċekkja jekk oġġett wieħed jirrestrinġix il-pakkett kollu."
+              ],
+              [
+                "Spiża mqabbla?",
+                "Qabbel ix-xenarji tal-pakketti ppakkjati u separati."
+              ]
+            ]
+          }
         },
         {
           "heading": "Żomm l-iskadenzi tal-ħażna separati mid-deċiżjonijiet tar-ritorn",
@@ -694,7 +786,8 @@
         "shipforme",
         "storage",
         "buyforme"
-      ]
+      ],
+      "updatedAt": "2026-10-29"
     },
     {
       "id": "returns",
@@ -965,6 +1058,186 @@
         "buyforme",
         "expertbuy"
       ]
+    },
+    {
+      "id": "tracking",
+      "slug": "cssbuy-tracking-not-updating",
+      "title": "It-traċċar ta’ CSSBuy ma jaġġornax? Iċċekkja l-pakkett pass pass",
+      "description": "Sib in-numru tat-traċċar ta’ CSSBuy, iddistingwi tikketta tat-tbaħħir minn skan tat-trasportatur u ħejji talba ċara għall-appoġġ meta jieqfu l-aġġornamenti.",
+      "category": "Tbaħħir",
+      "keywords": [
+        "cssbuy tracking",
+        "cssbuy tracking not updating",
+        "cssbuy parcel tracking",
+        "cssbuy tracking number"
+      ],
+      "intro": "Jekk It-traċċar Tas-CSSBuy tiegħek mhux qed jaġġorna, l-ewwel iċċekkja jekk il-pakkett fil-fatt ħalliex il-maħżen. Iftaħ ir-rekord tal-pakketti fil-kont uffiċjali tiegħek, ikkopja n-numru tat-traċċar tiegħu u qabbel l-aħħar avveniment datat mat-trasportatur muri hemmhekk. Tikketta maħluqa, oġġett tal-maħżen u pakkett aċċettat minn trasportatur huma stadji differenti. Din il-gwida tgħinek tidentifika l-istadju, tiġbor evidenza utli u tiddeċiedi x'għandek tistaqsi wara. Ma jwiegħedx data tal-kunsinna jew jipprovdi aċċess għall-ordni privata tiegħek.",
+      "sections": [
+        {
+          "heading": "1. Sib ir-rekord tal-pakketti qabel ma tiċċekkja websajt tat-traċċar",
+          "paragraphs": [
+            "CSSBuy jidderieġi lix-xerrejja lejn iż-żona Tal-Pakketti Tiegħi wara d-dispaċċ. Ibda ġewwa l-kont tiegħek sabiex l-identifikatur tal-pakketti, il-linja tat-tbaħħir magħżula u n-numru tat-traċċar jappartjenu għall-istess vjeġġ. Numru tal-ordni tal-oġġett jista'jiddeskrivi x-xiri mingħand il-bejjiegħ; mhux neċessarjament in-numru użat għat-trasport internazzjonali. Jekk għaqqad diversi xiri, fittex il-pakkett li fih dawk l-oġġetti aktar milli tiċċekkja kull xiri separatament.",
+            "Ikkopja n-numru sħiħ minflok terġa'tittajpjah. Iċċekkja għal spazji inklużi aċċidentalment meta tagħżel test fuq telefon. Irreġistra l-aħħar avveniment u t-timestamp tiegħu eżattament kif muri. Żomm screenshots għar-rekords tiegħek stess, imma neħħi ismek, l-indirizz u n-numru komplut tat-traċċar qabel ma tpoġġi xi ħaġa pubblikament. Diskussjoni pubblika tista'tgħin biex tispjega status; ma tistax tissostitwixxi r-rekord tal-pakketti privati jew tistabbilixxi min bħalissa għandu l-pakkett tiegħek."
+          ]
+        },
+        {
+          "heading": "2. Ħolqien ta'tikketta separata mill-aċċettazzjoni tat-trasportatur",
+          "paragraphs": [
+            "Tikketta jew numru ta'traċċar jistgħu jeżistu qabel ma trasportatur jirreġistra l-pussess ta'pakkett. Aqra l-avveniment innifsu: informazzjoni riċevuta u aċċettata għat-trasport iddeskrivi evidenza differenti. Jekk ir-rekord juri biss informazzjoni elettronika, staqsi jekk il-pakkett għadux qed jitħejja jew diġà ngħata. Tassumix li l-ewwel numru li jidher ifisser li ajruplan telaq.",
+            "Iċċekkja wkoll jekk hemmx azzjoni pendenti fil-kont tiegħek. Mistoqsija tal-ippakkjar mingħajr tweġiba, ħlas tat-tbaħħir mhux komplut jew korrezzjoni tal-indirizz jista'jkollhom bżonn attenzjoni qabel il-pass li jmiss. Dawn huma affarijiet li għandek tispezzjona, mhux dijanjosi tad-dewmien partikolari tiegħek. Jekk l-iskrin ma jagħti l-ebda spjegazzjoni, staqsi appoġġ biex tikkonferma l-istadju preżenti u l-avveniment mistenni li jmiss. Din hija talba aktar utli milli tistaqsi għaliex vjeġġ mhux speċifikat qed jieħu wisq żmien."
+          ]
+        },
+        {
+          "heading": "3. Qabbel it trasportatur u l aħħar avveniment datat",
+          "paragraphs": [
+            "Uża t-trasportatur identifikat fid-dettalji tal-pakkett tiegħek. Jekk rekord aktar tard jipprovdi numru ta'kunsinna lokali differenti, ħlief iż-żewġ numri u nnota liema parti tal-vjaġġ tiddeskrivi kull wieħed. Numru li mhux rikonoxxut minn trasportatur wieħed jista'jappartjeni għal servizz ieħor jew jista'jkun li għadu ma jkollux avveniment pubbliku. Evita li tipprova trasportaturi bl-addoċċ sakemm jidher riżultat mhux relatat: it-tqabbil ta'numru waħdu mhuwiex biżżejjed biex tidentifika l-ġarr tiegħek.",
+            "Meta żewġ skrins ma jaqblux, qabbel il-timestamps tal-avveniment attwali u d-deskrizzjonijiet tal-post. Il-ħin li aggornajt paġna mhuwiex il-ħin li l-pakkett imċaqlaq. Żomm it-test tal-istatus oriġinali kif ukoll kwalunkwe traduzzjoni awtomatika, peress li frażi ta'loġistika tradotta tista'tinstema'aktar finali mill-messaġġ sottostanti. Staqsi Lil CSSBuy biex tiċċara avveniment mhux familjari billi tuża r-rekord tal-pakketti. La illustrazzjoni tal-mappa u lanqas bar tal-progress stmat ma juru li l-pakkett huwa fiżikament f'dak il-punt."
+          ]
+        },
+        {
+          "heading": "4. Iddeċiedi jekk stennija jew tistaqsi mistoqsija hijiex xierqa",
+          "paragraphs": [
+            "M'hemm l-ebda numru wieħed ta'jiem wara li kull pakkett CSSBuy huwa tard. Il-paragun rilevanti huwa l-gwida attwali għal-linja li għażilt u l-istadju speċifiku muri fil-kont tiegħek. Iċċekkja jekk is-servizz jippubblikax tieqa tad-dispaċċ, stima ta'transitu jew it-tnejn. Stima ta'transitu m'għandhiex issir skiet wegħda għall-perjodu kollu mill-ġurnata li ħallast għal prodott.",
+            "Ikkuntattja l-appoġġ meta tintalab azzjoni, ir-rekord ikun fih eċċezzjoni li ma tifhimx, jew il-gwida tas-servizz rilevanti tkun inqabżet mingħajr spjegazzjoni. Jekk tintwera skadenza għal talba jew inkjesta fit-termini applikabbli, żomm dik id-data separatament aktar milli tassumi li tista'tistenna b'mod indefinit. Staqsi liema skadenza tapplika għall-pakkett tiegħek. Li taġġorna l-istess skrin ripetutament jew il-ftuħ ta'diversi konversazzjonijiet identiċi mhux se joħolqu skan trasportatur ġdid."
+          ]
+        },
+        {
+          "heading": "5. Ipprepara messaġġ ta'appoġġ ċar wieħed",
+          "paragraphs": [
+            "Uża l-għażla nota jew appoġġ assoċjata mal-pakkett fil-kont uffiċjali tiegħek. Żomm il-messaġġ qasir biżżejjed biex taqra imma dettaljat biżżejjed biex tinvestiga. Spjega dak li stennejt li jiġri wara u liema rekord waqaf jinbidel. Staqsi għal tweġiba speċifika: konferma tat-trasferiment, kjarifika tat-trasportatur, identifikazzjoni ta'azzjoni nieqsa, jew struzzjonijiet għall-ftuħ ta'inkjesta. Tibgħatx passwords jew dettalji tal-karta tal-ħlas.",
+            "Pereżempju: ir-rekord tal-pakketti tiegħi juri numru ta'traċċar, iżda l-aħħar avveniment għadu informazzjoni riċevuta. Jekk jogħġbok ikkonferma jekk ingħatax lit-trasportatur, liema trasportatur għandu jagħraf dan in-numru, u jekk għandix bżonn nieħu xi azzjoni. Żid id-dati attwali u l-identifikatur tal-pakketti privatament. Dan l-eżempju huwa mudell ta'mistoqsija, mhux pretensjoni li kull rekord ta'traċċar kwiet għadu fil-maħżen."
+          ],
+          "bullets": [
+            "Identifikatur tal-pakketti u l-linja tat-tbaħħir magħżula fil-kont tiegħek.",
+            "L-aħħar avveniment, it-timestamp tiegħu u fejn rajtu.",
+            "Kwalunkwe messaġġ tal-kont jew pass tal-ħlas li għadu qed jistenna azzjoni.",
+            "Il-konferma speċifika jew il-pass li jmiss li għandek bżonn."
+          ]
+        },
+        {
+          "heading": "6. Immaniġġja eċċezzjoni jew problema takunsinna bir reqqa",
+          "paragraphs": [
+            "Jekk ir-rekord jirrapporta kwistjoni ta'indirizz, attentat ta'kunsinna jew rekwiżit ta'ġbir, iċċekkja l-istruzzjonijiet uffiċjali tat-trasportatur assoċjati ma'dik il-vjeġġ. Ivverifika talbiet għal ħlas mhux mistennija permezz tal-kont tiegħek jew il-websajt tat-trasportatur li lħaqt b'mod indipendenti. Messaġġ li fih in-numru tal-pakkett tiegħek xorta jista'jkun qarrieqi. Tsegwix link mhux familjari sempliċement għax tasal waqt li tkun qed tistenna pakkett.",
+            "Jekk l-istatus jgħid mogħtija imma ma tistax issib il-pakkett, iċċekkja l-post tal-kunsinna u kwalunkwe evidenza ta'kunsinna disponibbli, imbagħad ikkuntattja lit-trasportatur rilevanti u CSSBuy mal-fatti. Jekk il-pakkett jasal bil-ħsara jew jidher mhux komplut, ippreserva l-imballaġġ ta'barra u ħu ritratti ċari qabel ma tarmi xi ħaġa. Iddeskrivi dak li hu nieqes jew bil-ħsara kontra r-rekord tal-ordni tiegħek. L-evidenza tgħin investigazzjoni, iżda waħedha ma tiggarantixxix rifużjoni jew kumpens."
+          ]
+        },
+        {
+          "heading": "7. Żomm it-traċċar, l-ispiża tat-tbaħħir u l-ħin tal-kunsinna separati",
+          "paragraphs": [
+            "Avveniment ta’ traċċar iwieġeb mistoqsija dwar il-progress. Ma jispjegax kull ħlas, ma jiċċertifikax il-kontenut tal-pakkett u ma jiggarantixxix id-data tal-kunsinna li jmiss. Żomm il-kwotazzjoni tat-tbaħħir, il-kejl finali tal-pakkett u l-istorja tat-traċċar bħala rekords separati. Jekk għandek ukoll mistoqsija dwar l-ispiża, itlob tqassim tal-ħlas rilevanti minflok tassumi li dewmien mhux spjegat fit-traċċar ikkawża bidla fil-prezz.",
+            "Bl-istess mod, ix-xiri ta'prodott, l-istennija għall-bejjiegħ, ir-reviżjoni tar-ritratti tal-maħżen u t-trażmissjoni tal-pakkett internazzjonali huma partijiet differenti tal-kalendarju tal-ordni. Meta tippjana ordni futura, qabbel dawk l-istadji separatament. Ħalli spazju għall-inċertezza jekk l-oġġett huwiex meħtieġ għal għeluq snin, vjaġġ jew avveniment fiss ieħor. Kunsinna ta'suċċess preċedenti hija referenza personali utli, iżda mhix evidenza li pakkett ġdid isegwi l-istess skeda."
+          ]
+        },
+        {
+          "heading": "8. Agħmel il kontroll li jmiss utli",
+          "paragraphs": [
+            "Wara li tirċievi tweġiba, ikteb l-aġġornament li jmiss imwiegħed jew l-azzjoni li ġejt mitlub tlesti. Iċċekkja li r-rispons jirreferi għall-pakkett attwali tiegħek u l-linja tat-tbaħħir. Jekk it-tweġiba mhix ċara, segwi fl-istess konversazzjoni mal-fatt nieqes aktar milli terġa'tibda b'deskrizzjoni differenti. Issejvja kwalunkwe skadenza ta'inkjesta applikabbli u l-evidenza li pprovdejt.",
+            "Qabel ma tagħlaq il-kwistjoni, ikkonferma dak li nbidel: deher l-ewwel skan tat-trasportatur, numru lokali sar disponibbli, indirizz ġie kkoreġut, jew infetħet investigazzjoni. Dawk ir-riżultati huma differenti, u xi wħud biss jindikaw li l-pakkett mexa. CSSBuy Home huwa sit indipendenti għall-qari u l-iskoperta tal-prodott. Ma nistgħux nispezzjonaw il-kont tiegħek jew nintervjenu fi vjeġġ; ir-rekord uffiċjali tal-pakketti u t-tim ta'appoġġ responsabbli jibqgħu l-postijiet biex isolvuh."
+          ]
+        }
+      ],
+      "takeaways": [
+        "Sib ir-rekord internazzjonali tal-pakketti u kkopja n-numru eżatt tat-traċċar tiegħu.",
+        "Aqra l-aħħar avveniment datat qabel ma tiddeċiedi li pakkett jittardja.",
+        "Uża l-konverżazzjoni uffiċjali tal-pakketti u tippreserva l-evidenza rilevanti."
+      ],
+      "sourceIds": [
+        "buyforme",
+        "project"
+      ],
+      "publishedAt": "2026-10-29",
+      "updatedAt": "2026-10-29"
+    },
+    {
+      "id": "link-help",
+      "slug": "cssbuy-link-not-working",
+      "title": "Link ta’ CSSBuy ma taħdimx? Soluzzjonijiet għal Weidian, Taobao u 1688",
+      "description": "Issolvi problema b’link ta’ prodott CSSBuy: sib l-elenku oriġinali, iċċekkja l-prodott u l-varjant, u ħejji talba permezz ta’ Expert Buy jekk l-importazzjoni tfalli.",
+      "category": "Gwidi tax-xiri",
+      "keywords": [
+        "cssbuy link not working",
+        "cssbuy link converter",
+        "weidian to cssbuy",
+        "taobao link cssbuy",
+        "1688 cssbuy"
+      ],
+      "intro": "Meta rabta tal-prodott CSSBuy ma taħdimx, ibda bil-lista oriġinali tal-bejjiegħ. Iċċekkja li tiftaħ, tidentifika l-prodott li trid u xorta toffri l-għażla t-tajba. Imbagħad paste DAK IL-URL tal-elenkar Fis-CSSBuy. Paġna ta'spreadsheet ikkupjata, paġna ewlenija tal-ħanut u lista tal-prodotti huma links differenti. Jekk l-importazzjoni awtomatika tfalli, il-gwida uffiċjali tax-xiri tindika Expert Buy. Din il-gwida turi x'għandek tivverifika qabel ma tħallas, mingħajr ma tittratta l-konverżjoni tal-link bħala prova li oġġett huwa disponibbli jew sikur biex jinxtara.",
+      "sections": [
+        {
+          "heading": "1. Identifika t-tip ta'link li kkupjajt",
+          "paragraphs": [
+            "Paġna ta'skoperta tal-prodott jista'jkun fiha diversi destinazzjonijiet: paġna ta'dettall lokali, rekord ta'katalgu tas-sors, lista oriġinali tas-suq u link tax-xiri. Ibda billi tidentifika liema għandek. Indirizz Tal-prodott Tad-Dar CSSBuy jidentifika dħul f'dan il-katalgu. Huwa utli għar-ritorn għas-sejba, iżda mhuwiex il-lista tal-bejjiegħ Li CSSBuy jeħtieġ li jifhem ix-xiri.",
+            "Iftaħ id-dettall tal-prodott u fittex il-lista oriġinali tiegħu jew id-destinazzjoni uffiċjali tax-xiri. Ikkonferma li l-immaġni tal-prodott, il-bejjiegħ u l-għażliet disponibbli jaqblu ma'dak li beħsiebek tixtri. Riżultat tat-tfittxija jew homepage tal-ħanut jista'jkun fih ħafna oġġetti u jista'ma jidentifikax wieħed partikolari. Jekk għandek biss screenshot, l-ewwel irkupra lista preċiża jew staqsi għal informazzjoni kompleta dwar il-bejjiegħ u l-oġġett. Tagħżilx riżultat li jidher simili sempliċement biex tagħmel l-importazzjoni taħdem."
+          ]
+        },
+        {
+          "heading": "2. Irkupra L-URL tal-prodott oriġinali sħiħ",
+          "paragraphs": [
+            "Azzjoni ta'sehem mobbli tista'tikkopja test ta'spjegazzjoni flimkien ma'link. Issepara L-URL attwali mill-messaġġ tal-madwar qabel ma twaħħalha fil-qasam tax-xiri. Jekk rabta qasira tiftaħ paġna intermedja, innaviga lejn il-prodott maħsub u spezzjona d-destinazzjoni. Żomm il-link oriġinali fin-noti tiegħek sabiex tkun tista'tispjega minn fejn ġiet jekk il-paġna li tirriżulta tidher ħażina.",
+            "Tneħħix l-identifikatur tal-oġġett waqt li tnaddaf link. Xi parametri tal-mistoqsija jidentifikaw il-prodott aktar milli jsegwu żjara. It-tħassir ta'kollox wara marka ta'mistoqsija jista'għalhekk ineħħi l-parti meħtieġa biex issib l-oġġett. Fl-istess ħin, checkout speċifiku għall-kont jew indirizz tal-ordni privat mhuwiex lista pubblika. Aqsam biss l-informazzjoni pubblika dwar il-prodott meħtieġa għax-xiri, u qatt ma tikkopja password, kodiċi ta'login jew link ta'ħlas privat f'talba ta'prodott."
+          ]
+        },
+        {
+          "heading": "3. Iċċekkja link Weidian kontra l-oġġett oriġinali",
+          "paragraphs": [
+            "Għal sejba Weidian, ivverifika l-identifikatur tal-oġġett oriġinali u l-bejjiegħ fuq il-lista. Numru tar-rekord tal-katalgu tas-sors huwa identifikatur separat. Is-sostituzzjoni ta'dak in-numru tar-rekord F'URL tax-xiri tista'tindika l-oġġett ħażin jew tipproduċi żball. Il-link tax-xiri fuq dan is-sit huwa mibni biss meta l-informazzjoni oriġinali tas-suq appoġġjata tkun disponibbli; xorta għandu jiġi ċċekkjat mal-prodott li trid.",
+            "Qabbel aktar mill-ewwel immaġni. Iċċekkja t-titlu, id-daqsijiet disponibbli, il-kuluri u kwalunkwe dettalji li jiddistingwu listi simili. Bejjiegħ jista'juża elenkar wieħed għal diversi verżjonijiet jew aċċessorji. Jekk il-paġna tgħabbi iżda l-verżjoni maħsuba hija nieqsa, il-link qed jaħdem teknikament waqt li x-xiri għadu mhux adattat. Staqsi dwar dik il-verżjoni eżatta minflok ma tittratta tagħbija ta'paġna ta'suċċess bħala permess biex tagħżel għażla arbitrarja."
+          ]
+        },
+        {
+          "heading": "4. Iċċekkja l-għażliet Taobao u 1688 qabel ma tqabbel il-prezzijiet",
+          "paragraphs": [
+            "Meta Taobao jew 1688 li jelenka l-importazzjonijiet, spezzjona l-għażla magħżula qabel ma tqabbel l-ammont muri ma'spreadsheet. Il-prezz tal-bidu jista'japplika għal daqs, kulur, kwantità jew komponent differenti. Irreġistra l-isem tal-għażla u l-kwantità li fil-fatt beħsiebek tordna. Differenza fil-prezz hija raġuni biex tinvestiga l-għażla, mhux evidenza waħedha li l-importazzjoni hija miksura.",
+            "Għall-1688, iċċekkja l-kwantità minima tal-fornitur u l-prezz applikabbli għal dik il-kwantità. CSSBuy jagħti parir speċifikament lix-xerrejja biex jirrevedu dawk il-kundizzjonijiet. Kampjun individwali, pakkett u kwantità bl-ingrossa jistgħu ma jkunux interkambjabbli. Jekk il-paġna importata ma tagħmilx ir-rekwiżit ċar, issolviha qabel ma tissottometti l-ħlas. Staqsi wkoll jekk l-oġġetti eżatti jistgħux jużaw servizz ta'kunsinna adattat lejn id-destinazzjoni tiegħek; lista valida ma tistabbilixxix eliġibbiltà internazzjonali tat-tbaħħir."
+          ]
+        },
+        {
+          "heading": "5. Iddistingwi nuqqas ta'importazzjoni minn lista mhux disponibbli",
+          "paragraphs": [
+            "Jekk il-lista oriġinali tiftaħ b'mod korrett iżda l-paġna tax-xiri ma tistax taqraha, problema ta'importazzjoni hija possibbiltà waħda. Jekk il-paġna oriġinali titneħħa, terġa'tidderieġi lejn ħanut jew ma tibqax toffri l-oġġett, li tbiddel ripetutament IL-URL tax-xiri ma terġax tirrestawra l-offerta nieqsa. Qabbel dawk iż-żewġ sitwazzjonijiet qabel ma tqatta'ħin fuq konvertitur. Irreġistra l-iżball eżatt u L-URL pubbliku oriġinali għall-appoġġ.",
+            "Skrin tal-login jew app fil-pront jeħtieġ ukoll interpretazzjoni bir-reqqa. Ma jipprovax li oġġett jinbiegħ, u din il-gwida ma tistax tgħid jekk il-paġna tal-bejjiegħ hijiex aċċessibbli għall-aġent tax-xiri. Uża aċċess normali għas-suq u staqsi lil CSSBuy biex tiċċekkja l-elenkar jekk meħtieġ. Evita li tidħol fil-kredenzjali tas-suq f'konvertitur mhux familjari jew tħalli paġna ta'parti terza titlob aċċess għall-kont tax-xiri tiegħek."
+          ]
+        },
+        {
+          "heading": "6. Ħejji talba permezz ta’ Expert Buy b’informazzjoni sħiħa",
+          "paragraphs": [
+            "CSSBuy joffri Expert Buy Bħala rotta ta'xiri manwali meta tfittxija ordinarja ma tistax timmaniġġa oġġett. Ipprepara L-URL tal-prodott oriġinali, it-titlu, l-immaġni rilevanti, id-daqs jew il-kulur mitlub, il-kwantità, il-prezz tal-oġġett u l-informazzjoni tat-tbaħħir domestiku. Iddistingwi l-informazzjoni kkonfermata tal-bejjiegħ minn kull ħaġa li stmajt biss. Qasam vojt jew mimli bi stima jista'joħloq ordni żbaljata anke meta t-talba nnifisha tissottometti b'suċċess.",
+            "Uża l-qasam tan-noti biex tiddeskrivi l-għażla eżatta u staqsi l-mistoqsija mhux solvuta. Pereżempju, staqsi jekk il-prezz muri jkoprix oġġett wieħed jew sett, jew jekk huwiex disponibbli daqs partikolari. Qabel ma tħallas, iċċekkja d-dettalji tal-ordni rritornati kontra n-noti tiegħek. Ix-xiri manwali ma jagħmilx bejjiegħ mhux verifikat affidabbli jew jistabbilixxi drittijiet ta'ritorn. Aqra l-avviż attwali dwar ir-riskju tal-bejjiegħ u tiddeċiedi jekk l-inċertezza li jifdal hijiex aċċettabbli għax-xiri tiegħek."
+          ],
+          "bullets": [
+            "Żomm il-lista pubblika oriġinali u l-informazzjoni tal-bejjiegħ.",
+            "Speċifika l-għażla eżatta u l-kwantità bil-miktub.",
+            "Prezz tal-oġġett separat mill-kunsinna domestika u aktar tard it-tbaħħir internazzjonali.",
+            "Issolvi informazzjoni nieqsa qabel ma tawtorizza x-xiri."
+          ]
+        },
+        {
+          "heading": "7. Ifhem x'jista'u ma jistax jagħmel konvertitur ta'link",
+          "paragraphs": [
+            "Konvertitur jibdel format ta'link appoġġjat f'destinazzjoni oħra. Ma jistax jikkonferma l-istokk, jawtentika prodott, jispezzjona l-oġġett li jasal jew jiggarantixxi ritorn. Anke konverżjoni korretta tista'tiftaħ lista li nbidlet minn meta ġiet miżjuda ma'spreadsheet. Ittratta l-paġna konvertita bħala l-bidu tal-verifika u żomm rekord tal-verżjoni li għażilt.",
+            "Din il-websajt ma tipprovdix għodda universali ta'konverżjoni tal-link. Paġni tal-prodott appoġġjati jistgħu joffru destinazzjoni diretta Ta'CSSBuy, filwaqt li oġġetti oħra jeħtieġu l-elenkar oriġinali u l-iċċekkjar manwali. Jekk m'hemm l-ebda buttuna ta'xiri dirett, dik mhix struzzjoni biex tivvinta identifikatur tal-prodott. Uża l-elenkar oriġinali u l-proċess tax-xiri uffiċjali. Oqgħod attent b'mod speċjali meta għodda tiddikjara li tiffissa kull rabta tas-suq mingħajr ma turi liema prodott fil-fatt għażlet."
+          ]
+        },
+        {
+          "heading": "8. Iċċekkja l ordni għal darb'oħra qabel ma tgħaddi għat tbaħħir",
+          "paragraphs": [
+            "Wara li tiġi aċċettata talba għax-xiri, ippreserva l-elenkar oriġinali, l-għażla magħżula u l-ammont ikkonfermat. Dawn ir-rekords jagħmlu l-ispezzjoni tal-maħżen aktar utli: tista'tqabbel l-oġġett riċevut mal-verżjoni li tlabt. Gallerija tal-bejjiegħ hija referenza għall-offerta, filwaqt li ritratti tal-oġġett tal-maħżen tiegħek jipprovdu evidenza differenti. La għandhom jiġu deskritti bħala prova ta'awtentiċità jew garanzija ta'prestazzjoni moħbija.",
+            "Jekk l-oġġett riċevut huwa differenti mill-ordni kkonfermata, staqsi dwar ir-riżoluzzjoni disponibbli qabel ma tpoġġiha f'pakkett internazzjonali. Żomm il-problema speċifika u ehmeż l-evidenza rilevanti privatament. Tassumix li t-tbaħħir tal-oġġett barra l-pajjiż iħalli l-istess għażliet prattiċi ta'ritorn. Ladarba d-dettalji tal-prodott ikunu korretti, uża l-ispiża tat-tbaħħir u l-gwidi tal-maħżen biex tqabbel l-għażliet kompluti tal-pakketti. L-iffissar tal-link huwa biss l-ewwel pass biex tirċievi l-oġġett li intenzjonajt tixtri."
+          ]
+        }
+      ],
+      "takeaways": [
+        "Uża l-elenkar tal-prodott oriġinali, mhux numru tar-rekord tal-katalgu.",
+        "Iċċekkja l-varjant, il-kwantità u l-bejjiegħ qabel ma taċċetta prezz importat.",
+        "Uża Expert Buy biex tibgħat talba manwali sħiħa meta tfalli l-importazzjoni awtomatika."
+      ],
+      "sourceIds": [
+        "buyforme",
+        "expertbuy",
+        "project"
+      ],
+      "publishedAt": "2026-10-29",
+      "updatedAt": "2026-10-29"
     }
   ],
   "sources": [
@@ -972,13 +1245,13 @@
       "id": "buyforme",
       "title": "CSSBuy — Buy For Me: il-proċess uffiċjali tax-xiri",
       "url": "https://m.cssbuy.com/buyforme",
-      "accessedAt": "2026-10-23"
+      "accessedAt": "2026-10-29"
     },
     {
       "id": "expertbuy",
       "title": "CSSBuy — Expert Buy: informazzjoni tal-prodott u avviż dwar ir-riskju tal-bejjiegħ",
       "url": "https://m.cssbuy.com/expertbuy",
-      "accessedAt": "2026-10-23"
+      "accessedAt": "2026-10-29"
     },
     {
       "id": "about",
@@ -1018,7 +1291,7 @@
     },
     {
       "id": "catalog",
-      "title": "cnfansge.com — Sors tal-katalgu tal-prodotti",
+      "title": "Katalgu tal-prodotti",
       "url": "https://cnfansge.com/",
       "accessedAt": "2026-10-23"
     },

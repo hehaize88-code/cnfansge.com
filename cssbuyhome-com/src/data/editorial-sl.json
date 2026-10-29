@@ -27,7 +27,7 @@
     {
       "id": "data",
       "q": "Od kod prihajajo izdelki in fotografije v oglasih?",
-      "a": "Katalog izdelkov in galerije prodajalcev prihajajo s cnfansge.com. CSSBuy Home ne vzdržuje ločene zbirke izdelkov in ne ustvarja slik izdelkov. Izbrano ponudbo potrdite po odprtju njenega nakupnega cilja.",
+      "a": "Katalog izdelkov in galerije prodajalcev prihajajo s Katalog izdelkov. CSSBuy Home ne vzdržuje ločene zbirke izdelkov in ne ustvarja slik izdelkov. Izbrano ponudbo potrdite po odprtju njenega nakupnega cilja.",
       "sourceIds": [
         "catalog",
         "project"
@@ -36,7 +36,7 @@
     {
       "id": "qc",
       "q": "Ali so fotografije izdelkov preverjene fotografije CSSBuy QC?",
-      "a": "Galerij prodajalcev ne smete obravnavati kot skladiščni QC. Preverjena fotografija QC konkretnega naročila mora biti povezana s prejetim izdelkom. Ta predogled slik prodajalcev s cnfansge ne označuje kot preverjena dokazila pregleda CSSBuy.",
+      "a": "Galerij prodajalcev ne smete obravnavati kot skladiščni QC. Preverjena fotografija QC konkretnega naročila mora biti povezana s prejetim izdelkom. Ta predogled slik prodajalcev s Katalog izdelkov ne označuje kot preverjena dokazila pregleda CSSBuy.",
       "sourceIds": [
         "catalog",
         "project"
@@ -63,7 +63,7 @@
     {
       "id": "weidian-link",
       "q": "Kateri ID sodi v nakupno povezavo Weidian?",
-      "a": "Uporabite izvirni ID izdelka s tržnice. Navedeni primer je https://www.cssbuy.com/shop/goodsDetail?type=micro&id=7755101935. Številka zapisa v katalogu cnfansge ni nadomestilo za ta ID s tržnice.",
+      "a": "Uporabite izvirni ID izdelka s tržnice. Navedeni primer je https://www.cssbuy.com/shop/goodsDetail?type=micro&id=7755101935. Številka zapisa v katalogu Katalog izdelkov ni nadomestilo za ta ID s tržnice.",
       "sourceIds": [
         "user-link"
       ]
@@ -236,8 +236,8 @@
     {
       "id": "spreadsheet",
       "slug": "cssbuy-spreadsheet-guide",
-      "title": "Kako uporabljati preglednico CSSBuy: vodnik za kupce",
-      "description": "Praktični vodnik po preglednici CSSBuy za primerjanje povezav do izdelkov, preverjanje različic, branje fotografij in načrtovanje celotnega nakupa.",
+      "title": "Preglednica CSSBuy: poiščite povezave, preverite velikosti in naročite",
+      "description": "S preglednico CSSBuy poiščite povezave izdelkov, preverite prodajalca in velikost, preglejte fotografije iz skladišča ter načrtujte celoten strošek z dostavo.",
       "category": "Prvi koraki",
       "keywords": [
         "preglednica cssbuy",
@@ -245,7 +245,7 @@
         "kako uporabljati cssbuy",
         "povezave do izdelkov cssbuy"
       ],
-      "intro": "Uporabna preglednica CSSBuy naj vam pomaga sprejeti boljšo nakupno odločitev, ne le ustvariti daljšega nakupovalnega seznama. Imenik lahko združi povezave, naslove in cene iz oglasov, toda pomembno delo se začne, ko preverite dejanski izdelek za kartico. Ta vodnik pokaže, kako brskanje spremeniti v majhen, dokumentiran ožji izbor, kako ločiti prodajalčevo predstavitev od dokazil o svojem naročilu in kako presoditi, ali je najdba smiselna tudi po dostavi. CSSBuy Home je neodvisna stran za odkrivanje izdelkov. Njen katalog izdelkov prihaja s cnfansge.com; nakupovanje in upravljanje naročil potekata na CSSBuy.",
+      "intro": "Začnite s kategorijo ali iskanjem v preglednici CSSBuy, odprite izdelek in preverite njegov izvirni oglas. Pred nadaljevanjem na CSSBuy preverite velikost, barvo, količino in trenutno ceno. Katalog vam pomaga odkrivati izdelke; uradni zaslon naročila potrdi, kaj lahko kupite. S tem vodnikom preidite od shranjene povezave do pregledanega izdelka v skladišču in realnega proračuna za dostavo.",
       "sections": [
         {
           "heading": "Začnite z namenom in realističnim ožjim izborom",
@@ -258,7 +258,7 @@
           "heading": "Kartico izdelka berite kot vnos v kazalu",
           "paragraphs": [
             "Kartica strne precej večji oglas. Njen naslov je lahko skrajšan, preveden ali posredovan iz izvornega kataloga. Prikazana cena lahko opisuje eno možnost namesto vseh različic. Ta polja obravnavajte kot način iskanja izvirne ponudbe, nato primerjajte konkretno velikost, barvo, količino in izvedbo, ki jo želite. Nizka začetna cena ni dovolj za pošteno razvrstitev dveh izdelkov, če eden vključuje dodatek, drugi pa ne.",
-            "Na CSSBuy Home zapisi izdelkov in galerije prodajalcev izvirajo s cnfansge.com. Prodajalčeva slika ponazarja oglas; ne potrjuje, da je bil določen skladiščni izdelek pregledan. Če stran ne more zagotoviti delujoče funkcije ali preverjene vrste fotografije, tega ne sklepajte iz privlačne oznake. Sledite razpoložljivi povezavi izdelka in preverite, kaj je dejansko predstavljeno, preden kartico obravnavate kot dokazilo."
+            "Na CSSBuy Home zapisi izdelkov in galerije prodajalcev izvirajo s Katalog izdelkov. Prodajalčeva slika ponazarja oglas; ne potrjuje, da je bil določen skladiščni izdelek pregledan. Če stran ne more zagotoviti delujoče funkcije ali preverjene vrste fotografije, tega ne sklepajte iz privlačne oznake. Sledite razpoložljivi povezavi izdelka in preverite, kaj je dejansko predstavljeno, preden kartico obravnavate kot dokazilo."
           ]
         },
         {
@@ -313,7 +313,8 @@
         "buyforme",
         "expertbuy",
         "catalog"
-      ]
+      ],
+      "updatedAt": "2026-10-29"
     },
     {
       "id": "weidian",
@@ -400,8 +401,8 @@
     {
       "id": "qc",
       "slug": "cssbuy-qc-photos-guide",
-      "title": "Fotografije CSSBuy QC: praktični kontrolni seznam za pregled",
-      "description": "Urejen način pregledovanja skladiščnih fotografij, razlikovanja prodajalčevih slik in zahtevanja uporabnih meritev pred pošiljanjem paketa.",
+      "title": "Fotografije QC CSSBuy: kaj preveriti pred pošiljanjem",
+      "description": "Na fotografijah iz skladišča CSSBuy preverite pravilen izdelek, velikost, barvo, količino in vidne poškodbe. Spoznajte, kdaj zahtevati jasnejšo fotografijo ali meritev.",
       "category": "Skladišče in QC",
       "keywords": [
         "cssbuy qc",
@@ -409,14 +410,42 @@
         "preverjanje kakovosti cssbuy",
         "skladiščne fotografije"
       ],
-      "intro": "Fotografije nadzora kakovosti so najuporabnejše, ko se jih lotite z vprašanjem. Ali izdelek ustreza naročeni možnosti? Ali so prisotni zahtevani dodatki? Ali mera ustreza vašim potrebam? Zgolj pregled galerije in odločitev, da je izdelek videti v redu, lahko spregledata podrobnosti, pomembne po dostavi. Ta vodnik razloži praktično zaporedje pregleda in omejitve vizualnih dokazil. Uradne strani storitev CSSBuy opisujejo skladiščni pregled in fotografije. CSSBuy Home galerij prodajalcev, ki jih zagotavlja cnfansge.com, ne obravnava kot preverjen skladiščni QC, kartice izdelka pa nikoli ne smete razumeti kot potrdilo o pregledu.",
+      "intro": "Pred oddajo za mednarodno dostavo preglejte fotografije svojega dejanskega izdelka v skladišču. Izdelek, barvo, oznako velikosti, količino in vidno stanje primerjajte z naročilom. Zahtevajte ciljno fotografijo od blizu ali meritev, kadar obstoječe fotografije ne morejo odgovoriti na konkretno vprašanje. Prodajalčeve slike v preglednici so fotografije iz oglasa; niso fotografije nadzora kakovosti vašega naročila ali dokaz pristnosti.",
       "sections": [
         {
           "heading": "Ugotovite, čigav izdelek in katero sliko gledate",
           "paragraphs": [
             "Pred pregledom podrobnosti prepoznajte dokazilo. Prodajalčeva fotografija predstavlja ponudbo. Javna fotografija kupca beleži nakup nekoga drugega. Skladiščna fotografija, povezana z vašim naročilom, beleži vaš prejeti izdelek v določenem trenutku. Te kategorije se lahko dopolnjujejo, vendar odgovarjajo na različna vprašanja. Podrobna javna slika ne potrjuje stanja primerka, ki za vas še ni prispel.",
             "Pred primerjanjem slik preverite referenco naročila in izbrano možnost. Dva izdelka lahko delita ime modela, a se razlikujeta po barvi, velikosti, materialih ali vključenih delih. Če slike ne morete povezati z ustrezno možnostjo, jo ohranite kot ozadje. Tako posebej privlačna slika ne postane merilo za presojo nepovezane različice. Najmočnejša primerjava se začne z jasnim zapisom natanko tega, kar ste želeli kupiti."
-          ]
+          ],
+          "table": {
+            "headers": [
+              "Preverjanje",
+              "Če ni jasno"
+            ],
+            "rows": [
+              [
+                "Izdelek in možnost",
+                "Primerjajte s shranjenim oglasom in podrobnostmi naročila."
+              ],
+              [
+                "Oznaka velikosti",
+                "Prosite za berljivo fotografijo oznake in meritev, ki jo potrebujete."
+              ],
+              [
+                "Barva in stanje",
+                "Zahtevajte jasno fotografijo določenega predela od blizu."
+              ],
+              [
+                "Količina in sestavni deli",
+                "Preverite vsak naročeni kos, ne le glavnega izdelka."
+              ],
+              [
+                "Odločitev",
+                "Vprašanje razrešite pred odobritvijo mednarodne dostave."
+              ]
+            ]
+          }
         },
         {
           "heading": "Pred drobnimi podrobnostmi preverite identiteto in količino",
@@ -477,13 +506,14 @@
         "buyforme",
         "shipforme",
         "catalog"
-      ]
+      ],
+      "updatedAt": "2026-10-29"
     },
     {
       "id": "cost",
       "slug": "cssbuy-shipping-cost",
-      "title": "Strošek dostave CSSBuy: kako oceniti skupni znesek",
-      "description": "Razumite podatke za izračun stroškov paketa ter primerjajte pakiranje, obračunsko težo in ponudbe poti brez zanašanja na stalno ceno za kilogram.",
+      "title": "Kalkulator dostave CSSBuy: ocenite strošek in težo paketa",
+      "description": "Ocenite dostavo CSSBuy glede na cilj, težo zapakiranega paketa in mere. Primerjajte ustrezne poti, prostorninsko težo in končno ponudbo za paket.",
       "category": "Dostava",
       "keywords": [
         "strošek dostave cssbuy",
@@ -491,14 +521,46 @@
         "volumetrična teža cssbuy",
         "ocena dostave cssbuy"
       ],
-      "intro": "Na vprašanje »Koliko stane dostava CSSBuy?« ni uporabnega splošnega odgovora brez cilja, primerne poti in opisa zapakiranega paketa. Cena, prepisana iz naročila druge osebe, je lahko zanimiv primer, ni pa ponudba za vaše naročilo. Ta vodnik pokaže, kako oblikovati oceno, ki ostane uporabna, ko se informacije izboljšujejo. Cilj ni napovedati stroška nepripravljenega paketa do zadnjega centa. Cilj je razumeti, kateri podatki lahko spremenijo rezultat, rezervirati dovolj denarja in končne možnosti primerjati pod enakimi pogoji.",
+      "intro": "V uradni kalkulator dostave CSSBuy vnesite cilj, ocenjeno težo zapakiranega paketa in mere paketa. Preverite, katere poti sprejemajo vaše blago, nato primerjajte ponudbe z enakimi vhodnimi podatki. Univerzalne cene na kilogram ni: embalaža, pravila poti in končne izmere paketa lahko spremenijo znesek. Ta vodnik pojasnjuje izračun in ponuja kontrolni seznam za uporabo pred plačilom.",
       "sections": [
         {
           "heading": "Vprašanje razdelite na znane in neznane podatke",
           "paragraphs": [
             "Začnite s seznamom znanega: ciljna država in regija, količine izdelkov, približne dimenzije izdelkov in morebitne posebne zahteve ravnanja. Nato navedite, kaj ostaja negotovo: zapakirana teža, dimenzije škatle, razpoložljive poti in izbirne storitve. Kalkulator je le toliko informativen, kot so njegovi vhodni podatki. Optimistično ugibanje teže da optimističen rezultat, ne natančnejšega.",
             "Vsako shranjeno oceno opremite z datumom in ohranite podatke, iz katerih je nastala. Tako lahko pojasnite poznejšo spremembo brez predpostavke, da je šlo kaj narobe. Ponudbe za en cilj ali velikost paketa ne primerjajte neposredno z drugim scenarijem. Če blago vsebuje baterije, tekočine, lomljive dele ali druge morebitno omejene lastnosti, najprej preverite primernost poti. Najcenejša prikazana pot ni pomembna, če je dejanski paket ne more uporabiti."
-          ]
+          ],
+          "table": {
+            "headers": [
+              "Vhodni podatek kalkulatorja",
+              "Kaj preveriti"
+            ],
+            "rows": [
+              [
+                "Cilj dostave",
+                "Uporabite državo in regijo, v katero bo paket dostavljen."
+              ],
+              [
+                "Teža zapakiranega paketa",
+                "Vključite zaščitno embalažo in vse škatle, ki jih obdržite."
+              ],
+              [
+                "Mere paketa",
+                "Uporabite dolžino, širino in višino v enotah kalkulatorja."
+              ],
+              [
+                "Blago in pot",
+                "Pred primerjavo cen preverite omejitve."
+              ],
+              [
+                "Obračunska teža",
+                "Preberite pravila izbrane poti in način zaokroževanja."
+              ],
+              [
+                "Končni znesek",
+                "Ponudbo primerjajte s preverjenim paketom in zaračunanim zneskom v računu."
+              ]
+            ]
+          }
         },
         {
           "heading": "Ločite fizično težo od teže za določanje cene poti",
@@ -559,13 +621,14 @@
         "buyforme",
         "estimates",
         "shipforme"
-      ]
+      ],
+      "updatedAt": "2026-10-29"
     },
     {
       "id": "time",
       "slug": "cssbuy-shipping-time",
-      "title": "Kako dolgo traja CSSBuy? Časovnica naročila",
-      "description": "Ločite prodajalčevo odpremo, skladiščne odločitve, mednarodni prevoz in končno dostavo, da lahko načrtujete in postavljate boljša vprašanja o sledenju.",
+      "title": "Čas dostave CSSBuy: od prodajalca prek skladišča do dostave",
+      "description": "Spoznajte posamezne faze dostave CSSBuy, kje preveriti paket in kaj vprašati, ko pri prodajalcu, skladišču ali prevozniku ni napredka.",
       "category": "Dostava",
       "keywords": [
         "čas dostave cssbuy",
@@ -573,7 +636,7 @@
         "stanje naročila cssbuy",
         "sledenje cssbuy"
       ],
-      "intro": "Oceno dostave je težko razumeti, če ne veste, kdaj se začne šteti čas. Čakanje na prodajalca, preverjanje izdelka v skladišču ali odločanje o združevanju ni enako času mednarodnega prevoza. Ta vodnik pot razdeli na praktične faze in pokaže, kako raziskati zamudo, ne da bi izkušnjo drugega kupca spremenili v obljubo za svoje naročilo. Za konkretno transakcijo uporabite trenutne informacije v svojem računu CSSBuy; tukajšnja časovnica je okvir za načrtovanje, ne zajamčen urnik dostave.",
+      "intro": "Čas dostave CSSBuy vključuje več ločenih faz: odpremo prodajalca, prihod v skladišče, vaš pregled in izbiro dostave, pripravo paketa ter mednarodni prevoz. Pred primerjavo katere koli ocene preverite fazo v svojem računu. Ocena trajanja prevoza po poti ne vključuje vseh predhodnih korakov in enoten čas dostave ne velja za vse cilje ali pakete.",
       "sections": [
         {
           "heading": "Narišite časovnico, preden primerjate trditve o dostavi",
@@ -626,13 +689,14 @@
       "sourceIds": [
         "buyforme",
         "storage"
-      ]
+      ],
+      "updatedAt": "2026-10-29"
     },
     {
       "id": "warehouse",
       "slug": "cssbuy-warehouse-consolidation",
-      "title": "Skladiščenje CSSBuy in združevanje paketov",
-      "description": "Načrtujte skladiščenje, pregledujte izdelke in premišljeno združujte pakete glede na dejansko blago, roke in omejitve poti.",
+      "title": "Skladišče CSSBuy: hramba, nadzor kakovosti in združevanje paketov",
+      "description": "Odločite se, kateri izdelki v skladišču so pripravljeni za pošiljanje, kaj preveriti pred združevanjem naročil in kako lahko pakiranje spremeni strošek paketa.",
       "category": "Skladišče in QC",
       "keywords": [
         "skladišče cssbuy",
@@ -640,14 +704,42 @@
         "skladiščenje cssbuy",
         "pakiranje paketov cssbuy"
       ],
-      "intro": "Skladišče je mesto, kjer ločeni nakupi postanejo načrt paketa. Ta prilagodljivost je dragocena, toda zbiranje naročil brez konca lahko oteži upravljanje stroškov in rokov. Dober načrt opredeli, kateri izdelki so pripravljeni, kateri potrebujejo odločitev in katerim dejansko koristi skupno potovanje. CSSBuy na uradni strani »Pošlji zame« opisuje združevanje in več storitev pakiranja. Ta vodnik razloži, kako presoditi, kaj potrebujete, brez predpostavke, da je največji možni paket vedno najboljši.",
+      "intro": "Pred združevanjem paketa CSSBuy preverite, ali je vsak vključeni izdelek prispel, ustreza naročilu in je prestal zahtevana preverjanja. Napačno velikost ali manjkajoči del razrešite pred mednarodnim pošiljanjem. Nato združeni paket primerjajte z ločenimi paketi na podlagi dejanske teže, mer in ustreznih poti. Združevanje je odločitev o celotnem paketu, ne samodejno jamstvo za cenejšo dostavo.",
       "sections": [
         {
           "heading": "Ustvarite popis na podlagi odločitev",
           "paragraphs": [
             "Za vsak skladiščni izdelek zapišite identifikator naročila, datum prihoda, trenutno odločitev in naslednje dejanje. Uporabne odločitve so pripravljen za pošiljanje, čaka meritev, vračilo zahtevano in čaka drug izdelek. Te oznake omogočajo več ukrepanja kot en sam seznam stvari, ki jih imate. Pokažejo, kateri izdelki lahko napredujejo in kateri bi zadržali paket.",
             "Vsakemu izdelku, ki ga namenoma hranite, dodajte razlog. Morda se drug nakup že prevaža znotraj države ali pa morate primerjati dve meri. Razlog z datumom ponovnega pregleda je načrt; čakanje brez konca na nekaj drugega za nakup ni. Popis redno pregledujte in odstranite predpostavke, ki ne veljajo več. Če pričakovani spremljevalni izdelek ni več na voljo, znova ocenite paket, namesto da stari načrt samodejno nadaljujete."
-          ]
+          ],
+          "table": {
+            "headers": [
+              "Pred združevanjem izdelkov",
+              "Odločitev"
+            ],
+            "rows": [
+              [
+                "So vsi izdelki prejeti?",
+                "Manjkajočih izdelkov in izdelkov z nerešenimi vprašanji ne vključite v paket."
+              ],
+              [
+                "So vprašanja nadzora kakovosti rešena?",
+                "Pred pošiljanjem zahtevajte manjkajoča dokazila."
+              ],
+              [
+                "Je pakiranje dogovorjeno?",
+                "Ohranite zaščito, ki jo potrebuje vsak izdelek."
+              ],
+              [
+                "So poti ustrezne?",
+                "Preverite, ali en izdelek omejuje možnosti za celoten paket."
+              ],
+              [
+                "So stroški primerjani?",
+                "Primerjajte možnosti pošiljanja zapakiranih izdelkov v združenem in ločenih paketih."
+              ]
+            ]
+          }
         },
         {
           "heading": "Roke skladiščenja obravnavajte ločeno od odločitev o vračilu",
@@ -694,7 +786,8 @@
         "shipforme",
         "storage",
         "buyforme"
-      ]
+      ],
+      "updatedAt": "2026-10-29"
     },
     {
       "id": "returns",
@@ -965,6 +1058,186 @@
         "buyforme",
         "expertbuy"
       ]
+    },
+    {
+      "id": "tracking",
+      "slug": "cssbuy-tracking-not-updating",
+      "title": "Se sledenje CSSBuy ne posodablja? Preverite paket korak za korakom",
+      "description": "Poiščite svojo številko za sledenje CSSBuy, razlikujte med nalepko in skeniranjem prevoznika ter pripravite ustrezno vprašanje za podporo, ko ni več novih podatkov o paketu.",
+      "category": "Dostava",
+      "keywords": [
+        "cssbuy tracking",
+        "cssbuy tracking not updating",
+        "cssbuy parcel tracking",
+        "cssbuy tracking number"
+      ],
+      "intro": "Če se vaše sledenje CSSBuy ne posodablja, najprej preverite, ali je paket dejansko zapustil skladišče. V svojem uradnem računu odprite zapis o paketu, kopirajte njegovo številko za sledenje in primerjajte zadnji datirani dogodek s tam navedenim prevoznikom. Ustvarjena nalepka, izdelek v skladišču in paket, ki ga je sprejel prevoznik, pomenijo različne faze. Ta vodnik vam pomaga prepoznati fazo, zbrati koristna dokazila in se odločiti, kaj vprašati v naslednjem koraku. Ne obljublja datuma dostave in ne omogoča dostopa do vašega zasebnega naročila.",
+      "sections": [
+        {
+          "heading": "1. Pred preverjanjem na strani za sledenje poiščite zapis o paketu",
+          "paragraphs": [
+            "CSSBuy kupce po odpremi usmeri v razdelek My Parcel. Začnite v svojem računu, da bodo identifikator paketa, izbrana dostavna linija in številka za sledenje pripadali isti pošiljki. Številka naročila izdelka se lahko nanaša na nakup pri prodajalcu; ni nujno številka, ki se uporablja za mednarodni prevoz. Če ste združili več nakupov, poiščite paket s temi izdelki, namesto da vsak nakup preverjate posebej.",
+            "Kopirajte celotno številko, namesto da jo pretipkate. Preverite, ali ste pri izbiranju besedila na telefonu pomotoma vključili presledke. Zadnji dogodek in njegov časovni žig zabeležite natančno tako, kot sta prikazana. Posnetke zaslona shranite za svojo evidenco, pred javno objavo pa odstranite svoje ime, naslov in celotno številko za sledenje. Javna razprava lahko pomaga pojasniti status; ne more nadomestiti zasebnega zapisa o paketu ali ugotoviti, kdo ima trenutno vaš paket."
+          ]
+        },
+        {
+          "heading": "2. Ločite ustvarjanje nalepke od prevzema pri prevozniku",
+          "paragraphs": [
+            "Nalepka ali številka za sledenje lahko obstaja, še preden prevoznik zabeleži, da ima paket. Preberite sam dogodek: prejeti podatki in sprejeto za prevoz pomenita različni dokazili. Če zapis prikazuje le elektronske podatke, vprašajte, ali paket še pripravljajo ali so ga že predali. Ne sklepajte, da pojav prve številke pomeni, da je letalo že odletelo.",
+            "Preverite tudi, ali je v vašem računu še kakšno opravilo, ki čaka na izvedbo. Neodgovorjeno vprašanje o pakiranju, nedokončano plačilo dostave ali popravek naslova lahko zahtevajo vašo pozornost pred naslednjim korakom. To so stvari, ki jih je treba preveriti, ne pa diagnoza vaše konkretne zamude. Če zaslon ne ponuja pojasnila, prosite podporo, naj potrdi trenutno fazo in naslednji pričakovani dogodek. To je koristnejše vprašanje kot spraševanje, zakaj nedoločena pošiljka potuje tako dolgo."
+          ]
+        },
+        {
+          "heading": "3. Primerjajte prevoznika in zadnji datirani dogodek",
+          "paragraphs": [
+            "Uporabite prevoznika, navedenega v podrobnostih paketa. Če poznejši zapis navede drugo številko za lokalno dostavo, shranite obe in si zapišite, kateri del poti opisuje posamezna številka. Številka, ki je en prevoznik ne prepozna, lahko pripada drugi službi ali zanjo še ni javno objavljenega dogodka. Ne preizkušajte naključnih prevoznikov, dokler se ne pojavi nepovezan rezultat: zgolj ujemanje številke ni dovolj za prepoznavanje vaše pošiljke.",
+            "Če se prikaza na dveh zaslonih razlikujeta, primerjajte dejanske časovne žige dogodkov in opise lokacij. Čas, ko ste osvežili stran, ni čas, ko se je paket premaknil. Poleg morebitnega samodejnega prevoda shranite izvirno besedilo statusa, saj lahko preveden logistični izraz zveni bolj dokončno kot izvorno sporočilo. Prosite CSSBuy, naj neznani dogodek pojasni na podlagi zapisa o paketu. Niti ilustracija zemljevida niti okvirna vrstica napredka ne dokazujeta, da je paket fizično na tej točki."
+          ]
+        },
+        {
+          "heading": "4. Presodite, ali je primerno počakati ali postaviti vprašanje",
+          "paragraphs": [
+            "Ni enotnega števila dni, po katerem bi vsak paket CSSBuy zamujal. Ustrezna primerjava so trenutna navodila za izbrano linijo in konkretna faza, prikazana v vašem računu. Preverite, ali storitev objavlja časovni okvir odpreme, oceno trajanja prevoza ali oboje. Ocena trajanja prevoza se ne sme samodejno spremeniti v obljubo za celotno obdobje od dneva, ko ste plačali izdelek.",
+            "Obrnite se na podporo, ko se od vas zahteva ukrepanje, zapis vsebuje izjemo, ki je ne razumete, ali je časovni okvir iz ustreznih navodil storitve presežen brez pojasnila. Če veljavni pogoji navajajo rok za reklamacijo ali poizvedbo, si datum zabeležite posebej, namesto da predpostavljate, da lahko čakate neomejeno. Vprašajte, kateri rok velja za vaš paket. Večkratno osveževanje istega zaslona ali odpiranje več enakih pogovorov ne bo ustvarilo novega skeniranja prevoznika."
+          ]
+        },
+        {
+          "heading": "5. Pripravite eno jasno sporočilo za podporo",
+          "paragraphs": [
+            "Uporabite možnost za opombo ali podporo, povezano s paketom v vašem uradnem računu. Sporočilo naj bo dovolj kratko za branje, a dovolj podrobno za preverjanje. Pojasnite, kaj ste pričakovali v naslednjem koraku in kateri zapis se je nehal spreminjati. Prosite za konkreten odgovor: potrditev predaje, pojasnilo glede prevoznika, ugotovitev manjkajočega opravila ali navodila za začetek poizvedbe. Ne pošiljajte gesel ali podatkov plačilne kartice.",
+            "Na primer: zapis o mojem paketu prikazuje številko za sledenje, zadnji dogodek pa je še vedno prejeti podatki. Prosim, potrdite, ali je bil paket predan prevozniku, kateri prevoznik bi moral prepoznati to številko in ali moram kaj storiti. Dejanske datume in identifikator paketa dodajte zasebno. Ta primer je predloga vprašanja, ne trditev, da je vsak paket brez novih dogodkov v sledenju še vedno v skladišču."
+          ],
+          "bullets": [
+            "Identifikator paketa in dostavna linija, izbrana v vašem računu.",
+            "Zadnji dogodek, njegov časovni žig in mesto, kjer ste ga videli.",
+            "Morebitno sporočilo v računu ali korak plačila, ki še čaka na vaše ukrepanje.",
+            "Konkretna potrditev ali naslednji korak, ki ga potrebujete."
+          ]
+        },
+        {
+          "heading": "6. Previdno obravnavajte izjemo ali težavo pri dostavi",
+          "paragraphs": [
+            "Če zapis poroča o težavi z naslovom, poskusu dostave ali obveznem prevzemu, preverite uradna navodila prevoznika za to pošiljko. Nepričakovane zahteve za plačilo preverite v svojem računu ali na spletni strani prevoznika, do katere ste prišli samostojno. Sporočilo, ki vsebuje številko vašega paketa, je lahko kljub temu zavajajoče. Ne sledite neznani povezavi samo zato, ker prispe med čakanjem na paket.",
+            "Če status navaja dostavljeno, paketa pa ne najdete, preverite mesto dostave in morebitna razpoložljiva dokazila o dostavi, nato pa dejstva posredujte ustreznemu prevozniku in CSSBuy. Če paket prispe poškodovan ali je videti nepopoln, ohranite zunanjo embalažo in posnemite jasne fotografije, preden kar koli zavržete. Opišite, kaj manjka ali je poškodovano glede na zapis naročila. Dokazila pomagajo pri preiskavi, vendar sama po sebi ne zagotavljajo vračila denarja ali odškodnine."
+          ]
+        },
+        {
+          "heading": "7. Ločeno obravnavajte sledenje, strošek dostave in čas dostave",
+          "paragraphs": [
+            "Dogodek sledenja odgovori na vprašanje o napredku. Ne pojasni vsakega zaračunanega zneska, ne potrdi vsebine paketa in ne zagotavlja naslednjega datuma dostave. Ponudbo za dostavo, končne mere paketa in zgodovino sledenja hranite kot ločene zapise. Če imate tudi vprašanje o strošku, prosite za ustrezno razčlenitev zaračunanega zneska, namesto da domnevate, da je nepojasnjena zamuda pri sledenju povzročila spremembo cene.",
+            "Prav tako so nakup izdelka, čakanje na prodajalca, pregled fotografij iz skladišča in pošiljanje mednarodnega paketa različni deli časovnega poteka naročila. Pri načrtovanju prihodnjega naročila te faze primerjajte ločeno. Pustite nekaj prostora za negotovost, če izdelek potrebujete za rojstni dan, potovanje ali drug dogodek s fiksnim datumom. Prejšnja uspešna dostava je koristna osebna referenca, ni pa dokaz, da bo nov paket sledil enakemu urniku."
+          ]
+        },
+        {
+          "heading": "8. Poskrbite, da bo naslednje preverjanje koristno",
+          "paragraphs": [
+            "Ko prejmete odgovor, si zapišite obljubljeno naslednjo posodobitev ali opravilo, ki ga morate dokončati. Preverite, ali se odgovor nanaša na vaš dejanski paket in dostavno linijo. Če odgovor ni jasen, v istem pogovoru vprašajte po manjkajočem dejstvu, namesto da začnete znova z drugačnim opisom. Shranite morebitni veljavni rok za poizvedbo in posredovana dokazila.",
+            "Pred zaključkom zadeve potrdite, kaj se je spremenilo: pojavilo se je prvo skeniranje prevoznika, na voljo je lokalna številka, naslov je bil popravljen ali pa je bila uvedena preiskava. Ti izidi so različni in le nekateri kažejo, da se je paket premaknil. CSSBuy Home je neodvisno spletno mesto z vsebinami za branje in odkrivanje izdelkov. Vašega računa ne moremo pregledati ali poseči v pošiljko; težavo je še naprej treba reševati prek uradnega zapisa o paketu in odgovorne ekipe za podporo."
+          ]
+        }
+      ],
+      "takeaways": [
+        "Poiščite zapis o mednarodnem paketu in kopirajte njegovo natančno številko za sledenje.",
+        "Preden sklenete, da paket zamuja, preberite zadnji datirani dogodek.",
+        "Uporabite uradni pogovor o paketu in ohranite ustrezna dokazila."
+      ],
+      "sourceIds": [
+        "buyforme",
+        "project"
+      ],
+      "publishedAt": "2026-10-29",
+      "updatedAt": "2026-10-29"
+    },
+    {
+      "id": "link-help",
+      "slug": "cssbuy-link-not-working",
+      "title": "Povezava CSSBuy ne deluje? Odpravite težave s povezavami Weidian, Taobao in 1688",
+      "description": "Odpravite težave s povezavo izdelka CSSBuy: poiščite izvirni oglas, preverite izdelek in različico ter pripravite zahtevek Expert Buy, če uvoz ne uspe.",
+      "category": "Vodniki za nakup",
+      "keywords": [
+        "cssbuy link not working",
+        "cssbuy link converter",
+        "weidian to cssbuy",
+        "taobao link cssbuy",
+        "1688 cssbuy"
+      ],
+      "intro": "Ko povezava izdelka CSSBuy ne deluje, začnite pri izvirnem oglasu prodajalca. Preverite, ali se odpre, prikazuje želeni izdelek in še vedno ponuja pravo možnost. Nato URL tega oglasa prilepite v CSSBuy. Kopirana stran preglednice, domača stran trgovine in oglas izdelka so različne povezave. Če samodejni uvoz ne uspe, uradni nakupni vodnik napotuje na Expert Buy. Ta vodnik pokaže, kaj preveriti pred plačilom, pretvorbe povezave pa ne obravnava kot dokaz, da je izdelek na voljo ali da je nakup varen.",
+      "sections": [
+        {
+          "heading": "1. Ugotovite, kakšno povezavo ste kopirali",
+          "paragraphs": [
+            "Stran za odkrivanje izdelkov lahko vsebuje več ciljev: lokalno stran s podrobnostmi, zapis v izvornem katalogu, izvirni oglas na tržnici in povezavo za nakup. Najprej ugotovite, katerega imate. Naslov izdelka na CSSBuy Home označuje vnos v tem katalogu. Koristen je za vrnitev k najdenemu izdelku, ni pa oglas prodajalca, ki ga CSSBuy potrebuje za razumevanje nakupa.",
+            "Odprite podrobnosti izdelka in poiščite njegov izvirni oglas ali uradni cilj za nakup. Potrdite, da slika izdelka, prodajalec in razpoložljive možnosti ustrezajo temu, kar nameravate kupiti. Rezultat iskanja ali domača stran trgovine lahko vsebuje veliko izdelkov in morda ne določa točno enega. Če imate le posnetek zaslona, najprej poiščite natančen oglas ali prosite za popolne podatke o prodajalcu in izdelku. Ne izberite podobnega rezultata samo zato, da bi uvoz deloval."
+          ]
+        },
+        {
+          "heading": "2. Poiščite celoten izvirni URL izdelka",
+          "paragraphs": [
+            "Deljenje v mobilni napravi lahko skupaj s povezavo kopira tudi pojasnjevalno besedilo. Preden URL prilepite v polje za nakup, ga ločite od preostalega sporočila. Če skrajšana povezava odpre vmesno stran, pojdite do želenega izdelka in preverite cilj. Izvirno povezavo shranite v opombe, da boste lahko pojasnili, od kod izvira, če bo končna stran videti napačna.",
+            "Med urejanjem povezave ne odstranite identifikatorja izdelka. Nekateri parametri poizvedbe določajo izdelek in niso namenjeni sledenju obisku. Če izbrišete vse za vprašajem, lahko zato odstranite del, potreben za iskanje izdelka. Hkrati naslov blagajne, vezan na račun, ali naslov zasebnega naročila ni javni oglas. Delite le javne podatke o izdelku, potrebne za nakup, in v zahtevek za izdelek nikoli ne kopirajte gesla, kode za prijavo ali zasebne povezave za plačilo."
+          ]
+        },
+        {
+          "heading": "3. Primerjajte povezavo Weidian z izvirnim izdelkom",
+          "paragraphs": [
+            "Pri izdelku, najdenem na Weidian, v oglasu preverite izvirni identifikator izdelka in prodajalca. Številka zapisa v izvornem katalogu je ločen identifikator. Če v URL za nakup vstavite to številko zapisa, lahko povezava kaže na napačen izdelek ali javi napako. Povezava za nakup na tej strani se ustvari samo, kadar so na voljo izvirni podatki podprte tržnice; še vedno jo morate primerjati z želenim izdelkom.",
+            "Primerjajte več kot le prvo sliko. Preverite naslov, razpoložljive velikosti, barve in vse podrobnosti, po katerih se podobni oglasi razlikujejo. Prodajalec lahko en oglas uporablja za več različic ali dodatkov. Če se stran naloži, želene različice pa ni, povezava tehnično deluje, vendar nakup še vedno ni ustrezen. Vprašajte za točno to različico, namesto da uspešno nalaganje strani razumete kot dovoljenje za izbiro poljubne možnosti."
+          ]
+        },
+        {
+          "heading": "4. Pred primerjavo cen preverite možnosti Taobao in 1688",
+          "paragraphs": [
+            "Ko se oglas Taobao ali 1688 uvozi, preverite izbrano možnost, preden prikazani znesek primerjate s preglednico. Začetna cena lahko velja za drugo velikost, barvo, količino ali sestavni del. Zabeležite ime možnosti in količino, ki jo dejansko nameravate naročiti. Razlika v ceni je razlog za preverjanje izbire, sama po sebi pa ni dokaz, da uvoz ne deluje.",
+            "Pri 1688 preverite dobaviteljevo najmanjšo količino in ceno, ki velja zanjo. CSSBuy kupcem izrecno svetuje, naj preverijo te pogoje. Posamezen vzorec, paket in veleprodajna količina morda niso medsebojno zamenljivi. Če uvožena stran zahteve ne pojasni jasno, jo razjasnite pred plačilom. Vprašajte tudi, ali je točno to blago mogoče poslati z ustrezno dostavno storitvijo na vaš cilj; veljaven oglas ne potrjuje upravičenosti do mednarodne dostave."
+          ]
+        },
+        {
+          "heading": "5. Ločite neuspel uvoz od nedostopnega oglasa",
+          "paragraphs": [
+            "Če se izvirni oglas pravilno odpre, stran za nakup pa ga ne more prebrati, je ena od možnosti težava z uvozom. Če je izvirna stran odstranjena, preusmerja v trgovino ali izdelka ne ponuja več, nenehno spreminjanje URL-ja za nakup ne bo obnovilo manjkajoče ponudbe. Primerjajte ti dve situaciji, preden porabljate čas za pretvornik. Za podporo zabeležite natančno napako in izvirni javni URL.",
+            "Tudi zaslon za prijavo ali poziv k uporabi aplikacije je treba previdno razlagati. Ne dokazuje, da je izdelek razprodan, ta vodnik pa ne more povedati, ali ima nakupni posrednik dostop do prodajalčeve strani. Do tržnice dostopajte na običajen način in po potrebi prosite CSSBuy, naj preveri oglas. Ne vnašajte prijavnih podatkov tržnice v neznan pretvornik in ne dovolite, da stran tretje osebe zahteva dostop do vašega nakupovalnega računa."
+          ]
+        },
+        {
+          "heading": "6. Pripravite zahtevek Expert Buy s popolnimi podatki",
+          "paragraphs": [
+            "CSSBuy ponuja Expert Buy kot možnost ročnega nakupa, kadar običajno iskanje ne more obdelati izdelka. Pripravite izvirni URL izdelka, naslov, ustrezno sliko, zahtevano velikost ali barvo, količino, ceno izdelka in podatke o domači dostavi. Ločite potrjene podatke prodajalca od tistih, ki ste jih le ocenili. Prazno ali ugibano polje lahko povzroči napačno naročilo, tudi če je zahtevek uspešno oddan.",
+            "V polju za opombe opišite natančno možnost in postavite še nerazrešeno vprašanje. Na primer vprašajte, ali prikazana cena velja za en izdelek ali komplet oziroma ali je določena velikost na voljo. Pred plačilom primerjajte prejete podrobnosti naročila s svojimi opombami. Ročni nakup ne naredi nepreverjenega prodajalca zaupanja vrednega in ne vzpostavi pravice do vračila. Preberite trenutno opozorilo o tveganjih pri prodajalcu in presodite, ali je preostala negotovost za vaš nakup sprejemljiva."
+          ],
+          "bullets": [
+            "Shranite izvirni javni oglas in podatke o prodajalcu.",
+            "Točno možnost in količino navedite pisno.",
+            "Ločite ceno izdelka od domače dostave in poznejše mednarodne dostave.",
+            "Manjkajoče podatke razjasnite pred odobritvijo nakupa."
+          ]
+        },
+        {
+          "heading": "7. Razumite, kaj pretvornik povezav zmore in česa ne",
+          "paragraphs": [
+            "Pretvornik spremeni podprto obliko povezave v drug cilj. Ne more potrditi zaloge ali pristnosti izdelka, pregledati izdelka, ki bo prispel, ali zagotoviti vračila. Tudi pravilna pretvorba lahko odpre oglas, ki se je spremenil, odkar je bil dodan v preglednico. Pretvorjeno stran obravnavajte kot začetek preverjanja in shranite zapis izbrane različice.",
+            "To spletno mesto ne ponuja univerzalnega orodja za pretvorbo povezav. Podprte strani izdelkov lahko ponujajo neposredno povezavo do CSSBuy, drugi izdelki pa zahtevajo izvirni oglas in ročno preverjanje. Če ni neposrednega gumba za nakup, to ni navodilo, da si izmislite identifikator izdelka. Uporabite izvirni oglas in uradni postopek nakupa. Bodite posebej previdni, če orodje trdi, da popravi vsako povezavo tržnice, ne da bi pokazalo, kateri izdelek je dejansko izbralo."
+          ]
+        },
+        {
+          "heading": "8. Pred prehodom na dostavo še enkrat preverite naročilo",
+          "paragraphs": [
+            "Ko je zahtevek za nakup sprejet, shranite izvirni oglas, izbrano možnost in potrjeni znesek. Ti zapisi povečajo uporabnost pregleda v skladišču: prejeti izdelek lahko primerjate z zahtevano različico. Prodajalčeva galerija je referenca za ponudbo, fotografije vašega izdelka v skladišču pa dajejo drugačna dokazila. Nobenega od teh virov ne smete opisovati kot dokaz pristnosti ali jamstvo za lastnosti, ki niso vidne.",
+            "Če se prejeti izdelek razlikuje od potrjenega naročila, vprašajte o razpoložljivi rešitvi, preden ga vključite v mednarodni paket. Težavo opišite konkretno in ustrezna dokazila priložite zasebno. Ne predpostavljajte, da pošiljanje izdelka v tujino ohrani enake praktične možnosti vračila. Ko so podrobnosti izdelka pravilne, z vodniki za stroške dostave in skladišče primerjajte celovite možnosti pošiljanja paketa. Popravilo povezave je šele prvi korak do prejema izdelka, ki ste ga nameravali kupiti."
+          ]
+        }
+      ],
+      "takeaways": [
+        "Uporabite izvirni oglas izdelka, ne številke zapisa v katalogu.",
+        "Pred sprejetjem uvožene cene preverite različico, količino in prodajalca.",
+        "Če samodejni uvoz ne uspe, uporabite Expert Buy za popoln ročni zahtevek."
+      ],
+      "sourceIds": [
+        "buyforme",
+        "expertbuy",
+        "project"
+      ],
+      "publishedAt": "2026-10-29",
+      "updatedAt": "2026-10-29"
     }
   ],
   "sources": [
@@ -972,13 +1245,13 @@
       "id": "buyforme",
       "title": "CSSBuy — Kupi zame: uradni postopek nakupa",
       "url": "https://m.cssbuy.com/buyforme",
-      "accessedAt": "2026-10-23"
+      "accessedAt": "2026-10-29"
     },
     {
       "id": "expertbuy",
       "title": "CSSBuy — Strokovni nakup: podatki o izdelku in opozorilo o tveganju prodajalca",
       "url": "https://m.cssbuy.com/expertbuy",
-      "accessedAt": "2026-10-23"
+      "accessedAt": "2026-10-29"
     },
     {
       "id": "about",
@@ -1018,7 +1291,7 @@
     },
     {
       "id": "catalog",
-      "title": "cnfansge.com — Vir kataloga izdelkov",
+      "title": "Katalog izdelkov",
       "url": "https://cnfansge.com/",
       "accessedAt": "2026-10-23"
     },

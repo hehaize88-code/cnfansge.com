@@ -27,7 +27,7 @@
     {
       "id": "data",
       "q": "Mistä tuotteet ja ilmoituskuvat tulevat?",
-      "a": "Tuoteluettelo ja myyjien galleriat tulevat cnfansge.comista. CSSBuy Home ei ylläpidä erillistä tuotetietokantaa eikä tuota tuotekuvia. Vahvista valittu tarjous avattuasi ostopaikan.",
+      "a": "Tuoteluettelo ja myyjien galleriat tulevat Tuoteluetteloista. CSSBuy Home ei ylläpidä erillistä tuotetietokantaa eikä tuota tuotekuvia. Vahvista valittu tarjous avattuasi ostopaikan.",
       "sourceIds": [
         "catalog",
         "project"
@@ -36,7 +36,7 @@
     {
       "id": "qc",
       "q": "Ovatko tuotekuvat varmennettuja CSSBuyn QC-kuvia?",
-      "a": "Myyjien gallerioita ei pidä käsitellä varaston laadunvalvontana. Varmennetun tilauskohtaisen QC-kuvan on liityttävä vastaanotettuun tuotteeseen. Tämä esiversio ei merkitse cnfansgen myyjäkuvia varmennetuksi CSSBuyn tarkastusaineistoksi.",
+      "a": "Myyjien gallerioita ei pidä käsitellä varaston laadunvalvontana. Varmennetun tilauskohtaisen QC-kuvan on liityttävä vastaanotettuun tuotteeseen. Tämä esiversio ei merkitse Tuoteluettelon myyjäkuvia varmennetuksi CSSBuyn tarkastusaineistoksi.",
       "sourceIds": [
         "catalog",
         "project"
@@ -63,7 +63,7 @@
     {
       "id": "weidian-link",
       "q": "Mikä tunniste kuuluu Weidian-ostolinkkiin?",
-      "a": "Käytä markkinapaikan alkuperäistä tuotetunnistetta. Annettu esimerkki on https://www.cssbuy.com/shop/goodsDetail?type=micro&id=7755101935. Cnfansgen luettelotietueen numero ei korvaa markkinapaikan tunnistetta.",
+      "a": "Käytä markkinapaikan alkuperäistä tuotetunnistetta. Annettu esimerkki on https://www.cssbuy.com/shop/goodsDetail?type=micro&id=7755101935. Tuoteluettelon luettelotietueen numero ei korvaa markkinapaikan tunnistetta.",
       "sourceIds": [
         "user-link"
       ]
@@ -236,8 +236,8 @@
     {
       "id": "spreadsheet",
       "slug": "cssbuy-spreadsheet-guide",
-      "title": "CSSBuy-tuotelistan käyttö: ostajan opas",
-      "description": "Käytännöllinen CSSBuy-tuotelistaopas tuotelinkkien vertailuun, vaihtoehtojen tarkistamiseen, kuvien tulkintaan ja koko ostoksen suunnitteluun.",
+      "title": "CSSBuy-taulukko: etsi linkit, tarkista koot ja tilaa",
+      "description": "Etsi CSSBuy-taulukosta tuotelinkkejä, vahvista myyjä ja koko, tarkastele varastokuvia ja suunnittele kokonaiskustannus toimituksineen.",
       "category": "Alkuun pääseminen",
       "keywords": [
         "cssbuy tuotelista",
@@ -245,7 +245,7 @@
         "miten cssbuyta käytetään",
         "cssbuy tuotelinkit"
       ],
-      "intro": "Hyödyllisen CSSBuy-tuotelistan pitäisi auttaa tekemään parempi ostopäätös, ei vain pidentää ostoslistaa. Hakemisto voi koota linkit, otsikot ja ilmoitushinnat yhteen, mutta tärkeä työ alkaa, kun tarkistat kortin takana olevan varsinaisen tuotteen. Tämä opas näyttää, miten selaamisesta muodostetaan pieni dokumentoitu ehdokaslista, miten myyjän esittely erotetaan omaa tilaustasi koskevasta aineistosta ja miten päätetään, onko löytö edelleen järkevä toimituskulujen jälkeen. CSSBuy Home on riippumaton löytösivusto. Sen tuoteluettelo tulee cnfansge.comista; ostot ja tilausten hallinta tapahtuvat CSSBuyssa.",
+      "intro": "Aloita CSSBuy-taulukon kategoriasta tai hausta, avaa tuote ja vahvista sen alkuperäinen tuoteilmoitus. Tarkista koko, väri, määrä ja nykyinen hinta ennen CSSBuyhin siirtymistä. Luettelo auttaa löytämään tuotteita; virallinen tilausnäkymä vahvistaa, mitä voit ostaa. Tämän oppaan avulla etenet tallennetusta linkistä tarkastettuun varastotuotteeseen ja realistiseen toimitusbudjettiin.",
       "sections": [
         {
           "heading": "Aloita tarkoituksesta ja realistisesta ehdokaslistasta",
@@ -258,7 +258,7 @@
           "heading": "Lue tuotekorttia hakemistomerkintänä",
           "paragraphs": [
             "Kortti tiivistää paljon suuremman ilmoituksen. Sen otsikko voi olla lyhennetty, käännetty tai lähdeluettelon toimittama. Näkyvä hinta voi koskea yhtä vaihtoehtoa eikä kaikkia versioita. Käytä kenttiä alkuperäisen tarjouksen löytämiseen ja vertaile sitten haluamaasi kokoa, väriä, määrää ja versiota. Alhainen lähtöhinta ei riitä tuotteiden tasapuoliseen järjestämiseen, jos toiseen kuuluu lisävaruste ja toiseen ei.",
-            "CSSBuy Homen tuotetietueet ja myyjien galleriat ovat peräisin cnfansge.comista. Myyjän kuva havainnollistaa ilmoitusta; se ei osoita, että tietty varastotuote on tarkastettu. Jos sivusto ei pysty tarjoamaan toimivaa ominaisuutta tai varmennettua kuvatyyppiä, älä päättele niitä houkuttelevasta nimikkeestä. Seuraa saatavilla olevaa tuotelinkkiä ja tarkista, mitä todella esitetään, ennen kuin pidät korttia todisteena."
+            "CSSBuy Homen tuotetietueet ja myyjien galleriat ovat peräisin Tuoteluetteloista. Myyjän kuva havainnollistaa ilmoitusta; se ei osoita, että tietty varastotuote on tarkastettu. Jos sivusto ei pysty tarjoamaan toimivaa ominaisuutta tai varmennettua kuvatyyppiä, älä päättele niitä houkuttelevasta nimikkeestä. Seuraa saatavilla olevaa tuotelinkkiä ja tarkista, mitä todella esitetään, ennen kuin pidät korttia todisteena."
           ]
         },
         {
@@ -313,7 +313,8 @@
         "buyforme",
         "expertbuy",
         "catalog"
-      ]
+      ],
+      "updatedAt": "2026-10-29"
     },
     {
       "id": "weidian",
@@ -400,8 +401,8 @@
     {
       "id": "qc",
       "slug": "cssbuy-qc-photos-guide",
-      "title": "CSSBuyn QC-kuvat: käytännöllinen tarkistuslista",
-      "description": "Järjestelmällinen tapa tarkastella varastokuvia, erottaa myyjäkuvat ja pyytää hyödyllisiä mittoja ennen paketin lähettämistä.",
+      "title": "CSSBuyn QC-kuvat: mitä tarkistaa ennen lähettämistä",
+      "description": "Tarkista CSSBuyn varastokuvista oikea tuote, koko, väri, määrä ja näkyvät vauriot. Opi, milloin kannattaa pyytää selkeämpi kuva tai mittaus.",
       "category": "Varasto ja QC",
       "keywords": [
         "cssbuy qc",
@@ -409,14 +410,42 @@
         "cssbuy laaduntarkastus",
         "varastokuvat"
       ],
-      "intro": "Laadunvalvontakuvista on eniten hyötyä, kun tarkastelet niitä kysymys mielessäsi. Vastaako tuote tilattua vaihtoehtoa? Ovatko tarvittavat lisävarusteet mukana? Sopiiko mitta tarpeisiisi? Pelkkä gallerian katselu ja tuotteen toteaminen hyvännäköiseksi voi jättää huomaamatta toimituksen jälkeen tärkeät yksityiskohdat. Tämä opas selittää käytännöllisen tarkastelujärjestyksen ja kuvallisen aineiston rajat. CSSBuyn viralliset palvelusivut kuvaavat varastotarkastusta ja valokuvausta. CSSBuy Home ei käsittele cnfansge.comin toimittamia myyjägallerioita varmennettuna varaston QC-aineistona, eikä tuotekorttia saa tulkita tarkastustodistukseksi.",
+      "intro": "Tarkastele oman varastossa olevan tuotteesi kuvia ennen sen lähettämistä kansainväliseen kuljetukseen. Vertaa tuotetta, väriä, kokomerkintää, määrää ja näkyvää kuntoa tilaukseesi. Pyydä kohdennettu lähikuva tai mittaus, jos nykyiset kuvat eivät vastaa tiettyyn kysymykseen. Taulukon myyjäkuvat ovat tuoteilmoituksen kuvia; ne eivät ole tilauksesi QC-kuvia eli laaduntarkastuskuvia tai aitoustodiste.",
       "sections": [
         {
           "heading": "Tunnista, kenen tuotetta ja mitä kuvaa katsot",
           "paragraphs": [
             "Tunnista aineisto ennen yksityiskohtien tutkimista. Myyjän valokuva esittää tarjouksen. Julkinen ostajakuva tallentaa jonkun muun ostoksen. Tilaukseesi liitetty varastokuva tallentaa saamasi tuotteen tietyllä hetkellä. Nämä luokat voivat täydentää toisiaan, mutta ne vastaavat eri kysymyksiin. Yksityiskohtainen julkinen kuva ei osoita sellaisen yksilön kuntoa, joka ei vielä ole saapunut sinulle.",
             "Tarkista tilausviite ja valittu vaihtoehto ennen kuvien vertailua. Kahdella tuotteella voi olla sama mallinimi mutta eri väri, koko, materiaali tai mukana tulevat osat. Jos et pysty yhdistämään kuvaa kyseiseen vaihtoehtoon, pidä sitä taustatietona. Näin erityisen houkutteleva kuva ei muodostu mittapuuksi erilliselle tuoteversiolle. Vahvin vertailu alkaa selkeästä tallenteesta, jossa näkyy täsmälleen, mitä pyysit ostettavaksi."
-          ]
+          ],
+          "table": {
+            "headers": [
+              "Tarkistettava asia",
+              "Jos asia on epäselvä"
+            ],
+            "rows": [
+              [
+                "Tuote ja vaihtoehto",
+                "Vertaa tallentamaasi tuoteilmoitukseen ja tilaustietoihin."
+              ],
+              [
+                "Kokomerkintä",
+                "Pyydä luettava kuva kokomerkinnästä ja tarvitsemasi mittaus."
+              ],
+              [
+                "Väri ja kunto",
+                "Pyydä selkeä lähikuva kyseisestä kohdasta."
+              ],
+              [
+                "Määrä ja osat",
+                "Tarkista jokainen tilattu osa, älä vain päätuotetta."
+              ],
+              [
+                "Päätös",
+                "Selvitä kysymys ennen kansainvälisen toimituksen hyväksymistä."
+              ]
+            ]
+          }
         },
         {
           "heading": "Tarkista tuotteen tunnistus ja määrä ennen pieniä yksityiskohtia",
@@ -477,13 +506,14 @@
         "buyforme",
         "shipforme",
         "catalog"
-      ]
+      ],
+      "updatedAt": "2026-10-29"
     },
     {
       "id": "cost",
       "slug": "cssbuy-shipping-cost",
-      "title": "CSSBuyn toimituskulut: näin arvioit kokonaissumman",
-      "description": "Ymmärrä pakettikulujen lähtötiedot ja vertaile pakkausta, veloituspainoa ja reittitarjouksia ilman kiinteään kilohintaan luottamista.",
+      "title": "CSSBuy-toimituslaskuri: arvioi kustannus ja paketin paino",
+      "description": "Arvioi CSSBuy-toimitus määränpään, pakatun painon ja mittojen perusteella. Vertaa soveltuvia reittejä, tilavuuspainoa ja paketin lopullista hintatarjousta.",
       "category": "Toimitus",
       "keywords": [
         "cssbuy toimituskulut",
@@ -491,14 +521,46 @@
         "cssbuy tilavuuspaino",
         "cssbuy toimitusarvio"
       ],
-      "intro": "Kysymykseen ”Paljonko CSSBuyn toimitus maksaa?” ei ole hyödyllistä yleisvastausta ilman määränpäätä, sallittua reittiä ja pakatun paketin kuvausta. Toisen tilauksesta kopioitu hinta voi olla kiinnostava esimerkki, mutta ei tarjous sinun tilauksellesi. Tämä opas näyttää, miten laadit arvion, joka pysyy hyödyllisenä tietojen tarkentuessa. Tarkoitus ei ole ennustaa valmistelemattoman paketin hintaa sentilleen. Tarkoitus on ymmärtää, mitkä tiedot voivat muuttaa tulosta, varata tarpeeksi rahaa ja verrata lopullisia vaihtoehtoja tasapuolisesti.",
+      "intro": "Käytä virallista CSSBuy-toimituslaskuria määränpäälläsi, arvioidulla pakatulla painolla ja paketin mitoilla. Tarkista, mitkä reitit hyväksyvät tavarasi, ja vertaa sitten tarjouksia samoilla lähtötiedoilla. Yleispätevää kilohintaa ei ole: pakkaus, reittien säännöt ja lopullinen mitattu paketti voivat muuttaa summaa. Tämä opas selittää laskennan ja antaa tarkistuslistan käytettäväksi ennen maksamista.",
       "sections": [
         {
           "heading": "Jaa kysymys tunnettuihin ja tuntemattomiin lähtötietoihin",
           "paragraphs": [
             "Luettele ensin se, minkä tiedät: kohdemaa ja alue, tuotemäärät, likimääräiset tuotemitat ja erityiset käsittelytarpeet. Luettele sitten epävarmat tiedot: pakattu paino, laatikon mitat, saatavilla olevat reitit ja valinnaiset palvelut. Laskurin hyödyllisyys riippuu näistä lähtötiedoista. Optimistisesti arvattu paino tuottaa optimistisen tuloksen, ei tarkempaa tulosta.",
             "Lisää päivämäärä jokaisen tallennetun arvion viereen ja säilytä sen tuottaneet tiedot. Näin voit selittää myöhemmän muutoksen olettamatta, että jokin meni vikaan. Yhdelle määränpäälle tai pakettikoolle tehtyä tarjousta ei pidä verrata suoraan erilaiseen tilanteeseen. Jos tuotteissa on akkuja, nesteitä, särkyviä osia tai muita mahdollisesti rajoitettuja ominaisuuksia, tarkista ensin reittikelpoisuus. Halvin näkyvä reitti on merkityksetön, jos varsinainen paketti ei voi käyttää sitä."
-          ]
+          ],
+          "table": {
+            "headers": [
+              "Laskurin lähtötieto",
+              "Mitä tarkistaa"
+            ],
+            "rows": [
+              [
+                "Määränpää",
+                "Käytä maata ja aluetta, johon paketti toimitetaan."
+              ],
+              [
+                "Pakattu paino",
+                "Sisällytä suojapakkaus ja kaikki säilytettävät laatikot."
+              ],
+              [
+                "Paketin mitat",
+                "Käytä pituutta, leveyttä ja korkeutta laskurin mittayksiköissä."
+              ],
+              [
+                "Tavarat ja reitti",
+                "Tarkista rajoitukset ennen hintojen vertailua."
+              ],
+              [
+                "Laskutettava paino",
+                "Lue valitun reitin säännöt ja pyöristyskäytäntö."
+              ],
+              [
+                "Lopullinen summa",
+                "Vertaa tarjousta tarkistettuun pakettiin ja tilin veloitukseen."
+              ]
+            ]
+          }
         },
         {
           "heading": "Erota todellinen paino reitin hinnoittelussa käytettävästä painosta",
@@ -559,13 +621,14 @@
         "buyforme",
         "estimates",
         "shipforme"
-      ]
+      ],
+      "updatedAt": "2026-10-29"
     },
     {
       "id": "time",
       "slug": "cssbuy-shipping-time",
-      "title": "Kuinka kauan CSSBuy kestää? Tilauksen aikajana",
-      "description": "Erota myyjän lähetys, varastopäätökset, kansainvälinen kuljetus ja lopputoimitus, jotta voit suunnitella ja kysyä parempia seurantakysymyksiä.",
+      "title": "CSSBuyn toimitusaika: myyjältä varastolle ja perille",
+      "description": "Ymmärrä CSSBuy-toimituksen jokainen vaihe, mistä paketin voi tarkistaa ja mitä kysyä, kun myyjän, varaston tai kuljetusyhtiön eteneminen pysähtyy.",
       "category": "Toimitus",
       "keywords": [
         "cssbuy toimitusaika",
@@ -573,7 +636,7 @@
         "cssbuy tilauksen tila",
         "cssbuy seuranta"
       ],
-      "intro": "Toimitusarviota on vaikea tulkita, jos et tiedä, mistä ajanlasku alkaa. Myyjän odottamiseen, varastotuotteen tarkistamiseen tai yhdistettävien tuotteiden valintaan käytetty aika eroaa kansainvälisen kuljetuksen ajasta. Tämä opas jakaa matkan käytännöllisiin vaiheisiin ja näyttää, miten viivettä tutkitaan tekemättä toisen ostajan kokemuksesta lupausta omalle tilauksellesi. Käytä tietyn tapahtuman osalta CSSBuy-tilisi ajantasaisia tietoja; tässä esitetty aikajana on suunnittelurunko, ei taattu toimitusaikataulu.",
+      "intro": "CSSBuyn toimitusaika koostuu useista erillisistä vaiheista: myyjän lähetyksestä, saapumisesta varastolle, omasta tarkastuksestasi ja toimitusvalinnoistasi, paketin valmistelusta ja kansainvälisestä kuljetuksesta. Tarkista vaihe tililtäsi ennen minkään arvion vertailua. Reitin kuljetusaika-arvio ei kata kaikkia aiempia vaiheita, eikä yksi toimitusaika päde jokaiseen määränpäähän tai pakettiin.",
       "sections": [
         {
           "heading": "Piirrä aikajana ennen toimitusväitteiden vertailua",
@@ -626,13 +689,14 @@
       "sourceIds": [
         "buyforme",
         "storage"
-      ]
+      ],
+      "updatedAt": "2026-10-29"
     },
     {
       "id": "warehouse",
       "slug": "cssbuy-warehouse-consolidation",
-      "title": "CSSBuyn varastointi ja pakettien yhdistäminen",
-      "description": "Suunnittele varastointi, tarkista tuotteet ja yhdistä paketit harkiten todellisten tuotteiden, määräaikojen ja reittirajoitusten perusteella.",
+      "title": "CSSBuyn varasto: säilytys, laaduntarkastus ja pakettien yhdistäminen",
+      "description": "Päätä, mitkä varastotuotteet ovat valmiita lähetettäviksi, mitä tarkistaa ennen tilausten yhdistämistä ja miten pakkaus voi muuttaa pakettisi kustannusta.",
       "category": "Varasto ja QC",
       "keywords": [
         "cssbuy varasto",
@@ -640,14 +704,42 @@
         "cssbuy varastointi",
         "cssbuy pakkaaminen"
       ],
-      "intro": "Varastossa erillisistä ostoksista muodostuu pakettisuunnitelma. Joustavuus on arvokasta, mutta jatkuvasti kasvava tilausten kokoelma voi myös vaikeuttaa kulujen ja määräaikojen hallintaa. Hyvä suunnitelma tunnistaa valmiit tuotteet, päätöstä odottavat tuotteet ja ne, jotka todella hyötyvät yhdessä kulkemisesta. CSSBuy kuvaa yhdistämistä ja useita pakkauspalveluja virallisella Ship For Me -sivullaan. Tämä opas selittää, miten päätät tarpeistasi olettamatta, että suurin mahdollinen paketti on aina paras.",
+      "intro": "Ennen CSSBuy-paketin yhdistämistä tarkista, että jokainen mukaan tuleva tuote on saapunut, vastaa tilaustasi ja on läpäissyt pyytämäsi tarkastukset. Selvitä väärä koko tai puuttuva osa ennen kansainvälistä lähetystä. Vertaa sitten yhdistettyä pakettia erillisiin paketteihin todellisen painon, mittojen ja soveltuvien reittien perusteella. Yhdistäminen on koko pakettia koskeva päätös, ei automaattinen tae halvemmasta toimituksesta.",
       "sections": [
         {
           "heading": "Luo päätöksiin perustuva tuoteluettelo",
           "paragraphs": [
             "Kirjaa jokaisesta varastotuotteesta tilaustunniste, saapumispäivä, nykyinen päätös ja seuraava toimenpide. Hyödyllisiä päätöksiä ovat valmis lähetettäväksi, odottaa mittausta, palautusta pyydetty ja odottaa toista tuotetta. Nämä merkinnät ohjaavat toimintaa paremmin kuin yksi luettelo omistamistasi tavaroista. Ne näyttävät, mitkä tuotteet voivat edetä ja mitkä viivyttäisivät pakettia.",
             "Liitä peruste jokaiseen tuotteeseen, jota pidät tarkoituksella varastossa. Ehkä toinen ostos liikkuu jo Kiinan sisällä tai sinun on vertailtava kahta mittaa. Peruste ja tarkistuspäivä muodostavat suunnitelman; rajaton odottaminen, että löytäisit jotain muuta ostettavaa, ei. Tarkista luettelo säännöllisesti ja poista oletukset, jotka eivät enää pidä paikkaansa. Jos odotettu rinnakkaistuote muuttuu saavuttamattomaksi, arvioi paketti uudelleen sen sijaan, että vanha suunnitelma jatkuisi automaattisesti."
-          ]
+          ],
+          "table": {
+            "headers": [
+              "Ennen tuotteiden yhdistämistä",
+              "Päätös"
+            ],
+            "rows": [
+              [
+                "Ovatko kaikki tuotteet saapuneet?",
+                "Jätä puuttuvat tuotteet ja tuotteet, joissa on ratkaisemattomia ongelmia, pois paketista."
+              ],
+              [
+                "Onko QC-kysymykset ratkaistu?",
+                "Pyydä puuttuvat todisteet ennen lähettämistä."
+              ],
+              [
+                "Onko pakkauksesta sovittu?",
+                "Säilytä kunkin tuotteen vaatima suojaus."
+              ],
+              [
+                "Soveltuvatko reitit?",
+                "Tarkista, rajoittaako yksi tuote koko paketin toimitusvaihtoehtoja."
+              ],
+              [
+                "Onko kustannuksia verrattu?",
+                "Vertaa pakattua yhdistettyä pakettia ja erillisiä paketteja koskevia vaihtoehtoja."
+              ]
+            ]
+          }
         },
         {
           "heading": "Pidä varastointimääräajat erillään palautuspäätöksistä",
@@ -694,7 +786,8 @@
         "shipforme",
         "storage",
         "buyforme"
-      ]
+      ],
+      "updatedAt": "2026-10-29"
     },
     {
       "id": "returns",
@@ -965,6 +1058,186 @@
         "buyforme",
         "expertbuy"
       ]
+    },
+    {
+      "id": "tracking",
+      "slug": "cssbuy-tracking-not-updating",
+      "title": "Eikö CSSBuy-seuranta päivity? Tarkista pakettisi vaihe vaiheelta",
+      "description": "Etsi CSSBuy-seurantanumerosi, erota lähetystarra kuljetusyhtiön skannauksesta ja valmistele oikeanlainen tukipyyntö, kun paketin päivitykset lakkaavat.",
+      "category": "Toimitus",
+      "keywords": [
+        "cssbuy tracking",
+        "cssbuy tracking not updating",
+        "cssbuy parcel tracking",
+        "cssbuy tracking number"
+      ],
+      "intro": "Jos CSSBuy-seurantasi ei päivity, tarkista ensin, onko paketti todella lähtenyt varastolta. Avaa paketin tiedot virallisella tililläsi, kopioi seurantanumero ja vertaa viimeisintä päivättyä tapahtumaa tiedoissa näkyvään kuljetusyhtiöön. Luotu lähetystarra, varastossa oleva tuote ja kuljetusyhtiön vastaanottama paketti ovat eri vaiheita. Tämä opas auttaa tunnistamaan vaiheen, keräämään hyödylliset todisteet ja päättämään, mitä kysyä seuraavaksi. Se ei lupaa toimituspäivää eikä anna pääsyä yksityiseen tilaukseesi.",
+      "sections": [
+        {
+          "heading": "1. Etsi paketin tiedot ennen seurantasivuston tarkistamista",
+          "paragraphs": [
+            "CSSBuy ohjaa ostajat lähettämisen jälkeen My Parcel -osioon. Aloita omalta tililtäsi, jotta paketin tunniste, valittu toimituslinja ja seurantanumero koskevat samaa lähetystä. Tuotteen tilausnumero saattaa yksilöidä myyjältä tehdyn ostoksen; se ei välttämättä ole kansainvälisessä kuljetuksessa käytettävä numero. Jos yhdistit useita ostoksia, etsi ne sisältävä paketti sen sijaan, että tarkistaisit jokaisen ostoksen erikseen.",
+            "Kopioi numero kokonaisuudessaan sen sijaan, että kirjoittaisit sen uudelleen. Tarkista, ettei mukaan tullut vahingossa välilyöntejä, kun valitsit tekstiä puhelimella. Kirjaa viimeisin tapahtuma ja sen aikaleima täsmälleen sellaisina kuin ne näkyvät. Säilytä kuvakaappaukset omissa tiedoissasi, mutta poista nimesi, osoitteesi ja täydellinen seurantanumerosi ennen minkään julkaisemista julkisesti. Julkinen keskustelu voi auttaa selittämään tilan, mutta se ei korvaa yksityisiä pakettitietoja eikä todista, kenen hallussa pakettisi tällä hetkellä on."
+          ]
+        },
+        {
+          "heading": "2. Erota lähetystarran luominen kuljetusyhtiön vastaanotosta",
+          "paragraphs": [
+            "Lähetystarra tai seurantanumero voi olla olemassa jo ennen kuin kuljetusyhtiö kirjaa paketin vastaanotetuksi. Lue itse tapahtuma: tietojen vastaanottaminen ja kuljetettavaksi hyväksyminen kertovat eri asioista. Jos tiedoissa näkyy vain sähköisiä tietoja, kysy, valmistellaanko pakettia vielä vai onko se jo luovutettu kuljetukseen. Älä oleta ensimmäisen numeron ilmestymisen tarkoittavan, että lentokone on lähtenyt.",
+            "Tarkista myös, odottaako jokin tililläsi toimenpidettä. Vastaamaton pakkauskysymys, keskeneräinen toimitusmaksu tai osoitteen korjaus saattaa vaatia huomiota ennen seuraavaa vaihetta. Nämä ovat tarkistettavia asioita, eivät selvitys juuri sinun viiveesi syystä. Jos näkymässä ei ole selitystä, pyydä tukea vahvistamaan nykyinen vaihe ja seuraava odotettavissa oleva tapahtuma. Se on hyödyllisempi pyyntö kuin kysyä, miksi yksilöimätön lähetys kestää liian kauan."
+          ]
+        },
+        {
+          "heading": "3. Vertaa kuljetusyhtiötä ja viimeisintä päivättyä tapahtumaa",
+          "paragraphs": [
+            "Käytä pakettisi tiedoissa nimettyä kuljetusyhtiötä. Jos myöhemmissä tiedoissa annetaan eri numero paikallista toimitusta varten, tallenna molemmat numerot ja merkitse, mitä matkan osaa kumpikin koskee. Numero, jota yksi kuljetusyhtiö ei tunnista, saattaa kuulua toiselle palvelulle tai sillä ei ehkä vielä ole julkista tapahtumaa. Vältä satunnaisten kuljetusyhtiöiden kokeilemista, kunnes näkyviin tulee asiaan liittymätön tulos: pelkkä täsmäävä numero ei riitä tunnistamaan lähetystäsi.",
+            "Jos kaksi näkymää ovat ristiriidassa, vertaa tapahtumien todellisia aikaleimoja ja sijaintikuvauksia. Sivun päivittämisaika ei ole paketin liikkumisaika. Säilytä alkuperäinen tilateksti sekä mahdollinen automaattinen käännös, sillä käännetty logistiikan ilmaus voi kuulostaa lopullisemmalta kuin alkuperäinen viesti. Pyydä CSSBuyta selventämään tuntematon tapahtuma paketin tietojen perusteella. Karttakuva tai arvioitu edistymispalkki ei todista, että paketti olisi fyysisesti kyseisessä paikassa."
+          ]
+        },
+        {
+          "heading": "4. Päätä, kannattaako odottaa vai kysyä lisätietoja",
+          "paragraphs": [
+            "Ei ole yhtä päivien määrää, jonka jälkeen jokainen CSSBuy-paketti olisi myöhässä. Olennainen vertailukohta on valitsemasi toimituslinjan ajantasainen ohjeistus ja tililläsi näkyvä tarkka vaihe. Tarkista, ilmoittaako palvelu lähettämisen aikavälin, kuljetusaika-arvion vai molemmat. Kuljetusaika-arviota ei pidä huomaamatta tulkita lupaukseksi koko ajanjaksosta tuotteen maksupäivästä alkaen.",
+            "Ota yhteyttä tukeen, kun sinulta pyydetään toimenpidettä, tiedoissa näkyy poikkeama, jota et ymmärrä, tai palvelun asianmukaisessa ohjeistuksessa annettu aika on ylittynyt ilman selitystä. Jos sovellettavissa ehdoissa näkyy korvausvaatimuksen tai selvityspyynnön määräaika, tallenna päivämäärä erikseen sen sijaan, että olettaisit voivasi odottaa loputtomasti. Kysy, mikä määräaika koskee pakettiasi. Saman näkymän jatkuva päivittäminen tai usean samanlaisen keskustelun avaaminen ei luo uutta kuljetusyhtiön skannausta."
+          ]
+        },
+        {
+          "heading": "5. Valmistele yksi selkeä tukiviesti",
+          "paragraphs": [
+            "Käytä virallisella tililläsi pakettiin liittyvää huomautus- tai tukitoimintoa. Pidä viesti riittävän lyhyenä luettavaksi mutta riittävän yksityiskohtaisena asian tutkimiseksi. Selitä, mitä odotit tapahtuvan seuraavaksi ja mitkä tiedot ovat lakanneet muuttumasta. Pyydä täsmällistä vastausta: luovutuksen vahvistusta, kuljetusyhtiön selvennystä, puuttuvan toimenpiteen yksilöintiä tai ohjeita selvityspyynnön avaamiseen. Älä lähetä salasanoja tai maksukortin tietoja.",
+            "Esimerkiksi: pakettini tiedoissa näkyy seurantanumero, mutta viimeisin tapahtuma on edelleen tietojen vastaanottaminen. Vahvistattehan, onko paketti luovutettu kuljetusyhtiölle, minkä kuljetusyhtiön pitäisi tunnistaa tämä numero ja pitääkö minun tehdä jotakin. Lisää todelliset päivämäärät ja paketin tunniste yksityisesti. Tämä esimerkki on kysymyspohja, ei väite siitä, että jokainen paketti, jonka seurantatiedot eivät päivity, olisi yhä varastossa."
+          ],
+          "bullets": [
+            "Paketin tunniste ja tililläsi valittu toimituslinja.",
+            "Viimeisin tapahtuma, sen aikaleima ja paikka, jossa näit sen.",
+            "Mahdollinen tilin viesti tai maksuvaihe, joka odottaa vielä toimenpidettä.",
+            "Tarvitsemasi täsmällinen vahvistus tai seuraava vaihe."
+          ]
+        },
+        {
+          "heading": "6. Käsittele poikkeama tai toimitusongelma huolellisesti",
+          "paragraphs": [
+            "Jos tiedoissa ilmoitetaan osoiteongelmasta, toimitusyrityksestä tai noutovaatimuksesta, tarkista kyseiseen lähetykseen liittyvät kuljetusyhtiön viralliset ohjeet. Vahvista odottamattomat maksupyynnöt tililtäsi tai kuljetusyhtiön verkkosivustolta, jolle siirryit itsenäisesti. Pakettisi numeron sisältävä viesti voi silti olla harhaanjohtava. Älä seuraa tuntematonta linkkiä vain siksi, että se saapuu odottaessasi pakettia.",
+            "Jos tila on toimitettu mutta et löydä pakettia, tarkista toimituspaikka ja mahdolliset toimitustodisteet. Ota sen jälkeen yhteyttä asianomaiseen kuljetusyhtiöön ja CSSBuyhin ja kerro tosiasiat. Jos paketti saapuu vaurioituneena tai vaikuttaa puutteelliselta, säilytä ulkopakkaus ja ota selkeät valokuvat ennen minkään hävittämistä. Kuvaile puuttuvat tai vaurioituneet osat tilaustietoihisi verraten. Todisteet auttavat tutkinnassa, mutta eivät yksin takaa hyvitystä tai korvausta."
+          ]
+        },
+        {
+          "heading": "7. Pidä seuranta, toimituskulut ja toimitusaika erillään",
+          "paragraphs": [
+            "Seurantatapahtuma vastaa kysymykseen lähetyksen etenemisestä. Se ei selitä jokaista veloitusta, vahvista paketin sisältöä tai takaa seuraavaa toimituspäivää. Säilytä toimitustarjous, paketin lopulliset mitat ja seurantahistoria erillisinä tietoina. Jos sinulla on myös kustannuksia koskeva kysymys, pyydä asianmukainen veloituserittely sen sijaan, että olettaisit selittämättömän seurantaviiveen aiheuttaneen hinnanmuutoksen.",
+            "Samoin tuotteen ostaminen, myyjän odottaminen, varastokuvien tarkastaminen ja kansainvälisen paketin lähettäminen ovat tilauksen aikajanan eri osia. Kun suunnittelet tulevaa tilausta, vertaa näitä vaiheita erikseen. Jätä varaa epävarmuudelle, jos tuotetta tarvitaan syntymäpäiväksi, matkalle tai muuhun ajankohdaltaan kiinteään tapahtumaan. Aiempi onnistunut toimitus on hyödyllinen henkilökohtainen vertailukohta, mutta se ei todista uuden paketin noudattavan samaa aikataulua."
+          ]
+        },
+        {
+          "heading": "8. Tee seuraavasta tarkistuksesta hyödyllinen",
+          "paragraphs": [
+            "Kun saat vastauksen, kirjoita muistiin luvattu seuraava päivitys tai toimenpide, joka sinua pyydettiin tekemään. Tarkista, että vastaus koskee juuri sinun pakettiasi ja toimituslinjaasi. Jos vastaus on epäselvä, jatka samassa keskustelussa kysymällä puuttuvaa tietoa sen sijaan, että aloittaisit alusta erilaisella kuvauksella. Tallenna mahdollinen sovellettava selvityspyynnön määräaika ja toimittamasi todisteet.",
+            "Ennen asian sulkemista vahvista, mikä muuttui: näkyviin tuli kuljetusyhtiön ensimmäinen skannaus, paikallinen numero tuli saataville, osoite korjattiin tai tutkinta avattiin. Nämä ovat eri tuloksia, ja vain osa niistä osoittaa paketin liikkuneen. CSSBuy Home on riippumaton artikkeleita ja tuotelöytöjä tarjoava sivusto. Emme voi tarkastella tiliäsi tai puuttua lähetykseen; viralliset pakettitiedot ja asiasta vastaava tukitiimi ovat edelleen paikat, joissa asia ratkaistaan."
+          ]
+        }
+      ],
+      "takeaways": [
+        "Etsi kansainvälisen paketin tiedot ja kopioi sen tarkka seurantanumero.",
+        "Lue viimeisin päivätty tapahtuma ennen kuin päättelet paketin viivästyneen.",
+        "Käytä paketin virallista keskustelua ja säilytä asiaankuuluvat todisteet."
+      ],
+      "sourceIds": [
+        "buyforme",
+        "project"
+      ],
+      "publishedAt": "2026-10-29",
+      "updatedAt": "2026-10-29"
+    },
+    {
+      "id": "link-help",
+      "slug": "cssbuy-link-not-working",
+      "title": "Eikö CSSBuy-linkki toimi? Korjaa Weidian-, Taobao- ja 1688-linkit",
+      "description": "Selvitä CSSBuy-tuotelinkin ongelmat: etsi alkuperäinen tuoteilmoitus, tarkista tuote ja vaihtoehto sekä valmistele Expert Buy -pyyntö, jos tuonti epäonnistuu.",
+      "category": "Osto-oppaat",
+      "keywords": [
+        "cssbuy link not working",
+        "cssbuy link converter",
+        "weidian to cssbuy",
+        "taobao link cssbuy",
+        "1688 cssbuy"
+      ],
+      "intro": "Kun CSSBuy-tuotelinkki ei toimi, aloita myyjän alkuperäisestä tuoteilmoituksesta. Tarkista, että se avautuu, yksilöi haluamasi tuotteen ja tarjoaa yhä oikean vaihtoehdon. Liitä sitten kyseisen ilmoituksen URL-osoite CSSBuyhin. Kopioitu taulukkosivu, kaupan etusivu ja tuoteilmoitus ovat eri linkkejä. Jos automaattinen tuonti epäonnistuu, virallinen osto-opas ohjaa Expert Buy -palveluun. Tämä opas kertoo, mitä tarkistaa ennen maksamista, eikä pidä linkin muuntamista todisteena siitä, että tuote olisi saatavilla tai turvallinen ostaa.",
+      "sections": [
+        {
+          "heading": "1. Tunnista kopioimasi linkin tyyppi",
+          "paragraphs": [
+            "Tuotteiden löytämiseen tarkoitettu sivu voi sisältää useita kohteita: sivuston oman tietosivun, lähdeluettelon tietueen, alkuperäisen markkinapaikan tuoteilmoituksen ja ostolinkin. Aloita selvittämällä, mikä näistä sinulla on. CSSBuy Homen tuoteosoite yksilöi tämän luettelon merkinnän. Sen avulla on helppo palata löytöön, mutta se ei ole myyjän tuoteilmoitus, jota CSSBuy tarvitsee ymmärtääkseen ostoksen.",
+            "Avaa tuotetiedot ja etsi alkuperäinen tuoteilmoitus tai virallinen ostokohde. Vahvista, että tuotekuva, myyjä ja saatavilla olevat vaihtoehdot vastaavat sitä, mitä aioit ostaa. Hakutulos tai kaupan etusivu voi sisältää useita tuotteita eikä välttämättä yksilöi tiettyä tuotetta. Jos sinulla on vain kuvakaappaus, etsi ensin täsmällinen tuoteilmoitus tai pyydä täydelliset myyjä- ja tuotetiedot. Älä valitse samannäköistä tulosta vain saadaksesi tuonnin toimimaan."
+          ]
+        },
+        {
+          "heading": "2. Etsi tuotteen täydellinen alkuperäinen URL-osoite",
+          "paragraphs": [
+            "Puhelimen jakotoiminto saattaa kopioida selittävää tekstiä linkin mukana. Erota varsinainen URL-osoite sitä ympäröivästä viestistä ennen sen liittämistä ostokenttään. Jos lyhytlinkki avaa välisivun, siirry tarkoitettuun tuotteeseen ja tarkista kohde. Säilytä alkuperäinen linkki muistiinpanoissasi, jotta voit selittää sen alkuperän, jos avautuva sivu näyttää väärältä.",
+            "Älä poista tuotteen tunnistetta linkkiä siistiessäsi. Jotkin kyselyparametrit yksilöivät tuotteen sen sijaan, että seuraisivat käyntiä. Kaiken poistaminen kysymysmerkin jälkeen voi siksi poistaa osan, jota tarvitaan tuotteen löytämiseen. Toisaalta tilikohtainen kassasivun osoite tai yksityisen tilauksen osoite ei ole julkinen tuoteilmoitus. Jaa vain ostoon tarvittavat julkiset tuotetiedot äläkä koskaan kopioi salasanaa, kirjautumiskoodia tai yksityistä maksulinkkiä tuotepyyntöön."
+          ]
+        },
+        {
+          "heading": "3. Tarkista Weidian-linkki alkuperäistä tuotetta vasten",
+          "paragraphs": [
+            "Kun löydät tuotteen Weidianista, vahvista alkuperäinen tuotetunniste ja myyjä tuoteilmoituksesta. Lähdeluettelon tietuenumero on erillinen tunniste. Tämän tietuenumeron sijoittaminen osto-URL-osoitteeseen voi ohjata väärään tuotteeseen tai aiheuttaa virheen. Tämän sivuston ostolinkki muodostetaan vain, kun tuetun markkinapaikan alkuperäiset tiedot ovat saatavilla; linkki on silti tarkistettava haluamaasi tuotetta vasten.",
+            "Vertaa muutakin kuin ensimmäistä kuvaa. Tarkista otsikko, saatavilla olevat koot, värit ja kaikki samankaltaisia ilmoituksia erottavat yksityiskohdat. Myyjä saattaa käyttää samaa ilmoitusta useille versioille tai lisävarusteille. Jos sivu latautuu mutta haluttu versio puuttuu, linkki toimii teknisesti, vaikka ostos ei edelleenkään ole sopiva. Kysy juuri kyseisestä versiosta sen sijaan, että pitäisit onnistunutta sivun latautumista lupana valita mikä tahansa vaihtoehto."
+          ]
+        },
+        {
+          "heading": "4. Tarkista Taobao- ja 1688-vaihtoehdot ennen hintojen vertailua",
+          "paragraphs": [
+            "Kun Taobao- tai 1688-ilmoitus tuodaan, tarkista valittu vaihtoehto ennen kuin vertaat näkyvää summaa taulukon hintaan. Alkaen-hinta voi koskea eri kokoa, väriä, määrää tai osaa. Kirjaa vaihtoehdon nimi ja määrä, jonka todella aiot tilata. Hintaero on syy tutkia valintaa, ei itsessään todiste tuonnin toimimattomuudesta.",
+            "Tarkista 1688:ssa toimittajan vähimmäistilausmäärä ja kyseiseen määrään sovellettava hinta. CSSBuy neuvoo ostajia nimenomaisesti tarkistamaan nämä ehdot. Yksittäinen näyte, pakkaus ja tukkumäärä eivät välttämättä vastaa toisiaan. Jos tuotu sivu ei kerro vaatimusta selvästi, selvitä se ennen maksun lähettämistä. Kysy myös, voidaanko juuri kyseiset tavarat toimittaa määränpäähäsi sopivalla toimituspalvelulla; kelvollinen tuoteilmoitus ei vahvista soveltuvuutta kansainväliseen toimitukseen."
+          ]
+        },
+        {
+          "heading": "5. Erota tuonnin epäonnistuminen tuoteilmoituksen puuttumisesta",
+          "paragraphs": [
+            "Jos alkuperäinen tuoteilmoitus avautuu oikein mutta ostosivu ei pysty lukemaan sitä, tuontiongelma on yksi mahdollisuus. Jos alkuperäinen sivu on poistettu, ohjaa kauppaan tai ei enää tarjoa tuotetta, osto-URL-osoitteen jatkuva muuttaminen ei palauta puuttuvaa tarjousta. Vertaa näitä kahta tilannetta ennen kuin käytät aikaa muuntimeen. Kirjaa tarkka virhe ja alkuperäinen julkinen URL-osoite tukea varten.",
+            "Myös kirjautumisnäkymää tai sovelluksen käyttökehotusta on tulkittava huolellisesti. Se ei todista tuotteen olevan loppuunmyyty, eikä tämä opas pysty kertomaan, pääseekö ostoagentti myyjän sivulle. Käytä markkinapaikan tavanomaista kirjautumistapaa ja pyydä tarvittaessa CSSBuyta tarkistamaan tuoteilmoitus. Vältä markkinapaikan tunnusten syöttämistä tuntemattomaan muuntimeen tai kolmannen osapuolen sivun päästämistä pyytämään käyttöoikeutta ostotiliisi."
+          ]
+        },
+        {
+          "heading": "6. Valmistele Expert Buy -pyyntö täydellisin tiedoin",
+          "paragraphs": [
+            "CSSBuy tarjoaa Expert Buy -palvelun manuaaliseksi ostotavaksi, kun tavallinen haku ei pysty käsittelemään tuotetta. Valmistele alkuperäinen tuotteen URL-osoite, otsikko, asiaankuuluva kuva, pyydetty koko tai väri, määrä, tuotteen hinta ja tiedot lähtömaan sisäisestä toimituksesta. Erota myyjän vahvistamat tiedot kaikesta, mitä olet vain arvioinut. Tyhjä tai arvattu kenttä voi aiheuttaa virheellisen tilauksen, vaikka itse pyyntö lähetettäisiin onnistuneesti.",
+            "Kuvaile tarkka vaihtoehto huomautuskentässä ja esitä ratkaisematon kysymys. Kysy esimerkiksi, koskeeko näkyvä hinta yhtä tuotetta vai sarjaa tai onko tiettyä kokoa saatavilla. Tarkista saamasi tilaustiedot muistiinpanoihisi verraten ennen maksamista. Manuaalinen ostaminen ei tee tarkistamattomasta myyjästä luotettavaa eikä vahvista palautusoikeutta. Lue ajantasainen myyjäriskejä koskeva ilmoitus ja päätä, onko jäljelle jäävä epävarmuus hyväksyttävä ostoksesi kannalta."
+          ],
+          "bullets": [
+            "Säilytä alkuperäinen julkinen tuoteilmoitus ja myyjän tiedot.",
+            "Määritä tarkka vaihtoehto ja määrä kirjallisesti.",
+            "Erota tuotteen hinta lähtömaan sisäisestä toimituksesta ja myöhemmästä kansainvälisestä toimituksesta.",
+            "Selvitä puuttuvat tiedot ennen ostoksen hyväksymistä."
+          ]
+        },
+        {
+          "heading": "7. Ymmärrä, mitä linkkimuunnin voi ja ei voi tehdä",
+          "paragraphs": [
+            "Muunnin muuttaa tuetun linkkimuodon toiseksi kohdeosoitteeksi. Se ei voi vahvistaa varastotilannetta, todentaa tuotteen aitoutta, tarkastaa saapuvaa tuotetta tai taata palautusta. Oikeakin muunnos voi avata ilmoituksen, joka on muuttunut sen jälkeen, kun se lisättiin taulukkoon. Pidä muunnettua sivua tarkistamisen alkuna ja säilytä tieto valitsemastasi versiosta.",
+            "Tämä verkkosivusto ei tarjoa yleiskäyttöistä linkkimuunninta. Tuetut tuotesivut saattavat tarjota suoran CSSBuy-linkin, kun taas muut tuotteet edellyttävät alkuperäistä tuoteilmoitusta ja manuaalista tarkistusta. Jos suoraa ostopainiketta ei ole, se ei ole kehotus keksiä tuotetunnistetta. Käytä alkuperäistä ilmoitusta ja virallista ostoprosessia. Ole erityisen varovainen, jos työkalu väittää korjaavansa jokaisen markkinapaikkalinkin näyttämättä, minkä tuotteen se on todella valinnut."
+          ]
+        },
+        {
+          "heading": "8. Tarkista tilaus vielä kerran ennen toimitukseen siirtymistä",
+          "paragraphs": [
+            "Kun ostopyyntö hyväksytään, säilytä alkuperäinen tuoteilmoitus, valittu vaihtoehto ja vahvistettu summa. Nämä tiedot tekevät varastotarkastuksesta hyödyllisemmän: voit verrata vastaanotettua tuotetta pyytämääsi versioon. Myyjän kuvagalleria toimii tarjouksen vertailuaineistona, kun taas oman varastotuotteesi valokuvat antavat erilaista näyttöä. Kumpaakaan ei pidä kuvata aitoustodistukseksi tai takeeksi ominaisuuksista, jotka eivät näy kuvissa.",
+            "Jos vastaanotettu tuote poikkeaa vahvistetusta tilauksesta, kysy käytettävissä olevasta ratkaisusta ennen sen lisäämistä kansainväliseen pakettiin. Kuvaa ongelma täsmällisesti ja liitä asiaankuuluvat todisteet yksityisesti. Älä oleta tuotteen lähettämisen ulkomaille jättävän samat käytännön palautusmahdollisuudet. Kun tuotetiedot ovat oikein, vertaa kokonaisia pakettivaihtoehtoja toimituskulu- ja varasto-oppaiden avulla. Linkin korjaaminen on vasta ensimmäinen askel kohti aikomasi tuotteen vastaanottamista."
+          ]
+        }
+      ],
+      "takeaways": [
+        "Käytä alkuperäistä tuoteilmoitusta, älä luettelon tietuenumeroa.",
+        "Tarkista vaihtoehto, määrä ja myyjä ennen tuodun hinnan hyväksymistä.",
+        "Tee täydellinen manuaalinen pyyntö Expert Buy -palvelussa, kun automaattinen tuonti epäonnistuu."
+      ],
+      "sourceIds": [
+        "buyforme",
+        "expertbuy",
+        "project"
+      ],
+      "publishedAt": "2026-10-29",
+      "updatedAt": "2026-10-29"
     }
   ],
   "sources": [
@@ -972,13 +1245,13 @@
       "id": "buyforme",
       "title": "CSSBuy — Buy For Me: virallinen ostoprosessi",
       "url": "https://m.cssbuy.com/buyforme",
-      "accessedAt": "2026-10-23"
+      "accessedAt": "2026-10-29"
     },
     {
       "id": "expertbuy",
       "title": "CSSBuy — Expert Buy: tuotetiedot ja myyjäriskiä koskeva huomautus",
       "url": "https://m.cssbuy.com/expertbuy",
-      "accessedAt": "2026-10-23"
+      "accessedAt": "2026-10-29"
     },
     {
       "id": "about",
@@ -1018,7 +1291,7 @@
     },
     {
       "id": "catalog",
-      "title": "cnfansge.com — Tuoteluettelon lähde",
+      "title": "Tuoteluettelo",
       "url": "https://cnfansge.com/",
       "accessedAt": "2026-10-23"
     },

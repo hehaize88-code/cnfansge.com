@@ -27,7 +27,7 @@
     {
       "id": "data",
       "q": "Varifrån kommer produkterna och annonsbilderna?",
-      "a": "Produktkatalogen och säljarnas bildgallerier kommer från cnfansge.com. CSSBuy Home har ingen separat produktdatabas och skapar inga produktbilder. Bekräfta det valda erbjudandet när du öppnat köpstället.",
+      "a": "Produktkatalogen och säljarnas bildgallerier kommer från Produktkatalog. CSSBuy Home har ingen separat produktdatabas och skapar inga produktbilder. Bekräfta det valda erbjudandet när du öppnat köpstället.",
       "sourceIds": [
         "catalog",
         "project"
@@ -36,7 +36,7 @@
     {
       "id": "qc",
       "q": "Är produktbilderna verifierade QC-bilder från CSSBuy?",
-      "a": "Säljargallerier ska inte betraktas som kvalitetskontroll på lagret. En verifierad QC-bild för en specifik beställning måste vara kopplad till den mottagna varan. Den här förhandsversionen märker inte cnfansges säljarbilder som verifierat inspektionsunderlag från CSSBuy.",
+      "a": "Säljargallerier ska inte betraktas som kvalitetskontroll på lagret. En verifierad QC-bild för en specifik beställning måste vara kopplad till den mottagna varan. Den här förhandsversionen märker inte Produktkatalogs säljarbilder som verifierat inspektionsunderlag från CSSBuy.",
       "sourceIds": [
         "catalog",
         "project"
@@ -63,7 +63,7 @@
     {
       "id": "weidian-link",
       "q": "Vilket ID ska användas i en Weidian-köplänk?",
-      "a": "Använd marknadsplatsens ursprungliga produkt-ID. Det angivna exemplet är https://www.cssbuy.com/shop/goodsDetail?type=micro&id=7755101935. Ett postnummer i cnfansges katalog kan inte ersätta marknadsplatsens ID.",
+      "a": "Använd marknadsplatsens ursprungliga produkt-ID. Det angivna exemplet är https://www.cssbuy.com/shop/goodsDetail?type=micro&id=7755101935. Ett postnummer i Produktkatalogs katalog kan inte ersätta marknadsplatsens ID.",
       "sourceIds": [
         "user-link"
       ]
@@ -236,8 +236,8 @@
     {
       "id": "spreadsheet",
       "slug": "cssbuy-spreadsheet-guide",
-      "title": "Så använder du en CSSBuy-produktlista: en köpguide",
-      "description": "En praktisk guide till CSSBuy-produktlistor för att jämföra produktlänkar, kontrollera varianter, tolka bilder och planera ett komplett köp.",
+      "title": "CSSBuy-kalkylblad: hitta länkar, kontrollera storlekar och beställ",
+      "description": "Använd CSSBuy-kalkylbladet för att hitta produktlänkar, kontrollera säljare och storlek, granska lagerfoton och planera den totala kostnaden inklusive leverans.",
       "category": "Kom igång",
       "keywords": [
         "cssbuy produktlista",
@@ -245,7 +245,7 @@
         "så använder du cssbuy",
         "cssbuy produktlänkar"
       ],
-      "intro": "En användbar CSSBuy-produktlista ska hjälpa dig fatta ett bättre köpbeslut, inte bara skapa en längre inköpslista. En förteckning kan samla länkar, titlar och annonspriser, men det viktiga arbetet börjar när du kontrollerar den faktiska produkten bakom ett kort. Den här guiden visar hur du gör bläddrandet till en liten, dokumenterad urvalslista, skiljer säljarens presentation från underlag om din egen beställning och avgör om ett fynd fortfarande är rimligt efter frakten. CSSBuy Home är en oberoende upptäcktssida. Produktkatalogen kommer från cnfansge.com; köp och orderhantering sker på CSSBuy.",
+      "intro": "Börja med en kategori eller sökning i CSSBuy-kalkylbladet, öppna en produkt och kontrollera originalannonsen. Kontrollera storlek, färg, mängd och aktuellt pris innan du går vidare till CSSBuy. Katalogen hjälper dig att upptäcka produkter; den officiella ordersidan bekräftar vad du kan köpa. Använd den här guiden för att gå från en sparad länk till en kontrollerad vara på lagret och en realistisk fraktbudget.",
       "sections": [
         {
           "heading": "Börja med ett syfte och en realistisk urvalslista",
@@ -258,7 +258,7 @@
           "heading": "Läs produktkortet som en post i en förteckning",
           "paragraphs": [
             "Ett kort sammanfattar en mycket större annons. Titeln kan vara förkortad, översatt eller tillhandahållen av källkatalogen. Det visade priset kan gälla ett alternativ snarare än alla varianter. Använd fälten för att hitta det ursprungliga erbjudandet och jämför sedan den specifika storlek, färg, mängd och version du vill ha. Ett lågt frånpris räcker inte för en rättvis rangordning om den ena produkten har ett tillbehör som den andra saknar.",
-            "På CSSBuy Home kommer produktposter och säljargallerier från cnfansge.com. En säljarbild illustrerar annonsen; den bevisar inte att en viss vara på lagret har kontrollerats. Om webbplatsen inte kan erbjuda en fungerande funktion eller en verifierad bildtyp ska du inte anta att den finns utifrån en tilltalande etikett. Följ den tillgängliga produktlänken och kontrollera vad som faktiskt presenteras innan du behandlar ett kort som underlag."
+            "På CSSBuy Home kommer produktposter och säljargallerier från Produktkatalog. En säljarbild illustrerar annonsen; den bevisar inte att en viss vara på lagret har kontrollerats. Om webbplatsen inte kan erbjuda en fungerande funktion eller en verifierad bildtyp ska du inte anta att den finns utifrån en tilltalande etikett. Följ den tillgängliga produktlänken och kontrollera vad som faktiskt presenteras innan du behandlar ett kort som underlag."
           ]
         },
         {
@@ -313,7 +313,8 @@
         "buyforme",
         "expertbuy",
         "catalog"
-      ]
+      ],
+      "updatedAt": "2026-10-29"
     },
     {
       "id": "weidian",
@@ -400,8 +401,8 @@
     {
       "id": "qc",
       "slug": "cssbuy-qc-photos-guide",
-      "title": "CSSBuy QC-bilder: en praktisk checklista för granskning",
-      "description": "Ett strukturerat sätt att granska lagerbilder, skilja dem från säljarbilder och begära användbara mått innan ett paket skickas.",
+      "title": "CSSBuy QC-foton: vad du ska kontrollera innan du skickar",
+      "description": "Granska dina lagerfoton från CSSBuy för att kontrollera rätt vara, storlek, färg, mängd och synliga skador. Lär dig när du bör be om ett tydligare foto eller en mätning.",
       "category": "Lager och QC",
       "keywords": [
         "cssbuy qc",
@@ -409,14 +410,42 @@
         "cssbuy kvalitetskontroll",
         "lagerbilder"
       ],
-      "intro": "Bilder från kvalitetskontrollen är mest användbara när du granskar dem med en fråga i åtanke. Motsvarar varan det beställda alternativet? Finns de nödvändiga tillbehören? Är måttet förenligt med dina behov? Att bara bläddra i ett galleri och tycka att varan ser bra ut kan missa detaljer som spelar roll efter leverans. Den här guiden beskriver en praktisk granskningsordning och bildbevisens begränsningar. CSSBuys officiella servicesidor beskriver lagerkontroll och fotografering. CSSBuy Home betraktar inte säljargallerierna från cnfansge.com som verifierad lager-QC, och ett produktkort ska aldrig läsas som ett kontrollintyg.",
+      "intro": "Granska foton av din faktiska vara på lagret innan du lämnar in den för internationell frakt. Jämför varan, färgen, storleksetiketten, mängden och det synliga skicket med din beställning. Be om en riktad närbild eller mätning när de befintliga fotona inte kan besvara en specifik fråga. Säljarbilder i ett kalkylblad är annonsbilder; de är inte QC-foton av din beställning eller bevis på äkthet.",
       "sections": [
         {
           "heading": "Ta reda på vems vara och vilken bild du tittar på",
           "paragraphs": [
             "Identifiera underlaget innan du granskar detaljer. En säljarbild presenterar ett erbjudande. En offentlig köparbild dokumenterar någon annans köp. En lagerbild kopplad till din beställning dokumenterar din mottagna vara vid ett visst tillfälle. Kategorierna kan komplettera varandra men besvarar olika frågor. En detaljerad offentlig bild fastställer inte skicket på ett exemplar som ännu inte har kommit fram åt dig.",
             "Kontrollera orderreferensen och det valda alternativet innan du jämför bilder. Två varor kan ha samma modellnamn men skilja sig i färg, storlek, material eller medföljande komponenter. Om du inte kan koppla bilden till rätt alternativ, behåll den som bakgrundsinformation. Då blir inte en särskilt tilltalande bild måttstocken för en orelaterad variant. Den starkaste jämförelsen börjar med en tydlig dokumentation av exakt vad du bad att få köpa."
-          ]
+          ],
+          "table": {
+            "headers": [
+              "Kontroll",
+              "Om det är oklart"
+            ],
+            "rows": [
+              [
+                "Vara och alternativ",
+                "Jämför med din sparade annons och dina orderuppgifter."
+              ],
+              [
+                "Storleksetikett",
+                "Be om ett läsbart foto av etiketten och den mätning du behöver."
+              ],
+              [
+                "Färg och skick",
+                "Be om en tydlig närbild av det aktuella området."
+              ],
+              [
+                "Mängd och komponenter",
+                "Kontrollera varje beställd del, inte bara huvudvaran."
+              ],
+              [
+                "Beslut",
+                "Red ut frågan innan du godkänner internationell frakt."
+              ]
+            ]
+          }
         },
         {
           "heading": "Granska identitet och antal före små detaljer",
@@ -477,13 +506,14 @@
         "buyforme",
         "shipforme",
         "catalog"
-      ]
+      ],
+      "updatedAt": "2026-10-29"
     },
     {
       "id": "cost",
       "slug": "cssbuy-shipping-cost",
-      "title": "CSSBuys fraktkostnad: så uppskattar du totalsumman",
-      "description": "Förstå underlaget bakom paketkostnader och jämför förpackning, debiterbar vikt och fraktofferter utan att förlita dig på ett fast kilopris.",
+      "title": "CSSBuys fraktkalkylator: uppskatta kostnad och paketvikt",
+      "description": "Uppskatta CSSBuy-frakten med hjälp av destination, vikt inklusive emballage och mått. Jämför tillåtna fraktvägar, volymvikt och paketets slutliga prisförslag.",
       "category": "Frakt",
       "keywords": [
         "cssbuy fraktkostnad",
@@ -491,14 +521,46 @@
         "cssbuy volymvikt",
         "cssbuy fraktuppskattning"
       ],
-      "intro": "Det finns inget användbart universellt svar på ”Vad kostar CSSBuy-frakt?” utan en destination, en tillåten fraktväg och en beskrivning av det packade paketet. Ett pris från någon annans beställning kan vara ett intressant exempel, men det är ingen offert för din. Den här guiden visar hur du gör en uppskattning som förblir användbar när informationen förbättras. Målet är inte att förutsäga ett oförberett pakets kostnad till sista öret. Det är att förstå vilka uppgifter som kan ändra resultatet, reservera tillräcklig budget och jämföra de slutliga alternativen på lika villkor.",
+      "intro": "Använd CSSBuys officiella fraktkalkylator med din destination, uppskattad vikt inklusive emballage och paketets mått. Kontrollera vilka fraktvägar som accepterar dina varor och jämför sedan prisförslagen med samma uppgifter. Det finns inget allmänt pris per kilogram: emballage, regler för fraktvägen och paketets slutliga uppmätta storlek och vikt kan ändra beloppet. Den här guiden förklarar beräkningen och ger dig en checklista att använda innan du betalar.",
       "sections": [
         {
           "heading": "Dela upp frågan i kända och okända uppgifter",
           "paragraphs": [
             "Börja med att lista vad du vet: destinationsland och region, produktantal, ungefärliga varumått och särskilda hanteringsbehov. Lista sedan vad som är osäkert: packad vikt, kartongmått, tillgängliga fraktvägar och valfria tjänster. En kalkylator är bara så informativ som dessa uppgifter. En optimistiskt gissad vikt ger ett optimistiskt resultat, inte ett mer korrekt.",
             "Sätt ett datum vid varje sparad uppskattning och bevara indata som gav resultatet. Då kan du förklara en senare ändring utan att anta att något gick fel. En offert för en destination eller paketstorlek ska inte jämföras direkt med ett annat scenario. Om varorna innehåller batterier, vätskor, ömtåliga komponenter eller andra potentiellt begränsade egenskaper, kontrollera först vilka fraktvägar som tillåts. Den billigaste visade fraktvägen är irrelevant om det faktiska paketet inte får använda den."
-          ]
+          ],
+          "table": {
+            "headers": [
+              "Uppgifter till kalkylatorn",
+              "Vad du ska kontrollera"
+            ],
+            "rows": [
+              [
+                "Destination",
+                "Ange landet och regionen som paketet ska levereras till."
+              ],
+              [
+                "Vikt inklusive emballage",
+                "Ta med skyddande emballage och eventuella kartonger som du behåller."
+              ],
+              [
+                "Paketets mått",
+                "Ange längd, bredd och höjd i kalkylatorns enheter."
+              ],
+              [
+                "Varor och fraktväg",
+                "Kontrollera begränsningarna innan du jämför priser."
+              ],
+              [
+                "Debiterbar vikt",
+                "Läs reglerna och avrundningen för den valda fraktvägen."
+              ],
+              [
+                "Slutligt belopp",
+                "Jämför prisförslaget med det kontrollerade paketet och debiteringen i kontot."
+              ]
+            ]
+          }
         },
         {
           "heading": "Skilj fysisk vikt från den vikt som används vid prissättningen",
@@ -559,13 +621,14 @@
         "buyforme",
         "estimates",
         "shipforme"
-      ]
+      ],
+      "updatedAt": "2026-10-29"
     },
     {
       "id": "time",
       "slug": "cssbuy-shipping-time",
-      "title": "Hur lång tid tar CSSBuy? En tidslinje för beställningen",
-      "description": "Skilj säljarens avsändning, lagerbeslut, internationell transport och slutleverans åt så att du kan planera och ställa bättre spårningsfrågor.",
+      "title": "CSSBuys leveranstid: från säljaren till lagret och fram till leverans",
+      "description": "Förstå varje steg i en CSSBuy-leverans, var du kan kontrollera paketet och vad du bör fråga när hanteringen hos säljaren, lagret eller transportören stannar upp.",
       "category": "Frakt",
       "keywords": [
         "cssbuy leveranstid",
@@ -573,7 +636,7 @@
         "cssbuy orderstatus",
         "cssbuy spårning"
       ],
-      "intro": "En leveransuppskattning är svår att tolka om du inte vet när tidräkningen börjar. Tid som går åt till att vänta på en säljare, kontrollera en vara på lagret eller avgöra vad som ska samfraktas skiljer sig från tiden i internationell transport. Den här guiden delar upp resan i praktiska steg och visar hur du undersöker en försening utan att göra en annan köpares erfarenhet till ett löfte för din egen beställning. Använd aktuell information i ditt CSSBuy-konto för en specifik transaktion; tidslinjen här är ett planeringsramverk, ingen garanterad leveransplan.",
+      "intro": "CSSBuys leveranstid omfattar flera separata steg: säljarens avsändning, ankomst till lagret, din granskning och dina fraktval, paketförberedelse och internationell transport. Kontrollera steget i ditt konto innan du jämför någon uppskattning. En uppskattad transporttid för en fraktväg täcker inte alla tidigare steg, och ingen enskild leveranstid gäller för alla destinationer eller paket.",
       "sections": [
         {
           "heading": "Rita tidslinjen innan du jämför leveranspåståenden",
@@ -626,13 +689,14 @@
       "sourceIds": [
         "buyforme",
         "storage"
-      ]
+      ],
+      "updatedAt": "2026-10-29"
     },
     {
       "id": "warehouse",
       "slug": "cssbuy-warehouse-consolidation",
-      "title": "CSSBuys lagerförvaring och samfrakt av paket",
-      "description": "Planera förvaring, granska varor och kombinera paket med eftertanke utifrån faktiska varor, tidsfrister och begränsningar för fraktvägar.",
+      "title": "CSSBuys lager: förvaring, kvalitetskontroll och sampackning",
+      "description": "Avgör vilka varor på lagret som är klara att skickas, vad du ska kontrollera innan du slår ihop beställningar och hur emballaget kan ändra paketets kostnad.",
       "category": "Lager och QC",
       "keywords": [
         "cssbuy lager",
@@ -640,14 +704,42 @@
         "cssbuy förvaring",
         "cssbuy paketpackning"
       ],
-      "intro": "På lagret blir separata köp en paketplan. Den flexibiliteten är värdefull, men en växande samling beställningar utan slutdatum kan också göra kostnader och tidsfrister svårare att hantera. En bra plan visar vilka varor som är klara, vilka som kräver ett beslut och vilka som faktiskt tjänar på att resa tillsammans. CSSBuy beskriver samfrakt och flera packningstjänster på sin officiella Ship For Me-sida. Den här guiden förklarar hur du avgör vad du behöver utan att anta att största möjliga paket alltid är bäst.",
+      "intro": "Innan du sampackar ett CSSBuy-paket ska du kontrollera att varje vara som ska ingå har anlänt, stämmer med beställningen och har klarat de kontroller du begärt. Red ut fel storlek eller saknade delar innan du skickar varan internationellt. Jämför sedan det samlade paketet med separata paket utifrån faktisk vikt, mått och tillåtna fraktvägar. Sampackning är ett beslut om hela paketet, inte en automatisk garanti för billigare leverans.",
       "sections": [
         {
           "heading": "Skapa en varuförteckning baserad på beslut",
           "paragraphs": [
             "Anteckna beställningsidentifierare, ankomstdatum, aktuellt beslut och nästa åtgärd för varje lagervara. Användbara beslut är redo att skickas, väntar på ett mått, retur begärd och väntar på en annan vara. Etiketterna är lättare att agera på än en enkel lista över saker du äger. De visar vilka varor som kan gå vidare och vilka som skulle försena ett paket.",
             "Koppla ett skäl till varje vara du medvetet behåller på lagret. Kanske är ett annat köp redan på väg inom landet, eller behöver du jämföra två mått. Ett skäl med ett omprövningsdatum är en plan; att vänta på obestämd tid på något mer att köpa är det inte. Gå igenom förteckningen regelbundet och ta bort antaganden som inte längre stämmer. Om den förväntade följevaran blir otillgänglig, ompröva paketet i stället för att låta en gammal plan fortsätta automatiskt."
-          ]
+          ],
+          "table": {
+            "headers": [
+              "Innan du sampackar varor",
+              "Beslut"
+            ],
+            "rows": [
+              [
+                "Har alla varor kommit fram?",
+                "Lämna varor som saknas eller har olösta frågor utanför paketet."
+              ],
+              [
+                "Är QC-frågorna utredda?",
+                "Be om det underlag som saknas innan du skickar."
+              ],
+              [
+                "Är packningen överenskommen?",
+                "Behåll det skydd som varje vara behöver."
+              ],
+              [
+                "Är fraktvägarna tillåtna?",
+                "Kontrollera om en vara begränsar fraktmöjligheterna för hela paketet."
+              ],
+              [
+                "Har kostnaden jämförts?",
+                "Jämför alternativen med ett sampackat paket respektive separata paket, inklusive emballage."
+              ]
+            ]
+          }
         },
         {
           "heading": "Håll lagringsfrister åtskilda från returbeslut",
@@ -694,7 +786,8 @@
         "shipforme",
         "storage",
         "buyforme"
-      ]
+      ],
+      "updatedAt": "2026-10-29"
     },
     {
       "id": "returns",
@@ -965,6 +1058,186 @@
         "buyforme",
         "expertbuy"
       ]
+    },
+    {
+      "id": "tracking",
+      "slug": "cssbuy-tracking-not-updating",
+      "title": "Uppdateras inte CSSBuy-spårningen? Kontrollera ditt paket steg för steg",
+      "description": "Hitta ditt spårningsnummer hos CSSBuy, skilj en skapad fraktetikett från en skanning hos transportören och förbered rätt supportfråga när paketets uppdateringar uteblir.",
+      "category": "Frakt",
+      "keywords": [
+        "cssbuy tracking",
+        "cssbuy tracking not updating",
+        "cssbuy parcel tracking",
+        "cssbuy tracking number"
+      ],
+      "intro": "Om din CSSBuy-spårning inte uppdateras bör du först kontrollera om paketet verkligen har lämnat lagret. Öppna paketuppgifterna i ditt officiella konto, kopiera spårningsnumret och jämför den senaste daterade händelsen med transportören som anges där. En skapad etikett, en vara på lagret och ett paket som tagits emot av en transportör är olika steg. Den här guiden hjälper dig att identifiera steget, samla användbara underlag och avgöra vad du ska fråga härnäst. Den utlovar inget leveransdatum och ger ingen åtkomst till din privata beställning.",
+      "sections": [
+        {
+          "heading": "1. Hitta paketuppgifterna innan du använder en spårningswebbplats",
+          "paragraphs": [
+            "CSSBuy hänvisar köpare till avsnittet My Parcel efter avsändning. Börja i ditt eget konto så att paketets identifierare, det valda fraktalternativet och spårningsnumret hör till samma försändelse. En varas ordernummer kan avse köpet från säljaren; det är inte nödvändigtvis det nummer som används för internationell transport. Om du har slagit ihop flera inköp ska du leta efter paketet som innehåller dessa varor i stället för att kontrollera varje inköp för sig.",
+            "Kopiera hela numret i stället för att skriva in det på nytt. Kontrollera att du inte av misstag fått med mellanslag när du markerat text på en telefon. Anteckna den senaste händelsen och dess tidsstämpel exakt som de visas. Spara skärmbilder för egen del, men ta bort ditt namn, din adress och det fullständiga spårningsnumret innan du publicerar något offentligt. En offentlig diskussion kan hjälpa till att förklara en status; den kan inte ersätta de privata paketuppgifterna eller fastställa vem som för närvarande har ditt paket."
+          ]
+        },
+        {
+          "heading": "2. Skilj mellan en skapad etikett och ett paket som transportören tagit emot",
+          "paragraphs": [
+            "En etikett eller ett spårningsnummer kan finnas innan en transportör registrerar att den har tagit emot paketet. Läs själva händelsen: information mottagen och mottaget för transport är olika slags belägg. Om uppgifterna bara visar elektronisk information ska du fråga om paketet fortfarande förbereds eller redan har lämnats över. Utgå inte från att det första numret som dyker upp betyder att ett flygplan har avgått.",
+            "Kontrollera också om någon åtgärd väntar i ditt konto. En obesvarad fråga om packning, en ofullständig fraktbetalning eller en adresskorrigering kan behöva hanteras innan nästa steg. Det här är sådant du kan undersöka, inte en förklaring till just din försening. Om skärmen inte ger någon förklaring ska du be supporten bekräfta det aktuella steget och nästa förväntade händelse. Det är en mer användbar fråga än varför en ospecificerad försändelse tar för lång tid."
+          ]
+        },
+        {
+          "heading": "3. Jämför transportören och den senaste daterade händelsen",
+          "paragraphs": [
+            "Använd den transportör som anges i dina paketuppgifter. Om en senare uppdatering ger ett annat nummer för den lokala leveransen ska du spara båda numren och notera vilken del av resan vart och ett avser. Ett nummer som en transportör inte känner igen kan tillhöra en annan tjänst eller ännu sakna en offentlig händelse. Undvik att prova slumpmässiga transportörer tills ett orelaterat resultat dyker upp: enbart ett matchande nummer räcker inte för att identifiera din försändelse.",
+            "När två skärmar visar olika uppgifter ska du jämföra de faktiska tidsstämplarna för händelserna och platsbeskrivningarna. Tidpunkten då du uppdaterade sidan är inte tidpunkten då paketet förflyttades. Spara den ursprungliga statustexten tillsammans med eventuell automatisk översättning, eftersom en översatt logistikterm kan låta mer definitiv än det ursprungliga meddelandet. Be CSSBuy förklara en obekant händelse med hjälp av paketuppgifterna. Varken en kartillustration eller en uppskattad förloppsindikator bevisar att paketet fysiskt befinner sig där."
+          ]
+        },
+        {
+          "heading": "4. Avgör om du bör vänta eller ställa en fråga",
+          "paragraphs": [
+            "Det finns inget bestämt antal dagar efter vilket alla CSSBuy-paket är försenade. Den relevanta jämförelsen är de aktuella uppgifterna för ditt valda fraktalternativ och det specifika steg som visas i kontot. Kontrollera om tjänsten publicerar ett tidsintervall för avsändning, en uppskattad transporttid eller båda. En uppskattad transporttid ska inte underförstått bli ett löfte som gäller hela perioden från dagen då du betalade för en produkt.",
+            "Kontakta supporten när du uppmanas att göra något, när paketuppgifterna innehåller en avvikelse du inte förstår eller när den angivna tiden för tjänsten har överskridits utan förklaring. Om de tillämpliga villkoren anger en tidsfrist för reklamation eller efterforskning ska du spara det datumet separat i stället för att anta att du kan vänta hur länge som helst. Fråga vilken tidsfrist som gäller för ditt paket. Att uppdatera samma skärm upprepade gånger eller starta flera identiska konversationer skapar ingen ny skanning hos transportören."
+          ]
+        },
+        {
+          "heading": "5. Förbered ett tydligt meddelande till supporten",
+          "paragraphs": [
+            "Använd antecknings- eller supportfunktionen som hör till paketet i ditt officiella konto. Håll meddelandet tillräckligt kort för att vara lättläst men tillräckligt detaljerat för att gå att utreda. Förklara vad du förväntade dig skulle hända härnäst och vilka uppgifter som har slutat ändras. Be om ett konkret svar: bekräftelse på överlämning, klargörande av transportör, identifiering av en åtgärd som saknas eller instruktioner för att starta en efterforskning. Skicka inte lösenord eller betalkortsuppgifter.",
+            "Till exempel: mina paketuppgifter visar ett spårningsnummer, men den senaste händelsen är fortfarande information mottagen. Bekräfta om paketet har lämnats över till transportören, vilken transportör som ska känna igen numret och om jag behöver göra något. Lägg till de faktiska datumen och paketets identifierare privat. Exemplet är en frågemall, inte ett påstående om att alla paket utan nya spårningshändelser fortfarande finns på lagret."
+          ],
+          "bullets": [
+            "Paketets identifierare och fraktalternativet som valts i ditt konto.",
+            "Den senaste händelsen, dess tidsstämpel och var du såg den.",
+            "Eventuella kontomeddelanden eller betalningssteg som fortfarande kräver en åtgärd.",
+            "Den specifika bekräftelse eller det nästa steg du behöver."
+          ]
+        },
+        {
+          "heading": "6. Hantera en avvikelse eller ett leveransproblem noggrant",
+          "paragraphs": [
+            "Om paketuppgifterna anger ett adressproblem, ett leveransförsök eller ett krav på uthämtning ska du kontrollera transportörens officiella anvisningar för den försändelsen. Verifiera oväntade betalningskrav via ditt konto eller transportörens webbplats som du själv har gått till. Ett meddelande som innehåller ditt paketnummer kan ändå vara vilseledande. Följ inte en okänd länk bara för att den kommer medan du väntar på ett paket.",
+            "Om statusen säger levererat men du inte hittar paketet ska du kontrollera leveransplatsen och eventuella leveransbevis och sedan kontakta den berörda transportören och CSSBuy med fakta. Om paketet kommer fram skadat eller verkar ofullständigt ska du behålla ytteremballaget och ta tydliga foton innan du slänger något. Beskriv vad som saknas eller är skadat utifrån dina orderuppgifter. Underlag hjälper en utredning men garanterar inte i sig återbetalning eller ersättning."
+          ]
+        },
+        {
+          "heading": "7. Håll isär spårning, fraktkostnad och leveranstid",
+          "paragraphs": [
+            "En spårningshändelse besvarar en fråga om hur transporten fortskrider. Den förklarar inte varje avgift, intygar inte paketets innehåll och garanterar inte nästa leveransdatum. Spara fraktpriset, paketets slutliga mått och spårningshistoriken som separata uppgifter. Om du också har en kostnadsfråga ska du be om en specifikation av de relevanta avgifterna i stället för att anta att en oförklarad paus i spårningen orsakade prisändringen.",
+            "På samma sätt är produktköpet, väntan på säljaren, granskningen av lagerfoton och avsändningen av det internationella paketet olika delar av beställningens tidslinje. Jämför dessa steg separat när du planerar en framtida beställning. Ta höjd för osäkerhet om varan behövs till en födelsedag, resa eller annan händelse med ett fast datum. En tidigare lyckad leverans är en användbar personlig referens, men den bevisar inte att ett nytt paket följer samma tidsplan."
+          ]
+        },
+        {
+          "heading": "8. Gör nästa kontroll användbar",
+          "paragraphs": [
+            "När du har fått ett svar ska du anteckna den utlovade nästa uppdateringen eller den åtgärd du blivit ombedd att utföra. Kontrollera att svaret avser ditt faktiska paket och fraktalternativ. Om svaret är otydligt ska du följa upp i samma konversation med den uppgift som saknas i stället för att börja om med en annan beskrivning. Spara eventuell tillämplig tidsfrist för efterforskning och det underlag du lämnat.",
+            "Innan du avslutar ärendet ska du bekräfta vad som ändrats: en första skanning hos transportören har dykt upp, ett lokalt nummer har blivit tillgängligt, en adress har rättats eller en utredning har startats. Det här är olika resultat, och bara vissa visar att paketet har förflyttats. CSSBuy Home är en oberoende webbplats med artiklar och produktupptäckter. Vi kan inte granska ditt konto eller ingripa i en försändelse; de officiella paketuppgifterna och den ansvariga supporten är fortfarande rätt vägar för att lösa ärendet."
+          ]
+        }
+      ],
+      "takeaways": [
+        "Hitta uppgifterna för det internationella paketet och kopiera dess exakta spårningsnummer.",
+        "Läs den senaste daterade händelsen innan du bedömer att ett paket är försenat.",
+        "Använd den officiella konversationen för paketet och spara relevant underlag."
+      ],
+      "sourceIds": [
+        "buyforme",
+        "project"
+      ],
+      "publishedAt": "2026-10-29",
+      "updatedAt": "2026-10-29"
+    },
+    {
+      "id": "link-help",
+      "slug": "cssbuy-link-not-working",
+      "title": "Fungerar inte CSSBuy-länken? Åtgärda länkar från Weidian, Taobao och 1688",
+      "description": "Felsök en CSSBuy-produktlänk: hitta originalannonsen, kontrollera varan och varianten och förbered en Expert Buy-förfrågan när importen misslyckas.",
+      "category": "Köpguider",
+      "keywords": [
+        "cssbuy link not working",
+        "cssbuy link converter",
+        "weidian to cssbuy",
+        "taobao link cssbuy",
+        "1688 cssbuy"
+      ],
+      "intro": "När en produktlänk till CSSBuy inte fungerar ska du börja med säljarens originalannons. Kontrollera att den öppnas, visar produkten du vill ha och fortfarande erbjuder rätt alternativ. Klistra sedan in annonsens URL i CSSBuy. En kopierad kalkylbladssida, en butiks startsida och en produktannons är olika länkar. Om automatisk import misslyckas hänvisar den officiella köpguiden till Expert Buy. Den här guiden visar vad du ska kontrollera innan du betalar, utan att betrakta en länkkonvertering som bevis på att en vara finns tillgänglig eller är trygg att köpa.",
+      "sections": [
+        {
+          "heading": "1. Identifiera vilken typ av länk du har kopierat",
+          "paragraphs": [
+            "En sida för produktupptäckter kan innehålla flera destinationer: en lokal detaljsida, en post i källkatalogen, en originalannons på en marknadsplats och en köplänk. Börja med att identifiera vilken du har. En produktadress på CSSBuy Home identifierar en post i den här katalogen. Den är användbar för att återvända till fyndet, men är inte säljarannonsen som CSSBuy behöver för att förstå köpet.",
+            "Öppna produktdetaljerna och leta efter originalannonsen eller den officiella köpvägen. Bekräfta att produktbilden, säljaren och de tillgängliga alternativen stämmer med det du avsåg att köpa. Ett sökresultat eller en butiks startsida kan innehålla många varor och kanske inte identifierar någon särskild. Om du bara har en skärmbild ska du först hitta en exakt annons eller be om fullständiga säljar- och varuuppgifter. Välj inte ett resultat som ser liknande ut bara för att få importen att fungera."
+          ]
+        },
+        {
+          "heading": "2. Hitta produktens fullständiga ursprungliga URL",
+          "paragraphs": [
+            "En delningsfunktion i mobilen kan kopiera förklarande text tillsammans med en länk. Skilj den faktiska URL:en från texten runt omkring innan du klistrar in den i köpfältet. Om en kortlänk öppnar en mellanliggande sida ska du gå vidare till den avsedda produkten och granska destinationen. Spara ursprungslänken i dina anteckningar så att du kan förklara varifrån den kom om den resulterande sidan ser fel ut.",
+            "Ta inte bort varans identifierare när du rensar en länk. Vissa frågeparametrar identifierar produkten snarare än spårar ett besök. Att radera allt efter ett frågetecken kan därför ta bort den del som behövs för att hitta varan. Samtidigt är en kontospecifik kassasida eller privat orderadress ingen offentlig annons. Dela bara den offentliga produktinformation som behövs för köpet och kopiera aldrig ett lösenord, en inloggningskod eller en privat betalningslänk till en produktförfrågan."
+          ]
+        },
+        {
+          "heading": "3. Kontrollera en Weidian-länk mot originalvaran",
+          "paragraphs": [
+            "För ett Weidian-fynd ska du verifiera originalvarans identifierare och säljare i annonsen. Numret på en post i källkatalogen är en separat identifierare. Att sätta in det postnumret i en köp-URL kan leda till fel vara eller ge ett felmeddelande. Köplänken på den här webbplatsen skapas bara när originaluppgifter från en stödd marknadsplats finns tillgängliga; den bör ändå kontrolleras mot produkten du vill ha.",
+            "Jämför mer än den första bilden. Kontrollera rubriken, tillgängliga storlekar, färger och detaljer som skiljer liknande annonser åt. En säljare kan använda en annons för flera versioner eller tillbehör. Om sidan laddas men den avsedda versionen saknas fungerar länken tekniskt, samtidigt som köpet fortfarande är olämpligt. Fråga om exakt den versionen i stället för att se en lyckad sidladdning som ett klartecken att välja ett godtyckligt alternativ."
+          ]
+        },
+        {
+          "heading": "4. Kontrollera alternativen på Taobao och 1688 innan du jämför priser",
+          "paragraphs": [
+            "När en Taobao- eller 1688-annons importeras ska du granska det valda alternativet innan du jämför det visade beloppet med ett kalkylblad. Frånpriset kan gälla en annan storlek, färg, mängd eller komponent. Anteckna alternativets namn och den mängd du faktiskt tänker beställa. En prisskillnad är ett skäl att undersöka valet, inte i sig ett bevis på att importen är felaktig.",
+            "För 1688 ska du kontrollera leverantörens minsta beställningsmängd och det pris som gäller för den mängden. CSSBuy råder uttryckligen köpare att granska dessa villkor. Ett enskilt provexemplar, en förpackning och en grossistkvantitet behöver inte vara utbytbara. Om den importerade sidan inte klargör kravet ska du reda ut det innan du betalar. Fråga också om just de varorna kan skickas med en lämplig leveranstjänst till din destination; en giltig annons visar inte att internationell frakt är möjlig."
+          ]
+        },
+        {
+          "heading": "5. Skilj ett importfel från en annons som inte är tillgänglig",
+          "paragraphs": [
+            "Om originalannonsen öppnas korrekt men köpsidan inte kan läsa den är ett importproblem en möjlighet. Om originalsidan har tagits bort, omdirigerar till en butik eller inte längre erbjuder varan återställer du inte det saknade erbjudandet genom att ändra köp-URL:en upprepade gånger. Jämför de två situationerna innan du lägger tid på en konverterare. Spara det exakta felmeddelandet och den ursprungliga offentliga URL:en till supporten.",
+            "Även en inloggningsskärm eller en uppmaning att öppna en app behöver tolkas noggrant. Den bevisar inte att en vara är slutsåld, och den här guiden kan inte avgöra om inköpsagenten kommer åt säljarens sida. Använd marknadsplatsens vanliga åtkomst och be vid behov CSSBuy kontrollera annonsen. Undvik att skriva in marknadsplatsens inloggningsuppgifter i en okänd konverterare eller låta en tredjepartssida begära åtkomst till ditt shoppingkonto."
+          ]
+        },
+        {
+          "heading": "6. Förbered en Expert Buy-förfrågan med fullständiga uppgifter",
+          "paragraphs": [
+            "CSSBuy erbjuder Expert Buy som ett sätt att köpa manuellt när den vanliga sökningen inte kan hantera en vara. Förbered produktens ursprungliga URL, rubrik, relevant bild, önskad storlek eller färg, mängd, varupris och uppgifter om inrikes frakt. Skilj bekräftade säljaruppgifter från sådant du bara har uppskattat. Ett tomt fält eller en gissad uppgift kan leda till en felaktig beställning även om själva förfrågan skickas utan problem.",
+            "Använd anteckningsfältet för att beskriva exakt alternativ och ställa den olösta frågan. Fråga till exempel om det visade priset gäller en vara eller ett set, eller om en viss storlek finns tillgänglig. Kontrollera de orderuppgifter du får tillbaka mot dina anteckningar innan du betalar. Ett manuellt köp gör inte en overifierad säljare pålitlig och fastställer inga returrättigheter. Läs den aktuella informationen om säljarrisker och avgör om den återstående osäkerheten är acceptabel för ditt köp."
+          ],
+          "bullets": [
+            "Spara den ursprungliga offentliga annonsen och säljaruppgifterna.",
+            "Ange exakt alternativ och mängd skriftligen.",
+            "Skilj varupriset från inrikes leverans och senare internationell frakt.",
+            "Red ut saknade uppgifter innan du godkänner köpet."
+          ]
+        },
+        {
+          "heading": "7. Förstå vad en länkkonverterare kan och inte kan göra",
+          "paragraphs": [
+            "En konverterare ändrar ett länksformat som stöds till en annan destination. Den kan inte bekräfta lagersaldo, verifiera en produkts äkthet, granska varan som kommer att levereras eller garantera en retur. Även en korrekt konvertering kan öppna en annons som har ändrats sedan den lades till i ett kalkylblad. Se den konverterade sidan som början på kontrollen och spara uppgifter om den version du väljer.",
+            "Den här webbplatsen erbjuder inget universellt verktyg för länkkonvertering. Produktsidor som stöds kan erbjuda en direktlänk till CSSBuy, medan andra varor kräver originalannonsen och manuell kontroll. Om en direkt köpknapp saknas är det ingen uppmaning att hitta på en produktidentifierare. Använd originalannonsen och den officiella köpprocessen. Var särskilt försiktig när ett verktyg påstår sig kunna fixa alla marknadsplatslänkar utan att visa vilken produkt det faktiskt har valt."
+          ]
+        },
+        {
+          "heading": "8. Kontrollera beställningen en gång till innan du går vidare till frakten",
+          "paragraphs": [
+            "När en köpförfrågan har godkänts ska du spara originalannonsen, det valda alternativet och det bekräftade beloppet. Dessa uppgifter gör lagerkontrollen mer användbar: du kan jämföra den mottagna varan med den version du beställde. Säljarens bildgalleri är en referens för erbjudandet, medan foton av din vara på lagret ger en annan sorts underlag. Ingetdera bör beskrivas som bevis på äkthet eller en garanti för egenskaper som inte syns.",
+            "Om den mottagna varan skiljer sig från den bekräftade beställningen ska du fråga vilka lösningar som finns innan du lägger den i ett internationellt paket. Beskriv problemet konkret och bifoga relevant underlag privat. Utgå inte från att samma praktiska returmöjligheter finns kvar när varan har skickats utomlands. När produktuppgifterna stämmer kan du använda guiderna om fraktkostnader och lager för att jämföra alternativen för hela paketet. Att fixa länken är bara första steget mot att få den vara du avsåg att köpa."
+          ]
+        }
+      ],
+      "takeaways": [
+        "Använd den ursprungliga produktannonsen, inte numret på en katalogpost.",
+        "Kontrollera variant, mängd och säljare innan du accepterar ett importerat pris.",
+        "Använd Expert Buy för en fullständig manuell förfrågan när automatisk import misslyckas."
+      ],
+      "sourceIds": [
+        "buyforme",
+        "expertbuy",
+        "project"
+      ],
+      "publishedAt": "2026-10-29",
+      "updatedAt": "2026-10-29"
     }
   ],
   "sources": [
@@ -972,13 +1245,13 @@
       "id": "buyforme",
       "title": "CSSBuy — Buy For Me: den officiella köpprocessen",
       "url": "https://m.cssbuy.com/buyforme",
-      "accessedAt": "2026-10-23"
+      "accessedAt": "2026-10-29"
     },
     {
       "id": "expertbuy",
       "title": "CSSBuy — Expert Buy: produktinformation och information om säljarrisk",
       "url": "https://m.cssbuy.com/expertbuy",
-      "accessedAt": "2026-10-23"
+      "accessedAt": "2026-10-29"
     },
     {
       "id": "about",
@@ -1018,7 +1291,7 @@
     },
     {
       "id": "catalog",
-      "title": "cnfansge.com — Produktkatalogens källa",
+      "title": "Produktkatalog",
       "url": "https://cnfansge.com/",
       "accessedAt": "2026-10-23"
     },

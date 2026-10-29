@@ -27,7 +27,7 @@
     {
       "id": "data",
       "q": "D'où viennent les produits et les photos des annonces ?",
-      "a": "Le catalogue de produits et les galeries des vendeurs proviennent de cnfansge.com. CSSBuy Home ne gère pas de base de données de produits distincte et ne fabrique pas d'images de produits. Confirmez l'offre sélectionnée après avoir ouvert sa destination d'achat.",
+      "a": "Le catalogue de produits et les galeries des vendeurs proviennent de Catalogue de produits. CSSBuy Home ne gère pas de base de données de produits distincte et ne fabrique pas d'images de produits. Confirmez l'offre sélectionnée après avoir ouvert sa destination d'achat.",
       "sourceIds": [
         "catalog",
         "project"
@@ -36,7 +36,7 @@
     {
       "id": "qc",
       "q": "Les photos des produits sont-elles des photos QC CSSBuy vérifiées ?",
-      "a": "Les galeries des vendeurs ne doivent pas être considérées comme un contrôle qualité en entrepôt. Une photo QC vérifiée propre à une commande doit être associée à l'article reçu. Cet aperçu ne présente pas les images de vendeurs de cnfansge comme des preuves d'inspection CSSBuy vérifiées.",
+      "a": "Les galeries des vendeurs ne doivent pas être considérées comme un contrôle qualité en entrepôt. Une photo QC vérifiée propre à une commande doit être associée à l'article reçu. Cet aperçu ne présente pas les images de vendeurs de Catalogue de produits comme des preuves d'inspection CSSBuy vérifiées.",
       "sourceIds": [
         "catalog",
         "project"
@@ -63,7 +63,7 @@
     {
       "id": "weidian-link",
       "q": "Quel identifiant faut-il utiliser dans un lien d'achat Weidian ?",
-      "a": "Utilisez l'identifiant d'origine du produit sur la place de marché. L'exemple fourni est https://www.cssbuy.com/shop/goodsDetail?type=micro&id=7755101935. Un numéro de fiche du catalogue cnfansge ne remplace pas cet identifiant de la place de marché.",
+      "a": "Utilisez l'identifiant d'origine du produit sur la place de marché. L'exemple fourni est https://www.cssbuy.com/shop/goodsDetail?type=micro&id=7755101935. Un numéro de fiche du catalogue Catalogue de produits ne remplace pas cet identifiant de la place de marché.",
       "sourceIds": [
         "user-link"
       ]
@@ -236,8 +236,8 @@
     {
       "id": "spreadsheet",
       "slug": "cssbuy-spreadsheet-guide",
-      "title": "Comment utiliser un tableau CSSBuy : guide de l’acheteur",
-      "description": "Un guide pratique du tableau CSSBuy pour comparer les liens de produits, vérifier les variantes, lire les photos et planifier un achat complet.",
+      "title": "Tableur CSSBuy: Trouver des Liens, Vérifier les tailles et Commander",
+      "description": "Utilisez la feuille de calcul CSSBuy pour trouver des liens vers des produits, vérifier le vendeur et la taille, examiner les photos de l'entrepôt et planifier le coût total de livraison.",
       "category": "Premiers pas",
       "keywords": [
         "tableau CSSBuy",
@@ -245,7 +245,7 @@
         "comment utiliser CSSBuy",
         "liens de produits CSSBuy"
       ],
-      "intro": "Un tableau CSSBuy utile doit vous aider à prendre une meilleure décision d'achat, pas simplement à allonger votre liste de courses. Un répertoire peut réunir liens, titres et prix d'annonces, mais le travail important commence quand vous vérifiez le produit réel derrière une fiche. Ce guide montre comment transformer la navigation en une courte sélection documentée, distinguer la présentation du vendeur des preuves concernant votre propre commande, et déterminer si une trouvaille reste intéressante après la livraison. CSSBuy Home est un site indépendant de découverte. Son catalogue de produits provient de cnfansge.com ; les achats et la gestion des commandes se font sur CSSBuy.",
+      "intro": "Commencez par une catégorie ou effectuez une recherche dans la feuille de calcul CSSBuy, ouvrez un produit et vérifiez sa liste d'origine. Vérifiez la taille, la couleur, la quantité et le prix actuel avant de continuer vers CSSBuy. Le catalogue vous aide à découvrir les produits; l'écran de commande officiel confirme ce que vous pouvez acheter. Utilisez ce guide pour passer d'un lien enregistré à un article d'entrepôt inspecté et à un budget d'expédition réaliste.",
       "sections": [
         {
           "heading": "Commencez par un objectif et une sélection réaliste",
@@ -258,7 +258,7 @@
           "heading": "Lisez la fiche produit comme une entrée de répertoire",
           "paragraphs": [
             "Une fiche condense une annonce beaucoup plus vaste. Son titre peut être raccourci, traduit ou fourni par le catalogue source. Le prix affiché peut concerner une option plutôt que toutes les variantes. Considérez ces champs comme un moyen de retrouver l'offre d'origine, puis comparez la taille, la couleur, la quantité et la version précises que vous souhaitez. Un faible prix de départ ne suffit pas à classer équitablement deux produits si l'un inclut un accessoire et l'autre non.",
-            "Sur CSSBuy Home, les fiches produits et les galeries des vendeurs proviennent de cnfansge.com. Une image du vendeur illustre l'annonce ; elle ne prouve pas qu'un article particulier en entrepôt a été inspecté. Si le site ne peut pas fournir une fonction opérationnelle ou un type de photo vérifié, ne le déduisez pas d'une étiquette séduisante. Suivez le lien produit disponible et vérifiez ce qui est réellement présenté avant de considérer une fiche comme une preuve."
+            "Sur CSSBuy Home, les fiches produits et les galeries des vendeurs proviennent de Catalogue de produits. Une image du vendeur illustre l'annonce ; elle ne prouve pas qu'un article particulier en entrepôt a été inspecté. Si le site ne peut pas fournir une fonction opérationnelle ou un type de photo vérifié, ne le déduisez pas d'une étiquette séduisante. Suivez le lien produit disponible et vérifiez ce qui est réellement présenté avant de considérer une fiche comme une preuve."
           ]
         },
         {
@@ -313,7 +313,8 @@
         "buyforme",
         "expertbuy",
         "catalog"
-      ]
+      ],
+      "updatedAt": "2026-10-29"
     },
     {
       "id": "weidian",
@@ -400,8 +401,8 @@
     {
       "id": "qc",
       "slug": "cssbuy-qc-photos-guide",
-      "title": "Photos QC CSSBuy : liste pratique de vérification",
-      "description": "Une méthode structurée pour examiner les photos de l'entrepôt, distinguer les images du vendeur et demander des mesures utiles avant l'envoi d'un colis.",
+      "title": "Photos QC CSSBuy : que vérifier avant l’expédition ?",
+      "description": "Inspectez vos photos d'entrepôt CSSBuy pour le bon article, la taille, la couleur, la quantité et les dommages visibles. Découvrez quand demander une photo ou une mesure plus claire.",
       "category": "Entrepôt et QC",
       "keywords": [
         "QC CSSBuy",
@@ -409,14 +410,42 @@
         "contrôle qualité CSSBuy",
         "photos d’entrepôt"
       ],
-      "intro": "Les photographies de contrôle qualité sont surtout utiles lorsqu'on les aborde avec une question. Cet article correspond-il à l'option commandée ? Les accessoires nécessaires sont-ils présents ? La mesure convient-elle à vos besoins ? Parcourir simplement une galerie et décider qu'un article semble correct peut laisser passer des détails importants après la livraison. Ce guide explique un ordre d'examen pratique et les limites des preuves visuelles. Les pages officielles de service de CSSBuy décrivent l'inspection en entrepôt et les photographies. CSSBuy Home ne considère pas les galeries de vendeurs fournies par cnfansge.com comme du QC d'entrepôt vérifié, et une fiche produit ne doit jamais être lue comme un certificat d'inspection.",
+      "intro": "Examinez les photos de votre article d'entrepôt réel avant de le soumettre pour une expédition internationale. Comparez l'article, la couleur, l'étiquette de taille, la quantité et l'état visible avec votre commande. Demandez un gros plan ciblé ou une mesure lorsque les photos existantes ne peuvent pas répondre à une question spécifique. Les images du vendeur sur une feuille de calcul répertorient les photos; ce ne sont pas des photos QC de votre commande ou une preuve d'authenticité.",
       "sections": [
         {
           "heading": "Identifiez à qui appartient l'article et quelle image vous regardez",
           "paragraphs": [
             "Avant d'inspecter les détails, identifiez la preuve. Une photographie du vendeur présente une offre. Une photographie publique d'acheteur consigne l'achat de quelqu'un d'autre. Une photographie d'entrepôt associée à votre commande montre votre article reçu à un moment particulier. Ces catégories peuvent se compléter, mais répondent à des questions différentes. Une image publique détaillée ne prouve pas l'état d'une unité qui n'est pas encore arrivée pour vous.",
             "Vérifiez la référence de commande et l'option sélectionnée avant de comparer les images. Deux articles peuvent porter le même nom de modèle tout en différant par la couleur, la taille, les matériaux ou les composants inclus. Si vous ne pouvez pas associer une image à l'option pertinente, gardez-la comme information de contexte. Cela évite qu'une image particulièrement séduisante devienne la norme utilisée pour juger une variante sans rapport. La comparaison la plus solide commence par une trace claire de ce que vous avez exactement demandé à acheter."
-          ]
+          ],
+          "table": {
+            "headers": [
+              "Vérifier",
+              "Si ce n'est pas clair"
+            ],
+            "rows": [
+              [
+                "Article et option",
+                "Comparez avec votre annonce enregistrée et les détails de votre commande."
+              ],
+              [
+                "Étiquette de taille",
+                "Demandez une photo d'étiquette lisible et la mesure dont vous avez besoin."
+              ],
+              [
+                "Couleur et état",
+                "Demandez un gros plan clair de la zone spécifique."
+              ],
+              [
+                "Quantité et composants",
+                "Vérifiez chaque pièce commandée, pas seulement l'article principal."
+              ],
+              [
+                "Décision",
+                "Résolvez la question avant d'approuver l'expédition internationale."
+              ]
+            ]
+          }
         },
         {
           "heading": "Vérifiez l'identité et la quantité avant les petits détails",
@@ -477,13 +506,14 @@
         "buyforme",
         "shipforme",
         "catalog"
-      ]
+      ],
+      "updatedAt": "2026-10-29"
     },
     {
       "id": "cost",
       "slug": "cssbuy-shipping-cost",
-      "title": "Frais de livraison CSSBuy : comment estimer votre total",
-      "description": "Comprenez les paramètres des coûts de colis et comparez emballage, poids facturable et devis d'expédition sans vous fier à un prix fixe au kilogramme.",
+      "title": "Calculateur de livraison CSSBuy : estimer le prix et le poids du colis",
+      "description": "Estimez l'expédition CSSBuy avec votre destination, le poids emballé et les dimensions. Comparez les itinéraires éligibles, le poids volumétrique et le devis final du colis.",
       "category": "Livraison",
       "keywords": [
         "frais de livraison CSSBuy",
@@ -491,14 +521,46 @@
         "poids volumétrique CSSBuy",
         "estimation de livraison CSSBuy"
       ],
-      "intro": "Il n'existe pas de réponse universelle utile à « Combien coûte la livraison CSSBuy ? » sans destination, mode d'expédition admissible et description du colis emballé. Un prix repris de la commande de quelqu'un d'autre peut être un exemple intéressant, mais ne constitue pas un devis pour la vôtre. Ce guide montre comment établir une estimation qui reste utile à mesure que les informations s'améliorent. Il ne s'agit pas de prédire au centime près un colis non préparé, mais de comprendre quels paramètres peuvent changer le résultat, de réserver un budget suffisant et de comparer les options finales sur une base équivalente.",
+      "intro": "Utilisez le calculateur d'expédition officiel de CSSBuy avec votre destination, le poids emballé estimé et les dimensions du colis. Vérifiez quels itinéraires acceptent vos marchandises, puis comparez les devis en utilisant les mêmes entrées. Il n'y a pas de prix universel au kilogramme: l'emballage, les règles d'acheminement et le colis final mesuré peuvent modifier le montant. Ce guide explique le calcul et vous donne une liste de contrôle à utiliser avant de payer.",
       "sections": [
         {
           "heading": "Séparez la question en paramètres connus et inconnus",
           "paragraphs": [
             "Commencez par lister ce que vous savez : pays et région de destination, quantités de produits, dimensions approximatives des articles et besoins particuliers de manutention. Listez ensuite ce qui reste incertain : poids après emballage, dimensions du carton, modes d'expédition disponibles et services facultatifs. Un calculateur ne peut être plus informatif que ces paramètres. Saisir un poids deviné avec optimisme produit un résultat optimiste, pas plus précis.",
             "Datez chaque estimation enregistrée et conservez les paramètres qui l'ont produite. Vous pourrez ainsi expliquer une modification ultérieure sans supposer un problème. Un devis pour une destination ou une taille de colis ne doit pas être comparé directement à un autre scénario. Si les marchandises contiennent des batteries, liquides, composants fragiles ou autres caractéristiques potentiellement restreintes, vérifiez d'abord l'admissibilité à l'expédition. Le mode affiché le moins cher est sans intérêt si le colis réel ne peut pas l'emprunter."
-          ]
+          ],
+          "table": {
+            "headers": [
+              "Entrée de la calculatrice",
+              "Ce qu'il faut vérifier"
+            ],
+            "rows": [
+              [
+                "Destination",
+                "Utilisez le pays et la région qui recevront le colis."
+              ],
+              [
+                "Poids emballé",
+                "Incluez un emballage de protection et toutes les boîtes que vous conservez."
+              ],
+              [
+                "Dimensions des colis",
+                "Utilisez la longueur, la largeur et la hauteur dans les unités de la calculatrice."
+              ],
+              [
+                "Marchandises et itinéraire",
+                "Vérifiez les restrictions avant de comparer les prix."
+              ],
+              [
+                "Poids imputable",
+                "Lisez les règles d'itinéraire et les arrondis sélectionnés."
+              ],
+              [
+                "Montant final",
+                "Comparez le devis avec le forfait vérifié et les frais de compte."
+              ]
+            ]
+          }
         },
         {
           "heading": "Distinguez le poids physique du poids utilisé pour tarifer l'expédition",
@@ -559,13 +621,14 @@
         "buyforme",
         "estimates",
         "shipforme"
-      ]
+      ],
+      "updatedAt": "2026-10-29"
     },
     {
       "id": "time",
       "slug": "cssbuy-shipping-time",
-      "title": "Combien de temps prend CSSBuy ? Le calendrier d’une commande",
-      "description": "Distinguez l'envoi du vendeur, les décisions d'entrepôt, le transit international et la livraison finale pour mieux planifier et poser vos questions de suivi.",
+      "title": "Délais CSSBuy : du vendeur à l’entrepôt, puis à la livraison",
+      "description": "Comprenez chaque étape de la livraison CSSBuy, où vérifier votre colis et quoi demander lorsque la progression du vendeur, de l'entrepôt ou du transporteur s'arrête.",
       "category": "Livraison",
       "keywords": [
         "délai de livraison CSSBuy",
@@ -573,7 +636,7 @@
         "statut de commande CSSBuy",
         "suivi CSSBuy"
       ],
-      "intro": "Une estimation de livraison est difficile à interpréter sans savoir quand son décompte commence. Le temps passé à attendre un vendeur, examiner un article en entrepôt ou décider quoi regrouper diffère du temps de transit international. Ce guide décompose le parcours en étapes pratiques et montre comment examiner un retard sans transformer l'expérience d'un autre acheteur en promesse pour votre commande. Pour une transaction particulière, utilisez les informations actuelles de votre compte CSSBuy ; le calendrier présenté ici est un cadre de planification, pas un délai garanti.",
+      "intro": "Le délai de livraison de CSSBuy comprend plusieurs étapes distinctes: l'expédition du vendeur, l'arrivée à l'entrepôt, vos choix d'inspection et d'expédition, la préparation du colis et le transport international. Vérifiez l'étape dans votre compte avant de comparer une estimation. Une estimation de transit d'itinéraire ne couvre pas toutes les étapes précédentes, et aucun délai de livraison unique ne s'applique à chaque destination ou colis.",
       "sections": [
         {
           "heading": "Tracez le calendrier avant de comparer les délais annoncés",
@@ -626,13 +689,14 @@
       "sourceIds": [
         "buyforme",
         "storage"
-      ]
+      ],
+      "updatedAt": "2026-10-29"
     },
     {
       "id": "warehouse",
       "slug": "cssbuy-warehouse-consolidation",
-      "title": "Stockage en entrepôt et regroupement de colis CSSBuy",
-      "description": "Planifiez le stockage, examinez les articles et regroupez les colis de façon réfléchie selon les marchandises réelles, les échéances et les contraintes d'expédition.",
+      "title": "Entrepôt CSSBuy : stockage, contrôle qualité et regroupement des colis",
+      "description": "Décidez quels articles d'entrepôt sont prêts à être expédiés, ce qu'il faut vérifier avant de combiner les commandes et comment l'emballage peut modifier le coût de votre colis.",
       "category": "Entrepôt et QC",
       "keywords": [
         "entrepôt CSSBuy",
@@ -640,14 +704,42 @@
         "stockage CSSBuy",
         "emballage de colis CSSBuy"
       ],
-      "intro": "L'entrepôt est l'endroit où des achats séparés deviennent un plan de colis. Cette souplesse est précieuse, mais accumuler des commandes sans limite peut rendre coûts et échéances plus difficiles à gérer. Un bon plan identifie les articles prêts, ceux qui nécessitent une décision et ceux qui ont réellement intérêt à voyager ensemble. CSSBuy décrit le regroupement et plusieurs services d'emballage sur sa page officielle Ship For Me. Ce guide explique comment déterminer vos besoins sans supposer que le plus gros colis possible est toujours le meilleur.",
+      "intro": "Avant de consolider un colis CSSBuy, vérifiez que chaque article inclus est arrivé, correspond à votre commande et a passé les contrôles que vous avez demandés. Résolvez une mauvaise taille ou une pièce manquante avant de l'expédier à l'international. Comparez ensuite le colis combiné avec des colis séparés en utilisant le poids réel, les dimensions et les itinéraires éligibles. La consolidation est une décision concernant le package complet, pas une garantie automatique de livraison moins chère.",
       "sections": [
         {
           "heading": "Créez un inventaire fondé sur les décisions",
           "paragraphs": [
             "Pour chaque article en entrepôt, notez l'identifiant de commande, la date d'arrivée, la décision actuelle et l'action suivante. Les décisions utiles comprennent prêt à envoyer, en attente d'une mesure, retour demandé et en attente d'un autre article. Ces étiquettes sont plus exploitables qu'une simple liste de vos possessions. Elles montrent quels articles peuvent avancer et lesquels retarderaient un colis.",
             "Associez une raison à chaque article volontairement conservé en stockage. Peut-être qu'un autre achat est déjà en transit intérieur ou que vous devez comparer deux mesures. Une raison assortie d'une date de réexamen est un plan ; attendre indéfiniment autre chose à acheter n'en est pas un. Revoyez régulièrement l'inventaire et supprimez les hypothèses qui ne sont plus vraies. Si l'article compagnon attendu devient indisponible, réévaluez le colis plutôt que de laisser un ancien plan se poursuivre automatiquement."
-          ]
+          ],
+          "table": {
+            "headers": [
+              "Avant de combiner des éléments",
+              "Décision"
+            ],
+            "rows": [
+              [
+                "Tous les articles reçus?",
+                "Laissez les articles manquants ou non résolus hors du colis."
+              ],
+              [
+                "Questions de QC résolues?",
+                "Demandez les preuves manquantes avant l'expédition."
+              ],
+              [
+                "Emballage accepté?",
+                "Conservez la protection requise par chaque article."
+              ],
+              [
+                "Itinéraires éligibles?",
+                "Vérifiez si un élément restreint l'ensemble du colis."
+              ],
+              [
+                "Coût comparé?",
+                "Comparez les scénarios de colis combinés et séparés emballés."
+              ]
+            ]
+          }
         },
         {
           "heading": "Séparez les échéances de stockage des décisions de retour",
@@ -694,7 +786,8 @@
         "shipforme",
         "storage",
         "buyforme"
-      ]
+      ],
+      "updatedAt": "2026-10-29"
     },
     {
       "id": "returns",
@@ -965,6 +1058,186 @@
         "buyforme",
         "expertbuy"
       ]
+    },
+    {
+      "id": "tracking",
+      "slug": "cssbuy-tracking-not-updating",
+      "title": "Suivi CSSBuy bloqué ? Vérifiez votre colis étape par étape",
+      "description": "Trouvez votre numéro de suivi CSSBuy, distinguez une étiquette d'un scan de transporteur et préparez la bonne demande d'assistance lorsque les mises à jour de colis s'arrêtent.",
+      "category": "Expédition",
+      "keywords": [
+        "cssbuy tracking",
+        "cssbuy tracking not updating",
+        "cssbuy parcel tracking",
+        "cssbuy tracking number"
+      ],
+      "intro": "Si votre suivi CSSBuy n'est pas mis à jour, vérifiez d'abord si le colis a effectivement quitté l'entrepôt. Ouvrez l'enregistrement du colis dans votre compte officiel, copiez son numéro de suivi et comparez le dernier événement daté avec le transporteur qui y est indiqué. Une étiquette créée, un article d'entrepôt et un colis accepté par un transporteur sont des étapes différentes. Ce guide vous aide à identifier l'étape, à recueillir des preuves utiles et à décider quoi demander ensuite. Il ne promet pas de date de livraison ni ne donne accès à votre commande privée.",
+      "sections": [
+        {
+          "heading": "1. Trouvez le dossier du colis avant de consulter un site de suivi",
+          "paragraphs": [
+            "CSSBuy dirige les acheteurs vers la zone Mon colis après l'expédition. Commencez dans votre propre compte afin que l'identifiant du colis, la ligne d'expédition sélectionnée et le numéro de suivi appartiennent au même envoi. Un numéro de commande d'article peut décrire l'achat auprès du vendeur; ce n'est pas nécessairement le numéro utilisé pour le transport international. Si vous avez combiné plusieurs achats, recherchez le colis contenant ces articles plutôt que de vérifier chaque achat séparément.",
+            "Copiez le numéro complet au lieu de le retaper. Recherchez les espaces accidentellement inclus lors de la sélection de texte sur un téléphone. Enregistrez le dernier événement et son horodatage exactement comme affiché. Conservez des captures d'écran pour vos propres dossiers, mais supprimez votre nom, votre adresse et votre numéro de suivi complet avant de publier quoi que ce soit publiquement. Une discussion publique peut aider à expliquer un statut; il ne peut pas remplacer le dossier de colis privé ou établir qui détient actuellement votre colis."
+          ]
+        },
+        {
+          "heading": "2. Séparer la création d'étiquettes de l'acceptation par le transporteur",
+          "paragraphs": [
+            "Une étiquette ou un numéro de suivi peut exister avant qu'un transporteur n'enregistre la possession d'un colis. Lisez l'événement lui - même: les informations reçues et acceptées pour le transport décrivent différentes preuves. Si le dossier ne contient que des informations électroniques, demandez si le colis est encore en préparation ou s'il a déjà été remis. Ne présumez pas que le premier numéro qui apparaît signifie qu'un avion est parti.",
+            "Vérifiez également s'il y a une action en attente dans votre compte. Une question d'emballage sans réponse, un paiement d'expédition incomplet ou une correction d'adresse peuvent nécessiter une attention particulière avant l'étape suivante. Ce sont des choses à inspecter, pas un diagnostic de votre retard particulier. Si l'écran ne donne aucune explication, demandez au support de confirmer l'étape actuelle et le prochain événement attendu. C'est une demande plus utile que de demander pourquoi un envoi non spécifié prend trop de temps."
+          ]
+        },
+        {
+          "heading": "3. Comparez le transporteur et le dernier événement daté",
+          "paragraphs": [
+            "Utilisez le transporteur identifié dans les détails de votre colis. Si un enregistrement ultérieur fournit un numéro de livraison local différent, enregistrez les deux numéros et notez quelle partie du trajet chacun décrit. Un numéro qui n'est pas reconnu par un opérateur peut appartenir à un autre service ou ne pas encore avoir d'événement public. Évitez d'essayer des transporteurs aléatoires jusqu'à ce qu'un résultat sans rapport apparaisse: faire correspondre un numéro seul ne suffit pas à identifier votre envoi.",
+            "Lorsque deux écrans ne sont pas d'accord, comparez les horodatages des événements réels et les descriptions des emplacements. L'heure à laquelle vous avez actualisé une page n'est pas l'heure à laquelle le colis a été déplacé. Conservez le texte d'état d'origine ainsi que toute traduction automatique, car une phrase logistique traduite peut sembler plus définitive que le message sous-jacent. Demandez à CSSBuy de clarifier un événement inconnu en utilisant l'enregistrement de colis. Ni une illustration cartographique ni une barre de progression estimée ne prouvent que la parcelle se trouve physiquement à ce stade."
+          ]
+        },
+        {
+          "heading": "4. Décider s'il est approprié d'attendre ou de poser une question",
+          "paragraphs": [
+            "Il n'y a pas un seul nombre de jours après lequel chaque colis CSSBuy est en retard. La comparaison pertinente est l'orientation actuelle pour la ligne que vous avez sélectionnée et l'étape spécifique affichée dans votre compte. Vérifiez si le service publie une fenêtre de répartition, une estimation de transit ou les deux. Une estimation de transit ne doit pas devenir silencieusement une promesse pour toute la période à compter du jour où vous avez payé un produit.",
+            "Contactez l'assistance lorsqu'une action est demandée, que l'enregistrement contient une exception que vous ne comprenez pas ou que les instructions de service pertinentes ont été dépassées sans explication. Si une date limite de réclamation ou de demande est affichée dans les conditions applicables, conservez cette date séparément plutôt que de supposer que vous pouvez attendre indéfiniment. Demandez quelle date limite s'applique à votre colis. Actualiser plusieurs fois le même écran ou ouvrir plusieurs conversations identiques ne créera pas un nouveau scan du transporteur."
+          ]
+        },
+        {
+          "heading": "5. Préparez un message d'assistance clair",
+          "paragraphs": [
+            "Utilisez l'option de note ou d'assistance associée au colis dans votre compte officiel. Gardez le message suffisamment court pour être lu mais suffisamment détaillé pour enquêter. Expliquez ce que vous attendiez ensuite et quel enregistrement a cessé de changer. Demandez une réponse précise: confirmation de remise, clarification du transporteur, identification d'une action manquante, ou instructions pour ouvrir une enquête. N'envoyez pas de mots de passe ou de détails de carte de paiement.",
+            "Par exemple: mon dossier de colis affiche un numéro de suivi, mais le dernier événement est toujours une information reçue. Veuillez confirmer s'il a été remis au transporteur, quel transporteur doit reconnaître ce numéro et si je dois prendre des mesures. Ajoutez les dates réelles et l'identifiant du colis en privé. Cet exemple est un modèle de question, et non une affirmation selon laquelle chaque enregistrement de suivi silencieux est toujours dans l'entrepôt."
+          ],
+          "bullets": [
+            "Identifiant du colis et la ligne d'expédition sélectionnée dans votre compte.",
+            "Le dernier événement, son horodatage et l'endroit où vous l'avez vu.",
+            "Tout message de compte ou étape de paiement toujours en attente d'action.",
+            "La confirmation spécifique ou l'étape suivante dont vous avez besoin."
+          ]
+        },
+        {
+          "heading": "6. Gérez une exception ou un problème de livraison avec soin",
+          "paragraphs": [
+            "Si le dossier signale un problème d'adresse, une tentative de livraison ou une exigence de collecte, vérifiez les instructions officielles du transporteur associées à cet envoi. Vérifiez les demandes de paiement inattendues via votre compte ou le site Web de l'opérateur que vous avez atteint indépendamment. Un message contenant votre numéro de colis peut toujours être trompeur. Ne suivez pas un lien inconnu simplement parce qu'il arrive pendant que vous attendez un colis.",
+            "Si le statut indique livré mais que vous ne trouvez pas le colis, vérifiez le lieu de livraison et toute preuve de livraison disponible, puis contactez le transporteur concerné et CSSBuy avec les faits. Si le colis arrive endommagé ou semble incomplet, conservez l'emballage extérieur et prenez des photos claires avant de jeter quoi que ce soit. Décrivez ce qui manque ou est endommagé par rapport à votre dossier de commande. Les preuves facilitent une enquête, mais elles ne garantissent pas en soi un remboursement ou une indemnisation."
+          ]
+        },
+        {
+          "heading": "7. Séparez le suivi, les frais d'expédition et le délai de livraison",
+          "paragraphs": [
+            "Un événement de suivi répond à une question sur la progression. Il n'explique pas tous les frais, ne certifie pas le contenu du colis ou ne garantit pas la prochaine date de livraison. Conservez le devis d'expédition, les mesures finales du colis et l'historique de suivi dans des enregistrements séparés. Si vous avez également une question sur les coûts, demandez la ventilation des frais pertinents au lieu de supposer qu'un retard de suivi inexpliqué a causé le changement de prix.",
+            "De même, l'achat d'un produit, l'attente du vendeur, l'examen des photos de l'entrepôt et l'envoi du colis international sont différentes parties du calendrier de commande. Lors de la planification d'une future commande, comparez ces étapes séparément. Laissez place à l'incertitude si l'article est nécessaire pour un anniversaire, un voyage ou un autre événement fixe. Une précédente livraison réussie est une référence personnelle utile, mais ce n'est pas la preuve qu'un nouveau colis suivra le même calendrier."
+          ]
+        },
+        {
+          "heading": "8. Rendez la prochaine vérification utile",
+          "paragraphs": [
+            "Après avoir reçu une réponse, notez la prochaine mise à jour promise ou l'action que vous avez été invité à effectuer. Vérifiez que la réponse se réfère à votre colis et à votre ligne d'expédition réels. Si la réponse n'est pas claire, poursuivez la même conversation avec le fait manquant plutôt que de recommencer avec une description différente. Conservez toute date limite d'enquête applicable et les preuves que vous avez fournies.",
+            "Avant de clore le problème, confirmez ce qui a changé: un premier scan du transporteur est apparue, un numéro local est devenu disponible, une adresse a été corrigée ou une enquête a été ouverte. Ces résultats sont différents, et seuls certains indiquent que le colis a avancé. CSSBuy Home est un site indépendant de lecture et de découverte de produits. Nous ne pouvons pas inspecter votre compte ni intervenir dans un envoi; l'enregistrement officiel du colis et l'équipe d'assistance responsable restent les lieux pour le résoudre."
+          ]
+        }
+      ],
+      "takeaways": [
+        "Trouvez l'enregistrement du colis international et copiez son numéro de suivi exact.",
+        "Lisez le dernier événement daté avant de décider qu'un colis est retardé.",
+        "Utilisez la conversation officielle sur les colis et conservez les preuves pertinentes."
+      ],
+      "sourceIds": [
+        "buyforme",
+        "project"
+      ],
+      "publishedAt": "2026-10-29",
+      "updatedAt": "2026-10-29"
+    },
+    {
+      "id": "link-help",
+      "slug": "cssbuy-link-not-working",
+      "title": "Lien CSSBuy inaccessible ? Résoudre les problèmes Weidian, Taobao et 1688",
+      "description": "Résolvez les problèmes de lien CSSBuy : retrouvez l’annonce originale, vérifiez l’article et sa variante, puis préparez une demande Expert Buy si l’importation échoue.",
+      "category": "Guides d'achat",
+      "keywords": [
+        "cssbuy link not working",
+        "cssbuy link converter",
+        "weidian to cssbuy",
+        "taobao link cssbuy",
+        "1688 cssbuy"
+      ],
+      "intro": "Lorsqu'un lien de produit CSSBuy ne fonctionne pas, commencez par l'annonce originale du vendeur. Vérifiez qu'il s'ouvre, identifie le produit que vous souhaitez et propose toujours la bonne option. Collez ensuite cette URL de liste dans CSSBuy. Une page de feuille de calcul copiée, une page d'accueil de boutique et une liste de produits sont des liens différents. Si l'importation automatique échoue, le guide d'achat officiel indique Expert Buy. Ce guide montre ce qu'il faut vérifier avant de payer, sans considérer la conversion de lien comme une preuve qu'un article est disponible ou sûr à l'achat.",
+      "sections": [
+        {
+          "heading": "1. Identifiez le type de lien que vous avez copié",
+          "paragraphs": [
+            "Une page de découverte de produit peut contenir plusieurs destinations: une page de détails locale, un enregistrement de catalogue source, une liste de marché originale et un lien d'achat. Commencez par identifier celui que vous avez. Une adresse de produit CSSBuy Home identifie une entrée dans ce catalogue. C'est utile pour revenir à la trouvaille, mais ce n'est pas l'annonce du vendeur dont CSSBuy a besoin pour comprendre l'achat.",
+            "Ouvrez les détails du produit et recherchez sa liste d'origine ou sa destination d'achat officielle. Confirmez que l'image du produit, le vendeur et les options disponibles correspondent à ce que vous aviez l'intention d'acheter. Un résultat de recherche ou une page d'accueil de boutique peut contenir de nombreux articles et peut ne pas en identifier un en particulier. Si vous n'avez qu'une capture d'écran, récupérez d'abord une annonce précise ou demandez des informations complètes sur le vendeur et l'objet. Ne sélectionnez pas un résultat similaire simplement pour que l'importation fonctionne."
+          ]
+        },
+        {
+          "heading": "2. Récupérer l'URL complète du produit d'origine",
+          "paragraphs": [
+            "Une action de partage mobile peut copier un texte explicatif avec un lien. Séparez l'URL réelle du message environnant avant de la coller dans le champ d'achat. Si un lien court ouvre une page intermédiaire, accédez au produit prévu et inspectez la destination. Conservez le lien d'origine dans vos notes afin de pouvoir expliquer d'où il vient si la page résultante ne semble pas correcte.",
+            "Ne supprimez pas l'identifiant de l'élément lors du nettoyage d'un lien. Certains paramètres de requête identifient le produit plutôt que de suivre une visite. Supprimer tout après un point d'interrogation peut donc supprimer la partie nécessaire pour retrouver l'élément. Dans le même temps, une adresse de paiement ou de commande privée spécifique au compte n'est pas une annonce publique. Partagez uniquement les informations publiques sur le produit requises pour l'achat et ne copiez jamais un mot de passe, un code de connexion ou un lien de paiement privé dans une demande de produit."
+          ]
+        },
+        {
+          "heading": "3. Vérifier un lien Weidian par rapport à l'élément d'origine",
+          "paragraphs": [
+            "Pour une découverte Weidian, vérifiez l'identifiant de l'article d'origine et le vendeur sur l'annonce. Un numéro d'enregistrement de catalogue source est un identifiant distinct. La substitution de ce numéro d'enregistrement dans une URL d'achat peut pointer vers le mauvais article ou produire une erreur. Le lien d'achat sur ce site n'est créé que lorsque les informations originales du marché pris en charge sont disponibles; il doit toujours être comparé au produit que vous souhaitez.",
+            "Comparez plus que la première image. Vérifiez le titre, les tailles disponibles, les couleurs et tous les détails qui distinguent des annonces similaires. Un vendeur peut utiliser une annonce pour plusieurs versions ou accessoires. Si la page se charge mais que la version prévue est absente, le lien fonctionne techniquement alors que l'achat n'est toujours pas adapté. Renseignez - vous sur cette version exacte au lieu de traiter un chargement de page réussi comme une autorisation de sélectionner une option arbitraire."
+          ]
+        },
+        {
+          "heading": "4. Vérifiez les options Taobao et 1688 avant de comparer les prix",
+          "paragraphs": [
+            "Lorsqu'une liste Taobao ou 1688 importe, inspectez l'option sélectionnée avant de comparer le montant affiché avec une feuille de calcul. Le prix de départ peut s'appliquer à une taille, une couleur, une quantité ou un composant différent. Enregistrez le nom de l'option et la quantité que vous avez réellement l'intention de commander. Une différence de prix est une raison d'enquêter sur la sélection, et non une preuve en soi que l'importation est cassée.",
+            "Pour 1688, vérifiez la quantité minimale du fournisseur et le prix applicable à cette quantité. CSSBuy conseille spécifiquement aux acheteurs de revoir ces conditions. Un échantillon individuel, un emballage et une quantité en gros peuvent ne pas être interchangeables. Si la page importée n'indique pas clairement l'exigence, résolvez-la avant de soumettre le paiement. Demandez également si les marchandises exactes peuvent utiliser un service de livraison approprié à votre destination; une liste valide n'établit pas l'admissibilité à l'expédition internationale."
+          ]
+        },
+        {
+          "heading": "5. Distinguer un échec d'importation d'une liste indisponible",
+          "paragraphs": [
+            "Si l'annonce d'origine s'ouvre correctement mais que la page d'achat ne peut pas la lire, un problème d'importation est une possibilité. Si la page d'origine est supprimée, redirige vers une boutique ou ne propose plus l'article, la modification répétée de l'URL d'achat ne restaurera pas l'offre manquante. Comparez ces deux situations avant de passer du temps sur un convertisseur. Enregistrez l'erreur exacte et l'URL publique d'origine pour obtenir de l'aide.",
+            "Un écran de connexion ou une invite d'application nécessite également une interprétation minutieuse. Cela ne prouve pas qu'un article est épuisé, et ce guide ne peut pas dire si la page du vendeur est accessible à l'agent acheteur. Utilisez un accès normal au marché et demandez à CSSBuy de vérifier la liste si nécessaire. Évitez d'entrer les informations d'identification du marché dans un convertisseur inconnu ou d'autoriser une page tierce à demander l'accès à votre compte shopping."
+          ]
+        },
+        {
+          "heading": "6. Préparer une demande Expert Buy complète",
+          "paragraphs": [
+            "CSSBuy propose Expert Buy comme itinéraire d'achat manuel lorsque la recherche ordinaire ne peut pas gérer un article. Préparez l'URL du produit d'origine, le titre, l'image pertinente, la taille ou la couleur demandée, la quantité, le prix de l'article et les informations d'expédition nationales. Distinguez les informations confirmées du vendeur de tout ce que vous avez seulement estimé. Un champ vide ou deviné peut créer une commande incorrecte même lorsque la demande elle-même est soumise avec succès.",
+            "Utilisez le champ Notes pour décrire l'option exacte et poser la question non résolue. Par exemple, demandez si le prix indiqué couvre un article ou un ensemble, ou si une taille particulière est disponible. Avant de payer, vérifiez les détails de la commande retournée par rapport à vos notes. L'achat manuel ne rend pas un vendeur non vérifié digne de confiance ni n'établit de droits de retour. Lisez l'avis actuel sur les risques du vendeur et décidez si l'incertitude restante est acceptable pour votre achat."
+          ],
+          "bullets": [
+            "Conservez l'annonce publique d'origine et les informations sur le vendeur.",
+            "Spécifiez l'option exacte et la quantité par écrit.",
+            "Séparez le prix de l'article de la livraison nationale et de l'expédition internationale ultérieure.",
+            "Résolvez les informations manquantes avant d'autoriser l'achat."
+          ]
+        },
+        {
+          "heading": "7. Comprendre ce qu'un convertisseur de liens peut et ne peut pas faire",
+          "paragraphs": [
+            "Un convertisseur change un format de lien pris en charge en une autre destination. Il ne peut pas confirmer le stock, authentifier un produit, inspecter l'article qui arrivera ou garantir un retour. Même une conversion correcte peut ouvrir une liste qui a changé depuis qu'elle a été ajoutée à une feuille de calcul. Traitez la page convertie comme le début de la vérification et conservez un enregistrement de la version que vous avez sélectionnée.",
+            "Ce site Web ne fournit pas d'outil de conversion de lien universel. Les pages de produits prises en charge peuvent offrir une destination CSSBuy directe, tandis que d'autres articles nécessitent la liste d'origine et une vérification manuelle. S'il n'y a pas de bouton d'achat direct, ce n'est pas une instruction pour inventer un identifiant de produit. Utilisez la liste originale et le processus d'achat officiel. Soyez particulièrement prudent lorsqu'un outil prétend corriger tous les liens du marché sans indiquer le produit qu'il a réellement sélectionné."
+          ]
+        },
+        {
+          "heading": "8. Vérifiez la commande une fois de plus avant de passer à l'expédition",
+          "paragraphs": [
+            "Une fois la demande d'achat acceptée, conservez l'annonce d'origine, l'option choisie et le montant confirmé. Ces enregistrements rendent l'inspection de l'entrepôt plus utile: vous pouvez comparer l'article reçu avec la version que vous avez demandée. Une galerie de vendeurs est une référence pour l'offre, tandis que les photos de votre article d'entrepôt fournissent des preuves différentes. Ni l'un ni l'autre ne doivent être décrits comme une preuve d'authenticité ou une garantie de performance cachée.",
+            "Si l'article reçu diffère de la commande confirmée, renseignez-vous sur la résolution disponible avant de le mettre dans un colis international. Gardez le problème spécifique et joignez les preuves pertinentes en privé. Ne présumez pas que l'expédition de l'article à l'étranger laisse les mêmes options de retour pratiques. Une fois que les détails du produit sont corrects, utilisez les guides des frais d'expédition et d'entrepôt pour comparer les choix de colis complets. La fixation du lien n'est que la première étape vers la réception de l'article que vous aviez l'intention d'acheter."
+          ]
+        }
+      ],
+      "takeaways": [
+        "Utilisez la liste de produits d'origine, pas un numéro d'enregistrement de catalogue.",
+        "Vérifiez la variante, la quantité et le vendeur avant d'accepter un prix importé.",
+        "Utilisez Expert Buy pour une demande manuelle complète lorsque l'importation automatique échoue."
+      ],
+      "sourceIds": [
+        "buyforme",
+        "expertbuy",
+        "project"
+      ],
+      "publishedAt": "2026-10-29",
+      "updatedAt": "2026-10-29"
     }
   ],
   "sources": [
@@ -972,13 +1245,13 @@
       "id": "buyforme",
       "title": "CSSBuy — Buy For Me : processus officiel d’achat",
       "url": "https://m.cssbuy.com/buyforme",
-      "accessedAt": "2026-10-23"
+      "accessedAt": "2026-10-29"
     },
     {
       "id": "expertbuy",
       "title": "CSSBuy — Expert Buy : informations produit et avertissement sur les risques liés au vendeur",
       "url": "https://m.cssbuy.com/expertbuy",
-      "accessedAt": "2026-10-23"
+      "accessedAt": "2026-10-29"
     },
     {
       "id": "about",
@@ -1018,7 +1291,7 @@
     },
     {
       "id": "catalog",
-      "title": "cnfansge.com — Source du catalogue de produits",
+      "title": "Catalogue de produits",
       "url": "https://cnfansge.com/",
       "accessedAt": "2026-10-23"
     },

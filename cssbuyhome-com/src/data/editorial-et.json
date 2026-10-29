@@ -27,7 +27,7 @@
     {
       "id": "data",
       "q": "Kust pärinevad tooted ja kuulutuste fotod?",
-      "a": "Tootekataloog ja müüjate galeriid pärinevad cnfansge.com-ist. CSSBuy Home ei halda eraldi tooteandmebaasi ega loo tootepilte. Kinnita valitud pakkumine pärast selle ostukoha avamist.",
+      "a": "Tootekataloog ja müüjate galeriid pärinevad Tootekataloog-ist. CSSBuy Home ei halda eraldi tooteandmebaasi ega loo tootepilte. Kinnita valitud pakkumine pärast selle ostukoha avamist.",
       "sourceIds": [
         "catalog",
         "project"
@@ -36,7 +36,7 @@
     {
       "id": "qc",
       "q": "Kas tootefotod on kontrollitud CSSBuy QC-fotod?",
-      "a": "Müüjate galeriisid ei tohiks pidada lao kvaliteedikontrolliks. Kontrollitud tellimusepõhine QC-foto peab olema seotud vastuvõetud tootega. See eelvaade ei märgista cnfansge müüjapilte kontrollitud CSSBuy ülevaatuse tõenditena.",
+      "a": "Müüjate galeriisid ei tohiks pidada lao kvaliteedikontrolliks. Kontrollitud tellimusepõhine QC-foto peab olema seotud vastuvõetud tootega. See eelvaade ei märgista Tootekataloog müüjapilte kontrollitud CSSBuy ülevaatuse tõenditena.",
       "sourceIds": [
         "catalog",
         "project"
@@ -63,7 +63,7 @@
     {
       "id": "weidian-link",
       "q": "Milline ID kuulub Weidiani ostulinki?",
-      "a": "Kasuta algset turuplatsi toote-ID-d. Antud näide on https://www.cssbuy.com/shop/goodsDetail?type=micro&id=7755101935. Cnfansge kataloogikirje number ei asenda seda turuplatsi ID-d.",
+      "a": "Kasuta algset turuplatsi toote-ID-d. Antud näide on https://www.cssbuy.com/shop/goodsDetail?type=micro&id=7755101935. Tootekataloog kataloogikirje number ei asenda seda turuplatsi ID-d.",
       "sourceIds": [
         "user-link"
       ]
@@ -236,8 +236,8 @@
     {
       "id": "spreadsheet",
       "slug": "cssbuy-spreadsheet-guide",
-      "title": "Kuidas kasutada CSSBuy tootenimekirja: ostja juhend",
-      "description": "Praktiline CSSBuy tootenimekirja juhend tootelinkide võrdlemiseks, variantide kontrollimiseks, fotode lugemiseks ja tervikliku ostu kavandamiseks.",
+      "title": "CSSBuy tabel: leidke lingid, kontrollige suurusi ja tellige",
+      "description": "Kasutage CSSBuy tabelit tootelinkide leidmiseks, müüja ja suuruse kontrollimiseks, laofotode ülevaatamiseks ning kogukulu kavandamiseks koos tarnega.",
       "category": "Alustamine",
       "keywords": [
         "cssbuy tootenimekiri",
@@ -245,7 +245,7 @@
         "kuidas kasutada cssbuyd",
         "cssbuy tootelingid"
       ],
-      "intro": "Kasulik CSSBuy tootenimekiri peaks aitama teha parema ostuotsuse, mitte lihtsalt pikema ostunimekirja. Kataloog võib koondada lingid, pealkirjad ja kuulutuste hinnad, kuid oluline töö algab kaardi taga oleva tegeliku toote kontrollimisest. See juhend näitab, kuidas muuta sirvimine väikeseks dokumenteeritud kandidaatide loendiks, eristada müüja esitlust oma tellimust puudutavatest tõenditest ja otsustada, kas leid on ka pärast tarnet mõistlik. CSSBuy Home on sõltumatu avastamissait. Selle tootekataloog pärineb cnfansge.com-ist; ostmine ja tellimuste haldamine toimuvad CSSBuys.",
+      "intro": "Alustage CSSBuy tabelis kategooriast või otsingust, avage toode ja kontrollige selle algset pakkumist. Enne CSSBuysse suundumist kontrollige suurust, värvi, kogust ja kehtivat hinda. Kataloog aitab tooteid leida; ametlik tellimuse ekraan kinnitab, mida saate osta. See juhend aitab liikuda salvestatud lingist kontrollitud laotoote ja realistliku tarne-eelarveni.",
       "sections": [
         {
           "heading": "Alusta eesmärgist ja realistlikust kandidaatide loendist",
@@ -258,7 +258,7 @@
           "heading": "Loe tootekaarti kataloogikirjena",
           "paragraphs": [
             "Kaart võtab kokku palju suurema kuulutuse. Selle pealkiri võib olla lühendatud, tõlgitud või allikakataloogi antud. Kuvatav hind võib kirjeldada üht valikut, mitte kõiki variante. Kasuta neid välju algse pakkumise leidmiseks ja võrdle siis soovitud suurust, värvi, kogust ning versiooni. Madal alghind ei ole kahe toote õiglaseks järjestamiseks piisav, kui ühel on lisatarvik ja teisel mitte.",
-            "CSSBuy Home'i tootekirjed ja müüjagaleriid pärinevad cnfansge.com-ist. Müüja pilt illustreerib kuulutust; see ei tõesta, et konkreetne laotoode on üle vaadatud. Kui sait ei paku töötavat funktsiooni või kontrollitud fototüüpi, ära järelda nende olemasolu ahvatlevast sildist. Järgi olemasolevat tootelinki ja kontrolli tegelikult esitatut, enne kui käsitled kaarti tõendina."
+            "CSSBuy Home'i tootekirjed ja müüjagaleriid pärinevad Tootekataloog-ist. Müüja pilt illustreerib kuulutust; see ei tõesta, et konkreetne laotoode on üle vaadatud. Kui sait ei paku töötavat funktsiooni või kontrollitud fototüüpi, ära järelda nende olemasolu ahvatlevast sildist. Järgi olemasolevat tootelinki ja kontrolli tegelikult esitatut, enne kui käsitled kaarti tõendina."
           ]
         },
         {
@@ -313,7 +313,8 @@
         "buyforme",
         "expertbuy",
         "catalog"
-      ]
+      ],
+      "updatedAt": "2026-10-29"
     },
     {
       "id": "weidian",
@@ -400,8 +401,8 @@
     {
       "id": "qc",
       "slug": "cssbuy-qc-photos-guide",
-      "title": "CSSBuy QC-fotod: praktiline kontrollnimekiri",
-      "description": "Struktureeritud viis laofotode läbivaatamiseks, müüjapiltide eristamiseks ja kasulike mõõtude küsimiseks enne paki saatmist.",
+      "title": "CSSBuy kvaliteedikontrolli fotod: mida enne saatmist kontrollida",
+      "description": "Kontrollige CSSBuy laofotodel õiget toodet, suurust, värvi, kogust ja nähtavaid kahjustusi. Uurige, millal küsida selgemat fotot või mõõtmist.",
       "category": "Ladu ja QC",
       "keywords": [
         "cssbuy qc",
@@ -409,14 +410,42 @@
         "cssbuy kvaliteedikontroll",
         "laofotod"
       ],
-      "intro": "Kvaliteedikontrolli fotod on kõige kasulikumad siis, kui vaatad neid kindla küsimusega. Kas toode vastab tellitud variandile? Kas vajalikud lisatarvikud on olemas? Kas mõõt sobib sinu vajadustega? Lihtsalt galerii läbivaatamine ja otsus, et toode näeb korralik välja, võib jätta märkamata pärast tarnet olulised üksikasjad. See juhend selgitab praktilist kontrollijärjekorda ja visuaalsete tõendite piire. CSSBuy ametlikud teenuselehed kirjeldavad laokontrolli ja pildistamist. CSSBuy Home ei käsitle cnfansge.com-i müüjagaleriisid kontrollitud lao QC-na ning tootekaarti ei tohi lugeda kontrollitunnistuseks.",
+      "intro": "Vaadake oma tegeliku laotoote fotod üle enne selle rahvusvaheliseks saatmiseks esitamist. Võrrelge toodet, värvi, suurusesilti, kogust ja nähtavat seisukorda tellimusega. Küsige kindlast kohast lähivõtet või mõõtmist, kui olemasolevad fotod ei vasta konkreetsele küsimusele. Tabelis olevad müüja pildid on pakkumise fotod; need ei ole teie tellimuse kvaliteedikontrolli fotod ega ehtsuse tõend.",
       "sections": [
         {
           "heading": "Tuvasta, kelle toodet ja millist pilti vaatad",
           "paragraphs": [
             "Enne detailide uurimist tuvasta tõendid. Müüja foto esitab pakkumist. Avalik ostjafoto jäädvustab kellegi teise ostu. Sinu tellimusega seotud laofoto jäädvustab sinu saadud toote kindlal hetkel. Need kategooriad võivad üksteist täiendada, kuid vastavad eri küsimustele. Üksikasjalik avalik pilt ei tõesta sellise eksemplari seisukorda, mis pole veel sinu jaoks saabunud.",
             "Kontrolli enne piltide võrdlemist tellimuse viidet ja valitud varianti. Kahel tootel võib olla sama mudelinimi, kuid erinev värv, suurus, materjal või kaasasolevad osad. Kui pilti ei saa vastava variandiga siduda, jäta see taustateabeks. Nii ei muutu eriti atraktiivne pilt mõõdupuuks, mille järgi hindad mitteseotud varianti. Tugevaim võrdlus algab selgest registrist selle kohta, mida täpselt palusid osta."
-          ]
+          ],
+          "table": {
+            "headers": [
+              "Kontroll",
+              "Kui see on ebaselge"
+            ],
+            "rows": [
+              [
+                "Toode ja variant",
+                "Võrrelge salvestatud pakkumise ja tellimuse üksikasjadega."
+              ],
+              [
+                "Suurusesilt",
+                "Küsige loetavat silti näitavat fotot ja vajalikku mõõtmist."
+              ],
+              [
+                "Värv ja seisukord",
+                "Küsige konkreetsest kohast selget lähivõtet."
+              ],
+              [
+                "Kogus ja komponendid",
+                "Kontrollige iga tellitud osa, mitte ainult põhitoodet."
+              ],
+              [
+                "Otsus",
+                "Lahendage küsimus enne rahvusvahelise tarne heakskiitmist."
+              ]
+            ]
+          }
         },
         {
           "heading": "Kontrolli toote vastavust ja kogust enne pisidetaile",
@@ -477,13 +506,14 @@
         "buyforme",
         "shipforme",
         "catalog"
-      ]
+      ],
+      "updatedAt": "2026-10-29"
     },
     {
       "id": "cost",
       "slug": "cssbuy-shipping-cost",
-      "title": "CSSBuy tarnekulu: kuidas hinnata kogusummat",
-      "description": "Mõista pakikulude lähteandmeid ning võrdle pakendamist, arvestuskaalu ja marsruudipakkumisi fikseeritud kilohinnale toetumata.",
+      "title": "CSSBuy tarnekalkulaator: hinnake kulu ja paki kaalu",
+      "description": "Hinnake CSSBuy tarnekulu sihtkoha, pakitud kaalu ja mõõtmete põhjal. Võrrelge sobivaid marsruute, mahukaalu ja paki lõplikku hinnapakkumist.",
       "category": "Tarne",
       "keywords": [
         "cssbuy tarnekulu",
@@ -491,14 +521,46 @@
         "cssbuy mahukaal",
         "cssbuy tarnehinnang"
       ],
-      "intro": "Küsimusele „Kui palju CSSBuy tarne maksab?” ei ole kasulikku universaalset vastust ilma sihtkoha, sobiva marsruudi ja pakitud paki kirjelduseta. Kellegi teise tellimusest kopeeritud hind võib olla huvitav näide, kuid ei ole sinu hinnapakkumine. See juhend näitab, kuidas koostada hinnang, mis jääb teabe täpsustumisel kasulikuks. Eesmärk pole ettevalmistamata paki hinda viimase sendini ennustada. Eesmärk on mõista, millised lähteandmed tulemust muudavad, varuda piisavalt eelarvet ja võrrelda lõplikke valikuid võrdsetel alustel.",
+      "intro": "Kasutage ametlikku CSSBuy tarnekalkulaatorit, sisestades sihtkoha, hinnangulise pakitud kaalu ja paki mõõtmed. Kontrollige, millised marsruudid teie kaupu vastu võtavad, ja võrrelge seejärel samade lähteandmetega hinnapakkumisi. Ühtset kilohinda pole: pakend, marsruudi reeglid ja paki lõplikud mõõtmistulemused võivad summat muuta. See juhend selgitab arvutust ja annab kontrollnimekirja, mida enne maksmist kasutada.",
       "sections": [
         {
           "heading": "Jaga küsimus teadaolevateks ja teadmata lähteandmeteks",
           "paragraphs": [
             "Alusta teadaoleva loetlemisest: sihtriik ja piirkond, toodete kogused, esemete ligikaudsed mõõdud ning erikäsitlusvajadused. Seejärel loetle ebakindel: pakitud kaal, karbi mõõdud, saadaolevad marsruudid ja valikulised teenused. Kalkulaator on ainult nii informatiivne kui need sisendid. Optimistlikult arvatud kaalu sisestamine annab optimistliku, mitte täpsema tulemuse.",
             "Pane iga salvestatud hinnangu juurde kuupäev ja säilita selle loonud lähteandmed. Nii saad hilisemat muutust selgitada, eeldamata, et midagi läks valesti. Ühe sihtkoha või pakisuuruse pakkumist ei tohiks otse võrrelda teise olukorraga. Kui kaup sisaldab akusid, vedelikke, õrnu osi või muid võimalike piirangutega omadusi, kontrolli esmalt marsruudi sobivust. Odavaim kuvatud marsruut ei loe, kui tegelik pakk seda kasutada ei saa."
-          ]
+          ],
+          "table": {
+            "headers": [
+              "Kalkulaatori sisend",
+              "Mida kontrollida"
+            ],
+            "rows": [
+              [
+                "Sihtkoht",
+                "Kasutage riiki ja piirkonda, kuhu pakk saadetakse."
+              ],
+              [
+                "Pakitud kaal",
+                "Arvestage kaitsepakendit ja kõiki karpe, mille alles jätate."
+              ],
+              [
+                "Paki mõõtmed",
+                "Kasutage pikkust, laiust ja kõrgust kalkulaatoris määratud ühikutes."
+              ],
+              [
+                "Kaubad ja marsruut",
+                "Kontrollige piiranguid enne hindade võrdlemist."
+              ],
+              [
+                "Arvestuslik kaal",
+                "Lugege valitud marsruudi reegleid ja ümardamise korda."
+              ],
+              [
+                "Lõplik summa",
+                "Võrrelge hinnapakkumist kontrollitud paki andmete ja kontol oleva tasuga."
+              ]
+            ]
+          }
         },
         {
           "heading": "Erista füüsilist kaalu marsruudi hinnastamisel kasutatavast kaalust",
@@ -559,13 +621,14 @@
         "buyforme",
         "estimates",
         "shipforme"
-      ]
+      ],
+      "updatedAt": "2026-10-29"
     },
     {
       "id": "time",
       "slug": "cssbuy-shipping-time",
-      "title": "Kui kaua CSSBuy aega võtab? Tellimuse ajajoon",
-      "description": "Erista müüja lähetus, lao otsused, rahvusvaheline vedu ja lõplik tarne, et saaksid planeerida ja küsida paremaid jälgimisküsimusi.",
+      "title": "CSSBuy tarneaeg: müüjalt lattu ja kättetoimetamiseni",
+      "description": "Mõistke CSSBuy tarne iga etappi, leidke koht paki kontrollimiseks ja teadke, mida küsida, kui edenemine müüja, lao või vedaja juures peatub.",
       "category": "Tarne",
       "keywords": [
         "cssbuy tarneaeg",
@@ -573,7 +636,7 @@
         "cssbuy tellimuse staatus",
         "cssbuy jälgimine"
       ],
-      "intro": "Tarnehinnangut on raske tõlgendada, kui sa ei tea, kust selle ajamõõtmine algab. Müüja ootamisele, laotoote kontrollimisele või koondamise otsustamisele kuluv aeg erineb rahvusvahelise veo ajast. See juhend jagab teekonna praktilisteks etappideks ja näitab, kuidas viivitust uurida, muutmata teise ostja kogemust enda tellimuse lubaduseks. Konkreetse tehingu puhul kasuta oma CSSBuy konto praegust teavet; siin esitatud ajajoon on planeerimisraamistik, mitte garanteeritud tarnegraafik.",
+      "intro": "CSSBuy tarneaeg hõlmab mitut eraldi etappi: müüja väljasaatmist, lattu saabumist, teie kontrolli ja tarnevalikuid, paki ettevalmistamist ning rahvusvahelist vedu. Enne hinnangute võrdlemist kontrollige oma kontol etappi. Marsruudi hinnanguline veoaeg ei hõlma kõiki varasemaid samme ning üks tarneaeg ei kehti igale sihtkohale ega pakile.",
       "sections": [
         {
           "heading": "Joonista ajajoon enne tarneväidete võrdlemist",
@@ -626,13 +689,14 @@
       "sourceIds": [
         "buyforme",
         "storage"
-      ]
+      ],
+      "updatedAt": "2026-10-29"
     },
     {
       "id": "warehouse",
       "slug": "cssbuy-warehouse-consolidation",
-      "title": "CSSBuy laos hoidmine ja pakkide koondamine",
-      "description": "Planeeri hoiustamist, vaata tooted üle ja ühenda pakid läbimõeldult tegelike kaupade, tähtaegade ning marsruudipiirangute järgi.",
+      "title": "CSSBuy ladu: hoiustamine, kvaliteedikontroll ja pakkide ühendamine",
+      "description": "Otsustage, millised laos olevad tooted on saatmiseks valmis, mida enne tellimuste ühendamist kontrollida ja kuidas pakend võib paki tarnekulu muuta.",
       "category": "Ladu ja QC",
       "keywords": [
         "cssbuy ladu",
@@ -640,14 +704,42 @@
         "cssbuy hoiustamine",
         "cssbuy pakkimine"
       ],
-      "intro": "Laos muutuvad eraldi ostud pakiplaaniks. See paindlikkus on väärtuslik, kuid lõputult kasvav tellimuste kogum võib kulude ja tähtaegade juhtimise raskemaks teha. Hea plaan tuvastab valmis tooted, otsust vajavad tooted ning need, mille koos saatmine päriselt kasu annab. CSSBuy kirjeldab koondamist ja mitut pakkimisteenust ametlikul Ship For Me lehel. See juhend selgitab, kuidas oma vajadus otsustada, eeldamata, et suurim võimalik pakk on alati parim.",
+      "intro": "Enne CSSBuy paki koondamist kontrollige, et kõik sellesse lisatavad tooted oleksid saabunud, vastaksid tellimusele ja oleksid läbinud teie soovitud kontrollid. Lahendage vale suuruse või puuduva osa küsimus enne toote rahvusvahelist saatmist. Seejärel võrrelge ühendatud pakki eraldi pakkidega tegeliku kaalu, mõõtmete ja sobivate marsruutide põhjal. Ühendamine on otsus kogu paki kohta, mitte automaatne odavama tarne garantii.",
       "sections": [
         {
           "heading": "Koosta otsustel põhinev inventuur",
           "paragraphs": [
             "Märgi iga laotoote kohta tellimuse tunnus, saabumiskuupäev, praegune otsus ja järgmine tegevus. Kasulikud otsused on saatmiseks valmis, ootab mõõtmist, tagastust küsitud ja ootab teist toodet. Need märgendid on paremini kasutatavad kui üks loend asjadest, mida omad. Need näitavad, millised tooted saavad edasi liikuda ja millised hoiaksid pakki kinni.",
             "Lisa põhjus igale tootele, mida tahtlikult laos hoiad. Võib-olla liigub teine ost juba Hiinas või pead võrdlema kaht mõõtu. Põhjus koos ülevaatuse kuupäevaga on plaan; tähtajatu ootamine, et midagi veel osta, ei ole. Vaata inventuur regulaarselt üle ja eemalda enam mittekehtivad oletused. Kui oodatud kaasatoode muutub kättesaamatuks, hinda pakk uuesti, mitte ära lase vanal plaanil automaatselt jätkuda."
-          ]
+          ],
+          "table": {
+            "headers": [
+              "Enne toodete ühendamist",
+              "Otsus"
+            ],
+            "rows": [
+              [
+                "Kas kõik tooted on saabunud?",
+                "Jätke puuduvad või lahendamata küsimustega tooted pakist välja."
+              ],
+              [
+                "Kas kvaliteedikontrolli küsimused on lahendatud?",
+                "Küsige puuduvad tõendid enne saatmist."
+              ],
+              [
+                "Kas pakendamises on kokku lepitud?",
+                "Säilitage igale tootele vajalik kaitse."
+              ],
+              [
+                "Kas marsruudid sobivad?",
+                "Kontrollige, kas üks toode piirab kogu paki saatmisvõimalusi."
+              ],
+              [
+                "Kas kulusid on võrreldud?",
+                "Võrrelge ühendatud paki ja eraldi pakkide võimalusi koos pakendiga."
+              ]
+            ]
+          }
         },
         {
           "heading": "Hoia hoiustamistähtajad tagastusotsustest eraldi",
@@ -694,7 +786,8 @@
         "shipforme",
         "storage",
         "buyforme"
-      ]
+      ],
+      "updatedAt": "2026-10-29"
     },
     {
       "id": "returns",
@@ -965,6 +1058,186 @@
         "buyforme",
         "expertbuy"
       ]
+    },
+    {
+      "id": "tracking",
+      "slug": "cssbuy-tracking-not-updating",
+      "title": "CSSBuy jälgimisinfo ei uuene? Kontrollige oma pakki samm-sammult",
+      "description": "Leidke oma CSSBuy jälgimisnumber, eristage saatesildi loomist vedaja skaneeringust ja koostage asjakohane tugipäring, kui paki kohta enam uuendusi ei ilmu.",
+      "category": "Tarne",
+      "keywords": [
+        "cssbuy tracking",
+        "cssbuy tracking not updating",
+        "cssbuy parcel tracking",
+        "cssbuy tracking number"
+      ],
+      "intro": "Kui teie CSSBuy jälgimisinfo ei uuene, kontrollige kõigepealt, kas pakk on tegelikult laost välja saadetud. Avage oma ametlikul kontol paki kirje, kopeerige selle jälgimisnumber ja võrrelge viimast kuupäevaga sündmust seal näidatud vedaja andmetega. Loodud saatesilt, laos olev toode ja vedaja vastu võetud pakk tähistavad eri etappe. See juhend aitab etappi tuvastada, kasulikke tõendeid koguda ja otsustada, mida järgmiseks küsida. Juhend ei luba kindlat tarnekuupäeva ega anna juurdepääsu teie privaatsele tellimusele.",
+      "sections": [
+        {
+          "heading": "1. Enne jälgimisveebilehe kontrollimist leidke paki kirje",
+          "paragraphs": [
+            "CSSBuy suunab ostjad pärast väljasaatmist jaotisse My Parcel. Alustage oma kontolt, et paki tunnus, valitud tarneteenus ja jälgimisnumber kuuluksid samale saadetisele. Toote tellimuse number võib tähistada müüjalt tehtud ostu; see ei pruugi olla rahvusvahelisel veol kasutatav number. Kui ühendasite mitu ostu, otsige neid tooteid sisaldavat pakki, selle asemel et kontrollida iga ostu eraldi.",
+            "Kopeerige kogu number, selle asemel et see uuesti sisestada. Kontrollige, ega telefonis teksti valides pole kogemata tühikuid kaasa tulnud. Pange viimane sündmus ja selle ajatempel kirja täpselt nii, nagu need kuvatakse. Hoidke ekraanipildid enda jaoks alles, kuid eemaldage enne nende avaldamist oma nimi, aadress ja täielik jälgimisnumber. Avalik arutelu võib aidata staatust selgitada; see ei saa asendada privaatset paki kirjet ega kindlaks teha, kelle käes teie pakk praegu on."
+          ]
+        },
+        {
+          "heading": "2. Eristage saatesildi loomist paki vastuvõtmisest vedaja poolt",
+          "paragraphs": [
+            "Saatesilt või jälgimisnumber võib olemas olla juba enne, kui vedaja registreerib paki enda valdusesse jõudmise. Lugege sündmuse teksti: „teave vastu võetud” ja „veoks vastu võetud” kinnitavad eri asju. Kui kirje näitab ainult elektroonilisi andmeid, küsige, kas pakki alles valmistatakse ette või on see juba üle antud. Ärge eeldage, et esimese numbri ilmumine tähendab lennuki väljumist.",
+            "Kontrollige ka, kas teie kontol on mõni pooleliolev toiming. Enne järgmist etappi võib olla vaja vastata pakendamist puudutavale küsimusele, lõpetada tarne eest tasumine või parandada aadressi. Need on kontrollimist vajavad asjaolud, mitte teie konkreetse viivituse põhjuse määratlus. Kui ekraanil selgitust pole, paluge klienditoel kinnitada praegune etapp ja järgmine oodatav sündmus. Selline päring on kasulikum kui küsida, miks täpsustamata saadetis nii kaua aega võtab."
+          ]
+        },
+        {
+          "heading": "3. Võrrelge vedajat ja viimast kuupäevaga sündmust",
+          "paragraphs": [
+            "Kasutage paki andmetes nimetatud vedajat. Kui hilisemasse kirjesse ilmub teine kohaliku tarne number, salvestage mõlemad numbrid ja märkige üles, millist teekonna osa kumbki tähistab. Number, mida üks vedaja ei tunne, võib kuuluda teisele teenusele või selle kohta ei pruugi veel olla avalikku sündmust. Ärge proovige juhuslikke vedajaid, kuni ilmub asjasse puutumatu tulemus: üksnes numbri kattumisest ei piisa teie saadetise tuvastamiseks.",
+            "Kui kahel ekraanil kuvatav info erineb, võrrelge sündmuste tegelikke ajatempleid ja asukohakirjeldusi. Lehe värskendamise aeg ei ole paki liikumise aeg. Hoidke alles nii algne staatuse tekst kui ka automaattõlge, sest tõlgitud logistikaväljend võib kõlada lõplikumalt kui algne sõnum. Paluge CSSBuyl paki kirje põhjal tundmatut sündmust selgitada. Kaardijoonis ega hinnanguline edenemisriba ei tõesta, et pakk asub füüsiliselt selles kohas."
+          ]
+        },
+        {
+          "heading": "4. Otsustage, kas mõistlik on oodata või küsimus esitada",
+          "paragraphs": [
+            "Pole üht kindlat päevade arvu, mille möödudes oleks iga CSSBuy pakk hilinenud. Võrdluse aluseks peavad olema teie valitud tarneteenuse kehtivad juhised ja kontol kuvatav konkreetne etapp. Kontrollige, kas teenus avaldab väljasaatmise ajavahemiku, hinnangulise veoaja või mõlemad. Hinnangulist veoaega ei tohiks märkamatult tõlgendada lubadusena kogu ajavahemiku kohta alates päevast, mil toote eest maksite.",
+            "Võtke klienditoega ühendust, kui teilt oodatakse mõnd toimingut, kirjes on probleem, millest te aru ei saa, või vastava teenuse juhistes toodud aeg on selgituseta ületatud. Kui kohaldatavates tingimustes on märgitud nõude või uurimispäringu esitamise tähtaeg, hoidke see kuupäev eraldi meeles, selle asemel et eeldada, et võite lõputult oodata. Küsige, milline tähtaeg teie pakile kehtib. Sama ekraani korduv värskendamine või mitme ühesuguse vestluse avamine ei tekita uut vedaja skaneeringut."
+          ]
+        },
+        {
+          "heading": "5. Koostage üks selge sõnum klienditoele",
+          "paragraphs": [
+            "Kasutage oma ametlikul kontol pakiga seotud märkuse või klienditoe võimalust. Hoidke sõnum lugemiseks piisavalt lühike, kuid asja uurimiseks piisavalt üksikasjalik. Selgitage, mida te järgmisena ootasite ja milline kirje on lakanud muutumast. Paluge konkreetset vastust: üleandmise kinnitust, vedaja täpsustust, puuduva toimingu tuvastamist või juhiseid uurimispäringu avamiseks. Ärge saatke paroole ega maksekaardi andmeid.",
+            "Näiteks: minu paki kirjes on jälgimisnumber, kuid viimane sündmus on endiselt „teave vastu võetud”. Palun kinnitage, kas pakk on vedajale üle antud, milline vedaja peaks seda numbrit tundma ja kas pean midagi tegema. Lisage tegelikud kuupäevad ja paki tunnus privaatselt. See näide on küsimuse mall, mitte väide, et iga pakk, mille jälgimiskirje ei muutu, on endiselt laos."
+          ],
+          "bullets": [
+            "Paki tunnus ja teie kontol valitud tarneteenus.",
+            "Viimane sündmus, selle ajatempel ja koht, kus seda nägite.",
+            "Kõik kontoteated või makseetapid, mis veel teie tegevust ootavad.",
+            "Konkreetne kinnitus või järgmine samm, mida vajate."
+          ]
+        },
+        {
+          "heading": "6. Lahendage erandolukord või tarneprobleem hoolikalt",
+          "paragraphs": [
+            "Kui kirjes on aadressiprobleem, kättetoimetamiskatse või nõue pakile järele tulla, kontrollige selle saadetisega seotud vedaja ametlikke juhiseid. Kontrollige ootamatuid maksenõudeid oma konto kaudu või vedaja veebilehel, mille avasite iseseisvalt. Teie paki numbrit sisaldav sõnum võib siiski olla eksitav. Ärge avage tundmatut linki pelgalt seetõttu, et see saabub ajal, mil ootate pakki.",
+            "Kui staatuse järgi on pakk kohale toimetatud, kuid te ei leia seda, kontrollige tarnekohta ja kõiki saadaolevaid kättetoimetamise tõendeid ning võtke seejärel asjaolusid kirjeldades ühendust vastava vedaja ja CSSBuyga. Kui pakk saabub kahjustatuna või tundub mittetäielik, hoidke välispakend alles ja tehke selged fotod enne millegi äraviskamist. Kirjeldage tellimuse kirjega võrreldes, mis on puudu või kahjustatud. Tõendid aitavad asja uurida, kuid ei taga iseenesest raha tagastamist ega hüvitist."
+          ]
+        },
+        {
+          "heading": "7. Hoidke jälgimine, tarnekulu ja tarneaeg lahus",
+          "paragraphs": [
+            "Jälgimissündmus vastab küsimusele paki edenemise kohta. See ei selgita iga tasu, ei kinnita paki sisu ega taga järgmist tarnekuupäeva. Hoidke tarnehinnapakkumine, paki lõplikud mõõtmistulemused ja jälgimisajalugu eraldi dokumentidena. Kui teil on ka kuludega seotud küsimus, küsige vastava tasu jaotust, selle asemel et eeldada, et seletamatu viivitus jälgimisinfos põhjustas hinnamuutuse.",
+            "Samuti on toote ostmine, müüja järel ootamine, laofotode ülevaatamine ja rahvusvahelise paki saatmine tellimuse ajakava eri osad. Tulevast tellimust kavandades võrrelge neid etappe eraldi. Jätke ruumi ebakindlusele, kui toodet on vaja sünnipäevaks, reisiks või muuks kindla kuupäevaga sündmuseks. Varasem edukas tarne on kasulik isiklik võrdluspunkt, kuid ei tõenda, et uus pakk liigub sama ajakava järgi."
+          ]
+        },
+        {
+          "heading": "8. Tehke järgmine kontroll kasulikuks",
+          "paragraphs": [
+            "Pärast vastuse saamist kirjutage üles lubatud järgmine uuendus või toiming, mille teil paluti teha. Kontrollige, et vastus puudutaks teie tegelikku pakki ja tarneteenust. Kui vastus on ebaselge, küsige samas vestluses puuduva asjaolu kohta, selle asemel et alustada uuesti teistsuguse kirjeldusega. Salvestage kõik kohaldatavad uurimispäringu tähtajad ja teie esitatud tõendid.",
+            "Enne teema sulgemist kinnitage, mis muutus: ilmus esimene vedaja skaneering, saadi kohalik number, parandati aadress või avati uurimine. Need on erinevad tulemused ning ainult osa neist näitab, et pakk on liikunud. CSSBuy Home on sõltumatu artiklite ja toodete leidmise veebileht. Me ei saa teie kontot kontrollida ega saadetise liikumisse sekkuda; asja lahendamise kohad on endiselt ametlik paki kirje ja vastutav tugimeeskond."
+          ]
+        }
+      ],
+      "takeaways": [
+        "Leidke rahvusvahelise paki kirje ja kopeerige selle täpne jälgimisnumber.",
+        "Enne paki hilinemise üle otsustamist lugege viimast kuupäevaga sündmust.",
+        "Kasutage pakiga seotud ametlikku vestlust ja hoidke asjakohased tõendid alles."
+      ],
+      "sourceIds": [
+        "buyforme",
+        "project"
+      ],
+      "publishedAt": "2026-10-29",
+      "updatedAt": "2026-10-29"
+    },
+    {
+      "id": "link-help",
+      "slug": "cssbuy-link-not-working",
+      "title": "CSSBuy link ei tööta? Lahendage probleemid Weidiani, Taobao ja 1688 linkidega",
+      "description": "Lahendage CSSBuy tootelingi probleem: leidke algne pakkumine, kontrollige toodet ja varianti ning koostage Expert Buy päring, kui importimine ebaõnnestub.",
+      "category": "Ostujuhendid",
+      "keywords": [
+        "cssbuy link not working",
+        "cssbuy link converter",
+        "weidian to cssbuy",
+        "taobao link cssbuy",
+        "1688 cssbuy"
+      ],
+      "intro": "Kui CSSBuy tootelink ei tööta, alustage müüja algsest pakkumisest. Kontrollige, et see avaneks, näitaks soovitud toodet ja pakuks endiselt õiget varianti. Seejärel kleepige selle pakkumise URL CSSBuysse. Kopeeritud tabelileht, poe avaleht ja tootepakkumine on erinevad lingid. Kui automaatne importimine ebaõnnestub, suunab ametlik ostujuhend kasutama Expert Buy teenust. See juhend näitab, mida enne maksmist kontrollida, käsitlemata lingi teisendamist tõendina toote saadavuse või ostu turvalisuse kohta.",
+      "sections": [
+        {
+          "heading": "1. Tehke kindlaks, millise lingi kopeerisite",
+          "paragraphs": [
+            "Toodete leidmise lehel võib olla mitu sihtkohta: selle veebilehe toote üksikasjade leht, lähtekataloogi kirje, algne kauplemisplatvormi pakkumine ja ostulink. Alustage sellest, et tuvastate, milline neist teil on. CSSBuy Home'i tooteaadress viitab selle kataloogi kirjele. See on kasulik leitud toote juurde naasmiseks, kuid ei ole müüja pakkumine, mida CSSBuy vajab ostu mõistmiseks.",
+            "Avage toote üksikasjad ja otsige algset pakkumist või ametlikku ostukohta. Veenduge, et toote pilt, müüja ja saadaolevad variandid vastaksid sellele, mida kavatsesite osta. Otsingutulemus või poe avaleht võib sisaldada palju tooteid ega pruugi viidata ühele konkreetsele tootele. Kui teil on ainult ekraanipilt, leidke esmalt täpne pakkumine või küsige müüja ja toote täielikke andmeid. Ärge valige sarnase välimusega tulemust lihtsalt selleks, et importimine tööle saada."
+          ]
+        },
+        {
+          "heading": "2. Leidke toote täielik algne URL",
+          "paragraphs": [
+            "Telefonis jagamisel võidakse koos lingiga kopeerida ka selgitav tekst. Eraldage tegelik URL ümbritsevast sõnumist, enne kui kleebite selle ostuväljale. Kui lühilink avab vahelehe, liikuge soovitud tooteni ja kontrollige sihtkohta. Hoidke algne link oma märkmetes alles, et saaksite selgitada selle päritolu, kui avanenud leht tundub vale.",
+            "Ärge eemaldage linki puhastades toote tunnust. Mõned päringuparameetrid tuvastavad toodet, mitte ei jälgi külastust. Kõige kustutamine pärast küsimärki võib seetõttu eemaldada toote leidmiseks vajaliku osa. Samal ajal ei ole kontopõhine makseleht ega privaatne tellimuse aadress avalik pakkumine. Jagage ainult ostuks vajalikku avalikku tooteteavet ning ärge kunagi kopeerige tootepäringusse parooli, sisselogimiskoodi ega privaatset makselinki."
+          ]
+        },
+        {
+          "heading": "3. Võrrelge Weidiani linki algse tootega",
+          "paragraphs": [
+            "Weidianist leitud toote puhul kontrollige pakkumises algset toote tunnust ja müüjat. Lähtekataloogi kirje number on eraldi tunnus. Selle kirjenumbri sisestamine ostu-URL-i võib viia vale tooteni või anda veateate. Selle veebilehe ostulink luuakse ainult siis, kui toetatud kauplemisplatvormi algne teave on saadaval; linki tuleks sellegipoolest soovitud tootega võrrelda.",
+            "Võrrelge rohkemat kui esimest pilti. Kontrollige pealkirja, saadaolevaid suurusi, värve ja üksikasju, mis eristavad sarnaseid pakkumisi. Müüja võib kasutada üht pakkumist mitme versiooni või lisatarviku jaoks. Kui leht laaditakse, kuid soovitud versiooni pole, töötab link tehniliselt, ent ost pole endiselt sobiv. Küsige täpselt selle versiooni kohta, selle asemel et pidada lehe edukat laadimist loaks valida suvaline variant."
+          ]
+        },
+        {
+          "heading": "4. Kontrollige enne hindade võrdlemist Taobao ja 1688 variante",
+          "paragraphs": [
+            "Kui Taobao või 1688 pakkumine imporditakse, kontrollige valitud varianti enne kuvatud summa võrdlemist tabeliga. Alghind võib kehtida teisele suurusele, värvile, kogusele või komponendile. Kirjutage üles variandi nimi ja kogus, mida tegelikult tellida soovite. Hinnaerinevus on põhjus valikut uurida, mitte iseenesest tõend, et importimine on vigane.",
+            "1688 puhul kontrollige tarnija minimaalset tellimiskogust ja sellele kogusele kehtivat hinda. CSSBuy soovitab ostjatel neid tingimusi eraldi üle vaadata. Üksik näidis, komplekt ja hulgikogus ei pruugi olla omavahel asendatavad. Kui imporditud lehel pole nõue selge, lahendage see enne makse esitamist. Küsige ka, kas täpselt neid kaupu saab sobiva tarneteenusega teie sihtkohta saata; kehtiv pakkumine ei tõenda sobivust rahvusvaheliseks tarneks."
+          ]
+        },
+        {
+          "heading": "5. Eristage importimise tõrget kättesaamatust pakkumisest",
+          "paragraphs": [
+            "Kui algne pakkumine avaneb õigesti, kuid ostuleht ei suuda seda lugeda, on üks võimalik põhjus importimisprobleem. Kui algne leht on eemaldatud, suunab poodi või ei paku enam toodet, ei taasta ostu-URL-i korduv muutmine puuduvat pakkumist. Võrrelge neid kaht olukorda enne teisendajale aja kulutamist. Pange klienditoe jaoks kirja täpne veateade ja algne avalik URL.",
+            "Ka sisselogimisekraani või rakenduse avamise teadet tuleb hoolikalt tõlgendada. See ei tõesta, et toode on välja müüdud, ning see juhend ei saa öelda, kas müüja leht on ostuvahendajale kättesaadav. Kasutage kauplemisplatvormile tavapärast juurdepääsu ja paluge CSSBuyl vajaduse korral pakkumist kontrollida. Ärge sisestage kauplemisplatvormi sisselogimisandmeid tundmatusse teisendajasse ega lubage kolmanda osapoole lehel taotleda juurdepääsu teie ostukontole."
+          ]
+        },
+        {
+          "heading": "6. Koostage täielike andmetega Expert Buy päring",
+          "paragraphs": [
+            "CSSBuy pakub Expert Buy teenust käsitsi ostmise võimalusena, kui tavaline otsing ei saa tootega hakkama. Valmistage ette toote algne URL, pealkiri, asjakohane pilt, soovitud suurus või värv, kogus, toote hind ja riigisisese tarne andmed. Eristage müüja kinnitatud teavet kõigest, mida olete üksnes hinnanud. Tühi või oletuse põhjal täidetud väli võib tekitada vale tellimuse isegi siis, kui päring ise esitatakse edukalt.",
+            "Kirjeldage märkuste väljal täpset varianti ja esitage lahendamata küsimus. Näiteks küsige, kas näidatud hind hõlmab üht toodet või komplekti või kas kindel suurus on saadaval. Enne maksmist võrrelge saadud tellimuse andmeid oma märkmetega. Käsitsi ostmine ei muuda kontrollimata müüjat usaldusväärseks ega kehtesta tagastusõigusi. Lugege kehtivat teadet müüjaga seotud riskide kohta ja otsustage, kas allesjääv ebakindlus on teie ostu puhul vastuvõetav."
+          ],
+          "bullets": [
+            "Hoidke algne avalik pakkumine ja müüja andmed alles.",
+            "Määrake täpne variant ja kogus kirjalikult.",
+            "Eristage toote hinda riigisisesest tarnest ja hilisemast rahvusvahelisest tarnest.",
+            "Selgitage puuduv teave välja enne ostuks loa andmist."
+          ]
+        },
+        {
+          "heading": "7. Mõistke, mida lingiteisendaja saab ja mida ei saa teha",
+          "paragraphs": [
+            "Teisendaja muudab toetatud lingivormingu teise sihtkohta viivaks lingiks. See ei saa kinnitada laoseisu, tuvastada toote ehtsust, kontrollida saabuvat toodet ega tagada tagastamist. Isegi õige teisendus võib avada pakkumise, mis on pärast tabelisse lisamist muutunud. Käsitlege teisendatud lehte kontrollimise algusena ja hoidke alles andmed valitud versiooni kohta.",
+            "See veebileht ei paku universaalset linkide teisendamise tööriista. Toetatud tootelehtedel võib olla otselink CSSBuysse, samal ajal kui teiste toodete puhul on vaja algset pakkumist ja käsitsi kontrollimist. Otsese ostunupu puudumine ei ole juhis toote tunnust välja mõelda. Kasutage algset pakkumist ja ametlikku ostuprotsessi. Olge eriti ettevaatlik, kui tööriist väidab, et parandab iga kauplemisplatvormi lingi, näitamata, millise toote see tegelikult valis."
+          ]
+        },
+        {
+          "heading": "8. Kontrollige tellimust veel kord enne tarne juurde liikumist",
+          "paragraphs": [
+            "Pärast ostupäringu vastuvõtmist hoidke alles algne pakkumine, valitud variant ja kinnitatud summa. Need andmed muudavad laokontrolli kasulikumaks: saate võrrelda saadud toodet soovitud versiooniga. Müüja pildigalerii on viide pakkumisele, samas kui teie laos oleva toote fotod annavad teistsuguseid tõendeid. Kumbagi ei tohiks kirjeldada ehtsuse tõendina ega varjatud toimivusomaduste garantiina.",
+            "Kui saadud toode erineb kinnitatud tellimusest, küsige võimaliku lahenduse kohta enne selle lisamist rahvusvahelisse pakki. Kirjeldage probleemi konkreetselt ja lisage asjakohased tõendid privaatselt. Ärge eeldage, et toote välismaale saatmisel säilivad samad praktilised tagastusvõimalused. Kui toote üksikasjad on õiged, kasutage tarnekulu- ja laojuhendeid, et võrrelda terviklikke pakivalikuid. Lingi parandamine on alles esimene samm selle toote saamise poole, mida kavatsesite osta."
+          ]
+        }
+      ],
+      "takeaways": [
+        "Kasutage algset tootepakkumist, mitte kataloogikirje numbrit.",
+        "Kontrollige varianti, kogust ja müüjat enne imporditud hinnaga nõustumist.",
+        "Kui automaatne importimine ebaõnnestub, kasutage täieliku käsitsi ostupäringu esitamiseks Expert Buy teenust."
+      ],
+      "sourceIds": [
+        "buyforme",
+        "expertbuy",
+        "project"
+      ],
+      "publishedAt": "2026-10-29",
+      "updatedAt": "2026-10-29"
     }
   ],
   "sources": [
@@ -972,13 +1245,13 @@
       "id": "buyforme",
       "title": "CSSBuy — Buy For Me: ametlik ostuprotsess",
       "url": "https://m.cssbuy.com/buyforme",
-      "accessedAt": "2026-10-23"
+      "accessedAt": "2026-10-29"
     },
     {
       "id": "expertbuy",
       "title": "CSSBuy — Expert Buy: tooteinfo ja müüjariski teade",
       "url": "https://m.cssbuy.com/expertbuy",
-      "accessedAt": "2026-10-23"
+      "accessedAt": "2026-10-29"
     },
     {
       "id": "about",
@@ -1018,7 +1291,7 @@
     },
     {
       "id": "catalog",
-      "title": "cnfansge.com — Tootekataloogi allikas",
+      "title": "Tootekataloog",
       "url": "https://cnfansge.com/",
       "accessedAt": "2026-10-23"
     },

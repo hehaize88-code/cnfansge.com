@@ -21,3 +21,11 @@ const photoViewer=document.querySelector('#photo-viewer');
 document.addEventListener('click',event=>{const button=event.target.closest('[data-large-image]');if(button&&photoViewer){const image=photoViewer.querySelector('img');image.src=button.dataset.largeImage;image.alt=button.querySelector('img')?.alt||t.photoLabel;photoViewer.showModal();}});
 photoViewer?.querySelector('.photo-close').addEventListener('click',()=>photoViewer.close());
 photoViewer?.addEventListener('click',event=>{if(event.target===photoViewer)photoViewer.close();});
+
+// Measure intent separately from generic outbound clicks. No raw search term,
+// order number, address or full outbound URL is added to these events.
+document.addEventListener('click',event=>{
+ const link=event.target.closest('a[data-track]');
+ if(!link||typeof window.gtag!=='function')return;
+ window.gtag('event',link.dataset.track,{language:lang,page_type:document.body.dataset.pageType,link_domain:new URL(link.href).hostname,transport_type:'beacon'});
+});

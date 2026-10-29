@@ -21,7 +21,7 @@ for(const lang of publishedLocales){
   assert.equal($('link[hreflang="x-default"]').attr('href').endsWith(localePath('en',route)),true,path);
   assert.ok(!$('title').text().includes('undefined'),path);
   if(route==='faq/')assert.equal($('details.faq-item').length,28,path);
-  if(route==='guides/')assert.equal($('.guide-card').length,10,path);
+  if(route==='guides/')assert.equal($('.guide-card').length,data.articles.length,path);
   if(route.startsWith('guides/')&&route!=='guides/'){
    const article=data.articles.find(a=>route==='guides/'+a.slug+'/');
    assert.equal($('.prose section[id]').length,article.sections.length,path);
@@ -44,7 +44,7 @@ for(const lang of publishedLocales){
  try{
   for(const route of ['','spreadsheet/?q=Nike&page=4','product/?id=6681']){
    const response=await worker.fetch(new Request(origin+localePath(lang,route)),{},{}),$=load(await response.text());
-   assert.equal(response.status,200);
+   assert.equal(response.status,503);
    assert.equal($('html').attr('lang'),lang);
    assert.equal($('body').attr('data-source-rendered'),'true');
    assert.ok($('.error-state').text().includes(route.startsWith('product/')?t.notFound:t.sourceError),JSON.stringify({lang,route,actual:$('.error-state').text(),expected:route.startsWith('product/')?t.notFound:t.sourceError}));
@@ -57,7 +57,7 @@ if(indexable){
  assert.ok(robots.includes('Sitemap: '+origin+'/sitemap.xml'));
  assert.ok(!robots.includes('Disallow: /\n'));
  const sitemap=await (await worker.fetch(new Request(origin+'/sitemap.xml'),{},{})).text(),xml=load(sitemap,{xmlMode:true});
- assert.equal(xml('loc').length,publishedLocales.length*17);
+ assert.equal(xml('loc').length,publishedLocales.length*(7+content('en').articles.length));
  for(const loc of xml('loc').toArray())assert.ok(xml(loc).text().startsWith(origin+'/'));
  const redirected=await worker.fetch(new Request('https://www.'+new URL(origin).hostname+'/fr/spreadsheet/?q=Nike&page=4'),{},{});
  assert.equal(redirected.status,308);assert.equal(redirected.headers.get('location'),origin+'/fr/spreadsheet/?q=Nike&page=4');
@@ -65,4 +65,4 @@ if(indexable){
  assert.equal(preview.headers.get('X-Robots-Tag'),'noindex,nofollow');
  assert.equal(load(await preview.text())('meta[name=robots]').attr('content'),'noindex,nofollow');
 }
-console.log(JSON.stringify({ok:true,locales:publishedLocales.length,pages:checked,articles:publishedLocales.length*10,faq:publishedLocales.length*28,runtimeErrorLocalization:true}));
+console.log(JSON.stringify({ok:true,locales:publishedLocales.length,pages:checked,articles:publishedLocales.length*content('en').articles.length,faq:publishedLocales.length*28,runtimeErrorLocalization:true}));

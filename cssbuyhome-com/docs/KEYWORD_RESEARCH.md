@@ -84,3 +84,13 @@ These phrases guide useful page coverage. They should not be inserted repeatedly
 ## Next maintenance action when revising this site
 
 Revisit the fee, storage and return help pages before changing their short dated FAQ statements. Preserve the distinction between a normal item and an abnormal/returned parcel, and between a seller image and warehouse QC. Recheck the integration rather than upgrading a feature claim based on a competitor's interface. Update this memory with verified behavior and the date whenever a capability or policy changes.
+
+## 2026-10-29 search-intent improvement
+
+Continues the approved GSC/Bing/GA research: improve the catalog, shipping, QC and warehouse entry points rather than adding overlapping general buying guides. The English source and all 23 translations now include two distinct troubleshooting articles: `cssbuy-tracking-not-updating` and `cssbuy-link-not-working`. Each English article exceeds 1,200 words.
+
+CSSBuy's official Buy For Me and Expert Buy pages were rechecked for the account parcel workflow, supported manual purchasing process and supplier minimum-quantity caution. No live delivery guarantee, universal shipping rate or stock claim was introduced. Evidence: https://m.cssbuy.com/buyforme and https://m.cssbuy.com/expertbuy .
+
+Five existing guides have revised titles, descriptions and opening answers; shipping cost, QC and warehouse guides have practical check tables. All 24 locales contain identical article and section inventories. Translation drafts were checked for omitted sentences, negative statements, marketplace names, numbers, privacy disclosures and shipping terminology; this is not an independent native-speaker certification.
+
+Catalog pagination has self-referencing page canonicals and matching reciprocal language links. Search and alternative sorting variants use noindex. The homepage exposes six focused articles and each article recommends related next steps. Dedicated intent events distinguish product-detail, purchasing, signup and calculator clicks; no search text or order information is added to these event parameters.

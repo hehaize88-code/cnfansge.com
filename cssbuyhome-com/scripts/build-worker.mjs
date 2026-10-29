@@ -2,6 +2,9 @@ import {readdir,readFile,mkdir,writeFile,copyFile} from 'node:fs/promises';
 import {gzipSync} from 'node:zlib';
 import {createHash} from 'node:crypto';
 import {build} from 'esbuild';
+import {content,publishedLocales} from '../src/data/content.mjs';
+import {localePath} from '../src/data/config.mjs';
+const modified=new Map(publishedLocales.flatMap(lang=>content(lang).articles.map(a=>[localePath(lang,`guides/${a.slug}/`),a.updatedAt||'2026-10-23'])));
 const assets={},chunks={},production=process.env.SITE_INDEXABLE==='true',origin=process.env.SITE_ORIGIN||'https://cssbuyhome-preview.hehaize88.workers.dev';
 const pages=[];
 // Each locale shares an identical footer and UI dictionary across its pages.
@@ -11,7 +14,7 @@ async function walk(dir,prefix=''){for(const f of await readdir(dir,{withFileTyp
 await walk('.astro-output');
 const robots=production?`User-agent: *\nAllow: /\nDisallow: /api/\nSitemap: ${origin}/sitemap.xml\n`:'User-agent: *\nDisallow: /\n';
 assets['/robots.txt']={body:Buffer.from(robots).toString('base64'),type:'text/plain'};
-if(production)assets['/sitemap.xml']={body:Buffer.from(`<?xml version="1.0" encoding="UTF-8"?><urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">${pages.map(p=>`<url><loc>${origin}${p}</loc></url>`).join('')}</urlset>`).toString('base64'),type:'application/xml'};
+if(production)assets['/sitemap.xml']={body:Buffer.from(`<?xml version="1.0" encoding="UTF-8"?><urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">${pages.map(p=>`<url><loc>${origin}${p}</loc>${modified.has(p)?`<lastmod>${modified.get(p)}</lastmod>`:''}</url>`).join('')}</urlset>`).toString('base64'),type:'application/xml'};
 await mkdir('dist/server',{recursive:true});await mkdir('dist/.openai',{recursive:true});await writeFile('.astro-output/embedded-assets.json',JSON.stringify({assets,chunks}));
 await build({entryPoints:['worker/index.mjs'],bundle:true,format:'esm',platform:'browser',target:'es2022',outfile:'dist/server/index.js',minify:true,legalComments:'none',define:{__PRODUCTION__:JSON.stringify(production),__SITE_ORIGIN__:JSON.stringify(origin)}});
 try{await copyFile('.openai/hosting.json','dist/.openai/hosting.json');}catch(error){if(error.code!=='ENOENT')throw error;}
