@@ -12,3 +12,5 @@
 @media(max-width:700px){.category-editorial{grid-template-columns:1fr;gap:18px;margin-top:32px}.category-editorial h2{font-size:20px}.article-header h1{overflow-wrap:anywhere}}
 
 .article-catalog-cta{padding:28px;margin-top:36px;background:#f1f6fc;border-radius:14px}.article-catalog-cta h2{margin-top:0}.article-catalog-cta .button{margin-top:8px}
+/* Grid children must shrink so the category rail scrolls inside the viewport. */
+.catalog-sidebar,.catalog-results,.category-editorial>div{min-width:0}.category-list{max-width:100%}
