@@ -2,14 +2,15 @@ import assert from 'node:assert/strict';
 import worker from '../dist/server/index.js';
 import {fixtureFetch} from '../tests/source-fixture.mjs';
 import {load} from 'cheerio';
+import articles from '../src/data/articles.json' with {type:'json'};
 globalThis.fetch=fixtureFetch;
 const origin = 'https://allchinabuybuy.com';
 const request = path => worker.fetch(new Request(origin + path));
 const sitemap = await request('/sitemap.xml');
 assert.equal(sitemap.status, 200);
 const urls = [...(await sitemap.text()).matchAll(/<loc>(.*?)<\/loc>/g)].map(match => match[1]);
-assert.equal(urls.length, 95);
-assert.equal(new Set(urls).size, 95);
+assert.equal(urls.length, 110);
+assert.equal(new Set(urls).size, 110);
 for (const url of urls) {
   assert.ok(url.startsWith(origin + '/'));
   const response = await worker.fetch(new Request(url));
@@ -21,6 +22,27 @@ for (const url of urls) {
   assert.ok(html.includes('href="' + url + '"'), url);
   assert.ok(html.includes('/brand/allchinabuy-user-logo.png'), url);
   const $=load(html);
+  const pathname=new URL(url).pathname;
+  const locale=pathname.match(/^\/(de|es|fr|it)\//)?.[1]||'en';
+  assert.equal($('html').attr('lang'),locale,url);
+  assert.equal($('link[rel="canonical"]').attr('href'),url,url);
+  assert.equal($('link[rel="alternate"][hreflang]').length,6,url);
+  assert.equal($('h1').length,1,url);
+  assert.ok($('meta[name="description"]').attr('content')?.length>30,url);
+  for(const el of $('a[href]').toArray()){
+    const target=new URL($(el).attr('href'),url);
+    if(target.origin!==origin||/\/(product|search\/visual)\/$/.test(target.pathname))continue;
+    assert.ok(urls.includes(origin+target.pathname),`${url} -> ${target.pathname}`);
+  }
+  const schemas=$('script[type="application/ld+json"]').toArray().map(el=>JSON.parse($(el).html()));
+  if(/\/articles\/[^/]+\/$/.test(pathname)){
+    const article=schemas.find(x=>x['@type']==='Article');
+    assert.equal(article?.inLanguage,locale,url);
+    assert.equal(article?.url,url,url);
+    const source=articles[locale].find(a=>pathname.endsWith('/'+a.slug+'/'));
+    assert.equal(article?.dateModified,source.dateModified||'2026-10-24',url);
+    assert.equal($('.related-guides a').length,3,url);
+  }
   if($('#catalog').length){assert.equal($('#catalog').attr('data-rendered'),'server');assert.equal($('.product-card').length,url.endsWith('/finds/')||url.endsWith('/spreadsheet/')?20:8);}
   if(/\/(qc|shipping)\/$/.test(url))assert.ok($('main .prose p').text().length>1500,url);
   if(url.endsWith('/faq/'))assert.equal($('main [data-faq-group]').length,28);
@@ -38,6 +60,9 @@ assert.equal(await previewRobots.text(), 'User-agent: *\nDisallow: /\n');
 const product = await request('/product/?id=6681');
 assert.match(product.headers.get('X-Robots-Tag'), /noindex/);
 assert.equal((await request('/does-not-exist/')).status, 404);
-console.log('Production verified: 95 sitemap URLs, indexing, redirects, five-language metadata and uploaded logo.');
+const http = await worker.fetch(new Request('http://allchinabuybuy.com/fr/articles/allchinabuy-product-links-guide/?ref=test'));
+assert.equal(http.status,308);
+assert.equal(http.headers.get('Location'),origin+'/fr/articles/allchinabuy-product-links-guide/?ref=test');
+console.log('Production verified: 110 sitemap URLs, indexing, redirects, five-language metadata and uploaded logo.');
 
 assert.equal((await request('/api/catalog')).headers.get('X-Robots-Tag'),'noindex');

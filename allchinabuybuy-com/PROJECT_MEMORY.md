@@ -1,6 +1,19 @@
 # AllChinaBuyBuy 项目记忆
 
-更新时间：2026-10-24（用户时区 Asia/Shanghai）。本文件为后续开发事实来源；先读再改。
+更新时间：2026-10-30。本文件为后续开发事实来源；先读再改。
+
+## 五语 SEO 与文章改进（2026-10-30）
+
+用户要求按 GSC、Bing、GA4 和竞争内容调研改进并部署，所有语言同时完成。本轮变更适用于英语、德语、西语、法语、意语；不迁移生产平台，不改变商品来源、推荐码或原有文章 URL。
+
+- 新增 shoes-spreadsheet、fees-explained、order-status-tracking 三篇完整文章，每篇都有 5 种语言正文；每种语言现在 13 篇文章，总计 65 个文章页面。
+- 改善 spreadsheet-guide、shortlist-checklist、maintenance-link-troubleshooting 的标题、摘要、首节和操作步骤；更新其他内容中的旧预览称呼与官方公告检查日期。官方维护公告复核日期 2026-10-30，未宣称服务恢复。
+- 首页、目录及文章的标题、说明、入口和同语言相关内链同步更新；首页首屏与移动端间距收紧，鞋类分类入口更直接。
+- Article / BreadcrumbList 结构化数据、实际修改日期与 sitemap lastmod；HTTP 和 www 均 308 到正式 HTTPS 根域并保留路径及参数。
+- GA4 保持 G-4YY4TM8ZFW 和一次 page_view。新增 article_catalog_click、catalog_open、product_open、related_guide_click、purchase_link_click、catalog_search；参数不含搜索原文、推荐查询串或任意外链。GA4 后台尚未将这些事件配置为关键事件。
+- 本地生产构建 120 页，sitemap 110 个唯一索引 URL，10 项自动测试通过；逐 URL 验证 canonical、6 个 hreflang、语言、H1、内链、JSON-LD、正文与 SSR 商品数量（测试 fixture 仅用于测试）。
+- 浏览器预览核对首页及法语完整鞋类文章。当前执行环境无法访问实时商品来源，预览正确返回 503；正式域名商品加载须在部署后核验，不将此本地限制认定为源站故障。
+- 仍沿用 GitHub main → Cloudflare allchinabuybuy-preview 的生产流程。最新部署成功与线上验证以交付记录为准。
 
 ## 收录排查与商品列表服务端渲染（2026-10-24）
 
