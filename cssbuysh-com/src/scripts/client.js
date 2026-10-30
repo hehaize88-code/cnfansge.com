@@ -8,7 +8,7 @@ const form=document.querySelector('#catalog-form');if(form){for(const key of ['q
 async function load(){
  const bootstrap=document.querySelector('#source-data');let data;
  try{
- if(bootstrap){data=JSON.parse(bootstrap.textContent);bootstrap.remove();}else{const apiUrl=new URL(detail?'/api/product':'/api/catalog',location.origin);for(const key of (detail?['id']:['q','category','sort','page','cursor','slice']))if(url.searchParams.has(key))apiUrl.searchParams.set(key,url.searchParams.get(key));if(section?.dataset.catalog==='home')apiUrl.searchParams.set('sort','latest');const response=await fetch(apiUrl);if(!response.ok)throw new Error('Source unavailable');data=await response.json();}
+ if(bootstrap){data=JSON.parse(bootstrap.textContent);bootstrap.remove();}else{const apiUrl=new URL(detail?'/api/product':'/api/catalog',location.origin);for(const key of (detail?['id']:['q','category','sort','page','cursor','slice']))if(url.searchParams.has(key))apiUrl.searchParams.set(key,url.searchParams.get(key));if(section?.dataset.catalog==='home')apiUrl.searchParams.set('sort','latest');if(section?.dataset.category&&section.dataset.category!=='all')apiUrl.searchParams.set('category',section.dataset.category);const response=await fetch(apiUrl);if(!response.ok)throw new Error('Source unavailable');data=await response.json();}
  if(data.error)throw new Error(data.error);
  if(detail){detail.innerHTML=productMarkup(data,prefix,t,lang);document.title=`${data.name} | CSSBuy SH`;}
  else{const rendered=catalogMarkup(data,url,prefix,t,lang,section.dataset.catalog==='home');document.querySelector('#catalog-products').innerHTML=rendered.products;const hero=document.querySelector('#hero-products');if(hero)hero.innerHTML=rendered.hero;const pager=document.querySelector('#catalog-pagination');if(pager)pager.innerHTML=rendered.pagination;}
@@ -21,3 +21,15 @@ const photoViewer=document.querySelector('#photo-viewer');
 document.addEventListener('click',event=>{const button=event.target.closest('[data-large-image]');if(button&&photoViewer){const image=photoViewer.querySelector('img');image.src=button.dataset.largeImage;image.alt=button.querySelector('img')?.alt||t.photoLabel;photoViewer.showModal();}});
 photoViewer?.querySelector('.photo-close').addEventListener('click',()=>photoViewer.close());
 photoViewer?.addEventListener('click',event=>{if(event.target===photoViewer)photoViewer.close();});
+
+// Record useful navigation without sending search text, addresses or form values.
+const track=(name,params={})=>{if(typeof window.gtag==='function')window.gtag('event',name,{...params,language:lang});};
+document.addEventListener('click',event=>{
+ const a=event.target.closest('a[href]');if(!a)return;
+ const target=new URL(a.href,location.href),action=a.dataset.track;
+ if(action==='buy_click')track(action,{product_id:target.searchParams.get('id')||'',link_domain:target.hostname});
+ else if(action==='register_click')track(action,{link_domain:target.hostname});
+ else if(target.origin===location.origin&&target.pathname!==location.pathname&&target.pathname.includes('/articles/')&&!target.pathname.endsWith('/articles/'))track('article_open',{article_slug:target.pathname.split('/').filter(Boolean).at(-1)});
+ else if(target.origin===location.origin&&target.pathname.includes('/spreadsheet/'))track('catalog_open',{category:target.searchParams.get('category')||target.pathname.match(/spreadsheet\/([^/]+)\//)?.[1]||'all'});
+});
+form?.addEventListener('submit',()=>track('catalog_filter',{category:form.elements.category.value,sort:form.elements.sort.value,has_search:!!form.elements.q.value.trim()}));

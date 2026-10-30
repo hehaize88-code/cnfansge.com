@@ -27,7 +27,7 @@
     {
       "id": "data",
       "q": "De unde provin produsele și fotografiile anunțurilor?",
-      "a": "Catalogul de produse și galeriile vânzătorilor provin de la cnfansge.com. CSSBuy SH nu menține o bază de date separată cu produse și nu produce imagini ale acestora. Confirmă oferta selectată după ce deschizi destinația de cumpărare.",
+      "a": "Catalogul de produse conține anunțuri legate și galerii ale vânzătorilor. CSSBuy SH nu menține o bază de date separată cu produse și nu creează imaginile acestora. Confirmă oferta selectată după deschiderea destinației de cumpărare.",
       "sourceIds": [
         "catalog",
         "project"
@@ -36,7 +36,7 @@
     {
       "id": "qc",
       "q": "Fotografiile produselor sunt fotografii verificate de control al calității CSSBuy?",
-      "a": "Galeriile vânzătorilor nu trebuie tratate drept control al calității din depozit. O fotografie verificată de control al calității pentru o comandă anume trebuie asociată produsului primit. Această previzualizare nu etichetează imaginile vânzătorilor cnfansge drept dovezi verificate ale inspecției CSSBuy.",
+      "a": "Galeriile vânzătorilor nu trebuie considerate QC din depozit. O fotografie QC verificată pentru o comandă anume trebuie asociată produsului primit. Acest site nu etichetează imaginile vânzătorilor drept dovezi verificate ale inspecției CSSBuy.",
       "sourceIds": [
         "catalog",
         "project"
@@ -63,7 +63,7 @@
     {
       "id": "weidian-link",
       "q": "Ce identificator trebuie folosit într-un link de cumpărare Weidian?",
-      "a": "Folosește identificatorul original al produsului din platforma comercială. Exemplul furnizat este https://www.cssbuy.com/shop/goodsDetail?type=micro&id=7755101935. Un număr de înregistrare din catalogul cnfansge nu înlocuiește identificatorul din platforma comercială.",
+      "a": "Folosește identificatorul original al produsului din platforma comercială. Exemplul furnizat este https://www.cssbuy.com/shop/goodsDetail?type=micro&id=7755101935. Un număr intern al catalogului nu înlocuiește identificatorul produsului din platformă.",
       "sourceIds": [
         "user-link"
       ]
@@ -245,7 +245,7 @@
         "cum folosești cssbuy",
         "linkuri de produse cssbuy"
       ],
-      "intro": "Un tabel CSSBuy util ar trebui să te ajute să iei o decizie de cumpărare mai bună, nu doar să creezi o listă de cumpărături mai lungă. Un director poate reuni linkuri, titluri și prețuri din anunțuri, dar munca importantă începe când verifici produsul real din spatele unui card. Acest ghid arată cum transformi răsfoirea într-o listă scurtă și documentată, cum separi prezentarea vânzătorului de dovezile despre propria comandă și cum decizi dacă o descoperire mai are sens după includerea transportului. CSSBuy SH este un site independent de descoperire. Catalogul său de produse provine de la cnfansge.com; cumpărarea și gestionarea comenzilor au loc pe CSSBuy.",
+      "intro": "Un tabel CSSBuy util ar trebui să te ajute să iei o decizie de cumpărare mai bună, nu doar să creezi o listă de cumpărături mai lungă. Un director poate reuni linkuri, titluri și prețuri din anunțuri, dar munca importantă începe când verifici produsul real din spatele unui card. Acest ghid arată cum transformi răsfoirea într-o listă scurtă și documentată, cum separi prezentarea vânzătorului de dovezile despre propria comandă și cum decizi dacă o descoperire mai are sens după includerea transportului. CSSBuy SH este un site independent de descoperire. Cumpărarea și gestionarea comenzilor au loc pe CSSBuy.",
       "sections": [
         {
           "heading": "Începe cu un scop și o listă scurtă realistă",
@@ -258,7 +258,7 @@
           "heading": "Citește cardul produsului ca pe o intrare într-un index",
           "paragraphs": [
             "Un card comprimă un anunț mult mai amplu. Titlul său poate fi scurtat, tradus sau furnizat de catalogul sursă. Prețul afișat poate descrie o opțiune, nu toate variantele. Tratează aceste câmpuri ca pe o cale către oferta originală, apoi compară mărimea, culoarea, cantitatea și versiunea concrete pe care le dorești. Un preț de pornire scăzut nu ajunge pentru a evalua corect două produse dacă unul include un accesoriu, iar celălalt nu.",
-            "Pe CSSBuy SH, înregistrările produselor și galeriile vânzătorilor provin de la cnfansge.com. O imagine a vânzătorului ilustrează anunțul; nu demonstrează că un anumit produs din depozit a fost inspectat. Dacă site-ul nu poate oferi o funcție operațională sau un tip verificat de fotografie, nu le deduce dintr-o etichetă atrăgătoare. Urmează linkul disponibil al produsului și verifică ce este prezentat efectiv înainte să tratezi un card drept dovadă."
+            "Pe CSSBuy SH, catalogul conține înregistrări de produse și galerii ale vânzătorilor. O imagine a vânzătorului ilustrează anunțul; nu demonstrează că un anumit produs din depozit a fost inspectat. Dacă site-ul nu poate oferi o funcție operațională sau un tip verificat de fotografie, nu le deduce dintr-o etichetă atrăgătoare. Urmează linkul disponibil al produsului și verifică ce este prezentat efectiv înainte să tratezi un card drept dovadă."
           ]
         },
         {
@@ -302,6 +302,12 @@
             "După sosirea unui produs, adaugă un rezultat scurt în propria listă: opțiunea primită, potrivirea reală, ce au omis fotografiile și dacă l-ai alege din nou. Separă impresiile subiective de faptele măsurabile. „Prea scurt pentru mine” este un feedback personal util; „mâneca a măsurat 58 de centimetri prin metoda mea” este o măsură pe care altcineva o poate interpreta. Niciuna nu ar trebui să devină o afirmație universală despre fiecare comandă viitoare din acel anunț.",
             "Reverifică un link salvat înainte să comanzi din nou. Anunțurile se pot schimba, vânzătorii pot introduce opțiuni noi, iar detaliile pe care te-ai bazat ultima dată pot să nu mai fie prezente. Un tabel bun este un registru de decizii cu date, nu o garanție permanentă. În timp, partea cea mai valoroasă este raționamentul păstrat: ce măsuri au contat, ce întrebări au prevenit greșeli și ce produse au îndeplinit cu adevărat scopul stabilit înainte de răsfoire."
           ]
+        },
+        {
+          "heading": "Transformă lista scurtă în următoarea acțiune utilă",
+          "paragraphs": [
+            "Deschide categoria relevantă, compară câteva anunțuri exacte și notează informațiile lipsă care ți-ar putea schimba decizia. Continuă cu ghidul de mărimi pentru măsurători, ghidul QC pentru inspecția produsului primit și ghidul de transport pentru bugetul complet al coletului. Păstrează linkul original lângă notițe, astfel încât o actualizare a catalogului să nu confunde două oferte asemănătoare. Un produs salvat este un candidat; verifică opțiunea aleasă și disponibilitatea actuală în CSSBuy înainte de plată."
+          ]
         }
       ],
       "takeaways": [
@@ -313,7 +319,8 @@
         "buyforme",
         "expertbuy",
         "catalog"
-      ]
+      ],
+      "reviewedAt": "2026-10-30"
     },
     {
       "id": "weidian",
@@ -384,6 +391,12 @@
             "După ce produsul corect a fost comandat, linkul original devine o referință, nu locul de gestionare a tranzacției. Păstrează numerele comenzilor, plățile, deciziile din depozit și urmărirea coletelor în contul oficial. Un site de descoperire nu poate remedia o problemă de expediere a vânzătorului doar pentru că a oferit primul link. Dacă ai nevoie de asistență, furnizează identificatorul oficial al comenzii și dovezile relevante pentru acea comandă.",
             "După livrare, compară rezultatul cu descrierea salvată și notează lecțiile pentru o altă achiziție. Poate denumirile opțiunilor erau clare, dar tabelul de mărimi folosea o metodă de măsurare nefamiliară. Poate ambalajul a afectat bugetul livrării mai mult decât te așteptai. Aceste observații sunt mai utile decât să declari o întreagă platformă bună sau rea pe baza unei comenzi. O achiziție atentă pe Weidian este o serie de mici decizii verificate, începând cu identificatorul corect și terminând cu un produs care îndeplinește scopul declarat."
           ]
+        },
+        {
+          "heading": "Verifică ordinul înainte de confirmarea plății",
+          "paragraphs": [
+            "Compară produsul recunoscut cu anunțul original Weidian și verifică culoarea, mărimea, cantitatea și orice notă de cumpărare. Păstrează identificatorul produsului de pe platformă separat de numărul intern al articolului din acest director. După cumpărare, folosește referința comenzii CSSBuy pentru întrebări despre depozit și referința coletului pentru livrarea internațională. Dacă produsul nu corespunde instrucțiunii finale, adună fotografii și întreabă despre returul disponibil înainte de includerea în transport."
+          ]
         }
       ],
       "takeaways": [
@@ -395,12 +408,13 @@
         "buyforme",
         "expertbuy",
         "user-link"
-      ]
+      ],
+      "reviewedAt": "2026-10-30"
     },
     {
       "id": "qc",
       "slug": "cssbuy-qc-photos-guide",
-      "title": "Fotografii de control al calității CSSBuy: listă practică de inspecție",
+      "title": "Fotografii QC CSSBuy: verificări înainte de expediere sau retur",
       "description": "O metodă structurată de analizare a fotografiilor din depozit, diferențiere a imaginilor vânzătorului și solicitare a unor măsuri utile înainte de expedierea unui colet.",
       "category": "Depozit și control al calității",
       "keywords": [
@@ -409,7 +423,7 @@
         "controlul calității cssbuy",
         "fotografii din depozit"
       ],
-      "intro": "Fotografiile de control al calității sunt cele mai utile când le abordezi cu o întrebare. Acest produs corespunde opțiunii comandate? Sunt prezente accesoriile necesare? Măsura este compatibilă cu nevoile tale? Simplul fapt de a răsfoi o galerie și a decide că un produs arată bine poate omite detalii care contează după livrare. Acest ghid explică o succesiune practică de verificare și limitele dovezilor vizuale. Paginile oficiale de servicii CSSBuy descriu inspecția și fotografiile din depozit. CSSBuy SH nu tratează galeriile vânzătorilor furnizate de cnfansge.com drept control al calității verificat din depozit, iar un card de produs nu trebuie interpretat niciodată ca un certificat de inspecție.",
+      "intro": "Fotografiile de control al calității sunt cele mai utile când le abordezi cu o întrebare. Acest produs corespunde opțiunii comandate? Sunt prezente accesoriile necesare? Măsura este compatibilă cu nevoile tale? Simplul fapt de a răsfoi o galerie și a decide că un produs arată bine poate omite detalii care contează după livrare. Acest ghid explică o succesiune practică de verificare și limitele dovezilor vizuale. Paginile oficiale de servicii CSSBuy descriu inspecția și fotografiile din depozit. CSSBuy SH nu tratează galeriile vânzătorilor drept control al calității verificat din depozit, iar un card de produs nu trebuie interpretat niciodată ca un certificat de inspecție.",
       "sections": [
         {
           "heading": "Identifică al cui produs și ce imagine privești",
@@ -466,6 +480,12 @@
             "Inspecția vizuală nu poate dovedi durabilitatea pe termen lung, construcția internă, siguranța electronică sau autenticitatea. Un aspect îngrijit nu stabilește că un produs respectă standardele relevante pentru utilizarea intenționată. Pentru produse a căror defectare ar putea provoca daune, caută documentație adecvată și sfaturi calificate în loc să te bazezi pe o galerie din depozit. O imagine este dovadă a aspectului, nu un înlocuitor al testării.",
             "După livrare, compară experiența cu ce arătau fotografiile. Dacă o problemă era invizibilă, notează această limitare pentru cumpărături similare. Dacă o cerere de măsurare a prevenit o greșeală de mărime, refolosește metoda. Crearea acestui circuit de feedback îmbunătățește deciziile viitoare fără a pretinde că vreo inspecție poate elimina toată incertitudinea. Valoarea controlului calității stă în a pune întrebări la care se poate răspunde într-un moment util al procesului și în a acționa după răspunsuri înainte ca produsul să devină mai greu de returnat sau inspectat."
           ]
+        },
+        {
+          "heading": "Decide dacă păstrezi, clarifici sau returnezi",
+          "paragraphs": [
+            "Păstrează produsul când opțiunea aleasă și verificările necesare corespund. Cere clarificări dacă o etichetă nevizibilă, un unghi neclar sau o măsurătoare lipsă îți poate schimba decizia. Întreabă despre retur când ai o neconcordanță documentată sau o problemă inacceptabilă și verifică prompt condițiile aplicabile. CSSBuy descrie inspecția din depozit ca fiind generală; fotografiile nu autentifică produsul și nu verifică durabilitatea. Ia decizia înainte de selectarea pentru transport internațional."
+          ]
         }
       ],
       "takeaways": [
@@ -477,7 +497,8 @@
         "buyforme",
         "shipforme",
         "catalog"
-      ]
+      ],
+      "reviewedAt": "2026-10-30"
     },
     {
       "id": "cost",
@@ -548,6 +569,12 @@
             "Testul final este dacă produsul mai are sens când este luat în calcul întregul buget al livrării. Un produs voluminos și ieftin poate costa mai mult să îl primești decât o alternativă locală. Un produs compact mai scump poate avea un rezultat diferit. Include în comparație valoarea timpului tău și dificultatea practică a unui retur, mai ales dacă potrivirea sau adecvarea produsului rămâne incertă.",
             "După livrare, păstrează măsurile și costurile pachetului ca referință personală. Pot îmbunătăți estimarea următoare pentru un colet asemănător, dar trebuie în continuare datate și etichetate ca istorice. Tarifele, rutele și ambalajele produselor se pot schimba. Cel mai bun calculator de transport face deci parte dintr-un proces decizional: te ajută să testezi presupunerile devreme, să le actualizezi când informațiile din depozit se îmbunătățesc și să selectezi o rută actuală pe baza coletului pe care chiar intenționezi să îl trimiți."
           ]
+        },
+        {
+          "heading": "Compară rezultatele calculatorului cu aceleași date",
+          "paragraphs": [
+            "Deschide calculatorul oficial CSSBuy și selectează destinația reală. Introdu greutatea măsurată și dimensiunile coletului ambalat, când sunt disponibile, apoi compară rutele eligibile pentru același conținut și aceleași ipoteze de ambalare. Salvează data și valorile introduse lângă estimare. După ambalare, înlocuiește estimările cu măsurătorile finale și verifică din nou regula greutății taxabile. Separă cumpărarea produselor, transportul intern, transportul internațional și serviciile suplimentare, astfel încât un tarif mic să nu fie confundat cu întregul cost livrat."
+          ]
         }
       ],
       "takeaways": [
@@ -559,12 +586,13 @@
         "buyforme",
         "estimates",
         "shipforme"
-      ]
+      ],
+      "reviewedAt": "2026-10-30"
     },
     {
       "id": "time",
       "slug": "cssbuy-shipping-time",
-      "title": "Cât durează CSSBuy? Cronologia unei comenzi",
+      "title": "Timpul de transport CSSBuy: etapele comenzii, urmărire și întârzieri",
       "description": "Separă expedierea vânzătorului, deciziile din depozit, tranzitul internațional și livrarea finală pentru a planifica și a pune întrebări mai bune despre urmărire.",
       "category": "Transport",
       "keywords": [
@@ -616,6 +644,20 @@
             "Menține un jurnal compact cu data, etapa confirmată și orice acțiune întreprinsă. Poate fi la fel de simplu ca câteva rânduri în notele tale. Separă faptele observate de așteptări: „fotografiile din depozit sunt disponibile” este un fapt, iar „ar trebui să plece mâine” este o așteptare dacă nu o confirmă contul oficial. Separarea face întrebările ulterioare mai clare și te ajută să evaluezi unde s-a consumat efectiv timpul.",
             "După livrare, notează atât perioada completă de la comandă până la ușă, cât și perioada tranzitului internațional dacă datele relevante sunt disponibile. Folosește rezultatul ca exemplu istoric, nu ca prognoză. Dacă mai comanzi, cea mai utilă îmbunătățire poate fi să răspunzi mai repede la întrebări sau să alegi produse cu disponibilitate mai clară, în loc să cauți o rută care a produs cândva cea mai scurtă livrare într-o relatare izolată. O planificare bună a cronologiei se concentrează pe etapele pe care le poți înțelege și pe deciziile pe care le poți lua."
           ]
+        },
+        {
+          "heading": "Identifică întârzierea înainte de a cere un termen de livrare",
+          "paragraphs": [
+            "Începe cu evidența comenzii. Dacă vânzătorul nu a expediat produsul, întrebarea privește cumpărarea sau livrarea internă. Dacă produsul este în depozit, verifică dacă QC, o solicitare de retur, instrucțiunile de ambalare sau plata mai necesită intervenția ta. Dacă ai depus coletul, verifică dacă transportatorul a înregistrat predarea fizică. Nu considera aceste etape ca și cum coletul ar fi fost în transport internațional în tot acest timp.",
+            "Notează ultima etapă finalizată și prima etapă pe care nu o poți confirma. De exemplu, fotografia sosirii în depozit răspunde unei alte întrebări decât scanarea de acceptare a transportatorului. Folosește datele propriei comenzi, nu data publicării capturii de livrare a altui cumpărător. Estimarea unei rute este utilă numai dacă știi ce etapă descrie și dacă propriul colet a ajuns acolo."
+          ]
+        },
+        {
+          "heading": "Pregătește o solicitare utilă despre urmărire",
+          "paragraphs": [
+            "Când urmărirea nu se actualizează, adună referința coletului, linia aleasă, data depunerii și ultimul eveniment vizibil cu ora lui. Verifică pagina transportatorului indicată în contul CSSBuy. Dacă același colet primește ulterior altă referință de livrare, păstrează-le pe ambele în evidența privată, fără să presupui că primul număr descrie toate etapele. Nu publica adresa sau o etichetă de transport cu date personale neascunse.",
+            "Adresează suportului o întrebare concretă: dacă pachetul a fost predat transportatorului, dacă se aplică alt număr de urmărire sau dacă adresa necesită corectare. Include verificările făcute deja. Păstrează solicitarea inițială împreună cu răspunsul, astfel încât continuarea să folosească aceleași dovezi. Nu depune și nu plăti un colet duplicat doar pentru că lipsește o scanare; confirmă mai întâi starea transportului existent."
+          ]
         }
       ],
       "takeaways": [
@@ -626,12 +668,13 @@
       "sourceIds": [
         "buyforme",
         "storage"
-      ]
+      ],
+      "reviewedAt": "2026-10-30"
     },
     {
       "id": "warehouse",
       "slug": "cssbuy-warehouse-consolidation",
-      "title": "Depozitarea CSSBuy și consolidarea coletelor",
+      "title": "Depozitul CSSBuy: stocare, consolidare și verificarea coletului",
       "description": "Planifică depozitarea, verifică produsele și combină coletele atent, folosind bunurile reale, termenele și restricțiile rutelor.",
       "category": "Depozit și control al calității",
       "keywords": [
@@ -683,6 +726,20 @@
             "Verifică dacă fiecare produs selectat are o decizie încheiată de păstrare. Confirmă detaliile livrării, cantitățile, cererile de ambalare și orice note nerezolvate. Citește opțiunile de transport disponibile pentru bunurile și destinația reale. Dacă un produs are o discuție activă de retur, clarifică-i starea înainte să îl incluzi. O verificare finală ar trebui să confrunte conținutul fizic cu deciziile deja luate.",
             "Salvează identificatorul coletului și alegerile afișate în cont. După expediere, păstrează inventarul ca evidență a lucrurilor care aparțin acelui colet. Când sosește, folosește aceeași evidență pentru a verifica conținutul și a documenta prompt orice problemă. Astfel se închide legătura dintre comenzile individuale și pachetul livrat. Un proces de depozit bine gestionat nu este definit de numărul produselor consolidate; este definit de decizii clare, ambalare adecvată și un colet al cărui conținut și costuri le înțelegi."
           ]
+        },
+        {
+          "heading": "Folosește o listă de păstrare, clarificare sau retur înainte de ambalare",
+          "paragraphs": [
+            "Pentru fiecare produs din depozit, notează referința comenzii, data primirii, opțiunea aleasă, rezultatul QC și următoarea acțiune. Marchează păstrarea numai după verificarea detaliilor care ar schimba decizia. Marchează clarificarea dacă o etichetă, fotografie sau măsurătoare lipsă contează încă. Marchează solicitarea de retur dacă vrei ca vânzătorul să analizeze o problemă documentată. Această separare simplă previne selectarea accidentală a unui produs nerezolvat într-un colet consolidat.",
+            "Deschide informațiile de depozitare ale fiecărui articol în cont și verifică termenul real. Pagina serviciilor de transport CSSBuy promovează până la 90 de zile de depozitare gratuită, însă starea produsului și anunțurile curente trebuie verificate. Nu calcula termenul de la prima descoperire a produsului. Dacă ai nevoie de prelungire, întreabă despre disponibilitate și cost înainte de data afișată, fără să presupui că o comandă nouă repornește numărătoarea."
+          ]
+        },
+        {
+          "heading": "Compară două planuri de ambalare cu aceleași produse",
+          "paragraphs": [
+            "Pregătește un plan care păstrează ambalajele necesare și altul care elimină doar ce poate fi aruncat în siguranță. Pentru fiecare, enumeră produsele, cerințele de protecție și dimensiunile ambalate estimate. Comparația trebuie să folosească aceeași destinație și aceleași condiții ale rutei. Eliminarea cutiei comerciale poate reduce volumul, dar și protecția sau posibilitatea returului; decide înainte de transportul internațional și păstrează informațiile necesare.",
+            "Când primești măsurătorile finale, înlocuiește estimările din buget. Verifică din nou restricțiile de greutate, dimensiuni și conținut ale liniei selectate. Un colet comun mai mare nu este automat mai ieftin decât colete separate eligibile. Compară opțiunile reale în calculatorul oficial și în oferta finală, apoi păstrează confirmarea conținutului și serviciilor alese."
+          ]
         }
       ],
       "takeaways": [
@@ -694,7 +751,8 @@
         "shipforme",
         "storage",
         "buyforme"
-      ]
+      ],
+      "reviewedAt": "2026-10-30"
     },
     {
       "id": "returns",
@@ -751,6 +809,20 @@
             "După rezolvarea problemei, notează ce ar fi prevenit-o. Poate numele opțiunilor erau ambigue, lipsea o măsură sau un accesoriu arătat într-o fotografie nu era inclus în oferta selectată. Transformă lecția într-o verificare concretă înainte de cumpărare. Evită transformarea unui rezultat într-o afirmație nefundamentată că orice vânzător sau orice comandă se va comporta la fel.",
             "Pentru achizițiile viitoare, păstrează o descriere mai clară a produsului intenționat și verifică dovezile din depozit la scurt timp după disponibilizare. O achiziție bine documentată nu garantează o decizie favorabilă de retur, dar face neînțelegerile mai ușor de explicat și te ajută să acționezi cât timp opțiunile încă pot exista. Cea mai utilă strategie de retur începe înainte de problemă: înțelege ce cumperi, păstrează dovezile relevante și află ce conversație din contul oficial aparține tranzacției."
           ]
+        },
+        {
+          "heading": "Trimite o cerere cu dovezi înainte de expedierea internațională",
+          "paragraphs": [
+            "Compară articolul primit cu instrucțiunea finală: link, mărime, culoare, cantitate și înlocuiri aprobate. Descrie o diferență observabilă cu fotografia sau măsurătoarea relevantă. Precizează dacă dorești o clarificare sau ca CSSBuy să întrebe vânzătorul despre retur. O cerere clară ajută mai mult decât afirmația generală că produsul este rău, mai ales dacă problema ține de preferința de potrivire, nu de o opțiune greșită.",
+            "Păstrează ambalajul, etichetele și accesoriile pe durata analizei. Confirmă condițiile actuale ale vânzătorului și platformei, termenul disponibil și cine plătește transportul returului. Nu presupune că inspecția în depozit garantează automat acceptarea fiecărui retur. Evită includerea produsului într-un colet internațional până la rezolvare, deoarece procedura și costul se pot schimba după export."
+          ]
+        },
+        {
+          "heading": "Reconciliază rambursarea cu plata inițială",
+          "paragraphs": [
+            "Notează suma produsului, taxele de transport sau servicii și valoarea despre care răspunsul suportului spune că va fi rambursată. Verifică dacă rezultatul este credit în cont sau returnare pe canalul inițial de plată. Sunt rezultate diferite, iar soldul contului nu trebuie descris drept bani deja primiți la bancă. Notează separat orice parte rămasă nerezolvată.",
+            "Compară tranzacția finalizată cu soluția convenită înainte de închiderea evidenței. Dacă o sumă nu este clară, indică ordinul inițial și răspunsul suportului, nu deschide o reclamație nouă fără legătură. Durata rambursării depinde de soluția efectivă și metoda de plată; folosește starea contului și informațiile furnizorului, fără să promiți aceeași durată în toate cazurile."
+          ]
         }
       ],
       "takeaways": [
@@ -761,12 +833,13 @@
       "sourceIds": [
         "returns-policy",
         "expertbuy"
-      ]
+      ],
+      "reviewedAt": "2026-10-30"
     },
     {
       "id": "payments",
       "slug": "cssbuy-payment-fees",
-      "title": "Comisioane și plăți CSSBuy: planifică întregul buget",
+      "title": "Taxe și plăți CSSBuy: comisioane și cost total",
       "description": "Separă costurile produsului, livrării interne, serviciilor, plății și coletului, apoi verifică sumele afișate în contul oficial CSSBuy.",
       "category": "Comenzi și plăți",
       "keywords": [
@@ -818,6 +891,20 @@
             "Când achiziția este încheiată, înregistrează sumele reale plătite pentru produse, servicii și livrare, împreună cu orice ajustări. Păstrează monedele explicite. Dacă vrei un total personal într-o monedă, folosește conversia reflectată în plățile efective sau etichetează clar cursul ales pentru comparație. Amestecarea unui curs actual cu taxe istorice poate face o achiziție veche să pară mai ieftină sau mai scumpă decât a fost în realitate.",
             "Compară rezultatul cu ceea ce ți-a oferit produsul, inclusiv potrivirea, utilitatea și munca implicată în proces. Reflecția este mai valoroasă decât să sărbătorești un preț mic din anunț ignorând restul facturii. Păstrează data și informațiile relevante despre colet pentru planificarea viitoare, dar nu transforma rezultatul într-un buget garantat pentru alt cumpărător. Un buget CSSBuy solid este concret, detaliat și actualizat pe măsură ce informațiile reale înlocuiesc estimările."
           ]
+        },
+        {
+          "heading": "Aplică formula publicată unui exemplu clar identificat",
+          "paragraphs": [
+            "Pagina oficială CSSBuy Cost and Fees, verificată la 30 octombrie 2026, prezintă comisionul de cumpărare ca 6% din prețul produsului plus transportul intern din China. Pentru o comandă ipotetică de 200 CNY cu transport intern de 10 CNY, formula produce 12,60 CNY. Subtotalul de 222,60 CNY acoperă doar aceste trei componente; nu este prețul complet cu livrare. Verifică ecranul comenzii pentru eventuale tarife specifice contului sau modificări.",
+            "Transportul internațional, serviciile alese și taxele aplicabile de plată ori conversie valutară trebuie analizate separat. Nu aplica automat procentul de cumpărare fiecărei plăți ulterioare. Înainte de confirmare, notează ce spune fiecare ecran că acoperă plata, moneda și suma finală. Un exemplu de comision este util doar când baza de calcul este clară, iar componentele excluse rămân vizibile."
+          ]
+        },
+        {
+          "heading": "Ține un registru al bugetului în cele două etape de plată",
+          "paragraphs": [
+            "Creează câte un rând pentru produs și transport intern, comisioane de cumpărare, transport internațional și fiecare serviciu suplimentar. Notează suma afișată de furnizorul de plăți în moneda pe care o vei folosi efectiv. Dacă după ajustare rămâne sold în cont, deosebește-l de banii returnați prin metoda inițială.",
+            "Înainte de expediere, înlocuiește fiecare estimare cu cifrele confirmate disponibile atunci. Dacă totalul depășește limita, reevaluează serviciile opționale sau o cumpărare care încă poate fi modificată. Nu selecta o linie nepotrivită doar pentru a face ca bugetul inițial să pară corect. Păstrează plățile cu referințele comenzilor și coletelor, ca o ajustare sau solicitare de suport să poată fi legată de tranzacția corectă."
+          ]
         }
       ],
       "takeaways": [
@@ -829,7 +916,8 @@
         "fees",
         "about",
         "buyforme"
-      ]
+      ],
+      "reviewedAt": "2026-10-30"
     },
     {
       "id": "links",
@@ -886,6 +974,20 @@
             "O evidență personală solidă conține anunțul sursă, destinația CSSBuy și identificatorul final al comenzii. Fiecare are alt rol. Sursa explică ce a fost oferit, destinația este locul unde ai verificat opțiunea de cumpărare, iar înregistrarea comenzii urmărește ce ai solicitat efectiv. Dacă anunțul se schimbă ulterior, detaliile salvate pot explica baza deciziei inițiale.",
             "Folosește această evidență când compari dovezile din depozit sau discuți o discrepanță. Este mult mai ușor să identifici o opțiune greșită când formularea și imaginea selectate au fost păstrate. După achiziție, actualizează evidența cu ce ai învățat despre cantitate, mărimi sau comunicarea vânzătorului. Scopul nu este să declari un câștigător universal între Taobao, Weidian și 1688. Este să faci fiecare link sursă trasabil și fiecare decizie de cumpărare inteligibilă din informațiile disponibile la momentul respectiv."
           ]
+        },
+        {
+          "heading": "Verifică dacă linkul duce la produsul dorit",
+          "paragraphs": [
+            "Păstrează URL-ul original al produsului și deschide-l înainte de a-l copia în procesul oficial CSSBuy. Compară vânzătorul, titlul și opțiunile disponibile cu lista scurtă. Un link scurt de distribuire, pagina principală a magazinului și URL-ul unui produs nu sunt interschimbabile. Dacă pagina duce la o colecție sau la altă variantă, rezolvă diferența înainte de plată.",
+            "După recunoașterea linkului de către CSSBuy, verifică informațiile completate și opțiunile selectate, fără să consideri conversia dovada că totul este corect. Notează cantitatea, culoarea, mărimea și orice cerință minimă a vânzătorului afișată pentru oferta reală. Dacă pagina nu poate fi recunoscută, folosește asistența oficială cu linkul original și detalii clare. Nu ghici alt identificator pornind de la un număr afișat în altă parte a catalogului."
+          ]
+        },
+        {
+          "heading": "Separă identificatorii produselor de referințele comenzilor",
+          "paragraphs": [
+            "Un site de descoperire poate atribui un număr intern, platforma comercială alt identificator al produsului, iar CSSBuy încă o referință după cumpărare. Salvează fiecare număr cu scopul lui. Când întrebi despre cumpărare, oferă linkul original; când întrebi despre un ordin plătit, include referința CSSBuy. Referința coletului devine relevantă doar când produsele sunt grupate pentru livrarea internațională.",
+            "Această separare face mai sigure și comparațiile viitoare. Un anunț nou cu aceeași fotografie poate avea alt vânzător sau identificator. Verifică-l ca ofertă nouă, în loc să înlocuiești linkul salvat fără înregistrarea schimbării. Nu prezenta un ghid de conversie ca instrument funcțional dacă site-ul nu face efectiv conversia și nu afișează destinația pentru verificare."
+          ]
         }
       ],
       "takeaways": [
@@ -897,7 +999,8 @@
         "buyforme",
         "expertbuy",
         "user-link"
-      ]
+      ],
+      "reviewedAt": "2026-10-30"
     },
     {
       "id": "sizing",
@@ -954,6 +1057,20 @@
             "Materialele flexibile, tehnica de măsurare și construcția pot produce variații mici. Nu interpreta o riglă fotografiată ca pe un nivel de precizie pe care configurația nu îl poate susține. Decide dacă incertitudinea rămasă este acceptabilă în funcție de cât de sensibilă este potrivirea. Dacă o dimensiune trebuie să se încadreze într-un interval foarte îngust pentru ca produsul să funcționeze, o achiziție la distanță poate cere mai multe dovezi decât poate oferi anunțul.",
             "După livrare, măsoară și probează produsul, apoi notează rezultatul folosind același sistem de referință. Notează dacă tabelul a fost util, dacă haina aleasă pentru comparație a fost adecvată și ce dimensiune a contat cel mai mult. Separă preferința personală de o concluzie universală despre mărimile vânzătorului. După mai multe achiziții, creezi astfel o evidență practică a potrivirii bazată pe propria experiență. Este mai sigură decât aplicarea repetată a sfaturilor de a lua o mărime mai mare sau mai mică fără cunoașterea produsului, tabelului sau persoanei care îl poartă."
           ]
+        },
+        {
+          "heading": "Compară măsurători cu aceleași puncte de referință",
+          "paragraphs": [
+            "Pentru haine, notează dacă tabelul arată lățimea piesei întinse, circumferința completă sau o măsură corporală recomandată. Aceste mărimi nu trebuie comparate direct. Folosește începutul și sfârșitul din diagramă pentru corp și mânecă, mai ales la umeri căzuți sau mâneci raglan. Măsoară o haină confortabilă de referință în același mod, fără întindere, și notează unitatea fiecărei valori.",
+            "Pentru încălțăminte, distinge lungimea piciorului, a branțului și a tălpii exterioare. O fotografie a tălpii nu arată spațiul interior utilizabil. Măsoară ambele picioare consecvent și ia în calcul șosetele sau branțurile dorite. Eticheta de mărime identifică o opțiune a anunțului, nu promite universal potrivirea. Cere dimensiunea relevantă în loc să alegi mereu un număr mai mare sau mai mic."
+          ]
+        },
+        {
+          "heading": "Folosește măsurarea în depozit pentru decizie",
+          "paragraphs": [
+            "Înainte de a cere o măsurătoare suplimentară, stabilește ce rezultat te-ar face să păstrezi produsul sau să întrebi despre retur. Cere o riglă vizibilă și capete clare când serviciul este disponibil și confirmă orice taxă. Compară rezultatul cu tabelul original prin aceeași metodă. Dacă fotografia este ambiguă, cere clarificare în loc să interpretezi perspectiva ca defect confirmat.",
+            "Păstrează măsurătoarea lângă mărimea aleasă și referința comenzii. Dacă accepți diferența, notează de ce rămâne potrivită pentru stilul dorit. Dacă o respingi, descrie neconcordanța exactă prin suportul oficial cât timp produsul este în depozit. După livrare, notează potrivirea reală pentru decizii viitoare privind acel produs, fără să presupui că toate produsele au aceeași mărime."
+          ]
         }
       ],
       "takeaways": [
@@ -964,7 +1081,283 @@
       "sourceIds": [
         "buyforme",
         "expertbuy"
-      ]
+      ],
+      "reviewedAt": "2026-10-30"
+    },
+    {
+      "id": "shipping-usa",
+      "slug": "cssbuy-shipping-to-usa",
+      "title": "Transport CSSBuy către SUA: costuri, urmărire și pregătirea coletului",
+      "description": "Planifică un colet CSSBuy către SUA: compară ofertele actuale, verifică dimensiunile, pregătește adresa și urmărește etapele livrării.",
+      "category": "Transport",
+      "keywords": [
+        "cssbuy shipping to usa",
+        "cssbuy shipping cost usa",
+        "cssbuy usa tracking",
+        "cssbuy shipping calculator"
+      ],
+      "intro": "Transportul unui ordin CSSBuy către Statele Unite începe înainte de alegerea unei linii internaționale. Produsele trebuie să ajungă în depozit, să corespundă comenzii, să fie acceptate pe o rută și să se încadreze în bugetul complet. Întrebarea utilă nu este ce linie este mereu cea mai ieftină, ci ce linie disponibilă acum acceptă coletul și destinația ta. Ghidul explică o comparație practică fără a promite un preț sau o dată fixă. Ține deschise calculatorul oficial CSSBuy și contul lângă lista de produse; condițiile actuale și măsurătorile finale determină opțiunile reale.",
+      "sections": [
+        {
+          "heading": "Separă cumpărarea de transportul internațional",
+          "paragraphs": [
+            "Ghidul oficial CSSBuy separă comandarea produselor de depunerea unui colet din depozit. Mai întâi furnizezi linkul produsului și opțiunile necesare. Etapa cumpărării acoperă produsele și livrarea aplicabilă în China. După sosire, verifici informațiile și fotografiile din depozit înainte de organizarea transportului internațional. Plata produselor nu înseamnă că pachetul internațional a plecat deja.",
+            "Pentru o comandă către SUA, păstrează două evidențe simple: una pentru fiecare produs și una pentru coletul expediat. Prima identifică linkul, mărimea, culoarea, cantitatea și starea în depozit. A doua identifică articolele selectate, destinația, instrucțiunile de ambalare și ruta internațională. Separarea previne confundarea numărului intern al vânzătorului cu numărul livrării finale."
+          ]
+        },
+        {
+          "heading": "Introdu o destinație completă din Statele Unite",
+          "paragraphs": [
+            "Folosește țara și informațiile poștale cerute de calculator și formularul oficial. Confirmă numele destinatarului, strada, apartamentul sau unitatea, orașul, statul și codul ZIP înainte de plată. Verifică dacă ruta acceptă tipul adresei dorite; nu presupune că toate liniile deservesc orice adresă, teritoriu sau zonă îndepărtată în condiții identice.",
+            "Salvează adresa într-un format comparabil cu confirmarea coletului. Dacă formularul o împarte în mai multe câmpuri, verifică versiunea asamblată, nu doar fiecare căsuță. Un număr de apartament lipsă poate trece neobservat când te concentrezi pe preț. Nu distribui public adresa sau capturi ale urmăririi când ceri altor cumpărători păreri despre o rută."
+          ]
+        },
+        {
+          "heading": "Construiește estimarea din date corecte",
+          "paragraphs": [
+            "Deschide calculatorul oficial CSSBuy, alege Statele Unite și introdu greutatea și dimensiunile solicitate. Folosește măsurătorile depozitului dacă sunt disponibile. Înainte de sosire, etichetează greutățile și dimensiunile ca estimări, nu măsurători. Compară numai rute care acceptă categoria articolului și mărimea coletului. Prețul mic nu este o ofertă utilizabilă dacă ruta nu acceptă conținutul.",
+            "Notează data, destinația, greutatea, dimensiunile și ipotezele de ambalare lângă fiecare estimare. Vei înțelege astfel schimbarea unei oferte ulterioare. Compară întâi același colet între rute, apoi ambalaje diferite pe aceeași rută. Schimbarea simultană a greutății, destinației și ambalării face imposibilă identificarea economiei aparente."
+          ]
+        },
+        {
+          "heading": "Înțelege dimensiunile ambalate și greutatea taxabilă",
+          "paragraphs": [
+            "Transportul internațional poate lua în calcul spațiul ocupat, nu doar greutatea de pe cântar. CSSBuy descrie vidarea ca metodă de reducere a volumului hainelor potrivite. Asta nu face compresia adecvată pentru orice produs. Încălțămintea, accesoriile structurate și obiectele fragile necesită o decizie bazată pe formă și protecție, nu exclusiv pe estimarea minimă.",
+            "Ca exemplu, un colet de 40 × 30 × 25 centimetri are 30.000 de centimetri cubi. Dacă o anumită rută specifică un divizor de 6.000, rezultă 5 kilograme de greutate volumetrică. Acesta este un exemplu de calcul, nu o afirmație că toate rutele către SUA folosesc acel divizor. Citește regula efectivă și rotunjirea liniei alese înainte de comparația cu greutatea măsurată."
+          ]
+        },
+        {
+          "heading": "Compară costul complet al aceluiași colet",
+          "paragraphs": [
+            "Separă prețul produselor, transportul intern, comisionul de cumpărare, transportul internațional și serviciile de ambalare alese. Pagina oficială de taxe CSSBuy explică faptul că achiziția și transportul sunt componente diferite. Taxele de plată, conversia valutară și taxele la destinație trebuie verificate acolo unde se aplică, nu presupuse incluse în oferta principală.",
+            "Stabilește cheltuiala totală maximă înainte de servicii suplimentare. Dacă două rute eligibile diferă ca preț, compară estimarea declarată, restricțiile, acoperirea urmăririi și condițiile de protecție afișate în cont. O rută mai scumpă poate corespunde unui termen, însă o estimare mai rapidă a transportului nu include timpul deja petrecut așteptând vânzătorul sau verificările depozitului."
+          ]
+        },
+        {
+          "heading": "Finalizează controlul calității înainte de consolidare",
+          "paragraphs": [
+            "Verifică fotografiile reale din depozit pentru fiecare produs selectat. Confirmă cantitatea, culoarea, eticheta și măsurile importante pentru potrivire. Dacă un detaliu relevant lipsește, cere clarificări înainte de ambalarea comună. Controlul general nu stabilește autenticitatea, compoziția, durabilitatea sau potrivirea perfectă; acestea necesită dovezi pe care fotografia poate să nu le ofere.",
+            "Grupează produse compatibile și scrie instrucțiuni precise. De exemplu, identifică ce cutii de încălțăminte păstrezi și ce haină poate fi pliată mai compact. Nu elimina informații necesare returului sau evidenței corecte doar pentru reducerea volumului. Rezolvă un eventual retur înainte de includerea în coletul internațional, fiindcă opțiunile se schimbă după ieșirea din depozit."
+          ]
+        },
+        {
+          "heading": "Verifică confirmarea finală a coletului",
+          "paragraphs": [
+            "Coletul ambalat poate diferi de estimare deoarece materialele de protecție adaugă greutate și schimbă dimensiunile. Verifică din nou greutatea măsurată, dimensiunile, produsele și ruta pe ecranul de confirmare. Dacă suma diferă, compară mai întâi măsurătorile și serviciile incluse. Cere CSSBuy explicații pentru orice diferență neclară înainte de autorizarea expedierii.",
+            "Păstrează confirmarea, plata și instrucțiunile împreună. Folosește descrieri și valori corecte când procesul le solicită și verifică cerințele oficiale aplicabile destinației. Acest ghid nu promite un prag fără taxe sau un rezultat vamal garantat. Nu trata o captură veche de forum ca regulă actuală pentru o livrare în SUA."
+          ]
+        },
+        {
+          "heading": "Urmărește coletul în etape distincte",
+          "paragraphs": [
+            "Separă procesarea în depozit, predarea transportatorului, transportul internațional, procesarea la destinație și livrarea finală. Un număr poate exista înainte ca transportatorul să înregistreze predarea fizică. Citește data, locul și formularea ultimului eveniment înainte să concluzionezi că pachetul s-a oprit. Folosește informațiile din contul CSSBuy și transportatorul identificat pentru expediție.",
+            "Când o actualizare pare întârziată, adună numărul coletului, data expedierii, numele rutei și ultimul status vizibil. Trimite-le privat prin canalul oficial și descrie etapa lipsă. Evită mai multe solicitări fără legătură și cu explicații diferite. Un istoric concis ajută suportul să distingă între o problemă de depozit, o scanare întârziată și o problemă de adresă."
+          ]
+        },
+        {
+          "heading": "Simplifică planificarea următoarei livrări în SUA",
+          "paragraphs": [
+            "După livrare, notează greutatea, dimensiunile, durata reală și toate taxele plătite. Inspectează ambalajul și fotografiază daunele înainte de eliminarea lui. Compară produsele cu evidența și folosește prompt suportul oficial dacă ceva nu este corect. O livrare este un reper personal util, dar nu garantează rezultatul altei rute sau altei perioade.",
+            "La următoarea cumpărare reutilizează lista, fără să presupui repetarea prețului. Verifică din nou calculatorul, starea depozitării fiecărui produs și disponibilitatea liniei preferate. Economisirea cea mai sigură vine din evitarea achizițiilor nepotrivite, a volumului inutil și a adresei incomplete înainte de depunerea coletului."
+          ]
+        }
+      ],
+      "takeaways": [
+        "Compară rutele către SUA folosind aceeași destinație, conținut și măsurători ambalate.",
+        "Finalizează QC și deciziile de ambalare înainte de depunerea coletului internațional.",
+        "Separă estimările de sumele finale și urmărește distinct etapele depozitului și transportatorului."
+      ],
+      "sourceIds": [
+        "buyforme",
+        "estimates",
+        "fees",
+        "shipforme"
+      ],
+      "reviewedAt": "2026-10-30"
+    },
+    {
+      "id": "shoes-spreadsheet",
+      "slug": "cssbuy-shoes-spreadsheet",
+      "title": "Tabel de încălțăminte CSSBuy: mărimi, QC și ghid de cumpărare",
+      "description": "Compară linkuri reale de încălțăminte CSSBuy, verifică măsuri și fotografii din depozit și planifică ambalarea cutiilor.",
+      "category": "Ghiduri de produse",
+      "keywords": [
+        "cssbuy shoes spreadsheet",
+        "cssbuy sneakers",
+        "cssbuy shoe size",
+        "cssbuy shoes qc"
+      ],
+      "intro": "Un tabel de încălțăminte CSSBuy este util când te ajută să alegi între perechi concrete, nu să aduni o listă nesfârșită de linkuri. O fotografie frumoasă și o mărime familiară sunt doar începutul. Mai ai nevoie de o evidență clară a opțiunii, de metoda de măsurare, de fotografiile perechii primite și de o decizie de ambalare. Ghidul oferă un proces repetabil de comparare și control înainte de expedierea internațională. Directorul este un instrument de descoperire; afirmațiile vânzătorului, disponibilitatea și varianta exactă trebuie verificate în oferta legată și în comanda CSSBuy.",
+      "sections": [
+        {
+          "heading": "Începe cu utilizarea dorită a încălțămintei",
+          "paragraphs": [
+            "Notează cum vei folosi perechea, potrivirea preferată și bugetul maxim complet. Purtarea zilnică, spațiul pentru o talonetă și utilizarea pe vreme umedă creează cerințe diferite. Fotografia nu stabilește siguranța specializată, performanța sportivă sau durabilitatea. Dacă o cerință depinde de material ori construcție, identifică dovada necesară înainte de cheltuială.",
+            "Păstrează o listă scurtă cu doi sau trei candidați. Notează linkul, culoarea, informațiile de mărime, prețul și întrebările rămase. Nu clasa o pereche doar fiindcă miniatura pare mai clară. Câmpurile consecvente fac mai ușoară eliminarea variantelor nepotrivite și explicarea unei întrebări precise agentului de cumpărare."
+          ]
+        },
+        {
+          "heading": "Verifică oferta exactă din spatele cardului",
+          "paragraphs": [
+            "Deschide detaliile produsului și examinează imaginile vânzătorului și anunțul original. Confirmă că prețul afișat se aplică mărimii, culorii și versiunii dorite. Un card poate rezuma o ofertă, dar nu poate garanta disponibilitatea fiecărei opțiuni. Păstrează linkul exact pentru ca o fotografie similară să nu te ducă ulterior la alt anunț.",
+            "Folosește destinația de cumpărare CSSBuy pentru a revedea varianta înainte de comandă. Dacă linkul nu poate fi recunoscut sau opțiunile sunt neclare, apelează la asistența oficială. Nu înlocui identificatorul produsului din marketplace cu numărul intern al catalogului. Un link corect și o cerere explicită de mărime sunt mai utile decât instrucțiunea vagă de a cumpăra perechea dintr-o captură."
+          ]
+        },
+        {
+          "heading": "Măsoară înainte să alegi eticheta mărimii",
+          "paragraphs": [
+            "Măsoară ambele picioare prin aceeași metodă și notează unitatea. Compară cu instrucțiunile ofertei respective, ținând cont de definiția măsurării vânzătorului. Lungimea piciorului, a branțului și a tălpii exterioare sunt lucruri diferite. Talpa exterioară nu reprezintă lungimea interioară utilizabilă, iar mărimea europeană imprimată nu dovedește potrivirea identică între modele.",
+            "Folosește o pereche confortabilă existentă drept reper suplimentar când poți face măsurători comparabile. Notează efectul șosetelor, branțurilor sau preferinței pentru spațiu. Evită reguli universale precum alegerea mereu a unei mărimi mai mari. Dacă lipsește dimensiunea decisivă, cere clarificare sau alege o ofertă mai bine documentată."
+          ]
+        },
+        {
+          "heading": "Transformă lista într-o cerere clară de cumpărare",
+          "paragraphs": [
+            "Pentru fiecare pereche, scrie URL-ul, culoarea, eticheta mărimii, cantitatea și măsurătoarea pe care te bazezi. Dacă platforma permite note, descrie concret cerința. O solicitare pentru eticheta vizibilă sau o lungime precisă este mai ușor de realizat decât cererea generică pentru cea mai bună calitate. Confirmă serviciul și costul înainte de muncă suplimentară.",
+            "Verifică rezumatul după depunere. Dacă opțiunea nu este disponibilă, tratează înlocuitorul ca decizie nouă, fără acceptare automată. Altă culoare sau mărime poate însemna alte materiale ori dimensiuni. Păstrează cererea inițială și modificările aprobate împreună, astfel încât controlul din depozit să aibă un reper clar."
+          ]
+        },
+        {
+          "heading": "Deosebește fotografiile vânzătorului de QC din depozit",
+          "paragraphs": [
+            "Fotografiile catalogului aparțin prezentării anunțului. Nu dovedesc starea perechii primite. Imaginile QC din depozit corespund bunurilor sosite pentru comanda ta și se compară cu varianta selectată. Site-ul nostru nu oferă momentan o căutare QC conectată independent, așadar folosește fotografiile și suportul disponibile în contul CSSBuy.",
+            "CSSBuy descrie inspecția ca verificare generală. Imaginile ajută la identificarea diferențelor vizibile, a componentelor lipsă sau a unei etichete greșite, dar nu certifică autenticitatea, durabilitatea sau confortul. Consideră fotografia neclară o informație lipsă. Cere unghiul necesar în loc să interpretezi o umbră ori reflexie ca defect confirmat."
+          ]
+        },
+        {
+          "heading": "Inspectează perechea într-o ordine consecventă",
+          "paragraphs": [
+            "Începe cu identitatea: doi pantofi, culoarea dorită, etichete de mărime corespunzătoare și accesorii incluse. Compară apoi stânga și dreapta din unghiuri similare. Examinează cusăturile vizibile, marginile tălpii, închiderile și căptușeala pentru probleme observabile. Lumina și perspectiva pot face o parte să pară diferită, deci nu concluziona doar din cadre nepotrivite.",
+            "Verifică apoi dimensiunea care a determinat mărimea. Cere o riglă poziționată clar dacă serviciul permite. Precizează exact începutul și sfârșitul măsurării. În final, compară discrepanța cu ordinul original. Separă nepotrivirea certă, precum eticheta greșită, de preferința subiectivă pe care vânzătorul poate să nu o considere defect."
+          ]
+        },
+        {
+          "heading": "Decide dacă păstrezi, clarifici sau soliciți retur",
+          "paragraphs": [
+            "Folosește trei categorii. Păstrează perechea când detaliile necesare corespund și incertitudinea rămasă este acceptabilă. Cere clarificare când o imagine ori măsurătoare lipsă poate schimba decizia. Începe o cerere de retur pentru o neconcordanță documentată sau alt motiv pe care vrei să-l analizeze vânzătorul. Verifică termenele și condițiile prin CSSBuy și vânzător.",
+            "Descrie problema cu referința comenzii și o comparație scurtă între opțiunea cerută și ce a sosit. Atașează dovezile prin procedura oficială. Nu combina îngrijorări fără legătură într-o cerere de rambursare garantată. Păstrează încălțămintea și ambalajul intacte cât timp se analizează returul și nu le include în colet internațional înainte de rezolvare."
+          ]
+        },
+        {
+          "heading": "Alege cutia ținând cont de întregul colet",
+          "paragraphs": [
+            "Cutia comercială ocupă spațiu, dar poate păstra forma, proteja accesorii sau conta la retur. Decide dacă ai nevoie de ea înainte să ceri schimbarea ambalării. Dacă o elimini, ia în calcul protejarea perechii împotriva comprimării și mișcării. Nu presupune că eliminarea ambalajului reduce mereu costul final; regulile de greutate și volum ale rutei decid.",
+            "Compară dimensiunile și greutatea coletului complet, nu multiplica o greutate ghicită cu numărul perechilor. Încălțămintea combinată cu haine se poate așeza diferit față de mai multe perechi în cutii. Folosește calculatorul oficial cu destinația și condițiile reale, apoi reevaluează când depozitul are măsurătorile finale."
+          ]
+        },
+        {
+          "heading": "Notează rezultatul în loc să repeți presupunerile",
+          "paragraphs": [
+            "După livrare, probează în interior pe o suprafață curată în timpul verificării. Notează mărimea, măsurătorile relevante și potrivirea față de perechea de referință. Păstrează fotografiile problemelor și ambalajul până știi dacă ai nevoie de suport. O comandă reușită nu dovedește că alt anunț cu fotografie similară va fi identic.",
+            "Actualizează lista cu informațiile cu adevărat utile: un tabel fiabil, o măsurare clară din depozit sau o ambalare care a protejat perechea. Elimină presupunerile greșite. În timp, o evidență mică de decizii măsurate este mai folositoare decât un tabel uriaș de linkuri neexplicate și evaluări copiate de la alți cumpărători."
+          ]
+        }
+      ],
+      "takeaways": [
+        "Verifică varianta exactă și metoda de măsurare a vânzătorului înainte de comandă.",
+        "Folosește propriile fotografii din depozit pentru QC; imaginile catalogului nu verifică perechea primită.",
+        "Rezolvă retururile înainte de transport și compară cutiile după măsurătorile finale ale coletului."
+      ],
+      "sourceIds": [
+        "buyforme",
+        "expertbuy",
+        "shipforme",
+        "estimates",
+        "returns-policy"
+      ],
+      "reviewedAt": "2026-10-30"
+    },
+    {
+      "id": "hoodie-spreadsheet",
+      "slug": "cssbuy-hoodie-spreadsheet",
+      "title": "Tabel de hanorace CSSBuy: măsurători, material și ghid QC",
+      "description": "Compară linkuri de hanorace CSSBuy folosind măsurători, informații despre material, fotografii din depozit și verificări de ambalare.",
+      "category": "Ghiduri de produse",
+      "keywords": [
+        "cssbuy hoodie spreadsheet",
+        "cssbuy hoodies",
+        "cssbuy hoodie sizing",
+        "cssbuy hoodie qc"
+      ],
+      "intro": "Un tabel de hanorace CSSBuy ar trebui să răspundă la întrebări practice: haina va avea potrivirea dorită, oferta explică materialul și poți verifica produsul primit înainte de transport? O literă de mărime și o fotografie frontală rareori răspund tuturor. Începe din categoria hanorace și pulovere, apoi compară exact opțiunile și măsurile. Ghidul arată cum construiești o listă utilă, ceri dovezi clare și iei în calcul efectul hainelor voluminoase asupra coletului. Nu clasifică produse netestate și nu descrie fotografiile vânzătorului ca QC verificat din depozit.",
+      "sections": [
+        {
+          "heading": "Definește potrivirea înainte de căutare",
+          "paragraphs": [
+            "Alege un hanorac pe care îl porți confortabil și decide ce ai schimba. Poate vrei corp mai lung, piept mai larg, mâneci mai scurte sau spațiu pentru o cămașă. Exprimă preferințele în măsurători când este posibil. Termeni precum oversized, lejer și regulat descriu o intenție, nu o măsură consecventă între vânzători sau mărci.",
+            "Gândește-te la sezon și la straturile purtate. O fotografie cu aspect greu nu dovedește căldura, iar gluga groasă nu stabilește greutatea întregii haine. Separă bugetul de lista stilistică, pentru ca designul atrăgător să nu ascundă lipsa datelor despre potrivire sau un cost internațional neanalizat."
+          ]
+        },
+        {
+          "heading": "Compară oferte exacte de hanorace",
+          "paragraphs": [
+            "Deschide fiecare produs candidat și notează linkul, culoarea, gama mărimilor și versiunea aleasă. Verifică dacă anunțul combină haine sau materiale diferite sub același preț de pornire. Caută tabelul și descrierea țesăturii și confirmă aplicarea la opțiunea dorită. Miniatura este o invitație la verificare, nu o fișă tehnică.",
+            "Limitează comparația la câțiva candidați cu informații suficiente. Dacă două oferte au imagini similare, nu presupune că produsele provin din aceeași sursă sau au aceleași dimensiuni. Păstrează întrebarea nerezolvată lângă candidat, fără completarea ei din recenzia altui produs. Lista cea mai utilă este cea pe care o poți explica clar înainte de cumpărare."
+          ]
+        },
+        {
+          "heading": "Măsoară consecvent o haină de referință",
+          "paragraphs": [
+            "Așază hanoracul de referință întins, fără să-l tragi. Notează lățimea pieptului dintr-o parte în alta, lungimea corpului dintr-un punct identificat, lungimea mânecii și lățimea umerilor când construcția permite comparația. Notează umărul căzut ori mâneca raglan, fiindcă o mânecă măsurată de la cusătura umărului nu se compară direct cu una măsurată de la gât.",
+            "Urmează diagrama vânzătorului, nu impune altă convenție. De exemplu, lățimea pieptului de 60 de centimetri pe plat descrie altceva decât circumferința de 60 de centimetri. Dublarea lățimii poate explica geometria, dar nu transformă măsura hainei într-o recomandare garantată pentru corp. Lasă loc lejerității dorite și toleranței declarate de vânzător."
+          ]
+        },
+        {
+          "heading": "Citește afirmațiile despre material fără presupuneri",
+          "paragraphs": [
+            "Verifică compoziția, descrierea căptușelii și îngrijirea, dacă sunt oferite. Greutatea materialului în grame pe metru pătrat nu este greutatea hanoracului final. Fotografia nu verifică fiabil procentul de bumbac, densitatea ori rezistența la micșorare. Dacă aceste proprietăți contează, caută informații scrise și identifică ce rămâne neverificat.",
+            "Evită să prevezi o micșorare fixă din aspect. Materiale, finisaje și metode de spălare diferite pot avea rezultate diferite. Păstrează instrucțiunile de îngrijire cu evidența comenzii dacă există. Dacă lipsesc, evaluează efectul lipsei asupra dorinței de cumpărare, în loc să inventezi un răspuns convenabil din descrierea altui vânzător."
+          ]
+        },
+        {
+          "heading": "Plasează o comandă care poate fi verificată",
+          "paragraphs": [
+            "Salvează culoarea și eticheta exactă a mărimii împreună cu tabelul folosit. Dacă sunt disponibile note, descrie verificarea concretă care te-ar ajuta să păstrezi sau nu haina. Cererea de a arăta eticheta și a măsura lățimea pieptului este mai clară decât solicitarea de a confirma că hanoracul vine bine. Verifică disponibilitatea serviciului și costul suplimentar.",
+            "Analizează înlocuirile înainte de aprobare. Altă mărime, culoare sau versiune poate folosi alt tabel, iar opțiunea revizuită merită aceeași atenție ca cea inițială. Păstrează confirmarea scrisă a schimbării pentru compararea produsului primit cu instrucțiunea finală, nu cu o captură învechită."
+          ]
+        },
+        {
+          "heading": "Folosește fotografii de depozit pentru verificări vizibile",
+          "paragraphs": [
+            "Compară culoarea, eticheta, poziția modelului și componentele primite cu comanda. Examinează gluga, manșetele, tivul, buzunarele și închiderea, dacă există. Caută o deschidere sau nepotrivire evidentă în cusăturile vizibile, ținând cont de lumină, pliuri și perspectivă. Cere o imagine mai clară dacă fotografia nu rezolvă o preocupare importantă.",
+            "Imaginile catalogului vânzătorului sunt diferite de fotografiile tale QC. CSSBuy descrie controlul ca general, iar nici oferta atrăgătoare, nici imaginea clară nu garantează compoziția sau durabilitatea. Directorul nostru nu are momentan un instrument QC conectat. Folosește dovezile din contul CSSBuy și trimite cererile prin fluxul oficial al comenzii."
+          ]
+        },
+        {
+          "heading": "Verifică dimensiunile care influențează decizia",
+          "paragraphs": [
+            "Dacă depozitul poate măsura, cere metoda din tabel sau explică punctele clar. Compară mărimi echivalente: lățime pe plat cu lățime pe plat, lungime de la același punct și mânecă cu aceeași referință constructivă. Banda fotografiată oblic poate fi greu de citit, așa că cere clarificări înainte să consideri decisivă o mică diferență aparentă.",
+            "Stabilește dinainte diferențele acceptabile. O schimbare modestă de lungime poate conta mai mult decât lățimea în plus, în funcție de potrivirea dorită. Separă mărimea clar greșită de incertitudinea preferinței personale. Dacă dorești retur, verifică prompt condițiile actuale și exclude haina din coletul internațional cât timp solicitarea se analizează."
+          ]
+        },
+        {
+          "heading": "Planifică ambalarea după volum și protecție",
+          "paragraphs": [
+            "Hanoracele pot ocupa mult spațiu, mai ales când coletul include mai multe haine groase. CSSBuy descrie vidarea hainelor potrivite, însă adecvarea depinde de produs și detalii. Ia în calcul imprimeurile, decorațiunile structurate și accesoriile înainte de compresie. Nu presupune că pachetul minim oferă mereu protecția optimă.",
+            "Compară greutatea și dimensiunile finale în calculatorul oficial. Separă prețurile produselor de transport și verifică regulile reale ale greutății taxabile. Dacă alături încălțăminte sau obiecte fragile, cere ambalare care protejează formele diferite. Verifică oferta după ambalare, deoarece o estimare bazată doar pe greutatea hainelor nu descrie coletul finit."
+          ]
+        },
+        {
+          "heading": "Transformă livrarea într-o evidență utilă a potrivirii",
+          "paragraphs": [
+            "La sosire, compară haina cu ordinul și măsurătorile de referință înainte de eliminarea informațiilor utile suportului. Fotografiază problema și păstrează ambalajul dacă există o dificultate de livrare. Respectă instrucțiunile disponibile, fără să presupui că toate hanoracele se spală și se usucă identic. Concentrează solicitarea pe diferența observabilă.",
+            "Notează mărimea aleasă, măsurile pe plat, potrivirea preferată și schimbările după îngrijirea normală. Aceste note ajută la o comandă viitoare a aceluiași articol verificat, dar nu stabilesc mărimile tuturor hanoracelor din director. Evidența personală măsurată susține cumpărarea deliberată și reduce dependența de recomandări generale de alegere a unui număr mai mare sau mai mic."
+          ]
+        }
+      ],
+      "takeaways": [
+        "Compară măsurile hainei întinse folosind aceeași metodă ca tabelul vânzătorului.",
+        "Tratează compoziția și greutatea țesăturii ca afirmații de verificat, nu ca fapte demonstrate prin fotografii.",
+        "Verifică hanoracul primit înainte de consolidare și estimează transportul cu dimensiunile ambalate."
+      ],
+      "sourceIds": [
+        "buyforme",
+        "expertbuy",
+        "shipforme",
+        "estimates",
+        "returns-policy"
+      ],
+      "reviewedAt": "2026-10-30"
     }
   ],
   "sources": [
@@ -972,7 +1365,7 @@
       "id": "buyforme",
       "title": "CSSBuy — Buy For Me: procesul oficial de cumpărare",
       "url": "https://m.cssbuy.com/buyforme",
-      "accessedAt": "2026-10-23"
+      "accessedAt": "2026-10-30"
     },
     {
       "id": "expertbuy",
@@ -990,13 +1383,13 @@
       "id": "shipforme",
       "title": "CSSBuy — Ship For Me: servicii de consolidare și ambalare",
       "url": "https://m.cssbuy.com/shipforme",
-      "accessedAt": "2026-10-23"
+      "accessedAt": "2026-10-30"
     },
     {
       "id": "fees",
       "title": "Centrul de asistență CSSBuy — Costuri și comisioane",
       "url": "https://www.cssbuy.com/shop/helpCenter?id=12",
-      "accessedAt": "2026-10-23"
+      "accessedAt": "2026-10-30"
     },
     {
       "id": "storage",
@@ -1013,12 +1406,12 @@
     {
       "id": "estimates",
       "title": "CSSBuy — Calculatorul costurilor de transport",
-      "url": "https://new.cssbuy.com/estimates",
-      "accessedAt": "2026-10-23"
+      "url": "https://www.cssbuy.com/estimates",
+      "accessedAt": "2026-10-30"
     },
     {
       "id": "catalog",
-      "title": "cnfansge.com — Sursa catalogului de produse",
+      "title": "Catalog de produse",
       "url": "https://cnfansge.com/",
       "accessedAt": "2026-10-23"
     },

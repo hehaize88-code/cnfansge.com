@@ -26,8 +26,8 @@
     },
     {
       "id": "data",
-      "q": "Odkiaľ pochádzajú produkty a fotografie ponúk?",
-      "a": "Katalóg produktov a galérie predajcov pochádzajú z cnfansge.com. CSSBuy SH nevedie samostatnú databázu produktov ani nevytvára ich obrázky. Vybranú ponuku potvrď po otvorení jej nákupnej destinácie.",
+      "q": "Odkiaľ pochádzajú výrobky a fotografie ponúk?",
+      "a": "Katalóg obsahuje prepojené ponuky a galérie predajcov. CSSBuy SH nevedie samostatnú produktovú databázu ani nevyrába fotografie výrobkov. Vybranú ponuku potvrďte po otvorení jej nákupného cieľa.",
       "sourceIds": [
         "catalog",
         "project"
@@ -35,8 +35,8 @@
     },
     {
       "id": "qc",
-      "q": "Sú fotografie produktov overenými fotografiami kontroly kvality CSSBuy?",
-      "a": "Galérie predajcov sa nemajú považovať za skladovú kontrolu kvality. Overená fotografia kontroly kvality konkrétnej objednávky musí byť spojená s prijatým produktom. Táto ukážka neoznačuje obrázky predajcov cnfansge za overené dôkazy kontroly CSSBuy.",
+      "q": "Sú produktové fotografie overenými QC snímkami CSSBuy?",
+      "a": "Galérie predajcov nemožno považovať za skladové QC. Overená QC fotografia konkrétnej objednávky musí súvisieť s prijatou položkou. Tento web neoznačuje snímky predajcov za overený dôkaz kontroly CSSBuy.",
       "sourceIds": [
         "catalog",
         "project"
@@ -62,8 +62,8 @@
     },
     {
       "id": "weidian-link",
-      "q": "Ktorý identifikátor patrí do nákupného odkazu Weidian?",
-      "a": "Použi pôvodný identifikátor produktu na trhovisku. Poskytnutý príklad je https://www.cssbuy.com/shop/goodsDetail?type=micro&id=7755101935. Číslo záznamu katalógu cnfansge nenahrádza tento identifikátor trhoviska.",
+      "q": "Ktoré ID patrí do nákupného odkazu Weidian?",
+      "a": "Použite pôvodný identifikátor výrobku na trhovisku. Poskytnutý príklad je https://www.cssbuy.com/shop/goodsDetail?type=micro&id=7755101935. Interné číslo záznamu katalógu nenahrádza tento identifikátor trhoviska.",
       "sourceIds": [
         "user-link"
       ]
@@ -245,7 +245,7 @@
         "ako používať cssbuy",
         "odkazy na produkty cssbuy"
       ],
-      "intro": "Užitočná tabuľka CSSBuy by ti mala pomôcť urobiť lepšie nákupné rozhodnutie, nielen vytvoriť dlhší nákupný zoznam. Adresár môže spojiť odkazy, názvy a ponukové ceny, ale dôležitá práca sa začína pri overovaní skutočného produktu za kartou. Tento sprievodca ukazuje, ako premeniť prezeranie na malý zdokumentovaný užší výber, ako oddeliť prezentáciu predajcu od dôkazov o vlastnej objednávke a ako rozhodnúť, či objav dáva zmysel aj po započítaní dopravy. CSSBuy SH je nezávislá stránka na objavovanie. Jej katalóg produktov pochádza z cnfansge.com; nákup a správa objednávok prebiehajú na CSSBuy.",
+      "intro": "Užitočný prehľad CSSBuy vám má pomôcť lepšie sa rozhodovať, nie iba predlžovať nákupný zoznam. Katalóg spája odkazy, názvy a ceny ponúk, ale podstatná práca začína kontrolou skutočného výrobku za kartou. Tento sprievodca ukazuje, ako z prehliadania vytvoriť stručný zdokumentovaný výber, ako odlíšiť prezentáciu predajcu od dôkazov o vlastnej objednávke a ako posúdiť, či sa nákup oplatí aj po započítaní dopravy. CSSBuy SH je nezávislý objavovací web. Nákup a správa objednávok prebiehajú na CSSBuy.",
       "sections": [
         {
           "heading": "Začni účelom a realistickým užším výberom",
@@ -258,7 +258,7 @@
           "heading": "Čítaj kartu produktu ako položku v registri",
           "paragraphs": [
             "Karta zhŕňa oveľa väčšiu ponuku. Jej názov môže byť skrátený, preložený alebo dodaný zdrojovým katalógom. Zobrazená cena môže opisovať jednu možnosť, nie každý variant. Tieto polia ber ako cestu k pôvodnej ponuke a potom porovnaj konkrétnu veľkosť, farbu, množstvo a verziu, ktorú chceš. Nízka začiatočná cena nestačí na spravodlivé porovnanie dvoch produktov, ak jeden obsahuje doplnok a druhý nie.",
-            "Na CSSBuy SH pochádzajú záznamy produktov a galérie predajcov z cnfansge.com. Obrázok predajcu ilustruje ponuku; nedokazuje, že konkrétny skladový produkt prešiel kontrolou. Ak stránka neposkytuje funkčnú možnosť alebo overený typ fotografie, nevyvodzuj ich existenciu z atraktívneho označenia. Prejdi cez dostupný odkaz produktu a over, čo je skutočne zobrazené, skôr než kartu budeš považovať za dôkaz."
+            "Katalóg CSSBuy SH obsahuje záznamy výrobkov a galérie predajcov. Fotografia predajcu ilustruje ponuku; nedokazuje kontrolu konkrétneho kusu v sklade. Ak web nemôže poskytnúť funkčnú službu alebo overený typ fotografie, nevyvodzujte ich existenciu z atraktívneho označenia. Otvorte dostupný produktový odkaz a overte skutočne zobrazené údaje skôr, než kartu považujete za dôkaz."
           ]
         },
         {
@@ -302,6 +302,12 @@
             "Po doručení produktu pridaj do vlastného užšieho výberu stručný výsledok: prijatú možnosť, skutočné prispôsobenie, čo fotografie vynechali a či by si ho vybral znova. Subjektívne dojmy oddeľ od merateľných faktov. „Pre mňa príliš krátke“ je užitočná osobná spätná väzba; „rukáv mal podľa mojej metódy 58 centimetrov“ je meranie, ktoré môže vyhodnotiť niekto iný. Ani jedno by sa nemalo stať univerzálnym tvrdením o každej budúcej objednávke z danej ponuky.",
             "Pred opätovným objednaním uložený odkaz over. Ponuky sa môžu meniť, predajcovia môžu pridávať nové možnosti a podrobnosti, na ktoré si sa naposledy spoliehal, už nemusia byť prítomné. Dobrá tabuľka je záznam rozhodnutí s dátumami, nie trvalá záruka. Časom je najcennejšie zachované uvažovanie: ktoré rozmery boli dôležité, ktoré otázky zabránili chybám a ktoré produkty naozaj splnili účel určený pred prezeraním."
           ]
+        },
+        {
+          "heading": "Zmeňte užší výber na ďalší užitočný krok",
+          "paragraphs": [
+            "Otvorte príslušnú kategóriu, porovnajte niekoľko konkrétnych ponúk a zapíšte si chýbajúce informácie, ktoré môžu zmeniť vaše rozhodnutie. V sprievodcovi veľkosťami nájdete postup merania, v sprievodcovi QC kontrolu prijatého tovaru a v sprievodcovi dopravou rozpočet celej zásielky. K poznámkam si uložte pôvodný odkaz, aby vás aktualizácia katalógu nepomýlila pri dvoch podobných ponukách. Uložený výrobok je len kandidát; pred zaplatením overte zvolený variant a dostupnosť v CSSBuy."
+          ]
         }
       ],
       "takeaways": [
@@ -313,7 +319,8 @@
         "buyforme",
         "expertbuy",
         "catalog"
-      ]
+      ],
+      "reviewedAt": "2026-10-30"
     },
     {
       "id": "weidian",
@@ -384,6 +391,12 @@
             "Po objednaní správneho produktu sa pôvodný odkaz stáva referenciou, nie miestom na správu transakcie. Čísla objednávok, platby, skladové rozhodnutia a sledovanie balíkov uchovávaj v oficiálnom účte. Objavovacia stránka nedokáže opraviť problém s odoslaním predajcu len preto, že poskytla prvý odkaz. Ak potrebuješ podporu, uveď oficiálny identifikátor objednávky a príslušné dôkazy.",
             "Po doručení porovnaj výsledok s uloženým opisom a zaznamenaj poučenia pre ďalší nákup. Možno boli názvy možností jasné, ale tabuľka veľkostí používala neznámu metódu merania. Možno balenie ovplyvnilo rozpočet doručenia viac, než si čakal. Také pozorovania sú užitočnejšie než označiť celé trhovisko za dobré či zlé na základe jednej objednávky. Starostlivý nákup na Weidian je rad malých overených rozhodnutí, od správneho identifikátora po produkt spĺňajúci stanovený účel."
           ]
+        },
+        {
+          "heading": "Skontrolujte objednávku pred potvrdením platby",
+          "paragraphs": [
+            "Porovnajte rozpoznaný výrobok s pôvodnou ponukou Weidian a overte farbu, veľkosť, množstvo aj poznámku k nákupu. Identifikátor výrobku na trhovisku nezamieňajte s interným číslom položky v tomto katalógu. Po nákupe používajte číslo objednávky CSSBuy pri otázkach o sklade a číslo balíka pri medzinárodnej doprave. Ak tovar nezodpovedá konečnému pokynu, zhromaždite fotografie a pred zaradením do zásielky sa informujte o možnostiach vrátenia."
+          ]
         }
       ],
       "takeaways": [
@@ -395,12 +408,13 @@
         "buyforme",
         "expertbuy",
         "user-link"
-      ]
+      ],
+      "reviewedAt": "2026-10-30"
     },
     {
       "id": "qc",
       "slug": "cssbuy-qc-photos-guide",
-      "title": "Fotografie kontroly kvality CSSBuy: praktický kontrolný zoznam",
+      "title": "QC fotografie CSSBuy: kontrola pred odoslaním alebo vrátením",
       "description": "Usporiadaný spôsob kontroly skladových fotografií, rozlišovania obrázkov predajcu a žiadania užitočných meraní pred odoslaním balíka.",
       "category": "Sklad a kontrola kvality",
       "keywords": [
@@ -409,7 +423,7 @@
         "kontrola kvality cssbuy",
         "skladové fotografie"
       ],
-      "intro": "Fotografie kontroly kvality sú najužitočnejšie, keď k nim pristupuješ s otázkou. Zodpovedá produkt objednanej možnosti? Sú prítomné potrebné doplnky? Je rozmer zlučiteľný s tvojimi potrebami? Samotné prelistovanie galérie a rozhodnutie, že produkt vyzerá dobre, môže prehliadnuť podrobnosti dôležité po doručení. Tento sprievodca vysvetľuje praktické poradie kontroly a hranice vizuálnych dôkazov. Oficiálne stránky služieb CSSBuy opisujú skladovú kontrolu a fotografie. CSSBuy SH nepovažuje galérie predajcov z cnfansge.com za overenú skladovú kontrolu kvality a karta produktu sa nikdy nemá čítať ako osvedčenie o kontrole.",
+      "intro": "Fotografie kontroly kvality sú najužitočnejšie, keď k nim pristupujete s otázkou. Zodpovedá položka objednanému variantu? Je prítomné požadované príslušenstvo? Vyhovuje rozmer vašim potrebám? Samotné prezretie galérie s dojmom, že výrobok vyzerá dobre, môže prehliadnuť detaily dôležité po doručení. Tento návod vysvetľuje praktické poradie kontroly a obmedzenia vizuálnych dôkazov. Oficiálne stránky CSSBuy opisujú skladovú kontrolu a fotografie. CSSBuy SH nepovažuje galérie predajcov za overené skladové QC a produktová karta nikdy nie je certifikátom kontroly.",
       "sections": [
         {
           "heading": "Urči, čí produkt a aký obrázok si prezeráš",
@@ -466,6 +480,12 @@
             "Vizuálna kontrola nedokáže preukázať dlhodobú odolnosť, vnútornú konštrukciu, bezpečnosť elektroniky ani pravosť. Upravený vzhľad nepotvrdzuje, že produkt spĺňa normy príslušné pre zamýšľané použitie. Pri produktoch, ktorých zlyhanie môže spôsobiť ujmu, hľadaj vhodnú dokumentáciu a odbornú radu namiesto spoliehania sa na skladovú galériu. Obrázok je dôkaz vzhľadu, nie náhrada skúšok.",
             "Po doručení porovnaj skúsenosť s tým, čo ukazovali fotografie. Ak bol problém neviditeľný, zaznač obmedzenie pre podobné nákupy. Ak žiadosť o meranie zabránila chybe veľkosti, metódu použi znova. Takáto spätná väzba zlepšuje budúce rozhodnutia bez predstierania, že kontrola odstráni všetku neistotu. Hodnota kontroly kvality je v kladení zodpovedateľných otázok vo vhodnom bode procesu a konaní podľa odpovedí skôr, než je produkt ťažšie vrátiť alebo prezrieť."
           ]
+        },
+        {
+          "heading": "Rozhodnite sa: ponechať, objasniť alebo vrátiť",
+          "paragraphs": [
+            "Tovar si ponechajte, ak zodpovedá vybranému variantu a potrebné kontroly sú v poriadku. Požiadajte o objasnenie, ak môže rozhodnutie zmeniť neviditeľný štítok, nejasný uhol alebo chýbajúci rozmer. Pri doloženom nesúlade či neprijateľnom probléme sa bezodkladne informujte o vrátení a platných podmienkach. CSSBuy opisuje skladovú kontrolu ako všeobecnú; fotografie neoverujú pravosť ani dlhodobú odolnosť. Rozhodnutie vyriešte pred výberom položky na medzinárodné odoslanie."
+          ]
         }
       ],
       "takeaways": [
@@ -477,7 +497,8 @@
         "buyforme",
         "shipforme",
         "catalog"
-      ]
+      ],
+      "reviewedAt": "2026-10-30"
     },
     {
       "id": "cost",
@@ -504,7 +525,7 @@
           "heading": "Odlišuj fyzickú hmotnosť od hmotnosti na určenie ceny trasy",
           "paragraphs": [
             "Balík má fyzickú hmotnosť, ale dopravca môže oceňovať aj priestor, ktorý zaberá. Príslušné pravidlá trasy určujú, ako sa merania menia na poplatok. Nepredpokladaj, že každá trasa používa rovnaký objemový deliteľ, krok zaokrúhlenia alebo porovnávacie pravidlo. Prečítaj aktuálnu kalkulačku a podrobnosti trasy a pravidlo uchovaj pri odhade.",
-            "Predstav si hypotetickú škatuľu s rozmermi 40 na 30 na 25 centimetrov. Jej objem je 30,000 kubických centimetrov. Pri ilustračnom deliteľovi 6,000 by zodpovedala objemovej hmotnosti 5 kilogramov; pri ilustračnom deliteľovi 5,000 by zodpovedala 6 kilogramom. Sú to matematické príklady, nie špecifikácie trás CSSBuy. Ukazujú, prečo skopírovanie deliteľa z nesúvisiaceho dopravného sprievodcu môže podstatne zmeniť rozpočet, aj keď fyzický balík zostane rovnaký."
+            "Predstav si hypotetickú škatuľu s rozmermi 40 na 30 na 25 centimetrov. Jej objem je 30 000 kubických centimetrov. Pri ilustračnom deliteľovi 6 000 by zodpovedala objemovej hmotnosti 5 kilogramov; pri ilustračnom deliteľovi 5,000 by zodpovedala 6 kilogramom. Sú to matematické príklady, nie špecifikácie trás CSSBuy. Ukazujú, prečo skopírovanie deliteľa z nesúvisiaceho dopravného sprievodcu môže podstatne zmeniť rozpočet, aj keď fyzický balík zostane rovnaký."
           ]
         },
         {
@@ -548,6 +569,12 @@
             "Konečnou skúškou je, či produkt dáva zmysel po zohľadnení celého rozpočtu doručenia. Lacný objemný produkt môže stáť po doručení viac než miestna alternatíva. Drahší kompaktný produkt môže priniesť iný výsledok. Zahrň hodnotu svojho času a praktickú náročnosť vrátenia, najmä ak prispôsobenie alebo vhodnosť zostávajú neisté.",
             "Po doručení si uchovaj rozmery balíka a náklady ako osobnú referenciu. Môžu zlepšiť ďalší odhad podobného balíka, ale stále majú byť datované a označené ako historické. Sadzby, trasy a balenia produktov sa môžu meniť. Najlepšia dopravná kalkulačka je preto súčasťou rozhodovacieho procesu: pomáha včas skúšať predpoklady, aktualizovať ich po zlepšení skladových informácií a zvoliť aktuálnu trasu podľa balíka, ktorý skutočne chceš poslať."
           ]
+        },
+        {
+          "heading": "Porovnávajte výsledky kalkulačky s rovnakými vstupmi",
+          "paragraphs": [
+            "Otvorte oficiálnu kalkulačku CSSBuy a vyberte skutočnú cieľovú krajinu. Ak sú dostupné, zadajte nameranú hmotnosť a rozmery zabaleného balíka a porovnajte vhodné trasy s rovnakým obsahom a spôsobom balenia. K odhadu si uložte dátum a vstupné hodnoty. Po zabalení nahraďte odhady konečnými rozmermi a znovu overte pravidlá účtovanej hmotnosti. Náklady na výrobky, vnútroštátnu dopravu, medzinárodné prepravné a doplnkové služby veďte oddelene, aby nízka cena trasy nevyzerala ako úplná cena doručenia."
+          ]
         }
       ],
       "takeaways": [
@@ -559,12 +586,13 @@
         "buyforme",
         "estimates",
         "shipforme"
-      ]
+      ],
+      "reviewedAt": "2026-10-30"
     },
     {
       "id": "time",
       "slug": "cssbuy-shipping-time",
-      "title": "Ako dlho trvá CSSBuy? Časový priebeh objednávky",
+      "title": "Čas dopravy CSSBuy: fázy objednávky, sledovanie a zdržania",
       "description": "Oddeľ odoslanie predajcom, skladové rozhodnutia, medzinárodnú prepravu a konečné doručenie, aby si lepšie plánoval a kládol otázky pri sledovaní.",
       "category": "Doprava",
       "keywords": [
@@ -616,6 +644,20 @@
             "Udržiavaj stručný denník s dátumom, potvrdenou fázou a vykonanými činnosťami. Stačí pár riadkov vo vlastných poznámkach. Oddeľ pozorované fakty od očakávaní: „skladové fotografie sú dostupné“ je fakt, zatiaľ čo „malo by odísť zajtra“ je očakávanie, pokiaľ ho oficiálny účet nepotvrdzuje. Toto rozlíšenie sprehľadňuje neskoršie otázky a pomáha vyhodnotiť, kam čas skutočne išiel.",
             "Po doručení zaznamenaj celý čas od objednávky k dverám aj medzinárodný prepravný čas, ak sú dostupné príslušné dátumy. Výsledok používaj ako historický príklad, nie predpoveď. Pri ďalšej objednávke môže byť najužitočnejším zlepšením skoršia reakcia na otázky alebo výber produktov s jasnejšou dostupnosťou, nie hľadanie trasy, ktorá raz podľa príbehu doručila najrýchlejšie. Dobré časové plánovanie sa sústreďuje na pochopiteľné fázy a rozhodnutia, ktoré môžeš urobiť."
           ]
+        },
+        {
+          "heading": "Určte miesto zdržania skôr, než sa spýtate na termín doručenia",
+          "paragraphs": [
+            "Začnite záznamom objednávky. Ak predajca tovar ešte neodoslal, otázka sa týka nákupu alebo dopravy v Číne. Ak je položka v sklade, skontrolujte, či sa nečaká na QC, riešenie vrátenia, pokyny na balenie alebo vašu platbu. Pri odovzdanom balíku overte, či dopravca zaznamenal fyzické prevzatie. Tieto etapy nemožno počítať, akoby bol balík celý čas v medzinárodnej preprave.",
+            "Zapíšte posledný dokončený krok a prvý krok, ktorý neviete potvrdiť. Fotografia príjmu v sklade napríklad odpovedá na inú otázku než záznam prevzatia dopravcom. Používajte dátumy vlastnej objednávky, nie dátum, keď iný kupujúci zverejnil snímku doručenia. Uvádzaný odhad prepravy je užitočný iba vtedy, keď poznáte etapu, ktorú opisuje, a viete, či sa do nej balík dostal."
+          ]
+        },
+        {
+          "heading": "Pripravte užitočnú žiadosť o pomoc so sledovaním",
+          "paragraphs": [
+            "Ak sledovanie nepribúda, pripravte číslo balíka, zvolenú linku, dátum odovzdania a poslednú viditeľnú udalosť s časom. Overte odkaz na sledovanie dopravcu uvedený v účte CSSBuy. Ak má balík neskôr ďalšie doručovacie číslo, uložte si obe čísla súkromne; nepredpokladajte, že prvé bude opisovať každú etapu. Adresu ani nezakrytý prepravný štítok nezverejňujte.",
+            "Podpore položte konkrétnu otázku: či balík prevzal dopravca, či platí iné sledovacie číslo alebo či treba opraviť adresu. Uveďte, čo ste už overili. Pôvodnú žiadosť a odpoveď uchovávajte spolu, aby ďalšia komunikácia vychádzala z rovnakých dôkazov. Chýbajúci záznam nie je dôvod znovu odovzdať alebo zaplatiť duplicitnú zásielku; najskôr potvrďte stav existujúceho balíka."
+          ]
         }
       ],
       "takeaways": [
@@ -626,12 +668,13 @@
       "sourceIds": [
         "buyforme",
         "storage"
-      ]
+      ],
+      "reviewedAt": "2026-10-30"
     },
     {
       "id": "warehouse",
       "slug": "cssbuy-warehouse-consolidation",
-      "title": "Skladovanie CSSBuy a konsolidácia balíkov",
+      "title": "Skladovanie CSSBuy: konsolidácia a kontrolný zoznam balíka",
       "description": "Plánuj skladovanie, prever produkty a premyslene spájaj balíky podľa skutočného tovaru, termínov a obmedzení trás.",
       "category": "Sklad a kontrola kvality",
       "keywords": [
@@ -683,6 +726,20 @@
             "Over, že každý vybraný produkt má dokončené rozhodnutie ponechať. Skontroluj doručovacie údaje, množstvá, baliace požiadavky a nevyriešené poznámky. Prečítaj dostupné možnosti dopravy pre skutočný tovar a cieľ. Ak má produkt otvorený rozhovor o vrátení, pred zaradením objasni stav. Záverečná kontrola má zosúladiť fyzický obsah s už prijatými rozhodnutiami.",
             "Ulož identifikátor balíka a voľby zobrazené v účte. Po odoslaní ponechaj inventár ako záznam toho, čo do balíka patrí. Po príchode ho použi na kontrolu obsahu a rýchle zdokumentovanie problému. Uzatvára to spojenie medzi jednotlivými objednávkami a doručeným balíkom. Dobre riadený skladový proces neurčuje počet spojených produktov, ale jasné rozhodnutia, vhodné balenie a balík, ktorého obsahu a nákladom rozumieš."
           ]
+        },
+        {
+          "heading": "Pred balením použite zoznam: ponechať, objasniť alebo vrátiť",
+          "paragraphs": [
+            "Pri každej skladovej položke zaznamenajte číslo objednávky, dátum prijatia, vybraný variant, výsledok QC a ďalší krok. Označenie ponechať použite až po kontrole detailov, ktoré by zmenili rozhodnutie. Označenie objasniť patrí položke, pri ktorej stále chýba dôležitý štítok, fotografia alebo rozmer. Žiadosť o vrátenie označte vtedy, keď chcete, aby predajca preveril doložený problém. Toto rozdelenie zabráni náhodnému výberu nevyriešenej položky do spoločného balíka.",
+            "V účte otvorte informácie o skladovaní každej položky a overte jej skutočný termín. Stránka prepravných služieb CSSBuy uvádza bezplatné skladovanie až 90 dní, stále však treba skontrolovať stav konkrétnej položky a aktuálne oznámenia. Termín nepočítajte odo dňa, keď ste výrobok prvýkrát našli. Ak potrebujete predĺženie, informujte sa o dostupnosti a cene ešte pred uvedeným termínom; nepredpokladajte, že nová objednávka spustí lehotu odznova."
+          ]
+        },
+        {
+          "heading": "Porovnajte dva plány balenia rovnakých položiek",
+          "paragraphs": [
+            "Prvý plán nech zachová potrebné obaly, druhý odstráni iba tie, ktoré môžete bezpečne vyhodiť. Pri oboch uveďte vybrané výrobky, potrebu ochrany a predpokladané rozmery balíka. Porovnanie musí používať rovnaký cieľ a podmienky trasy. Odstránenie predajnej škatule môže ušetriť miesto, ale aj ochranu či možnosť vrátenia; rozhodnite sa pred medzinárodným odoslaním a zachovajte potrebné údaje.",
+            "Keď budete mať konečné rozmery, nahraďte nimi odhady v rozpočte. Znovu skontrolujte hmotnostné, rozmerové a obsahové obmedzenia zvolenej linky. Väčší spoločný balík nemusí byť lacnejší než samostatné vhodné zásielky. Skutočné možnosti porovnajte cez oficiálnu kalkulačku a konečnú ponuku a uschovajte potvrdenie o obsahu balíka a zvolených službách."
+          ]
         }
       ],
       "takeaways": [
@@ -694,7 +751,8 @@
         "shipforme",
         "storage",
         "buyforme"
-      ]
+      ],
+      "reviewedAt": "2026-10-30"
     },
     {
       "id": "returns",
@@ -751,6 +809,20 @@
             "Po vyriešení zaznamenaj, čo by problému zabránilo. Možno boli názvy možností nejednoznačné, chýbal rozmer alebo doplnok z fotografie nebol vo vybranej ponuke. Poučenie premeň na konkrétnu prednákupnú kontrolu. Vyhni sa premene jedného výsledku na nepodložené tvrdenie, že každý predajca alebo objednávka sa zachová rovnako.",
             "Pri ďalších nákupoch uchovaj jasnejší opis zamýšľaného produktu a skladové dôkazy kontroluj krátko po sprístupnení. Dobre zdokumentovaný nákup nezaručí priaznivé rozhodnutie o vrátení, ale uľahčuje vysvetlenie nezhôd a pomáha konať, kým ešte môžu existovať možnosti. Najužitočnejšia stratégia vrátenia začína pred problémom: rozumej nákupu, uchovaj relevantné dôkazy a vedz, ktorý oficiálny rozhovor v účte patrí k transakcii."
           ]
+        },
+        {
+          "heading": "Pred medzinárodným odoslaním podajte žiadosť podloženú dôkazmi",
+          "paragraphs": [
+            "Porovnajte prijatý tovar s konečným pokynom objednávky: odkaz, veľkosť, farba, množstvo a schválená náhrada. Pozorovateľný nesúlad opíšte s príslušnou fotografiou alebo meraním. Vysvetlite, či žiadate objasnenie alebo chcete, aby sa CSSBuy obrátil na predajcu ohľadom vrátenia. Jasná žiadosť je užitočnejšia než všeobecné tvrdenie, že výrobok je zlý, najmä ak ide o osobnú preferenciu strihu a nie o nesprávny variant.",
+            "Počas posudzovania ponechajte obal, štítky a príslušenstvo. Overte aktuálne podmienky predajcu a platformy, lehotu a to, kto uhradí prípadné spätné prepravné. Nepredpokladajte, že skladová kontrola automaticky zaručuje prijatie každej vratky. Kým sa žiadosť nevyrieši, nevyberajte položku do medzinárodného balíka; po vývoze sa postup aj náklady môžu zmeniť."
+          ]
+        },
+        {
+          "heading": "Porovnajte vrátenú sumu s pôvodnou platbou",
+          "paragraphs": [
+            "Zaznamenajte cenu položky, prepravné a servisné poplatky aj sumu, ktorú má podľa odpovede podpory pokryť refundácia. Overte, či pôjde o kredit v účte alebo o vrátenie pôvodnou platobnou cestou. Ide o rozdielne výsledky a zostatok v účte nemožno označiť za peniaze prijaté bankou. Samostatne si poznačte nevyriešenú časť žiadosti.",
+            "Pred uzatvorením záznamov porovnajte dokončenú transakciu s dohodnutým riešením. Pri nejasnej sume odkážte na pôvodnú objednávku a odpoveď podpory, namiesto otvárania nesúvisiacej sťažnosti. Lehota refundácie závisí od skutočného riešenia a platobnej cesty; riaďte sa stavom účtu a údajmi poskytovateľa, nie prísľubom rovnakého počtu dní pre každý prípad."
+          ]
         }
       ],
       "takeaways": [
@@ -761,12 +833,13 @@
       "sourceIds": [
         "returns-policy",
         "expertbuy"
-      ]
+      ],
+      "reviewedAt": "2026-10-30"
     },
     {
       "id": "payments",
       "slug": "cssbuy-payment-fees",
-      "title": "Poplatky a platby CSSBuy: naplánuj celý rozpočet",
+      "title": "Poplatky a platby CSSBuy: servisné poplatky a celkové náklady",
       "description": "Oddeľ náklady na produkt, vnútroštátne doručenie, služby, platbu a balík a potom porovnaj sumy zobrazené v oficiálnom účte CSSBuy.",
       "category": "Objednávky a platby",
       "keywords": [
@@ -818,6 +891,20 @@
             "Po dokončení nákupu zaznamenaj skutočne zaplatené sumy za tovar, služby a doručenie spolu s úpravami. Meny uvádzaj výslovne. Ak chceš osobný súčet v jednej mene, použi konverziu odrazenú v skutočných platbách alebo jasne označ vybraný porovnávací kurz. Miešanie aktuálneho kurzu s historickými poplatkami môže starý nákup zobraziť lacnejší či drahší, než bol.",
             "Výsledok porovnaj s tým, čo ti produkt priniesol, vrátane toho, ako sedí, jeho užitočnosti a práce počas procesu. Táto úvaha má väčšiu hodnotu než oslava nízkej ponukovej ceny pri ignorovaní zvyšku účtu. Dátum a relevantné údaje balíka uchovaj na budúce plánovanie, ale z výsledku nerob zaručený rozpočet iného kupujúceho. Dobrý rozpočet CSSBuy je konkrétny, rozpísaný a aktualizovaný, keď reálne informácie nahrádzajú odhady."
           ]
+        },
+        {
+          "heading": "Použite zverejnený vzorec poplatku na jasne označenom príklade",
+          "paragraphs": [
+            "Oficiálna stránka CSSBuy Cost and Fees, overená 30. októbra 2026, uvádza nákupný servisný poplatok 6% z ceny výrobku a vnútroštátneho prepravného v Číne. Pri hypotetickej objednávke s cenou výrobku 200 CNY a domácou dopravou 10 CNY dáva vzorec 12,60 CNY. Medzisúčet 222,60 CNY zahŕňa iba tieto tri zložky; nejde o úplnú cenu doručenia. Na obrazovke objednávky overte prípadné individuálne ceny účtu alebo zmenu podmienok.",
+            "Medzinárodné prepravné, vybrané služby a prípadné platobné či kurzové poplatky treba započítať oddelene. Percento nákupnej služby automaticky neuplatňujte na každú neskoršiu platbu. Pred potvrdením zaznamenajte, čo jednotlivá platba pokrýva, menu a konečnú sumu. Príklad poplatku je užitočný len vtedy, keď je jasný základ výpočtu a zostávajú viditeľné položky, ktoré nezahŕňa."
+          ]
+        },
+        {
+          "heading": "Veďte rozpočet cez obe platobné fázy",
+          "paragraphs": [
+            "Vytvorte samostatný riadok pre cenu výrobku a domácu dopravu, ďalší pre nákupný servisný poplatok, ďalší pre medzinárodnú dopravu a osobitné riadky pre zvolené doplnky. Zaznamenajte sumu zobrazenú poskytovateľom platby v mene, ktorou skutočne zaplatíte. Ak po úprave zostane zostatok v účte, odlíšte ho od peňazí vrátených pôvodným spôsobom platby.",
+            "Pred odoslaním nahraďte hrubé odhady potvrdenými údajmi dostupnými v danej fáze. Ak celok prekračuje limit, prehodnoťte voliteľné služby alebo nákup, ktorý ešte možno zmeniť. Nevyberajte nevhodnú linku len preto, aby pôvodný rozpočet vyzeral správne. Platobné záznamy uchovávajte s číslami objednávky a balíka, aby sa úprava či otázka podpore dala priradiť k správnej transakcii."
+          ]
         }
       ],
       "takeaways": [
@@ -829,7 +916,8 @@
         "fees",
         "about",
         "buyforme"
-      ]
+      ],
+      "reviewedAt": "2026-10-30"
     },
     {
       "id": "links",
@@ -886,6 +974,20 @@
             "Spoľahlivý osobný záznam obsahuje zdrojovú ponuku, cieľ CSSBuy a následný identifikátor objednávky. Každý má inú úlohu. Zdroj vysvetľuje ponuku, cieľ je miesto overenia nákupnej možnosti a záznam objednávky sleduje skutočnú požiadavku. Ak sa ponuka neskôr zmení, uložené podrobnosti môžu vysvetliť základ pôvodného rozhodnutia.",
             "Tento záznam používaj pri porovnávaní skladových dôkazov alebo diskusii o rozdiele. Nesprávnu možnosť je oveľa ľahšie identifikovať, keď zostalo zachované vybrané znenie a obrázok. Po kúpe doplň, čo si sa naučil o množstve, veľkostiach alebo komunikácii predajcu. Cieľom nie je vyhlásiť univerzálneho víťaza medzi Taobao, Weidian a 1688. Ide o dohľadateľnosť každého zdrojového odkazu a zrozumiteľnosť každého rozhodnutia podľa vtedajších informácií."
           ]
+        },
+        {
+          "heading": "Overte, že odkaz vedie na výrobok, ktorý chcete objednať",
+          "paragraphs": [
+            "Uložte pôvodnú adresu výrobku na trhovisku a otvorte ju pred vložením do oficiálneho nákupného procesu CSSBuy. Porovnajte predajcu, názov a dostupné varianty so svojím výberom. Skrátený zdieľací odkaz, domovská stránka obchodu a adresa konkrétneho výrobku nie sú zameniteľné. Ak stránka vedie na kolekciu alebo iný variant, rozdiel vyriešte pred platbou.",
+            "Keď CSSBuy odkaz rozpozná, skontrolujte načítané údaje a zvolené možnosti; samotná konverzia nedokazuje ich správnosť. Zaznamenajte množstvo, farbu, veľkosť a prípadnú minimálnu požiadavku predajcu pri skutočnej ponuke. Ak adresu nemožno spracovať, využite oficiálnu pomoc s pôvodným odkazom a jasnými údajmi výrobku. Alternatívny identifikátor trhoviska nehádajte z čísla uvedeného inde v katalógu."
+          ]
+        },
+        {
+          "heading": "Oddeľte identifikátory výrobku od čísel objednávky",
+          "paragraphs": [
+            "Objavovací web môže prideliť interné číslo, trhovisko používa iný identifikátor výrobku a CSSBuy po nákupe ďalšie číslo. Každé si uložte spolu s jeho účelom. Pri otázke k nákupu poskytnite pôvodný odkaz; pri otázke k zaplatenej objednávke číslo objednávky CSSBuy. Číslo skladového balíka je relevantné až po zoskupení výrobkov na medzinárodné doručenie.",
+            "Toto rozdelenie uľahčuje aj bezpečné neskoršie porovnania. Nová ponuka s rovnakou fotografiou môže mať iného predajcu alebo identifikátor. Overte ju ako novú ponuku a nenahrádzajte uložený odkaz bez zaznamenania zmeny. Sprievodcu konverziou odkazov neoznačujte za funkčný nástroj, pokiaľ stránka konverziu skutočne nevykonáva a nezobrazuje cieľ na kontrolu."
+          ]
         }
       ],
       "takeaways": [
@@ -897,7 +999,8 @@
         "buyforme",
         "expertbuy",
         "user-link"
-      ]
+      ],
+      "reviewedAt": "2026-10-30"
     },
     {
       "id": "sizing",
@@ -954,6 +1057,20 @@
             "Pružné materiály, technika merania a konštrukcia môžu vytvárať malé odchýlky. Odfotografované pravítko nevykladaj ako úroveň presnosti, ktorú podmienky nepodporujú. O prijateľnosti zvyšnej neistoty rozhodni podľa citlivosti prispôsobenia. Ak rozmer musí padnúť do veľmi úzkeho rozpätia, aby produkt fungoval, vzdialený nákup môže vyžadovať viac dôkazov, než ponuka poskytuje.",
             "Po doručení produkt zmeraj a vyskúšaj a výsledok zaznamenaj rovnakým referenčným systémom. Poznač, či bola tabuľka užitočná, či bol porovnávací odev vhodný a ktorý rozmer bol najdôležitejší. Osobnú preferenciu oddeľ od univerzálneho záveru o veľkostiach predajcu. Za viacero nákupov tak vznikne praktický záznam prispôsobenia zakotvený vo vlastnej skúsenosti. Je spoľahlivejší než opakované používanie rád vybrať väčšiu či menšiu veľkosť bez znalosti produktu, tabuľky alebo nositeľa."
           ]
+        },
+        {
+          "heading": "Porovnávajte rozmery s rovnakými koncovými bodmi",
+          "paragraphs": [
+            "Pri oblečení si zapíšte, či tabuľka uvádza šírku položeného odevu, celý obvod alebo odporúčaný telesný rozmer. Tieto veličiny neporovnávajte priamo. Pri dĺžke tela a rukáva použite začiatok a koniec podľa obrázka, najmä pri spustených pleciach či raglánových rukávoch. Pohodlný referenčný odev merajte rovnakým spôsobom bez naťahovania a ku každej hodnote pripíšte jednotku.",
+            "Pri obuvi rozlišujte dĺžku chodidla, vložky a podrážky. Fotografia podrážky neukazuje využiteľný vnútorný priestor. Obe chodidlá merajte jednotne a zohľadnite plánované ponožky či vložky. Veľkostné označenie predajcu je údaj konkrétnej ponuky, nie univerzálna záruka pohodlia. Požiadajte o dôležitý rozmer namiesto pravidla vždy zvoliť väčšiu či menšiu veľkosť."
+          ]
+        },
+        {
+          "heading": "Využite skladové meranie ako kontrolu rozhodnutia",
+          "paragraphs": [
+            "Pred objednaním dodatočného merania si určte, pri akom výsledku si položku ponecháte a pri akom sa spýtate na vrátenie. Ak je služba dostupná, požiadajte o viditeľné pravítko a jasné koncové body a overte poplatok. Skladový výsledok porovnajte s pôvodnou tabuľkou rovnakou metódou. Pri nejasnej fotografii žiadajte vysvetlenie; rozdiel perspektívy nepovažujte za potvrdenú chybu.",
+            "Meranie uchovávajte so zvolenou veľkosťou a číslom objednávky. Ak rozdiel prijmete, poznačte si, prečo stále vyhovuje zamýšľanému strihu. Ak ho odmietnete, opíšte konkrétny nesúlad oficiálnej podpore, kým je tovar v sklade. Po doručení zaznamenajte skutočné sedenie pre budúce rozhodnutia o danom výrobku bez predpokladu, že všetky produkty majú rovnaké rozmery."
+          ]
         }
       ],
       "takeaways": [
@@ -964,7 +1081,283 @@
       "sourceIds": [
         "buyforme",
         "expertbuy"
-      ]
+      ],
+      "reviewedAt": "2026-10-30"
+    },
+    {
+      "id": "shipping-usa",
+      "slug": "cssbuy-shipping-to-usa",
+      "title": "CSSBuy doprava do USA: náklady, sledovanie a príprava balíka",
+      "description": "Naplánujte balík CSSBuy do USA: porovnajte aktuálne ceny dopravy, skontrolujte rozmery balenia, pripravte adresu a sledujte fázy doručenia.",
+      "category": "Doprava",
+      "keywords": [
+        "cssbuy doprava do usa",
+        "cssbuy cena dopravy usa",
+        "cssbuy usa sledovanie",
+        "cssbuy kalkulačka dopravy"
+      ],
+      "intro": "Odoslanie objednávky CSSBuy do Spojených štátov sa začína ešte pred výberom medzinárodnej linky. Výrobky musia prísť do skladu, zodpovedať objednávke, spĺňať podmienky vhodnej trasy a zmestiť sa do celkového rozpočtu. Užitočná otázka nie je, ktorá linka je vždy najlacnejšia, ale ktorá aktuálne dostupná linka prijme váš konkrétny balík a cieľ. Tento návod vysvetľuje praktické porovnanie bez sľubu pevnej ceny alebo termínu. Pri výbere majte otvorenú oficiálnu kalkulačku CSSBuy a svoj účet; o reálnych možnostiach rozhodujú aktuálne podmienky trasy a konečné rozmery zásielky.",
+      "sections": [
+        {
+          "heading": "Oddeľte nákup od medzinárodnej zásielky",
+          "paragraphs": [
+            "Oficiálny návod CSSBuy rozlišuje objednávanie výrobkov a odovzdanie skladového balíka. Najskôr poskytnite odkaz na výrobok a požadované varianty. Nákupná fáza zahŕňa tovar a príslušnú dopravu v Číne. Po príchode skontrolujte skladové údaje a fotografie, až potom zariaďujte medzinárodnú dopravu. Zaplatenie výrobkov neznamená, že medzinárodný balík už odišiel.",
+            "Pri objednávke do USA veďte dva jednoduché záznamy: jeden pre každý výrobok a druhý pre odchádzajúci balík. Výrobkový záznam obsahuje odkaz, veľkosť, farbu, množstvo a skladový stav. Balíkový záznam obsahuje vybrané položky, cieľ, pokyny na balenie a medzinárodnú trasu. Oddelenie zabráni zámene vnútroštátneho sledovacieho čísla predajcu za číslo konečného doručenia."
+          ]
+        },
+        {
+          "heading": "Zadajte úplnú adresu v Spojených štátoch",
+          "paragraphs": [
+            "Použite cieľovú krajinu a poštové údaje požadované oficiálnou kalkulačkou a formulárom balíka. Pred platbou potvrďte meno príjemcu, ulicu, číslo bytu alebo jednotky, mesto, štát a ZIP kód. Overte, že vybraná linka prijíma daný typ adresy; nepredpokladajte, že každá linka obsluhuje všetky adresy, územia či odľahlé miesta za rovnakých podmienok.",
+            "Adresu uložte vo formáte, ktorý môžete porovnať s potvrdením zásielky. Ak formulár rozdeľuje adresu do polí, skontrolujte aj zostavenú podobu, nielen jednotlivé políčka. Pri sústredení na cenu sa dá ľahko prehliadnuť chýbajúce číslo bytu. Pri otázkach ostatným kupujúcim nezverejňujte adresu ani snímky sledovania s osobnými údajmi."
+          ]
+        },
+        {
+          "heading": "Vytvorte odhad s poctivými vstupmi",
+          "paragraphs": [
+            "Otvorte oficiálnu kalkulačku dopravy CSSBuy, vyberte Spojené štáty a zadajte požadovanú hmotnosť a rozmery. Ak máte skladové merania, použite ich. Pred príchodom označte hmotnosti výrobkov a rozmery balenia ako odhady, nie merania. Porovnávajte iba trasy prijímajúce danú kategóriu a veľkosť balíka. Nízka zobrazená cena nie je použiteľná ponuka, ak linka obsah neprijíma.",
+            "Ku každému odhadu zapíšte dátum, cieľ, hmotnosť, rozmery a predpoklady balenia. Pochopíte tak neskoršiu zmenu ceny. Najskôr porovnajte ten istý balík medzi trasami, potom možnosti balenia na jednej trase. Ak naraz zmeníte hmotnosť, cieľ a balenie, nebudete vedieť, čo spôsobilo zdanlivú úsporu."
+          ]
+        },
+        {
+          "heading": "Pochopte rozmery balenia a účtovanú hmotnosť",
+          "paragraphs": [
+            "Medzinárodná doprava môže zohľadňovať priestor, ktorý balík zaberá, aj hmotnosť na váhe. CSSBuy opisuje vákuové balenie ako spôsob zníženia objemu vhodného oblečenia. Neznamená to, že stláčanie je vhodné pre každý výrobok. Topánky, tvarované doplnky a krehké predmety potrebujú balenie podľa tvaru a ochrany, nie iba najnižšieho odhadu.",
+            "Napríklad balík s rozmermi 40 × 30 × 25 centimetrov má objem 30 000 kubických centimetrov. Ak konkrétna trasa výslovne používa deliteľ 6 000, tento príklad dáva 5 kilogramov objemovej hmotnosti. Je to ukážka výpočtu, nie tvrdenie, že rovnaký deliteľ používa každá linka do USA. Pred porovnaním s nameranou hmotnosťou si prečítajte skutočné pravidlo a spôsob zaokrúhľovania vybranej linky."
+          ]
+        },
+        {
+          "heading": "Porovnajte úplnú cenu toho istého balíka",
+          "paragraphs": [
+            "Cenu výrobkov, domácu dopravu, nákupný servisný poplatok, medzinárodné prepravné a zvolené baliace služby veďte na samostatných riadkoch. Oficiálna stránka poplatkov CSSBuy vysvetľuje, že nákup a doprava sú rozdielne zložky nákladov. Platobné poplatky, výmenu meny a cieľové poplatky overte podľa okolností; nepredpokladajte ich zahrnutie do hlavnej ceny dopravy.",
+            "Pred výberom doplnkov určte maximálny celkový rozpočet. Ak sa dve vhodné trasy líšia cenou, porovnajte uvádzaný čas, obmedzenia, rozsah sledovania a podmienky ochrany zobrazené v účte. Drahšia trasa môže vyhovovať termínu, ale rýchlejší odhad prepravy stále nezahŕňa čas čakania na predajcu ani skladové kontroly."
+          ]
+        },
+        {
+          "heading": "Dokončite kontrolu kvality pred spojením položiek",
+          "paragraphs": [
+            "Pri každej vybranej položke preskúmajte skutočné skladové fotografie. Potvrďte množstvo, farbu, štítok a rozmery dôležité pre veľkosť. Ak dôležitý detail nevidno, požiadajte o objasnenie pred spoločným zabalením. Všeobecná skladová kontrola nedokazuje pravosť, materiálové zloženie, odolnosť ani dokonalé sedenie; na to sú potrebné dôkazy, ktoré fotografia nemusí poskytnúť.",
+            "Zoskupujte kompatibilné výrobky a píšte konkrétne pokyny. Uveďte napríklad, ktoré škatule od topánok chcete ponechať a ktoré oblečenie možno zložiť úspornejšie. Neodstraňujte údaje potrebné na vrátenie alebo presné záznamy len kvôli objemu. Prípadné vrátenie vyriešte pred zaradením položky do medzinárodného balíka, lebo po odchode zo skladu sa možnosti menia."
+          ]
+        },
+        {
+          "heading": "Skontrolujte konečné potvrdenie balíka",
+          "paragraphs": [
+            "Zabalený balík sa môže líšiť od odhadu, pretože ochranné materiály pridávajú hmotnosť a rozmery škatule sa menia. Na potvrdení znovu skontrolujte nameranú hmotnosť, rozmery, obsah a zvolenú trasu. Ak sa cena líši od uloženého odhadu, najskôr porovnajte merania a zahrnuté služby. Neobjasnený rozdiel nechajte vysvetliť CSSBuy pred povolením odoslania.",
+            "Potvrdenie, platobný záznam a baliace pokyny uchovávajte spolu. Keď proces vyžaduje popisy a hodnoty položiek, uvádzajte ich presne a overte platné oficiálne požiadavky cieľa. Tento návod nesľubuje bezcolný limit ani zaručený výsledok colného konania. Starú snímku z fóra nepovažujte za aktuálne pravidlo pre zásielku do USA."
+          ]
+        },
+        {
+          "heading": "Sledujte samostatné fázy prepravy",
+          "paragraphs": [
+            "Rozlišujte spracovanie v sklade, odovzdanie prepravcovi, medzinárodnú dopravu, spracovanie v cieli a konečné doručenie. Sledovacie číslo môže existovať skôr, než dopravca zaznamená fyzické prevzatie. Pred záverom, že sa zásielka zastavila, prečítajte dátum, miesto a znenie poslednej udalosti. Používajte sledovanie v účte CSSBuy a dopravcu označeného pri danej zásielke.",
+            "Ak aktualizácia mešká, pripravte číslo balíka, dátum odoslania, názov trasy a poslednú udalosť. Tieto údaje pošlite súkromne oficiálnej podpore a opíšte chýbajúci krok. Neotvárajte niekoľko nesúvisiacich žiadostí s rozdielnymi vysvetleniami. Stručná história pomôže odlíšiť skladovú otázku od oneskoreného skenu dopravcu či problému s adresou."
+          ]
+        },
+        {
+          "heading": "Uľahčite si plánovanie ďalšej zásielky do USA",
+          "paragraphs": [
+            "Po doručení zaznamenajte skutočnú hmotnosť a rozmery balíka, trvanie dopravy a zaplatené poplatky. Pred vyhodením obalu skontrolujte a odfoťte poškodenie. Doručené položky porovnajte so záznamom objednávky a problém rýchlo riešte oficiálnou podporou. Jedno doručenie je užitočná osobná referencia, nie záruka pre inú trasu alebo sezónu.",
+            "Pri ďalšom nákupe znovu použite kontrolný zoznam namiesto predpokladu rovnakej ceny. Opäť skontrolujte aktuálnu kalkulačku, skladový stav každej položky a dostupnosť preferovanej linky. Najspoľahlivejšia úspora vzniká pred odovzdaním balíka: vyhýbaním sa nevhodným nákupom, zbytočnému objemu a neúplným adresám."
+          ]
+        }
+      ],
+      "takeaways": [
+        "Trasy do USA porovnávajte s rovnakým cieľom, obsahom a rozmermi zabaleného balíka.",
+        "QC a rozhodnutia o balení dokončite pred odovzdaním medzinárodnej zásielky.",
+        "Oddeľte odhady od konečných poplatkov a sledujte skladové a dopravné etapy samostatne."
+      ],
+      "sourceIds": [
+        "buyforme",
+        "estimates",
+        "fees",
+        "shipforme"
+      ],
+      "reviewedAt": "2026-10-30"
+    },
+    {
+      "id": "shoes-spreadsheet",
+      "slug": "cssbuy-shoes-spreadsheet",
+      "title": "Prehľad obuvi CSSBuy: veľkosti, QC a nákupný sprievodca",
+      "description": "Porovnávajte skutočné odkazy v prehľade obuvi CSSBuy, kontrolujte rozmery a skladové fotografie a naplánujte balenie škatúľ od topánok.",
+      "category": "Sprievodcovia výrobkami",
+      "keywords": [
+        "cssbuy prehľad obuvi",
+        "cssbuy tenisky",
+        "cssbuy veľkosť obuvi",
+        "cssbuy qc obuvi"
+      ],
+      "intro": "Prehľad obuvi CSSBuy je najužitočnejší, keď pomáha vybrať konkrétny pár namiesto zbierania nekonečného zoznamu odkazov. Pekná fotografia a známe označenie veľkosti sú iba začiatok. Potrebujete aj jasný záznam variantu, metódu merania, fotografie prijatého páru a rozhodnutie o balení. Tento návod ponúka opakovateľný postup porovnania obuvi v katalógu a kontroly objednávky pred medzinárodným odoslaním. Katalóg je objavovací nástroj; tvrdenia predajcu, dostupnosť a presný variant treba stále preveriť v prepojenej ponuke a objednávke CSSBuy.",
+      "sections": [
+        {
+          "heading": "Začnite účelom, ktorý majú topánky splniť",
+          "paragraphs": [
+            "Zapíšte, ako budete pár používať, aké sedenie preferujete a maximálny celkový rozpočet. Bežné nosenie, priestor pre ortopedickú vložku a mokré počasie vytvárajú rozdielne požiadavky. Fotografia nedokazuje špecializovanú bezpečnosť, športový výkon ani odolnosť. Ak požiadavka závisí od materiálu či konštrukcie, pred nákupom určte, aký dôkaz by ju podporil.",
+            "Zúžte výber na dvoch alebo troch kandidátov. Zapíšte odkaz, farbu, veľkostné informácie predajcu, cenu a nezodpovedané otázky. Pár nehodnoťte lepšie iba preto, že jeho miniatúra vyzerá ostrejšie. Rovnaké porovnávacie položky uľahčia odstránenie nevhodných možností aj formuláciu konkrétnej otázky nákupnému agentovi."
+          ]
+        },
+        {
+          "heading": "Overte presnú ponuku za kartou",
+          "paragraphs": [
+            "Otvorte detail a prezrite dostupné fotografie predajcu i pôvodnú ponuku. Potvrďte, že cena platí pre požadovanú veľkosť, farbu a verziu. Karta môže ponuku zhrnúť, ale nezaručuje dostupnosť všetkých možností. Zachovajte presný odkaz, aby vás podobná fotografia neskôr nezaviedla k inej ponuke.",
+            "V nákupnom rozhraní CSSBuy pred objednaním skontrolujte zvolený variant. Ak sa odkaz nedá spracovať alebo sú možnosti nejasné, využite oficiálnu pomoc CSSBuy. Interné číslo záznamu katalógu nezamieňajte s identifikátorom trhoviska. Správny odkaz a výslovná veľkostná požiadavka sú užitočnejšie než neurčitý pokyn kúpiť pár zo snímky."
+          ]
+        },
+        {
+          "heading": "Pred výberom veľkosti merajte",
+          "paragraphs": [
+            "Zmerajte obe chodidlá rovnakou metódou a poznačte jednotku. Rozmery porovnajte s pokynmi konkrétnej ponuky a zohľadnite, ako ich predajca definuje. Dĺžka chodidla, vložky a podrážky sú rozdielne veličiny. Rozmer podrážky nemožno považovať za využiteľnú vnútornú dĺžku a európske číslo nedokazuje rovnaké sedenie rôznych modelov.",
+            "Ako doplnkovú referenciu použite pohodlný pár, ktorý vlastníte, ak je možné porovnateľné meranie. Poznačte vplyv ponožiek, vložiek či preferovaného voľného sedenia. Nepoužívajte univerzálny pokyn vždy zvoliť o číslo väčšie. Ak chýba rozhodujúci rozmer, požiadajte o vysvetlenie alebo vyberte lepšie zdokumentovanú ponuku."
+          ]
+        },
+        {
+          "heading": "Premeňte výber na jasný nákupný pokyn",
+          "paragraphs": [
+            "Pri každom páre uveďte URL, farbu, označenie veľkosti, množstvo a rozmer, z ktorého vychádzate. Ak platforma umožňuje poznámku, formulujte požiadavku konkrétne. Žiadosť o viditeľný veľkostný štítok alebo konkrétnu dĺžku sa vykonáva jednoduchšie než všeobecná požiadavka na najlepšiu kvalitu. Pred dodatočnou prácou overte dostupnosť služby aj poplatok.",
+            "Po odoslaní skontrolujte súhrn objednávky. Ak možnosť nie je dostupná, navrhnutú náhradu posúďte ako nové rozhodnutie, nie automaticky. Iná farba či veľkosť môže mať aj iné materiály a rozmery. Pôvodný pokyn a schválenú zmenu uchovávajte spolu, aby mala skladová kontrola jasnú referenciu."
+          ]
+        },
+        {
+          "heading": "Rozlišujte fotografie predajcu a skladové QC",
+          "paragraphs": [
+            "Fotografie v katalógu sú prezentáciou ponuky. Nedokazujú stav vášho prijatého páru. Skladové QC fotografie sa týkajú tovaru dodaného pre vašu objednávku a treba ich porovnať so zvoleným variantom. Naša stránka momentálne neposkytuje nezávisle pripojené vyhľadávanie QC fotografií, preto používajte fotografie a podporu v účte CSSBuy.",
+            "CSSBuy označuje skladovú prehliadku za všeobecnú kontrolu. Fotografie pomôžu rozpoznať viditeľné rozdiely, chýbajúce súčasti či nesprávny štítok, ale necertifikujú pravosť, dlhodobú odolnosť ani pohodlie. Nejasnú fotografiu považujte za chýbajúcu informáciu. Vyžiadajte potrebný uhol namiesto interpretácie tieňa alebo odrazu ako potvrdenej chyby."
+          ]
+        },
+        {
+          "heading": "Skontrolujte pár v pevnom poradí",
+          "paragraphs": [
+            "Začnite identitou: dve topánky, zamýšľaná farba, rovnaké veľkostné štítky a príslušenstvo. Potom porovnajte ľavú a pravú topánku z podobných uhlov. Preskúmajte viditeľné šitie, okraje podrážky, zapínanie a podšívku na skutočne viditeľné problémy. Svetlo a perspektíva môžu meniť vzhľad jednej strany, preto nerobte záver iba z neporovnateľných pohľadov.",
+            "Ďalej overte rozmer, ktorý rozhodol o veľkosti. Ak to služba umožňuje, žiadajte jasne položené pravítko a presne uveďte začiatok a koniec merania. Nakoniec porovnajte viditeľný nesúlad s pôvodnou objednávkou. Rozlišujte jasný omyl, napríklad nesprávny veľkostný štítok, od subjektívnej preferencie, ktorú predajca nemusí považovať za chybu."
+          ]
+        },
+        {
+          "heading": "Rozhodnite sa medzi ponechaním, objasnením a vrátením",
+          "paragraphs": [
+            "Použite tri kategórie. Pár si ponechajte, keď potrebné údaje súhlasia a zvyšná neistota je prijateľná. Požiadajte o objasnenie, ak chýbajúca fotografia či rozmer môže rozhodnutie zmeniť. Otvorte otázku vrátenia pri doloženom nesúlade alebo inom dôvode, ktorý má predajca preveriť. Podmienky a lehoty overte cez CSSBuy a predajcu.",
+            "Problém opíšte s číslom objednávky a stručným porovnaním požadovaného variantu s prijatým. Dôkazy priložte oficiálnej podpore. Nekombinujte nesúvisiace výhrady do požiadavky na zaručenú refundáciu. Počas posudzovania vrátenia zachovajte topánky a obal neporušené a nezaraďujte ich do medzinárodného balíka, kým sa vec nevyrieši."
+          ]
+        },
+        {
+          "heading": "Vyberte balenie s ohľadom na celý balík",
+          "paragraphs": [
+            "Predajná škatuľa zaberá miesto, ale môže zachovať tvar, chrániť doplnky alebo byť dôležitá pri vrátení. Pred zmenou balenia si určte, či ju potrebujete. Pri odstránení zvážte ochranu páru pred stlačením a pohybom. Nepredpokladajte, že odstránenie obalu vždy zníži konečné prepravné; rozhodujú hmotnostné a objemové pravidlá linky.",
+            "Porovnávajte zabalené rozmery a hmotnosť celého balíka namiesto násobenia odhadovanej hmotnosti počtom topánok. Obuv s oblečením sa uloží inak než viac párov v škatuliach. V oficiálnej kalkulačke použite cieľ a podmienky svojej zásielky a odhad prehodnoťte po konečnom meraní v sklade."
+          ]
+        },
+        {
+          "heading": "Zaznamenajte výsledok namiesto opakovaného hádania",
+          "paragraphs": [
+            "Po doručení skúšajte obuv vnútri na čistom povrchu pri kontrole objednávky. Zapíšte veľkosť, dôležité rozmery a porovnanie pohodlia s referenčným párom. Fotografie problémov aj obal uchovajte, kým neviete, či budete potrebovať podporu. Jeden úspešný nákup nedokazuje, že iná ponuka s podobnou fotografiou bude totožná.",
+            "Do výberu doplňte skutočne užitočné údaje: spoľahlivú tabuľku, jasné skladové meranie alebo baliacu voľbu, ktorá pár ochránila. Odstráňte predpoklady, ktoré sa ukázali nesprávne. Malý záznam meraných rozhodnutí je časom hodnotnejší než rozsiahly prehľad nevysvetlených odkazov a hodnotení prevzatých od iných kupujúcich."
+          ]
+        }
+      ],
+      "takeaways": [
+        "Pred objednaním overte presný variant a spôsob merania predajcu.",
+        "Na QC používajte vlastné skladové fotografie; katalógové snímky neoverujú prijatý pár.",
+        "Vrátenie vyriešte pred odoslaním a možnosti škatúľ porovnajte podľa konečných rozmerov balíka."
+      ],
+      "sourceIds": [
+        "buyforme",
+        "expertbuy",
+        "shipforme",
+        "estimates",
+        "returns-policy"
+      ],
+      "reviewedAt": "2026-10-30"
+    },
+    {
+      "id": "hoodie-spreadsheet",
+      "slug": "cssbuy-hoodie-spreadsheet",
+      "title": "Prehľad mikín CSSBuy: rozmery, materiál a QC",
+      "description": "Porovnajte odkazy na mikiny CSSBuy podľa rozmerov odevu, údajov o materiáli, skladových fotografií a praktických kontrol balenia.",
+      "category": "Sprievodcovia výrobkami",
+      "keywords": [
+        "cssbuy prehľad mikín",
+        "cssbuy mikiny",
+        "cssbuy veľkosti mikín",
+        "cssbuy qc mikín"
+      ],
+      "intro": "Prehľad mikín CSSBuy má odpovedať na praktické otázky: bude odev sedieť podľa vašich predstáv, vysvetľuje ponuka materiál a môžete prijatú položku skontrolovať pred odoslaním? Písmeno veľkosti a predná fotografia málokedy vyriešia všetky tri. Začnite kategóriou mikín a svetrov a potom porovnajte presné varianty a rozmery. Tento návod ukazuje tvorbu užitočného výberu, vyžiadanie jasných dôkazov a zohľadnenie objemného oblečenia pri zásielke. Nehodnotí netestované výrobky ani neoznačuje fotografie predajcu za overené skladové QC.",
+      "sections": [
+        {
+          "heading": "Pred prehliadaním určte požadovaný strih",
+          "paragraphs": [
+            "Vyberte mikinu, ktorú už pohodlne nosíte, a rozhodnite, čo by ste zmenili. Možno chcete dlhšie telo, širší hrudník, kratšie rukávy alebo viac miesta na tričko. Ak sa dá, vyjadrite tieto preferencie rozmermi. Označenia oversized, relaxed a regular vyjadrujú zámer, ale neposkytujú jednotné rozmery medzi predajcami a značkami.",
+            "Premyslite sezónu a vrstvenie. Fotografia ťažšie vyzerajúceho odevu nedokazuje hrejivosť a hrubá kapucňa neurčuje hmotnosť celej mikiny. Rozpočet veďte oddelene od štýlového výberu, aby atraktívny dizajn nezakryl chýbajúce informácie o veľkosti či nezapočítané medzinárodné prepravné."
+          ]
+        },
+        {
+          "heading": "Porovnávajte presné ponuky mikín",
+          "paragraphs": [
+            "Otvorte detail každého kandidáta a zapíšte odkaz, farbu, veľkostný rozsah a vybranú verziu. Overte, či ponuka pod jednou úvodnou cenou nespája rôzne odevy alebo materiály. Nájdite tabuľku veľkostí a opis látky a overte ich platnosť pre konkrétny variant. Miniatúra je podnet na preskúmanie, nie technický list.",
+            "Obmedzte porovnanie na niekoľko kandidátov s dostatkom údajov. Podobné obrázky pri dvoch ponukách neznamenajú rovnaký pôvod ani rozmery. Nevyriešenú otázku ponechajte pri kandidátovi namiesto dopĺňania recenzie iného výrobku. Najlepší výber je taký, ktorý viete pred nákupom jasne vysvetliť."
+          ]
+        },
+        {
+          "heading": "Referenčný odev merajte jednotne",
+          "paragraphs": [
+            "Mikinu položte naplocho a nenaťahujte ju. Zaznamenajte šírku hrudníka zo strany na stranu, dĺžku tela s určeným začiatkom, dĺžku rukáva a šírku pliec, ak konštrukcia umožňuje porovnanie. Poznačte spustené plece alebo raglán, pretože rukáv meraný od plecového švu nemožno priamo porovnávať s meraním od krku.",
+            "Riaďte sa obrázkom predajcu, nie vlastnou konvenciou. Šírka naplocho 60 centimetrov je iná veličina než obvod hrudníka 60 centimetrov. Zdvojnásobenie šírky pomáha pochopiť geometriu, ale nemení rozmer odevu na zaručené odporúčanie pre postavu. Zohľadnite zamýšľanú voľnosť aj toleranciu merania uvedenú predajcom."
+          ]
+        },
+        {
+          "heading": "Čítajte tvrdenia o látke bez hádania",
+          "paragraphs": [
+            "Ak sú uvedené, skontrolujte zloženie, podšívku a pokyny na starostlivosť. Hmotnosť látky v gramoch na štvorcový meter nie je hmotnosť hotovej mikiny. Fotografia spoľahlivo neoverí percento bavlny, hustotu látky ani odolnosť proti zrážaniu. Ak sú tieto vlastnosti dôležité, hľadajte písomné údaje a označte neoverené tvrdenia.",
+            "Z vzhľadu nepredpovedajte pevnú mieru zrazenia. Materiály, úprava a pranie môžu viesť k rozdielnym výsledkom. Pokyny na starostlivosť si uchovajte pri objednávke. Ak chýbajú, zvážte ich vplyv na ochotu nakúpiť namiesto vymýšľania pohodlnej odpovede podľa opisu iného predajcu."
+          ]
+        },
+        {
+          "heading": "Vytvorte objednávku, ktorú možno neskôr overiť",
+          "paragraphs": [
+            "Uložte presnú farbu a veľkostné označenie spolu s použitou tabuľkou. Ak možno pridať poznámku, opíšte konkrétnu kontrolu, ktorá vám pomôže rozhodnúť o ponechaní. Žiadosť ukázať štítok a zmerať šírku hrudníka naplocho je jasnejšia než žiadosť potvrdiť, že mikina dobre sedí. Overte dostupnosť a cenu služby.",
+            "Náhrady skontrolujte pred schválením. Iná veľkosť, farba alebo verzia môže používať inú tabuľku a upravený variant treba preveriť rovnako dôkladne ako pôvodný. Uchovajte písomné potvrdenie zmeny, aby sa prijatý výrobok porovnával s konečným pokynom, nie so starou snímkou."
+          ]
+        },
+        {
+          "heading": "Využite skladové fotografie na viditeľné kontroly",
+          "paragraphs": [
+            "Porovnajte farbu, štítok, umiestnenie dizajnu a súčasti prijatého odevu s objednávkou. Prezrite kapucňu, manžety, spodný lem, vrecká a prípadné zapínanie. Hľadajte zjavné otvorenie či nesúlad švov, no pamätajte na vplyv svetla, záhybov a perspektívy. Keď fotografia nevyrieši dôležitú otázku, požiadajte o jasnejší pohľad.",
+            "Katalógové snímky predajcu sú odlišné od vašich skladových QC fotografií. CSSBuy opisuje prehliadku ako všeobecnú kontrolu a pekná ponuka ani čistá fotografia nezaručujú zloženie alebo odolnosť. Náš katalóg momentálne neponúka pripojený nástroj na vyhľadávanie QC. Používajte dôkazy v účte CSSBuy a žiadosti podávajte oficiálnym postupom objednávky."
+          ]
+        },
+        {
+          "heading": "Overte rozmery ovplyvňujúce rozhodnutie",
+          "paragraphs": [
+            "Ak sklad poskytuje meranie, žiadajte metódu z tabuľky predajcu alebo jasne opíšte koncové body. Porovnávajte rovnaké veličiny: šírku naplocho so šírkou naplocho, dĺžku tela od rovnakého miesta a rukáv s rovnakou konštrukčnou referenciou. Páska odfotená šikmo sa číta ťažko, preto malý zdanlivý rozdiel najskôr objasnite.",
+            "Vopred určte, ktoré odchýlky prijmete. Menšia zmena dĺžky tela môže byť dôležitejšia než väčšia šírka podľa požadovaného strihu. Rozlišujte zjavne nesprávnu veľkosť od neistoty osobnej preferencie. Ak chcete vrátenie, rýchlo overte aktuálne podmienky a počas posudzovania položku nezaraďujte do medzinárodného balíka."
+          ]
+        },
+        {
+          "heading": "Plánujte balenie podľa objemu a ochrany",
+          "paragraphs": [
+            "Mikiny zaberajú značný priestor, najmä pri viacerých hrubých odevoch. CSSBuy uvádza vákuové balenie vhodného oblečenia, vhodnosť však závisí od konkrétnej položky a detailov. Pred stláčaním zohľadnite potlače, tvarované ozdoby a príslušenstvo. Najmenší možný balík nemusí výrobok chrániť najlepšie.",
+            "Konečnú hmotnosť a rozmery porovnajte v oficiálnej kalkulačke. Oddeľte cenu výrobkov od medzinárodnej dopravy a skontrolujte skutočné pravidlá účtovanej hmotnosti linky. Pri kombinovaní mikín s obuvou či krehkými vecami žiadajte ochranu rozdielnych tvarov. Po balení znovu skontrolujte ponuku: skorý odhad podľa hmotnosti odevu neopisuje hotový balík."
+          ]
+        },
+        {
+          "heading": "Po doručení vytvorte užitočný záznam veľkosti",
+          "paragraphs": [
+            "Po príchode porovnajte odev s objednávkou a referenčnými rozmermi ešte pred odstránením informácií potrebných podpore. Problém odfoťte a pri prepravnom poškodení uchovajte obal. Dodržiavajte dostupné pokyny na starostlivosť, nepredpokladajte rovnaké pranie či sušenie každej mikiny. Žiadosť o pomoc zamerajte na pozorovateľný rozdiel.",
+            "Zapíšte zvolenú veľkosť, rozmery naplocho, preferované sedenie a zmeny po bežnej starostlivosti. Poznámky pomáhajú pri budúcom nákupe rovnakého overeného výrobku, neurčujú však veľkosti všetkých mikín v katalógu. Osobný záznam meraní podporuje uvážlivejší nákup a obmedzí závislosť od všeobecných rád vyberať väčšie či menšie číslo."
+          ]
+        }
+      ],
+      "takeaways": [
+        "Rozmery odevu naplocho porovnávajte rovnakou metódou ako v tabuľke predajcu.",
+        "Zloženie a gramáž látky berte ako tvrdenia na overenie, nie fakty dokázané fotografiami.",
+        "Prijatú mikinu skontrolujte pred spojením položiek a dopravu odhadujte podľa zabalených rozmerov."
+      ],
+      "sourceIds": [
+        "buyforme",
+        "expertbuy",
+        "shipforme",
+        "estimates",
+        "returns-policy"
+      ],
+      "reviewedAt": "2026-10-30"
     }
   ],
   "sources": [
@@ -972,7 +1365,7 @@
       "id": "buyforme",
       "title": "CSSBuy — Buy For Me: oficiálny nákupný proces",
       "url": "https://m.cssbuy.com/buyforme",
-      "accessedAt": "2026-10-23"
+      "accessedAt": "2026-10-30"
     },
     {
       "id": "expertbuy",
@@ -990,13 +1383,13 @@
       "id": "shipforme",
       "title": "CSSBuy — Ship For Me: konsolidácia a baliace služby",
       "url": "https://m.cssbuy.com/shipforme",
-      "accessedAt": "2026-10-23"
+      "accessedAt": "2026-10-30"
     },
     {
       "id": "fees",
       "title": "Centrum pomoci CSSBuy — Náklady a poplatky",
       "url": "https://www.cssbuy.com/shop/helpCenter?id=12",
-      "accessedAt": "2026-10-23"
+      "accessedAt": "2026-10-30"
     },
     {
       "id": "storage",
@@ -1013,12 +1406,12 @@
     {
       "id": "estimates",
       "title": "CSSBuy — Kalkulačka nákladov na dopravu",
-      "url": "https://new.cssbuy.com/estimates",
-      "accessedAt": "2026-10-23"
+      "url": "https://www.cssbuy.com/estimates",
+      "accessedAt": "2026-10-30"
     },
     {
       "id": "catalog",
-      "title": "cnfansge.com — Zdroj katalógu produktov",
+      "title": "Katalóg výrobkov — zdroj prepojených ponúk",
       "url": "https://cnfansge.com/",
       "accessedAt": "2026-10-23"
     },

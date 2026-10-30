@@ -26,8 +26,8 @@
     },
     {
       "id": "data",
-      "q": "Iš kur gaunamos prekės ir skelbimų nuotraukos?",
-      "a": "Prekių katalogas ir pardavėjų galerijos gaunami iš cnfansge.com. CSSBuy SH neprižiūri atskiros prekių duomenų bazės ir nekuria prekių vaizdų. Patvirtinkite pasirinktą pasiūlymą atidarę jo pirkimo puslapį.",
+      "q": "Iš kur gaunamos prekės ir pasiūlymų nuotraukos?",
+      "a": "Prekių kataloge pateikiami susieti pasiūlymai ir pardavėjų galerijos. CSSBuy SH nekuria atskiros prekių duomenų bazės ir negamina prekių vaizdų. Pasirinktą pasiūlymą patvirtinkite atvėrę jo pirkimo paskirties puslapį.",
       "sourceIds": [
         "catalog",
         "project"
@@ -35,8 +35,8 @@
     },
     {
       "id": "qc",
-      "q": "Ar prekių nuotraukos yra patikrintos CSSBuy QC nuotraukos?",
-      "a": "Pardavėjų galerijų nereikėtų laikyti sandėlio QC. Patikrinta konkretaus užsakymo QC nuotrauka turi būti susieta su gauta preke. Šioje peržiūroje cnfansge pardavėjų vaizdai nežymimi kaip patikrinti CSSBuy apžiūros įrodymai.",
+      "q": "Ar prekių nuotraukos yra patvirtinti CSSBuy QC vaizdai?",
+      "a": "Pardavėjų galerijų negalima laikyti sandėlio QC. Patvirtinta konkretaus užsakymo QC nuotrauka turi būti susieta su gauta preke. Ši svetainė pardavėjo vaizdų nežymi kaip patvirtintų CSSBuy patikros įrodymų.",
       "sourceIds": [
         "catalog",
         "project"
@@ -63,7 +63,7 @@
     {
       "id": "weidian-link",
       "q": "Kuris ID turi būti Weidian pirkimo nuorodoje?",
-      "a": "Naudokite originalų prekyvietės prekės ID. Pateiktas pavyzdys yra https://www.cssbuy.com/shop/goodsDetail?type=micro&id=7755101935. cnfansge katalogo įrašo numeris nepakeičia to prekyvietės ID.",
+      "a": "Naudokite pradinį prekyvietės prekės identifikatorių. Pateiktas pavyzdys yra https://www.cssbuy.com/shop/goodsDetail?type=micro&id=7755101935. Vidinis katalogo įrašo numeris nepakeičia šio prekyvietės identifikatoriaus.",
       "sourceIds": [
         "user-link"
       ]
@@ -245,7 +245,7 @@
         "kaip naudoti cssbuy",
         "cssbuy prekių nuorodos"
       ],
-      "intro": "Naudinga CSSBuy prekių lentelė turėtų padėti priimti geresnį pirkimo sprendimą, o ne vien sudaryti ilgesnį pirkinių sąrašą. Katalogas gali sutelkti nuorodas, pavadinimus ir skelbimų kainas, tačiau svarbus darbas prasideda tikrinant tikrąją prekę už kortelės. Šiame vadove aiškinama, kaip naršymą paversti nedideliu dokumentuotu atrinktų prekių sąrašu, kaip atskirti pardavėjo pristatymą nuo savo užsakymo įrodymų ir kaip nuspręsti, ar radinys vis dar prasmingas pridėjus pristatymą. CSSBuy SH yra nepriklausoma prekių atradimo svetainė. Jos prekių katalogas gaunamas iš cnfansge.com; pirkimas ir užsakymų valdymas vyksta CSSBuy.",
+      "intro": "Naudingas CSSBuy sąrašas turi padėti geriau apsispręsti, ne vien ilginti pirkinių sąrašą. Katalogas sujungia nuorodas, pavadinimus ir kainas, tačiau svarbiausias darbas prasideda tikrinant tikrąją kortelės prekę. Vadovas parodo, kaip naršymą paversti trumpu dokumentuotu pasirinkimu, atskirti pardavėjo pristatymą nuo savo užsakymo įrodymų ir nuspręsti, ar pirkinys prasmingas įvertinus siuntimą. CSSBuy SH yra nepriklausoma prekių atradimo svetainė. Pirkimas ir užsakymų valdymas vyksta CSSBuy.",
       "sections": [
         {
           "heading": "Pradėkite nuo tikslo ir realistiško trumpojo sąrašo",
@@ -258,7 +258,7 @@
           "heading": "Prekės kortelę skaitykite kaip rodyklės įrašą",
           "paragraphs": [
             "Kortelė sutrumpina gerokai didesnį skelbimą. Jos pavadinimas gali būti sutrumpintas, išverstas ar pateiktas šaltinio katalogo. Rodoma kaina gali apibūdinti vieną variantą, o ne visas versijas. Šiuos laukus laikykite būdu rasti originalų pasiūlymą, tada lyginkite norimą konkretų dydį, spalvą, kiekį ir versiją. Mažos pradinės kainos nepakanka sąžiningai palyginti dvi prekes, jei viena apima priedą, o kita ne.",
-            "CSSBuy SH prekių įrašai ir pardavėjų galerijos kilę iš cnfansge.com. Pardavėjo vaizdas iliustruoja skelbimą; jis nepatvirtina, kad konkretus sandėlio vienetas buvo patikrintas. Jei svetainė negali pateikti veikiančios funkcijos ar patikrinto nuotraukos tipo, neįžvelkite jų vien patrauklioje žymoje. Sekite turimą prekės nuorodą ir patikrinkite, kas iš tikrųjų pateikiama, prieš laikydami kortelę įrodymu."
+            "CSSBuy SH kataloge yra prekių įrašai ir pardavėjų galerijos. Pardavėjo vaizdas iliustruoja pasiūlymą, bet neįrodo konkrečios sandėlio prekės patikros. Jei svetainė negali suteikti veikiančios funkcijos ar patvirtinto nuotraukos tipo, nespręskite apie tai iš patrauklios etiketės. Atverkite pateiktą prekės nuorodą ir patikrinkite tikrąjį turinį prieš laikydami kortelę įrodymu."
           ]
         },
         {
@@ -302,6 +302,12 @@
             "Kai prekė atvyksta, savo trumpajame sąraše pridėkite trumpą rezultatą: gautą variantą, tikrą tinkamumą, ko neparodė nuotraukos ir ar rinktumėtės ją dar kartą. Subjektyvius įspūdžius atskirkite nuo išmatuojamų faktų. „Man per trumpa“ yra naudinga asmeninė pastaba; „rankovė mano matavimo būdu siekė 58 centimetrus“ yra matmuo, kurį kitas žmogus gali interpretuoti. Nė vienas neturėtų tapti universaliu teiginiu apie kiekvieną būsimą užsakymą iš to skelbimo.",
             "Prieš užsakydami pakartotinai, dar kartą patikrinkite išsaugotą nuorodą. Skelbimai gali keistis, pardavėjai gali pridėti naujų variantų, o detalės, kuriomis rėmėtės praėjusį kartą, gali būti dingusios. Gera lentelė yra datuotas sprendimų įrašas, o ne nuolatinė garantija. Ilgainiui vertingiausia dalis yra išsaugotas pagrindimas: kurie matmenys buvo svarbūs, kurie klausimai užkirto kelią klaidoms ir kurios prekės iš tiesų atliko prieš naršymą nustatytą paskirtį."
           ]
+        },
+        {
+          "heading": "Trumpąjį sąrašą paverskite kitu naudingu veiksmu",
+          "paragraphs": [
+            "Atverkite tinkamą kategoriją, palyginkite kelis konkrečius pasiūlymus ir užsirašykite trūkstamą informaciją, kuri galėtų pakeisti sprendimą. Dydžių vadove rasite matavimo patarimus, QC vadove – gautos prekės patikrą, o siuntimo vadove – visos siuntos biudžetą. Prie užrašų išsaugokite pradinę prekės nuorodą, kad katalogo atnaujinimas nesupainiotų panašių pasiūlymų. Išsaugota prekė tėra kandidatė; prieš mokėdami CSSBuy patikrinkite pasirinktą variantą ir dabartinį prieinamumą."
+          ]
         }
       ],
       "takeaways": [
@@ -313,7 +319,8 @@
         "buyforme",
         "expertbuy",
         "catalog"
-      ]
+      ],
+      "reviewedAt": "2026-10-30"
     },
     {
       "id": "weidian",
@@ -384,6 +391,12 @@
             "Kai teisinga prekė užsakyta, originali nuoroda tampa informacine nuoroda, o ne sandorio valdymo vieta. Užsakymų numerius, mokėjimus, sandėlio sprendimus ir siuntos sekimą laikykite oficialioje paskyroje. Prekių atradimo svetainė negali išspręsti pardavėjo išsiuntimo problemos vien todėl, kad pateikė pirmąją nuorodą. Jei reikia pagalbos, pateikite oficialų užsakymo identifikatorių ir tam užsakymui svarbius įrodymus.",
             "Po pristatymo palyginkite rezultatą su išsaugotu aprašymu ir užrašykite pamokas kitam pirkimui. Galbūt variantų pavadinimai buvo aiškūs, bet dydžių lentelė naudojo nepažįstamą matavimo būdą. Galbūt pakuotė pristatymo biudžetą paveikė labiau nei tikėtasi. Šie pastebėjimai naudingesni nei visos prekyvietės paskelbimas gera ar bloga pagal vieną užsakymą. Atidus pirkimas Weidian yra mažų patikrintų sprendimų seka, prasidedanti teisingu identifikatoriumi ir pasibaigianti preke, kuri atitinka jūsų įvardytą paskirtį."
           ]
+        },
+        {
+          "heading": "Patikrinkite užsakymą prieš patvirtindami mokėjimą",
+          "paragraphs": [
+            "Atpažintą prekę palyginkite su pradiniu Weidian pasiūlymu ir patikrinkite spalvą, dydį, kiekį bei pirkimo pastabą. Prekyvietės prekės identifikatorių atskirkite nuo vidinio šio katalogo įrašo numerio. Po pirkimo sandėlio klausimams naudokite CSSBuy užsakymo numerį, o tarptautinio pristatymo klausimams – siuntos numerį. Jei prekė neatitinka galutinio nurodymo, surinkite nuotraukas ir prieš įtraukdami ją į siuntą pasiteiraukite apie grąžinimą."
+          ]
         }
       ],
       "takeaways": [
@@ -395,12 +408,13 @@
         "buyforme",
         "expertbuy",
         "user-link"
-      ]
+      ],
+      "reviewedAt": "2026-10-30"
     },
     {
       "id": "qc",
       "slug": "cssbuy-qc-photos-guide",
-      "title": "CSSBuy QC nuotraukos: praktiškas patikros sąrašas",
+      "title": "CSSBuy QC nuotraukos: patikros prieš siuntimą ar grąžinimą",
       "description": "Nuoseklus būdas peržiūrėti sandėlio nuotraukas, atskirti pardavėjo vaizdus ir paprašyti naudingų matavimų prieš išsiunčiant siuntą.",
       "category": "Sandėlis ir QC",
       "keywords": [
@@ -409,7 +423,7 @@
         "cssbuy kokybės patikra",
         "sandėlio nuotraukos"
       ],
-      "intro": "Kokybės kontrolės nuotraukos naudingiausios, kai žiūrite į jas turėdami klausimą. Ar ši prekė atitinka užsakytą variantą? Ar yra reikiami priedai? Ar matmuo suderinamas su jūsų poreikiais? Vien peržiūrėjus galeriją ir nusprendus, kad prekė atrodo gerai, galima praleisti po pristatymo svarbias detales. Šiame vadove aiškinama praktiška peržiūros seka ir vaizdinių įrodymų ribos. Oficialiuose CSSBuy paslaugų puslapiuose aprašoma sandėlio patikra ir nuotraukos. CSSBuy SH nelaiko cnfansge.com pateiktų pardavėjų galerijų patikrintu sandėlio QC, o prekės kortelės niekada nereikėtų suprasti kaip patikros sertifikato.",
+      "intro": "Kokybės kontrolės nuotraukos naudingiausios, kai į jas žvelgiate su klausimu. Ar prekė atitinka užsakytą variantą? Ar yra reikiami priedai? Ar matmuo tinka jūsų poreikiui? Vien peržiūrint galeriją ir nusprendžiant, kad viskas gerai, galima praleisti po pristatymo svarbias detales. Vadovas aiškina praktinę peržiūros seką ir vaizdinių įrodymų ribas. Oficialūs CSSBuy paslaugų puslapiai aprašo sandėlio patikrą bei fotografavimą. CSSBuy SH nelaiko pardavėjų galerijų patvirtintu sandėlio QC, o prekės kortelė niekada nėra patikros sertifikatas.",
       "sections": [
         {
           "heading": "Nustatykite, kieno prekę ir kurį vaizdą žiūrite",
@@ -466,6 +480,12 @@
             "Vizuali apžiūra negali įrodyti ilgalaikio patvarumo, vidinės konstrukcijos, elektronikos saugumo ar autentiškumo. Tvarkinga išvaizda nepatvirtina, kad prekė atitinka jos paskirčiai svarbius standartus. Prekėms, kurių gedimas gali sukelti žalą, ieškokite tinkamų dokumentų ir kvalifikuoto patarimo, o ne remkitės sandėlio galerija. Vaizdas yra išvaizdos įrodymas, o ne bandymų pakaitalas.",
             "Po pristatymo palyginkite savo patirtį su tuo, ką rodė nuotraukos. Jei problema nebuvo matoma, užrašykite šią ribą panašiems pirkimams. Jei matavimo prašymas padėjo išvengti dydžio klaidos, naudokite metodą dar kartą. Toks grįžtamasis ryšys gerina būsimus sprendimus neapsimetant, kad bet kuri patikra pašalina visą neapibrėžtumą. QC vertė – užduoti atsakomus klausimus naudingu proceso momentu ir veikti pagal atsakymus, kol prekę dar nėra sunkiau grąžinti ar apžiūrėti."
           ]
+        },
+        {
+          "heading": "Nuspręskite: pasilikti, išsiaiškinti ar grąžinti",
+          "paragraphs": [
+            "Prekę pasilikite, kai pasirinktas variantas ir būtinos patikros atitinka lūkesčius. Prašykite paaiškinimo, jei nematoma etiketė, neaiškus kampas ar trūkstamas matmuo gali pakeisti sprendimą. Esant užfiksuotam neatitikimui ar nepriimtinai problemai, nedelsdami pasiteiraukite apie grąžinimą ir taikomas sąlygas. CSSBuy sandėlio apžiūrą apibūdina kaip bendrą patikrą; nuotraukos nepatvirtina autentiškumo ar ilgalaikio patvarumo. Sprendimą priimkite prieš pasirinkdami prekę tarptautinei siuntai."
+          ]
         }
       ],
       "takeaways": [
@@ -477,7 +497,8 @@
         "buyforme",
         "shipforme",
         "catalog"
-      ]
+      ],
+      "reviewedAt": "2026-10-30"
     },
     {
       "id": "cost",
@@ -504,7 +525,7 @@
           "heading": "Atskirkite fizinį svorį nuo maršruto kainai naudojamo svorio",
           "paragraphs": [
             "Siunta turi fizinę masę, tačiau vežėjas gali įkainoti ir jos užimamą erdvę. Taikomos maršruto taisyklės nustato, kaip šie matavimai paverčiami mokesčiu. Nemanykite, kad visi maršrutai naudoja tą patį tūrinio svorio daliklį, apvalinimo žingsnį ar palyginimo taisyklę. Perskaitykite dabartinę skaičiuoklę ir maršruto detales, o taisyklę saugokite kartu su įverčiu.",
-            "Įsivaizduokite hipotetinę dėžę, kurios matmenys yra 40, 30 ir 25 centimetrai. Jos tūris yra 30,000 kubinių centimetrų. Taikant pavyzdinį daliklį 6,000 tai atitiktų 5 kilogramus tūrinio svorio; taikant pavyzdinį daliklį 5,000 – 6 kilogramus. Tai matematiniai pavyzdžiai, o ne CSSBuy maršrutų specifikacijos. Jie rodo, kodėl daliklio kopijavimas iš nesusijusio pristatymo vadovo gali iš esmės pakeisti biudžetą, net kai fizinė siunta lieka ta pati."
+            "Įsivaizduokite hipotetinę dėžę, kurios matmenys yra 40, 30 ir 25 centimetrai. Jos tūris yra 30 000 kubinių centimetrų. Taikant pavyzdinį daliklį 6 000 tai atitiktų 5 kilogramus tūrinio svorio; taikant pavyzdinį daliklį 5,000 – 6 kilogramus. Tai matematiniai pavyzdžiai, o ne CSSBuy maršrutų specifikacijos. Jie rodo, kodėl daliklio kopijavimas iš nesusijusio pristatymo vadovo gali iš esmės pakeisti biudžetą, net kai fizinė siunta lieka ta pati."
           ]
         },
         {
@@ -548,6 +569,12 @@
             "Galutinis testas – ar prekė vis dar prasminga įvertinus visą pristatymo biudžetą. Nebrangi stambi prekė gali kainuoti daugiau gauti nei vietinė alternatyva. Brangesnė kompaktiška prekė gali duoti kitokį rezultatą. Į palyginimą įtraukite savo laiko vertę ir praktinius grąžinimo sunkumus, ypač kai prekės dydžio ar paskirties tinkamumas dar neaiškus.",
             "Po pristatymo išsaugokite pakuotės matmenis ir išlaidas kaip asmeninį atskaitos tašką. Jie gali pagerinti kitą panašios siuntos įvertį, bet vis tiek turi būti datuoti ir pažymėti kaip istoriniai. Įkainiai, maršrutai ir prekių pakuotės gali keistis. Todėl geriausia pristatymo skaičiuoklė yra sprendimų proceso dalis: padeda anksti patikrinti prielaidas, jas atnaujinti tikslėjant sandėlio informacijai ir pasirinkti dabartinį maršrutą pagal siuntą, kurią iš tiesų ketinate siųsti."
           ]
+        },
+        {
+          "heading": "Skaičiuoklės rezultatus lyginkite su tais pačiais duomenimis",
+          "paragraphs": [
+            "Atverkite oficialią CSSBuy siuntimo skaičiuoklę ir pasirinkite tikrąją paskirties vietą. Jei turite, įveskite išmatuotą svorį ir supakuotos siuntos matmenis, tada tinkamus maršrutus lyginkite su tuo pačiu turiniu ir pakavimo prielaidomis. Prie įverčio išsaugokite datą ir įvestas reikšmes. Supakavus įverčius pakeiskite galutiniais matmenimis ir dar kartą patikrinkite apmokestinamo svorio taisyklę. Prekių, vietinio pristatymo, tarptautinio siuntimo ir priedų išlaidas laikykite atskirai, kad maža maršruto kaina nebūtų palaikyta visa pristatymo kaina."
+          ]
         }
       ],
       "takeaways": [
@@ -559,12 +586,13 @@
         "buyforme",
         "estimates",
         "shipforme"
-      ]
+      ],
+      "reviewedAt": "2026-10-30"
     },
     {
       "id": "time",
       "slug": "cssbuy-shipping-time",
-      "title": "Kiek laiko užtrunka CSSBuy? Užsakymo laiko juosta",
+      "title": "CSSBuy pristatymo laikas: užsakymo etapai, sekimas ir vėlavimas",
       "description": "Atskirkite pardavėjo išsiuntimą, sandėlio sprendimus, tarptautinį transportą ir galutinį pristatymą, kad galėtumėte planuoti ir užduoti geresnius sekimo klausimus.",
       "category": "Pristatymas",
       "keywords": [
@@ -616,6 +644,20 @@
             "Turėkite trumpą žurnalą su data, patvirtintu etapu ir savo atliktu veiksmu. Tai gali būti vos kelios eilutės jūsų užrašuose. Atskirkite pastebėtus faktus nuo lūkesčių: „sandėlio nuotraukos prieinamos” yra faktas, o „turėtų išvykti rytoj” – lūkestis, nebent tai patvirtina oficiali paskyra. Šis atskyrimas padaro vėlesnius klausimus aiškesnius ir padeda įvertinti, kam iš tikrųjų prabėgo laikas.",
             "Po pristatymo užrašykite ir visą laikotarpį nuo užsakymo iki durų, ir tarptautinio transporto laikotarpį, jei atitinkamos datos prieinamos. Rezultatą naudokite kaip istorinį pavyzdį, o ne prognozę. Užsakant dar kartą naudingiausias patobulinimas gali būti greitesnis atsakymas į klausimus ar aiškesnio prieinamumo prekių pasirinkimas, o ne maršruto, kažkada suteikusio trumpiausią pristatymą pagal pasakojimą, paieška. Geras laiko planavimas sutelkia dėmesį į suprantamus etapus ir sprendimus, kuriuos galite priimti."
           ]
+        },
+        {
+          "heading": "Nustatykite, kuriame etape vėluojama, prieš prašydami pristatymo įverčio",
+          "paragraphs": [
+            "Pradėkite nuo užsakymo įrašo. Jei pardavėjas prekės dar neišsiuntė, klausimas susijęs su pirkimu arba vietiniu pristatymu. Jei ji sandėlyje, patikrinkite, ar QC, grąžinimo prašymas, pakavimo nurodymai ar mokėjimas laukia jūsų veiksmo. Jei pateikėte siuntą, patikrinkite, ar vežėjas užregistravo fizinį priėmimą. Šių etapų negalima skaičiuoti taip, tarsi siunta visą laiką keliavo tarptautiniu maršrutu.",
+            "Užsirašykite paskutinį užbaigtą etapą ir pirmąjį, kurio negalite patvirtinti. Pavyzdžiui, priėmimo sandėlyje nuotrauka atsako į kitą klausimą nei vežėjo priėmimo įrašas. Naudokite savo užsakymo datas, ne kito pirkėjo paskelbtos pristatymo ekrano kopijos datą. Maršruto trukmės įvertis naudingas tik žinant, kokį etapą aprašo ir ar jūsų siunta tą etapą pasiekė."
+          ]
+        },
+        {
+          "heading": "Paruoškite naudingą užklausą dėl sekimo",
+          "paragraphs": [
+            "Jei sekimas neatnaujinamas, surinkite siuntos numerį, pasirinktą liniją, pateikimo datą ir paskutinį matomą įvykį su laiku. Patikrinkite CSSBuy paskyroje nurodytą vežėjo sekimo nuorodą. Jei vėliau ta pati siunta gauna kitą pristatymo numerį, abu saugokite privačiai, o ne tikėkitės, kad pirmasis aprašys visus etapus. Viešai neskelbkite adreso ar neuždengtos siuntos etiketės.",
+            "Pagalbai užduokite konkretų klausimą: ar siunta perduota vežėjui, ar taikomas kitas sekimo numeris, ar reikia taisyti adresą. Nurodykite, ką jau patikrinote. Pradinę užklausą ir atsakymą laikykite kartu, kad tolesnis susirašinėjimas remtųsi tais pačiais įrodymais. Dėl trūkstamo nuskaitymo nepateikite ir neapmokėkite antros tokios pačios siuntos; pirmiausia patvirtinkite esamos būseną."
+          ]
         }
       ],
       "takeaways": [
@@ -626,12 +668,13 @@
       "sourceIds": [
         "buyforme",
         "storage"
-      ]
+      ],
+      "reviewedAt": "2026-10-30"
     },
     {
       "id": "warehouse",
       "slug": "cssbuy-warehouse-consolidation",
-      "title": "CSSBuy saugojimas sandėlyje ir siuntų jungimas",
+      "title": "CSSBuy sandėliavimas: sujungimas ir siuntos kontrolinis sąrašas",
       "description": "Planuokite saugojimą, peržiūrėkite prekes ir apgalvotai junkite siuntas pagal tikras prekes, terminus ir maršrutų ribojimus.",
       "category": "Sandėlis ir QC",
       "keywords": [
@@ -683,6 +726,20 @@
             "Patikrinkite, ar kiekvienai pasirinktai prekei priimtas galutinis sprendimas pasilikti. Patikrinkite pristatymo duomenis, kiekius, pakavimo prašymus ir neišspręstas pastabas. Perskaitykite realioms prekėms ir paskirties vietai prieinamus pristatymo pasirinkimus. Jei dėl prekės aktyviai kalbama apie grąžinimą, prieš įtraukdami išsiaiškinkite jos būseną. Galutinė peržiūra turi suderinti fizinį turinį su jau priimtais sprendimais.",
             "Išsaugokite siuntos identifikatorių ir paskyroje rodomus pasirinkimus. Po išsiuntimo inventorių laikykite įrašu, kas priklauso tai siuntai. Kai ji atvyks, tą patį įrašą naudokite turiniui patikrinti ir greitai užfiksuoti problemas. Taip uždaromas ryšys tarp atskirų užsakymų ir pristatytos pakuotės. Gerai valdomą sandėlio procesą apibrėžia ne sujungtų prekių skaičius, o aiškūs sprendimai, tinkamas pakavimas ir siunta, kurios turinį bei kainą suprantate."
           ]
+        },
+        {
+          "heading": "Prieš pakavimą naudokite sąrašą pasilikti, išsiaiškinti arba grąžinti",
+          "paragraphs": [
+            "Kiekvienai sandėlio prekei užrašykite užsakymo numerį, gavimo datą, pasirinktą variantą, QC rezultatą ir kitą veiksmą. Pasilikti žymėkite tik patikrinę sprendimą galinčias pakeisti detales. Išsiaiškinti žymėkite, jei vis dar trūksta svarbios etiketės, nuotraukos ar matmens. Užklausą dėl grąžinimo žymėkite, kai norite, kad pardavėjas peržiūrėtų užfiksuotą problemą. Toks atskyrimas neleidžia netyčia į bendrą siuntą įtraukti neišspręstos prekės.",
+            "Paskyroje atverkite kiekvienos prekės laikymo informaciją ir patikrinkite tikrąjį terminą. CSSBuy siuntimo paslaugų puslapis reklamuoja iki 90 dienų nemokamo laikymo, tačiau vis tiek reikia tikrinti konkrečios prekės būseną ir dabartinius pranešimus. Termino neskaičiuokite nuo dienos, kai pirmą kartą radote prekę. Jei reikia pratęsimo, apie galimybę ir kainą klauskite iki rodomo termino, o ne manykite, kad naujas užsakymas pradeda laiką iš naujo."
+          ]
+        },
+        {
+          "heading": "Palyginkite du tų pačių prekių pakavimo planus",
+          "paragraphs": [
+            "Viename plane palikite reikalingą pakuotę, kitame pašalinkite tik tai, ką saugu išmesti. Abiejuose išvardykite pasirinktas prekes, apsaugos poreikius ir numatomus siuntos matmenis. Lyginti reikia tą pačią paskirties vietą ir maršruto sąlygas. Mažmeninės dėžutės pašalinimas gali sumažinti tūrį, bet kartu apsaugą ar grąžinimo galimybes; apsispręskite prieš tarptautinį išsiuntimą ir išsaugokite reikalingus duomenis.",
+            "Gavę galutinius matmenis, jais pakeiskite biudžeto įverčius. Vėl patikrinkite pasirinktos linijos svorio, matmenų ir turinio apribojimus. Didesnė bendra siunta nėra automatiškai pigesnė už atskiras tinkamas siuntas. Tikrąsias galimybes palyginkite oficialioje skaičiuoklėje ir galutiniame pasiūlyme, tada išsaugokite supakuoto turinio ir pasirinktų paslaugų patvirtinimą."
+          ]
         }
       ],
       "takeaways": [
@@ -694,7 +751,8 @@
         "shipforme",
         "storage",
         "buyforme"
-      ]
+      ],
+      "reviewedAt": "2026-10-30"
     },
     {
       "id": "returns",
@@ -751,6 +809,20 @@
             "Išsprendus problemą užrašykite, kas būtų galėję ją sustabdyti. Galbūt variantų pavadinimai buvo dviprasmiški, trūko matmens ar nuotraukoje parodytas priedas nebuvo įtrauktas į pasirinktą pasiūlymą. Paverskite šią pamoką konkrečia patikra prieš pirkimą. Vieno rezultato nepaverskite nepagrįstu teiginiu, kad kiekvienas pardavėjas ar užsakymas elgsis taip pat.",
             "Būsimiems pirkimams saugokite aiškesnį norimos prekės aprašymą ir peržiūrėkite sandėlio įrodymus netrukus po jų atsiradimo. Gerai dokumentuotas pirkimas negarantuoja palankaus grąžinimo sprendimo, tačiau palengvina nesutarimų paaiškinimą ir padeda veikti, kol alternatyvos dar gali egzistuoti. Naudingiausia grąžinimo strategija prasideda prieš problemą: supraskite, ką perkate, išsaugokite susijusius įrodymus ir žinokite, kuris oficialios paskyros pokalbis priklauso sandoriui."
           ]
+        },
+        {
+          "heading": "Prieš tarptautinį išsiuntimą pateikite įrodymais pagrįstą prašymą",
+          "paragraphs": [
+            "Gautą prekę palyginkite su galutiniu užsakymo nurodymu: nuoroda, dydžiu, spalva, kiekiu ir patvirtintu pakeitimu. Matomą neatitikimą aprašykite su tinkama nuotrauka ar matavimu. Paaiškinkite, ar norite išsiaiškinti, ar prašote CSSBuy kreiptis į pardavėją dėl grąžinimo. Aiškus prašymas naudingesnis nei bendras teiginys, kad prekė bloga, ypač kai kalbama apie asmeninį kirpimo pasirinkimą, o ne klaidingą variantą.",
+            "Kol prašymas nagrinėjamas, išsaugokite pakuotę, etiketes ir priedus. Patikrinkite esamas pardavėjo ir platformos sąlygas, terminą ir kas moka už galimą grąžinimo siuntimą. Sandėlio apžiūra automatiškai negarantuoja, kad kiekvienas grąžinimas bus priimtas. Kol klausimas neišspręstas, prekės neįtraukite į tarptautinę siuntą, nes po eksporto procesas ir kaina gali pasikeisti."
+          ]
+        },
+        {
+          "heading": "Suderinkite grąžinamą sumą su pradiniu mokėjimu",
+          "paragraphs": [
+            "Užrašykite prekės kainą, pristatymo ar paslaugų mokesčius ir pagalbos atsakyme nurodytą grąžinamą sumą. Patikrinkite, ar tai paskyros kreditas, ar grąžinimas pradiniu mokėjimo kanalu. Tai skirtingi rezultatai, o paskyros likutis nėra banko jau gauti pinigai. Atskirai užsirašykite dar nebaigtą prašymo dalį.",
+            "Prieš užbaigdami įrašus palyginkite atliktą operaciją su sutartu sprendimu. Jei suma neaiški, remkitės pradiniu užsakymu ir pagalbos atsakymu, o ne kurkite nesusijusį skundą. Grąžinimo laikas priklauso nuo konkretaus sprendimo ir mokėjimo būdo; naudokite paskyros būseną bei tiekėjo informaciją, o ne žadėkite vienodą dienų skaičių visais atvejais."
+          ]
         }
       ],
       "takeaways": [
@@ -761,12 +833,13 @@
       "sourceIds": [
         "returns-policy",
         "expertbuy"
-      ]
+      ],
+      "reviewedAt": "2026-10-30"
     },
     {
       "id": "payments",
       "slug": "cssbuy-payment-fees",
-      "title": "CSSBuy mokesčiai ir mokėjimai: planuokite visą biudžetą",
+      "title": "CSSBuy mokesčiai ir mokėjimai: paslaugų mokesčiai ir bendra kaina",
       "description": "Atskirkite prekės, vietinio pristatymo, paslaugų, mokėjimo ir siuntos išlaidas, tada suderinkite oficialioje CSSBuy paskyroje rodomas sumas.",
       "category": "Užsakymai ir mokėjimai",
       "keywords": [
@@ -818,6 +891,20 @@
             "Kai pirkimas baigtas, užrašykite tikrąsias sumokėtas prekių, paslaugų ir pristatymo sumas kartu su koregavimais. Valiutas nurodykite aiškiai. Jei norite asmeninės bendros sumos viena valiuta, naudokite tikruose mokėjimuose atspindėtą konvertavimą arba aiškiai pažymėkite pasirinktą palyginimo kursą. Dabartinio kurso maišymas su istoriniais mokesčiais gali seną pirkinį parodyti pigesnį ar brangesnį, nei jis buvo.",
             "Palyginkite rezultatą su tuo, ką prekė jums suteikė, įskaitant tinkamumą, naudingumą ir procese įdėtą darbą. Toks apmąstymas vertingesnis už džiaugsmą maža skelbimo kaina ignoruojant likusią sąskaitą. Išsaugokite datą ir svarbią siuntos informaciją būsimam planavimui, bet nepaverskite rezultato garantuotu biudžetu kitam pirkėjui. Patikimas CSSBuy biudžetas yra konkretus, išskaidytas eilutėmis ir atnaujinamas, kai tikra informacija pakeičia įverčius."
           ]
+        },
+        {
+          "heading": "Paskelbtą formulę pritaikykite aiškiai pažymėtam pavyzdžiui",
+          "paragraphs": [
+            "2026 m. spalio 30 d. patikrintas oficialus CSSBuy Cost and Fees puslapis nurodo pirkimo paslaugos mokestį – 6% prekės kainos ir vietinio pristatymo Kinijoje sumos. Hipotetiniame užsakyme, kai prekė kainuoja 200 CNY, o vietinis pristatymas 10 CNY, formulė duoda 12,60 CNY. 222,60 CNY tarpinė suma apima tik šias tris dalis, o ne visą pristatytos prekės kainą. Tikrame užsakymo lange patikrinkite paskyrai taikomas kainas ar sąlygų pakeitimus.",
+            "Tarptautinį siuntimą, pasirinktas paslaugas ir taikomus mokėjimo ar valiutos keitimo mokesčius reikia vertinti atskirai. Pirkimo paslaugos procento automatiškai netaikykite kiekvienam vėlesniam mokėjimui. Prieš patvirtinimą užsirašykite, ką kiekvienas mokėjimas apima, valiutą ir galutinę sumą. Pavyzdys naudingas tik tada, kai aiški skaičiavimo bazė ir matomos neįtrauktos dalys."
+          ]
+        },
+        {
+          "heading": "Biudžeto apskaitą veskite per abu mokėjimo etapus",
+          "paragraphs": [
+            "Sukurkite eilutę prekės ir vietinio pristatymo mokėjimui, kitą pirkimo paslaugai, trečią tarptautiniam siuntimui ir atskiras eilutes priedams. Mokėjimo teikėjo rodomą sumą užrašykite ta valiuta, kuria iš tikrųjų mokėsite. Jei po korekcijos paskyroje lieka likutis, atskirkite jį nuo pinigų, grąžintų pradiniu mokėjimo būdu.",
+            "Prieš siųsdami visas apytiksles sumas pakeiskite tuo etapu prieinamais patvirtintais skaičiais. Jei bendra suma viršija ribą, peržiūrėkite pasirenkamas paslaugas arba dar pakeičiamą pirkinį. Nesirinkite netinkamos linijos tik tam, kad senasis biudžetas atrodytų teisingas. Mokėjimo įrašus laikykite su užsakymo ir siuntos numeriais, kad korekciją ar užklausą būtų galima susieti su tinkama operacija."
+          ]
         }
       ],
       "takeaways": [
@@ -829,7 +916,8 @@
         "fees",
         "about",
         "buyforme"
-      ]
+      ],
+      "reviewedAt": "2026-10-30"
     },
     {
       "id": "links",
@@ -886,6 +974,20 @@
             "Patikimame asmeniniame įraše yra šaltinio skelbimas, CSSBuy puslapis ir galutinis užsakymo identifikatorius. Kiekvienas turi skirtingą paskirtį. Šaltinis paaiškina, kas buvo siūloma, tikslinis puslapis yra vieta, kur peržiūrėjote pirkimo variantą, o užsakymo įrašas seka, ko iš tikrųjų paprašėte. Jei skelbimas vėliau pasikeičia, išsaugotos detalės gali paaiškinti pradinio sprendimo pagrindą.",
             "Naudokite šį įrašą lygindami sandėlio įrodymus ar aptardami neatitikimą. Netinkamą variantą daug lengviau nustatyti, kai išsaugota pasirinkta formuluotė ir vaizdas. Po pirkimo atnaujinkite įrašą tuo, ką sužinojote apie kiekį, dydžius ar bendravimą su pardavėju. Tikslas nėra paskelbti universalų laimėtoją tarp Taobao, Weidian ir 1688. Tikslas – padaryti kiekvieną šaltinio nuorodą atsekamą, o kiekvieną pirkimo sprendimą suprantamą iš tuo metu turėtos informacijos."
           ]
+        },
+        {
+          "heading": "Patikrinkite, ar nuoroda veda į norimą užsakyti prekę",
+          "paragraphs": [
+            "Išsaugokite pradinį prekyvietės prekės URL ir atverkite jį prieš įklijuodami į oficialų CSSBuy pirkimo procesą. Pardavėją, pavadinimą ir pasirinkimus palyginkite su trumpuoju sąrašu. Sutrumpinta bendrinimo nuoroda, parduotuvės pradinis puslapis ir atskiros prekės adresas nėra tapatūs. Jei puslapis veda į kolekciją ar kitą variantą, skirtumą išspręskite prieš mokėjimą.",
+            "CSSBuy atpažinus nuorodą, patikrinkite įkeltą informaciją ir variantus; vien konvertavimas neįrodo, kad viskas teisinga. Užrašykite kiekį, spalvą, dydį ir konkrečiam pasiūlymui rodomą minimalų pardavėjo reikalavimą. Jei adreso nepavyksta apdoroti, naudokite oficialią pagalbą su pradine nuoroda ir aiškiais duomenimis. Alternatyvaus prekyvietės identifikatoriaus nespėkite iš kitur kataloge matomo numerio."
+          ]
+        },
+        {
+          "heading": "Prekių identifikatorius atskirkite nuo užsakymų numerių",
+          "paragraphs": [
+            "Prekių paieškos svetainė gali suteikti vidinį numerį, prekyvietė naudoja kitą prekės identifikatorių, o CSSBuy po pirkimo priskiria dar vieną. Kiekvieną išsaugokite kartu su paskirtimi. Klausiant apie pirkimą pateikite pradinę nuorodą, apie apmokėtą užsakymą – CSSBuy užsakymo numerį. Sandėlio siuntos numeris tampa svarbus tik sugrupavus prekes tarptautiniam pristatymui.",
+            "Toks atskyrimas padeda saugiau lyginti ir vėliau. Naujas pasiūlymas su ta pačia nuotrauka gali turėti kitą pardavėją ar identifikatorių. Patikrinkite jį kaip naują pasiūlymą, o ne be įrašo pakeiskite išsaugotą nuorodą. Nuorodų konvertavimo vadovo nevadinkite veikiančiu įrankiu, jei svetainė tikrai neatlieka konvertavimo ir nerodo patikrinamo galutinio adreso."
+          ]
         }
       ],
       "takeaways": [
@@ -897,7 +999,8 @@
         "buyforme",
         "expertbuy",
         "user-link"
-      ]
+      ],
+      "reviewedAt": "2026-10-30"
     },
     {
       "id": "sizing",
@@ -954,6 +1057,20 @@
             "Lanksčios medžiagos, matavimo technika ir konstrukcija gali sukelti nedidelius skirtumus. Nelaikykite nufotografuotos liniuotės tokio tikslumo įrodymu, kurio matavimo aplinka negali užtikrinti. Nuspręskite, ar likęs neapibrėžtumas priimtinas pagal tinkamumo jautrumą. Jei matmuo turi patekti į labai siaurą intervalą, kad prekė tiktų, nuotoliniam pirkimui gali reikėti daugiau įrodymų, nei skelbimas gali suteikti.",
             "Po pristatymo išmatuokite ir pasimatuokite prekę, tada užrašykite rezultatą naudodami tą pačią atskaitos sistemą. Pažymėkite, ar lentelė buvo naudinga, ar pasirinktas palyginimo drabužis tinkamas ir kuris matmuo svarbiausias. Asmeninį pageidavimą atskirkite nuo universalios išvados apie pardavėjo dydžius. Per kelis pirkimus tai sukuria praktišką tinkamumo įrašą, pagrįstą jūsų patirtimi. Jis patikimesnis nei nuolatinis patarimo rinktis didesnį ar mažesnį dydį taikymas nežinant prekės, lentelės ar dėvinčio žmogaus."
           ]
+        },
+        {
+          "heading": "Matmenis lyginkite pagal vienodus galinius taškus",
+          "paragraphs": [
+            "Drabužiams užrašykite, ar lentelėje nurodytas lygiai padėto drabužio plotis, visa apimtis ar rekomenduojama kūno išmiera. Šių dydžių tiesiogiai nelyginkite. Kūno dalies ir rankovės ilgį matuokite pagal schemos pradžią ir pabaigą, ypač nuleistų pečių ar reglano modeliams. Patogų etaloninį drabužį matuokite taip pat, netempdami, o prie kiekvienos reikšmės įrašykite vienetą.",
+            "Avalynei atskirkite pėdos, vidpadžio ir pado ilgį. Pado nuotrauka neatskleidžia naudojamos vidinės erdvės. Abi pėdas matuokite vienodai ir atsižvelkite į planuojamas kojines ar įdėklus. Pardavėjo dydžio žyma galioja konkrečiam pasiūlymui, tai nėra universali tinkamumo garantija. Paprašykite svarbios išmieros, o ne taikykite taisyklę visada rinktis didesnį ar mažesnį dydį."
+          ]
+        },
+        {
+          "heading": "Sandėlio matavimą naudokite sprendimui patikrinti",
+          "paragraphs": [
+            "Prieš užsakydami papildomą matavimą nuspręskite, kokį rezultatą gavę prekę pasiliksite ar klausite apie grąžinimą. Jei paslauga prieinama, prašykite matomos liniuotės ir aiškių galinių taškų bei patikrinkite mokestį. Sandėlio rezultatą lyginkite su pradine lentele tuo pačiu metodu. Jei nuotrauka neaiški, prašykite paaiškinimo, o ne perspektyvos skirtumą laikykite patvirtintu defektu.",
+            "Matavimo įrašą laikykite šalia pasirinkto dydžio ir užsakymo numerio. Jei skirtumas priimtinas, užrašykite, kodėl jis vis dar tinka pageidaujamam kirpimui. Jei ne, konkretų neatitikimą aprašykite oficialiai pagalbai, kol prekė sandėlyje. Gavę užrašykite tikrąjį tinkamumą būsimiems sprendimams dėl tos prekės, ne manydami, kad visų gaminių išmieros vienodos."
+          ]
         }
       ],
       "takeaways": [
@@ -964,7 +1081,283 @@
       "sourceIds": [
         "buyforme",
         "expertbuy"
-      ]
+      ],
+      "reviewedAt": "2026-10-30"
+    },
+    {
+      "id": "shipping-usa",
+      "slug": "cssbuy-shipping-to-usa",
+      "title": "CSSBuy siuntimas į JAV: kaina, sekimas ir siuntos paruošimas",
+      "description": "Planuokite CSSBuy siuntą į JAV: palyginkite dabartines kainas, patikrinkite supakuotus matmenis, paruoškite adresą ir sekite pristatymo etapus.",
+      "category": "Siuntimas",
+      "keywords": [
+        "cssbuy siuntimas į jav",
+        "cssbuy siuntimo į jav kaina",
+        "cssbuy jav sekimas",
+        "cssbuy siuntimo skaičiuoklė"
+      ],
+      "intro": "CSSBuy užsakymo siuntimas į Jungtines Valstijas prasideda dar prieš pasirenkant tarptautinę liniją. Prekės turi pasiekti sandėlį, atitikti užsakymą, pasirinkto maršruto sąlygas ir bendrą biudžetą. Naudingas klausimas ne kuris maršrutas visada pigiausias, o kuri šiuo metu prieinama linija priima jūsų konkrečią siuntą ir paskirties vietą. Šiame vadove pateikiamas praktinis palyginimo procesas nežadant fiksuotos kainos ar atvykimo datos. Greta sąrašo laikykite atvertą oficialią CSSBuy skaičiuoklę ir paskyrą: tikrąsias galimybes lemia dabartinės linijos sąlygos ir galutiniai siuntos matmenys.",
+      "sections": [
+        {
+          "heading": "Atskirkite pirkimą nuo tarptautinės siuntos",
+          "paragraphs": [
+            "Oficialus CSSBuy pirkimo vadovas skiria prekių užsakymą ir sandėlio siuntos pateikimą. Pirmiausia nurodykite prekės nuorodą ir reikiamus variantus. Pirkimo etapas apima prekes ir taikomą pristatymą Kinijoje. Prekėms atvykus peržiūrėkite sandėlio informaciją bei nuotraukas ir tik tada organizuokite tarptautinį siuntimą. Mokėjimas už prekes nereiškia, kad tarptautinė siunta jau iškeliavo.",
+            "JAV užsakymui veskite du paprastus įrašus: po vieną kiekvienai prekei ir vieną siunčiamam paketui. Prekės įraše nurodykite nuorodą, dydį, spalvą, kiekį ir sandėlio būseną. Siuntos įraše – pasirinktas prekes, paskirties vietą, pakavimo nurodymus ir tarptautinį maršrutą. Atskirti įrašai padeda nesupainioti pardavėjo vietinio sekimo numerio su galutinio pristatymo numeriu."
+          ]
+        },
+        {
+          "heading": "Įveskite visą Jungtinių Valstijų adresą",
+          "paragraphs": [
+            "Naudokite oficialios skaičiuoklės ir siuntos formos prašomą šalį bei pašto duomenis. Prieš mokėdami patvirtinkite gavėjo vardą, gatvę, buto ar patalpos numerį, miestą, valstiją ir ZIP kodą. Patikrinkite, ar maršrutas priima norimą adreso tipą; nemanykite, kad visos linijos vienodai aptarnauja kiekvieną adresą, teritoriją ar atokią vietovę.",
+            "Adresą išsaugokite taip, kad galėtumėte palyginti su siuntos patvirtinimu. Jei forma adresą suskaido į laukus, patikrinkite ir bendrą vaizdą, ne vien atskirus langelius. Sutelkus dėmesį į kainą lengva nepastebėti trūkstamo buto numerio. Klausiant kitų pirkėjų apie maršrutą viešai nesidalinkite adresu ar asmens duomenis rodančiomis sekimo kopijomis."
+          ]
+        },
+        {
+          "heading": "Įvertį sudarykite su sąžiningais duomenimis",
+          "paragraphs": [
+            "Atverkite oficialią CSSBuy siuntimo skaičiuoklę, pasirinkite JAV ir įveskite prašomą svorį bei matmenis. Jei turite sandėlio matavimus, naudokite juos. Prieš prekių atvykimą svorius ir pakuotės matmenis žymėkite kaip įverčius, ne matavimus. Lyginkite tik linijas, priimančias atitinkamą kategoriją ir siuntos dydį. Maža rodoma kaina netinka, jei maršrutas nepriima turinio.",
+            "Prie kiekvieno įverčio užrašykite datą, paskirties vietą, svorį, matmenis ir pakavimo prielaidas. Taip suprasite, kodėl vėlesnė kaina pasikeitė. Pirmiausia tą pačią siuntą lyginkite tarp maršrutų, tada viename maršrute palyginkite pakuotes. Vienu metu keičiant svorį, paskirtį ir pakavimą neįmanoma nustatyti, iš kur atsirado tariamas sutaupymas."
+          ]
+        },
+        {
+          "heading": "Supraskite supakuotą dydį ir apmokestinamą svorį",
+          "paragraphs": [
+            "Tarptautinis transportas gali vertinti ir siuntos užimamą erdvę, ir svarstyklių svorį. CSSBuy vakuuminį pakavimą apibūdina kaip tinkamų drabužių tūrio mažinimo būdą. Tai nereiškia, kad spaudimas tinka viskam. Batams, formą turintiems aksesuarams ir trapiems gaminiams pakuotę reikia rinktis pagal formą bei apsaugą, ne vien mažiausią įvertį.",
+            "Pavyzdžiui, 40 × 30 × 25 centimetrų siuntos tūris yra 30 000 kubinių centimetrų. Jei konkreti linija aiškiai naudoja daliklį 6 000, šiame pavyzdyje tūrinis svoris bus 5 kilogramai. Tai skaičiavimo pavyzdys, ne teiginys, kad visos JAV linijos taiko tokį daliklį. Prieš lygindami su išmatuotu svoriu perskaitykite tikrąją pasirinktos linijos taisyklę ir apvalinimo metodą."
+          ]
+        },
+        {
+          "heading": "Palyginkite visas tos pačios siuntos išlaidas",
+          "paragraphs": [
+            "Prekių kainą, vietinį pristatymą, pirkimo paslaugos mokestį, tarptautinį siuntimą ir pasirinktą pakavimą laikykite atskirose eilutėse. Oficialus CSSBuy mokesčių puslapis paaiškina, kad prekių pirkimas ir transportas yra skirtingos sąnaudų dalys. Mokėjimo, valiutos keitimo ir paskirties mokesčius tikrinkite ten, kur jie taikomi, o ne manykite, kad pagrindinė siuntimo kaina juos apima.",
+            "Prieš pasirinkdami priedus nustatykite didžiausią bendrą sumą. Jei dvi tinkamos linijos kainuoja skirtingai, palyginkite jų nurodomą trukmę, apribojimus, sekimą ir paskyroje pateiktas apsaugos sąlygas. Brangesnė linija gali tikti terminui, bet greitesnis transporto įvertis vis tiek neapima laiko, praleisto laukiant pardavėjo ar sandėlio patikrų."
+          ]
+        },
+        {
+          "heading": "Kokybės patikras užbaikite prieš sujungdami prekes",
+          "paragraphs": [
+            "Peržiūrėkite tikrąsias kiekvienos pasirinktos prekės sandėlio nuotraukas. Patvirtinkite kiekį, spalvą, etiketę ir dydžiui svarbias išmieras. Jei nuotraukoje nematyti svarbios detalės, prašykite paaiškinimo prieš bendrą pakavimą. Bendroji sandėlio patikra neįrodo autentiškumo, medžiagos sudėties, patvarumo ar idealaus tikimo; tam reikia įrodymų, kurių nuotrauka gali nepateikti.",
+            "Grupuokite suderinamas prekes ir rašykite konkrečius nurodymus. Pavyzdžiui, nurodykite, kurias batų dėžutes palikti ir kurį drabužį galima sulankstyti glaudžiau. Vien dėl mažesnio tūrio nešalinkite grąžinimui ar tiksliems įrašams reikalingų duomenų. Galimą grąžinimą išspręskite prieš įtraukdami prekę į tarptautinę siuntą, nes išvykus iš sandėlio galimybės keičiasi."
+          ]
+        },
+        {
+          "heading": "Patikrinkite galutinį siuntos patvirtinimą",
+          "paragraphs": [
+            "Galutinė supakuota siunta gali skirtis nuo įverčio: apsauginės medžiagos didina svorį, keičiasi dėžės matmenys. Patvirtinimo lange dar kartą patikrinkite svorį, matmenis, įtrauktas prekes ir liniją. Jei mokestis skiriasi nuo išsaugoto įverčio, pirmiausia palyginkite matavimus ir paslaugas. Neaiškų skirtumą paprašykite CSSBuy paaiškinti prieš leisdami išsiųsti.",
+            "Patvirtinimą, mokėjimo įrašą ir pakavimo nurodymus laikykite kartu. Kai procesas prašo prekių aprašymų ir verčių, įrašykite juos tiksliai ir patikrinkite taikomus oficialius paskirties reikalavimus. Vadovas nežada neapmokestinamo slenksčio ar garantuoto muitinės rezultato. Senos forumo kopijos nelaikykite dabartine JAV siuntimo taisykle."
+          ]
+        },
+        {
+          "heading": "Sekite atskirus siuntos kelionės etapus",
+          "paragraphs": [
+            "Atskirkite sandėlio apdorojimą, perdavimą vežėjui, tarptautinį transportą, apdorojimą paskirties vietoje ir galutinį pristatymą. Sekimo numeris gali atsirasti prieš vežėjo fizinį priėmimą. Prieš nuspręsdami, kad siunta sustojo, perskaitykite paskutinio įvykio datą, vietą ir tekstą. Naudokite CSSBuy paskyros informaciją ir tai siuntai nurodytą vežėją.",
+            "Jei atnaujinimas vėluoja, surinkite siuntos numerį, išsiuntimo datą, maršruto pavadinimą ir paskutinį įvykį. Privačiai nusiųskite juos oficialiai pagalbai ir aprašykite konkretų trūkstamą etapą. Neatidarykite nesusijusių prašymų su skirtingais paaiškinimais. Trumpa istorija padeda atskirti sandėlio klausimą nuo vežėjo nuskaitymo vėlavimo ar adreso klaidos."
+          ]
+        },
+        {
+          "heading": "Palengvinkite kitos JAV siuntos planavimą",
+          "paragraphs": [
+            "Gavę užrašykite faktinį supakuotą svorį, matmenis, kelionės trukmę ir sumokėtus mokesčius. Prieš išmesdami pakuotę patikrinkite ir nufotografuokite žalą. Gautas prekes palyginkite su užsakymo įrašu ir esant problemai greitai kreipkitės oficialia tvarka. Vienas pristatymas yra naudinga asmeninė patirtis, ne garantija kitam maršrutui ar sezonui.",
+            "Kitam pirkimui vėl naudokite kontrolinį sąrašą, o ne tikėkitės tos pačios kainos. Dar kartą patikrinkite veikiančią skaičiuoklę, kiekvienos prekės laikymo būseną ir pageidaujamos linijos prieinamumą. Patikimiausiai sutaupoma iki pateikimo išvengiant netinkamų pirkinių, nereikalingo pakuotės tūrio ir nepilno adreso."
+          ]
+        }
+      ],
+      "takeaways": [
+        "JAV maršrutus lyginkite su ta pačia paskirties vieta, turiniu ir supakuotais matmenimis.",
+        "QC ir pakavimo sprendimus užbaikite prieš pateikdami tarptautinę siuntą.",
+        "Įverčius atskirkite nuo galutinių mokesčių ir atskirai sekite sandėlio bei vežėjo etapus."
+      ],
+      "sourceIds": [
+        "buyforme",
+        "estimates",
+        "fees",
+        "shipforme"
+      ],
+      "reviewedAt": "2026-10-30"
+    },
+    {
+      "id": "shoes-spreadsheet",
+      "slug": "cssbuy-shoes-spreadsheet",
+      "title": "CSSBuy avalynės sąrašas: dydžiai, QC ir pirkimo vadovas",
+      "description": "CSSBuy avalynės sąraše palyginkite tikras prekių nuorodas, išmieras ir sandėlio nuotraukas bei suplanuokite batų dėžučių pakavimą.",
+      "category": "Prekių vadovai",
+      "keywords": [
+        "cssbuy avalynės sąrašas",
+        "cssbuy sportbačiai",
+        "cssbuy batų dydžiai",
+        "cssbuy batų qc"
+      ],
+      "intro": "CSSBuy avalynės sąrašas naudingiausias, kai padeda pasirinkti konkrečią porą, o ne rinkti nesibaigiančias nuorodas. Graži nuotrauka ir pažįstama dydžio žyma yra tik pradžia. Reikia aiškaus varianto įrašo, matavimo metodo, gautos poros nuotraukų ir pakavimo sprendimo. Vadove pateiktas pakartojamas būdas palyginti batus ir patikrinti užsakymą prieš tarptautinį išsiuntimą. Katalogas skirtas atradimui; pardavėjo teiginius, prieinamumą ir tikslų variantą vis tiek reikia patikrinti susietame pasiūlyme ir CSSBuy užsakyme.",
+      "sections": [
+        {
+          "heading": "Pradėkite nuo batų paskirties",
+          "paragraphs": [
+            "Užrašykite, kaip naudosite porą, kaip ji turėtų tikti ir didžiausią bendrą biudžetą. Kasdienis dėvėjimas, vieta ortopediniam įdėklui ir drėgnas oras kelia skirtingus reikalavimus. Nuotrauka neįrodo specialaus saugumo, sportinių savybių ar ilgaamžiškumo. Jei reikalavimas priklauso nuo medžiagos ar konstrukcijos, prieš išleisdami nustatykite, kokie įrodymai jį pagrįstų.",
+            "Palikite du ar tris kandidatus. Užrašykite nuorodą, pasirinktą spalvą, pardavėjo dydžių duomenis, kainą ir neatsakytus klausimus. Poros nevertinkite geriau vien dėl ryškesnės miniatiūros. Vienodi palyginimo laukai padeda atmesti netinkamus variantus ir pirkimo agentui užduoti konkretų klausimą."
+          ]
+        },
+        {
+          "heading": "Patikrinkite tikslią kortelės nuorodos prekę",
+          "paragraphs": [
+            "Atverkite detalų puslapį ir peržiūrėkite pardavėjo nuotraukas bei pirminį pasiūlymą. Patvirtinkite, ar kaina taikoma norimam dydžiui, spalvai ir versijai. Kortelė gali apibendrinti pasiūlymą, tačiau negarantuoja visų variantų prieinamumo. Išsaugokite tikslią nuorodą, kad panaši nuotrauka vėliau nenuvestų į kitą pasiūlymą.",
+            "CSSBuy pirkimo puslapyje prieš pateikdami užsakymą patikrinkite variantą. Jei nuoroda neatpažįstama arba pasirinkimai neaiškūs, naudokite oficialią pagalbą. Vidinio katalogo įrašo numerio nenaudokite vietoje prekyvietės identifikatoriaus. Tiksli nuoroda ir aiškus dydis naudingesni už miglotą prašymą nupirkti porą iš ekrano kopijos."
+          ]
+        },
+        {
+          "heading": "Išmatuokite prieš pasirinkdami dydžio žymą",
+          "paragraphs": [
+            "Abi pėdas matuokite tuo pačiu būdu ir nurodykite vienetą. Palyginkite su konkretaus pasiūlymo rekomendacijomis, atsižvelgdami į pardavėjo matmens apibrėžimą. Pėdos, vidpadžio ir pado ilgis reiškia skirtingus dalykus. Pado ilgis nėra naudojamas vidinis ilgis, o europinis skaičius neįrodo, kad skirtingi modeliai tiks vienodai.",
+            "Patogią jau turimą porą naudokite kaip papildomą atskaitą, jei galima atlikti palyginamą matavimą. Užrašykite kojinių, įdėklų ar pageidaujamos laisvos erdvės įtaką. Venkite universalaus nurodymo visada imti vienu dydžiu didesnius. Jei trūksta sprendimui svarbaus matmens, klauskite arba rinkitės geriau aprašytą pasiūlymą."
+          ]
+        },
+        {
+          "heading": "Trumpąjį sąrašą paverskite aiškiu užsakymu",
+          "paragraphs": [
+            "Kiekvienai porai įrašykite URL, spalvą, dydžio žymą, kiekį ir matmenį, kuriuo rėmėtės. Jei platforma leidžia pastabas, reikalavimą aprašykite tiksliai. Prašymą parodyti dydžio etiketę ar pamatuoti konkrečią atkarpą lengviau įvykdyti nei bendrą prašymą geriausios kokybės. Prieš papildomą darbą patvirtinkite paslaugos prieinamumą ir kainą.",
+            "Pateikę patikrinkite užsakymo santrauką. Jei pasirinkimo nėra, siūlomą pakaitalą vertinkite kaip naują sprendimą, ne automatiškai priimkite. Kita spalva ar dydis gali reikšti kitas medžiagas ar išmieras. Pradinį prašymą ir patvirtintą pakeitimą laikykite kartu, kad sandėlio patikra turėtų aiškų pagrindą."
+          ]
+        },
+        {
+          "heading": "Atskirkite pardavėjo nuotraukas nuo sandėlio QC",
+          "paragraphs": [
+            "Katalogo nuotraukos pristato pasiūlymą, jos neįrodo jūsų gautos poros būklės. Sandėlio QC nuotraukos susijusios su jūsų užsakymui gautais batais ir turi būti lyginamos su pasirinktu variantu. Ši svetainė šiuo metu neturi atskirai prijungtos QC nuotraukų paieškos, todėl naudokite CSSBuy paskyros nuotraukas ir pagalbą.",
+            "CSSBuy sandėlio apžiūrą apibūdina kaip bendrą patikrą. Nuotraukos padeda nustatyti matomus skirtumus, trūkstamas dalis ar klaidingą etiketę, bet nesertifikuoja autentiškumo, ilgaamžiškumo ar patogumo. Neaiškią nuotrauką laikykite informacijos trūkumu. Geriau paprašykite reikiamo kampo, nei šešėlį ar atspindį paskelbkite patvirtintu defektu."
+          ]
+        },
+        {
+          "heading": "Porą tikrinkite nuosekliai",
+          "paragraphs": [
+            "Pradėkite nuo tapatumo: du batai, norima spalva, sutampančios dydžio etiketės ir priedai. Tada kairį ir dešinį batą lyginkite panašiais kampais. Apžiūrėkite matomas siūles, pado kraštus, užsegimus ir pamušalą dėl tikrai matomų problemų. Apšvietimas ir perspektyva keičia vaizdą, todėl nedarykite išvados vien iš skirtingų kampų.",
+            "Tada patikrinkite dydį nulėmusį matmenį. Jei paslauga leidžia, paprašykite aiškiai padėtos liniuotės ir nurodykite matavimo pradžią bei pabaigą. Galiausiai matomą neatitikimą palyginkite su užsakymu. Atskirti reikia aiškią klaidą, pavyzdžiui, netinkamo dydžio etiketę, ir subjektyvų norą, kurio pardavėjas gali nelaikyti defektu."
+          ]
+        },
+        {
+          "heading": "Nuspręskite pasilikti, išsiaiškinti ar prašyti grąžinimo",
+          "paragraphs": [
+            "Naudokite tris kategorijas. Pasilikite, jei reikiamos detalės atitinka, o likęs neapibrėžtumas priimtinas. Prašykite paaiškinimo, jei trūkstama nuotrauka ar matmuo galėtų pakeisti sprendimą. Dėl grąžinimo kreipkitės turėdami užfiksuotą neatitikimą ar kitą pardavėjui peržiūrėtiną priežastį. Taikomas sąlygas ir terminus tikrinkite per CSSBuy bei pardavėją.",
+            "Problemą aprašykite su užsakymo numeriu ir trumpu prašyto bei gauto varianto palyginimu. Įrodymus pateikite oficialiu pagalbos kanalu. Nesujunkite nesusijusių abejonių į reikalavimą garantuotai grąžinti pinigus. Kol svarstomas grąžinimas, batus ir pakuotę išlaikykite nepažeistus ir neįtraukite į tarptautinę siuntą, kol klausimas neišspręstas."
+          ]
+        },
+        {
+          "heading": "Batų dėžutę rinkitės vertindami visą siuntą",
+          "paragraphs": [
+            "Mažmeninė dėžutė užima vietos, bet gali saugoti formą, priedus ar būti svarbi grąžinimui. Prieš keisdami pakavimą nuspręskite, ar jos reikia. Pašalinę pagalvokite apie apsaugą nuo spaudimo ir judėjimo. Pakuotės atsisakymas ne visada sumažina galutinę kainą; tai lemia pasirinktos linijos svorio ir tūrio taisyklės.",
+            "Lyginkite visos supakuotos siuntos svorį ir matmenis, o ne spėjamą svorį dauginkite iš batų skaičiaus. Batai su drabužiais gali tilpti kitaip nei kelios dėžės. Oficialioje skaičiuoklėje naudokite savo siuntos tikslą ir sąlygas, tada įvertį atnaujinkite gavę galutinius sandėlio matavimus."
+          ]
+        },
+        {
+          "heading": "Užfiksuokite rezultatą, užuot vėl spėlioję",
+          "paragraphs": [
+            "Gavę batus matuokitės patalpoje ant švaraus paviršiaus ir patikrinkite užsakymą. Užrašykite dydį, svarbias išmieras ir palyginimą su savo etalonine pora. Problemų nuotraukas ir pakuotę išsaugokite, kol aišku, ar reikės pagalbos. Vienas sėkmingas užsakymas neįrodo, kad kitas pasiūlymas su panašia nuotrauka bus toks pats.",
+            "Sąrašą papildykite tikrai naudinga informacija: patikima lentele, aiškiu sandėlio matavimu ar porą apsaugojusiu pakavimo sprendimu. Pašalinkite klaidingas prielaidas. Nedidelis išmatuotų sprendimų įrašas ilgainiui naudingesnis už didelį nepaaiškintų nuorodų ir nuo kitų pirkėjų nukopijuotų vertinimų sąrašą."
+          ]
+        }
+      ],
+      "takeaways": [
+        "Prieš užsakydami patikrinkite tikslų variantą ir pardavėjo matavimo metodą.",
+        "QC naudokite savo sandėlio nuotraukas; katalogo vaizdai nepatvirtina gautos poros.",
+        "Grąžinimą išspręskite prieš siuntimą, o dėžutes lyginkite pagal galutinius siuntos matmenis."
+      ],
+      "sourceIds": [
+        "buyforme",
+        "expertbuy",
+        "shipforme",
+        "estimates",
+        "returns-policy"
+      ],
+      "reviewedAt": "2026-10-30"
+    },
+    {
+      "id": "hoodie-spreadsheet",
+      "slug": "cssbuy-hoodie-spreadsheet",
+      "title": "CSSBuy džemperių sąrašas: matmenys, audinys ir QC vadovas",
+      "description": "CSSBuy džemperių nuorodas lyginkite pagal drabužio matmenis, audinio informaciją, sandėlio nuotraukas ir pakavimo patikras.",
+      "category": "Prekių vadovai",
+      "keywords": [
+        "cssbuy džemperių sąrašas",
+        "cssbuy džemperiai",
+        "cssbuy džemperių dydžiai",
+        "cssbuy džemperių qc"
+      ],
+      "intro": "CSSBuy džemperių sąrašas turėtų padėti atsakyti į kelis praktinius klausimus: ar drabužis tiks taip, kaip norite, ar pasiūlyme paaiškintas audinys ir ar gautą prekę galėsite patikrinti prieš išsiuntimą? Dydžio raidė ir priekinė nuotrauka retai atsako į visus tris. Pradėkite nuo džemperių bei megztinių kategorijos, tada lyginkite tikslius variantus ir matmenis. Vadovas paaiškina, kaip sudaryti naudingą pasirinkimą, prašyti aiškių įrodymų ir įvertinti didelių drabužių tūrį. Čia nereitinguojami neišbandyti gaminiai ir pardavėjo nuotraukos nevadinamos patvirtintu sandėlio QC.",
+      "sections": [
+        {
+          "heading": "Norimą siluetą nustatykite prieš naršydami",
+          "paragraphs": [
+            "Pasirinkite patogų jau turimą džemperį ir nuspręskite, ką keistumėte: ilgesnį liemenį, platesnę krūtinę, trumpesnes rankoves ar daugiau vietos marškinėliams. Kur galima, norus išreikškite matmenimis. Oversized, relaxed ir regular nurodo sumanymą, bet nesuteikia vienodų išmierų pas skirtingus pardavėjus ar prekių ženklus.",
+            "Apgalvokite sezoną ir sluoksniavimą. Sunkiau atrodančio gaminio nuotrauka neįrodo šilumos, o storas gobtuvas nenustato viso drabužio svorio. Biudžetą laikykite atskirai nuo stiliaus pasirinkimo, kad patrauklus dizainas nepaslėptų trūkstamų dydžio duomenų ar dar neįskaičiuoto tarptautinio pristatymo."
+          ]
+        },
+        {
+          "heading": "Palyginkite konkrečius džemperių pasiūlymus",
+          "paragraphs": [
+            "Atverkite kiekvieno kandidato detales ir užrašykite nuorodą, spalvą, dydžių diapazoną bei versiją. Patikrinkite, ar po viena pradine kaina nesujungti skirtingi drabužiai ar audiniai. Raskite dydžių lentelę ir medžiagos aprašymą bei įsitikinkite, kad jie taikomi būtent norimam variantui. Miniatiūra kviečia nagrinėti, bet nėra specifikacija.",
+            "Pasirinkimą apribokite keliais kandidatais, turinčiais pakankamai duomenų. Panašios nuotraukos nereiškia vienodos kilmės ar išmierų. Neišspręstą klausimą palikite prie kandidato, o ne užpildykite kito gaminio atsiliepimu. Geriausias trumpasis sąrašas yra tas, kurį galite aiškiai paaiškinti prieš pirkimą."
+          ]
+        },
+        {
+          "heading": "Etaloninį drabužį matuokite nuosekliai",
+          "paragraphs": [
+            "Džemperį patieskite lygiai jo netempdami. Užrašykite krūtinės plotį nuo krašto iki krašto, liemens ilgį su aiškia pradžia, rankovės ilgį ir pečių plotį, jei konstrukcija leidžia palyginti. Pažymėkite nuleistus pečius ar reglano rankovę: matavimo nuo peties siūlės negalima tiesiogiai lyginti su matavimu nuo kaklo.",
+            "Sekite pardavėjo schema, o ne savo susitarimu. Pavyzdžiui, 60 centimetrų plokščias krūtinės plotis nėra tas pats kaip 60 centimetrų apimtis. Padvigubintas plotis padeda suprasti geometriją, bet nepaverčia drabužio matmens garantuota kūno dydžio rekomendacija. Palikite vietos pageidaujamam laisvumui ir pardavėjo nurodytai matavimo paklaidai."
+          ]
+        },
+        {
+          "heading": "Audinio teiginius skaitykite nespėliodami",
+          "paragraphs": [
+            "Jei pateikta, patikrinkite sudėtį, pamušalo aprašymą ir priežiūros informaciją. Audinio gramai kvadratiniam metrui nėra gatavo džemperio svoris. Nuotrauka negali patikimai patvirtinti medvilnės procento, tankio ar atsparumo susitraukimui. Jei savybės svarbios, ieškokite rašytinių duomenų ir pažymėkite, kas lieka nepatvirtinta.",
+            "Iš audinio išvaizdos neprognozuokite fiksuoto susitraukimo. Medžiaga, apdaila ir skalbimas gali duoti skirtingus rezultatus. Priežiūros nurodymus laikykite su užsakymo įrašu. Jei jų nėra, apsvarstykite, ar informacijos trūkumas keičia norą pirkti, užuot patogų atsakymą sukūrę pagal kito pardavėjo aprašymą."
+          ]
+        },
+        {
+          "heading": "Užsakykite taip, kad vėliau galėtumėte patikrinti",
+          "paragraphs": [
+            "Tikslią spalvą ir dydžio žymą išsaugokite kartu su naudota lentele. Jei galima pridėti pastabą, aprašykite konkrečią patikrą, kuri padėtų nuspręsti, ar drabužį pasilikti. Prašymas parodyti etiketę ir išmatuoti plokščią krūtinės plotį aiškesnis už prašymą patvirtinti gerą tikimą. Patikrinkite, ar paslauga teikiama ir ar papildomai kainuoja.",
+            "Pakaitalus peržiūrėkite prieš patvirtindami. Kitas dydis, spalva ar versija gali naudoti kitą lentelę ir turi būti patikrinta taip pat atidžiai. Išsaugokite rašytinį sutarto pakeitimo patvirtinimą, kad gautas daiktas būtų lyginamas su galutiniu nurodymu, ne sena ekrano kopija."
+          ]
+        },
+        {
+          "heading": "Sandėlio nuotraukomis tikrinkite matomus dalykus",
+          "paragraphs": [
+            "Gauto drabužio spalvą, etiketę, dizaino vietą ir dalis palyginkite su užsakymu. Peržiūrėkite gobtuvą, rankogalius, apačią, kišenes ir užsegimą, jei yra. Matomose siūlėse ieškokite akivaizdžių plyšių ar neatitikimų, tačiau prisiminkite apšvietimo, klosčių ir perspektyvos įtaką. Prašykite aiškesnio vaizdo, kai nuotrauka neatsako į svarbų klausimą.",
+            "Pardavėjo katalogo vaizdai nėra jūsų sandėlio QC nuotraukos. CSSBuy apžiūrą apibūdina kaip bendrą patikrą; gražus pasiūlymas ar aiški nuotrauka negarantuoja sudėties bei patvarumo. Mūsų katalogas šiuo metu neturi prijungto QC paieškos įrankio. Naudokite CSSBuy paskyros įrodymus ir prašymus teikite oficialiu užsakymo procesu."
+          ]
+        },
+        {
+          "heading": "Patikrinkite sprendimui svarbius matmenis",
+          "paragraphs": [
+            "Jei sandėlis gali matuoti, prašykite lentelėje naudoto metodo arba aiškiai paaiškinkite galinius taškus. Lyginkite tokius pačius dydžius: plokščią krūtinės plotį su plokščiu pločiu, liemens ilgį nuo tos pačios pradžios ir rankovę pagal tą pačią konstrukciją. Kampu nufotografuotą juostą sunku perskaityti, todėl mažą tariamą skirtumą pirma išsiaiškinkite.",
+            "Iš anksto nuspręskite, kokius skirtumus priimsite. Nedidelis liemens ilgio pokytis gali būti svarbesnis už papildomą plotį, priklausomai nuo norimo kirpimo. Atskirti reikia aiškiai klaidingą dydį nuo asmeninės abejonės dėl tikimo. Jei norite grąžinti, greitai patikrinkite aktualias sąlygas ir kol prašymas nagrinėjamas neįtraukite drabužio į tarptautinę siuntą."
+          ]
+        },
+        {
+          "heading": "Pakavimą planuokite pagal tūrį ir apsaugą",
+          "paragraphs": [
+            "Džemperiai gali užimti daug vietos, ypač keli stori drabužiai. CSSBuy aprašo tinkamų drabužių vakuuminį pakavimą, bet tinkamumas priklauso nuo konkretaus gaminio ir detalių. Prieš prašydami suspausti įvertinkite spaudinius, formuotas dekoracijas ir priedus. Mažiausia įmanoma pakuotė ne visada geriausiai saugo prekę.",
+            "Galutinį svorį ir matmenis palyginkite oficialioje skaičiuoklėje. Prekių kainas atskirkite nuo tarptautinio transporto ir patikrinkite realias apmokestinamo svorio taisykles. Derinant džemperius su batais ar trapiais daiktais paprašykite skirtingas formas saugančio pakavimo. Supakavus pasiūlymą patikrinkite iš naujo, nes ankstyvas įvertis vien pagal drabužio svorį neaprašo galutinės siuntos."
+          ]
+        },
+        {
+          "heading": "Pristatymą paverskite naudingu dydžio įrašu",
+          "paragraphs": [
+            "Gavę palyginkite drabužį su užsakymu ir etaloniniais matmenimis prieš pašalindami pagalbai galinčius prireikti duomenis. Problemą nufotografuokite, o transporto žalos atveju išsaugokite pakuotę. Vadovaukitės pateiktais priežiūros nurodymais, ne manykite, kad visi džemperiai vienodai skalbiami ar džiovinami. Pagalbos prašymą sutelkite į pastebimą skirtumą.",
+            "Užrašykite pasirinktą dydį, plokščius matmenis, norimą tikimą ir pokyčius po įprastos priežiūros. Tai padės ateityje pirkti tą patį patikrintą gaminį, bet nenustato visų katalogo džemperių dydžių. Asmeninis matavimų įrašas skatina apgalvotai pirkti ir mažina priklausomybę nuo bendrų patarimų imti didesnį ar mažesnį dydį."
+          ]
+        }
+      ],
+      "takeaways": [
+        "Drabužių plokščius matmenis lyginkite tuo pačiu būdu kaip pardavėjo lentelėje.",
+        "Audinio sudėtį ir tankį laikykite tikrintinais teiginiais, ne nuotraukomis įrodytais faktais.",
+        "Gautą džemperį patikrinkite prieš sujungimą, o siuntimą įvertinkite pagal supakuotus matmenis."
+      ],
+      "sourceIds": [
+        "buyforme",
+        "expertbuy",
+        "shipforme",
+        "estimates",
+        "returns-policy"
+      ],
+      "reviewedAt": "2026-10-30"
     }
   ],
   "sources": [
@@ -972,7 +1365,7 @@
       "id": "buyforme",
       "title": "CSSBuy — Pirkite už mane: oficialus pirkimo procesas",
       "url": "https://m.cssbuy.com/buyforme",
-      "accessedAt": "2026-10-23"
+      "accessedAt": "2026-10-30"
     },
     {
       "id": "expertbuy",
@@ -990,13 +1383,13 @@
       "id": "shipforme",
       "title": "CSSBuy — Siųskite už mane: jungimo ir pakavimo paslaugos",
       "url": "https://m.cssbuy.com/shipforme",
-      "accessedAt": "2026-10-23"
+      "accessedAt": "2026-10-30"
     },
     {
       "id": "fees",
       "title": "CSSBuy pagalbos centras — Išlaidos ir mokesčiai",
       "url": "https://www.cssbuy.com/shop/helpCenter?id=12",
-      "accessedAt": "2026-10-23"
+      "accessedAt": "2026-10-30"
     },
     {
       "id": "storage",
@@ -1013,12 +1406,12 @@
     {
       "id": "estimates",
       "title": "CSSBuy — Pristatymo išlaidų skaičiuoklė",
-      "url": "https://new.cssbuy.com/estimates",
-      "accessedAt": "2026-10-23"
+      "url": "https://www.cssbuy.com/estimates",
+      "accessedAt": "2026-10-30"
     },
     {
       "id": "catalog",
-      "title": "cnfansge.com — Prekių katalogo šaltinis",
+      "title": "Prekių katalogas – susietų pasiūlymų šaltinis",
       "url": "https://cnfansge.com/",
       "accessedAt": "2026-10-23"
     },

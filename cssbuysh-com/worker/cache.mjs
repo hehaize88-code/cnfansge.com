@@ -1,16 +1,20 @@
-// Small, transient public-response cache; no persisted product database.
-// Sites dispatch Workers do not expose caches.default.
-export function createResponseCache(loader,{ttl=60000,maxEntries=64}={}){
+// Bounded, transient public responses only; no product database or persisted copies.
+export function createResponseCache(loader,{ttl=60000,staleTtl=300000,maxEntries=64,now=()=>Date.now()}={}){
  const cache=new Map(),pending=new Map();
- return async function(request){
-  const key=request.url,now=Date.now(),hit=cache.get(key);
-  if(hit&&hit.until>now)return new Response(hit.body,{status:hit.status,headers:hit.headers});
-  cache.delete(key);
-  if(pending.has(key)){const response=await pending.get(key);return response.clone();}
+ const responseOf=(entry,stale=false)=>{const headers=new Headers(entry.headers);headers.set('X-Source-Cache',stale?'stale':'hit');if(stale)headers.set('Warning','110 - "Response is stale"');return new Response(entry.body,{status:entry.status,headers});};
+ function refresh(request,key){
+  if(pending.has(key))return pending.get(key);
   const operation=(async()=>{const response=await loader(request);
-   if(response.ok){const body=await response.clone().text();if(body.length<250000){for(const [k,v] of cache)if(v.until<=now)cache.delete(k);if(cache.size>=maxEntries)cache.delete(cache.keys().next().value);cache.set(key,{body,status:response.status,headers:[...response.headers],until:Date.now()+ttl});}}
+   if(response.ok){const body=await response.clone().text();if(body.length<250000){for(const [k,v] of cache)if(v.staleUntil<=now())cache.delete(k);if(cache.size>=maxEntries)cache.delete(cache.keys().next().value);cache.set(key,{body,status:response.status,headers:[...response.headers],until:now()+ttl,staleUntil:now()+ttl+staleTtl});}}
    return response;
-  })();pending.set(key,operation);
-  try{return (await operation).clone();}finally{pending.delete(key);}
+  })();pending.set(key,operation);operation.finally(()=>pending.delete(key)).catch(()=>{});return operation;
+ }
+ return async function(request,context){
+  const key=request.url,hit=cache.get(key);
+  if(hit&&hit.until>now())return responseOf(hit);
+  if(hit&&hit.staleUntil>now()&&context?.waitUntil){context.waitUntil(refresh(request,key).catch(()=>{}));return responseOf(hit,true);}
+  if(hit&&hit.staleUntil<=now())cache.delete(key);
+  try{const response=await refresh(request,key);if(!response.ok&&hit&&hit.staleUntil>now())return responseOf(hit,true);return response.clone();}
+  catch(error){if(hit&&hit.staleUntil>now())return responseOf(hit,true);throw error;}
  };
 }

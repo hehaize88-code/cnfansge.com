@@ -27,7 +27,7 @@
     {
       "id": "data",
       "q": "Skąd pochodzą produkty i zdjęcia w ofertach?",
-      "a": "Katalog produktów i galerie sprzedawców pochodzą z cnfansge.com. CSSBuy SH nie prowadzi osobnej bazy produktów ani nie tworzy zdjęć produktów. Potwierdź wybraną ofertę po otwarciu strony zakupu.",
+      "a": "Katalog produktów zawiera powiązane oferty i galerie sprzedawców. CSSBuy SH nie prowadzi osobnej bazy produktów ani nie tworzy zdjęć produktów. Potwierdź wybraną ofertę po otwarciu strony zakupu.",
       "sourceIds": [
         "catalog",
         "project"
@@ -36,7 +36,7 @@
     {
       "id": "qc",
       "q": "Czy zdjęcia produktów są zweryfikowanymi zdjęciami kontroli jakości CSSBuy?",
-      "a": "Galerii sprzedawców nie należy traktować jako magazynowej kontroli jakości. Zweryfikowane zdjęcie kontroli jakości konkretnego zamówienia musi być powiązane z otrzymanym produktem. Ten podgląd nie oznacza zdjęć sprzedawców cnfansge jako zweryfikowanych dowodów kontroli CSSBuy.",
+      "a": "Galerii sprzedawców nie należy traktować jako magazynowej kontroli jakości. Zweryfikowane zdjęcie QC konkretnego zamówienia musi być powiązane z otrzymanym produktem. Ta strona nie oznacza zdjęć sprzedawców jako zweryfikowanych dowodów kontroli CSSBuy.",
       "sourceIds": [
         "catalog",
         "project"
@@ -63,7 +63,7 @@
     {
       "id": "weidian-link",
       "q": "Który identyfikator należy umieścić w linku zakupowym Weidian?",
-      "a": "Użyj oryginalnego identyfikatora produktu z platformy handlowej. Podany przykład to https://www.cssbuy.com/shop/goodsDetail?type=micro&id=7755101935. Numer rekordu katalogu cnfansge nie zastępuje tego identyfikatora produktu.",
+      "a": "Użyj oryginalnego identyfikatora produktu z platformy handlowej. Podany przykład to https://www.cssbuy.com/shop/goodsDetail?type=micro&id=7755101935. Wewnętrzny numer rekordu katalogu nie zastępuje tego identyfikatora produktu.",
       "sourceIds": [
         "user-link"
       ]
@@ -245,7 +245,7 @@
         "jak korzystać z cssbuy",
         "linki do produktów cssbuy"
       ],
-      "intro": "Przydatny arkusz CSSBuy powinien pomagać w podjęciu lepszej decyzji zakupowej, a nie tylko tworzyć dłuższą listę zakupów. Katalog może zgromadzić linki, tytuły i ceny ofert, ale najważniejsza praca zaczyna się, gdy sprawdzasz rzeczywisty produkt kryjący się za kartą. Ten poradnik pokazuje, jak zamienić przeglądanie w krótką, udokumentowaną listę, jak odróżnić prezentację sprzedawcy od dowodów dotyczących własnego zamówienia i jak ocenić, czy znalezisko nadal ma sens po uwzględnieniu wysyłki. CSSBuy SH jest niezależną stroną do odkrywania produktów. Jej katalog pochodzi z cnfansge.com; zakupy i zarządzanie zamówieniami odbywają się w CSSBuy.",
+      "intro": "Przydatny arkusz CSSBuy powinien pomagać w podjęciu lepszej decyzji zakupowej, a nie tylko tworzyć dłuższą listę zakupów. Katalog może zgromadzić linki, tytuły i ceny ofert, ale najważniejsza praca zaczyna się, gdy sprawdzasz rzeczywisty produkt kryjący się za kartą. Ten poradnik pokazuje, jak zamienić przeglądanie w krótką, udokumentowaną listę, jak odróżnić prezentację sprzedawcy od dowodów dotyczących własnego zamówienia i jak ocenić, czy znalezisko nadal ma sens po uwzględnieniu wysyłki. CSSBuy SH jest niezależną stroną do odkrywania produktów. Zakupy i zarządzanie zamówieniami odbywają się w CSSBuy.",
       "sections": [
         {
           "heading": "Zacznij od celu i realistycznej krótkiej listy",
@@ -258,7 +258,7 @@
           "heading": "Czytaj kartę produktu jak wpis w indeksie",
           "paragraphs": [
             "Karta streszcza znacznie obszerniejszą ofertę. Jej tytuł może być skrócony, przetłumaczony lub dostarczony przez katalog źródłowy. Wyświetlana cena może dotyczyć jednego wariantu, a nie wszystkich odmian. Traktuj te pola jako sposób dotarcia do oryginalnej oferty, a następnie porównaj konkretny rozmiar, kolor, liczbę sztuk i wersję, których potrzebujesz. Niska cena początkowa nie wystarcza do uczciwego porównania dwóch produktów, jeśli jeden zawiera akcesorium, a drugi nie.",
-            "W CSSBuy SH rekordy produktów i galerie sprzedawców pochodzą z cnfansge.com. Zdjęcie sprzedawcy ilustruje ofertę; nie dowodzi, że konkretny produkt w magazynie został skontrolowany. Jeśli strona nie udostępnia działającej funkcji lub zweryfikowanego rodzaju zdjęć, nie wnioskuj o ich istnieniu z atrakcyjnej etykiety. Przejdź przez dostępny link do produktu i sprawdź, co faktycznie przedstawiono, zanim uznasz kartę za dowód."
+            "W CSSBuy SH katalog zawiera rekordy produktów i galerie sprzedawców. Zdjęcie sprzedawcy ilustruje ofertę; nie dowodzi, że konkretny produkt w magazynie został skontrolowany. Jeśli strona nie udostępnia działającej funkcji lub zweryfikowanego rodzaju zdjęć, nie wnioskuj o ich istnieniu z atrakcyjnej etykiety. Przejdź przez dostępny link do produktu i sprawdź, co faktycznie przedstawiono, zanim uznasz kartę za dowód."
           ]
         },
         {
@@ -302,6 +302,12 @@
             "Po otrzymaniu produktu dopisz do własnej krótkiej listy zwięzły wynik: otrzymany wariant, rzeczywiste dopasowanie, to, czego nie pokazały zdjęcia, i czy wybrałbyś go ponownie. Oddziel subiektywne wrażenia od mierzalnych faktów. „Dla mnie za krótki” to przydatna osobista opinia; „rękaw zmierzony moją metodą miał 58 centymetrów” to pomiar, który ktoś inny może zinterpretować. Żadne z tych stwierdzeń nie powinno stawać się uniwersalnym twierdzeniem o każdym przyszłym zamówieniu z tej oferty.",
             "Przed ponownym zamówieniem sprawdź zapisany link. Oferty mogą się zmieniać, sprzedawcy mogą wprowadzać nowe warianty, a szczegóły, na których opierałeś się ostatnio, mogą już nie być dostępne. Dobry arkusz jest zapisem decyzji z datami, a nie stałą gwarancją. Z czasem najcenniejsze staje się zachowane rozumowanie: które wymiary były ważne, jakie pytania zapobiegły błędom i które produkty rzeczywiście spełniły cel ustalony przed przeglądaniem."
           ]
+        },
+        {
+          "heading": "Zamień krótką listę w kolejny przydatny krok",
+          "paragraphs": [
+            "Otwórz odpowiednią kategorię produktów, porównaj kilka konkretnych ofert i zapisz brakujące informacje, które mogłyby zmienić Twoją decyzję. Następnie skorzystaj z poradnika rozmiarów, aby sprawdzić wymiary, poradnika QC, aby ocenić otrzymany produkt, oraz poradnika wysyłki, aby ustalić pełny budżet paczki. Zachowaj oryginalny link do produktu przy notatkach, żeby aktualizacja katalogu nie pomyliła dwóch podobnych ofert. Zapisany produkt jest kandydatem; przed zapłatą sprawdź wybrany wariant i bieżącą dostępność w CSSBuy."
+          ]
         }
       ],
       "takeaways": [
@@ -313,7 +319,8 @@
         "buyforme",
         "expertbuy",
         "catalog"
-      ]
+      ],
+      "reviewedAt": "2026-10-30"
     },
     {
       "id": "weidian",
@@ -384,6 +391,12 @@
             "Po zamówieniu właściwego produktu oryginalny link staje się punktem odniesienia, a nie miejscem zarządzania transakcją. Numery zamówień, płatności, decyzje magazynowe i śledzenie paczek przechowuj na oficjalnym koncie. Strona do odkrywania produktów nie może rozwiązać problemu z wysyłką sprzedawcy tylko dlatego, że dostarczyła pierwszy link. Jeśli potrzebna jest pomoc, podaj oficjalny identyfikator zamówienia i dowody istotne dla tego zamówienia.",
             "Po dostawie porównaj wynik z zapisanym opisem i zanotuj wnioski na kolejny zakup. Być może nazewnictwo wariantów było jasne, ale tabela rozmiarów używała nieznanej metody pomiaru. Być może opakowanie wpłynęło na budżet dostawy bardziej, niż oczekiwano. Takie obserwacje są przydatniejsze niż uznanie całej platformy handlowej za dobrą lub złą na podstawie jednego zamówienia. Staranny zakup na Weidian to seria małych, zweryfikowanych decyzji, zaczynająca się od właściwego identyfikatora i kończąca produktem, który spełnia określony cel."
           ]
+        },
+        {
+          "heading": "Sprawdź zamówienie przed potwierdzeniem płatności",
+          "paragraphs": [
+            "Porównaj rozpoznany produkt z oryginalną ofertą Weidian i sprawdź kolor, rozmiar, ilość oraz uwagi do zakupu. Identyfikator produktu na platformie handlowej zapisuj oddzielnie od wewnętrznego numeru pozycji w tym katalogu. Po zakupie używaj numeru zamówienia CSSBuy w pytaniach dotyczących magazynu, a numeru paczki w sprawach dostawy międzynarodowej. Jeżeli produkt nie odpowiada ostatecznej instrukcji, zbierz zdjęcia i zapytaj o dostępną procedurę zwrotu przed dołączeniem go do wysyłki."
+          ]
         }
       ],
       "takeaways": [
@@ -395,12 +408,13 @@
         "buyforme",
         "expertbuy",
         "user-link"
-      ]
+      ],
+      "reviewedAt": "2026-10-30"
     },
     {
       "id": "qc",
       "slug": "cssbuy-qc-photos-guide",
-      "title": "Zdjęcia kontroli jakości CSSBuy: praktyczna lista kontrolna",
+      "title": "Zdjęcia QC CSSBuy: kontrola przed wysyłką lub zwrotem",
       "description": "Uporządkowany sposób przeglądania zdjęć magazynowych, odróżniania zdjęć sprzedawcy i zamawiania przydatnych pomiarów przed wysłaniem paczki.",
       "category": "Magazyn i kontrola jakości",
       "keywords": [
@@ -409,7 +423,7 @@
         "kontrola jakości cssbuy",
         "zdjęcia magazynowe"
       ],
-      "intro": "Zdjęcia kontroli jakości są najbardziej przydatne, gdy podchodzisz do nich z pytaniem. Czy produkt odpowiada zamówionemu wariantowi? Czy są wszystkie wymagane akcesoria? Czy wymiar pasuje do Twoich potrzeb? Samo obejrzenie galerii i uznanie, że produkt wygląda dobrze, może prowadzić do przeoczenia szczegółów ważnych po dostawie. Ten poradnik wyjaśnia praktyczną kolejność sprawdzania i ograniczenia dowodów wizualnych. Oficjalne strony usług CSSBuy opisują kontrolę magazynową i zdjęcia. CSSBuy SH nie traktuje galerii sprzedawców dostarczanych przez cnfansge.com jako zweryfikowanej magazynowej kontroli jakości, a karta produktu nigdy nie powinna być odczytywana jako certyfikat kontroli.",
+      "intro": "Zdjęcia kontroli jakości są najbardziej przydatne, gdy podchodzisz do nich z pytaniem. Czy produkt odpowiada zamówionemu wariantowi? Czy są wszystkie wymagane akcesoria? Czy wymiar pasuje do Twoich potrzeb? Samo obejrzenie galerii i uznanie, że produkt wygląda dobrze, może prowadzić do przeoczenia szczegółów ważnych po dostawie. Ten poradnik wyjaśnia praktyczną kolejność sprawdzania i ograniczenia dowodów wizualnych. Oficjalne strony usług CSSBuy opisują kontrolę magazynową i zdjęcia. CSSBuy SH nie traktuje galerii sprzedawców jako zweryfikowanej magazynowej kontroli jakości, a karta produktu nigdy nie powinna być odczytywana jako certyfikat kontroli.",
       "sections": [
         {
           "heading": "Ustal, czyj produkt i jakie zdjęcie oglądasz",
@@ -466,6 +480,12 @@
             "Oględziny nie mogą udowodnić długoterminowej trwałości, konstrukcji wewnętrznej, bezpieczeństwa elektroniki ani autentyczności. Staranny wygląd nie potwierdza zgodności produktu z normami istotnymi dla zamierzonego użycia. W przypadku produktów, których awaria mogłaby wyrządzić szkodę, szukaj odpowiedniej dokumentacji produktu i fachowej porady zamiast polegać na galerii magazynowej. Obraz jest dowodem wyglądu, a nie zamiennikiem badań.",
             "Po dostawie porównaj swoje doświadczenie z tym, co pokazywały zdjęcia. Jeśli problem był niewidoczny, zanotuj to ograniczenie dla podobnych zakupów. Jeśli prośba o pomiar zapobiegła błędowi rozmiaru, wykorzystaj tę metodę ponownie. Taki cykl informacji zwrotnych poprawia przyszłe decyzje bez udawania, że jakakolwiek kontrola może usunąć całą niepewność. Wartość kontroli jakości polega na zadawaniu pytań, na które da się odpowiedzieć, we właściwym momencie procesu i działaniu na podstawie odpowiedzi, zanim produkt stanie się trudniejszy do zwrotu lub sprawdzenia."
           ]
+        },
+        {
+          "heading": "Podejmij decyzję: zachować, wyjaśnić lub zwrócić",
+          "paragraphs": [
+            "Zachowaj produkt, gdy wybrany wariant i niezbędne kontrole się zgadzają. Poproś o wyjaśnienie, jeżeli niewidoczna etykieta, nieczytelne ujęcie lub brakujący wymiar mogłyby zmienić Twoją decyzję. Zapytaj o zwrot, gdy masz udokumentowaną niezgodność lub nieakceptowalny problem, niezwłocznie sprawdzając obowiązujące warunki. CSSBuy opisuje kontrolę magazynową jako ogólną; zdjęcia nie potwierdzają autentyczności produktu ani jego trwałości. Podejmij decyzję przed wybraniem produktu do wysyłki międzynarodowej."
+          ]
         }
       ],
       "takeaways": [
@@ -477,7 +497,8 @@
         "buyforme",
         "shipforme",
         "catalog"
-      ]
+      ],
+      "reviewedAt": "2026-10-30"
     },
     {
       "id": "cost",
@@ -548,6 +569,12 @@
             "Ostateczny test polega na ocenie, czy produkt nadal ma sens po uwzględnieniu całego budżetu dostawy. Tani, obszerny produkt może kosztować po dostarczeniu więcej niż lokalna alternatywa. Droższy, kompaktowy produkt może dać inny wynik. Uwzględnij w porównaniu wartość swojego czasu i praktyczną trudność zwrotu, szczególnie gdy dopasowanie lub przydatność produktu pozostają niepewne.",
             "Po dostawie zachowaj wymiary paczki i koszty jako własny punkt odniesienia. Mogą poprawić kolejny szacunek dla podobnej paczki, ale nadal powinny mieć datę i oznaczenie danych historycznych. Stawki, trasy i opakowania produktów mogą się zmieniać. Najlepszy kalkulator wysyłki jest więc częścią procesu decyzyjnego: pomaga wcześnie testować założenia, aktualizować je po uzyskaniu lepszych informacji z magazynu i wybierać aktualną trasę na podstawie paczki, którą rzeczywiście zamierzasz wysłać."
           ]
+        },
+        {
+          "heading": "Porównuj wyniki kalkulatora przy tych samych danych",
+          "paragraphs": [
+            "Otwórz oficjalny kalkulator wysyłki CSSBuy i wybierz rzeczywisty kraj docelowy. Wprowadź zmierzoną masę i wymiary zapakowanej paczki, jeśli je znasz, a następnie porównaj dostępne trasy dla tej samej zawartości i tych samych założeń dotyczących pakowania. Zapisz datę i wprowadzone wartości przy szacunku. Po pakowaniu zastąp szacunki ostatecznymi pomiarami i ponownie sprawdź zasady ustalania masy rozliczeniowej danej trasy. Oddziel koszty produktów, transportu krajowego, wysyłki międzynarodowej i wybranych dodatków, aby niska wycena trasy nie została uznana za pełny koszt dostawy."
+          ]
         }
       ],
       "takeaways": [
@@ -559,12 +586,13 @@
         "buyforme",
         "estimates",
         "shipforme"
-      ]
+      ],
+      "reviewedAt": "2026-10-30"
     },
     {
       "id": "time",
       "slug": "cssbuy-shipping-time",
-      "title": "Ile trwa zamówienie CSSBuy? Przebieg zamówienia w czasie",
+      "title": "Czas wysyłki CSSBuy: etapy zamówienia, śledzenie i opóźnienia",
       "description": "Rozróżniaj wysyłkę sprzedawcy, decyzje magazynowe, transport międzynarodowy i końcową dostawę, aby lepiej planować i zadawać trafniejsze pytania o śledzenie.",
       "category": "Wysyłka",
       "keywords": [
@@ -616,6 +644,20 @@
             "Prowadź zwięzły dziennik z datą, potwierdzonym etapem i podjętymi działaniami. Może to być zaledwie kilka wierszy we własnych notatkach. Oddziel obserwowane fakty od oczekiwań: „zdjęcia magazynowe dostępne” jest faktem, a „powinno wyjechać jutro” jest oczekiwaniem, chyba że potwierdza to oficjalne konto. Takie rozróżnienie ułatwia późniejsze pytania i pomaga ocenić, na co faktycznie upłynął czas.",
             "Po dostawie zapisz zarówno pełny okres od zamówienia do drzwi, jak i okres transportu międzynarodowego, jeśli odpowiednie daty są dostępne. Używaj wyniku jako przykładu historycznego, a nie prognozy. Przy kolejnym zamówieniu najkorzystniejszym usprawnieniem może być wcześniejsze odpowiadanie na pytania lub wybieranie produktów o jaśniejszej dostępności zamiast szukania trasy, która kiedyś zapewniła najkrótszą dostawę według pojedynczej relacji. Dobre planowanie czasu skupia się na etapach, które możesz zrozumieć, i decyzjach, które możesz podjąć."
           ]
+        },
+        {
+          "heading": "Ustal miejsce opóźnienia przed pytaniem o termin dostawy",
+          "paragraphs": [
+            "Zacznij od dokumentacji zamówienia. Jeżeli sprzedawca jeszcze nie wysłał produktu, pytanie dotyczy zakupu lub dostawy krajowej. Jeżeli produkt jest w magazynie, sprawdź, czy kontrola QC, zapytanie o zwrot, instrukcje pakowania albo płatność nadal wymagają Twojego działania. Jeżeli paczka została zgłoszona do wysyłki, sprawdź, czy przewoźnik odnotował jej fizyczne przejęcie. Tych etapów nie należy liczyć tak, jakby przez cały ten czas paczka była w transporcie międzynarodowym.",
+            "Zapisz ostatni zakończony etap i pierwszy etap, którego nie potrafisz potwierdzić. Na przykład zdjęcie przyjęcia do magazynu odpowiada na inne pytanie niż skan przyjęcia przez przewoźnika. Używaj dat własnego zamówienia, a nie daty publikacji zrzutu dostawy przez innego kupującego. Deklarowany czas przewozu jest przydatny tylko wtedy, gdy wiesz, którego etapu dotyczy i czy Twoja paczka już go osiągnęła."
+          ]
+        },
+        {
+          "heading": "Przygotuj przydatne zgłoszenie dotyczące śledzenia",
+          "paragraphs": [
+            "Gdy śledzenie nie jest aktualizowane, zbierz numer paczki, wybraną linię, datę zgłoszenia oraz najnowszy widoczny status z godziną. Sprawdź stronę przewoźnika wskazaną na koncie CSSBuy. Jeżeli ta sama paczka otrzyma późniejszy numer dostawy, zachowaj oba numery w prywatnej dokumentacji, zamiast zakładać, że pierwszy opisuje wszystkie etapy. Nie publikuj publicznie adresu ani niezanonimizowanej etykiety wysyłkowej.",
+            "Zadaj obsłudze konkretne pytanie: czy paczka została przekazana przewoźnikowi, czy obowiązuje inny numer śledzenia lub czy potrzebna jest korekta adresu. Wskaż, co już zostało sprawdzone. Zachowaj pierwotne zgłoszenie wraz z odpowiedzią, aby kolejne pytanie odnosiło się do tych samych dowodów. Nie zgłaszaj i nie opłacaj ponownie identycznej paczki tylko dlatego, że brakuje skanu; najpierw potwierdź status istniejącej przesyłki."
+          ]
         }
       ],
       "takeaways": [
@@ -626,12 +668,13 @@
       "sourceIds": [
         "buyforme",
         "storage"
-      ]
+      ],
+      "reviewedAt": "2026-10-30"
     },
     {
       "id": "warehouse",
       "slug": "cssbuy-warehouse-consolidation",
-      "title": "Przechowywanie w magazynie CSSBuy i konsolidacja paczek",
+      "title": "Magazyn CSSBuy: przechowywanie, konsolidacja i lista kontroli paczki",
       "description": "Planuj przechowywanie, sprawdzaj produkty i łącz paczki świadomie, uwzględniając rzeczywiste towary, terminy i ograniczenia tras.",
       "category": "Magazyn i kontrola jakości",
       "keywords": [
@@ -683,6 +726,20 @@
             "Sprawdź, czy każdy wybrany produkt ma zakończoną decyzję o zatrzymaniu. Zweryfikuj dane dostawy, liczby sztuk, prośby dotyczące pakowania i nierozstrzygnięte uwagi. Przeczytaj dostępne opcje wysyłki dla rzeczywistych towarów i miejsca docelowego. Jeśli trwa rozmowa o zwrocie produktu, wyjaśnij jego status przed dołączeniem. Końcowy przegląd powinien uzgodnić fizyczną zawartość z decyzjami, które już podjęto.",
             "Zapisz identyfikator paczki i wybory pokazane na koncie. Po wysłaniu zachowaj spis jako zapis tego, co należy do paczki. Po jej przybyciu użyj tego samego zapisu do sprawdzenia zawartości i niezwłocznego udokumentowania problemów. Zamyka to cykl między pojedynczymi zamówieniami a dostarczoną paczką. Dobrze zarządzany proces magazynowy nie jest określany przez liczbę skonsolidowanych produktów; określają go jasne decyzje, odpowiednie opakowanie i paczka, której zawartość i koszty rozumiesz."
           ]
+        },
+        {
+          "heading": "Przed pakowaniem użyj listy: zachować, wyjaśnić lub zwrócić",
+          "paragraphs": [
+            "Dla każdego produktu w magazynie zapisz numer zamówienia, datę odbioru, wybrany wariant, wynik QC i następne działanie. Oznacz produkt jako zachowany dopiero po sprawdzeniu szczegółów, które mogłyby zmienić decyzję. Wybierz wyjaśnienie, jeżeli nadal istotna jest brakująca etykieta, fotografia lub wymiar. Oznacz zapytanie o zwrot, gdy chcesz, aby sprzedawca ocenił udokumentowany problem. Taki podział zapobiega przypadkowemu dołączeniu nierozstrzygniętego produktu do paczki zbiorczej.",
+            "Otwórz informacje o przechowywaniu każdego produktu na koncie i sprawdź jego faktyczny termin. Strona usług wysyłkowych CSSBuy reklamuje do 90 dni bezpłatnego przechowywania, ale nadal trzeba sprawdzić status produktu i aktualne komunikaty. Nie obliczaj terminu od dnia pierwszego znalezienia oferty. Jeśli potrzebne jest przedłużenie, zapytaj o dostępność i koszt przed wyświetlonym terminem, zamiast zakładać, że nowe zamówienie uruchamia licznik od początku."
+          ]
+        },
+        {
+          "heading": "Porównaj dwa plany pakowania tych samych produktów",
+          "paragraphs": [
+            "Przygotuj jeden plan zachowujący potrzebne opakowania i drugi usuwający wyłącznie te, które można bezpiecznie wyrzucić. Dla każdego planu wymień produkty, wymagania ochronne i przewidywane wymiary po zapakowaniu. Porównanie musi uwzględniać ten sam cel dostawy i te same warunki trasy. Usunięcie pudełka sklepowego może zmniejszyć objętość, ale również ochronę lub możliwość zwrotu; zdecyduj przed wysyłką międzynarodową i zachowaj potrzebne informacje.",
+            "Gdy dostępne będą ostateczne pomiary paczki, zastąp nimi szacunki w budżecie. Ponownie sprawdź ograniczenia wybranej linii dotyczące masy, wymiarów i zawartości. Większa paczka zbiorcza nie zawsze kosztuje mniej niż osobne dozwolone przesyłki. Porównaj rzeczywiste opcje w oficjalnym kalkulatorze i ostatecznej wycenie, a następnie zachowaj potwierdzenie zawartości i wybranych usług."
+          ]
         }
       ],
       "takeaways": [
@@ -694,7 +751,8 @@
         "shipforme",
         "storage",
         "buyforme"
-      ]
+      ],
+      "reviewedAt": "2026-10-30"
     },
     {
       "id": "returns",
@@ -751,6 +809,20 @@
             "Po rozwiązaniu sprawy zanotuj, co mogłoby jej zapobiec. Być może nazwy wariantów były niejednoznaczne, brakowało wymiaru lub akcesorium pokazane na zdjęciu nie było zawarte w wybranej ofercie. Zamień tę lekcję w konkretną kontrolę przed zakupem. Unikaj przekształcania jednego wyniku w nieuzasadnione twierdzenie, że każdy sprzedawca lub każde zamówienie zachowa się tak samo.",
             "Przy kolejnych zakupach zachowuj jaśniejszy opis zamierzonego produktu i sprawdzaj materiały magazynowe wkrótce po ich udostępnieniu. Dobrze udokumentowany zakup nie gwarantuje korzystnej decyzji o zwrocie, ale ułatwia wyjaśnianie sporów i pomaga działać, kiedy możliwości mogą jeszcze istnieć. Najprzydatniejsza strategia zwrotu zaczyna się przed problemem: rozumiej, co kupujesz, zachowuj istotne dowody i wiedz, która oficjalna rozmowa na koncie dotyczy transakcji."
           ]
+        },
+        {
+          "heading": "Wyślij zgłoszenie poparte dowodami przed wysyłką międzynarodową",
+          "paragraphs": [
+            "Porównaj otrzymany produkt z ostateczną instrukcją zamówienia: linkiem, rozmiarem, kolorem, ilością i zaakceptowanymi zamiennikami. Opisz widoczną niezgodność, dołączając odpowiednią fotografię lub pomiar. Wyjaśnij, czy prosisz o wyjaśnienie, czy chcesz, aby CSSBuy zapytało sprzedawcę o zwrot. Konkretne zgłoszenie jest bardziej użyteczne niż ogólne stwierdzenie, że produkt jest zły, zwłaszcza gdy problem dotyczy osobistego dopasowania, a nie błędnego wariantu.",
+            "Zachowaj opakowanie, etykiety i akcesoria podczas rozpatrywania zgłoszenia. Potwierdź aktualne warunki sprzedawcy i platformy, obowiązujący termin oraz stronę płacącą za transport zwrotny. Nie zakładaj, że kontrola magazynowa automatycznie gwarantuje przyjęcie każdego zwrotu. Nie wybieraj produktu do paczki międzynarodowej przed rozwiązaniem sprawy, ponieważ procedura i koszty mogą się zmienić po eksporcie."
+          ]
+        },
+        {
+          "heading": "Uzgodnij zwrot pieniędzy z pierwotną płatnością",
+          "paragraphs": [
+            "Zapisz cenę produktu, ewentualne opłaty transportowe i usługowe oraz kwotę, którą zgodnie z odpowiedzią obsługi masz otrzymać. Sprawdź, czy rezultatem jest saldo na koncie, czy zwrot na pierwotny kanał płatności. Są to różne wyniki i salda konta nie należy opisywać jako pieniędzy już otrzymanych w banku. Oddzielnie zanotuj każdą nierozliczoną część zgłoszenia.",
+            "Porównaj zakończoną transakcję z uzgodnionym rozwiązaniem przed zamknięciem dokumentacji. Jeśli kwota jest niejasna, odwołaj się do pierwotnego zamówienia i odpowiedzi obsługi, zamiast otwierać nowe, niepowiązane zgłoszenie. Termin zwrotu zależy od faktycznego rozstrzygnięcia i kanału płatności; korzystaj ze statusu na koncie i informacji operatora, zamiast obiecywać identyczną liczbę dni w każdym przypadku."
+          ]
         }
       ],
       "takeaways": [
@@ -761,12 +833,13 @@
       "sourceIds": [
         "returns-policy",
         "expertbuy"
-      ]
+      ],
+      "reviewedAt": "2026-10-30"
     },
     {
       "id": "payments",
       "slug": "cssbuy-payment-fees",
-      "title": "Opłaty i płatności CSSBuy: zaplanuj pełny budżet",
+      "title": "Opłaty i płatności CSSBuy: prowizje i pełny koszt",
       "description": "Oddziel koszty produktu, dostawy krajowej, usług, płatności i paczki, a następnie uzgodnij kwoty pokazane na oficjalnym koncie CSSBuy.",
       "category": "Zamówienia i płatności",
       "keywords": [
@@ -818,6 +891,20 @@
             "Po zakończeniu zakupu zapisz faktycznie zapłacone kwoty towarów, usług i dostawy wraz z korektami. Wyraźnie oznacz waluty. Jeśli chcesz uzyskać własną sumę w jednej walucie, użyj przeliczenia odzwierciedlonego w rzeczywistych płatnościach lub jasno oznacz wybrany kurs porównawczy. Mieszanie aktualnego kursu z historycznymi opłatami może sprawić, że stary zakup będzie wyglądał na tańszy lub droższy, niż rzeczywiście był.",
             "Porównaj wynik z korzyścią, jaką dał Ci produkt, uwzględniając dopasowanie, użyteczność i pracę włożoną w proces. Taka refleksja jest cenniejsza niż cieszenie się niską ceną ofertową przy ignorowaniu reszty rachunku. Zachowaj datę i istotne informacje o paczce do przyszłego planowania, ale nie zmieniaj wyniku w gwarantowany budżet dla innego kupującego. Rzetelny budżet CSSBuy jest konkretny, rozpisany na pozycje i aktualizowany, gdy rzeczywiste informacje zastępują szacunki."
           ]
+        },
+        {
+          "heading": "Zastosuj opublikowany wzór opłaty do jasno oznaczonego przykładu",
+          "paragraphs": [
+            "Oficjalna strona CSSBuy Cost and Fees, sprawdzona 30 października 2026 r., podaje opłatę zakupową w wysokości 6% sumy ceny produktu i krajowego transportu w Chinach. W hipotetycznym zamówieniu z ceną produktu 200 CNY i transportem krajowym 10 CNY wzór daje 12,60 CNY. Suma częściowa 222,60 CNY obejmuje tylko te trzy składniki; nie jest pełnym kosztem z dostawą. Sprawdź właściwy ekran zamówienia pod kątem indywidualnych cen konta lub zmian.",
+            "Transport międzynarodowy, wybrane usługi oraz ewentualne opłaty za płatność lub przewalutowanie należy uwzględnić oddzielnie. Nie stosuj automatycznie procentowej opłaty zakupowej do każdej późniejszej płatności. Przed potwierdzeniem zapisz, co według danego ekranu obejmuje płatność, jej walutę i ostateczną kwotę. Przykład opłaty jest przydatny tylko wtedy, gdy jasno określono podstawę obliczeń i widoczne pozostają nieuwzględnione pozycje."
+          ]
+        },
+        {
+          "heading": "Prowadź zestawienie budżetu przez oba etapy płatności",
+          "paragraphs": [
+            "Utwórz osobny wiersz dla produktu i transportu krajowego, osobny dla opłat zakupowych, osobny dla wysyłki międzynarodowej i kolejne dla wybranych dodatków. Zapisz kwotę wyświetlaną przez operatora płatności w walucie, którą rzeczywiście zapłacisz. Jeśli po korekcie na koncie pozostaje saldo, odróżnij je od pieniędzy zwróconych na pierwotną metodę płatności.",
+            "Przed wysłaniem paczki zastąp wszystkie przybliżenia potwierdzonymi wartościami dostępnymi na tym etapie. Jeśli suma przekracza limit, rozważ rezygnację z opcjonalnych usług lub zakupu, którego nie jest jeszcze za późno zmienić. Nie wybieraj nieodpowiedniej linii tylko po to, aby wcześniejszy budżet wyglądał poprawnie. Przechowuj potwierdzenia płatności razem z numerami zamówień i paczek, aby przypisać korektę lub zgłoszenie do właściwej transakcji."
+          ]
         }
       ],
       "takeaways": [
@@ -829,7 +916,8 @@
         "fees",
         "about",
         "buyforme"
-      ]
+      ],
+      "reviewedAt": "2026-10-30"
     },
     {
       "id": "links",
@@ -886,6 +974,20 @@
             "Solidny własny zapis zawiera ofertę źródłową, adres docelowy CSSBuy i późniejszy identyfikator zamówienia. Każdy z nich ma inną rolę. Źródło wyjaśnia, co oferowano, strona docelowa jest miejscem sprawdzenia wariantu zakupowego, a rekord zamówienia śledzi to, o co rzeczywiście poproszono. Jeśli oferta później się zmieni, zapisane szczegóły mogą wyjaśnić podstawę pierwotnej decyzji.",
             "Korzystaj z tego zapisu przy porównywaniu materiałów magazynowych lub omawianiu rozbieżności. Znacznie łatwiej zidentyfikować niewłaściwy wariant, gdy zachowano wybrane brzmienie i zdjęcie. Po zakupie zaktualizuj zapis o to, czego dowiedziano się o ilości, rozmiarach lub komunikacji ze sprzedawcą. Celem nie jest wskazanie uniwersalnego zwycięzcy wśród Taobao, Weidian i 1688. Chodzi o możliwość prześledzenia każdego linku źródłowego i zrozumienia każdej decyzji zakupowej na podstawie informacji dostępnych w tamtym czasie."
           ]
+        },
+        {
+          "heading": "Sprawdź, czy link prowadzi do właściwego produktu",
+          "paragraphs": [
+            "Zachowaj oryginalny adres produktu na platformie handlowej i otwórz go przed skopiowaniem do oficjalnego procesu zakupowego CSSBuy. Porównaj sprzedawcę, nazwę produktu i dostępne warianty z krótką listą kandydatów. Skrócony link do udostępniania, strona główna sklepu i adres pojedynczego produktu nie są zamienne. Jeśli strona prowadzi do kolekcji lub innego wariantu, wyjaśnij tę różnicę przed zapłatą.",
+            "Po rozpoznaniu linku przez CSSBuy sprawdź uzupełnione informacje i wybrane opcje, zamiast uznawać konwersję za dowód poprawności wszystkiego. Zapisz ilość, kolor, rozmiar i wymagane minimum sprzedawcy widoczne dla konkretnej oferty. Jeżeli strony nie można rozpoznać, skorzystaj z oficjalnej pomocy, przekazując oryginalny link i jasne dane produktu. Nie zgaduj innego identyfikatora na podstawie numeru widocznego gdzie indziej w katalogu."
+          ]
+        },
+        {
+          "heading": "Oddziel identyfikatory produktów od numerów zamówień",
+          "paragraphs": [
+            "Strona do odkrywania ofert może nadawać wewnętrzny numer rekordu, platforma handlowa inny identyfikator produktu, a CSSBuy kolejny numer po zakupie. Zapisuj każdy numer wraz z jego przeznaczeniem. Pytając o zakup, podaj oryginalny link; pytając o opłacone zamówienie, dołącz numer zamówienia CSSBuy. Numer paczki magazynowej staje się istotny dopiero po zgrupowaniu produktów do wysyłki międzynarodowej.",
+            "Takie rozdzielenie zwiększa też bezpieczeństwo późniejszych porównań. Nowa oferta z tym samym zdjęciem może dotyczyć innego sprzedawcy lub identyfikatora produktu. Sprawdź ją jak nową ofertę, zamiast podmieniać zapisany link bez zanotowania zmiany. Nie przedstawiaj poradnika konwersji linków jako działającego narzędzia, chyba że strona faktycznie wykonuje konwersję i pokazuje wynikowy adres do sprawdzenia."
+          ]
         }
       ],
       "takeaways": [
@@ -897,7 +999,8 @@
         "buyforme",
         "expertbuy",
         "user-link"
-      ]
+      ],
+      "reviewedAt": "2026-10-30"
     },
     {
       "id": "sizing",
@@ -954,6 +1057,20 @@
             "Elastyczne materiały, technika pomiaru i konstrukcja mogą powodować niewielkie różnice. Nie interpretuj sfotografowanej linijki jako poziomu precyzji, którego dane warunki nie zapewniają. Oceń akceptowalność pozostałej niepewności na podstawie tego, jak wrażliwe jest dopasowanie. Jeżeli wymiar musi mieścić się w bardzo wąskim zakresie, aby produkt spełniał zadanie, zakup zdalny może wymagać więcej dowodów, niż oferta jest w stanie dostarczyć.",
             "Po dostawie zmierz i przymierz produkt, a następnie zapisz wynik, używając tego samego systemu odniesienia. Zanotuj, czy tabela była przydatna, czy wybrane ubranie porównawcze było odpowiednie i który wymiar miał największe znaczenie. Oddzielaj osobiste preferencje od uniwersalnego wniosku o rozmiarach sprzedawcy. Po kilku zakupach tworzy to praktyczny zapis dopasowania oparty na własnym doświadczeniu. Jest on bardziej wiarygodny niż wielokrotne stosowanie rad, by brać większy lub mniejszy rozmiar, bez znajomości produktu, tabeli czy osoby noszącej."
           ]
+        },
+        {
+          "heading": "Porównuj wymiary przy tych samych punktach pomiaru",
+          "paragraphs": [
+            "W przypadku odzieży zapisz, czy tabela pokazuje szerokość ubrania mierzonego na płasko, pełny obwód czy sugerowany wymiar ciała. Tych wielkości nie należy porównywać bezpośrednio. Stosuj punkty początku i końca pokazane na schemacie długości i rękawa, zwłaszcza przy obniżonym ramieniu lub rękawie raglanowym. Zmierz wygodne ubranie odniesienia w ten sam sposób, bez rozciągania, i przy każdej wartości zapisz jednostkę.",
+            "W przypadku butów odróżniaj długość stopy, wkładki i podeszwy zewnętrznej. Zdjęcie podeszwy nie ujawnia użytecznej przestrzeni wewnątrz. Zmierz obie stopy tą samą metodą i uwzględnij planowane skarpety lub wkładki. Rozmiar sprzedawcy jest oznaczeniem w danej ofercie, a nie uniwersalną gwarancją dopasowania. Zapytaj o istotny wymiar, zamiast stosować zasadę, by zawsze brać rozmiar większy lub mniejszy."
+          ]
+        },
+        {
+          "heading": "Wykorzystaj pomiar magazynowy do podjęcia decyzji",
+          "paragraphs": [
+            "Przed zamówieniem dodatkowego pomiaru ustal, jaki wynik skłoni Cię do zachowania produktu lub zapytania o zwrot. Poproś o widoczną linijkę i jednoznaczne punkty pomiaru, jeśli usługa jest dostępna, i potwierdź ewentualną opłatę. Porównuj wynik z magazynu z oryginalną tabelą przy tej samej metodzie. Jeśli fotografia jest niejasna, poproś o wyjaśnienie, zamiast traktować różnicę perspektywy jako potwierdzoną wadę.",
+            "Przechowuj pomiar wraz z wybranym rozmiarem i numerem zamówienia. Jeżeli akceptujesz różnicę, zanotuj, dlaczego nadal odpowiada zamierzonemu dopasowaniu. Jeśli ją odrzucasz, opisz konkretną niezgodność w oficjalnym procesie wsparcia, gdy produkt pozostaje w magazynie. Po dostawie zapisz rzeczywiste dopasowanie, aby usprawnić kolejne decyzje dotyczące tego produktu bez zakładania, że wszystkie rzeczy mają identyczną rozmiarówkę."
+          ]
         }
       ],
       "takeaways": [
@@ -964,7 +1081,283 @@
       "sourceIds": [
         "buyforme",
         "expertbuy"
-      ]
+      ],
+      "reviewedAt": "2026-10-30"
+    },
+    {
+      "id": "shipping-usa",
+      "slug": "cssbuy-shipping-to-usa",
+      "title": "Wysyłka CSSBuy do USA: koszty, śledzenie i przygotowanie paczki",
+      "description": "Zaplanuj paczkę CSSBuy do USA: porównaj aktualne wyceny, sprawdź wymiary po zapakowaniu, przygotuj adres i śledź każdy etap dostawy.",
+      "category": "Wysyłka",
+      "keywords": [
+        "cssbuy shipping to usa",
+        "cssbuy shipping cost usa",
+        "cssbuy usa tracking",
+        "cssbuy shipping calculator"
+      ],
+      "intro": "Wysyłka zamówienia CSSBuy do Stanów Zjednoczonych zaczyna się przed wyborem międzynarodowej linii dostawy. Produkty muszą dotrzeć do magazynu, odpowiadać zamówieniu, kwalifikować się na wybraną trasę i mieścić w całym budżecie. Właściwe pytanie nie brzmi, która linia jest zawsze najtańsza, lecz która z obecnie dostępnych przyjmuje konkretną paczkę i adres docelowy. Ten poradnik przedstawia praktyczny proces porównania bez obiecywania stałej ceny lub daty dostawy. Otwórz oficjalny kalkulator CSSBuy i swoje konto obok listy kandydatów; aktualne warunki tras i ostateczne pomiary paczki decydują o rzeczywistych możliwościach.",
+      "sections": [
+        {
+          "heading": "Oddziel zakup od wysyłki międzynarodowej",
+          "paragraphs": [
+            "Oficjalny poradnik zakupowy CSSBuy rozdziela zamawianie produktów od zgłaszania paczki magazynowej. Najpierw podajesz link do produktu i wymagane warianty. Etap zakupu obejmuje rzeczy i odpowiedni transport w Chinach. Po ich przybyciu sprawdzasz informacje magazynowe i zdjęcia przed organizacją wysyłki międzynarodowej. Zapłata za produkty nie oznacza, że paczka międzynarodowa już wyruszyła.",
+            "Dla zamówienia do USA prowadź dwa proste rejestry: osobny dla każdego produktu i osobny dla paczki wychodzącej. Rejestr produktu zawiera link, rozmiar, kolor, ilość i status magazynowy. Rejestr paczki obejmuje wybrane rzeczy, cel dostawy, instrukcje pakowania i trasę międzynarodową. Oddzielne rejestry zapobiegają pomyleniu krajowego numeru śledzenia sprzedawcy z numerem końcowej dostawy."
+          ]
+        },
+        {
+          "heading": "Wprowadź pełny adres w Stanach Zjednoczonych",
+          "paragraphs": [
+            "Podaj kraj docelowy i informacje pocztowe wymagane przez oficjalny kalkulator i formularz paczki. Przed płatnością potwierdź imię i nazwisko odbiorcy, ulicę, numer mieszkania lub lokalu, miasto, stan i kod ZIP. Sprawdź, czy wybrana trasa obsługuje zamierzony rodzaj adresu; nie zakładaj, że każda linia obsługuje wszystkie adresy, terytoria lub odległe miejsca na tych samych warunkach.",
+            "Zapisz adres w formacie umożliwiającym porównanie z potwierdzeniem paczki. Jeśli formularz dzieli go na kilka pól, sprawdź wersję złożoną, a nie tylko pojedyncze pola. Brak numeru lokalu może pozostać niezauważony, gdy skupiasz się na cenie. Nie udostępniaj publicznie adresu ani zrzutów śledzenia, pytając innych kupujących o trasę."
+          ]
+        },
+        {
+          "heading": "Przygotuj szacunek na podstawie rzetelnych danych",
+          "paragraphs": [
+            "Otwórz oficjalny kalkulator CSSBuy, wybierz Stany Zjednoczone i wpisz wymaganą masę oraz wymiary. Korzystaj z pomiarów magazynu, kiedy są dostępne. Przed przybyciem produktów oznacz masy i wymiary opakowania jako szacunki, a nie pomiary. Porównuj wyłącznie trasy obsługujące właściwą kategorię produktu i rozmiar paczki. Niska wyświetlona cena nie jest użyteczną ofertą, jeżeli trasa nie przyjmuje tej zawartości.",
+            "Zapisz przy każdej wycenie datę, cel, masę, wymiary i założenia dotyczące pakowania. Pozwoli to zrozumieć zmianę późniejszej ceny. Najpierw porównaj tę samą paczkę na różnych trasach, a następnie warianty pakowania w jednej trasie. Jednoczesna zmiana masy, celu i opakowania uniemożliwia ustalenie, skąd wzięła się pozorna oszczędność."
+          ]
+        },
+        {
+          "heading": "Zrozum wymiary paczki i masę rozliczeniową",
+          "paragraphs": [
+            "Transport międzynarodowy może uwzględniać przestrzeń zajmowaną przez paczkę, a nie tylko wskazanie wagi. CSSBuy opisuje pakowanie próżniowe jako sposób ograniczenia objętości odpowiedniej odzieży. Nie oznacza to jednak, że kompresja pasuje do każdego produktu. Buty, akcesoria o określonym kształcie i przedmioty delikatne wymagają decyzji o pakowaniu zależnej od ochrony i budowy, a nie wyłącznie najniższego szacunku.",
+            "Dla przykładu paczka 40 × 30 × 25 centymetrów ma objętość 30 000 centymetrów sześciennych. Jeśli konkretna trasa wyraźnie stosuje dzielnik 6 000, otrzymujemy 5 kilogramów masy objętościowej. Jest to przykład obliczenia, a nie stwierdzenie, że każda trasa do USA używa tego dzielnika. Przed porównaniem z masą na wadze sprawdź rzeczywistą zasadę i zaokrąglenia danej linii."
+          ]
+        },
+        {
+          "heading": "Porównaj pełny koszt tej samej paczki",
+          "paragraphs": [
+            "Oddziel cenę produktów, transport krajowy, prowizję zakupową, transport międzynarodowy i wybrane usługi pakowania. Oficjalna strona opłat CSSBuy wyjaśnia, że zakup produktów i przewóz są odrębnymi składnikami kosztu. Opłaty płatnicze, przewalutowanie i opłaty w kraju docelowym należy sprawdzić tam, gdzie obowiązują, zamiast zakładać ich uwzględnienie w głównej wycenie wysyłki.",
+            "Ustal maksymalną sumę przed wyborem dodatków. Jeśli dwie dostępne trasy różnią się ceną, porównaj ich deklarowany czas, ograniczenia, zakres śledzenia i warunki ochrony widoczne na koncie. Droższa trasa może odpowiadać terminowi, ale szybszy szacowany przewóz nadal nie obejmuje czasu już spędzonego na oczekiwaniu na sprzedawcę lub kontroli magazynowej."
+          ]
+        },
+        {
+          "heading": "Zakończ kontrolę jakości przed konsolidacją",
+          "paragraphs": [
+            "Sprawdź rzeczywiste zdjęcia magazynowe każdego wybranego produktu. Potwierdź ilość, kolor, etykietę i wymiary ważne dla dopasowania. Jeśli zdjęcie nie pokazuje istotnego szczegółu, poproś o wyjaśnienie przed wspólnym pakowaniem. Ogólna kontrola nie potwierdza autentyczności, składu materiałowego, trwałości ani idealnego dopasowania; potrzebne są dowody, których fotografia może nie dostarczyć.",
+            "Grupuj zgodne produkty i napisz konkretne instrukcje pakowania. Wskaż na przykład, które pudełka na buty chcesz zachować i którą odzież można złożyć ciaśniej. Nie usuwaj informacji potrzebnych do zwrotu lub prawidłowej dokumentacji wyłącznie po to, aby zmniejszyć objętość. Wyjaśnij ewentualny zwrot przed dołączeniem rzeczy do paczki międzynarodowej, ponieważ możliwości zmieniają się po opuszczeniu magazynu."
+          ]
+        },
+        {
+          "heading": "Sprawdź ostateczne potwierdzenie paczki",
+          "paragraphs": [
+            "Gotowa paczka może różnić się od szacunku, ponieważ zabezpieczenia dodają masę i zmieniają wymiary pudełka. Na ekranie potwierdzenia ponownie sprawdź zmierzoną masę, wymiary, zawartość i trasę. Jeżeli opłata różni się od zapisanej wyceny, najpierw porównaj pomiary i uwzględnione usługi. Przed zatwierdzeniem wysyłki poproś CSSBuy o wyjaśnienie różnicy, której nie potrafisz uzgodnić.",
+            "Przechowuj razem potwierdzenie, dowód płatności i instrukcje pakowania. Podawaj dokładne opisy i wartości produktów, kiedy proces wysyłki ich wymaga, oraz sprawdź właściwe oficjalne wymagania kraju docelowego. Poradnik nie obiecuje progu bezcłowego ani gwarantowanego wyniku odprawy. Nie traktuj starego zrzutu forum jako aktualnej zasady dla przesyłki do USA."
+          ]
+        },
+        {
+          "heading": "Śledź paczkę przez oddzielne etapy",
+          "paragraphs": [
+            "Rozróżniaj obsługę magazynową, przekazanie operatorowi, transport międzynarodowy, obsługę w kraju docelowym i końcową dostawę. Numer śledzenia może istnieć przed fizycznym przejęciem odnotowanym przez przewoźnika. Zanim uznasz, że paczka utknęła, przeczytaj datę, miejsce i treść ostatniego zdarzenia. Korzystaj z informacji na koncie CSSBuy i przewoźnika przypisanego do tej przesyłki.",
+            "Gdy aktualizacja wydaje się spóźniona, zbierz numer paczki, datę wysyłki, nazwę trasy i ostatni widoczny status. Przekaż dane prywatnie przez oficjalny kanał wsparcia i opisz konkretny brakujący etap. Unikaj kilku niepowiązanych zgłoszeń z różnymi opisami. Krótka historia pomaga odróżnić pytanie o magazyn od opóźnienia skanu przewoźnika lub problemu adresowego."
+          ]
+        },
+        {
+          "heading": "Ułatw planowanie kolejnej wysyłki do USA",
+          "paragraphs": [
+            "Po dostawie zapisz rzeczywistą masę, wymiary, czas transportu i wszystkie zapłacone opłaty. Sprawdź opakowanie i sfotografuj uszkodzenia przed wyrzuceniem go. Porównaj produkty z zamówieniem i szybko skorzystaj z oficjalnej pomocy, jeśli coś jest nieprawidłowe. Jedna dostawa jest przydatnym własnym punktem odniesienia, ale nie gwarantuje wyniku dla innej trasy lub pory roku.",
+            "Przy następnym zakupie ponownie użyj listy kontrolnej, zamiast zakładać powtórzenie ceny. Sprawdź aktualny kalkulator, status przechowywania każdej rzeczy i dostępność preferowanej linii. Najpewniejsza oszczędność wynika z unikania nieodpowiednich zakupów, zbędnej objętości i niepełnego adresu jeszcze przed zgłoszeniem paczki."
+          ]
+        }
+      ],
+      "takeaways": [
+        "Porównuj trasy do USA dla tego samego celu, zawartości i pomiarów gotowej paczki.",
+        "Zakończ QC i decyzje o pakowaniu przed zgłoszeniem paczki międzynarodowej.",
+        "Oddziel szacunki od ostatecznych opłat oraz etapy magazynowe od etapów przewoźnika."
+      ],
+      "sourceIds": [
+        "buyforme",
+        "estimates",
+        "fees",
+        "shipforme"
+      ],
+      "reviewedAt": "2026-10-30"
+    },
+    {
+      "id": "shoes-spreadsheet",
+      "slug": "cssbuy-shoes-spreadsheet",
+      "title": "Arkusz butów CSSBuy: rozmiary, QC i poradnik zakupowy",
+      "description": "Porównuj rzeczywiste linki do butów CSSBuy, sprawdzaj wymiary i zdjęcia magazynowe oraz planuj pakowanie pudełek.",
+      "category": "Poradniki produktowe",
+      "keywords": [
+        "cssbuy shoes spreadsheet",
+        "cssbuy sneakers",
+        "cssbuy shoe size",
+        "cssbuy shoes qc"
+      ],
+      "intro": "Arkusz butów CSSBuy jest najbardziej przydatny, gdy pomaga wybrać konkretną parę, zamiast gromadzić nieskończoną listę linków. Atrakcyjne zdjęcie i znajomy rozmiar to dopiero początek. Potrzebujesz również jasnego zapisu wariantu, metody pomiaru, fotografii otrzymanej pary i decyzji o pakowaniu. Ten poradnik daje powtarzalną metodę porównywania butów w katalogu i kontroli zamówienia przed wysyłką międzynarodową. Katalog służy odkrywaniu ofert; twierdzenia sprzedawcy, dostępność i konkretny wariant nadal wymagają sprawdzenia w ofercie i zamówieniu CSSBuy.",
+      "sections": [
+        {
+          "heading": "Zacznij od przeznaczenia butów",
+          "paragraphs": [
+            "Zapisz sposób użytkowania pary, preferowane dopasowanie i maksymalny pełny budżet. Codzienne noszenie, miejsce na wkładkę ortopedyczną i używanie w deszczu tworzą różne wymagania. Fotografia nie potwierdza specjalistycznego bezpieczeństwa, właściwości sportowych ani trwałości. Jeśli wymaganie zależy od materiału lub konstrukcji, ustal potrzebny dowód przed wydaniem pieniędzy.",
+            "Przygotuj krótką listę dwóch lub trzech kandydatów. Zapisz link, wybrany kolor, informacje sprzedawcy o rozmiarach, cenę i nierozstrzygnięte pytania. Nie oceniaj pary wyłącznie na podstawie ostrzejszej miniatury. Stałe pola porównania ułatwiają odrzucanie nieodpowiednich opcji i zadawanie konkretnego pytania agentowi zakupowemu."
+          ]
+        },
+        {
+          "heading": "Sprawdź dokładną ofertę za kartą produktu",
+          "paragraphs": [
+            "Otwórz szczegóły produktu i obejrzyj dostępne zdjęcia sprzedawcy oraz oryginalną ofertę. Potwierdź, że cena dotyczy wybranego rozmiaru, koloru i wersji. Karta katalogowa może podsumować ofertę, ale nie gwarantuje dostępności wszystkich wariantów. Zachowaj dokładny link, aby podobne zdjęcie nie skierowało Cię później do innej oferty.",
+            "Na stronie zakupu CSSBuy sprawdź wariant przed złożeniem zamówienia. Jeśli link nie działa lub opcje są niejasne, skorzystaj z oficjalnej pomocy CSSBuy. Nie zastępuj identyfikatora produktu na platformie wewnętrznym numerem katalogowym. Poprawny link i jednoznaczny rozmiar są bardziej użyteczne niż nieprecyzyjne polecenie kupienia pary ze zrzutu ekranu."
+          ]
+        },
+        {
+          "heading": "Zmierz stopy przed wyborem oznaczenia rozmiaru",
+          "paragraphs": [
+            "Zmierz obie stopy tą samą metodą i zapisz jednostkę. Porównaj wyniki z instrukcją konkretnej oferty, uwzględniając sposób definiowania pomiaru przez sprzedawcę. Długość stopy, wkładki i podeszwy zewnętrznej oznaczają różne rzeczy. Wymiar podeszwy nie jest użyteczną długością wnętrza, a europejski rozmiar na metce nie dowodzi identycznego dopasowania różnych modeli.",
+            "Użyj wygodnej posiadanej pary jako dodatkowego odniesienia, jeśli możliwe są porównywalne pomiary. Zapisz wpływ skarpet, wkładek i preferowanego luzu. Unikaj uniwersalnej zasady kupowania zawsze o rozmiar większych butów. Jeżeli oferta nie podaje wymiaru decydującego o zakupie, poproś o wyjaśnienie lub wybierz lepiej opisaną ofertę."
+          ]
+        },
+        {
+          "heading": "Zamień krótką listę w jasną instrukcję zamówienia",
+          "paragraphs": [
+            "Dla każdej pary zapisz URL produktu, kolor, oznaczenie rozmiaru, ilość i pomiar będący podstawą decyzji. Jeśli platforma pozwala na uwagi, opisz wymaganie konkretnie. Prośba o widoczną metkę rozmiaru lub określony pomiar długości jest łatwiejsza do wykonania niż ogólne żądanie najlepszej jakości. Przed dodatkowym zleceniem potwierdź dostępność usługi i opłatę.",
+            "Po złożeniu sprawdź podsumowanie zamówienia. Jeśli wariant jest niedostępny, potraktuj proponowany zamiennik jak nową decyzję, zamiast automatycznie go przyjmować. Inny kolor lub rozmiar może oznaczać również inne materiały lub wymiary. Zachowaj pierwotną instrukcję i zaakceptowane zmiany razem, aby kontrola magazynowa miała jednoznaczny punkt odniesienia."
+          ]
+        },
+        {
+          "heading": "Odróżniaj zdjęcia sprzedawcy od magazynowego QC",
+          "paragraphs": [
+            "Fotografie w katalogu należą do prezentacji oferty. Nie dowodzą stanu otrzymanej pary. Zdjęcia magazynowe QC dotyczą rzeczy dostarczonych dla Twojego zamówienia i należy porównywać je z wybranym wariantem. Nasza strona nie ma obecnie niezależnie połączonej wyszukiwarki zdjęć QC, więc korzystaj ze zdjęć i pomocy dostępnych na koncie CSSBuy.",
+            "CSSBuy określa kontrolę magazynową jako ogólną. Zdjęcia pomagają wykrywać widoczne różnice, brakujące elementy lub błędną metkę, ale nie poświadczają autentyczności, trwałości ani komfortu. Niejasne zdjęcie traktuj jako brak informacji. Lepiej poprosić o potrzebne ujęcie, niż uznać cień lub odbicie za potwierdzoną wadę."
+          ]
+        },
+        {
+          "heading": "Kontroluj parę w stałej kolejności",
+          "paragraphs": [
+            "Zacznij od identyfikacji: dwa buty, właściwy kolor, zgodne etykiety rozmiaru i dołączone akcesoria. Następnie porównaj lewy i prawy but z podobnych kątów. Obejrzyj widoczne szwy, krawędzie podeszwy, zapięcia i wyściółkę pod kątem rzeczywiście widocznych problemów. Światło i perspektywa mogą zmienić wygląd jednej strony, więc nie wyciągaj wniosków z nieporównywalnych ujęć.",
+            "Następnie sprawdź wymiar decydujący o rozmiarze. Poproś o wyraźnie ustawioną linijkę, jeśli dostępna usługa to umożliwia. Wskaż dokładny początek i koniec pomiaru. Na koniec porównaj widoczne odstępstwo z zamówieniem. Oddziel jednoznaczną niezgodność, na przykład błędny rozmiar na metce, od subiektywnej preferencji, której sprzedawca może nie uznać za wadę."
+          ]
+        },
+        {
+          "heading": "Zdecyduj: zachować, wyjaśnić lub zapytać o zwrot",
+          "paragraphs": [
+            "Stosuj trzy kategorie decyzji. Zachowaj parę, gdy wymagane szczegóły się zgadzają, a pozostała niepewność jest akceptowalna. Poproś o wyjaśnienie, gdy brakujące zdjęcie lub wymiar może zmienić decyzję. Rozpocznij zapytanie o zwrot przy udokumentowanej niezgodności lub innym powodzie, który chcesz przedstawić sprzedawcy. Obowiązujące warunki i terminy sprawdź w CSSBuy i u sprzedawcy.",
+            "Opisz problem, podając numer zamówienia i krótkie porównanie żądanego wariantu z dostarczonym. Dołącz dowody w oficjalnym procesie wsparcia. Nie łącz różnych obaw w żądanie gwarantowanego zwrotu pieniędzy. Zachowaj buty i opakowanie w nienaruszonym stanie podczas rozpatrywania zwrotu i nie dodawaj ich do paczki międzynarodowej przed rozstrzygnięciem."
+          ]
+        },
+        {
+          "heading": "Wybierz pakowanie pudełka z myślą o całej paczce",
+          "paragraphs": [
+            "Sklepowe pudełko zajmuje miejsce, ale może chronić kształt, akcesoria lub mieć znaczenie przy zwrocie. Zdecyduj, czy jest potrzebne, przed zleceniem zmiany pakowania. Po usunięciu pudełka uwzględnij zabezpieczenie butów przed ściskaniem i przesuwaniem. Nie zakładaj, że usunięcie opakowania zawsze obniża końcową opłatę; decydują zasady masy i objętości wybranej trasy.",
+            "Porównaj masę i wymiary całej paczki po zapakowaniu, zamiast mnożyć zgadywaną masę przez liczbę par. Buty połączone z ubraniami mogą układać się inaczej niż kilka par w pudełkach. W oficjalnym kalkulatorze użyj właściwego celu i warunków trasy, a potem wróć do wyceny po otrzymaniu ostatecznych pomiarów magazynowych."
+          ]
+        },
+        {
+          "heading": "Zapisz wynik zamiast powtarzać zgadywanie",
+          "paragraphs": [
+            "Po dostawie przymierz buty w pomieszczeniu na czystej powierzchni podczas kontroli zamówienia. Zapisz wybrany rozmiar, właściwe wymiary i dopasowanie względem pary odniesienia. Zachowaj zdjęcia problemu oraz opakowanie do chwili ustalenia, czy potrzebna jest pomoc. Jeden udany zakup nie dowodzi, że inna oferta z podobną fotografią będzie identyczna.",
+            "Uzupełnij krótką listę o naprawdę użyteczne informacje: wiarygodną tabelę, czytelny pomiar magazynowy lub sposób pakowania, który ochronił parę. Usuń błędne założenia. Z czasem niewielki zapis przemyślanych pomiarów jest bardziej pomocny niż wielki arkusz niewyjaśnionych linków i ocen skopiowanych od innych kupujących."
+          ]
+        }
+      ],
+      "takeaways": [
+        "Przed zakupem sprawdź dokładny wariant i metodę pomiaru sprzedawcy.",
+        "Do QC używaj własnych zdjęć magazynowych; fotografie katalogowe nie weryfikują otrzymanej pary.",
+        "Wyjaśnij zwroty przed wysyłką i porównuj pakowanie pudełek według końcowych pomiarów paczki."
+      ],
+      "sourceIds": [
+        "buyforme",
+        "expertbuy",
+        "shipforme",
+        "estimates",
+        "returns-policy"
+      ],
+      "reviewedAt": "2026-10-30"
+    },
+    {
+      "id": "hoodie-spreadsheet",
+      "slug": "cssbuy-hoodie-spreadsheet",
+      "title": "Arkusz bluz CSSBuy: wymiary, materiał i poradnik QC",
+      "description": "Porównuj linki do bluz CSSBuy na podstawie wymiarów odzieży, informacji o materiale, zdjęć magazynowych i kontroli pakowania.",
+      "category": "Poradniki produktowe",
+      "keywords": [
+        "cssbuy hoodie spreadsheet",
+        "cssbuy hoodies",
+        "cssbuy hoodie sizing",
+        "cssbuy hoodie qc"
+      ],
+      "intro": "Arkusz bluz CSSBuy powinien pomagać odpowiedzieć na kilka praktycznych pytań: czy ubranie będzie leżeć zgodnie z oczekiwaniem, czy oferta wyjaśnia materiał i czy możesz sprawdzić otrzymaną rzecz przed wysyłką? Litera rozmiaru i zdjęcie przodu rzadko wystarczają. Zacznij od kategorii bluz i swetrów, a następnie porównaj konkretne warianty oraz wymiary. Ten poradnik pokazuje tworzenie użytecznej listy, proszenie o czytelne dowody i uwzględnienie objętości grubej odzieży w paczce. Nie szereguje nieprzetestowanych produktów ani nie przedstawia zdjęć sprzedawcy jako zweryfikowanego QC magazynowego.",
+      "sections": [
+        {
+          "heading": "Ustal pożądane dopasowanie przed przeglądaniem",
+          "paragraphs": [
+            "Wybierz wygodną bluzę, którą już nosisz, i określ, co chcesz zmienić. Może to być dłuższy korpus, szersza klatka, krótsze rękawy lub więcej miejsca na koszulę. Jeśli to możliwe, zapisz te preferencje jako wymiary. Określenia oversized, luźna i regularna opisują zamiar, ale nie zapewniają jednolitego pomiaru u różnych sprzedawców lub marek.",
+            "Pomyśl o sezonie i warstwach odzieży. Zdjęcie wyglądające na cięższą tkaninę nie dowodzi ciepła, a gruby kaptur nie określa masy całego ubrania. Oddziel budżet od listy fasonów, aby atrakcyjny projekt nie ukrył brakujących informacji o dopasowaniu lub nieuwzględnionej wysyłki międzynarodowej."
+          ]
+        },
+        {
+          "heading": "Porównuj konkretne oferty bluz",
+          "paragraphs": [
+            "Otwórz szczegóły każdego kandydata i zapisz link, kolor, zakres rozmiarów oraz wybraną wersję. Sprawdź, czy pod jedną ceną początkową nie połączono różnych ubrań lub materiałów. Poszukaj tabeli rozmiarów i opisu tkaniny oraz upewnij się, że dotyczą zamierzonego wariantu. Miniatura zachęca do sprawdzenia, ale nie jest kartą specyfikacji.",
+            "Ogranicz porównanie do kilku kandydatów opisanych wystarczająco dokładnie. Jeśli dwie oferty używają podobnych obrazów, nie zakładaj wspólnego pochodzenia lub identycznych wymiarów. Zapisz nierozstrzygnięte pytanie przy kandydacie, zamiast uzupełniać lukę recenzją innego produktu. Najlepsza lista to taka, którą potrafisz jasno wyjaśnić przed zakupem."
+          ]
+        },
+        {
+          "heading": "Mierz ubranie odniesienia konsekwentnie",
+          "paragraphs": [
+            "Połóż bluzę odniesienia płasko, bez rozciągania. Zapisz szerokość klatki od boku do boku, długość korpusu od określonego punktu, długość rękawa i szerokość ramion, jeśli konstrukcja pozwala na porównywalny pomiar. Zaznacz obniżone ramię lub rękaw raglanowy, ponieważ pomiar rękawa od szwu barkowego nie jest bezpośrednio porównywalny z pomiarem od szyi.",
+            "Stosuj schemat sprzedawcy zamiast własnej konwencji. Na przykład szerokość klatki 60 centymetrów na płasko oznacza co innego niż obwód klatki 60 centymetrów. Podwojenie szerokości pomaga zrozumieć geometrię, ale nie zamienia pomiaru odzieży w gwarantowane zalecenie dopasowania do ciała. Uwzględnij zamierzony luz i tolerancję pomiarową deklarowaną przez sprzedawcę."
+          ]
+        },
+        {
+          "heading": "Czytaj informacje o tkaninie bez zgadywania",
+          "paragraphs": [
+            "Sprawdź podany skład, opis wnętrza i informacje pielęgnacyjne, jeśli oferta je zawiera. Gramatura w gramach na metr kwadratowy nie jest masą gotowej bluzy. Zdjęcie nie pozwala wiarygodnie potwierdzić procentu bawełny, gęstości ani odporności na kurczenie. Jeśli te cechy są ważne, szukaj pisemnych informacji i określ, co pozostaje niezweryfikowane.",
+            "Nie przewiduj stałego skurczu na podstawie wyglądu materiału. Różne włókna, wykończenia i sposoby prania dają różne wyniki. Jeśli oferta zawiera instrukcję pielęgnacji, zachowaj ją z zamówieniem. Jeśli jej brak, oceń wpływ tej luki na zakup, zamiast wymyślać wygodną odpowiedź na podstawie opisu innego sprzedawcy."
+          ]
+        },
+        {
+          "heading": "Złóż zamówienie możliwe do późniejszej kontroli",
+          "paragraphs": [
+            "Zapisz dokładny kolor i oznaczenie rozmiaru wraz z tabelą, której używasz. Jeśli możliwe są uwagi do zamówienia, opisz konkretną kontrolę pomocną przy decyzji o zachowaniu ubrania. Prośba o pokazanie metki i zmierzenie szerokości klatki na płasko jest jaśniejsza niż żądanie potwierdzenia dobrego dopasowania. Potwierdź dostępność usługi i ewentualny dodatkowy koszt.",
+            "Sprawdź zamienniki przed ich akceptacją. Inny rozmiar, kolor lub wersja może korzystać z innej tabeli, a zmieniony wariant wymaga równie starannej kontroli. Zachowaj pisemne potwierdzenie uzgodnionej zmiany, aby otrzymany produkt porównywać z ostateczną instrukcją, a nie nieaktualnym zrzutem."
+          ]
+        },
+        {
+          "heading": "Używaj zdjęć magazynowych do widocznych kontroli",
+          "paragraphs": [
+            "Porównaj kolor, metkę, rozmieszczenie wzoru i elementy otrzymanej bluzy z zamówieniem. Obejrzyj kaptur, mankiety, dół, kieszenie i ewentualne zapięcie. Sprawdź widoczne szwy pod kątem wyraźnego rozdarcia lub niezgodności, pamiętając, że światło, fałdy i perspektywa wpływają na obraz. Poproś o czytelniejsze ujęcie, gdy fotografia nie wyjaśnia istotnej obawy.",
+            "Zdjęcia katalogowe sprzedawcy są odrębne od własnych zdjęć QC z magazynu. CSSBuy opisuje inspekcję jako ogólną, a atrakcyjna oferta i wyraźna fotografia nie gwarantują składu ani trwałości. Nasz katalog nie zapewnia obecnie podłączonego narzędzia wyszukiwania QC. Korzystaj z dowodów na koncie CSSBuy i składaj prośby w oficjalnym procesie zamówienia."
+          ]
+        },
+        {
+          "heading": "Sprawdź wymiary wpływające na decyzję",
+          "paragraphs": [
+            "Jeśli magazyn może wykonać pomiary, poproś o metodę z tabeli sprzedawcy lub jasno określ punkty końcowe. Porównuj podobne wielkości: szerokość klatki na płasko z taką samą szerokością, długość korpusu od tego samego punktu i rękaw z tą samą konstrukcją. Taśma sfotografowana pod kątem może być nieczytelna, więc wyjaśnij sytuację przed uznaniem drobnej pozornej różnicy za rozstrzygającą.",
+            "Z góry ustal akceptowalne różnice. Niewielka zmiana długości korpusu może być ważniejsza niż dodatkowa szerokość, zależnie od oczekiwanego dopasowania. Oddziel jednoznacznie błędny rozmiar od niepewności co do własnej preferencji. Jeżeli chcesz zwrotu, szybko sprawdź aktualne warunki i nie włączaj rzeczy do paczki międzynarodowej podczas rozpatrywania prośby."
+          ]
+        },
+        {
+          "heading": "Planuj pakowanie z uwzględnieniem objętości i ochrony",
+          "paragraphs": [
+            "Bluzy zajmują dużo miejsca, szczególnie przy kilku grubych ubraniach w jednej paczce. CSSBuy opisuje pakowanie próżniowe odpowiedniej odzieży, ale przydatność zależy od konkretnej rzeczy i jej detali. Przed kompresją uwzględnij nadruki, sztywne ozdoby i dodatki. Nie zakładaj, że najmniejsze możliwe opakowanie zawsze najlepiej chroni produkt.",
+            "Porównaj końcową masę i wymiary w oficjalnym kalkulatorze. Oddziel ceny produktów od transportu międzynarodowego i sprawdź rzeczywiste zasady masy rozliczeniowej danej trasy. Łącząc bluzy z butami lub delikatnymi przedmiotami, poproś o ochronę różnych kształtów. Ponownie sprawdź wycenę po pakowaniu, ponieważ szacunek oparty wyłącznie na masie ubrań nie opisuje gotowej paczki."
+          ]
+        },
+        {
+          "heading": "Zamień dostawę w użyteczny zapis dopasowania",
+          "paragraphs": [
+            "Po otrzymaniu porównaj bluzę z zamówieniem i pomiarami odniesienia, zanim usuniesz informacje mogące przydać się obsłudze. Sfotografuj problem i zachowaj opakowanie przy problemie dostawczym. Stosuj dostępną instrukcję pielęgnacji zamiast zakładać, że każdą bluzę pierze i suszy się tak samo. Zgłoszenie skup na obserwowalnej różnicy.",
+            "Zapisz wybrany rozmiar, wymiary na płasko, preferowane dopasowanie i zmiany zaobserwowane po normalnej pielęgnacji. Notatki pomagają w przyszłym zamówieniu tego samego zweryfikowanego produktu, ale nie określają rozmiarów wszystkich bluz w katalogu. Własna dokumentacja pomiarów wspiera bardziej świadome zakupy i ogranicza zależność od ogólnych rad wybierania większego lub mniejszego rozmiaru."
+          ]
+        }
+      ],
+      "takeaways": [
+        "Porównuj wymiary odzieży na płasko metodą z tabeli sprzedawcy.",
+        "Skład i gramaturę traktuj jako informacje do weryfikacji, a nie fakty potwierdzone zdjęciami.",
+        "Sprawdź otrzymaną bluzę przed konsolidacją i szacuj transport według wymiarów gotowej paczki."
+      ],
+      "sourceIds": [
+        "buyforme",
+        "expertbuy",
+        "shipforme",
+        "estimates",
+        "returns-policy"
+      ],
+      "reviewedAt": "2026-10-30"
     }
   ],
   "sources": [
@@ -972,7 +1365,7 @@
       "id": "buyforme",
       "title": "CSSBuy — Buy For Me: oficjalny proces zakupu",
       "url": "https://m.cssbuy.com/buyforme",
-      "accessedAt": "2026-10-23"
+      "accessedAt": "2026-10-30"
     },
     {
       "id": "expertbuy",
@@ -990,13 +1383,13 @@
       "id": "shipforme",
       "title": "CSSBuy — Ship For Me: konsolidacja i usługi pakowania",
       "url": "https://m.cssbuy.com/shipforme",
-      "accessedAt": "2026-10-23"
+      "accessedAt": "2026-10-30"
     },
     {
       "id": "fees",
       "title": "Centrum pomocy CSSBuy — Koszty i opłaty",
       "url": "https://www.cssbuy.com/shop/helpCenter?id=12",
-      "accessedAt": "2026-10-23"
+      "accessedAt": "2026-10-30"
     },
     {
       "id": "storage",
@@ -1013,12 +1406,12 @@
     {
       "id": "estimates",
       "title": "CSSBuy — Kalkulator kosztów wysyłki",
-      "url": "https://new.cssbuy.com/estimates",
-      "accessedAt": "2026-10-23"
+      "url": "https://www.cssbuy.com/estimates",
+      "accessedAt": "2026-10-30"
     },
     {
       "id": "catalog",
-      "title": "cnfansge.com — Źródło katalogu produktów",
+      "title": "Katalog produktów",
       "url": "https://cnfansge.com/",
       "accessedAt": "2026-10-23"
     },

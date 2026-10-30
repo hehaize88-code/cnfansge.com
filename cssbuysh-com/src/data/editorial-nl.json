@@ -27,7 +27,7 @@
     {
       "id": "data",
       "q": "Waar komen de producten en aanbiedingsfoto’s vandaan?",
-      "a": "De productcatalogus en verkopersgalerijen komen van cnfansge.com. CSSBuy SH houdt geen afzonderlijke productdatabase bij en maakt geen productafbeeldingen. Bevestig de geselecteerde aanbieding nadat je de aankoopbestemming hebt geopend.",
+      "a": "De productcatalogus bevat gekoppelde aanbiedingen en verkopersgalerijen. CSSBuy SH houdt geen afzonderlijke productdatabase bij en maakt geen productafbeeldingen. Controleer de geselecteerde aanbieding nadat je de aankoopbestemming hebt geopend.",
       "sourceIds": [
         "catalog",
         "project"
@@ -36,7 +36,7 @@
     {
       "id": "qc",
       "q": "Zijn de productfoto’s geverifieerde CSSBuy-QC-foto’s?",
-      "a": "Galerijen van verkopers moet je niet als magazijn-QC beschouwen. Een geverifieerde QC-foto van een specifieke bestelling moet gekoppeld zijn aan het ontvangen artikel. Deze preview bestempelt verkopersfoto’s van cnfansge niet als geverifieerd bewijs van een CSSBuy-inspectie.",
+      "a": "Verkopersgalerijen zijn geen magazijn-QC. Een geverifieerde QC-foto van een specifieke bestelling moet bij het ontvangen artikel horen. Deze website noemt verkopersbeelden geen geverifieerd bewijs van een CSSBuy-inspectie.",
       "sourceIds": [
         "catalog",
         "project"
@@ -63,7 +63,7 @@
     {
       "id": "weidian-link",
       "q": "Welk ID hoort in een Weidian-kooplink?",
-      "a": "Gebruik het oorspronkelijke product-ID van de marktplaats. Het aangeleverde voorbeeld is https://www.cssbuy.com/shop/goodsDetail?type=micro&id=7755101935. Een recordnummer uit de cnfansge-catalogus vervangt dat marktplaats-ID niet.",
+      "a": "Gebruik de oorspronkelijke productcode van de marktplaats. Het aangeleverde voorbeeld is https://www.cssbuy.com/shop/goodsDetail?type=micro&id=7755101935. Een intern catalogusnummer vervangt die productcode niet.",
       "sourceIds": [
         "user-link"
       ]
@@ -245,7 +245,7 @@
         "hoe gebruik je cssbuy",
         "cssbuy productlinks"
       ],
-      "intro": "Een bruikbare CSSBuy-spreadsheet moet je helpen een betere aankoopbeslissing te nemen, niet alleen een langere boodschappenlijst te maken. Een overzicht kan links, titels en aanbiedingsprijzen samenbrengen, maar het belangrijke werk begint wanneer je het echte product achter een kaart controleert. Deze gids laat zien hoe je van rondkijken naar een kleine, gedocumenteerde shortlist gaat, hoe je de presentatie van een verkoper scheidt van bewijs over je eigen bestelling, en hoe je bepaalt of een vondst na verzending nog steeds zinvol is. CSSBuy SH is een onafhankelijke ontdekkingssite. De productcatalogus komt van cnfansge.com; aankopen en bestelbeheer vinden plaats op CSSBuy.",
+      "intro": "Een bruikbare CSSBuy-spreadsheet moet je helpen een betere aankoopbeslissing te nemen, niet alleen een langere boodschappenlijst te maken. Een overzicht kan links, titels en aanbiedingsprijzen samenbrengen, maar het belangrijke werk begint wanneer je het echte product achter een kaart controleert. Deze gids laat zien hoe je van rondkijken naar een kleine, gedocumenteerde shortlist gaat, hoe je de presentatie van een verkoper scheidt van bewijs over je eigen bestelling, en hoe je bepaalt of een vondst na verzending nog steeds zinvol is. CSSBuy SH is een onafhankelijke ontdekkingssite. Aankopen en bestelbeheer vinden plaats op CSSBuy.",
       "sections": [
         {
           "heading": "Begin met een doel en een realistische shortlist",
@@ -258,7 +258,7 @@
           "heading": "Lees de productkaart als een indexvermelding",
           "paragraphs": [
             "Een kaart vat een veel grotere aanbieding samen. De titel kan ingekort, vertaald of door de broncatalogus aangeleverd zijn. De getoonde prijs kan één optie beschrijven in plaats van elke variant. Gebruik die velden om de oorspronkelijke aanbieding te vinden en vergelijk vervolgens de specifieke maat, kleur, hoeveelheid en versie die je wilt. Een lage vanafprijs is onvoldoende om twee producten eerlijk te vergelijken als het ene een accessoire bevat en het andere niet.",
-            "Op CSSBuy SH komen productrecords en verkopersgalerijen van cnfansge.com. Een verkopersfoto illustreert de aanbieding; die toont niet aan dat een specifiek magazijnartikel is geïnspecteerd. Als de site geen werkende functie of geverifieerd fototype kan aanbieden, leid dat dan niet af uit een aantrekkelijk label. Volg de beschikbare productlink en controleer wat er daadwerkelijk wordt getoond voordat je een kaart als bewijs beschouwt."
+            "Op CSSBuy SH bevat de catalogus productgegevens en verkopersgalerijen. Een verkopersfoto illustreert de aanbieding; die toont niet aan dat een specifiek magazijnartikel is geïnspecteerd. Als de site geen werkende functie of geverifieerd fototype kan aanbieden, leid dat dan niet af uit een aantrekkelijk label. Volg de beschikbare productlink en controleer wat er daadwerkelijk wordt getoond voordat je een kaart als bewijs beschouwt."
           ]
         },
         {
@@ -302,6 +302,12 @@
             "Voeg na ontvangst een korte uitkomst aan je eigen shortlist toe: de ontvangen optie, daadwerkelijke pasvorm, wat de foto’s niet lieten zien en of je het opnieuw zou kiezen. Houd subjectieve indrukken gescheiden van meetbare feiten. “Voor mij te kort” is nuttige persoonlijke feedback; “de mouw was volgens mijn meetmethode 58 centimeter” is een meting die iemand anders kan interpreteren. Geen van beide moet een universele uitspraak worden over elke toekomstige bestelling uit die aanbieding.",
             "Controleer een opgeslagen link opnieuw voordat je nogmaals bestelt. Aanbiedingen kunnen veranderen, verkopers kunnen nieuwe opties toevoegen en de details waarop je de vorige keer vertrouwde zijn mogelijk verdwenen. Een goede spreadsheet is een gedateerd overzicht van beslissingen, geen blijvende garantie. Na verloop van tijd is je bewaarde redenering het waardevolst: welke afmetingen belangrijk waren, welke vragen fouten voorkwamen en welke producten werkelijk voldeden aan het doel dat je vóór het rondkijken had bepaald."
           ]
+        },
+        {
+          "heading": "Maak van je shortlist een nuttige volgende stap",
+          "paragraphs": [
+            "Open de relevante productcategorie, vergelijk enkele specifieke aanbiedingen en noteer welke ontbrekende informatie je beslissing kan veranderen. Ga verder naar de maatgids voor metingen, de QC-gids voor controle van ontvangen artikelen en de verzendgids voor het volledige pakketbudget. Bewaar de oorspronkelijke productlink bij je aantekeningen, zodat een cataloguswijziging twee vergelijkbare aanbiedingen niet door elkaar haalt. Een opgeslagen product is een kandidaat; controleer de gekozen uitvoering en actuele beschikbaarheid bij CSSBuy voordat je betaalt."
+          ]
         }
       ],
       "takeaways": [
@@ -313,7 +319,8 @@
         "buyforme",
         "expertbuy",
         "catalog"
-      ]
+      ],
+      "reviewedAt": "2026-10-30"
     },
     {
       "id": "weidian",
@@ -384,6 +391,12 @@
             "Zodra het juiste artikel is besteld, wordt de oorspronkelijke link een referentie in plaats van de plek om de transactie te beheren. Houd bestelnummers, betalingen, magazijnbeslissingen en pakkettracking in het officiële account. Een ontdekkingssite kan een verzendprobleem bij een verkoper niet oplossen alleen omdat die de eerste link leverde. Heb je ondersteuning nodig, geef dan het officiële bestelnummer en het bewijs dat bij die bestelling hoort.",
             "Vergelijk na bezorging het resultaat met de opgeslagen beschrijving en noteer lessen voor een volgende aankoop. Misschien waren de optienamen duidelijk, maar gebruikte de maattabel een onbekende meetmethode. Misschien had de verpakking meer invloed op het bezorgbudget dan verwacht. Zulke observaties zijn nuttiger dan een hele marktplaats goed of slecht noemen op basis van één bestelling. Een zorgvuldige Weidian-aankoop is een reeks kleine gecontroleerde beslissingen, beginnend bij het juiste nummer en eindigend bij een product dat aan je beschreven doel voldoet."
           ]
+        },
+        {
+          "heading": "Controleer de bestelling voordat je de betaling bevestigt",
+          "paragraphs": [
+            "Vergelijk het herkende product met de oorspronkelijke Weidian-aanbieding en controleer kleur, maat, aantal en eventuele koopinstructies. Houd de productcode van de marktplaats gescheiden van het interne artikelnummer in deze catalogus. Gebruik na aankoop het CSSBuy-bestelnummer voor magazijnvragen en het pakketnummer voor internationale bezorging. Komt het artikel niet overeen met de definitieve instructie, verzamel dan foto’s en vraag naar de beschikbare retourprocedure voordat je het aan een verzending toevoegt."
+          ]
         }
       ],
       "takeaways": [
@@ -395,12 +408,13 @@
         "buyforme",
         "expertbuy",
         "user-link"
-      ]
+      ],
+      "reviewedAt": "2026-10-30"
     },
     {
       "id": "qc",
       "slug": "cssbuy-qc-photos-guide",
-      "title": "CSSBuy-QC-foto’s: een praktische inspectiechecklist",
+      "title": "CSSBuy QC-foto’s: controles vóór verzending of retourneren",
       "description": "Een gestructureerde manier om magazijnfoto’s te beoordelen, verkopersfoto’s te onderscheiden en nuttige metingen te vragen voordat je een pakket verstuurt.",
       "category": "Magazijn en QC",
       "keywords": [
@@ -409,7 +423,7 @@
         "cssbuy kwaliteitscontrole",
         "magazijnfoto’s"
       ],
-      "intro": "Foto’s voor kwaliteitscontrole zijn het nuttigst wanneer je ze met een vraag bekijkt. Komt dit artikel overeen met de bestelde optie? Zijn de benodigde accessoires aanwezig? Past de maat bij je behoeften? Alleen door een galerij bladeren en besluiten dat een artikel er goed uitziet, kan details missen die na bezorging belangrijk blijken. Deze gids legt een praktische beoordelingsvolgorde en de grenzen van visueel bewijs uit. De officiële servicepagina’s van CSSBuy beschrijven magazijninspectie en foto’s. CSSBuy SH beschouwt de door cnfansge.com aangeleverde verkopersgalerijen niet als geverifieerde magazijn-QC, en een productkaart mag nooit als inspectiecertificaat worden gelezen.",
+      "intro": "Foto’s voor kwaliteitscontrole zijn het nuttigst wanneer je ze met een vraag bekijkt. Komt dit artikel overeen met de bestelde optie? Zijn de benodigde accessoires aanwezig? Past de maat bij je behoeften? Alleen door een galerij bladeren en besluiten dat een artikel er goed uitziet, kan details missen die na bezorging belangrijk blijken. Deze gids legt een praktische beoordelingsvolgorde en de grenzen van visueel bewijs uit. De officiële servicepagina’s van CSSBuy beschrijven magazijninspectie en foto’s. CSSBuy SH beschouwt verkopersgalerijen niet als geverifieerde magazijn-QC, en een productkaart mag nooit als inspectiecertificaat worden gelezen.",
       "sections": [
         {
           "heading": "Stel vast van wie het artikel is en welke afbeelding je bekijkt",
@@ -466,6 +480,12 @@
             "Visuele inspectie kan geen langdurige duurzaamheid, interne constructie, elektronische veiligheid of authenticiteit bewijzen. Een verzorgd uiterlijk toont niet aan dat een artikel voldoet aan normen die voor het beoogde gebruik relevant zijn. Zoek bij producten waarbij een defect schade kan veroorzaken naar geschikte productdocumentatie en deskundig advies in plaats van op een magazijngalerij te vertrouwen. Een afbeelding is bewijs van uiterlijk, geen vervanging voor testen.",
             "Vergelijk na bezorging je ervaring met wat de foto’s toonden. Was een probleem onzichtbaar, noteer die beperking dan voor vergelijkbare aankopen. Voorkwam een meetverzoek een maatfout, gebruik die methode dan opnieuw. Deze terugkoppeling verbetert toekomstige beslissingen zonder te doen alsof een inspectie alle onzekerheid kan wegnemen. De waarde van QC ligt in beantwoordbare vragen stellen op een nuttig moment in het proces en handelen naar de antwoorden voordat het product moeilijker te retourneren of te inspecteren wordt."
           ]
+        },
+        {
+          "heading": "Kies tussen houden, verduidelijken of retourneren",
+          "paragraphs": [
+            "Houd het artikel wanneer de gekozen uitvoering en noodzakelijke controles kloppen. Vraag om verduidelijking als een onzichtbaar label, onduidelijke hoek of ontbrekende maat je beslissing kan veranderen. Vraag naar retourneren bij een vastgelegde afwijking of onaanvaardbaar probleem en controleer direct de toepasselijke voorwaarden. CSSBuy beschrijft magazijninspectie als een algemene controle; foto’s bewijzen geen authenticiteit of langdurige duurzaamheid. Neem de beslissing voordat je het artikel voor internationale verzending selecteert."
+          ]
         }
       ],
       "takeaways": [
@@ -477,7 +497,8 @@
         "buyforme",
         "shipforme",
         "catalog"
-      ]
+      ],
+      "reviewedAt": "2026-10-30"
     },
     {
       "id": "cost",
@@ -548,6 +569,12 @@
             "De uiteindelijke toets is of het product nog steeds zinvol is wanneer je het volledige bezorgbudget meerekent. Een goedkoop, omvangrijk artikel kan duurder zijn om te ontvangen dan een lokaal alternatief. Een duurder compact artikel kan anders uitpakken. Neem de waarde van je tijd en de praktische moeilijkheid van een retour mee in de vergelijking, vooral wanneer pasvorm of geschiktheid nog onzeker zijn.",
             "Bewaar na bezorging de pakketmetingen en kosten als persoonlijke referentie. Ze kunnen een volgende schatting voor een soortgelijk pakket verbeteren, maar moeten gedateerd blijven en als historisch zijn aangeduid. Tarieven, routes en productverpakkingen kunnen veranderen. De beste verzendcalculator is daarom onderdeel van een beslisproces: hij helpt aannames vroeg te toetsen, ze bij te werken wanneer magazijninformatie verbetert en een actuele route te kiezen op basis van het pakket dat je werkelijk wilt versturen."
           ]
+        },
+        {
+          "heading": "Vergelijk calculatorresultaten met dezelfde invoer",
+          "paragraphs": [
+            "Open de officiële CSSBuy-verzendcalculator en selecteer de werkelijke bestemming. Vul gemeten gewicht en verpakte afmetingen in zodra die beschikbaar zijn en vergelijk geschikte routes met dezelfde inhoud en verpakkingsaannames. Bewaar datum en invoerwaarden bij de schatting. Vervang na het inpakken schattingen door definitieve metingen en controleer opnieuw de regel voor het berekende gewicht. Scheid aankoopkosten, binnenlands vervoer, internationale vracht en extra diensten, zodat een laag routetarief niet voor de volledige bezorgprijs wordt aangezien."
+          ]
         }
       ],
       "takeaways": [
@@ -559,12 +586,13 @@
         "buyforme",
         "estimates",
         "shipforme"
-      ]
+      ],
+      "reviewedAt": "2026-10-30"
     },
     {
       "id": "time",
       "slug": "cssbuy-shipping-time",
-      "title": "Hoe lang duurt CSSBuy? Het tijdpad van een bestelling",
+      "title": "CSSBuy-verzendtijd: bestelfasen, tracking en vertragingen",
       "description": "Scheid verzending door de verkoper, magazijnbeslissingen, internationaal transport en uiteindelijke bezorging om beter te plannen en gerichtere trackingvragen te stellen.",
       "category": "Verzending",
       "keywords": [
@@ -616,6 +644,20 @@
             "Houd een beknopt logboek bij met de datum, bevestigde fase en eventuele actie die je nam. Dat kunnen simpelweg een paar regels in je eigen notities zijn. Scheid waargenomen feiten van verwachtingen: “magazijnfoto’s beschikbaar” is een feit, terwijl “zou morgen moeten vertrekken” een verwachting is tenzij het officiële account dat bevestigt. Dit onderscheid maakt latere vragen duidelijker en helpt beoordelen waaraan de tijd werkelijk is besteed.",
             "Noteer na bezorging zowel de volledige periode van bestelling tot deur als de internationale transportperiode als de relevante datums beschikbaar zijn. Gebruik de uitkomst als historisch voorbeeld, niet als voorspelling. Bij een volgende bestelling kan sneller op vragen reageren of artikelen met duidelijkere beschikbaarheid kiezen nuttiger zijn dan zoeken naar een route die ooit volgens één verhaal de kortste bezorging gaf. Goede tijdsplanning richt zich op fasen die je kunt begrijpen en beslissingen die je kunt nemen."
           ]
+        },
+        {
+          "heading": "Bepaal waar de vertraging zit voordat je naar de bezorgdatum vraagt",
+          "paragraphs": [
+            "Begin bij het besteloverzicht. Heeft de verkoper nog niet verzonden, dan gaat de vraag over de aankoop of binnenlandse levering. Ligt het artikel in het magazijn, controleer dan of QC, een retourverzoek, verpakkingsinstructies of betaling nog jouw actie vereisen. Is het pakket aangemeld, kijk dan of de vervoerder de fysieke overdracht heeft geregistreerd. Tel deze fasen niet alsof het pakket al die tijd internationaal onderweg was.",
+            "Noteer de laatste afgeronde stap en de eerste stap die je niet kunt bevestigen. Een aankomstfoto in het magazijn beantwoordt bijvoorbeeld een andere vraag dan een acceptatiescan van de vervoerder. Gebruik datums van je eigen bestelling, niet de publicatiedatum van een bezorgscreenshot van een andere koper. Een vermelde vervoersduur is alleen nuttig wanneer je weet over welke fase die gaat en of jouw pakket die fase heeft bereikt."
+          ]
+        },
+        {
+          "heading": "Bereid een bruikbaar verzoek over tracking voor",
+          "paragraphs": [
+            "Verzamel bij ontbrekende trackingupdates het pakketnummer, de gekozen lijn, de aanmelddatum en de laatste zichtbare gebeurtenis met tijdstip. Controleer de vervoerderspagina die je CSSBuy-account aangeeft. Krijgt hetzelfde pakket later een ander bezorgnummer, bewaar dan beide in je privéoverzicht in plaats van te verwachten dat het eerste alle fasen beschrijft. Publiceer je adres of een verzendlabel met zichtbare persoonsgegevens niet.",
+            "Stel ondersteuning een concrete vraag: is het pakket aan de vervoerder overgedragen, geldt een ander trackingnummer of is een adrescorrectie nodig? Vermeld wat je al hebt nagekeken. Bewaar het oorspronkelijke verzoek samen met het antwoord, zodat vervolgvragen naar dezelfde gegevens verwijzen. Meld geen dubbel pakket aan en betaal er niet nogmaals voor omdat een scan ontbreekt; bevestig eerst de status van de bestaande verzending."
+          ]
         }
       ],
       "takeaways": [
@@ -626,12 +668,13 @@
       "sourceIds": [
         "buyforme",
         "storage"
-      ]
+      ],
+      "reviewedAt": "2026-10-30"
     },
     {
       "id": "warehouse",
       "slug": "cssbuy-warehouse-consolidation",
-      "title": "CSSBuy-magazijnopslag en pakketten samenvoegen",
+      "title": "CSSBuy-magazijn: opslag, samenvoegen en pakketchecklist",
       "description": "Plan opslag, beoordeel artikelen en voeg pakketten doordacht samen op basis van de echte goederen, deadlines en routebeperkingen.",
       "category": "Magazijn en QC",
       "keywords": [
@@ -683,6 +726,20 @@
             "Controleer of voor elk geselecteerd artikel een afgeronde beslissing tot houden bestaat. Verifieer bezorggegevens, aantallen, verpakkingsverzoeken en openstaande notities. Lees de beschikbare verzendopties voor de echte goederen en bestemming. Loopt er voor een artikel nog een retourgesprek, verduidelijk de status dan voordat je het toevoegt. Een laatste controle moet de fysieke inhoud laten overeenkomen met de beslissingen die je al hebt genomen.",
             "Bewaar het pakketnummer en de keuzes die in het account staan. Houd na verzending de inventaris als overzicht van wat in dat pakket hoort. Gebruik hetzelfde overzicht bij aankomst om de inhoud te controleren en eventuele problemen snel vast te leggen. Zo sluit je de kring tussen afzonderlijke bestellingen en het bezorgde pakket. Een goed beheerd magazijnproces wordt niet bepaald door het aantal samengevoegde artikelen, maar door duidelijke beslissingen, passende verpakking en een pakket waarvan je inhoud en kosten begrijpt."
           ]
+        },
+        {
+          "heading": "Gebruik vóór het inpakken een lijst met houden, verduidelijken of retourneren",
+          "paragraphs": [
+            "Noteer per magazijnartikel het bestelnummer, de ontvangstdatum, de gekozen uitvoering, het QC-resultaat en de volgende actie. Markeer houden pas nadat je de details hebt gecontroleerd die je beslissing beïnvloeden. Kies verduidelijken wanneer een ontbrekend label, een foto of een meting nog belangrijk is. Kies retourvraag wanneer je een vastgelegd probleem aan de verkoper wilt voorleggen. Deze eenvoudige verdeling voorkomt dat een onopgelost artikel per ongeluk meegaat in een gecombineerd pakket.",
+            "Open de opslaginformatie van elk artikel in je account en controleer de werkelijke einddatum. CSSBuy vermeldt op de verzenddienstenpagina maximaal 90 dagen gratis opslag, maar de artikelstatus en actuele mededelingen moet je nog steeds controleren. Bereken de termijn niet vanaf de dag waarop je de aanbieding vond. Vraag bij benodigde verlenging vóór de getoonde datum naar beschikbaarheid en kosten, in plaats van aan te nemen dat een nieuwe bestelling de teller herstart."
+          ]
+        },
+        {
+          "heading": "Vergelijk twee verpakkingsplannen voor dezelfde artikelen",
+          "paragraphs": [
+            "Maak één plan met de verpakkingen die je nodig hebt en een ander dat uitsluitend veilig weg te laten verpakkingen verwijdert. Noteer per plan de artikelen, beschermingsbehoefte en verwachte verpakte afmetingen. Gebruik dezelfde bestemming en routevoorwaarden. Het verwijderen van een winkeldoos kan ruimte besparen, maar ook bescherming wegnemen of een retour beïnvloeden; beslis vóór internationale verzending en bewaar noodzakelijke informatie.",
+            "Vervang zodra de definitieve pakketmetingen bekend zijn de schattingen in je budget. Controleer opnieuw de beperkingen voor gewicht, afmetingen en inhoud van de gekozen lijn. Een groter gecombineerd pakket is niet automatisch goedkoper dan losse toegestane pakketten. Vergelijk echte mogelijkheden met de officiële calculator en eindofferte en bewaar de bevestiging van ingepakte artikelen en gekozen diensten."
+          ]
         }
       ],
       "takeaways": [
@@ -694,7 +751,8 @@
         "shipforme",
         "storage",
         "buyforme"
-      ]
+      ],
+      "reviewedAt": "2026-10-30"
     },
     {
       "id": "returns",
@@ -751,6 +809,20 @@
             "Noteer na oplossing wat het probleem had kunnen voorkomen. Misschien waren de optienamen dubbelzinnig, ontbrak een afmeting of zat een accessoire op een foto niet in de gekozen aanbieding. Zet die les om in een concrete controle vóór aankoop. Maak van één uitkomst geen ongefundeerde uitspraak dat elke verkoper of bestelling hetzelfde zal verlopen.",
             "Bewaar bij volgende aankopen een duidelijkere beschrijving van het bedoelde artikel en bekijk magazijnbewijs kort nadat het beschikbaar komt. Een goed gedocumenteerde aankoop garandeert geen gunstige retourbeslissing, maar maakt onenigheid makkelijker uit te leggen en helpt handelen zolang opties mogelijk nog bestaan. De nuttigste retourstrategie begint vóór een probleem: begrijp wat je koopt, bewaar het relevante bewijs en weet welk gesprek in het officiële account bij de transactie hoort."
           ]
+        },
+        {
+          "heading": "Dien vóór internationale verzending een verzoek met bewijs in",
+          "paragraphs": [
+            "Vergelijk het ontvangen artikel met de definitieve bestelopdracht: link, maat, kleur, aantal en goedgekeurde vervangingen. Beschrijf een waarneembare afwijking met een passende foto of meting. Leg uit of je verduidelijking wilt of CSSBuy de verkoper naar retourneren moet vragen. Een duidelijk verzoek is nuttiger dan de algemene uitspraak dat het product slecht is, zeker als het om persoonlijke pasvorm gaat in plaats van een verkeerde uitvoering.",
+            "Bewaar verpakking, labels en accessoires tijdens de beoordeling. Bevestig de actuele voorwaarden van verkoper en platform, de beschikbare termijn en wie de retourvracht betaalt. Neem niet aan dat een magazijncontrole automatisch acceptatie van elke retour garandeert. Selecteer het artikel niet voor een internationaal pakket voordat de kwestie is opgelost, omdat procedure en kosten na uitvoer kunnen veranderen."
+          ]
+        },
+        {
+          "heading": "Vergelijk de terugbetaling met de oorspronkelijke betaling",
+          "paragraphs": [
+            "Noteer artikelbedrag, eventuele vracht- en servicekosten en het bedrag dat volgens de reactie van ondersteuning wordt terugbetaald. Controleer of je accountsaldo krijgt of geld terug via de oorspronkelijke betaalmethode. Dat zijn verschillende uitkomsten; accountsaldo is geen geld dat al op je bankrekening staat. Noteer afzonderlijk welk deel van het verzoek nog openstaat.",
+            "Vergelijk de afgeronde transactie met de afgesproken oplossing voordat je het dossier afsluit. Verwijs bij onduidelijke bedragen naar de oorspronkelijke bestelling en reactie in plaats van een losstaande nieuwe klacht te openen. De terugbetalingstermijn hangt af van de werkelijke oplossing en betaalroute; gebruik de accountstatus en informatie van de betaaldienst in plaats van voor alle gevallen hetzelfde aantal dagen te beloven."
+          ]
         }
       ],
       "takeaways": [
@@ -761,12 +833,13 @@
       "sourceIds": [
         "returns-policy",
         "expertbuy"
-      ]
+      ],
+      "reviewedAt": "2026-10-30"
     },
     {
       "id": "payments",
       "slug": "cssbuy-payment-fees",
-      "title": "CSSBuy-kosten en betalingen: plan je volledige budget",
+      "title": "CSSBuy-kosten en betalingen: servicekosten en totaalprijs",
       "description": "Scheid product-, binnenlandse bezorg-, service-, betaal- en pakketkosten en controleer daarna de bedragen in je officiële CSSBuy-account.",
       "category": "Bestellingen en betalingen",
       "keywords": [
@@ -818,6 +891,20 @@
             "Noteer wanneer de aankoop klaar is de werkelijk betaalde bedragen voor goederen, diensten en bezorging, samen met eventuele aanpassingen. Benoem valuta expliciet. Wil je een persoonlijk totaal in één valuta, gebruik dan de conversie uit je echte betalingen of geef je gekozen vergelijkingskoers duidelijk aan. Een actuele wisselkoers mengen met historische kosten kan een oude aankoop goedkoper of duurder laten lijken dan die werkelijk was.",
             "Vergelijk het resultaat met wat het product je opleverde, inclusief pasvorm, bruikbaarheid en de moeite die het proces kostte. Die reflectie is waardevoller dan blij zijn met een lage aanbiedingsprijs en de rest van de rekening negeren. Bewaar datum en relevante pakketgegevens voor toekomstige planning, maar maak van het resultaat geen gegarandeerd budget voor een andere koper. Een degelijk CSSBuy-budget is specifiek, uitgesplitst en bijgewerkt naarmate echte informatie de schattingen vervangt."
           ]
+        },
+        {
+          "heading": "Pas de gepubliceerde formule toe op een duidelijk gemarkeerd voorbeeld",
+          "paragraphs": [
+            "De officiële CSSBuy-pagina Cost and Fees, gecontroleerd op 30 oktober 2026, vermeldt een aankoopservicevergoeding van 6% over productprijs plus binnenlandse vracht in China. Bij een fictieve bestelling van 200 CNY met 10 CNY binnenlandse vracht geeft die formule 12,60 CNY. Het subtotaal van 222,60 CNY omvat alleen deze drie onderdelen; het is geen volledige bezorgprijs. Controleer het echte bestelscherm op toepasselijke accountspecifieke tarieven of wijzigingen.",
+            "Internationale vracht, gekozen diensten en eventuele betaal- of wisselkosten moet je afzonderlijk meenemen. Pas het aankooppercentage niet automatisch toe op iedere latere betaling. Noteer vóór bevestiging wat elk scherm zegt dat de betaling dekt, de valuta en het eindbedrag. Een kostenvoorbeeld is alleen nuttig als de berekeningsbasis duidelijk is en uitgesloten onderdelen zichtbaar blijven."
+          ]
+        },
+        {
+          "heading": "Houd een budgetoverzicht bij voor beide betaalfasen",
+          "paragraphs": [
+            "Maak een regel voor product en binnenlandse vracht, één voor aankoopservicekosten, één voor internationale verzending en losse regels voor gekozen extra’s. Noteer het bedrag van de betaaldienst in de valuta die je daadwerkelijk betaalt. Blijft na een correctie saldo in het account staan, onderscheid dat dan van geld dat via de oorspronkelijke betaalmethode is teruggestort.",
+            "Vervang vóór verzending iedere ruwe schatting door de op dat moment bevestigde bedragen. Heroverweeg bij overschrijding van je limiet optionele diensten of een aankoop die nog aangepast kan worden. Kies geen ongeschikte verzendlijn om een eerder budget alsnog passend te laten lijken. Bewaar betaalgegevens bij bestel- en pakketnummers, zodat een correctie of ondersteuningsvraag aan de juiste transactie gekoppeld kan worden."
+          ]
         }
       ],
       "takeaways": [
@@ -829,7 +916,8 @@
         "fees",
         "about",
         "buyforme"
-      ]
+      ],
+      "reviewedAt": "2026-10-30"
     },
     {
       "id": "links",
@@ -886,6 +974,20 @@
             "Een degelijk persoonlijk overzicht bevat de bronaanbieding, de CSSBuy-bestemming en het uiteindelijke bestelnummer. Elk heeft een andere rol. De bron verklaart wat werd aangeboden, de bestemming is waar je de koopoptie bekeek en het bestelrecord volgt wat je daadwerkelijk hebt gevraagd. Verandert een aanbieding later, dan kunnen je opgeslagen details de basis van de oorspronkelijke beslissing verklaren.",
             "Gebruik dit overzicht wanneer je magazijnbewijs vergelijkt of een verschil bespreekt. Een verkeerde optie herkennen is veel makkelijker als de geselecteerde tekst en afbeelding bewaard zijn. Werk het overzicht na aankoop bij met wat je leerde over hoeveelheid, maten of verkoperscommunicatie. Het doel is geen universele winnaar tussen Taobao, Weidian en 1688 uitroepen. Het is elke bronlink traceerbaar maken en elke koopbeslissing begrijpelijk vanuit de informatie die je destijds had."
           ]
+        },
+        {
+          "heading": "Controleer of een link naar het bedoelde artikel verwijst",
+          "paragraphs": [
+            "Bewaar de oorspronkelijke product-URL van de marktplaats en open die voordat je deze in het officiële CSSBuy-aankoopproces plakt. Vergelijk verkoper, producttitel en beschikbare opties met je shortlist. Een verkorte deellink, winkelhomepage en afzonderlijke product-URL zijn niet onderling uitwisselbaar. Los een verwijzing naar een collectie of andere uitvoering op voordat je betaalt.",
+            "Controleer na herkenning door CSSBuy de ingevulde informatie en geselecteerde opties; een geslaagde omzetting bewijst niet dat alles klopt. Noteer aantal, kleur, maat en eventuele minimumafname van de verkoper voor jouw specifieke aanbieding. Gebruik bij een niet-herkende pagina officiële ondersteuning met de originele link en duidelijke productgegevens. Raad geen alternatieve productcode op basis van een nummer elders in de catalogus."
+          ]
+        },
+        {
+          "heading": "Houd productcodes gescheiden van bestelreferenties",
+          "paragraphs": [
+            "Een ontdekkingssite kan een intern recordnummer toekennen, terwijl de marktplaats een andere productcode heeft en CSSBuy na aankoop nog een bestelnummer maakt. Bewaar elk nummer met zijn functie. Geef bij aankoopvragen de oorspronkelijke productlink; vermeld bij vragen over een betaalde bestelling de CSSBuy-bestelreferentie. Een magazijnpakketnummer is pas relevant wanneer artikelen voor internationale levering worden samengevoegd.",
+            "Deze scheiding maakt latere vergelijkingen ook veiliger. Een nieuwe aanbieding met dezelfde foto kan een andere verkoper of productcode hebben. Beoordeel die als een nieuwe aanbieding in plaats van een opgeslagen link zonder notitie te vervangen. Presenteer een uitleg over linkomzetting niet als werkende tool tenzij de site de omzetting echt uitvoert en de bestemming ter controle toont."
+          ]
         }
       ],
       "takeaways": [
@@ -897,7 +999,8 @@
         "buyforme",
         "expertbuy",
         "user-link"
-      ]
+      ],
+      "reviewedAt": "2026-10-30"
     },
     {
       "id": "sizing",
@@ -954,6 +1057,20 @@
             "Flexibele materialen, meettechniek en constructie kunnen kleine afwijkingen geven. Lees een gefotografeerde liniaal niet als een nauwkeurigheidsniveau dat de opstelling niet aankan. Bepaal op basis van de gevoeligheid van de pasvorm of de resterende onzekerheid aanvaardbaar is. Moet een afmeting binnen een zeer smal bereik vallen om het artikel bruikbaar te maken, dan kan een aankoop op afstand meer bewijs vereisen dan de aanbieding kan geven.",
             "Meet en pas het artikel na bezorging en leg de uitkomst vast met hetzelfde referentiesysteem. Noteer of de tabel nuttig was, of het gekozen vergelijkingskledingstuk geschikt was en welke afmeting het zwaarst woog. Houd persoonlijke voorkeur gescheiden van een universele conclusie over de maten van de verkoper. Na meerdere aankopen ontstaat zo een praktisch pasvormoverzicht op basis van je eigen ervaring. Dat is betrouwbaarder dan steeds adviezen toepassen om een maat groter of kleiner te nemen zonder artikel, tabel of drager te kennen."
           ]
+        },
+        {
+          "heading": "Vergelijk maten met dezelfde begin- en eindpunten",
+          "paragraphs": [
+            "Noteer bij kleding of een tabel de plat gemeten kledingbreedte, volledige omtrek of aanbevolen lichaamsmaat toont. Vergelijk die grootheden niet rechtstreeks. Gebruik de begin- en eindpunten uit het schema voor lichaams- en mouwlengte, vooral bij afhangende schouders of raglanmouwen. Meet een comfortabel referentiekledingstuk op dezelfde manier, zonder rek, en noteer bij elke waarde de eenheid.",
+            "Onderscheid bij schoenen voetlengte, binnenzoollengte en buitenzoollengte. Een zoolfoto laat de bruikbare binnenruimte niet zien. Meet beide voeten consequent en houd rekening met de sokken of inlegzolen die je wilt gebruiken. De maat op het verkoperslabel identificeert een optie binnen die aanbieding, maar is geen universele pasvormbelofte. Vraag naar de belangrijke maat in plaats van standaard groter of kleiner te kiezen."
+          ]
+        },
+        {
+          "heading": "Gebruik de magazijnmeting als beslismoment",
+          "paragraphs": [
+            "Bepaal vóór het aanvragen van een extra meting welk resultaat je zou laten houden of naar retourneren zou laten vragen. Vraag als de dienst beschikbaar is om een zichtbare liniaal en duidelijke meetpunten en bevestig eventuele kosten. Vergelijk het magazijnresultaat met de oorspronkelijke tabel via dezelfde methode. Vraag bij een onduidelijke foto om uitleg in plaats van een perspectiefverschil als bevestigd defect te behandelen.",
+            "Bewaar de meting bij de gekozen maat en bestelreferentie. Noteer bij een geaccepteerd verschil waarom het nog bij je gewenste pasvorm past. Beschrijf bij afwijzing de concrete afwijking via de officiële ondersteuning terwijl het artikel nog in het magazijn ligt. Leg na levering de werkelijke pasvorm vast voor toekomstige beslissingen over dit artikel, zonder aan te nemen dat alle producten dezelfde maatvoering hebben."
+          ]
         }
       ],
       "takeaways": [
@@ -964,7 +1081,283 @@
       "sourceIds": [
         "buyforme",
         "expertbuy"
-      ]
+      ],
+      "reviewedAt": "2026-10-30"
+    },
+    {
+      "id": "shipping-usa",
+      "slug": "cssbuy-shipping-to-usa",
+      "title": "CSSBuy-verzending naar de VS: kosten, tracking en pakketvoorbereiding",
+      "description": "Plan een CSSBuy-pakket naar de VS: vergelijk actuele offertes, controleer verpakte afmetingen, bereid het adres voor en volg elke bezorgfase.",
+      "category": "Verzending",
+      "keywords": [
+        "cssbuy shipping to usa",
+        "cssbuy shipping cost usa",
+        "cssbuy usa tracking",
+        "cssbuy shipping calculator"
+      ],
+      "intro": "Een CSSBuy-bestelling naar de Verenigde Staten verzenden begint voordat je een internationale lijn kiest. Producten moeten het magazijn bereiken, overeenkomen met de bestelling, op een toegestane route passen en binnen je volledige budget blijven. De nuttige vraag is niet welke lijn altijd het goedkoopst is, maar welke nu beschikbare lijn jouw pakket en bestemming accepteert. Deze gids legt een praktisch vergelijkingsproces uit zonder vaste prijs of aankomstdatum te beloven. Houd de officiële CSSBuy-calculator en je account open naast de shortlist; actuele routevoorwaarden en uiteindelijke pakketmetingen bepalen je werkelijke keuzes.",
+      "sections": [
+        {
+          "heading": "Scheid de aankoop van de internationale verzending",
+          "paragraphs": [
+            "De officiële koopgids van CSSBuy onderscheidt producten bestellen van een magazijnpakket aanmelden. Eerst geef je de productlink en benodigde opties op. De aankoopfase omvat artikelen en toepasselijke bezorging binnen China. Controleer na aankomst magazijninformatie en foto’s voordat je internationaal vervoer regelt. Een betaling voor producten betekent niet dat het internationale pakket al is vertrokken.",
+            "Houd voor een Amerikaanse bestelling twee eenvoudige overzichten bij: één per artikel en één voor het uitgaande pakket. Het artikeloverzicht bevat link, maat, kleur, aantal en magazijnstatus. Het pakketoverzicht bevat geselecteerde artikelen, bestemming, verpakkingsinstructies en internationale route. Door ze te scheiden verwar je het binnenlandse trackingnummer van de verkoper niet met het uiteindelijke bezorgnummer."
+          ]
+        },
+        {
+          "heading": "Voer een volledig adres in de Verenigde Staten in",
+          "paragraphs": [
+            "Gebruik het bestemmingsland en de postgegevens die de officiële calculator en het pakketformulier vragen. Bevestig vóór betaling naam, straatadres, appartement of unit, stad, staat en ZIP-code. Controleer of de route jouw type adres accepteert; neem niet aan dat iedere lijn elk adres, territorium of afgelegen gebied onder dezelfde voorwaarden bedient.",
+            "Bewaar het adres in een vorm die je met de pakketbevestiging kunt vergelijken. Verdeelt het formulier de gegevens over velden, controleer dan het samengestelde adres in plaats van alleen elk veld. Een ontbrekend huis- of unitnummer valt minder op wanneer je op de prijs focust. Deel je adres of trackingscreenshots niet openbaar wanneer je anderen naar een route vraagt."
+          ]
+        },
+        {
+          "heading": "Maak een schatting met betrouwbare invoer",
+          "paragraphs": [
+            "Open de officiële CSSBuy-verzendcalculator, selecteer de Verenigde Staten en vul gevraagd gewicht en afmetingen in. Gebruik magazijnmetingen wanneer die beschikbaar zijn. Geef vóór aankomst duidelijk aan dat productgewichten en pakketafmetingen schattingen zijn. Vergelijk alleen routes die de relevante artikelcategorie en pakketgrootte accepteren. Een lage getoonde prijs is onbruikbaar als de inhoud niet is toegestaan.",
+            "Noteer bij iedere schatting datum, bestemming, gewicht, afmetingen en verpakkingsaannames. Daarmee begrijp je waarom een latere offerte verandert. Vergelijk eerst hetzelfde pakket tussen routes en daarna verpakkingskeuzes binnen één route. Wanneer gewicht, bestemming en verpakking tegelijk veranderen, kun je niet vaststellen waar de schijnbare besparing vandaan komt."
+          ]
+        },
+        {
+          "heading": "Begrijp verpakte afmetingen en berekend gewicht",
+          "paragraphs": [
+            "Internationaal vervoer kan zowel ingenomen ruimte als weegschaalgewicht gebruiken. CSSBuy beschrijft vacuümverpakken als manier om het volume van geschikte kleding te verminderen. Dat maakt samendrukken niet voor ieder artikel geschikt. Schoenen, gevormde accessoires en kwetsbare producten vragen een verpakkingskeuze op basis van vorm en bescherming, niet alleen de laagste schatting.",
+            "Een voorbeeldpakket van 40 × 30 × 25 centimeter heeft 30.000 kubieke centimeter inhoud. Als een specifieke route uitdrukkelijk een deler van 6.000 gebruikt, volgt daar 5 kilogram volumegewicht uit. Dit is een rekenvoorbeeld, geen uitspraak dat alle Amerikaanse routes die deler gebruiken. Lees de werkelijke regel en afronding van de lijn voordat je met het gemeten gewicht vergelijkt."
+          ]
+        },
+        {
+          "heading": "Vergelijk de volledige kosten van hetzelfde pakket",
+          "paragraphs": [
+            "Zet productprijs, binnenlandse vracht, aankoopservicekosten, internationale vracht en gekozen verpakkingsdiensten op afzonderlijke regels. De officiële kostenpagina van CSSBuy legt uit dat aankopen en vervoer verschillende kostenonderdelen zijn. Controleer betaal-, wissel- en bestemmingskosten waar ze gelden in plaats van te veronderstellen dat ze in het hoofdverzendtarief zitten.",
+            "Bepaal je maximale totaaluitgave vóór extra opties. Verschillen twee geschikte routes in prijs, vergelijk dan hun bezorgschatting, beperkingen, trackingbereik en getoonde beschermingsvoorwaarden. Een duurdere route kan bij een deadline passen, maar een snellere vervoersschatting omvat nog steeds niet de tijd die al aan wachten op de verkoper of magazijncontroles is besteed."
+          ]
+        },
+        {
+          "heading": "Rond kwaliteitscontrole vóór samenvoegen af",
+          "paragraphs": [
+            "Bekijk de daadwerkelijke magazijnfoto’s van ieder geselecteerd artikel. Bevestig aantal, kleur, label en maten die voor de pasvorm belangrijk zijn. Vraag vóór gezamenlijk inpakken om verduidelijking als een belangrijk detail niet zichtbaar is. Een algemene controle bewijst geen authenticiteit, materiaalsamenstelling, duurzaamheid of perfecte pasvorm; daarvoor is bewijs nodig dat een foto niet altijd levert.",
+            "Groepeer passende artikelen en geef concrete verpakkingsinstructies. Benoem bijvoorbeeld welke schoenendozen moeten blijven en welk kledingstuk compacter gevouwen mag worden. Verwijder niet alleen voor ruimtewinst gegevens die voor retourneren of correcte verzenddocumentatie nodig zijn. Los een mogelijke retour op voordat het artikel het internationale pakket ingaat; na vertrek veranderen de praktische mogelijkheden."
+          ]
+        },
+        {
+          "heading": "Controleer de definitieve pakketbevestiging",
+          "paragraphs": [
+            "Het ingepakte pakket kan van de schatting afwijken doordat beschermmateriaal gewicht toevoegt en doosafmetingen veranderen. Controleer op het bevestigingsscherm opnieuw gemeten gewicht, afmetingen, inhoud en route. Wijkt een bedrag af van de opgeslagen schatting, vergelijk dan eerst de onderliggende metingen en diensten. Vraag CSSBuy vóór verzendtoestemming om uitleg als je een verschil niet kunt verklaren.",
+            "Bewaar bevestiging, betaalbewijs en verpakkingsinstructies samen. Gebruik juiste artikelbeschrijvingen en waarden wanneer het proces daarom vraagt en controleer toepasselijke officiële bestemmingsvereisten. Deze gids belooft geen vrijstellingsgrens of gegarandeerde douane-uitkomst. Gebruik een oude forumscreenshot niet als actuele regel voor een pakket naar de VS."
+          ]
+        },
+        {
+          "heading": "Volg het pakket door afzonderlijke fasen",
+          "paragraphs": [
+            "Onderscheid magazijnverwerking, overdracht aan de vervoerder, internationaal vervoer, verwerking in het bestemmingsland en uiteindelijke bezorging. Een trackingnummer kan al bestaan voordat fysieke overdracht is geregistreerd. Lees datum, locatie en tekst van het laatste evenement voordat je concludeert dat het pakket stilstaat. Gebruik de trackinginformatie in je account en de voor dat pakket genoemde vervoerder.",
+            "Verzamel bij een vermoedelijk te late update pakketnummer, verzenddatum, routenaam en laatste zichtbare gebeurtenis. Verstuur die privé via officiële ondersteuning en benoem de ontbrekende stap. Open niet meerdere losstaande verzoeken met verschillende verklaringen. Een kort overzicht helpt ondersteuning een magazijnvraag te onderscheiden van een ontbrekende vervoerdersscan of adresprobleem."
+          ]
+        },
+        {
+          "heading": "Maak de volgende Amerikaanse verzending eenvoudiger",
+          "paragraphs": [
+            "Noteer na bezorging werkelijk gewicht, afmetingen, vervoersduur en eventuele betaalde toeslagen. Controleer de verpakking en fotografeer schade voordat je die weggooit. Vergelijk de inhoud met je besteloverzicht en gebruik snel de officiële hulp als iets niet klopt. Eén levering is een nuttig eigen referentiepunt, maar geen garantie voor een andere route of periode.",
+            "Gebruik bij de volgende aankoop opnieuw de checklist in plaats van dezelfde prijs te verwachten. Controleer de actuele calculator, opslagstatus van alle artikelen en beschikbaarheid van je voorkeurslijn. De betrouwbaarste besparing ontstaat door ongeschikte aankopen, onnodig verpakkingsvolume en onvolledige adresgegevens te vermijden voordat je het pakket aanmeldt."
+          ]
+        }
+      ],
+      "takeaways": [
+        "Vergelijk Amerikaanse routes met dezelfde bestemming, inhoud en verpakte metingen.",
+        "Rond QC en verpakkingskeuzes af voordat je het internationale pakket aanmeldt.",
+        "Scheid schattingen van eindkosten en volg magazijn- en vervoerdersfasen afzonderlijk."
+      ],
+      "sourceIds": [
+        "buyforme",
+        "estimates",
+        "fees",
+        "shipforme"
+      ],
+      "reviewedAt": "2026-10-30"
+    },
+    {
+      "id": "shoes-spreadsheet",
+      "slug": "cssbuy-shoes-spreadsheet",
+      "title": "CSSBuy-schoenenspreadsheet: maten, QC en koopgids",
+      "description": "Vergelijk echte CSSBuy-schoenenlinks, controleer metingen en magazijnfoto’s en plan het verpakken van schoenendozen.",
+      "category": "Productgidsen",
+      "keywords": [
+        "cssbuy shoes spreadsheet",
+        "cssbuy sneakers",
+        "cssbuy shoe size",
+        "cssbuy shoes qc"
+      ],
+      "intro": "Een CSSBuy-schoenenspreadsheet helpt het meest wanneer je ermee tussen concrete paren kiest in plaats van eindeloos links verzamelt. Een aantrekkelijke foto en een vertrouwde maataanduiding zijn slechts het begin. Je hebt ook een duidelijk overzicht van de gekozen optie, een meetmethode, foto’s van het ontvangen paar en een verpakkingsbesluit nodig. Deze gids geeft een herhaalbare manier om schoenen in de catalogus te vergelijken en een bestelling vóór internationaal verzenden te controleren. Het overzicht is een ontdekkingstool; verkopersclaims, beschikbaarheid en de precieze uitvoering moet je in de aanbieding en CSSBuy-bestelling blijven controleren.",
+      "sections": [
+        {
+          "heading": "Begin met wat de schoenen moeten kunnen",
+          "paragraphs": [
+            "Schrijf op waarvoor je het paar wilt gebruiken, welke pasvorm je prettig vindt en wat je complete maximumbudget is. Dagelijks gebruik, ruimte voor een orthopedische zool en nat weer stellen verschillende eisen. Een productfoto bewijst geen specialistische veiligheid, sportprestaties of duurzaamheid. Hangt een eis van een materiaal- of constructieclaim af, bepaal dan vóór aankoop welk bewijs nodig is.",
+            "Beperk je shortlist tot twee of drie kandidaten. Noteer productlink, kleur, maatinformatie van de verkoper, prijs en openstaande vragen. Beoordeel een paar niet alleen beter vanwege een scherpere miniatuur. Vaste vergelijkingsvelden helpen ongeschikte opties weg te strepen en een concrete vraag aan de aankoopagent uit te leggen."
+          ]
+        },
+        {
+          "heading": "Bekijk de exacte aanbieding achter de productkaart",
+          "paragraphs": [
+            "Open de productdetails en bekijk beschikbare verkopersbeelden en de oorspronkelijke aanbieding. Controleer dat de prijs geldt voor jouw maat, kleur en versie. Een cataloguskaart kan een aanbieding samenvatten, maar niet garanderen dat alle uitvoeringen beschikbaar blijven. Bewaar de exacte link zodat een vergelijkbare foto je later niet naar een ander aanbod leidt.",
+            "Controleer de uitvoering op de CSSBuy-aankoopbestemming voordat je bestelt. Gebruik officiële ondersteuning als een link niet wordt herkend of opties onduidelijk zijn. Vervang de marktplaatsproductcode niet door het interne catalogusnummer. Een correcte link en expliciete maatinstructie zijn nuttiger dan de vage opdracht het paar van een screenshot te kopen."
+          ]
+        },
+        {
+          "heading": "Meet voordat je een maatlabel kiest",
+          "paragraphs": [
+            "Meet beide voeten op dezelfde manier en noteer de eenheid. Vergelijk met de instructies van die specifieke aanbieding en houd rekening met de definitie van de verkoper. Voetlengte, binnenzoollengte en buitenzoollengte betekenen verschillende dingen. Een buitenzoolmaat is niet de bruikbare binnenlengte en een gedrukt Europees maatnummer bewijst geen gelijke pasvorm bij verschillende modellen.",
+            "Gebruik een comfortabel paar dat je bezit als extra referentie wanneer vergelijkbaar meten mogelijk is. Noteer de invloed van sokken, inlegzolen of de wens voor extra ruimte. Vermijd algemene regels zoals altijd één maat groter kiezen. Ontbreekt de bepalende afmeting, vraag dan om uitleg of kies een beter gedocumenteerde aanbieding."
+          ]
+        },
+        {
+          "heading": "Maak van de shortlist een duidelijke bestelopdracht",
+          "paragraphs": [
+            "Noteer voor ieder paar product-URL, kleur, maatlabel, aantal en gebruikte meting. Beschrijf een eis concreet als het platform bestelnotities toestaat. Een verzoek om een zichtbaar maatlabel of een bepaalde lengtemeting is eenvoudiger uit te voeren dan een algemene vraag om de beste kwaliteit. Bevestig beschikbaarheid en kosten vóór je extra werk vraagt.",
+            "Bekijk na indienen het besteloverzicht. Is een optie niet beschikbaar, behandel een vervanging dan als nieuwe beslissing in plaats van die automatisch te accepteren. Een andere kleur of maat kan ook andere materialen of afmetingen betekenen. Bewaar de oorspronkelijke opdracht en goedgekeurde wijziging samen, zodat de magazijncontrole een duidelijk uitgangspunt heeft."
+          ]
+        },
+        {
+          "heading": "Onderscheid verkopersfoto’s van magazijn-QC",
+          "paragraphs": [
+            "De foto’s in de productcatalogus horen bij de presentatie van de aanbieding. Ze bewijzen niet de staat van jouw ontvangen paar. Magazijn-QC-foto’s horen bij de goederen die voor jouw bestelling zijn aangekomen en moeten met de gekozen uitvoering worden vergeleken. Onze site heeft momenteel geen onafhankelijk aangesloten QC-fotozoekfunctie; gebruik de foto’s en ondersteuning in je CSSBuy-account.",
+            "CSSBuy omschrijft de magazijninspectie als een algemene controle. Foto’s kunnen zichtbare verschillen, ontbrekende onderdelen of een verkeerd label helpen herkennen, maar certificeren geen authenticiteit, duurzaamheid of comfort. Behandel een onduidelijke foto als ontbrekende informatie. Vraag liever de noodzakelijke hoek dan een schaduw of reflectie als bewezen gebrek te lezen."
+          ]
+        },
+        {
+          "heading": "Controleer het paar in een vaste volgorde",
+          "paragraphs": [
+            "Begin met identiteit: twee schoenen, juiste kleur, overeenkomende maatlabels en eventuele accessoires. Vergelijk vervolgens links en rechts vanuit vergelijkbare hoeken. Bekijk zichtbare stiksels, zoolranden, sluitingen en voering op daadwerkelijk waarneembare problemen. Licht en perspectief kunnen één kant anders laten lijken, dus trek geen conclusie alleen uit ongelijksoortige aanzichten.",
+            "Controleer daarna de maat waarop je keuze berustte. Vraag een duidelijk geplaatste liniaal als de dienst dat mogelijk maakt. Geef precies aan waar de meting begint en eindigt. Vergelijk tot slot een zichtbare afwijking met de oorspronkelijke bestelling. Scheid een zeker verschil, zoals het verkeerde maatlabel, van een persoonlijke voorkeur die de verkoper mogelijk niet als gebrek erkent."
+          ]
+        },
+        {
+          "heading": "Beslis tussen houden, verduidelijken en retour vragen",
+          "paragraphs": [
+            "Gebruik drie categorieën. Houd het paar als noodzakelijke details kloppen en resterende onzekerheid acceptabel is. Vraag verduidelijking wanneer een ontbrekende foto of meting je besluit kan veranderen. Start een retourvraag bij een vastgelegde afwijking of een andere reden die je wilt laten beoordelen. Controleer toepasselijke voorwaarden en termijnen via CSSBuy en de verkoper.",
+            "Beschrijf het probleem met de bestelreferentie en een korte vergelijking tussen gevraagd en ontvangen. Voeg relevant bewijs toe via officiële ondersteuning. Combineer losse zorgen niet tot een eis voor gegarandeerde terugbetaling. Houd schoenen en verpakking intact tijdens de retourbeoordeling en voeg ze niet aan een internationaal pakket toe voordat de kwestie is opgelost."
+          ]
+        },
+        {
+          "heading": "Kies schoenendoosverpakking met het hele pakket in gedachten",
+          "paragraphs": [
+            "Een winkeldoos neemt ruimte in, maar kan vorm behouden, accessoires beschermen of voor retourneren nodig zijn. Beslis vóór een verpakkingswijziging of je die nodig hebt. Overweeg bij verwijdering hoe je het paar tegen druk en beweging beschermt. Ga er niet van uit dat minder verpakking altijd lagere eindkosten geeft; de gewicht- en volumeregels van de route bepalen dat.",
+            "Vergelijk verpakte afmetingen en gewicht van het complete pakket in plaats van een geschat schoengewicht met het aantal paren te vermenigvuldigen. Schoenen tussen kleding kunnen anders passen dan meerdere paren in dozen. Gebruik de officiële calculator met passende bestemming en routevoorwaarden en herhaal de berekening zodra het magazijn definitieve metingen heeft."
+          ]
+        },
+        {
+          "heading": "Leg het resultaat vast in plaats van opnieuw te gokken",
+          "paragraphs": [
+            "Pas de schoenen na bezorging binnenshuis op een schone ondergrond terwijl je de bestelling controleert. Noteer gekozen maat, relevante metingen en pasvorm tegenover het referentiepaar. Bewaar probleemfoto’s en verpakking totdat je weet of hulp nodig is. Eén geslaagde bestelling bewijst niet dat een andere aanbieding met vergelijkbare foto identiek zal zijn.",
+            "Vul de shortlist aan met informatie die echt hielp: een betrouwbare maattabel, duidelijke magazijnmeting of beschermende verpakkingskeuze. Verwijder onjuiste aannames. Na verloop van tijd is een klein overzicht van gemeten beslissingen nuttiger dan een grote spreadsheet met onverklaarde links en beoordelingen van anderen."
+          ]
+        }
+      ],
+      "takeaways": [
+        "Controleer vóór bestellen de exacte uitvoering en meetmethode van de verkoper.",
+        "Gebruik eigen magazijnfoto’s voor QC; catalogusbeelden controleren het ontvangen paar niet.",
+        "Los retourvragen vóór verzending op en vergelijk schoenendozen met definitieve pakketmetingen."
+      ],
+      "sourceIds": [
+        "buyforme",
+        "expertbuy",
+        "shipforme",
+        "estimates",
+        "returns-policy"
+      ],
+      "reviewedAt": "2026-10-30"
+    },
+    {
+      "id": "hoodie-spreadsheet",
+      "slug": "cssbuy-hoodie-spreadsheet",
+      "title": "CSSBuy-hoodiespreadsheet: maten, stof en QC-gids",
+      "description": "Vergelijk CSSBuy-hoodielinks met kledingmaten, stofinformatie, magazijnfoto’s en praktische verpakkingscontroles.",
+      "category": "Productgidsen",
+      "keywords": [
+        "cssbuy hoodie spreadsheet",
+        "cssbuy hoodies",
+        "cssbuy hoodie sizing",
+        "cssbuy hoodie qc"
+      ],
+      "intro": "Een CSSBuy-hoodiespreadsheet hoort praktische vragen te beantwoorden: zit het kledingstuk zoals je wilt, verklaart de aanbieding de stof en kun je het ontvangen artikel vóór verzending controleren? Een maatletter en vooraanzicht geven zelden alle antwoorden. Gebruik de categorie hoodies en truien als beginpunt en vergelijk daarna exacte uitvoeringen en maten. Deze gids toont hoe je een bruikbare shortlist maakt, duidelijk bewijs vraagt en rekening houdt met volumineuze kleding in een pakket. Hij rangschikt geen ongeteste producten en noemt verkopersfoto’s geen geverifieerde magazijn-QC.",
+      "sections": [
+        {
+          "heading": "Bepaal de gewenste pasvorm vóór het zoeken",
+          "paragraphs": [
+            "Kies een hoodie die je comfortabel draagt en bepaal wat je anders wilt. Misschien een langer lijf, bredere borst, kortere mouwen of meer ruimte voor een overhemd. Leg voorkeuren waar mogelijk in maten vast. Begrippen zoals oversized, relaxed en regular beschrijven een bedoeling, maar geven geen uniforme afmeting tussen verkopers en merken.",
+            "Denk aan seizoen en kledinglagen. Een zwaar ogende foto bewijst geen warmte en een dikke capuchon bepaalt niet het gewicht van het hele kledingstuk. Scheid je budget van de stijllijst, zodat een aantrekkelijk ontwerp ontbrekende pasvormgegevens of nog niet meegerekende internationale kosten niet verbergt."
+          ]
+        },
+        {
+          "heading": "Vergelijk concrete hoodie-aanbiedingen",
+          "paragraphs": [
+            "Open de productdetails van iedere kandidaat en noteer link, kleur, beschikbare maten en versie. Controleer of verschillende kledingstukken of materialen onder dezelfde vanafprijs vallen. Zoek de maattabel en stofbeschrijving en bepaal of ze voor jouw gekozen uitvoering gelden. Een miniatuur is een uitnodiging tot onderzoek, geen specificatieblad.",
+            "Beperk de vergelijking tot enkele kandidaten met voldoende gegevens. Gebruiken twee aanbiedingen vergelijkbare beelden, ga dan niet uit van dezelfde herkomst of maten. Noteer openstaande vragen naast de kandidaat in plaats van ze met een recensie van een ander product te beantwoorden. De beste shortlist kun je vóór aankoop helder toelichten."
+          ]
+        },
+        {
+          "heading": "Meet een referentiekledingstuk consequent",
+          "paragraphs": [
+            "Leg je referentiehoodie plat zonder rek. Noteer borstbreedte van zijkant tot zijkant, lichaamslengte vanaf een bepaald punt, mouwlengte en schouderbreedte waar de constructie vergelijking toelaat. Vermeld een verlaagde schouder of raglanmouw, want een mouw vanaf de schoudernaad kun je niet rechtstreeks vergelijken met een mouw vanaf de hals.",
+            "Volg het schema van de verkoper in plaats van een eigen meetconventie. Een platte borstbreedte van 60 centimeter is bijvoorbeeld iets anders dan 60 centimeter borstomtrek. Verdubbelen helpt de vorm te begrijpen, maar maakt een kledingmaat niet tot een gegarandeerd lichaamsadvies. Houd rekening met gewenste bewegingsruimte en vermelde meettolerantie."
+          ]
+        },
+        {
+          "heading": "Lees stofclaims zonder te gokken",
+          "paragraphs": [
+            "Controleer opgegeven samenstelling, voering en onderhoudsinformatie als de aanbieding die biedt. Stofgewicht in gram per vierkante meter is niet het gewicht van de afgewerkte hoodie. Een foto verifieert katoenpercentage, dichtheid of krimpbestendigheid niet betrouwbaar. Zijn die eigenschappen belangrijk, zoek dan schriftelijke informatie en bepaal wat onbevestigd blijft.",
+            "Voorspel geen vaste krimp op basis van het uiterlijk. Verschillende materialen, afwerkingen en wasmethoden kunnen andere resultaten geven. Bewaar onderhoudsinstructies bij de bestelling als ze er zijn. Ontbreken ze, beoordeel dan of dat je koopbereidheid verandert in plaats van een passend antwoord uit een andere verkopersbeschrijving te verzinnen."
+          ]
+        },
+        {
+          "heading": "Plaats een later controleerbare bestelling",
+          "paragraphs": [
+            "Bewaar de exacte kleur en maat met de gebruikte maattabel. Beschrijf bij beschikbare bestelnotities een concrete controle die je helpt het kledingstuk te houden of niet. Een verzoek om het maatlabel en de platte borstbreedte is duidelijker dan het magazijn vragen of de hoodie goed past. Bevestig beschikbaarheid van de dienst en eventuele extra kosten.",
+            "Controleer vervangingen voordat je ze goedkeurt. Een andere maat, kleur of versie kan een andere tabel gebruiken; een gewijzigde verkopersoptie verdient dezelfde aandacht als de oorspronkelijke. Bewaar de schriftelijke bevestiging van een afgesproken wijziging, zodat het ontvangen artikel met de definitieve instructie wordt vergeleken en niet met een oude screenshot."
+          ]
+        },
+        {
+          "heading": "Gebruik magazijnfoto’s voor zichtbare controles",
+          "paragraphs": [
+            "Vergelijk kleur, label, plaatsing van het ontwerp en meegeleverde onderdelen met de bestelling. Bekijk capuchon, manchetten, zoom, zakken en eventuele sluiting. Zoek zichtbare naden naar duidelijke openingen of afwijkingen, maar houd rekening met licht, vouwen en perspectief. Vraag om een duidelijker beeld wanneer een relevante zorg onopgelost blijft.",
+            "Catalogusfoto’s van de verkoper staan los van jouw magazijn-QC. CSSBuy noemt de inspectie algemeen en een aantrekkelijke aanbieding of heldere foto garandeert geen materiaalsamenstelling of duurzaamheid. Onze catalogus heeft momenteel geen aangesloten QC-zoektool. Gebruik het bewijs in je CSSBuy-account en stel vragen via het officiële bestelproces."
+          ]
+        },
+        {
+          "heading": "Controleer maten die je beslissing bepalen",
+          "paragraphs": [
+            "Kan het magazijn meten, vraag dan de methode van de verkoperstabel of leg de meetpunten duidelijk uit. Vergelijk gelijke grootheden: platte borstbreedte met platte borstbreedte, lichaamslengte vanaf hetzelfde punt en mouwen met dezelfde constructiereferentie. Een schuin gefotografeerd meetlint kan lastig leesbaar zijn; vraag uitleg voordat je een klein ogenschijnlijk verschil beslissend vindt.",
+            "Bepaal vooraf welke afwijkingen je accepteert. Een bescheiden lengteverschil kan belangrijker zijn dan extra breedte, afhankelijk van je gewenste pasvorm. Scheid een duidelijk verkeerd geleverd maatnummer van twijfel over persoonlijke voorkeur. Controleer bij een gewenste retour snel de actuele voorwaarden en houd het artikel buiten een internationaal pakket zolang het verzoek wordt beoordeeld."
+          ]
+        },
+        {
+          "heading": "Plan verpakking rond volume en bescherming",
+          "paragraphs": [
+            "Hoodies kunnen veel plaats innemen, vooral met meerdere dikke kledingstukken in één pakket. CSSBuy beschrijft vacuümverpakken voor geschikte kleding, maar geschiktheid hangt van het artikel en zijn details af. Denk aan prints, gevormde versieringen en accessoires vóór je compressie vraagt. Het kleinst mogelijke pakket biedt niet vanzelf de beste bescherming.",
+            "Vergelijk definitief gewicht en afmetingen via de officiële calculator. Houd productprijzen en internationale vracht gescheiden en controleer de echte regels voor berekend gewicht. Combineer je hoodies met schoenen of kwetsbare spullen, vraag dan verpakking die verschillende vormen beschermt. Controleer de offerte na het inpakken opnieuw: alleen kledinggewicht beschrijft het afgewerkte pakket niet."
+          ]
+        },
+        {
+          "heading": "Maak van de levering een bruikbaar pasvormoverzicht",
+          "paragraphs": [
+            "Vergelijk bij aankomst het kledingstuk met bestelling en referentiematen voordat je informatie verwijdert die voor ondersteuning nodig kan zijn. Fotografeer problemen en bewaar verpakking bij een bezorgkwestie. Volg beschikbare onderhoudsinstructies in plaats van iedere hoodie op dezelfde manier te wassen of drogen. Houd ondersteuningsvragen gericht op een waarneembaar verschil.",
+            "Noteer gekozen maat, platte metingen, gewenste pasvorm en veranderingen na normaal onderhoud. Die notities helpen bij een volgende aankoop van hetzelfde geverifieerde artikel, maar bepalen niet de maatvoering van alle hoodies in de catalogus. Een gemeten persoonlijk overzicht ondersteunt bewustere aankopen en vermindert afhankelijkheid van algemene adviezen om groter of kleiner te kiezen."
+          ]
+        }
+      ],
+      "takeaways": [
+        "Vergelijk plat gemeten kleding via dezelfde methode als de verkoperstabel.",
+        "Behandel samenstelling en stofgewicht als te controleren claims, niet als door foto’s bewezen feiten.",
+        "Controleer de ontvangen hoodie vóór samenvoegen en schat verzending met verpakte afmetingen."
+      ],
+      "sourceIds": [
+        "buyforme",
+        "expertbuy",
+        "shipforme",
+        "estimates",
+        "returns-policy"
+      ],
+      "reviewedAt": "2026-10-30"
     }
   ],
   "sources": [
@@ -972,7 +1365,7 @@
       "id": "buyforme",
       "title": "CSSBuy — Buy For Me: officieel koopproces",
       "url": "https://m.cssbuy.com/buyforme",
-      "accessedAt": "2026-10-23"
+      "accessedAt": "2026-10-30"
     },
     {
       "id": "expertbuy",
@@ -990,13 +1383,13 @@
       "id": "shipforme",
       "title": "CSSBuy — Ship For Me: diensten voor samenvoegen en verpakken",
       "url": "https://m.cssbuy.com/shipforme",
-      "accessedAt": "2026-10-23"
+      "accessedAt": "2026-10-30"
     },
     {
       "id": "fees",
       "title": "CSSBuy-helpcentrum — Kosten en vergoedingen",
       "url": "https://www.cssbuy.com/shop/helpCenter?id=12",
-      "accessedAt": "2026-10-23"
+      "accessedAt": "2026-10-30"
     },
     {
       "id": "storage",
@@ -1013,12 +1406,12 @@
     {
       "id": "estimates",
       "title": "CSSBuy — Verzendkostencalculator",
-      "url": "https://new.cssbuy.com/estimates",
-      "accessedAt": "2026-10-23"
+      "url": "https://www.cssbuy.com/estimates",
+      "accessedAt": "2026-10-30"
     },
     {
       "id": "catalog",
-      "title": "cnfansge.com — Bron van de productcatalogus",
+      "title": "Productcatalogus",
       "url": "https://cnfansge.com/",
       "accessedAt": "2026-10-23"
     },

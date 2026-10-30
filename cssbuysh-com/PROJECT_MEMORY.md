@@ -1,6 +1,6 @@
 # CSSBuySH / cnfansge 项目记忆
 
-更新：2026-10-26，Asia/Shanghai。
+更新：2026-10-30，Asia/Shanghai。
 阶段：已正式发布，GitHub main与Cloudflare联动，cssbuysh.com及www已绑定并验收。
 
 ## 固定要求
@@ -111,3 +111,17 @@
 - Google安装检测显示“恭喜！Google 代码已添加到https://cssbuysh.com中”，截图docs/ga4-installed.png。
 - GA4实时报告已收到测试访问：过去30分钟/5分钟活跃用户均为1；CSSBuy首页浏览1次；first_visit、page_view、session_start各1次。标准报表仍可能延迟更新。
 - 实时报告：https://analytics.google.com/analytics/web/#/a405518068p560775323/realtime/overview?restoreUserState=true 。这次任务为统计接入，不代表搜索引擎已收录。
+
+## 2026-10-30 SEO 与全语言内容更新
+- 用户明确要求结合 GSC、Bing、GA4 和竞争站调研改进并部署，全部24语言同步。
+- 调研口径、原始观察值和官方资料见 docs/SEO_RESEARCH_2026-10-30.md；不能把 Bing 的区间曝光当 Google 月搜索量，也不能以小样本声称优化已提高点击。
+- 每语言原10篇全文改进，新增美国配送、鞋类 Spreadsheet、卫衣 Spreadsheet 三篇完整指南，共13篇；英文正文约1200–1800词，其他语言保留全文结构和信息。
+- 鞋/卫衣新增独立分类网址，旧分类参数308至对应页面；深分页 self-canonical/hreflang，搜索和非精选过滤 noindex。
+- 首页6篇重点指南，文章增加相关推荐和商品目录入口，移动端目录控制高度。Article dateModified 和 sitemap lastmod 更新。
+- 源站读取总时限8.5秒、短期旧缓存回退；目录真正上游失败返回503/Retry-After，文章独立可用，无伪造商品或新数据库。
+- GA4新增 buy_click/register_click/article_open/catalog_open/catalog_filter；参数不含搜索原文或个人表单值。未改 GA4 账户设置、GSC/Bing提交设置。
+- 生产构建配置再次经 Cloudflare UI 确认：main，root cssbuysh-com，npm run build:production，npx wrangler deploy，Node24，watch cssbuysh-com/**。Cloudflare插件仍需重授权，沿用已授权Chrome读取配置。
+- 可见文案统一 CSSBuy SH，源站URL及真实商品来源保持不变。QC/搜图仍没有可验证接口。
+- 本次生产构建通过14项测试和24语648页检查：312个唯一文章语言页、672条FAQ、552个sitemap URL。真实分页的canonical/hreflang、过滤noindex、空深页404、目录503及预览无GA均已验证。
+- 打包改为24个按语言压缩的HTML档案，最多暂存2种语言的解压结果；648页逐字节复原一致，gzip约2.9MiB，排除Astro内部prerender文件。桌面与390px手机布局已验收。
+- 本版本通过main触发现有Cloudflare构建；实际发布状态和版本号以本提交的Workers Builds检查及正式域名验收为准。

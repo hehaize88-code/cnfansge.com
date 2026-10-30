@@ -21,10 +21,10 @@ test('source pagination continues beyond first sixty records',()=>{
  assert.match(fourth.pagination,/page=5/);assert.match(fourth.pagination,/page=3/);assert.match(fourth.pagination,/q=Nike/);assert.match(fourth.pagination,/name="page"/);
  assert.equal((fourth.products.match(/class="product-card"/g)||[]).length,20);
 });
-test('CSSBuy content has ten complete articles and 28 sourced FAQs',()=>{
+test('CSSBuy content has thirteen complete articles and 28 sourced FAQs',()=>{
  assert.ok(publishedLocales.includes('en'));
- for(const lang of publishedLocales){const d=content(lang),ids=new Set(d.sources.map(s=>s.id));assert.equal(d.articles.length,10);assert.ok(d.faq.length>=28);assert.equal(new Set(d.articles.map(a=>a.slug)).size,10);
- for(const a of d.articles){assert.ok(a.sections.length>=5,a.slug);const words=[a.intro,...a.sections.flatMap(s=>[s.heading,...s.paragraphs,...(s.bullets||[])]),...a.takeaways].join(' ').split(/\s+/).length;if(lang==='en')assert.ok(words>=650,`${a.slug}: ${words}`);assert.ok(a.sourceIds.length);for(const id of a.sourceIds)assert.ok(ids.has(id),id);}
+ for(const lang of publishedLocales){const d=content(lang),ids=new Set(d.sources.map(s=>s.id));assert.equal(d.articles.length,13);assert.ok(d.faq.length>=28);assert.equal(new Set(d.articles.map(a=>a.slug)).size,13);
+ for(const a of d.articles){assert.ok(a.sections.length>=5,a.slug);const words=[a.intro,...a.sections.flatMap(s=>[s.heading,...s.paragraphs,...(s.bullets||[])]),...a.takeaways].join(' ').split(/\s+/).length;if(lang==='en')assert.ok(words>=1200&&words<=1800,`${a.slug}: ${words}`);assert.ok(a.sourceIds.length);for(const id of a.sourceIds)assert.ok(ids.has(id),id);}
  for(const f of d.faq){assert.ok(f.q&&f.a);assert.ok(f.sourceIds.length,f.id);for(const id of f.sourceIds)assert.ok(ids.has(id),id);}
  for(const s of d.sources)if(!['project','catalog'].includes(s.id))assert.match(new URL(s.url).hostname,/(^|\.)cssbuy\.com$/);
  }

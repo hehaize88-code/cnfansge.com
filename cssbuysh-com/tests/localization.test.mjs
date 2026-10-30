@@ -5,7 +5,7 @@ import {content,ui,publishedLocales} from '../src/data/content.mjs';
 import {catalogMarkup,productMarkup} from '../worker/render.mjs';
 
 const original=content('en');
-const preserved=new Set(['id','slug','url','accessedAt','sourceIds']);
+const preserved=new Set(['id','slug','url','accessedAt','sourceIds','reviewedAt']);
 function compare(reference,translated,path='',key=''){
  if(preserved.has(key)){assert.deepEqual(translated,reference,path);return;}
  if(Array.isArray(reference)){
@@ -25,7 +25,7 @@ function compare(reference,translated,path='',key=''){
   }
  }else assert.deepEqual(translated,reference,path);
 }
-test('all 24 locales contain complete translated UI, 10 articles and 28 FAQs',()=>{
+test('all 24 locales contain complete translated UI, 13 articles and 28 FAQs',()=>{
  assert.deepEqual(publishedLocales,Object.keys(locales));
  const originalUi=ui();
  for(const lang of publishedLocales){

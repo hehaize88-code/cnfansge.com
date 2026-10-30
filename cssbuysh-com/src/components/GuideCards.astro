@@ -1,5 +1,6 @@
 ---
+import {readingMinutes} from '../data/navigation.mjs';
 import {localePath} from '../data/config.mjs';
 const {articles,lang,t,compact=false}=Astro.props;
 ---
-<div class:list={['guide-grid',{'compact':compact}]}>{articles.map((a,i)=><a class="guide-card" href={localePath(lang,`articles/${a.slug}/`)}><div class="guide-card-top"><span class="guide-number">{String(i+1).padStart(2,'0')}</span><span class="eyebrow">{a.category}</span><span aria-hidden="true">↗</span></div><div class="guide-card-body"><h3>{a.title}</h3><p>{a.description}</p><div class="guide-meta"><span>{Math.max(4,Math.round(JSON.stringify(a).split(/\s+/).length/220))} {t.readTime}</span><span>{t.readGuide} →</span></div></div></a>)}</div>
+<div class:list={['guide-grid',{'compact':compact}]}>{articles.map((a,i)=><a class="guide-card" href={localePath(lang,`articles/${a.slug}/`)}><div class="guide-card-top"><span class="guide-number">{String(i+1).padStart(2,'0')}</span><span class="eyebrow">{a.category}</span><span aria-hidden="true">↗</span></div><div class="guide-card-body"><h3>{a.title}</h3><p>{a.description}</p><div class="guide-meta"><span>{readingMinutes(a)} {t.readTime}</span><span>{t.readGuide} →</span></div></div></a>)}</div>

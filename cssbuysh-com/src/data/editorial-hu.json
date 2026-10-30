@@ -26,8 +26,8 @@
     },
     {
       "id": "data",
-      "q": "Honnan származnak a termékek és a hirdetések fotói?",
-      "a": "A termékkatalógus és az eladói galériák a cnfansge.com oldalról származnak. A CSSBuy SH nem tart fenn külön termékadatbázist, és nem készít termékképeket. A vásárlási céloldal megnyitása után erősítsd meg a kiválasztott ajánlatot.",
+      "q": "Honnan származnak a termékek és hirdetési fotók?",
+      "a": "A termékkatalógus hivatkozott ajánlatokat és eladói galériákat tartalmaz. A CSSBuy SH nem tart fenn külön termékadatbázist, és nem készít termékképeket. A vásárlási céloldal megnyitása után ellenőrizze a kiválasztott ajánlatot.",
       "sourceIds": [
         "catalog",
         "project"
@@ -35,8 +35,8 @@
     },
     {
       "id": "qc",
-      "q": "A termékfotók ellenőrzött CSSBuy minőségellenőrzési képek?",
-      "a": "Az eladói galériákat nem szabad raktári minőségellenőrzésként kezelni. Egy ellenőrzött, rendeléshez tartozó minőségellenőrzési fotónak a beérkezett termékhez kell kapcsolódnia. Ez az előnézet nem jelöli a cnfansge eladói képeit ellenőrzött CSSBuy vizsgálati bizonyítékként.",
+      "q": "A termékfotók ellenőrzött CSSBuy QC-képek?",
+      "a": "Az eladói galériák nem tekinthetők raktári QC-nek. Az ellenőrzött, rendeléshez tartozó QC-fotónak a beérkezett termékhez kell kapcsolódnia. Ez az oldal nem jelöli az eladói képeket ellenőrzött CSSBuy-vizsgálati bizonyítékként.",
       "sourceIds": [
         "catalog",
         "project"
@@ -62,8 +62,8 @@
     },
     {
       "id": "weidian-link",
-      "q": "Melyik azonosító tartozik a Weidian vásárlási linkjébe?",
-      "a": "Az eredeti piactéri termékazonosítót használd. A megadott példa: https://www.cssbuy.com/shop/goodsDetail?type=micro&id=7755101935. A cnfansge katalógusrekordjának száma nem helyettesíti ezt a piactéri azonosítót.",
+      "q": "Melyik azonosító tartozik a Weidian vásárlási linkbe?",
+      "a": "Az eredeti piactéri termékazonosítót használja. A megadott példa: https://www.cssbuy.com/shop/goodsDetail?type=micro&id=7755101935. A katalógus belső rekordszáma nem helyettesíti ezt a piactéri azonosítót.",
       "sourceIds": [
         "user-link"
       ]
@@ -245,7 +245,7 @@
         "hogyan használd a cssbuyt",
         "cssbuy terméklinkek"
       ],
-      "intro": "Egy hasznos CSSBuy-terméktáblázat jobb vásárlási döntésekhez segít, nem egyszerűen hosszabb bevásárlólistát hoz létre. Egy jegyzék összegyűjtheti a linkeket, címeket és hirdetési árakat, de a lényegi munka a kártya mögötti tényleges termék ellenőrzésénél kezdődik. Ez az útmutató megmutatja, hogyan alakítsd a böngészést kis, dokumentált jelöltlistává, hogyan válaszd külön az eladó bemutatását a saját rendelésed bizonyítékaitól, és hogyan döntsd el, hogy a találat szállítással együtt is megéri-e. A CSSBuy SH független felfedezőoldal. Termékkatalógusa a cnfansge.com oldalról származik; a vásárlás és rendeléskezelés a CSSBuyon történik.",
+      "intro": "Egy hasznos CSSBuy-táblázat jobb vásárlási döntést segít, nem csupán hosszabb bevásárlólistát készít. A katalógus összehozhatja a linkeket, neveket és árakat, de a fontos munka a kártya mögötti valódi termék ellenőrzésével kezdődik. Az útmutató megmutatja, hogyan legyen a böngészésből kis, dokumentált jelöltlista, hogyan különítse el az eladó bemutatóját a saját rendelés bizonyítékaitól, és hogyan döntse el, megéri-e a termék szállítással együtt is. A CSSBuy SH független termékfelfedező oldal. A vásárlás és rendeléskezelés a CSSBuy felületén történik.",
       "sections": [
         {
           "heading": "Kezdd céllal és reális, szűk jelöltlistával",
@@ -258,7 +258,7 @@
           "heading": "A termékkártyát jegyzékbejegyzésként olvasd",
           "paragraphs": [
             "Egy kártya jóval nagyobb hirdetést sűrít össze. Címe lehet rövidített, lefordított vagy a forráskatalógustól származó. A kijelzett ár egyetlen választási lehetőséget írhat le az összes változat helyett. Ezeket a mezőket az eredeti ajánlat megtalálására használd, majd hasonlítsd össze a kívánt konkrét méretet, színt, mennyiséget és verziót. Egy alacsony induló ár nem elég két termék tisztességes rangsorolásához, ha az egyik tartozékot is tartalmaz, a másik pedig nem.",
-            "A CSSBuy SH termékrekordjai és eladói galériái a cnfansge.com oldalról származnak. Az eladói kép a hirdetést szemlélteti; nem igazolja egy adott raktári darab megvizsgálását. Ha az oldal nem tud működő funkciót vagy ellenőrzött fotótípust biztosítani, azt ne következtesd ki egy vonzó címkéből. Kövesd az elérhető terméklinket, és ellenőrizd a ténylegesen megjelenített tartalmat, mielőtt a kártyát bizonyítéknak tekinted."
+            "A CSSBuy SH katalógusa termékrekordokat és eladói galériákat tartalmaz. Az eladói kép a hirdetést szemlélteti; nem igazolja egy adott raktári darab megvizsgálását. Ha az oldal nem tud működő funkciót vagy ellenőrzött fotótípust biztosítani, azt ne következtesd ki egy vonzó címkéből. Kövesd az elérhető terméklinket, és ellenőrizd a ténylegesen megjelenített tartalmat, mielőtt a kártyát bizonyítéknak tekinted."
           ]
         },
         {
@@ -302,6 +302,12 @@
             "Amint megérkezik a termék, röviden rögzítsd az eredményt a listádban: a kapott változatot, a tényleges illeszkedést, a képekről hiányzó részleteket és hogy újra választanád-e. A szubjektív benyomásokat válaszd külön a mérhető tényektől. A „nekem túl rövid” hasznos személyes visszajelzés; az „az ujj a saját módszeremmel 58 centiméter volt” más által is értelmezhető mérés. Egyik sem válhat az adott hirdetés minden jövőbeli rendelésére vonatkozó általános állítássá.",
             "Újrarendelés előtt ellenőrizd újra az elmentett linket. A hirdetések változhatnak, az eladók új változatokat vezethetnek be, és a korábban fontos részletek már hiányozhatnak. A jó táblázat dátumozott döntési napló, nem örök garancia. Idővel a megőrzött indoklás lesz a legértékesebb: mely méretek számítottak, mely kérdések előztek meg hibát, és mely termékek teljesítették valóban a böngészés előtt kitűzött célt."
           ]
+        },
+        {
+          "heading": "Az összehasonlításból legyen következő lépés",
+          "paragraphs": [
+            "Nyissa meg a megfelelő termékkategóriát, hasonlítson össze néhány pontos ajánlatot, és jegyezze fel a döntést befolyásoló hiányzó adatokat. A méretek ellenőrzéséhez folytassa a méretútmutatóval, a beérkezett áru vizsgálatához a QC-útmutatóval, a teljes csomagköltséghez pedig a szállítási útmutatóval. A jegyzetek mellett őrizze meg az eredeti terméklinket, hogy a katalógus frissítése ne keverjen össze két hasonló ajánlatot. A mentett termék csak jelölt; fizetés előtt ellenőrizze a kiválasztott változatot és az aktuális elérhetőséget a CSSBuy oldalán."
+          ]
         }
       ],
       "takeaways": [
@@ -313,7 +319,8 @@
         "buyforme",
         "expertbuy",
         "catalog"
-      ]
+      ],
+      "reviewedAt": "2026-10-30"
     },
     {
       "id": "weidian",
@@ -384,6 +391,12 @@
             "A megfelelő termék megrendelése után az eredeti link hivatkozássá válik, nem a tranzakció kezelésének helyévé. A rendelésszámokat, fizetéseket, raktári döntéseket és csomagkövetést a hivatalos fiókban tartsd. Egy felfedezőoldal nem tudja megoldani az eladói feladás problémáját pusztán azért, mert az első linket adta. Támogatás kérésekor add meg a hivatalos rendelésazonosítót és az adott rendeléshez tartozó bizonyítékot.",
             "Kézbesítés után hasonlítsd az eredményt a mentett leíráshoz, és jegyezd fel a következő vásárlás tanulságait. Talán a változatnevek világosak voltak, de a mérettáblázat szokatlan mérési módszert használt. Talán a csomagolás a vártnál jobban hatott a szállítási keretre. Ezek a megfigyelések hasznosabbak, mint egy teljes piacteret egy rendelés alapján jónak vagy rossznak minősíteni. A gondos Weidian-vásárlás kis, ellenőrzött döntések sorozata, a megfelelő azonosítótól a megfogalmazott célt teljesítő termékig."
           ]
+        },
+        {
+          "heading": "Fizetés előtt ellenőrizze a rendelést",
+          "paragraphs": [
+            "Vesse össze a felismert terméket az eredeti Weidian-ajánlattal, és ellenőrizze a színt, méretet, mennyiséget és vásárlási megjegyzést. A piactéri termékazonosítót tartsa külön a katalógus belső cikkszámától. Vásárlás után a raktári kérdésekhez a CSSBuy rendelési számát, a nemzetközi kézbesítéshez a csomagszámot használja. Ha az áru nem egyezik a végleges utasítással, gyűjtsön fényképeket, és érdeklődjön a visszaküldésről, mielőtt a csomagba helyezné."
+          ]
         }
       ],
       "takeaways": [
@@ -395,12 +408,13 @@
         "buyforme",
         "expertbuy",
         "user-link"
-      ]
+      ],
+      "reviewedAt": "2026-10-30"
     },
     {
       "id": "qc",
       "slug": "cssbuy-qc-photos-guide",
-      "title": "CSSBuy minőségellenőrzési fotók: gyakorlati ellenőrzőlista",
+      "title": "CSSBuy QC-fotók: ellenőrzések feladás vagy visszaküldés előtt",
       "description": "Rendszerezett módszer a raktári fotók áttekintésére, az eladói képek megkülönböztetésére és hasznos mérések kérésére a csomag feladása előtt.",
       "category": "Raktár és minőségellenőrzés",
       "keywords": [
@@ -409,7 +423,7 @@
         "cssbuy minőségvizsgálat",
         "raktári fotók"
       ],
-      "intro": "A minőségellenőrzési fotók akkor a leghasznosabbak, ha kérdéssel közelíted meg őket. Ez a termék megfelel a rendelt változatnak? Megvannak a szükséges tartozékok? A méret összeegyeztethető az igényeiddel? Egy galéria egyszerű átnézése és annak megállapítása, hogy minden rendben látszik, elmulaszthatja a kézbesítés után fontos részleteket. Ez az útmutató gyakorlati ellenőrzési sorrendet és a vizuális bizonyítékok korlátait ismerteti. A CSSBuy hivatalos szolgáltatási oldalai leírják a raktári vizsgálatot és fotózást. A CSSBuy SH a cnfansge.com eladói galériáit nem kezeli ellenőrzött raktári minőségellenőrzésként, és a termékkártya soha nem értelmezhető vizsgálati tanúsítványként.",
+      "intro": "A minőségellenőrzési fotók akkor a leghasznosabbak, ha kérdéssel közelíted meg őket. Ez a termék megfelel a rendelt változatnak? Megvannak a szükséges tartozékok? A méret összeegyeztethető az igényeiddel? Egy galéria egyszerű átnézése és annak megállapítása, hogy minden rendben látszik, elmulaszthatja a kézbesítés után fontos részleteket. Ez az útmutató gyakorlati ellenőrzési sorrendet és a vizuális bizonyítékok korlátait ismerteti. A CSSBuy hivatalos szolgáltatási oldalai leírják a raktári vizsgálatot és fotózást. A CSSBuy SH az eladói galériákat nem kezeli ellenőrzött raktári minőségellenőrzésként, és a termékkártya soha nem értelmezhető vizsgálati tanúsítványként.",
       "sections": [
         {
           "heading": "Azonosítsd, kinek a termékét és milyen képet nézel",
@@ -466,6 +480,12 @@
             "A szemrevételezés nem bizonyít hosszú távú tartósságot, belső felépítést, elektronikai biztonságot vagy eredetiséget. A rendezett megjelenés nem igazolja a rendeltetésszerű használathoz kapcsolódó szabványok teljesülését. Olyan termékeknél, amelyek meghibásodása kárt okozhat, keress megfelelő termékdokumentációt és szakértői tanácsot raktári galériára hagyatkozás helyett. A kép a megjelenés bizonyítéka, nem a tesztelés helyettesítője.",
             "Kézbesítés után vesd össze a tapasztalatot a fotókkal. Ha a probléma láthatatlan volt, jegyezd meg ezt a korlátot hasonló vásárlásokhoz. Ha a mérési kérés mérethibát előzött meg, használd újra a módszert. Ez a visszacsatolás javítja a jövőbeli döntéseket anélkül, hogy bármely vizsgálat teljes bizonytalanságmegszüntetését színlelné. A minőségellenőrzés értéke a megfelelő ponton feltett, megválaszolható kérdésekben és a válaszok szerinti cselekvésben van, mielőtt a terméket nehezebb visszaküldeni vagy vizsgálni."
           ]
+        },
+        {
+          "heading": "Döntsön megtartásról, tisztázásról vagy visszaküldésről",
+          "paragraphs": [
+            "Tartsa meg a terméket, ha a választott változat és a szükséges ellenőrzések megfelelnek. Kérjen tisztázást, ha egy nem látható címke, bizonytalan nézet vagy hiányzó méret módosíthatja a döntését. Dokumentált eltérés vagy elfogadhatatlan probléma esetén érdeklődjön a visszaküldésről, és időben ellenőrizze a feltételeket. A CSSBuy általános vizsgálatként írja le a raktári ellenőrzést; a képek nem igazolják a termék eredetiségét vagy tartósságát. Döntsön, mielőtt nemzetközi szállításra kijelöli a terméket."
+          ]
         }
       ],
       "takeaways": [
@@ -477,7 +497,8 @@
         "buyforme",
         "shipforme",
         "catalog"
-      ]
+      ],
+      "reviewedAt": "2026-10-30"
     },
     {
       "id": "cost",
@@ -548,6 +569,12 @@
             "A végső próba az, hogy a termék a teljes kézbesítési kerettel együtt is megéri-e. Egy olcsó, terjedelmes darab kézhezvétele többe kerülhet, mint egy helyi alternatíva. Egy drágább, kompakt terméknél más lehet az eredmény. Az összevetésbe vedd bele az időd értékét és a visszaküldés gyakorlati nehézségét is, különösen ha az illeszkedés vagy alkalmasság bizonytalan.",
             "Kézbesítés után személyes referenciaként őrizd meg a csomagméreteket és költségeket. Javíthatják egy hasonló csomag következő becslését, de továbbra is dátummal, múltbeli adatként kell őket jelölni. A tarifák, útvonalak és termékcsomagolások változhatnak. A legjobb szállítási kalkulátor ezért döntési folyamat része: korán ellenőrzi a feltételezéseket, frissíti őket a javuló raktári adatokkal, és a ténylegesen elküldeni kívánt csomaghoz segít aktuális útvonalat választani."
           ]
+        },
+        {
+          "heading": "Azonos adatokkal hasonlítsa össze a kalkulátor eredményeit",
+          "paragraphs": [
+            "Nyissa meg a hivatalos CSSBuy szállítási kalkulátort, és válassza ki a tényleges célországot. Ha rendelkezésre állnak, adja meg a mért tömeget és becsomagolt méreteket, majd ugyanazzal a tartalommal és csomagolási feltételezéssel hasonlítsa össze az alkalmas útvonalakat. A becslés mellé mentse a dátumot és a bemeneti adatokat. Csomagolás után cserélje le a becsléseket a végleges méretekre, és ellenőrizze újra az útvonal számlázási tömegszabályát. A termékárat, belföldi fuvart, nemzetközi szállítást és extrákat külön kezelje, hogy az alacsony útvonaldíjat ne tekintse teljes kézbesítési költségnek."
+          ]
         }
       ],
       "takeaways": [
@@ -559,12 +586,13 @@
         "buyforme",
         "estimates",
         "shipforme"
-      ]
+      ],
+      "reviewedAt": "2026-10-30"
     },
     {
       "id": "time",
       "slug": "cssbuy-shipping-time",
-      "title": "Mennyi idő a CSSBuy? Egy rendelés idővonala",
+      "title": "CSSBuy szállítási idő: rendelési szakaszok, követés és késések",
       "description": "Különítsd el az eladói feladást, raktári döntéseket, nemzetközi fuvarozást és végső kézbesítést a jobb tervezéshez és követési kérdésekhez.",
       "category": "Szállítás",
       "keywords": [
@@ -616,6 +644,20 @@
             "Tarts rövid naplót a dátummal, megerősített szakasszal és megtett lépéssel. Ez lehet csupán néhány sor a jegyzeteidben. A megfigyelt tényt válaszd külön a várakozástól: „raktári fotók elérhetők” tény, míg „holnap el kellene indulnia” várakozás, hacsak a hivatalos fiók nem erősíti meg. E különbség világosabbá teszi a későbbi kérdéseket, és segít felmérni, hol telt el ténylegesen az idő.",
             "Kézbesítés után rögzítsd a teljes rendeléstől-ajtóig időt és a nemzetközi fuvarozás időtartamát is, ha a dátumok elérhetők. Az eredményt múltbeli példaként használd, ne előrejelzésként. Újabb rendelésnél hasznosabb javítás lehet a kérdések gyorsabb megválaszolása vagy világosabb elérhetőségű termék választása, mint egy egyszer anekdotikusan legrövidebb időt adó útvonal keresése. A jó időtervezés az érthető szakaszokra és meghozható döntésekre összpontosít."
           ]
+        },
+        {
+          "heading": "A kézbesítési becslés előtt keresse meg a késés helyét",
+          "paragraphs": [
+            "Kezdje a rendelési adatokkal. Ha az eladó nem adta fel az árut, a kérdés a vásárlást vagy a belföldi szállítást érinti. Ha a termék raktárban van, ellenőrizze, vár-e még Önre QC, visszaküldési döntés, csomagolási utasítás vagy fizetés. Benyújtott csomagnál nézze meg, hogy a fuvarozó rögzítette-e a fizikai átvételt. Ezeket a szakaszokat nem lehet úgy számítani, mintha a küldemény végig nemzetközi úton lett volna.",
+            "Jegyezze fel az utolsó befejezett lépést és az első olyat, amelyet nem tud megerősíteni. A raktári érkezést mutató fénykép más kérdésre válaszol, mint a fuvarozó átvételi bejegyzése. Saját rendelésének dátumait használja, ne egy másik vevő kézbesítési képernyőképének közzétételét. Az útvonal szállítási becslése csak akkor hasznos, ha tudja, melyik szakaszra vonatkozik, és odaért-e már a csomag."
+          ]
+        },
+        {
+          "heading": "Készítsen használható nyomkövetési megkeresést",
+          "paragraphs": [
+            "Ha nem frissül a nyomkövetés, gyűjtse össze a csomagszámot, választott vonalat, benyújtási dátumot és az utolsó látható eseményt időbélyeggel. Ellenőrizze a CSSBuy-fiókban megadott fuvarozói hivatkozást. Ha a csomag később más kézbesítési azonosítót kap, magánfeljegyzésében tartsa meg mindkettőt, ne feltételezze, hogy az első minden szakaszt leír. Ne tegye közzé a címét vagy kitakarás nélküli csomagcímkét.",
+            "Konkrét kérdést tegyen fel az ügyfélszolgálatnak: átadták-e a csomagot a fuvarozónak, másik nyomkövetési szám érvényes-e, vagy javítani kell-e a címet. Sorolja fel az ellenőrzött adatokat. Az eredeti megkeresést és választ tartsa együtt, hogy a folytatás ugyanarra a bizonyítékra hivatkozhasson. Hiányzó bejegyzés miatt ne adjon fel és ne fizessen ki újabb, azonos csomagot; előbb tisztázza a meglévő állapotát."
+          ]
         }
       ],
       "takeaways": [
@@ -626,12 +668,13 @@
       "sourceIds": [
         "buyforme",
         "storage"
-      ]
+      ],
+      "reviewedAt": "2026-10-30"
     },
     {
       "id": "warehouse",
       "slug": "cssbuy-warehouse-consolidation",
-      "title": "CSSBuy raktári tárolás és csomagösszevonás",
+      "title": "CSSBuy raktári tárolás: összevonás és csomagellenőrző lista",
       "description": "Tervezd meg a tárolást, ellenőrizd a termékeket, és átgondoltan vond össze a csomagokat a tényleges áruk, határidők és útvonalkorlátok alapján.",
       "category": "Raktár és minőségellenőrzés",
       "keywords": [
@@ -683,6 +726,20 @@
             "Ellenőrizd, hogy minden kiválasztott termék megtartásáról megszületett a döntés. Nézd át a kézbesítési adatokat, mennyiségeket, csomagolási kéréseket és nyitott megjegyzéseket. Olvasd el az adott árukhoz és célállomáshoz elérhető szállítási lehetőségeket. Aktív visszaküldési megbeszélés alatt álló termék állapotát bevonás előtt tisztázd. A végső ellenőrzés a fizikai tartalmat egyeztesse a már meghozott döntésekkel.",
             "Mentsd el a csomagazonosítót és a fiókban megjelenő választásokat. Feladás után őrizd meg a leltárt annak nyilvántartásaként, mi tartozik a csomagba. Érkezéskor ugyanazzal ellenőrizd a tartalmat, és gyorsan dokumentálj minden problémát. Ez lezárja az egyedi rendelések és a kézbesített csomag közötti kört. A jól kezelt raktári folyamatot nem az összevont darabok száma határozza meg, hanem a világos döntések, megfelelő csomagolás és egy csomag, amelynek tartalmát és költségét érted."
           ]
+        },
+        {
+          "heading": "Csomagolás előtt használjon megtartás–tisztázás–visszaküldés listát",
+          "paragraphs": [
+            "Minden raktári tételhez rögzítse a rendelési számot, érkezési dátumot, választott változatot, QC-eredményt és következő lépést. Csak a döntést befolyásoló részletek ellenőrzése után jelölje megtartandónak. Tisztázást jelöljön, ha egy hiányzó címke, kép vagy mérés még fontos. Visszaküldési érdeklődést válasszon, ha dokumentált problémát akar az eladóval megvizsgáltatni. Ez az egyszerű felosztás megakadályozza, hogy megoldatlan tétel véletlenül az összevont csomagba kerüljön.",
+            "Nyissa meg a fiókban minden termék tárolási adatait és tényleges határidejét. A CSSBuy szállítási szolgáltatásoldala legfeljebb 90 nap ingyenes tárolást hirdet, de az adott tétel állapotát és az aktuális közleményeket is ellenőrizni kell. Ne a termék első felfedezésétől számolja a határidőt. Hosszabbításnál még a kijelzett határidő előtt kérdezzen az elérhetőségről és díjról, ne feltételezze, hogy új rendelés újraindítja az időt."
+          ]
+        },
+        {
+          "heading": "Azonos termékekkel hasonlítson össze két csomagolási tervet",
+          "paragraphs": [
+            "Az egyik terv tartsa meg a szükséges csomagolást, a másik csak a biztonságosan elhagyható részeket távolítsa el. Mindkettőhöz írja le a termékeket, védelmi igényeket és várható becsomagolt méreteket. Az összehasonlítás célállomása és útvonalfeltételei egyezzenek. A bolti doboz elhagyása helyet takaríthat meg, de védelmet vagy visszaküldési lehetőséget is érinthet; döntsön a nemzetközi feladás előtt, és őrizze meg a szükséges adatokat.",
+            "Amint megvannak a végleges csomagméretek, cserélje le a költségvetés becsléseit. Újra ellenőrizze a választott vonal tömeg-, méret- és tartalmi korlátait. Egy nagyobb egyesített csomag nem automatikusan olcsóbb több külön, megengedett küldeménynél. A tényleges lehetőségeket a hivatalos kalkulátorral és végleges ajánlattal hasonlítsa össze, majd őrizze meg a becsomagolt tételeket és kiválasztott szolgáltatásokat igazoló visszaigazolást."
+          ]
         }
       ],
       "takeaways": [
@@ -694,7 +751,8 @@
         "shipforme",
         "storage",
         "buyforme"
-      ]
+      ],
+      "reviewedAt": "2026-10-30"
     },
     {
       "id": "returns",
@@ -751,6 +809,20 @@
             "Az ügy lezárása után írd fel, mi előzhette volna meg. Talán kétértelmű változatnevek, hiányzó méret vagy olyan képen szereplő tartozék okozta, amely nem volt benne a kiválasztott ajánlatban. A tanulságot alakítsd konkrét vásárlás előtti ellenőrzéssé. Egyetlen eredményből ne formálj megalapozatlan állítást arra, hogy minden eladó vagy rendelés ugyanúgy viselkedik.",
             "Jövőbeli vásárlásnál őrizd meg a kívánt termék világosabb leírását, és a raktári bizonyítékot elérhetővé válása után hamar nézd át. A jól dokumentált vásárlás nem garantál kedvező visszaküldési döntést, de a nézeteltérés könnyebben elmagyarázható, és segít addig cselekedni, amíg lehetőségek maradhatnak. A leghasznosabb visszaküldési stratégia a probléma előtt kezdődik: értsd, mit veszel, őrizd a releváns bizonyítékot, és tudd, mely hivatalos fiókbeszélgetés tartozik az ügylethez."
           ]
+        },
+        {
+          "heading": "Nemzetközi feladás előtt küldjön bizonyítékokra épülő kérelmet",
+          "paragraphs": [
+            "Vesse össze az érkezett árut a rendelés végleges utasításával: link, méret, szín, mennyiség és jóváhagyott csere. A megfigyelhető eltérést megfelelő képpel vagy mérettel mutassa be. Mondja meg, tisztázást kér-e, vagy azt szeretné, hogy a CSSBuy megkérdezze az eladót a visszaküldésről. A világos kérés hasznosabb, mint általánosan rossznak nevezni a terméket, különösen ha személyes szabáspreferenciáról, nem hibás változatról van szó.",
+            "A vizsgálat alatt őrizze meg a csomagolást, címkéket és kiegészítőket. Ellenőrizze az eladó és a platform aktuális feltételeit, a határidőt és a visszaszállítás fizetőjét. Ne feltételezze, hogy a raktári vizsgálat minden visszaküldés elfogadását garantálja. A kérelem rendezéséig ne tegye a terméket nemzetközi csomagba, mert export után a folyamat és a költség is változhat."
+          ]
+        },
+        {
+          "heading": "Egyeztesse a visszatérítést az eredeti fizetéssel",
+          "paragraphs": [
+            "Jegyezze fel a termék árát, a fuvar- és szolgáltatási díjakat, valamint az ügyfélszolgálati válasz szerint visszatérítendő összeget. Ellenőrizze, fiókjóváírásról vagy az eredeti fizetési csatornára érkező visszatérítésről van-e szó. Ezek eltérő eredmények; a fiókegyenleg nem jelenti, hogy a pénz már megérkezett a bankjához. A kérelem függőben maradó részét külön rögzítse.",
+            "Az ügy lezárása előtt hasonlítsa össze a végrehajtott tranzakciót a megállapodással. Bizonytalan összeg esetén az eredeti rendelésre és válaszra hivatkozzon, ne nyisson független új panaszt. A visszatérítés ideje a tényleges megoldástól és fizetési útvonaltól függ; a fiók állapotából és szolgáltatói tájékoztatásból induljon ki, ne ígérjen azonos átfutást minden esetre."
+          ]
         }
       ],
       "takeaways": [
@@ -761,12 +833,13 @@
       "sourceIds": [
         "returns-policy",
         "expertbuy"
-      ]
+      ],
+      "reviewedAt": "2026-10-30"
     },
     {
       "id": "payments",
       "slug": "cssbuy-payment-fees",
-      "title": "CSSBuy díjak és fizetések: tervezd meg a teljes költségkeretedet",
+      "title": "CSSBuy díjak és fizetés: szolgáltatási díj és teljes költség",
       "description": "Válaszd külön a termék, belföldi kézbesítés, szolgáltatás, fizetés és csomag költségeit, majd egyeztesd a hivatalos CSSBuy-fiókban megjelenő összegeket.",
       "category": "Rendelések és fizetések",
       "keywords": [
@@ -818,6 +891,20 @@
             "A vásárlás befejezésekor rögzítsd a tényleges áru-, szolgáltatás- és kézbesítési összegeket, a korrekciókkal együtt. A pénznem legyen egyértelmű. Ha személyes összesítést szeretnél egy pénznemben, használd a tényleges fizetéseidben tükröződő átváltást, vagy világosan jelöld a választott összehasonlítási árfolyamot. Aktuális árfolyam és múltbeli díjak keverése a régi vásárlást a valóságosnál olcsóbbnak vagy drágábbnak mutathatja.",
             "Az eredményt vesd össze azzal, amit a termék adott neked: illeszkedéssel, hasznossággal és a folyamat munkájával. Ez értékesebb, mint az alacsony hirdetési ár ünneplése a számla többi részének figyelmen kívül hagyásával. A dátumot és megfelelő csomagadatokat őrizd meg jövőbeli tervezéshez, de ne alakítsd az eredményt más vásárló garantált keretévé. A jó CSSBuy-költségterv konkrét, tételes és frissül, ahogy a becsléseket valódi adatok váltják fel."
           ]
+        },
+        {
+          "heading": "A közzétett képletet egyértelmű példán alkalmazza",
+          "paragraphs": [
+            "A CSSBuy hivatalos Cost and Fees oldala, amelyet 2026. október 30-án ellenőriztünk, a beszerzési szolgáltatási díjat a termékár és kínai belföldi fuvar összegének 6%-ában adja meg. Egy feltételezett rendelésnél 200 CNY termékár és 10 CNY belföldi fuvar alapján ez 12,60 CNY. A 222,60 CNY részösszeg csak ezt a három összetevőt fedezi; nem teljes kézbesített ár. A tényleges rendelési felületen ellenőrizze az esetleges fiókspecifikus díjakat és változásokat.",
+            "A nemzetközi fuvar, kiválasztott szolgáltatások és esetleges fizetési vagy devizaváltási díjak külön vizsgálandók. Ne alkalmazza automatikusan a beszerzési százalékot minden későbbi fizetésre. Jóváhagyás előtt rögzítse, az adott képernyő szerint mire szól a fizetés, milyen pénznemben és milyen végösszeggel. A díjpélda csak világos számítási alap és láthatóan külön kezelt, nem tartalmazott tételek mellett használható."
+          ]
+        },
+        {
+          "heading": "Mindkét fizetési szakaszról vezessen költségnyilvántartást",
+          "paragraphs": [
+            "Készítsen külön sort a termék és belföldi fuvar fizetésének, a beszerzési szolgáltatási díjnak, a nemzetközi szállításnak és minden választott extrának. A fizetési szolgáltató kijelzett összegét abban a pénznemben rögzítse, amelyet ténylegesen fizet. Ha korrekció után egyenleg marad a fiókban, különböztesse meg az eredeti fizetési módra visszaküldött pénztől.",
+            "Feladás előtt minden durva becslést cseréljen az adott szakaszban elérhető megerősített adatra. Ha a végösszeg meghaladja a keretet, gondolja újra az opcionális szolgáltatásokat vagy a még megváltoztatható vásárlást. Ne válasszon alkalmatlan szállítási vonalat azért, hogy a korábbi költségterv helyesnek tűnjön. A fizetési bizonylatokat őrizze a rendelési és csomagszámokkal, hogy egy módosítás vagy ügyfélszolgálati kérdés a megfelelő tranzakcióhoz kapcsolható legyen."
+          ]
         }
       ],
       "takeaways": [
@@ -829,7 +916,8 @@
         "fees",
         "about",
         "buyforme"
-      ]
+      ],
+      "reviewedAt": "2026-10-30"
     },
     {
       "id": "links",
@@ -886,6 +974,20 @@
             "Egy megbízható személyes rekord tartalmazza a forráshirdetést, CSSBuy-céloldalt és végső rendelésazonosítót. Mindnek más szerepe van. A forrás azt magyarázza, mit kínáltak, a céloldalon tekintetted át a vásárlási lehetőséget, a rendelésrekord pedig a tényleges kérést követi. Ha a hirdetés később változik, az elmentett részletek megmagyarázhatják az eredeti döntés alapját.",
             "Ezt a rekordot használd raktári bizonyíték összevetésénél vagy eltérés megbeszélésénél. Rossz változatot sokkal könnyebb felismerni, ha a választott szöveg és kép megmaradt. Vásárlás után frissítsd a rekordot a mennyiségről, méretezésről vagy eladói kommunikációról tanultakkal. A cél nem általános győztes kihirdetése a Taobao, Weidian és 1688 között, hanem minden forráslink követhetősége és minden vásárlási döntés érthetősége az akkor rendelkezésre álló adatokból."
           ]
+        },
+        {
+          "heading": "Ellenőrizze, hogy a link a kívánt termékre mutat",
+          "paragraphs": [
+            "Őrizze meg az eredeti piactéri termékcímet, és nyissa meg, mielőtt a hivatalos CSSBuy vásárlási folyamatba másolja. Hasonlítsa össze az eladót, terméknevet és elérhető változatokat a kiválasztott jelölttel. A rövid megosztási link, üzleti kezdőlap és egyedi termékcím nem felcserélhető. Ha az oldal gyűjteményhez vagy más változathoz vezet, fizetés előtt tisztázza az eltérést.",
+            "Miután a CSSBuy felismerte a linket, ellenőrizze a betöltött adatokat és változatokat, ne feltételezze, hogy az átalakítás mindent igazol. Rögzítse a mennyiséget, színt, méretet és a konkrét ajánlatnál megadott minimális rendelési feltételt. Fel nem ismert oldalnál az eredeti linkkel és világos termékadatokkal kérjen hivatalos segítséget. Ne találgasson más piactéri azonosítót a katalógusban máshol látható számból."
+          ]
+        },
+        {
+          "heading": "Különítse el a termékazonosítókat és rendelési számokat",
+          "paragraphs": [
+            "A keresőkatalógus saját belső számot használhat, a piactér más termékazonosítót, a CSSBuy pedig vásárlás után további rendelési számot adhat. Mindegyik mellé mentse a célját. Vásárlási kérdéshez az eredeti terméklinket, fizetett rendeléshez a CSSBuy rendelési számát adja meg. A raktári csomagszám csak a termékek nemzetközi szállításhoz való csoportosításakor releváns.",
+            "Ez az elkülönítés a későbbi összehasonlítást is biztonságosabbá teszi. Ugyanazt a képet használó új ajánlatnak más eladója vagy termékazonosítója lehet. Új ajánlatként ellenőrizze, ne cserélje ki a mentett linket a változás feljegyzése nélkül. A linkátalakítási útmutatót ne mutassa működő eszköznek, ha az oldal nem végez tényleges átalakítást és nem mutatja a célcímet ellenőrzésre."
+          ]
         }
       ],
       "takeaways": [
@@ -897,7 +999,8 @@
         "buyforme",
         "expertbuy",
         "user-link"
-      ]
+      ],
+      "reviewedAt": "2026-10-30"
     },
     {
       "id": "sizing",
@@ -954,6 +1057,20 @@
             "A rugalmas anyag, mérési technika és felépítés kisebb eltéréseket okozhat. A lefotózott vonalzót ne értelmezd olyan pontosságként, amelyet az elrendezés nem támaszt alá. Az illeszkedés érzékenysége alapján döntsd el, elfogadható-e a fennmaradó bizonytalanság. Ha egy méretnek nagyon szűk tartományban kell lennie a használhatósághoz, a távoli vásárlás több bizonyítékot igényelhet, mint amennyit a hirdetés adni tud.",
             "Kézbesítés után mérd meg és próbáld fel a terméket, majd azonos referenciarendszerrel rögzítsd az eredményt. Jegyezd fel, hasznos volt-e a táblázat, megfelelő volt-e az összehasonlító ruha, és mely méret számított legtöbbet. A személyes preferenciát válaszd külön az eladó méretezéséről szóló általános következtetéstől. Több vásárláson át ez saját tapasztalaton alapuló gyakorlati illeszkedési naplót hoz létre. Megbízhatóbb, mint nagyobb vagy kisebb méret választását ismételni a termék, táblázat vagy viselő ismerete nélkül."
           ]
+        },
+        {
+          "heading": "Azonos végpontokkal hasonlítsa össze a méreteket",
+          "paragraphs": [
+            "Ruhánál jegyezze fel, hogy a táblázat a kiterített szélességet, teljes kerületet vagy ajánlott testméretet mutatja-e. Ezek közvetlenül nem összevethetők. A test- és ujjhosszhoz használja az ábra kezdő- és végpontját, főleg ejtett vállú vagy raglánruhánál. Ugyanígy, nyújtás nélkül mérjen le egy kényelmes referencia-ruhát, és minden érték mellé írja oda a mértékegységet.",
+            "Cipőnél különítse el a láb, talpbetét és külső talp hosszát. A talp fényképe nem mutatja a használható belső teret. Mindkét lábat következetesen mérje, és vegye figyelembe a tervezett zoknit vagy betétet. Az eladó méretcímkéje az adott ajánlaton belüli azonosító, nem egyetemes illeszkedési ígéret. A fontos méretet kérje, ne mindig nagyobb vagy kisebb méret választásának szabályát kövesse."
+          ]
+        },
+        {
+          "heading": "A raktári mérés szolgáljon konkrét döntést",
+          "paragraphs": [
+            "További mérés kérése előtt döntse el, milyen eredménynél tartja meg a terméket vagy érdeklődik visszaküldésről. Ha a szolgáltatás elérhető, kérjen látható vonalzót és világos végpontokat, és ellenőrizze a díjat. A raktári eredményt az eredeti táblázattal azonos módszer szerint vesse össze. Bizonytalan kép esetén tisztázást kérjen, ne tekintse a perspektíva eltérését igazolt hibának.",
+            "A mérési feljegyzést tartsa a kiválasztott méret és rendelési szám mellett. Elfogadott eltérésnél írja le, miért felel meg még a kívánt fazonnak. Elutasításnál a konkrét eltérést a hivatalos támogatási folyamatban jelezze, amíg a termék raktárban van. Kézbesítés után rögzítse a tényleges illeszkedést, hogy az adott termékről jobb jövőbeli döntést hozzon, anélkül hogy minden árura azonos méretezést feltételezne."
+          ]
         }
       ],
       "takeaways": [
@@ -964,7 +1081,283 @@
       "sourceIds": [
         "buyforme",
         "expertbuy"
-      ]
+      ],
+      "reviewedAt": "2026-10-30"
+    },
+    {
+      "id": "shipping-usa",
+      "slug": "cssbuy-shipping-to-usa",
+      "title": "CSSBuy szállítás az USA-ba: költség, követés és csomag-előkészítés",
+      "description": "Tervezzen CSSBuy-csomagot az USA-ba: hasonlítson aktuális díjakat, ellenőrizze a csomag méreteit, készítse elő a címet és kövesse a kézbesítést.",
+      "category": "Szállítás",
+      "keywords": [
+        "cssbuy szállítás usa",
+        "cssbuy szállítási költség usa",
+        "cssbuy usa nyomkövetés",
+        "cssbuy szállítási kalkulátor"
+      ],
+      "intro": "A CSSBuy-rendelés Egyesült Államokba szállítása már a nemzetközi vonal kiválasztása előtt elkezdődik. A termékeknek be kell érkezniük a raktárba, egyezniük kell a rendeléssel, megfelelő útvonalra kell kerülniük, és bele kell férniük a teljes keretbe. Nem az a hasznos kérdés, melyik vonal mindig a legolcsóbb, hanem hogy a jelenleg elérhetők közül melyik fogadja a konkrét csomagot és célállomást. Ez az útmutató gyakorlati összehasonlítást ad rögzített ár vagy érkezési dátum ígérete nélkül. A jelöltek mellett tartsa nyitva a CSSBuy hivatalos kalkulátorát és fiókját: a tényleges választást az élő útvonalfeltételek és végleges csomagméretek határozzák meg.",
+      "sections": [
+        {
+          "heading": "Válassza külön a vásárlást és a nemzetközi feladást",
+          "paragraphs": [
+            "A CSSBuy hivatalos vásárlási útmutatója elkülöníti a termékrendelést a raktári csomag benyújtásától. Először a terméklinket és szükséges változatokat adja meg. A beszerzési szakasz a termékeket és az alkalmazandó kínai belföldi szállítást fedezi. Beérkezéskor nézze át a raktári adatokat és képeket, mielőtt nemzetközi szállítást rendel. A termékek kifizetése nem jelenti, hogy a nemzetközi csomag már elindult.",
+            "USA-rendelésnél vezessen két egyszerű nyilvántartást: egyet termékenként, egyet a kimenő csomagról. A termékadatok között szerepeljen a link, méret, szín, mennyiség és raktári állapot. A csomagfeljegyzés a kiválasztott tételeket, címet, csomagolási utasítást és nemzetközi útvonalat tartalmazza. Így nem keveredik az eladó belföldi követési száma a végső kézbesítés azonosítójával."
+          ]
+        },
+        {
+          "heading": "Adja meg a teljes amerikai célcímet",
+          "paragraphs": [
+            "Használja a hivatalos kalkulátor és csomagűrlap által kért célországot és postai adatokat. Fizetés előtt ellenőrizze a címzett nevét, utcacímét, lakás- vagy egységszámát, városát, államát és ZIP-kódját. Nézze meg, hogy a választott útvonal elfogadja-e a tervezett címtípust; ne feltételezze, hogy minden vonal minden címet, területet vagy távoli helyet azonos feltételekkel szolgál ki.",
+            "A címet a csomag-visszaigazolással összevethető alakban mentse. Ha az űrlap több mezőre osztja, az összeállított címet is ellenőrizze, ne csak a külön mezőket. A hiányzó lakásszám észrevétlen maradhat, ha az árra összpontosít. Útvonalról érdeklődve ne ossza meg nyilvánosan a címét vagy személyes adatokat tartalmazó követési képet."
+          ]
+        },
+        {
+          "heading": "Valósághű adatokkal készítsen becslést",
+          "paragraphs": [
+            "Nyissa meg a CSSBuy hivatalos szállítási kalkulátorát, válassza az Egyesült Államokat, és írja be a kért tömeget és méreteket. Ha van, használjon raktári mérést. Beérkezés előtt a terméktömeget és csomagméretet becslésnek jelölje, ne mért adatnak. Csak az adott termékkategóriát és csomagméretet elfogadó útvonalakat hasonlítsa össze. Alacsony kijelzett ár nem használható ajánlat, ha a vonal a tartalmat nem fogadja.",
+            "Minden becslés mellé írja a dátumot, célt, tömeget, méreteket és csomagolási feltételezéseket. Ebből megérthető, miért változik a későbbi ár. Először ugyanazt a csomagot hasonlítsa különböző útvonalakon, majd egy útvonalon belül a csomagolási változatokat. Tömeg, cél és csomagolás egyidejű módosításánál nem derül ki, mi hozta a látszólagos megtakarítást."
+          ]
+        },
+        {
+          "heading": "Értse meg a csomagméretet és számlázási tömeget",
+          "paragraphs": [
+            "A nemzetközi fuvar a mérlegen látható tömeg mellett a foglalt térfogatot is figyelembe veheti. A CSSBuy megfelelő ruháknál térfogatcsökkentési lehetőségként írja le a vákuumcsomagolást. Ettől nem lesz minden termékhez alkalmas a tömörítés. Cipőknél, formázott kiegészítőknél és törékeny tárgyaknál az alak és védelem alapján döntsön, ne pusztán a legalacsonyabb becslés szerint.",
+            "Például egy 40 × 30 × 25 centiméteres csomag térfogata 30 000 köbcentiméter. Ha egy konkrét útvonal kifejezetten 6 000-es osztót használ, ebből 5 kilogramm térfogati tömeg adódik. Ez számítási példa, nem annak állítása, hogy minden USA-vonal ezt az osztót alkalmazza. A mért tömeggel való összevetés előtt olvassa el a választott vonal tényleges képletét és kerekítési módját."
+          ]
+        },
+        {
+          "heading": "Ugyanazon csomag teljes költségét hasonlítsa össze",
+          "paragraphs": [
+            "A termékárat, belföldi fuvart, beszerzési szolgáltatási díjat, nemzetközi szállítást és választott csomagolási szolgáltatásokat külön soron tartsa. A CSSBuy díjoldala szerint a beszerzés és a fuvar külön költségösszetevő. Az esetleges fizetési, devizaváltási és célállomási díjakat ott ellenőrizze, ahol felmerülnek, ne feltételezze, hogy az alap szállítási ajánlat tartalmazza őket.",
+            "Az extrák kiválasztása előtt állítson fel teljes költési keretet. Két alkalmas útvonal eltérő áránál vesse össze a jelzett kézbesítési becslést, korlátozásokat, követési lefedettséget és a fiókban szereplő védelmi feltételeket. A drágább útvonal jobban illeszkedhet határidőhöz, de a gyorsabb fuvarbecslés sem tartalmazza az eladóra várással és raktári ellenőrzéssel már eltöltött időt."
+          ]
+        },
+        {
+          "heading": "Összevonás előtt fejezze be a minőségellenőrzést",
+          "paragraphs": [
+            "Minden kiválasztott termék tényleges raktári képeit tekintse meg. Ellenőrizze a mennyiséget, színt, címkét és az illeszkedéshez fontos méreteket. Ha fontos részlet nem látható, az együttes becsomagolás előtt kérjen tisztázást. Az általános raktári vizsgálat nem bizonyít eredetiséget, anyagösszetételt, tartósságot vagy tökéletes illeszkedést; ezekhez a fényképen túlmutató bizonyíték kellhet.",
+            "Csoportosítsa az összeillő termékeket, és adjon konkrét csomagolási utasítást. Például jelölje, mely cipődobozokat tartaná meg, és melyik ruha hajtható tömörebbre. Pusztán helytakarékosság miatt ne távolítson el a visszaküldéshez vagy pontos szállítási nyilvántartáshoz szükséges adatot. A lehetséges visszaküldést rendezze a nemzetközi csomagba helyezés előtt, mert raktárelhagyás után a lehetőségek változnak."
+          ]
+        },
+        {
+          "heading": "Ellenőrizze a végleges csomag-visszaigazolást",
+          "paragraphs": [
+            "A végleges csomag eltérhet a becsléstől: a védőanyag növeli a tömeget, és a dobozméret is változik. A megerősítő képernyőn nézze át újra a mért tömeget, méreteket, tételeket és útvonalat. Ha a díj eltér a mentett becsléstől, először a méréseket és bevont szolgáltatásokat vesse össze. A meg nem magyarázható különbséget még feladás jóváhagyása előtt tisztáztassa a CSSBuy-jal.",
+            "A visszaigazolást, fizetési bizonylatot és csomagolási utasítást együtt őrizze. Amikor a folyamat termékleírást és értéket kér, pontos adatokat adjon meg, és ellenőrizze a célország alkalmazandó hivatalos követelményeit. Ez az útmutató nem ígér vámmentességi küszöböt vagy garantált vámkezelési eredményt. Régi fórumos képernyőképet ne tekintsen aktuális USA-szállítási szabálynak."
+          ]
+        },
+        {
+          "heading": "A csomagot különálló szakaszokon kövesse",
+          "paragraphs": [
+            "Különítse el a raktári feldolgozást, a fuvarozónak átadást, a nemzetközi szállítást, a célállomási kezelést és a végső kézbesítést. A követési szám már a fizikai átvételi bejegyzés előtt létrejöhet. Mielőtt megálltnak tekintené a csomagot, olvassa el az utolsó esemény dátumát, helyét és szövegét. A CSSBuy-fiók adatait és az adott küldeményhez megjelölt fuvarozót használja.",
+            "Ha késik a frissítés, gyűjtse össze a csomagszámot, feladási dátumot, útvonalnevet és legutóbbi követési eseményt. Privát módon küldje el a hivatalos ügyfélszolgálatnak, a hiányzó lépés pontos leírásával. Ne indítson több független megkeresést eltérő magyarázatokkal. A tömör előzmény segít megkülönböztetni a raktári kérdést a fuvarozói bejegyzés késésétől vagy címhibától."
+          ]
+        },
+        {
+          "heading": "Tegye könnyebben tervezhetővé a következő USA-csomagot",
+          "paragraphs": [
+            "Kézbesítés után írja fel a tényleges csomagtömeget, méreteket, szállítási időt és fizetett díjakat. Vizsgálja meg a csomagolást, és kidobás előtt fényképezze a sérülést. Vesse össze a termékeket a rendelési adatokkal, és probléma esetén időben használja a hivatalos támogatást. Egy kézbesítés hasznos saját tapasztalat, nem garancia másik útvonalra vagy időszakra.",
+            "A következő vásárlásnál a listát használja újra, ne a korábbi ár ismétlődését feltételezze. Ellenőrizze az élő kalkulátort, minden tétel aktuális tárolási állapotát és a választott vonal elérhetőségét. A legbiztosabb megtakarítást az alkalmatlan vásárlás, szükségtelen csomagolási térfogat és hiányos cím elkerülése adja még a csomag benyújtása előtt."
+          ]
+        }
+      ],
+      "takeaways": [
+        "Az USA-útvonalakat azonos cél, tartalom és csomagméretek alapján hasonlítsa össze.",
+        "A nemzetközi csomag benyújtása előtt döntsön a QC-ről és csomagolásról.",
+        "A becsléseket válassza külön a végleges díjaktól, és külön kövesse a raktári és fuvarozói szakaszokat."
+      ],
+      "sourceIds": [
+        "buyforme",
+        "estimates",
+        "fees",
+        "shipforme"
+      ],
+      "reviewedAt": "2026-10-30"
+    },
+    {
+      "id": "shoes-spreadsheet",
+      "slug": "cssbuy-shoes-spreadsheet",
+      "title": "CSSBuy cipőtáblázat: méretezés, QC és vásárlási útmutató",
+      "description": "A CSSBuy cipőtáblázatával hasonlítson valódi terméklinkeket, ellenőrizzen méreteket és raktári képeket, és tervezze meg a cipődobozos csomagolást.",
+      "category": "Termékútmutatók",
+      "keywords": [
+        "cssbuy cipőtáblázat",
+        "cssbuy sportcipők",
+        "cssbuy cipőméret",
+        "cssbuy cipő qc"
+      ],
+      "intro": "A CSSBuy cipőtáblázat akkor a leghasznosabb, ha konkrét párok közül segít választani, nem végtelen linksort gyűjteni. Egy szép kép és ismerős méretjelzés csak a kezdet. A kiválasztott változat pontos feljegyzése, mérési módszer, a beérkezett pár fényképei és csomagolási döntés is kell. Ez az útmutató ismételhető módot ad a katalógus cipőinek összehasonlítására és a rendelés nemzetközi feladás előtti ellenőrzésére. A katalógus felfedezési eszköz; az eladó állításait, elérhetőséget és pontos változatot továbbra is a linkelt ajánlatban és CSSBuy-rendelésben kell ellenőrizni.",
+      "sections": [
+        {
+          "heading": "A cipő feladatából induljon ki",
+          "paragraphs": [
+            "Írja le, mire használná a párt, milyen illeszkedést szeretne és mekkora a teljes kerete. A mindennapi viselet, ortopéd betét helyigénye és esős használat más követelményeket jelent. Egy termékkép nem igazol speciális biztonságot, sportteljesítményt vagy tartósságot. Ha az elvárás anyag- vagy szerkezeti állításon múlik, még költés előtt határozza meg, milyen bizonyíték támaszthatná alá.",
+            "Tartson két-három jelöltből álló listát. Rögzítse a linket, színt, eladói méretadatokat, kijelzett árat és a nyitott kérdéseket. Ne sorolja előrébb a párt pusztán élesebb bélyegképe miatt. Az egységes összehasonlítási mezők megkönnyítik az alkalmatlan lehetőségek kiszűrését és egy konkrét kérdés elmagyarázását a beszerzőnek."
+          ]
+        },
+        {
+          "heading": "Nézze meg a kártya mögötti pontos ajánlatot",
+          "paragraphs": [
+            "Nyissa meg a termék részleteit, és vizsgálja meg az eladói képeket, valamint az eredeti ajánlatot. Erősítse meg, hogy az ár a kívánt méretre, színre és verzióra vonatkozik. A katalóguskártya összefoglalhatja az ajánlatot, de nem garantálja minden változat folyamatos elérhetőségét. Őrizze meg a pontos linket, hogy egy hasonló kép később ne más ajánlathoz vezesse.",
+            "Rendelés előtt a CSSBuy vásárlási céloldalán ellenőrizze a kiválasztott változatot. Fel nem ismert linknél vagy bizonytalan opcióknál használja a CSSBuy hivatalos segítségét. A katalógus belső rekordazonosítóját ne helyettesítse be piactéri termékazonosítóként. A helyes link és kifejezett méretigény hasznosabb, mint egy képernyőképen mutatott pár megvételére adott homályos utasítás."
+          ]
+        },
+        {
+          "heading": "Méretjelzés választása előtt mérjen",
+          "paragraphs": [
+            "Mindkét lábat azonos módszerrel mérje, és jegyezze a mértékegységet. A méreteket az adott ajánlat útmutatásával vesse össze, figyelembe véve az eladó mérésdefinícióját. A lábhossz, talpbetéthossz és külső talphossz eltérő fogalmak. A külső talp mérete nem használható belső hossz, az európai méretjelzés pedig nem bizonyít azonos illeszkedést különböző modelleknél.",
+            "Ha összehasonlítható a mérés, további referenciaként használjon egy már kényelmes cipőt. Jegyezze fel a zokni, betét vagy kívánt lazább illeszkedés hatását. Kerülje az általános szabályt, hogy mindig egy mérettel nagyobbat kell venni. Ha a döntő méret hiányzik, kérjen tisztázást, vagy válasszon jobban dokumentált ajánlatot."
+          ]
+        },
+        {
+          "heading": "A jelöltlistából készítsen világos rendelési utasítást",
+          "paragraphs": [
+            "Minden párhoz írja le a termékcímet, színt, méretjelzést, mennyiséget és az alapul vett méretet. Ha adhat megjegyzést, konkrét követelményt fogalmazzon meg. Látható méretcímke vagy meghatározott hosszmérés kérése könnyebben teljesíthető, mint általánosan a legjobb minőséget kérni. További munka előtt ellenőrizze a szolgáltatás elérhetőségét és esetleges díját.",
+            "Beküldés után ellenőrizze a rendelés összefoglalását. Ha a változat nincs készleten, a felajánlott helyettesítést új döntésként vizsgálja, ne fogadja el automatikusan. Más szín vagy méret eltérő anyagot vagy mérést is jelenthet. Az eredeti kérést és jóváhagyott változást tartsa együtt, hogy a raktári vizsgálatnak egyértelmű hivatkozása legyen."
+          ]
+        },
+        {
+          "heading": "Különböztesse meg az eladói képeket a raktári QC-től",
+          "paragraphs": [
+            "A katalógusban megjelenő képek az ajánlat bemutatásához tartoznak. Nem bizonyítják az Ön beérkezett párjának állapotát. A raktári QC-képek a saját rendeléséhez érkezett árut mutatják, és a kiválasztott változattal vetendők össze. Oldalunk jelenleg nem kínál önállóan csatlakoztatott QC-fotókeresőt, ezért a CSSBuy-fiókban elérhető képeket és támogatást használja.",
+            "A CSSBuy általános ellenőrzésként írja le a raktári vizsgálatot. A képek segíthetnek látható eltérés, hiányzó rész vagy rossz címke felismerésében, de nem tanúsítanak eredetiséget, hosszú távú tartósságot vagy kényelmet. A bizonytalan képet hiányzó adatként kezelje. Jobb a szükséges nézetet kérni, mint árnyékból vagy tükröződésből biztos hibára következtetni."
+          ]
+        },
+        {
+          "heading": "Következetes sorrendben ellenőrizze a párt",
+          "paragraphs": [
+            "Először az azonosságot nézze: két cipő, kívánt szín, egyező méretcímkék és tartozékok. Ezután hasonló szögből vesse össze a bal és jobb cipőt. A látható varráson, talpszélen, záródáson és bélésen csak valóban megfigyelhető hibát keressen. A fény és perspektíva eltérőnek mutathatja az oldalakat, ezért különböző nézetekből önmagukban ne vonjon le következtetést.",
+            "Ezután ellenőrizze a méretválasztást meghatározó mérést. Ha elérhető a szolgáltatás, kérjen egyértelműen elhelyezett vonalzót, és mondja meg a mérés kezdetét és végét. Végül a látható eltérést az eredeti rendeléshez viszonyítsa. A biztos eltérést, például rossz méretcímkét, válassza külön az eladó által nem feltétlenül hibának tekintett személyes preferenciától."
+          ]
+        },
+        {
+          "heading": "Döntsön megtartásról, tisztázásról vagy visszaküldési kérésről",
+          "paragraphs": [
+            "Használjon három döntési kategóriát. Tartsa meg a párt, ha a szükséges részletek egyeznek, és a maradó bizonytalanság elfogadható. Tisztázást kérjen, ha hiányzó kép vagy méret változtathat a döntésen. Dokumentált eltérés vagy más, eladóval megvizsgáltatandó ok esetén érdeklődjön a visszaküldésről. A vonatkozó feltételeket és időkorlátot a CSSBuy-nál és eladónál kell ellenőrizni.",
+            "A rendelési számmal és a kért, illetve érkezett változat rövid összehasonlításával írja le a problémát. A bizonyítékot hivatalos ügyfélszolgálati úton csatolja. Ne vonjon össze különböző aggályokat garantált visszatérítés követelésévé. Visszaküldés mérlegelése alatt tartsa sértetlenül a cipőt és csomagolását, és a rendezésig ne tegye nemzetközi csomagba."
+          ]
+        },
+        {
+          "heading": "A teljes küldemény alapján döntsön a cipődobozról",
+          "paragraphs": [
+            "A bolti doboz helyet foglal, de segíthet az alak megőrzésében, tartozékok védelmében vagy visszaküldésnél. Módosítás kérése előtt döntse el, szüksége van-e rá. Eltávolításkor gondolja át, hogyan védi a párt nyomódás és elmozdulás ellen. Ne feltételezze, hogy a csomagolás eltávolítása mindig csökkenti a végdíjat; ezt a vonal tömeg- és térfogatszabályai határozzák meg.",
+            "A teljes csomag méreteit és tömegét hasonlítsa össze, ne egy találgatott cipőtömeget szorozzon a párok számával. Ruhával társított cipők másképp férhetnek el, mint több dobozos pár. A hivatalos kalkulátort a csomagra érvényes céllal és útvonalfeltételekkel használja, majd a végleges raktári méréseknél térjen vissza a becsléshez."
+          ]
+        },
+        {
+          "heading": "Az eredményt jegyezze fel a találgatás ismétlése helyett",
+          "paragraphs": [
+            "Kézbesítés után beltérben, tiszta felületen próbálja fel a cipőt az ellenőrzés során. Rögzítse a méretet, releváns méréseket és a referencia-párhoz képest érzett illeszkedést. A probléma képeit és csomagolást tartsa meg, amíg kiderül, kell-e támogatás. Egy sikeres rendelés nem bizonyítja, hogy másik, hasonló képes ajánlat ugyanolyan terméket ad.",
+            "A jelöltlistát a valóban hasznos adatokkal egészítse ki: megbízható mérettábla, világos raktári mérés vagy védelmet adó csomagolás. Távolítsa el a tévesnek bizonyult feltételezéseket. Idővel a méréseken alapuló döntések kis nyilvántartása többet ér, mint magyarázat nélküli linkek és más vevőktől másolt értékelések nagy táblázata."
+          ]
+        }
+      ],
+      "takeaways": [
+        "Rendelés előtt ellenőrizze a pontos változatot és az eladó mérési módszerét.",
+        "Saját raktári képekkel végezzen QC-t; a katalógusfotó nem igazolja az érkezett párt.",
+        "Feladás előtt rendezze a visszaküldést, és végleges csomagmérettel hasonlítsa a cipődoboz-választásokat."
+      ],
+      "sourceIds": [
+        "buyforme",
+        "expertbuy",
+        "shipforme",
+        "estimates",
+        "returns-policy"
+      ],
+      "reviewedAt": "2026-10-30"
+    },
+    {
+      "id": "hoodie-spreadsheet",
+      "slug": "cssbuy-hoodie-spreadsheet",
+      "title": "CSSBuy kapucnis pulóver táblázat: méretek, anyag és QC",
+      "description": "A CSSBuy pulóverlinkjeit ruhaméretek, anyagadatok, raktári képek és gyakorlati csomagolási ellenőrzések alapján hasonlítsa össze feladás előtt.",
+      "category": "Termékútmutatók",
+      "keywords": [
+        "cssbuy kapucnis pulóver táblázat",
+        "cssbuy pulóverek",
+        "cssbuy pulóver méretezés",
+        "cssbuy pulóver qc"
+      ],
+      "intro": "A CSSBuy kapucnispulóver-táblázatnak néhány gyakorlati kérdést kell tisztáznia: a kívánt módon illeszkedik-e a ruha, leírja-e az ajánlat az anyagot, és ellenőrizhető-e a beérkezett termék feladás előtt? Egy méretbetű és elölnézeti fotó ritkán ad választ mindháromra. A pulóver- és kötöttáru-kategóriából induljon, majd pontos változatokat és méreteket hasonlítson össze. Az útmutató használható jelöltlista, világos bizonyítékigény és az ömlesztett ruházat csomagra gyakorolt hatásának kialakításában segít. Nem rangsorol kipróbálatlan árut, és nem nevezi az eladó fotóit igazolt raktári QC-nek.",
+      "sections": [
+        {
+          "heading": "Böngészés előtt határozza meg a kívánt szabást",
+          "paragraphs": [
+            "Válasszon egy már kényelmesen viselt kapucnis pulóvert, és döntse el, mit változtatna. Lehet hosszabb törzs, szélesebb mellrész, rövidebb ujj vagy több hely egy alatta viselt pólónak. Ha lehet, méretek formájában írja le a preferenciát. Az oversized, laza és normál szabás szándékot jelez, de nem jelent egységes mérést különböző eladóknál és márkáknál.",
+            "Gondolja át az évszakot és rétegezést. A nehezebbnek látszó anyag képe nem bizonyít meleget, a vastag kapucni pedig nem határozza meg az egész ruha tömegét. A költségkeretet külön tartsa a stílus szerinti listától, hogy a vonzó megjelenés ne fedje el a hiányzó méretadatot vagy a még nem számolt nemzetközi fuvart."
+          ]
+        },
+        {
+          "heading": "Pontos pulóverajánlatokat hasonlítson össze",
+          "paragraphs": [
+            "Nyissa meg minden jelölt részletes oldalát, és rögzítse a linket, színt, mérettartományt és választott verziót. Ellenőrizze, hogy az ajánlat nem kapcsol-e különböző ruhákat vagy anyagokat egy induló árhoz. Keresse a mérettáblát és anyagleírást, és jegyezze fel, hogy a konkrét rendelni kívánt opcióra vonatkoznak-e. A bélyegkép felhívás a vizsgálatra, nem műszaki adatlap.",
+            "Néhány elegendő adattal rendelkező jelöltre korlátozza az összevetést. Két hasonló képes ajánlatnál ne feltételezzen azonos eredetet vagy méreteket. A megoldatlan kérdést a jelölt mellé írja, ne egy másik termék véleményével töltse ki a hiányt. Az a legjobb lista, amelyet vásárlás előtt világosan el tud magyarázni."
+          ]
+        },
+        {
+          "heading": "Következetesen mérje a referencia-ruhát",
+          "paragraphs": [
+            "Fektesse sík felületre a pulóvert nyújtás nélkül. Mérje az oldalról oldalra számított mellbőséget, a meghatározott pontból induló törzshosszt, ujjhosszt és vállszélességet, ahol a szerkezet összevetést enged. Jegyezze, ha ejtett vállú vagy raglánujjú a ruha: a vállvarrástól és nyaktól mért ujjhossz nem közvetlenül összehasonlítható.",
+            "Az eladó rajzát kövesse, ne saját mérési szabályt erőltessen rá. Például a 60 centiméteres fektetett mellszélesség más mennyiség, mint a 60 centiméteres mellkerület. A lapos szélesség megduplázása segít a geometria megértésében, de nem alakítja a ruhaméretet garantált testalkati ajánlássá. Hagyjon helyet a kívánt bőségnek és az eladó által megadott mérési tűrésnek."
+          ]
+        },
+        {
+          "heading": "Találgatás nélkül olvassa az anyagra vonatkozó állításokat",
+          "paragraphs": [
+            "Ha az ajánlat megadja, ellenőrizze az összetételt, bélésleírást és kezelési tájékoztatót. A gramm/négyzetméterben jelzett szövettömeg nem a kész pulóver tömege. Fotó nem igazolja megbízhatóan a pamutszázalékot, anyagsűrűséget vagy zsugorodásállóságot. Ha ezek fontosak, keressen írásos termékadatot, és azonosítsa az ellenőrizetlen részeket.",
+            "Az anyag külsejéből ne jósoljon rögzített zsugorodást. Eltérő anyag, kikészítés és mosási mód különböző eredményt adhat. Ha van kezelési utasítás, őrizze a rendelési adatokkal. Ha nincs, mérlegelje, változtat-e ez a vásárlási szándékon, ne találjon ki kényelmes választ másik eladó leírásából."
+          ]
+        },
+        {
+          "heading": "Később ellenőrizhető rendelést adjon le",
+          "paragraphs": [
+            "Mentse a pontos színt és méretjelzést a használt mérettáblával. A rendelési megjegyzésben olyan konkrét ellenőrzést írjon, amely a megtartásról dönteni segít. A méretcímke bemutatása és a fektetett mellszélesség mérése világosabb kérés, mint hogy a raktár igazolja a pulóver jó illeszkedését. Ellenőrizze az elérhetőséget és esetleges extra díjat.",
+            "Minden helyettesítést jóváhagyás előtt nézzen át. Más méret, szín vagy verzió más táblázatot használhat; az eladó módosított opcióját az eredetivel azonos gondossággal vizsgálja. Őrizze az elfogadott változás írásos visszaigazolását, hogy az érkezett terméket a végleges utasításhoz, ne elavult képernyőképhez lehessen mérni."
+          ]
+        },
+        {
+          "heading": "Látható ellenőrzéshez használjon raktári képeket",
+          "paragraphs": [
+            "Vesse össze az érkezett ruha színét, címkéjét, mintájának helyét és részeit a rendeléssel. Vizsgálja a kapucnit, mandzsettát, alsó szegélyt, zsebeket és esetleges záródást. Látható varrásnál nyilvánvaló nyílást vagy eltérést keressen, de vegye figyelembe a fény, gyűrődés és perspektíva hatását. Ha a fotó egy fontos aggályt nem tisztáz, kérjen jobb nézetet.",
+            "Az eladó katalógusképe nem saját raktári QC-fotó. A CSSBuy általános vizsgálatról ír, és sem szép ajánlat, sem tiszta kép nem garantál anyagösszetételt vagy tartósságot. Katalógusunk jelenleg nem kínál csatlakoztatott QC-keresőt. A CSSBuy-fiók bizonyítékait és a hivatalos rendelési folyamatot használja a megkeresésekhez."
+          ]
+        },
+        {
+          "heading": "A döntéshez fontos méreteket ellenőrizze",
+          "paragraphs": [
+            "Ha a raktár tud mérni, az eladó táblázatával azonos módszert kérjen, vagy világosan nevezze meg a végpontokat. Azonosat azonoshoz mérjen: fektetett mellszélességet fektetett szélességhez, törzshosszt ugyanonnan indítva, ujjhosszt azonos szerkezeti ponttól. A ferdén fényképezett mérőszalag nehezen olvasható; kis látszólagos eltérésből ne döntsön tisztázás nélkül.",
+            "Előre határozza meg az elfogadható eltéréseket. A kívánt szabástól függően egy kisebb hosszváltozás fontosabb lehet a nagyobb szélességnél. Különítse el az egyértelmű rossz méretet a saját preferenciával kapcsolatos bizonytalanságtól. Visszaküldési szándéknál gyorsan ellenőrizze az aktuális feltételeket, és a döntésig ne helyezze a ruhát nemzetközi csomagba."
+          ]
+        },
+        {
+          "heading": "A térfogat és védelem szerint csomagoljon",
+          "paragraphs": [
+            "A kapucnis pulóver sok helyet foglalhat, különösen több vastag ruha esetén. A CSSBuy megfelelő ruhákhoz vákuumcsomagolást ír le, de az alkalmasság a konkrét terméktől és részleteitől függ. Tömörítés előtt gondolja át a nyomatokat, formázott díszeket és tartozékokat. Ne feltételezze, hogy a legkisebb lehetséges csomag mindig a legjobb védelmet nyújtja.",
+            "A végleges csomagtömeget és méreteket a hivatalos szállítási kalkulátorral hasonlítsa össze. A termékárat különítse el a nemzetközi fuvartól, és ellenőrizze a választott útvonal tényleges számlázási szabályát. Cipővel vagy törékeny tárggyal együtt olyan csomagolást kérjen, amely a különböző alakokat védi. Csomagolás után nézze újra az árat, mert a csak ruhatömegre alapuló becslés nem írja le a kész csomagot."
+          ]
+        },
+        {
+          "heading": "Kézbesítésből készítsen használható illeszkedési feljegyzést",
+          "paragraphs": [
+            "Érkezéskor vesse össze a ruhát a rendelési és referenciaméretekkel, mielőtt támogatáshoz szükséges adatot eltávolítana. A problémát fényképezze, kézbesítési gondnál pedig őrizze a csomagolást. Kövesse az elérhető kezelési utasítást, ne feltételezze, hogy minden pulóver ugyanúgy mosható és szárítható. A támogatási megkeresést megfigyelhető eltérésre összpontosítsa.",
+            "Rögzítse a választott méretet, fektetett méréseket, kívánt szabást és a szokásos kezelés utáni változást. Ez a megvizsgált termék későbbi rendelésénél segít, de nem határozza meg minden katalógusbeli pulóver méretezését. A mért személyes feljegyzés tudatosabb vásárlást tesz lehetővé, és csökkenti az általános nagyobbat vagy kisebbet tanácsoktól való függést."
+          ]
+        }
+      ],
+      "takeaways": [
+        "A fektetett ruhaméreteket az eladó táblázatával azonos módszerrel hasonlítsa össze.",
+        "Az anyag összetételét és tömegét ellenőrizendő állításnak, ne képpel bizonyított ténynek tekintse.",
+        "Összevonás előtt ellenőrizze a pulóvert, és becsomagolt méretekkel számoljon szállítást."
+      ],
+      "sourceIds": [
+        "buyforme",
+        "expertbuy",
+        "shipforme",
+        "estimates",
+        "returns-policy"
+      ],
+      "reviewedAt": "2026-10-30"
     }
   ],
   "sources": [
@@ -972,7 +1365,7 @@
       "id": "buyforme",
       "title": "CSSBuy — Vásárolj helyettem: hivatalos vásárlási folyamat",
       "url": "https://m.cssbuy.com/buyforme",
-      "accessedAt": "2026-10-23"
+      "accessedAt": "2026-10-30"
     },
     {
       "id": "expertbuy",
@@ -990,13 +1383,13 @@
       "id": "shipforme",
       "title": "CSSBuy — Küldd el helyettem: összevonási és csomagolási szolgáltatások",
       "url": "https://m.cssbuy.com/shipforme",
-      "accessedAt": "2026-10-23"
+      "accessedAt": "2026-10-30"
     },
     {
       "id": "fees",
       "title": "CSSBuy Súgóközpont — Költségek és díjak",
       "url": "https://www.cssbuy.com/shop/helpCenter?id=12",
-      "accessedAt": "2026-10-23"
+      "accessedAt": "2026-10-30"
     },
     {
       "id": "storage",
@@ -1013,12 +1406,12 @@
     {
       "id": "estimates",
       "title": "CSSBuy — Szállításiköltség-kalkulátor",
-      "url": "https://new.cssbuy.com/estimates",
-      "accessedAt": "2026-10-23"
+      "url": "https://www.cssbuy.com/estimates",
+      "accessedAt": "2026-10-30"
     },
     {
       "id": "catalog",
-      "title": "cnfansge.com — A termékkatalógus forrása",
+      "title": "Termékkatalógus",
       "url": "https://cnfansge.com/",
       "accessedAt": "2026-10-23"
     },
