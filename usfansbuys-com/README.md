@@ -13,7 +13,7 @@ npm run check
 npm run check:production
 ```
 
-Production is the default: canonical origin is `https://usfansbuys.com`, robots allow indexing, and sitemap contains 90 canonical pages. Set `PREVIEW=true` and `SITE_ORIGIN` explicitly for a separate preview. Search/filter and query-based product pages remain noindex.
+Production is the default: canonical origin is `https://usfansbuys.com`, robots allow indexing, and sitemap contains 120 canonical pages. Set `PREVIEW=true` and `SITE_ORIGIN` explicitly for a separate preview. Search/filter and query-based product pages remain noindex.
 
 ## Cloudflare deployment
 
@@ -31,6 +31,8 @@ GitHub Actions separately builds and validates this directory. Its optional cred
 
 Product data, images, categories, keyword search, sorting, pagination and seller galleries come from cnfansge.com. Only source HTML responses are cached for 60 seconds. There is no product database, snapshot JSON, new index or backend administration.
 
-EN/DE/ES/FR/IT each contain 28 official-source FAQs and 10 complete articles. Product names remain as provided upstream. All article and FAQ sources, brand assets, keyword research, decisions and delivery status are recorded in `PROJECT_MEMORY.md` and `docs/`.
+EN/DE/ES/FR/IT each contain 28 official-source FAQs and 13 complete articles. Product names remain as provided upstream. All article and FAQ sources, brand assets, keyword research, decisions and delivery status are recorded in `PROJECT_MEMORY.md` and `docs/`.
 
 A verified cnfansge image-search or independent warehouse-QC interface has not yet been identified. These capabilities are explicitly unavailable; seller galleries are never labeled QC.
+
+SEO release checks: `npm run check:seo` verifies locale coverage, new-article completeness, internal links, comparison tables and pagination. `check:production` runs those checks before production assertions. See `docs/seo-release-2026-10-30.md` for research limits and release scope.

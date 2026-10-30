@@ -1,7 +1,7 @@
 # USFans × cnfansge.com — 项目记忆与实施规划
 
 更新时间：2026-10-30（UTC）
-当前阶段：正式站已在线；五语言 SEO 内容与抓取优化完成本地构建，本地验证通过，正在通过原 GitHub → Cloudflare 集成发布。下方历史规划不代表当前授权范围。
+当前阶段：正式站已在线；五语言 SEO 内容与抓取优化已通过原 GitHub → Cloudflare 集成上线，正式站验收通过。下方历史规划不代表当前授权范围。
 
 **当前决定优先于下方首轮历史规划：** 用户已确定域名 usfansbuys.com、目录 usfansbuys-com/，明确授权公开预览。下方“待选域名 / 尚未实现”等文字是首轮历史状态，不是当前阻塞。
 
@@ -295,3 +295,5 @@ GitHub 保存源码和自动构建配置；GitHub Pages 只能托管静态产物
 生产继续使用仓库 `hehaize88-code/cnfansge.com` 的 `usfansbuys-com/` 和 Cloudflare Worker `usfansbuys-com`。没有迁移到 Sites 或改变其他子站。GA4 尚未发现对应资源，本次不接入其他站点的衡量 ID。
 
 验证：`npm run build`、`npm run check:seo`、`npm run check:production`、`npm run check` 通过；最后一项包含实时商品数据、分页、排序、搜索和 USFans 购买参数校验。空的后续目录分页返回 404，避免软 404。
+
+生产验收：内容发布提交 `1bae2d116ec97baca9623e95b23fad42e81af28e`；GitHub Actions run `41029797155` 成功；Cloudflare build `3e7742c2-afe1-45b5-b717-4d87234a2ff3` 完成，version `01fabc26` Ready、100% 流量。正式站15篇新文章页面均 HTTP200、语言/7章节/发布日期/canonical/hreflang 正确；三个分类样本各20条真实商品，意大利语球衣第2页 canonical 与下一页正确；sitemap120 URL、720 alternate。视觉复核后清理目录重复序号，保留章节标题编号。
