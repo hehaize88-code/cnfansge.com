@@ -9,7 +9,11 @@ This entry supersedes earlier article/page counts. Scope remains only `superbuyb
 - First product grids are rendered by the Worker from the existing cnfansge.com adapter, with a 4.5-second bound, HTML escaping and a 60-second bounded process cache. No product data is checked in, mirrored, or copied to a database. Bootstrap data avoids a duplicate browser request; source failures retain the client retry path.
 - Existing GA4 ID remains production-only. Added product selection, buy click, search-length, category click and article-to-catalogue events. These are engagement events, not evidence of completed purchases.
 - Build creates 160 HTML pages: 155 sitemap URLs plus five noindex product shells. Checks cover translations, metadata, 5,925 internal links, redirects, affiliate mapping, source rendering, escaping, pagination bootstrap, cache and fallback.
-- Local build and checks passed; Wrangler dry-run passed. Release/deployment verification is recorded below when complete.
+- Local build and checks passed; Wrangler dry-run passed (about 2.16 MiB gzipped). GitHub content release: `b704f865782fd7f4076db452b1119cff1f717c97`; Cloudflare build `7306c505-8acb-4afe-9da0-d16575847b99` succeeded, version `1a8a9634-de9e-4278-aefc-8cb565dcfafc`.
+- Live mobile QA found the category rail causing grid minimum-width overflow. Fixed shrinking of catalogue grid children in commit `aa05a8a0e9b80289eb70147a6105044476176216`. Cloudflare build `f1544693-f5e1-499e-9c54-f9c271ecf98d` succeeded, final code version `466619b9-9688-411f-975d-b73577ee372c`.
+- Live verification: all 15 new article URLs opened successfully with eight sections, sixteen body paragraphs, matching language and self canonical. Italian catalogue and shoe category returned 60 cards with server-rendered markup; page 2, keyword search, mobile menu and article-to-catalogue navigation worked. A sampled source product mapped to its actual Weidian ID and retained partnercode. Mobile viewport and document widths both measured 375px after the fix; no page-level horizontal overflow.
+- GA4 realtime confirmed QA events `select_item`, `catalog_search`, `category_click` and `article_to_catalog`. These are test interactions, not organic growth. The buy-link event is implemented; a purchase was not made.
+- The terminal has read-only public GitHub transport, so release writes used the authenticated GitHub connector with parent-SHA guards. Cloudflare Git builds deployed the commits successfully. No deployment credentials were added to source.
 
 ---
 
