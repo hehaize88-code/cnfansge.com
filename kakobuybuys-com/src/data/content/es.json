@@ -59,8 +59,8 @@
       "jersey": "Camisetas deportivas"
     },
     "catalogEyebrow": "EL DIRECTORIO ACTUALIZADO",
-    "catalogTitle": "Encuentra tu próximo favorito.",
-    "catalogIntro": "Explora anuncios actuales, compara precios y examina las fotos del vendedor antes de abrir el producto exacto en Kakobuy.",
+    "catalogTitle": "Kakobuy spreadsheet y enlaces de productos",
+    "catalogIntro": "Busca en el Kakobuy spreadsheet por palabra clave o categoría, compara los precios actuales de los anuncios y abre el enlace original del producto. Comprueba la talla exacta, las fotos del vendedor y el presupuesto total de envío antes de comprar.",
     "catalogStatus": "20 productos por página · Sigue explorando con los controles de página",
     "resultsFor": "Resultados para",
     "clearFilters": "Borrar filtros",
@@ -96,7 +96,7 @@
     "journalEyebrow": "EL DIARIO DE COMPRA",
     "journalTitle": "Tu próximo pedido, mejor informado.",
     "journalIntro": "Guías prácticas sobre enlaces de productos, tallas, QC, decisiones en el almacén y gastos de envío.",
-    "allArticles": "Las 10 guías",
+    "allArticles": "Todas las guías de compra",
     "minutes": "min de lectura",
     "articleLabel": "GUÍA DE COMPRA",
     "contents": "En esta guía",
@@ -118,7 +118,7 @@
     "qcEyebrow": "REVISA ANTES DE ENVIAR",
     "qcTitle": "Examina las fotos. Revisa los detalles.",
     "qcIntro": "Las fotos de inspección del almacén pueden ayudarte a evaluar detalles visibles antes del envío. Descubre qué ángulos y medidas revisar y qué no puede demostrar una imagen.",
-    "qcUnavailable": "Esta vista previa no tiene conectada una fuente verificada de fotos QC de referencia. Las páginas de producto muestran actualmente fotos de los anuncios de los vendedores, claramente identificadas.",
+    "qcUnavailable": "Este sitio no ofrece una fuente verificada de fotos de QC del almacén. Las páginas de productos muestran fotos de los anuncios del vendedor. Revisa las fotos de almacén de tu propio pedido en tu cuenta de Kakobuy antes del envío.",
     "qcChecklist": [
       "Compara el color visible, el modelo y la opción elegida con tu pedido.",
       "Comprueba las etiquetas y las medidas solicitadas según tus propias necesidades de talla.",
@@ -126,7 +126,7 @@
       "Utiliza las fotos de inspección de tu propio pedido para decidir si enviarlo."
     ],
     "shippingEyebrow": "ENTIENDE EL COSTE TOTAL",
-    "shippingTitle": "Planifica más allá del precio del artículo.",
+    "shippingTitle": "Envíos de Kakobuy: costes, peso y seguimiento",
     "shippingIntro": "El precio del anuncio es el punto de partida. El envío nacional, el transporte internacional y los servicios seleccionados pueden cambiar el total final.",
     "shippingCards": [
       {
@@ -144,7 +144,7 @@
     ],
     "visualTitle": "Buscar con una imagen",
     "visualIntro": "La búsqueda por imagen utilizará la misma fuente de productos que el catálogo.",
-    "visualUnavailable": "Todavía no se ha verificado la interfaz de búsqueda por imagen de la fuente. No se pueden subir imágenes en esta vista previa; sí están disponibles la búsqueda por palabras clave y la navegación por categorías.",
+    "visualUnavailable": "La carga de imágenes no está disponible actualmente. Busca por palabras clave o explora las categorías.",
     "aboutTitle": "Un punto de partida útil.",
     "aboutIntro": "Kakobuy Buys es una web independiente de descubrimiento de productos y guías de compra. Te ayudamos a explorar anuncios y a entender qué preguntas hacer antes de realizar un pedido.",
     "aboutBody": "Los pedidos, pagos, servicios de almacén y envíos se gestionan en Kakobuy. Esta web no acepta pagos ni administra tu cuenta de Kakobuy. Algunos enlaces externos de registro o compra son enlaces de afiliado y pueden generarnos una comisión.",
@@ -162,15 +162,39 @@
       "Incluye el envío y los cargos aplicables en tu presupuesto.",
       "Revisa las fotos de inspección del almacén de tu propio pedido antes del envío."
     ],
-    "top": "Volver arriba"
+    "top": "Volver arriba",
+    "catalogSeoTitle": "Kakobuy Spreadsheet: enlaces, precios y categorías",
+    "shippingSeoTitle": "Envíos de Kakobuy: costes, calculadora y seguimiento",
+    "quickAnswer": "Respuesta rápida",
+    "reviewedLabel": "Actualizado",
+    "decisionGuides": "Antes de pagar o enviar",
+    "calculator": {
+      "title": "Calcula el peso facturable de tu paquete",
+      "intro": "Introduce las dimensiones del paquete preparado y el divisor de tu ruta. Esta calculadora independiente estima el peso, no un precio actual de Kakobuy. Los valores de ejemplo son ilustrativos; sustitúyelos por tus propias medidas.",
+      "weight": "Peso real con embalaje (kg)",
+      "length": "Largo (cm)",
+      "width": "Ancho (cm)",
+      "height": "Alto (cm)",
+      "divisor": "Divisor volumétrico de tu ruta",
+      "step": "Incremento de facturación (kg)",
+      "rule": "Regla de facturación de la ruta",
+      "higher": "El mayor entre el peso real y el volumétrico",
+      "actualOnly": "Solo peso real",
+      "calculate": "Calcular peso",
+      "volumeResult": "Peso volumétrico",
+      "billableResult": "Peso facturable redondeado",
+      "note": "Comprueba el peso mínimo, los límites de tamaño, los tramos tarifarios y las reglas de redondeo de la ruta. Este cálculo excluye precios, impuestos, seguros y gastos de gestión. Los resultados permanecen en tu navegador.",
+      "invalid": "Introduce números positivos en todos los campos. Comprueba las unidades y la regla de facturación de la ruta seleccionada.",
+      "noScript": "Fórmula: largo × ancho × alto ÷ divisor. Si la ruta utiliza ambas medidas, toma el mayor entre este resultado y el peso real y redondéalo hacia arriba al incremento de facturación."
+    }
   },
   "articles": [
     {
       "slug": "how-to-use-kakobuy-spreadsheet",
-      "title": "Cómo usar un Kakobuy spreadsheet: de la búsqueda a una selección útil",
-      "description": "Aprende a leer fichas, verificar enlaces originales, comparar opciones y preparar una selección antes de pedir a través de Kakobuy.",
+      "title": "Cómo usar un Kakobuy spreadsheet y verificar enlaces",
+      "description": "Busca en el Kakobuy spreadsheet, compara enlaces y fotos del vendedor, verifica tallas y crea una selección con un presupuesto de envío realista.",
       "category": "Spreadsheet",
-      "readMinutes": 8,
+      "readMinutes": 7,
       "intro": "Un Kakobuy spreadsheet resulta más útil cuando te ayuda a decidir que cuando ofrece una lista interminable de imágenes. Considera cada entrada como un acceso a un anuncio que necesita comprobaciones: qué artículo es, qué opción quieres, qué incluye el precio y qué pruebas hay. Esta guía explica un método repetible para pasar de una búsqueda amplia a una selección breve y práctica sin confundir una recomendación con una promesa.",
       "sections": [
         {
@@ -178,70 +202,80 @@
           "paragraphs": [
             "Un directorio organiza referencias. Puede mostrar título, fotografía, precio estimado y un enlace que abre el anuncio mediante Kakobuy. Esos campos agilizan la navegación, pero no sustituyen la oferta actual del vendedor. Las existencias, variantes y precios pueden cambiar desde que se añadió la entrada. Abre el producto real y compara la información relevante para tu compra.",
             "Distingue las funciones. Esta web independiente facilita el descubrimiento y la lectura. El vendedor suministra el artículo. Kakobuy gestiona los servicios contratados en su plataforma. Una ficha atractiva no significa que esta web posea la mercancía, la haya inspeccionado personalmente o pueda modificar tu pedido. Esta distinción ayuda a saber dónde preguntar y qué pantalla debe dar la respuesta definitiva."
-          ]
+          ],
+          "id": "section-0"
         },
         {
           "heading": "Empieza con una búsqueda concreta",
           "paragraphs": [
             "Elige unas pocas palabras útiles antes de navegar. Un tipo de producto y un detalle práctico suelen ser más fáciles de evaluar que una consulta muy general. Por ejemplo, buscar una sudadera con cremallera permite comparar mejor que buscar ropa. Si hay pocos resultados, elimina detalles de uno en uno en lugar de sustituir la consulta por un término sin relación.",
             "Usa categorías para reducir distracciones y observa cómo cambia el orden de los resultados. La popularidad orienta, pero no certifica calidad. Ordenar por precio solo indica qué precio mostrado es inferior; no confirma que la variante sea correcta ni que el coste con envío resulte económico. Mantén los mismos filtros al comparar entradas para evaluar un conjunto coherente."
-          ]
+          ],
+          "id": "section-1"
         },
         {
           "heading": "Lee cada dato como una prueba independiente",
           "paragraphs": [
             "Empieza por el título y compáralo con la foto y la referencia original. El título puede estar abreviado para una ficha pequeña. La fotografía puede mostrar un color o una versión representativa, no todas las opciones. El precio puede corresponder a una variante, ser un precio inicial o una estimación. Leer cada campo por separado evita convertir un resumen cómodo en una afirmación que el vendedor no ha hecho.",
             "Observa tanto lo que falta como lo que aparece. Si no hay peso verificado, tabla de tallas o conjunto QC, deja esa cuestión abierta. No tomes mentalmente esos datos de otro producto similar. Dos anuncios con fotos parecidas pueden tener proveedores, materiales o variantes diferentes. Distinguir hechos registrados de suposiciones en tus notas hace el contraste más fiable."
-          ]
+          ],
+          "id": "section-2"
         },
         {
           "heading": "Guarda el enlace original junto a la opción elegida",
           "paragraphs": [
             "El enlace original del marketplace es la base de tu selección. Guárdalo con el nombre, el color deseado y la talla o versión que consideras. Un ID identifica un anuncio, pero no necesariamente una combinación concreta de color y talla. Por eso la selección completa de opciones importa tanto como el enlace.",
             "Cuando un botón abra Kakobuy, comprueba que el artículo importado coincide con esa referencia. Compara la información del vendedor si aparece, la imagen principal, los nombres de las opciones y el ID original. Si el destino está vacío, no disponible o claramente equivocado, detente antes de pagar. No basta con que funcione el botón: debe abrir el artículo previsto. No aceptes un reemplazo familiar solo porque su foto se parece a la guardada."
-          ]
+          ],
+          "id": "section-3"
         },
         {
           "heading": "Compara precios y después prepara el presupuesto real",
           "paragraphs": [
             "Una estimación en USD es un primer filtro práctico para saber si un artículo entra en tu presupuesto, pero no representa el coste total entregado. La información de Kakobuy distingue mercancía y transporte nacional del envío internacional y del embalaje o servicios adicionales aplicables. Comprueba los importes actuales en las pantallas de pedido y paquete.",
             "Anota para cada candidato el precio de la variante y el envío nacional visible. Reserva espacio en la comparación para el futuro envío internacional. Evita una falsa precisión: unos céntimos menos en el precio mostrado no convierten un producto en el más barato en total. El tamaño del paquete, la variante o los servicios necesarios pueden cambiar el resultado. Compara opciones completas cuando tengas el presupuesto y marca como incompletas las estimaciones pendientes."
-          ]
+          ],
+          "id": "section-4"
         },
         {
           "heading": "Distingue las imágenes del vendedor de las pruebas QC",
           "paragraphs": [
             "Las imágenes del vendedor explican la oferta: pueden mostrar estilos, detalles, etiquetas o una tabla de tallas. Las fotos QC corresponden a una inspección de un artículo recibido. Responden a preguntas distintas; una galería extensa del vendedor no se convierte automáticamente en una galería QC. Lee las etiquetas y busca una relación clara entre las imágenes de inspección y la referencia del producto.",
             "El QC histórico puede mostrar lo que alguien recibió antes, pero no demuestra qué incluirá tu pedido. Kakobuy describe una fase de inspección y fotografías en almacén. Cuando pidas, revisa las pruebas asociadas a tu artículo y el alcance de esa inspección. Mantén una duda abierta si las fotos no muestran el detalle que necesitas evaluar."
-          ]
+          ],
+          "id": "section-5"
         },
         {
           "heading": "Compara el ajuste antes que el estilo",
           "paragraphs": [
             "Una buena selección contiene artículos que pueden satisfacer tus necesidades reales. En ropa, empieza por las medidas del vendedor concreto y compáralas con una prenda similar que ya uses. En calzado, confirma el sistema de tallas y qué significa cada medida en centímetros. La ayuda de Kakobuy advierte que los vendedores utilizan criterios distintos: la misma letra o cifra en dos anuncios no basta.",
             "Escribe la duda exacta. “Necesito el ancho de pecho de la talla M” sirve más que “no sé qué talla”. “¿La longitud incluye el asa?” es más claro que “¿es grande el bolso?”. Estas preguntas permiten determinar si el anuncio ya responde o si necesitas aclaraciones antes de pedir. Guardarlas junto al enlace también evita olvidarlas al pagar."
-          ]
+          ],
+          "id": "section-6"
         },
         {
           "heading": "Crea una selección que resista una segunda revisión",
           "paragraphs": [
             "Limita la lista activa a unos pocos candidatos para cada necesidad. Usa los mismos campos: enlace original, variante, precio mostrado, extras conocidos, medida necesaria y duda pendiente. No necesitas un sistema complejo de puntuación. Unas notas uniformes revelan si un anuncio aporta mejores pruebas o simplemente una foto más convincente.",
             "Vuelve a la lista después de una pausa. Abre de nuevo los enlaces actuales, elimina duplicados y confirma que las variantes siguen disponibles. Si un candidato continúa siendo confuso tras varias comprobaciones, eso también informa. Puede convenir elegir un anuncio más claro que seguir defendiendo una elección incierta. Una selección debe reducir dudas, no acumular pestañas."
-          ]
+          ],
+          "id": "section-7"
         },
         {
           "heading": "Aplica el mismo método en el móvil",
           "paragraphs": [
             "En una pantalla pequeña, compara deliberadamente en lugar de confiar en la memoria al desplazarte. Abre un artículo, revisa sus datos clave y guarda el enlace antes de pasar al siguiente. Ampliar una foto ayuda con detalles visibles, pero no recupera información que nunca estuvo en la imagen. Una etiqueta borrosa sigue siendo una duda sin resolver.",
             "Conserva la categoría y la ordenación al volver al directorio. Si cambias de idioma, confirma que sigues en el producto o los resultados previstos. La traducción debe facilitar la interfaz, no cambiar la identidad del producto. Antes de pagar, revisa la variante elegida en el propio Kakobuy, especialmente si abriste varios anuncios similares durante la misma sesión."
-          ]
+          ],
+          "id": "section-8"
         },
         {
           "heading": "Establece un criterio claro para terminar",
           "paragraphs": [
             "Puedes pasar de investigar a pedir cuando el anuncio original coincide con el destino, la variante es explícita, el ajuste está suficientemente resuelto y sabes qué costes quedan por presupuestar. Eso no elimina todos los riesgos, pero ofrece una base razonada para continuar.",
             "Si no se cumplen esas condiciones, investiga más o descarta el artículo. Ni el tamaño del directorio, ni un titular entusiasta, ni un precio bajo sustituyen las pruebas. Un Kakobuy spreadsheet útil respalda decisiones que puedes explicar: por qué ese anuncio, por qué esa variante y qué volverás a revisar cuando llegue al almacén."
-          ]
+          ],
+          "id": "section-9"
         }
       ],
       "sources": [
@@ -250,7 +284,15 @@
         "https://www.kakobuy.com/index/information?information_id=12",
         "https://www.kakobuy.com/service/help/question?id=91"
       ],
-      "wordCount": 1450
+      "wordCount": 1367,
+      "datePublished": "2026-10-24",
+      "dateModified": "2026-10-30",
+      "answer": "Busca por tipo de producto, abre el anuncio exacto y verifica el enlace del marketplace, la talla elegida y las fotos del vendedor. Guarda solo opciones cuyo presupuesto total y condiciones de devolución comprendas. Una entrada del spreadsheet ayuda a descubrir productos; no prueba que un artículo haya sido inspeccionado o autenticado.",
+      "related": [
+        "kakobuy-weidian-taobao-links",
+        "kakobuy-shipping-calculator",
+        "is-kakobuy-legit"
+      ]
     },
     {
       "slug": "how-to-buy-on-kakobuy",
@@ -265,70 +307,80 @@
           "paragraphs": [
             "Antes de añadir dinero o pedir, decide qué quieres comprar. Conserva la URL original y anota la opción exacta: talla, color, modelo, cantidad y cualquier versión. Un anuncio puede contener muchas variantes con precios distintos. Guardar solo la imagen principal deja demasiado margen para confusiones posteriores.",
             "Examina el anuncio e identifica lo que afecta a tu decisión. Una prenda necesita una referencia útil de tallas; un bolso puede necesitar dimensiones. Un artículo electrónico puede requerir una especificación que la foto no confirma. Escribe una pregunta breve si falta algo. Hacerlo antes de pagar es más sencillo que reconstruir de memoria tus expectativas después de la compra."
-          ]
+          ],
+          "id": "section-0"
         },
         {
           "heading": "Utiliza el destino oficial de la cuenta",
           "paragraphs": [
             "El enlace de registro de esta web lleva a Kakobuy. Completa allí la configuración y conserva allí tus credenciales. Esta guía independiente no necesita tu contraseña, datos de pago ni acceso a pedidos para ayudarte a explorar. Cuando aparezca una pantalla de inicio de sesión, revisa la dirección y confirma que corresponde al servicio previsto.",
             "Lee la información actual de cuenta, pagos y servicios antes de comprometer fondos. No supongas que una promoción de una publicación antigua siga siendo válida para una cuenta nueva. Si aparece una ventaja al registrarte, revisa condiciones, caducidad y servicio aplicable. Entender los costes normales es más útil que basar el presupuesto en un cupón sin verificar o un descuento prometido."
-          ]
+          ],
+          "id": "section-1"
         },
         {
           "heading": "Comprueba que el producto importado coincide con el original",
           "paragraphs": [
             "Abre el artículo en Kakobuy mediante el enlace y compáralo con tu referencia guardada. Revisa identidad, fotografías, vendedor si se muestra y etiquetas de opciones. El ID de un marketplace no es el número interno de un directorio. El destino debe resolver el anuncio original, no limitarse a contener una cifra que parezca válida.",
             "Si no se puede importar, está agotado o aparece otro producto, no continúes adivinando. Revisa la URL original y elimina parámetros ajenos de seguimiento o fragmentos solo si sabes cuál es la dirección real. No sustituyas el anuncio sin revisar sus propias medidas y condiciones. Un reemplazo supone otra decisión de compra aunque ambas fotografías sean casi idénticas."
-          ]
+          ],
+          "id": "section-2"
         },
         {
           "heading": "Selecciona la opción exacta y escribe notas concretas",
           "paragraphs": [
             "Elige cada opción de forma deliberada. Lee las etiquetas de talla y color en vez de confiar en la posición de las miniaturas, cuyo orden puede variar entre pantallas. Confirma cantidad y precio de esa elección. Si hay un código de modelo, guárdalo: puede identificar mejor que un nombre de color traducido libremente.",
             "Utiliza cualquier campo de instrucciones para una petición breve y comprobable. “Confirma que la opción es negra, talla M” es más claro que “envía la mejor”. Una nota no permite asumir que se conseguirá una variante no disponible. Si la petición cambia la oferta, busca confirmación primero. Las notas deben aclarar tu elección, no sustituir silenciosamente la opción seleccionada."
-          ]
+          ],
+          "id": "section-3"
         },
         {
           "heading": "Revisa el pago del artículo como una etapa propia",
           "paragraphs": [
             "El proceso de Kakobuy describe pagar mercancía y envío nacional antes de la fase posterior del paquete internacional. Lee el total actual e identifica qué incluye. Haber pagado el artículo no significa que ya viaje a tu domicilio ni determina el importe final de la entrega internacional.",
             "Guarda el artículo elegido y el importe aprobado. Si cambia el precio o la variante antes de completarse la compra, lee la explicación y confirma cómo quieres proceder. Puedes detenerte si la oferta revisada deja de cumplir tu presupuesto o requisitos. Revisar bien ahora evita conversaciones más complejas cuando el artículo ya está en transporte nacional."
-          ]
+          ],
+          "id": "section-4"
         },
         {
           "heading": "Interpreta los estados como fases, no como promesas de llegada",
           "paragraphs": [
             "El pedido pasa por gestión de compra, salida del vendedor, tránsito nacional y recepción en almacén. Un cambio en una fase no completa automáticamente la siguiente. Lee el estado y mensaje reales de tu artículo. Por ejemplo, no confundas el número de seguimiento nacional con el del futuro paquete internacional.",
             "Si el avance no está claro, pregunta usando la referencia y el último evento visible. “El envío del vendedor sigue sin confirmarse; ¿debo hacer algo?” resulta más útil que calcular una llegada sin fundamento. No organices viajes o regalos alrededor de una sola cifra optimista. La preparación del vendedor y la entrega internacional dependen de eventos distintos y pueden necesitar márgenes separados."
-          ]
+          ],
+          "id": "section-5"
         },
         {
           "heading": "Revisa el artículo recibido antes de presentar el paquete",
           "paragraphs": [
             "Kakobuy incluye inspección y fotos del almacén en su proceso. Cuando estén disponibles las pruebas de tu artículo, compáralas con la variante pedida. Empieza por identidad e integridad: artículo correcto, etiqueta de talla, color o versión y componentes esperados según el anuncio. Después examina las zonas visibles importantes para tu uso.",
             "Entiende los límites de la inspección. Una foto muestra etiquetas o costuras, pero no prueba todo sobre ajuste, comodidad, duración o funcionamiento. Si falta una vista necesaria, pregunta si existe una comprobación adicional adecuada y cuánto cuesta. No confundas una duda pendiente con autorización para enviar. Al avanzar el paquete pueden cambiar las opciones prácticas para resolver un problema del vendedor."
-          ]
+          ],
+          "id": "section-6"
         },
         {
           "heading": "Resuelve dudas con pruebas claras",
           "paragraphs": [
             "Si observas una posible diferencia, descríbela brevemente con su referencia. Indica qué pediste, qué muestran las pruebas recibidas y qué necesitas aclarar. Señala una foto o una opción del vendedor cuando ayude. Es más fácil actuar así que ante un simple “parece incorrecto”, especialmente si el color o la medida son ambiguos.",
             "Pregunta por las opciones actuales de devolución o cambio antes de asumir el resultado. La ayuda Kakobuy trata acuerdos posventa relacionados con vendedores, pero debes comprobar elegibilidad, plazos y cargos del pedido concreto. No supongas que toda preocupación se resolverá gratis. Considera pruebas, respuesta de asistencia e implicaciones totales antes de conservar, cambiar, devolver o excluir el artículo del envío."
-          ]
+          ],
+          "id": "section-7"
         },
         {
           "heading": "Prepara el paquete según su contenido real",
           "paragraphs": [
             "Cuando los artículos que quieres enviar estén listos, revisa las opciones de Kakobuy: dirección, destinatario, restricciones de contenido, embalaje y rutas. El paquete final es una nueva unidad de comparación: varios artículos baratos pueden generar un bulto voluminoso, mientras que distintos embalajes modifican presupuesto o protección.",
             "Compara rutas con los mismos contenidos y supuestos. Lee sus condiciones actuales, no solo el precio al principio de la lista. Si se ofrece seguro, embalaje extra u otro servicio, revisa cobertura y coste antes de seleccionarlo. No todos son necesarios ni están incluidos. Lo importante es que la combinación se adapte al artículo, al destino y a la protección deseada."
-          ]
+          ],
+          "id": "section-8"
         },
         {
           "heading": "Confirma el envío y guarda las pruebas juntas",
           "paragraphs": [
             "Antes de presentar el paquete, revisa el importe completo y la información de declaración requerida. Proporciona datos exactos y cumple las exigencias de ruta y destino. Si no entiendes un campo, pide aclaraciones al servicio que gestiona el envío en vez de copiar un valor arbitrario de otro pedido.",
             "Después, conserva referencia del paquete, ruta y seguimiento junto a los documentos de compra. Interpreta las actualizaciones según la secuencia real del transportista. Ante un problema, usa el canal del pedido o paquete correspondiente y describe el último evento confirmado. El objetivo es un proceso trazable: referencia verificada, opción explícita, artículo de almacén revisado y envío internacional elegido conscientemente."
-          ]
+          ],
+          "id": "section-9"
         }
       ],
       "sources": [
@@ -340,14 +392,16 @@
         "https://www.kakobuy.com/service/help/question?id=51",
         "https://www.kakobuy.com/service/help/question?id=69"
       ],
-      "wordCount": 1388
+      "wordCount": 1246,
+      "datePublished": "2026-10-24",
+      "dateModified": "2026-10-24"
     },
     {
       "slug": "kakobuy-qc-photos-guide",
       "title": "Guía de fotos QC de Kakobuy: qué revisar antes del envío",
       "description": "Examina las fotos del almacén con método, distingue imágenes del vendedor de pruebas QC y detecta qué detalles adicionales conviene aclarar.",
       "category": "Guía QC",
-      "readMinutes": 8,
+      "readMinutes": 7,
       "intro": "Las fotos QC de Kakobuy son útiles cuando responden a una pregunta concreta sobre el artículo recibido para tu pedido. Ayudan menos si solo pasas rápido, reconoces la forma general y supones correcto todo lo demás. Una revisión estructurada empieza por la identidad, sigue con construcción visible y medidas y termina con las dudas pendientes. Esta guía explica el proceso sin tratar la fotografía como garantía de autenticidad, rendimiento o ajuste perfecto.",
       "sections": [
         {
@@ -355,70 +409,80 @@
           "paragraphs": [
             "Una fotografía del vendedor presenta la oferta: puede ser una imagen de estilo, un detalle, una tabla de tallas o una opción disponible. Una imagen QC de almacén documenta un artículo recibido para inspección. Importa distinguirlas porque representan momentos distintos y quizá no la misma pieza física.",
             "Una inspección histórica aporta contexto, pero tu pedido requiere su propia revisión. Comprueba la referencia del artículo y su asociación al pedido antes de confiar en una foto. Si la galería no se identifica como QC verificado, considérala imágenes de producto, no pruebas de inspección. Más fotos no implican mejores pruebas; sirven las que muestran el detalle exacto que debes valorar."
-          ]
+          ],
+          "id": "section-0"
         },
         {
           "heading": "Empieza por la identidad y la variante",
           "paragraphs": [
             "Antes de examinar detalles pequeños, confirma que recibiste lo que querías pedir. Compara tipo de producto, color o versión, etiqueta visible de talla y componentes incluidos con tu opción guardada. Contrasta los códigos de modelo si pueden leerse. Esta primera pasada detecta una confusión sencilla antes de dedicar tiempo a costuras o acabados.",
             "Revisa el artículo como conjunto. Un par necesita ambos zapatos; un conjunto de ropa, las piezas descritas en la opción; un accesorio desmontable, sus componentes esperados. No supongas incluido lo oculto solo porque aparece en la publicidad del vendedor. Si las vistas no confirman la integridad, pregunta por esa pieza concreta."
-          ]
+          ],
+          "id": "section-1"
         },
         {
           "heading": "Examina el conjunto antes de ampliar",
           "paragraphs": [
             "Empieza por una vista completa para entender forma y alineación. Comprueba si está colocado uniformemente y si la perspectiva explica diferencias. Una manga doblada, un zapato inclinado o una cámara en ángulo pueden hacer parecer distinta una parte sin demostrar defecto. Busca otra vista antes de concluir basándote en una sola foto.",
             "Después pasa a las zonas importantes para la categoría. En ropa, examina costuras, cierres y alineación general de paneles. En zapatos, compara izquierda y derecha desde ángulos parecidos. En bolsos, revisa contorno, unión de asas y cierres visibles. Describe con precisión: “La costura parece irregular en esta imagen” fundamenta mejor una pregunta que una afirmación sobre fabricación que la foto no demuestra."
-          ]
+          ],
+          "id": "section-2"
         },
         {
           "heading": "Lee los detalles con una pregunta definida",
           "paragraphs": [
             "Ampliar sirve si la imagen original tiene suficiente nitidez. Observa etiqueta, cierre, borde o superficie y pregunta qué muestra realmente. Quizá identifiques una marca, un componente ausente o una etiqueta inesperada. Normalmente una toma cercana no determina composición, durabilidad a largo plazo ni construcción oculta.",
             "La ampliación digital no sustituye una vista que falta. Una etiqueta pequeña y borrosa no se vuelve fiable por llenar la pantalla. Si importa para decidir, solicita una foto más clara. Limita la petición al detalle incierto. Así distingues una comprobación necesaria de fotos repetidas que no responden a otra pregunta."
-          ]
+          ],
+          "id": "section-3"
         },
         {
           "heading": "Considera la incertidumbre de color e iluminación",
           "paragraphs": [
             "Un tono puede cambiar con la luz del almacén, la exposición de la cámara y la pantalla. Compara varias vistas y observa si las superficies cercanas también muestran cambios de color. Kakobuy incluye las diferencias de color entre los límites de inspección. Por eso una sola foto no debe considerarse una medición cromática precisa.",
             "Si un color es decisivo, describe la opción esperada y pregunta si el artículo recibido corresponde a ella. Es más útil que exigir coincidencia con una foto promocional iluminada de otra forma. Si sigue sin aclararse, decide si aceptas la incertidumbre. Algunas compras necesitan una coincidencia exacta más que otras; conviene prudencia cuando las imágenes no permiten resolverla."
-          ]
+          ],
+          "id": "section-4"
         },
         {
           "heading": "Comprueba medidas tomadas con métodos equivalentes",
           "paragraphs": [
             "Una medida solo sirve si conoces sus puntos inicial y final y sus unidades. Una prenda sobre una cuadrícula aporta contexto, pero no siempre equivale a una cinta colocada en la costura que interesa. Siempre que puedas, compara mediciones hechas como en la tabla del vendedor o en tu prenda de referencia.",
             "En una camiseta, el ancho plano no es el contorno corporal. En un pantalón, la cintura relajada no es la estirada. En un zapato, la suela exterior no equivale al pie ni a la plantilla extraíble. Pregunta concretamente si no está claro el significado. Kakobuy aconseja usar medidas, aunque sus limitaciones de inspección también advierten que esas comprobaciones no son una garantía incondicional."
-          ]
+          ],
+          "id": "section-5"
         },
         {
           "heading": "Solicita pruebas adicionales cuando cambien una decisión",
           "paragraphs": [
             "Una petición útil identifica artículo, vista necesaria y motivo. Puedes pedir una etiqueta legible, ambos zapatos desde el mismo ángulo o una medición con cinta entre puntos definidos. Consulta si Kakobuy admite esa solicitud para el artículo actual y si tiene coste. Disponibilidad y precio deben verificarse al solicitarla.",
             "Prioriza las dudas que podrían cambiar tu decisión de conservar o enviar. Otra foto de una superficie ya clara puede aportar poco; una medida ausente de una prenda ajustada puede ser crucial. Las peticiones concretas también facilitan interpretar la respuesta: compruebas si resuelve la pregunta original sin empezar de cero."
-          ]
+          ],
+          "id": "section-6"
         },
         {
           "heading": "Entiende lo que una inspección visual no demuestra",
           "paragraphs": [
             "Las pruebas QC visibles tienen límites. Una foto no establece comodidad durante todo un día, comportamiento del tejido al lavar, vida útil de un cierre ni seguridad interna de un aparato electrónico. Kakobuy publica exclusiones para ciertas comprobaciones funcionales y electrónicas. No conviertas una revisión visual satisfactoria en una certificación más amplia.",
             "La autenticación también es distinta de observar un artículo recibido. Un logotipo o una forma familiar no prueban por sí solos origen o licencia. Si la compra depende de una certificación, especificación de material o norma de rendimiento, consigue documentación adecuada de la fuente pertinente antes de pedir. Una colección de fotos QC no puede cubrir la falta de esas pruebas."
-          ]
+          ],
+          "id": "section-7"
         },
         {
           "heading": "Facilita la conversación sobre problemas",
           "paragraphs": [
             "Si detectas una preocupación, comunica hechos. Identifica pedido o artículo de almacén, describe la opción elegida y explica la diferencia observada. Señala la foto que la muestra y qué necesitas aclarar. Así asistencia tiene un registro claro sin adivinar de qué artículo o característica hablas.",
             "Separa las preguntas del resultado solicitado. Primero establece si una marca es luz o un problema físico, si la pieza ausente está fuera del encuadre o si llegó la variante incorrecta. Después pregunta por los siguientes pasos aplicables. Las condiciones de devolución, cambio u otra gestión dependen del pedido y vendedor actuales; una duda QC no da automáticamente derecho a un remedio concreto."
-          ]
+          ],
+          "id": "section-8"
         },
         {
           "heading": "Haz una revisión final antes de aprobar el paquete",
           "paragraphs": [
             "Antes de enviar, retoma las preguntas anteriores a la compra. ¿Se han comprobado identidad, variante, rasgos visibles importantes y medidas relevantes? ¿Quedan mensajes sin respuesta? Guarda las pruebas de inspección junto a la referencia para que se entienda el razonamiento de tu decisión.",
             "No necesitas buscar un defecto en cada foto. El objetivo es decidir si las pruebas bastan para tu uso previsto y si se han resuelto las incertidumbres importantes. Si persiste una duda, pausa en vez de interpretar el silencio como confirmación. Una revisión QC cuidadosa es un control práctico entre recibir el artículo y comprometer su transporte internacional."
-          ]
+          ],
+          "id": "section-9"
         }
       ],
       "sources": [
@@ -429,85 +493,128 @@
         "https://www.kakobuy.com/service/help/question?id=89",
         "https://www.kakobuy.com/service/help/question?id=51"
       ],
-      "wordCount": 1409
+      "wordCount": 1211,
+      "datePublished": "2026-10-24",
+      "dateModified": "2026-10-24"
     },
     {
       "slug": "kakobuy-shipping-costs",
-      "title": "Costes de envío de Kakobuy: presupuesto desde el artículo hasta la entrega",
-      "description": "Separa producto, transporte nacional, envío internacional y servicios opcionales, y compara presupuestos con supuestos coherentes.",
+      "title": "Gastos de envío de Kakobuy: peso, cargos y presupuesto",
+      "description": "Prepara un presupuesto de envío de Kakobuy con el peso embalado, las dimensiones y las tarifas de la ruta. Compara el coste completo, no solo el producto.",
       "category": "Envíos",
-      "readMinutes": 8,
+      "readMinutes": 7,
       "intro": "El número de una ficha de producto es solo parte del presupuesto de una compra con agente. Una estimación útil del envío Kakobuy distingue lo pagado por el artículo de su transporte y gestión. También separa una previsión del presupuesto real para tu destino y contenido. Esta guía explica cómo organizar costes, comparar opciones y detectar qué información falta antes de solicitar el envío.",
       "sections": [
+        {
+          "heading": "Ejemplo de presupuesto: ¿qué incluye y qué falta?",
+          "paragraphs": [
+            "Ejemplo ilustrativo en una sola moneda: el artículo cuesta 30, el envío nacional 3, el internacional 24 y el embalaje opcional 2. El subtotal es 59 antes de conversiones del pago, seguros o cargos de importación aplicables. Estas cifras explican el método; no son precios de Kakobuy ni un presupuesto para un destino."
+          ],
+          "table": {
+            "headers": [
+              "Concepto del coste",
+              "Qué comprobar antes de comparar"
+            ],
+            "rows": [
+              [
+                "Artículo + envío nacional",
+                "Utiliza la misma variante, cantidad y vendedor."
+              ],
+              [
+                "Transporte internacional",
+                "Utiliza el mismo destino, dimensiones del paquete preparado y peso facturable."
+              ],
+              [
+                "Embalaje + servicios opcionales",
+                "Añade solo los servicios seleccionados para este paquete."
+              ],
+              [
+                "Pago + gastos de importación",
+                "Confirma la conversión de moneda y lo que incluye realmente el presupuesto de la ruta."
+              ]
+            ]
+          },
+          "id": "decision-check"
+        },
         {
           "heading": "Separa la fase del artículo de la del paquete",
           "paragraphs": [
             "La información publicada de costes y pedidos de Kakobuy distingue mercancía y envío nacional de la posterior etapa internacional. Esa distinción fundamenta un presupuesto fiable. Al consultar un precio estimado en USD, regístralo como referencia de mercancía, no como el importe necesario para recibir el producto en tu dirección.",
             "Crea líneas separadas para artículo, entrega nacional, transporte internacional, embalaje o servicios elegidos y otros cargos del pedido o la ruta. Algunas quedarán pendientes. Un espacio en blanco honesto sirve más que un número supuesto con apariencia precisa. Cuando la pantalla actual facilite el importe, sustituye la previsión y anota qué decisión o servicio produjo el cambio."
-          ]
+          ],
+          "id": "section-0"
         },
         {
           "heading": "Compara la opción exacta seleccionada",
           "paragraphs": [
             "Un anuncio puede incluir tallas, versiones o lotes con precios diferentes. Antes de estimar el envío, confirma que el precio corresponde a la opción deseada. Un precio inicial bajo puede referirse a un accesorio o a otra versión. Lee el total de la variante seleccionada en lugar de multiplicar el primer precio visible.",
             "La variante también puede afectar al embalaje. Un conjunto, un artículo con caja y una pieza sin ella tienen necesidades distintas. Si faltan peso o dimensiones fiables, mantén una estimación amplia hasta disponer de datos mejores. No uses el peso de un artículo visualmente parecido para presentar un presupuesto de tu compra. La relación entre artículo elegido y estimación debe ser explícita."
-          ]
+          ],
+          "id": "section-1"
         },
         {
           "heading": "Entiende el transporte nacional como un trayecto separado",
           "paragraphs": [
             "El transporte nacional lleva el artículo del vendedor al punto de recepción del agente. Comprueba si está incluido en la oferta o se añade al importar el pedido. Si consideras productos de anuncios distintos, verifica el tratamiento real de cada pedido en vez de asumir que todos los vendedores funcionan igual.",
             "Este coste difiere del envío internacional desde almacén. Separarlos explica por qué un pedido pagado puede requerir después otro pago del paquete. También aclara cambios: una modificación del precio de mercancía o transporte nacional no implica cambiar el precio de la ruta internacional. Si un importe no está claro, pregunta qué etapa cubre antes de aprobarlo."
-          ]
+          ],
+          "id": "section-2"
         },
         {
           "heading": "Trata peso y dimensiones como cuestiones distintas",
           "paragraphs": [
             "El volumen puede importar tanto como la masa. Un artículo compacto y denso plantea necesidades diferentes de uno ligero y voluminoso. Cuando el presupuesto pida dimensiones o muestre un método de peso facturable, lee su regla real. No supongas aplicable una fórmula copiada de otro transportista o ruta.",
             "Anota lo conocido del artículo y lo que falta del paquete embalado. El peso del vendedor quizá no incluya protección ni caja de envío. Las dimensiones del producto pueden diferir de las finales del paquete. Solicita la información disponible cuando corresponda y compara rutas con esa misma base. Así no tratarás como equivalentes estimaciones con embalajes supuestos distintos."
-          ]
+          ],
+          "id": "section-3"
         },
         {
           "heading": "Evalúa el embalaje por coste y protección",
           "paragraphs": [
             "La decisión de embalaje debe responder al artículo. Quitar una caja comercial grande puede reducir dimensiones, pero también perder protección o una parte que querías recibir. Refuerzos y materiales protectores modifican coste y volumen. Consulta las opciones reales del paquete y sus cargos actuales antes de decidir.",
             "Piensa en términos prácticos. Un objeto frágil, un bolso estructurado y una prenda flexible no requieren necesariamente lo mismo. Pregunta qué se protege, qué se retira y si el embalaje resultante es apto para la ruta. No elijas todos los extras porque existan ni rechaces toda protección por bajar el presupuesto inicial. Compara la opción completa con la que te sientas cómodo enviando."
-          ]
+          ],
+          "id": "section-4"
         },
         {
           "heading": "Compara rutas con los mismos supuestos",
           "paragraphs": [
             "Una comparación útil mantiene iguales contenido, destino y embalaje. Después revisa importe, plazo estimado actual, artículos admitidos, seguimiento y condiciones de Kakobuy. El precio destacado más barato quizá no sea la opción adecuada; uno mayor no demuestra por sí mismo mejor manipulación.",
             "Anota las dos o tres rutas que realmente consideras y por qué encajan. Si una no admite el contenido o destino, elimínala en vez de conservar su precio como referencia. Revisa la información cerca del envío, porque disponibilidad y condiciones cambian. Una captura de otro comprador aporta contexto, pero no sustituye el presupuesto de tu paquete."
-          ]
+          ],
+          "id": "section-5"
         },
         {
           "heading": "Mantén visibles los servicios dentro del total",
           "paragraphs": [
             "Embalaje, manipulación adicional y otros servicios seleccionables deben figurar como decisiones separadas. Lee qué incluye cada servicio antes de pagar. Un nombre parecido en dos páginas no garantiza el mismo alcance. Si no sabes si un cargo es opcional, incluido u obligatorio para la ruta, acláralo antes de continuar.",
             "Si se ofrece seguro o protección, lee cobertura, exclusiones y condiciones de reclamación. No lo juzgues solo por la prima ni supongas cubierto cualquier problema. Si lo eliges, guarda las condiciones presentadas para el envío. El objetivo no es contratar más servicios, sino comprender qué cambia cada uno y qué responsabilidades conservas."
-          ]
+          ],
+          "id": "section-6"
         },
         {
           "heading": "Considera las condiciones aduaneras específicas de cada ruta",
           "paragraphs": [
             "La ayuda Kakobuy distingue envíos con diferente gestión de aduana. No supongas que la descripción de una ruta sirva para otra, otro destino o una fecha posterior. Lee las condiciones actuales de la opción disponible e identifica cargos o gestiones que puedan seguir siendo tu responsabilidad.",
             "Proporciona información exacta del artículo y envío cuando se requiera. Si una declaración o requisito de destino resulta confuso, consulta orientación oficial pertinente o el servicio que gestiona el paquete. No copies valores arbitrarios de otro comprador. Esta guía no calcula un impuesto o arancel universal, pues depende de mercancía, destino y normas. El presupuesto debe reflejar esas dudas, no ocultarlas en un total inventado."
-          ]
+          ],
+          "id": "section-7"
         },
         {
           "heading": "Compara con cuidado paquetes agrupados y separados",
           "paragraphs": [
             "Agrupar compras puede resultar cómodo, pero no siempre ahorra. Un paquete conjunto puede cambiar dimensiones, tramos de peso, embalaje y rutas disponibles. Separarlos puede repetir cargos. Necesitas opciones reales comparables para decidir qué conviene a los artículos recibidos.",
             "Empieza con los artículos listos y compara las opciones de gestión sobre la misma base. No añadas un producto innecesario para justificar un paquete mayor o un umbral de ahorro supuesto. Si uno se retrasa, considera si esperar modifica prioridades o condiciones del servicio. El objetivo es adaptar el envío a la compra, no dejar que un cálculo especulativo impulse más compras."
-          ]
+          ],
+          "id": "section-8"
         },
         {
           "heading": "Actualiza la estimación en cada decisión",
           "paragraphs": [
             "Un presupuesto práctico tiene puntos de control. Primero registra la estimación del producto durante la investigación. Antes de comprar, sustitúyela por el total de variante y envío nacional. Al llegar, añade datos del paquete y presupuesto actual de la ruta. Finalmente revisa al enviar el total completo, incluidos los servicios elegidos deliberadamente.",
             "Imagina dos candidatos de precio parecido. Uno necesita un paquete mayor u otra gestión; el otro se combina mejor con artículos que ya pensabas enviar. Las fichas por sí solas no revelan el menor coste entregado. Mantén abierta la comparación hasta disponer del presupuesto necesario. Un presupuesto útil explicita supuestos, se actualiza con los hechos y corresponde al paquete real que enviarás."
-          ]
+          ],
+          "id": "section-9"
         }
       ],
       "sources": [
@@ -516,14 +623,22 @@
         "https://www.kakobuy.com/service/help/question?id=69",
         "https://www.kakobuy.com/index/information?information_id=12"
       ],
-      "wordCount": 1401
+      "wordCount": 1370,
+      "datePublished": "2026-10-24",
+      "dateModified": "2026-10-30",
+      "answer": "Un total útil incluye el artículo, el transporte nacional, el envío internacional y los cargos aplicables de pago, servicios e importación. Obtén el peso y las dimensiones del paquete preparado antes de comparar rutas. No existe un único precio fiable por kilogramo para todos los países, paquetes y líneas de envío.",
+      "related": [
+        "kakobuy-shipping-calculator",
+        "kakobuy-shipping-time-tracking",
+        "kakobuy-payment-fees"
+      ]
     },
     {
       "slug": "kakobuy-sizing-guide",
       "title": "Guía de tallas Kakobuy: compara las medidas del vendedor con el ajuste que buscas",
       "description": "Utiliza tablas exactas, medidas comparables de prendas y preguntas concretas al almacén para reducir las dudas antes del envío internacional.",
       "category": "Tallas",
-      "readMinutes": 8,
+      "readMinutes": 6,
       "intro": "No hay una tabla única para todo lo comprado mediante Kakobuy. La plataforma conecta con vendedores que pueden utilizar etiquetas, patrones y métodos distintos. Es mejor comparar las medidas del producto exacto con una referencia adecuada, registrar la variante elegida y revisar lo recibido cuando haya pruebas útiles. Esta guía explica ese proceso en lugar de recomendar universalmente una talla más o menos.",
       "sections": [
         {
@@ -531,70 +646,80 @@
           "paragraphs": [
             "La orientación oficial de Kakobuy señala que los vendedores usan criterios propios y recomienda elegir mediante medidas. Abre la tabla del anuncio y la versión que vas a pedir. La de un producto parecido no es un sustituto fiable. Incluso etiquetas conocidas pueden corresponder a medidas diferentes entre vendedores o líneas.",
             "Comprueba qué significa cada cifra. Algunas tablas describen el cuerpo y otras la prenda terminada en plano. También importan unidades y puntos de medición. Si es una imagen, amplía hasta leer los encabezados en lugar de adivinar por una fila de números. Pide aclaraciones antes de ordenar si algo no se entiende. La tabla debe resolver el ajuste, no parecer simplemente documentación tranquilizadora."
-          ]
+          ],
+          "id": "section-0"
         },
         {
           "heading": "Elige una referencia adecuada al producto",
           "paragraphs": [
             "En ropa, una prenda similar que ya uses suele servir. Escoge una referencia con el ajuste y uso deseados. Una camisa ceñida y una sudadera holgada son puntos de partida distintos. Comparar todos los tops con la misma prenda puede ocultar diferencias de estilo, capas y elasticidad.",
             "Mide la referencia de manera uniforme sobre una superficie plana, sin estirarla más allá de su forma natural salvo que compares expresamente una medida estirada. Anota los puntos usados, no solo la cifra: por ejemplo, dónde mediste ancho o largo. Así podrás comparar equivalentes con la tabla o una medición del almacén. Pocas medidas claras ayudan más que muchas tomadas de forma inconsistente."
-          ]
+          ],
+          "id": "section-1"
         },
         {
           "heading": "Prioriza las dimensiones que determinan tu ajuste",
           "paragraphs": [
             "No todas las medidas importan igual en cada artículo. En un top quizá priorices ancho, largo y alcance de mangas. En pantalones, cintura, tiro, ancho de muslo y largo afectan partes distintas del ajuste. Una chaqueta puede necesitar espacio para las capas que llevarás debajo.",
             "Decide qué dimensión haría inadecuada la prenda si fuera incorrecta y empieza por ella. Después comprueba las demás para no resolver un problema creando otro. Una talla mayor puede dar el ancho deseado pero dejar mangas o largo menos apropiados. Trata la selección como varias compensaciones ligadas al uso, no como una sola cifra."
-          ]
+          ],
+          "id": "section-2"
         },
         {
           "heading": "Distingue medidas de la prenda y del cuerpo",
           "paragraphs": [
             "El contorno corporal y el ancho plano de una prenda no son intercambiables. Tampoco una cintura elástica relajada y otra estirada describen lo mismo. Antes de comparar cifras, confirma que miden lo mismo. Si una fuente rodea el cuerpo y otra cruza la prenda plana, comprende la diferencia antes de concluir.",
             "Cuidado con conversiones automáticas que ignoran el producto. Una tabla general ayuda a interpretar unidades o sistemas conocidos, pero no sustituye las medidas reales del vendedor. Conserva las unidades originales cuando sea posible y convierte explícitamente. Un buen registro indica qué se midió, cómo y a qué variante pertenece. Un número sin contexto se interpreta mal fácilmente después."
-          ]
+          ],
+          "id": "section-3"
         },
         {
           "heading": "Considera tejido y ajuste sin inventar especificaciones",
           "paragraphs": [
             "El comportamiento de la prenda afecta a cómo se sienten sus medidas, pero utiliza solo características publicadas. No supongas elasticidad porque la foto parezca suave ni que una imagen oversize implique que todas las tallas quedarán holgadas. Estilismo, proporciones del modelo y talla de la muestra influyen en la apariencia.",
             "Si tu decisión depende de una propiedad material, pide esa información. Comparar medidas reduce incertidumbre, pero no determina cómo recupera un tejido sin documentar su forma tras estirarlo o cómo cambia al lavar. No apliques un margen universal por una afirmación general sobre todos los productos de un país. Usa datos del vendedor, referencia comparable y el ajuste deseado para esa prenda."
-          ]
+          ],
+          "id": "section-4"
         },
         {
           "heading": "Comprueba el calzado con el sistema correcto",
           "paragraphs": [
             "Identifica si el vendedor utiliza EU, UK, US o centímetros y si una etiqueta US corresponde al rango de tallas previsto. Kakobuy aconseja medir ambos pies y usar la medida mayor. Compárala con la tabla exacta del vendedor, sin asumir que el mismo número impreso siempre ajusta igual.",
             "Aclara qué describe la cifra en centímetros. Longitud del pie, plantilla y suela exterior son medidas distintas. Una foto de la suela no confirma directamente el espacio interior. Anchura y forma también influyen en la comodidad aunque el largo parezca adecuado. Si falta información sobre un requisito importante, mantén visible esa duda en vez de tomar la conversión como garantía."
-          ]
+          ],
+          "id": "section-5"
         },
         {
           "heading": "Registra la variante antes de pagar",
           "paragraphs": [
             "Guarda talla y código de versión junto al enlace original. Un anuncio puede tener grupos separados de opciones y repetir la misma talla en modelos distintos. Revisa la combinación seleccionada en Kakobuy antes de pagar para que tus notas y el pedido importado describan lo mismo.",
             "Si envías instrucciones, hazlas concretas y coherentes con la selección. Una nota debe aclarar la opción, no pedir silenciosamente otra. Si el anuncio no ofrece la talla necesaria, consulta disponibilidad en vez de asumir que un comentario la consigue. Este registro también facilita comparar la etiqueta al llegar al almacén."
-          ]
+          ],
+          "id": "section-6"
         },
         {
           "heading": "Usa las pruebas del almacén para responder una pregunta concreta",
           "paragraphs": [
             "Cuando haya fotos de tu pedido, compara primero la etiqueta visible con tu variante. Si una medida importante sigue siendo incierta, pregunta si Kakobuy puede aportar una medición o vista adicional y si tiene coste. Especifica puntos inicial y final, unidades y si debe medirse relajado o bajo otra condición definida.",
             "No uses el fondo de una foto como instrumento exacto cuando la diferencia es pequeña. Perspectiva, pliegues y colocación afectan a la lectura. Kakobuy también describe límites de errores de medida, así que interpreta la imagen como prueba, no como promesa de ajuste perfecto. Si el método difiere de tu referencia, acláralo antes de decidir que es grande o pequeño."
-          ]
+          ],
+          "id": "section-7"
         },
         {
           "heading": "Responde a una diferencia antes de planear el envío",
           "paragraphs": [
             "Si etiqueta o medida parecen incompatibles, compara primero tabla original, variante elegida, método y fotografía. Una diferencia clara y una foto confusa requieren preguntas distintas. Explica lo esperado y lo que muestran las pruebas sin asumir la causa.",
             "Consulta las opciones actuales mientras el artículo siga en la fase de pedido o almacén pertinente. Devoluciones y cambios dependen del vendedor y condiciones; no son automáticos ni necesariamente gratuitos. Considera soluciones y costes antes de autorizar el envío internacional. Resolverlo pronto es más sencillo que esperar que la entrega internacional arregle un ajuste ya problemático en almacén."
-          ]
+          ],
+          "id": "section-8"
         },
         {
           "heading": "Crea una nota de tallas reutilizable",
           "paragraphs": [
             "Tras decidir, conserva un registro breve: enlace, versión, talla elegida, valores de tabla, medidas de referencia y resultado observado. Es más útil que recordar una letra habitual de una marca. Relaciona el resultado con un anuncio y un método concretos.",
             "Por ejemplo, dos sudaderas pueden compartir talla, pero una ofrecer el ancho deseado y la otra el largo preferido. Anota qué compensación aceptaste. Si ninguna encaja bien, quizá convenga otro anuncio en lugar de adivinar. El proceso busca reducir y explicitar la incertidumbre, no prometer ajuste perfecto en toda compra online."
-          ]
+          ],
+          "id": "section-9"
         }
       ],
       "sources": [
@@ -603,12 +728,14 @@
         "https://www.kakobuy.com/index/information?information_id=12",
         "https://www.kakobuy.com/service/help/question?id=51"
       ],
-      "wordCount": 1440
+      "wordCount": 1182,
+      "datePublished": "2026-10-24",
+      "dateModified": "2026-10-24"
     },
     {
       "slug": "kakobuy-warehouse-consolidation",
-      "title": "Almacén y agrupación en Kakobuy: planifica un paquete con sentido",
-      "description": "Entiende las fases del almacén, plazos de almacenamiento, embalaje y decisiones de agrupación antes de presentar un paquete Kakobuy.",
+      "title": "Almacén de Kakobuy: almacenamiento, QC y consolidación",
+      "description": "Organiza las llegadas al almacén, comprueba los plazos de almacenamiento y devolución, revisa el QC y compara paquetes consolidados antes del envío internacional.",
       "category": "Almacén",
       "readMinutes": 7,
       "intro": "El almacén Kakobuy es un punto de decisión entre comprar y pagar el envío internacional. Varios pedidos pueden llegar en momentos distintos, con diferentes embalajes, medidas y preguntas pendientes. Agrupar consiste en elegir qué artículos compatibles viajarán juntos. Puede mejorar la eficiencia, pero un paquete mayor no es automáticamente más barato ni mejor. Esta guía ayuda a organizar artículos, comparar embalajes y presentar el paquete sin pasar por alto plazos o problemas más fáciles de resolver antes de salir.",
@@ -618,70 +745,80 @@
           "paragraphs": [
             "Normalmente el artículo viaja primero del vendedor al almacén del agente y después internacionalmente hasta ti. Separa ambas fases en tus notas. Una actualización nacional no indica si puede salir de China, y el recibo del artículo no incluye todos los costes futuros. La descripción pública de Kakobuy permite seleccionar artículos de almacén para un paquete conjunto; las opciones de la cuenta determinan lo que realmente puede presentarse.",
             "Trata cada pedido del vendedor como un registro individual hasta añadirlo deliberadamente al paquete. Conserva juntos enlace, variante, cantidad y referencia. Crea después otro registro para los artículos que enviarás. Así detectas lo pagado pero no recibido, o un paquete preparado que aún requiere pago o revisión de datos."
-          ]
+          ],
+          "id": "section-0"
         },
         {
           "heading": "Crea una lista útil del almacén",
           "paragraphs": [
             "La lista debe responder: qué está aquí, qué está listo y qué necesita una decisión. Registra estado, fecha de llegada, medidas visibles, dudas y paquete previsto. Si compras colores similares o varias tallas, usa el nombre exacto de la opción en vez de “top negro”. Incluye cantidad, porque un pedido puede tener varias unidades.",
             "Añade una acción breve: “revisar manga”, “confirmar accesorio ausente” o “listo tras decidir devolución”. Estas notas organizativas no sustituyen instrucciones enviadas a Kakobuy. Si debe actuar el personal, usa el canal pertinente del pedido o asistencia. Una nota en tu hoja personal no indica al almacén que retenga un artículo o conserve su caja."
-          ]
+          ],
+          "id": "section-1"
         },
         {
           "heading": "Distingue llegada y disponibilidad para envío",
           "paragraphs": [
             "Un escaneo de llegada es positivo, pero no equivale a inspección completa ni registro listo para enviar. Kakobuy describe gestiones adicionales antes de que un artículo pueda incluirse en un paquete. Lee el estado actual y los mensajes en lugar de asumir que todo lo mostrado en almacén se puede embalar inmediatamente.",
             "Comprueba referencias si el transportista indica entrega pero la cuenta no cambia. Seguimiento del vendedor, referencias de pedido y de almacén pueden identificar fases diferentes. Envía a asistencia los identificadores pertinentes y la discrepancia concreta. Pedir repetidamente reemplazos antes de aclarar el estado original puede crear duplicados no deseados. Guarda la respuesta con fecha para saber qué esperas."
-          ]
+          ],
+          "id": "section-2"
         },
         {
           "heading": "Resuelve dudas antes de agrupar",
           "paragraphs": [
             "Antes del paquete, revisa la inspección disponible de cada artículo previsto. Confirma color visible, etiquetas, cantidad y variante frente al pedido real. Si importan las medidas, compara con algo que ya tengas usando el mismo método. Las fotos apoyan decisiones sobre detalles visibles, no todas las propiedades materiales, funciones o afirmaciones de autenticidad.",
             "Deja los artículos pendientes fuera del grupo listo hasta recibir respuesta. Un cinturón ausente o una talla incierta pueden ser sencillos de aclarar en almacén. Añadirlos al paquete introduce otra fase y puede complicar una devolución. Las fotos históricas de otros compradores dan contexto, pero esta revisión final debe basarse en tu pedido."
-          ]
+          ],
+          "id": "section-3"
         },
         {
           "heading": "Compara peso y volumen juntos",
           "paragraphs": [
             "Un paquete puede ser ligero y voluminoso, especialmente con cajas, artículos acolchados o formas incómodas. Considera peso medido y dimensiones embaladas probables. Usa las reglas de cobro de esa ruta; no fórmulas volumétricas de otro transportista ni supuestos límites o redondeos universales.",
             "Imagina zapatos en una caja comercial grande junto a prendas blandas. Retirar la caja puede reducir volumen y añadir protección aumentar dimensiones o peso. Ningún cambio garantiza un ahorro concreto. Si la duda importa, solicita el servicio disponible de embalaje o medición y compara los presupuestos resultantes. Kakobuy indica que las medidas previas y posteriores al embalaje pueden diferir: separa cifras preliminares y cargo final."
-          ]
+          ],
+          "id": "section-4"
         },
         {
           "heading": "Agrupa por compatibilidad, no solo por cantidad",
           "paragraphs": [
             "Empieza por destino y compatibilidad de rutas. Artículos para distintas direcciones, que requieren otra gestión o no admiten el mismo transporte quizá no deban ir juntos. Consulta restricciones actuales del contenido real. Un nombre corriente no resuelve el asunto: baterías, líquidos o componentes delicados afectan a las necesidades, y las rutas disponibles pueden cambiar tras evaluar la mercancía.",
             "Considera después la protección física. Algo pesado puede presionar una pieza frágil; herrajes afilados marcar tejidos; una caja rígida ocupar espacio comprimible. Pregunta cómo se protegerá el grupo, sin asumir que un cartón mayor lo arregla todo. Si dos paquetes pequeños ofrecen mejor gestión o rutas, compara su suma pagadera con el paquete único."
-          ]
+          ],
+          "id": "section-5"
         },
         {
           "heading": "Da instrucciones de embalaje precisas",
           "paragraphs": [
             "Elige según el artículo y lo que quieras conservar. Si valoras la caja comercial, dilo antes de pedir retirarla. Si hay adornos delicados, especifica la zona a proteger. Evita órdenes contradictorias como conservar todas las cajas y pedir el paquete mínimo. Indica la prioridad y deja que el almacén explique las opciones.",
             "Revisa los cargos de embalaje o inspección opcionales antes de seleccionarlos. Los extras no son necesarios en todo paquete y sus nombres no prueban un nivel de protección. Guarda las instrucciones confirmadas con el registro, especialmente si un artículo necesita un trato distinto o quieres entender un cambio de dimensiones finales."
-          ]
+          ],
+          "id": "section-6"
         },
         {
           "heading": "Decide qué hacer con un artículo retrasado",
           "paragraphs": [
             "Un pedido pendiente obliga a comparar esperar o despachar lo listo. Evalúa con información real: última respuesta del vendedor, plazos del almacén, presupuestos actuales y tus necesidades. Una promesa no confirmada de salida no garantiza llegada. Incluso un extra barato puede provocar un retraso costoso si bloquea un grupo urgente.",
             "Puedes comparar un paquete listo y otro posterior sin comprometerte. Anota artículos de cada escenario y costes desconocidos. Si el retrasado es esencial, pide un estado más claro antes de pagar el embalaje final. Si es opcional, considera si enviarlo aparte sigue haciendo rentable esa compra."
-          ]
+          ],
+          "id": "section-7"
         },
         {
           "heading": "Controla por separado almacenamiento y devoluciones",
           "paragraphs": [
             "El tiempo de almacenamiento y el derecho a devolución responden a preguntas distintas. Un artículo puede seguir almacenado después del plazo que acepta el vendedor. Kakobuy publica reglas, pero verifica el plazo y estado aplicables en tu registro y ayuda actual. No uses una cifra de días de un artículo antiguo como único recordatorio.",
             "Programa avisos con margen antes de la fecha relevante más temprana, dejando tiempo para respuesta y decisión. Registra desde qué evento corre cada regla: compra, salida, recepción o entrada al almacén no son equivalentes. Si existe prórroga, lee precio, duración y condiciones. Un mensaje pendiente o la intención de enviar después no suspenden automáticamente un plazo."
-          ]
+          ],
+          "id": "section-8"
         },
         {
           "heading": "Revisa el paquete como una nueva transacción",
           "paragraphs": [
             "Antes de presentarlo, lee toda la lista y compárala con tu plan. Confirma cantidades, destinatario, compatibilidad de ruta, instrucciones e importe solicitado. Distingue estimaciones, pagos hechos y cantidades ajustables. Toda declaración debe describir verazmente el contenido y aportar lo requerido por destino y ruta.",
             "Después, guarda la referencia y atiende las solicitudes de respuesta. Un buen plan de agrupación sigue sirviendo tras embalar: indica qué llegará junto y qué queda en almacén. Cuando recibas, compara el contenido con el registro. El objetivo es un envío explicable y trazable, no simplemente el haul más grande posible."
-          ]
+          ],
+          "id": "section-9"
         }
       ],
       "sources": [
@@ -691,85 +828,142 @@
         "https://www.kakobuy.com/service/help/question?id=95",
         "https://www.kakobuy.com/service/help/question?id=37"
       ],
-      "wordCount": 1514
+      "wordCount": 1261,
+      "datePublished": "2026-10-24",
+      "dateModified": "2026-10-30",
+      "answer": "Registra por separado la fecha de llegada, el estado del QC y los plazos de la cuenta para cada artículo. Combina artículos aptos solo tras comprobar las restricciones de la ruta, las dimensiones del paquete y el coste total. El plazo de almacenamiento no es el plazo de devolución, y un paquete consolidado más grande no resulta automáticamente más barato.",
+      "related": [
+        "kakobuy-shipping-calculator",
+        "kakobuy-returns-refunds",
+        "kakobuy-qc-photos-guide"
+      ]
     },
     {
       "slug": "kakobuy-returns-refunds",
-      "title": "Devoluciones y reembolsos Kakobuy: conserva pruebas y sigue la fase correcta",
-      "description": "Guía práctica de cancelaciones, devoluciones de almacén, cambios y registros de reembolso, con preguntas claras antes de autorizar un retorno.",
+      "title": "Reembolsos en Kakobuy: cancelar o devolver desde el almacén",
+      "description": "Cómo pedir un reembolso en Kakobuy según la etapa del pedido, devolver un artículo del almacén, cancelar una solicitud y comprobar el destino del dinero.",
       "category": "Posventa",
       "readMinutes": 7,
       "intro": "Una devolución es una secuencia de decisiones y confirmaciones, no un botón que garantiza recuperar dinero. Primero identifica dónde está el pedido: sin comprar, comprado pero sin salir, en tránsito nacional, en almacén o ya enviado internacionalmente. Kakobuy describe procesos distintos según la fase y señala la importancia posible del acuerdo del vendedor. Esta guía ayuda a preparar la solicitud, entender una solución y seguir el reembolso sin confundir saldo de cuenta con devolución completada al medio de pago original.",
       "sections": [
         {
+          "heading": "¿Qué acción de reembolso corresponde a tu pedido?",
+          "paragraphs": [
+            "Abre el registro del pedido y envía una solicitud clara con el número de pedido, la opción elegida, el motivo y las fotos que lo respalden. Pide confirmación antes de pagar los gastos de devolución o autorizar el envío. La tabla sirve para decidir qué comprobar; no promete que todos los vendedores acepten devoluciones."
+          ],
+          "table": {
+            "headers": [
+              "Etapa del pedido",
+              "Qué preguntar o comprobar"
+            ],
+            "rows": [
+              [
+                "Aún no comprado",
+                "Pregunta si todavía se puede cancelar la compra y qué importe es reembolsable."
+              ],
+              [
+                "Comprado o en tránsito nacional",
+                "Pregunta si la cancelación necesita aprobación del vendedor o si el paquete debe llegar primero."
+              ],
+              [
+                "En el almacén",
+                "Mantén el artículo sin enviar; confirma los requisitos, las pruebas, el porte de devolución y el plazo."
+              ],
+              [
+                "Reembolso ya solicitado",
+                "Para cancelar la solicitud de reembolso, contacta con soporte antes de que se procese la devolución; no des por hecho que puede revertirse."
+              ],
+              [
+                "Reembolso marcado como completado",
+                "Comprueba el destino del dinero. Un abono en el monedero no demuestra una devolución al método de pago original."
+              ],
+              [
+                "Paquete internacional enviado",
+                "Utiliza el proceso posventa del paquete; la devolución desde el almacén podría no estar disponible."
+              ]
+            ]
+          },
+          "id": "decision-check"
+        },
+        {
           "heading": "Identifica primero el problema exacto",
           "paragraphs": [
             "Describe la diferencia entre lo pedido y lo recibido o visible. “Artículo incorrecto” sirve menos que “pedí azul marino, pero etiqueta y fotos muestran negro”. Para una medida, indica inicio y final. Si falta un accesorio, señala la descripción de la opción donde se incluye.",
             "Separa insatisfacción y discrepancia documentada. Un color correcto puede no gustarte en persona; una cantidad incompleta es otro problema. Distinguirlos ayuda a preguntar y comprender la respuesta. No exageres daños ni inventes una descripción incorrecta para reforzar la petición. Los detalles exactos facilitan que revisen el caso rápidamente."
-          ]
+          ],
+          "id": "section-0"
         },
         {
           "heading": "Comprueba la fase antes de actuar",
           "paragraphs": [
             "Abre el pedido actual y lee el último mensaje. La ayuda Kakobuy distingue pedidos sin despachar de los ya enviados o almacenados. Cancelar, intentar interceptar y devolver desde almacén son operaciones diferentes. La opción aplicable puede depender de si vendedor o almacén ya actuaron.",
             "Usa la solicitud adjunta al pedido si existe o pregunta a asistencia oficial qué proceso corresponde. Incluye la referencia e indica si quieres cancelación, reemplazo o reembolso. Si necesitas la mercancía para una fecha, exprésala como requisito sin asumir que puedan cumplirlo. Esperar un reemplazo solo sirve si el nuevo calendario te encaja."
-          ]
+          ],
+          "id": "section-1"
         },
         {
           "heading": "Prepara un conjunto compacto de pruebas",
           "paragraphs": [
             "Guarda página del producto, variante, cantidad, confirmación e imágenes del problema. Conserva originales cuando puedas y añade una copia anotada aparte si ayuda. Una vista general clara y un detalle suelen revisarse mejor que muchas capturas casi idénticas. Conserva mensajes de confirmación previa del vendedor o agente.",
             "Redacta una cronología breve: fecha del pedido, detección y acciones solicitadas. Mantén lenguaje factual. Di que una costura parece abierta en una foto concreta, no que toda la partida es defectuosa. Si la foto no es clara, pide aclaración o una vista útil en lugar de tratar la duda como prueba de fallo."
-          ]
+          ],
+          "id": "section-2"
         },
         {
           "heading": "Actúa pronto y verifica el plazo aplicable",
           "paragraphs": [
             "Consulta las condiciones actuales de devolución o cambio y confirma con asistencia cualquier plazo ambiguo. Las páginas Kakobuy describen situaciones concretas; las restricciones del producto o vendedor pueden afectar al remedio. Un resultado antiguo o la experiencia ajena no sustituyen las condiciones de tu compra.",
             "Registra la fecha límite y desde qué evento se cuenta. Enviar un mensaje no pausa automáticamente el plazo. Si piden pruebas, facilítalas pronto y pregunta si la solicitud se registró formalmente. Guarda petición y respuesta. Revisar temprano es especialmente útil mientras el artículo sigue en almacén, antes de contratar un envío internacional separado."
-          ]
+          ],
+          "id": "section-3"
         },
         {
           "heading": "Compara devolución y cambio",
           "paragraphs": [
             "Un cambio puede corregir talla o color, pero inicia otro ciclo de compra y llegada. Antes de aceptarlo confirma variante exacta, disponibilidad, qué devolver y posibles cargos adicionales. Pregunta cómo aparecerá el reemplazo en tu cuenta para no confundir su registro con un duplicado.",
             "En devolución importan el neto esperado y los pasos para recibirlo; en cambio, también idoneidad, coste y tiempos del reemplazo. Si la información de talla era poco fiable, elegir otra sin mejores medidas puede repetir el problema. Expresa el resultado deseado claramente: “arréglenlo” deja demasiadas interpretaciones posibles."
-          ]
+          ],
+          "id": "section-4"
         },
         {
           "heading": "Lee la propuesta de costes antes de aceptar",
           "paragraphs": [
             "Que el vendedor acepte devolver no significa recuperar todos los cargos. Kakobuy describe casos donde el transporte influye en el reembolso. Solicita un desglose: importe del artículo, transporte nacional, cargos de servicio y abono previsto tras deducciones. Confirma cuáles son estimaciones.",
             "Compara la propuesta con las alternativas. Un artículo barato con devolución cara puede recuperar poco, aunque eso no obliga a conservar algo inadecuado. Valora el resultado práctico y tus prioridades. No autorices solo por un reembolso anunciado alto si el neto o el destino del dinero siguen sin aclararse."
-          ]
+          ],
+          "id": "section-5"
         },
         {
           "heading": "Conserva estado y embalaje mientras decides",
           "paragraphs": [
             "Evita pedir modificaciones mientras se estudia el retorno. Quitar etiquetas, tirar embalaje, alterar o abrir productos precintados puede afectar a pruebas y aceptación del vendedor. La información posventa Kakobuy señala estado e integridad como relevantes en ciertos casos. Pregunta qué debe conservarse en el tuyo.",
             "Si ya elegiste un servicio de embalaje, comunica que hay una decisión pendiente y pregunta qué gestión se realizó. No supongas que una nota general anula el envío del paquete. Mantén el artículo en disputa separado en tu plan hasta resolverlo. Evita mezclarlo con pedidos listos y complicar innecesariamente todo el paquete."
-          ]
+          ],
+          "id": "section-6"
         },
         {
           "heading": "Sigue las etapas reales del reembolso",
           "paragraphs": [
             "Aceptar una petición para revisión, recibirla el vendedor y abonar la cuenta son eventos distintos. Kakobuy describe la devolución al vendedor antes de ciertos abonos de saldo. Si solo dice “reembolso en proceso”, pregunta qué fase terminó. Conserva juntos referencias e importes.",
             "Cuando aparezca el abono, comprueba si es saldo disponible o devolución al método original. No lo contabilices dos veces. Si quieres retirar saldo, confirma procedimiento actual, elegibilidad, destino y cargos en la cuenta oficial. Un artículo reembolsado no establece por sí solo condiciones ni tiempos de una retirada separada."
-          ]
+          ],
+          "id": "section-7"
         },
         {
           "heading": "Distingue los problemas de entrega internacional",
           "paragraphs": [
             "Si el paquete salió del almacén, devolver el artículo y reclamar el transporte pueden exigir pruebas y procesos distintos. Registra qué llegó, referencia, embalaje exterior y daños visibles. Conserva el embalaje hasta entender las instrucciones del transportista o plataforma. Informa pronto por el canal pertinente.",
             "Una política normal de devolución de almacén no promete portes internacionales, seguro ni compensación del transportista. Lee los términos de la ruta y de la cobertura realmente contratada. Indica si falta el paquete, está dañado, faltan contenidos o hay discrepancia del vendedor. Clasificarlo ayuda a dirigir el caso y evita enviar la misma petición incompleta a canales ajenos."
-          ]
+          ],
+          "id": "section-8"
         },
         {
           "heading": "Cierra el caso conciliando los registros",
           "paragraphs": [
             "Antes de marcarlo resuelto, compara el resultado con la última propuesta acordada. Confirma importe, moneda, deducciones, destino del dinero y estado del reemplazo. Pregunta por diferencias concretas y adjunta la confirmación. Conserva el pedido original tras el reembolso: sirve para conciliar movimientos posteriores.",
             "Aprovecha la experiencia para mejorar la siguiente compra. Una variante más clara, preguntar medidas antes o revisar pronto el almacén puede evitar repetición. Una devolución exitosa no garantiza el mismo remedio futuro. Esta guía independiente organiza tu decisión; Kakobuy y el vendedor gestionan la solicitud real según las condiciones aplicables."
-          ]
+          ],
+          "id": "section-9"
         }
       ],
       "sources": [
@@ -779,85 +973,138 @@
         "https://www.kakobuy.com/index/information?information_id=13",
         "https://www.kakobuy.com/service/help/question?cid=63&id=40"
       ],
-      "wordCount": 1466
+      "wordCount": 1331,
+      "datePublished": "2026-10-24",
+      "dateModified": "2026-10-30",
+      "answer": "Empieza por la etapa actual del pedido. Si el artículo está en el almacén, no lo incluyas en un paquete internacional mientras consultas al soporte sobre la aprobación del vendedor, los costes de devolución y el plazo aplicable. Solicitar un reembolso, recibir saldo y recuperar el dinero en el banco son pasos distintos.",
+      "related": [
+        "kakobuy-payment-fees",
+        "kakobuy-qc-photos-guide",
+        "is-kakobuy-legit"
+      ]
     },
     {
       "slug": "kakobuy-payment-fees",
-      "title": "Pagos y comisiones Kakobuy: lee el total antes de pagar",
-      "description": "Separa precios, cambio de moneda, comisiones de pago, envío y reembolsos para que tu presupuesto refleje el checkout real.",
+      "title": "Kakobuy: comisiones de pago, moneda y recargas",
+      "description": "Entiende los cargos de pago, las recargas, la conversión de moneda y el saldo reembolsado en Kakobuy. Comprueba estos puntos antes de pagar dos veces.",
       "category": "Costes",
       "readMinutes": 7,
       "intro": "El precio mostrado en USD permite comparar, pero no es un plan completo de pago. El gasto final puede incluir artículo, transporte nacional, conversión, comisión, servicios opcionales y envío internacional. Algunas cifras se conocen pronto; otras aparecen al estar listo el pedido o paquete. En vez de copiar un porcentaje de una guía antigua, usa la pantalla actual de Kakobuy para entender qué pagas, en qué moneda y qué queda fuera de esa transacción.",
       "sections": [
         {
+          "heading": "¿Qué significan la moneda y la recarga para tu pago?",
+          "paragraphs": [
+            "Si aparece una confirmación de recarga, compara la transacción de ingreso con el historial de saldo y el registro del pedido. No repitas un pago solo porque el pedido aún no se ha actualizado. Pide primero a soporte que concilie la referencia de la transacción; nunca compartas códigos de seguridad de tarjetas ni contraseñas."
+          ],
+          "table": {
+            "headers": [
+              "Pantalla o registro",
+              "Qué te indica"
+            ],
+            "rows": [
+              [
+                "Precio del producto",
+                "Importe del anuncio o estimación convertida; el envío puede cobrarse aparte."
+              ],
+              [
+                "Recarga / saldo",
+                "Fondos abonados en la cuenta; comprueba si se han asignado a un pedido."
+              ],
+              [
+                "Confirmación de pago",
+                "Importe y moneda de la transacción; compáralos con el cargo definitivo del banco."
+              ],
+              [
+                "Presupuesto del paquete",
+                "Transporte internacional y servicios elegidos; revísalo como un pago independiente."
+              ],
+              [
+                "Registro del reembolso",
+                "Importe y destino de los fondos devueltos, que pueden diferir de la vía de ingreso original."
+              ]
+            ]
+          },
+          "id": "decision-check"
+        },
+        {
           "heading": "Separa compra y trayecto",
           "paragraphs": [
             "Empieza con dos registros: adquisición de mercancía y envío del paquete. Kakobuy distingue coste del producto, transporte internacional y otros cargos. Comprar no cuesta necesariamente lo mismo que recibir. Separa vendedor a almacén y almacén a domicilio aunque ambos se llamen informalmente envío.",
             "Compara productos con igual cantidad y opción. El mínimo de un anuncio puede corresponder a un accesorio, otra talla o estilo. Abre los detalles actuales antes de marcar una cifra como confirmada. Un precio atractivo solo sirve si sabes qué incluye y lo relacionas con el artículo exacto que quieres."
-          ]
+          ],
+          "id": "section-0"
         },
         {
           "heading": "Distingue estimaciones e importes pagaderos",
           "paragraphs": [
             "Marca cada cifra como estimada, presupuestada o pagada. La estimación USD ayuda a comparar; el presupuesto corresponde a un checkout o cálculo de envío concreto. Lo pagado debe coincidir con recibo o movimiento. Estas etiquetas evitan convertir silenciosamente una estimación antigua en supuesto coste final.",
             "Registra fecha y moneda de cada presupuesto. Si vuelves después, revisa de nuevo. Un cambio puede venir de variante, conversión, destino, características del paquete u oferta caducada. Pregunta por la diferencia concreta si no se entiende. No necesitas prever cada cambio, sino información para reconocerlo y evaluarlo antes de pagar."
-          ]
+          ],
+          "id": "section-1"
         },
         {
           "heading": "Revisa el método realmente disponible",
           "paragraphs": [
             "Usa los métodos ofrecidos en tu cuenta para esa transacción. Uno citado en la ayuda puede no estar disponible para todos los compradores, productos o pagos. La propia guía pública Kakobuy indica comprobar comisiones al pagar. Una lista general de marcas no promete disponibilidad.",
             "Compara totales de métodos seleccionables, incluida la moneda cobrada. Lee información adicional del proveedor o emisor de tarjeta, pues puede modificar el débito final. Paga solo en la plataforma oficial o el checkout claramente identificado del proveedor. Esta web no recoge credenciales de pago ni recargas; un artículo no autoriza un método que tu cuenta no ofrece."
-          ]
+          ],
+          "id": "section-2"
         },
         {
           "heading": "Entiende dónde ocurre la conversión",
           "paragraphs": [
             "Anota moneda del vendedor, de tu cuenta Kakobuy y del cargo al medio de financiación. Pueden ser distintas. Un símbolo familiar en la ficha no determina el tipo de cambio del checkout ni si el proveedor hará otra conversión.",
             "Compara el débito real con lo acreditado o aplicado a la operación y confirma si alguna cifra incluye un cargo separado. Si dos métodos ofrecen totales distintos, usa el mismo importe de compra y base monetaria. No combines un cambio de mercado actual y una comisión antigua para presentar un presupuesto preciso de Kakobuy: pueden referirse a transacciones diferentes."
-          ]
+          ],
+          "id": "section-3"
         },
         {
           "heading": "Calcula el coste efectivo de aportar fondos",
           "paragraphs": [
             "Un ejemplo revela la diferencia entre cifra anunciada y salida de dinero. Si un pago hipotético carga 107 unidades y acredita 100 de la misma moneda, el coste adicional respecto al crédito es 7 por ciento. Es un ejemplo de cálculo, no una tarifa Kakobuy. Con monedas distintas debes considerar la conversión antes de comparar.",
             "Aplica el enfoque a tu checkout sin asumir que toda diferencia sea comisión de plataforma. Pantalla, conversión del proveedor y extracto de tarjeta pueden explicar partes distintas. Guarda recibos para conciliar después. Un registro de cuánto pagaste y qué cubría sirve más que un porcentaje copiado en una hoja."
-          ]
+          ],
+          "id": "section-4"
         },
         {
           "heading": "Registra el saldo por separado",
           "paragraphs": [
             "Si el método usa saldo, distingue dinero añadido de dinero gastado en pedidos. Recargar correctamente no paga automáticamente el pedido previsto, y cancelar puede generar saldo en vez de devolución al medio original. Comprueba estados de pedido y transacción.",
             "Lleva una conciliación sencilla: saldo inicial, ingresos, cargos, abonos, retiradas y saldo final. Usa la moneda de la cuenta y registra aparte los débitos externos. Si no cuadra, busca la operación faltante antes de repetir el pago. Confirma condiciones de retirada antes de ingresar más de lo previsto. Saldo disponible y dinero ya devuelto al banco nunca son lo mismo."
-          ]
+          ],
+          "id": "section-5"
         },
         {
           "heading": "Evalúa los descuentos por su efecto en este pedido",
           "paragraphs": [
             "Lee requisitos, cargo aplicable, mínimo, caducidad y restricciones. Un cupón de envío futuro no reduce la compra actual salvo aplicación explícita. El valor nominal de un paquete promocional no es necesariamente tu ahorro real. Separa ofertas sin canjear y gasto confirmado.",
             "Compara el total antes y después de una oferta válida. Si exige comprar más o elegir una ruta menos adecuada, incluye esa consecuencia. No añadas algo innecesario para alcanzar un umbral sin comparar el nuevo total. Importa si mejora la compra deseada, no lo grande que parezca el número publicitario."
-          ]
+          ],
+          "id": "section-6"
         },
         {
           "heading": "Revisa servicios opcionales y cargos del paquete",
           "paragraphs": [
             "En almacén o paquete, lee cuidadosamente los servicios seleccionados. Embalaje, fotografía o gestión pueden ser útiles según mercancía y necesidades. Comprueba precio actual y finalidad. Sepáralos del transporte básico para comparar alternativas justamente.",
             "Tras medir el paquete final, compara el cargo actualizado con la estimación. Kakobuy señala que las medidas embaladas pueden diferir de las iniciales del artículo. Pregunta qué dato cambió si el ajuste es confuso. Impuestos de destino u otros cargos requieren revisión propia; un nombre genérico de ruta o un pago actual no resuelven todos los posibles costes de entrega."
-          ]
+          ],
+          "id": "section-7"
         },
         {
           "heading": "Gestiona pagos inciertos sin duplicarlos",
           "paragraphs": [
             "Si la pantalla deja de responder, revisa primero estado del pedido, movimientos y registro del proveedor. Guarda referencia y hora. Una página lenta no demuestra un débito fallido, y una notificación bancaria no prueba por sí sola que el pedido esté acreditado. Repetir el pago puede complicarlo.",
             "Si los registros discrepan, consulta la operación concreta a asistencia oficial. Facilita referencia, importe, moneda y estado visible, sin datos completos de tarjeta, contraseñas ni códigos. Guarda la respuesta con el recibo. Antes de reintentar, confirma si el primero sigue pendiente, fue revertido o se acreditó en otro lugar. Registros claros sirven más que capturas incompletas de muchos intentos."
-          ]
+          ],
+          "id": "section-8"
         },
         {
           "heading": "Concilia reembolsos y coste final entregado",
           "paragraphs": [
             "Para un reembolso, anota cargo original, deducciones acordadas, abono y destino del dinero. Abono de cuenta y retirada posterior son entradas distintas. Si hay conversiones en varias fases, no supongas idéntico valor numérico entre devolución externa y débito original sin revisar los registros.",
             "Tras la entrega, suma costes confirmados de artículos, transporte nacional, pagos o conversión, servicios, envío internacional y cargos reales de destino. Resta solo reembolsos o descuentos aplicados. El registro da una base realista al siguiente haul y hace honesta la comparación: la ficha más barata no siempre es la compra entregada más barata, y un presupuesto actual claro vale más que una comisión universal sin fundamento."
-          ]
+          ],
+          "id": "section-9"
         }
       ],
       "sources": [
@@ -867,14 +1114,22 @@
         "https://item.kakobuy.com/service/help/question?id=87",
         "https://www.kakobuy.com/tools/estimate"
       ],
-      "wordCount": 1457
+      "wordCount": 1322,
+      "datePublished": "2026-10-24",
+      "dateModified": "2026-10-30",
+      "answer": "Utiliza la moneda y el importe a pagar que muestra tu pantalla de pago actual. Una estimación en USD del catálogo no demuestra en qué moneda se cargará tu tarjeta. Una recarga añade saldo a la cuenta; comprueba el saldo y el estado de pago del pedido por separado antes de asumir que un artículo o envío está pagado.",
+      "related": [
+        "kakobuy-shipping-costs",
+        "kakobuy-returns-refunds",
+        "kakobuy-shipping-calculator"
+      ]
     },
     {
       "slug": "kakobuy-weidian-taobao-links",
       "title": "Enlaces Weidian y Taobao para Kakobuy: verifica el producto y la opción exactos",
       "description": "Entiende cómo encajan enlaces de origen, IDs de marketplace, enlaces del agente y variantes antes de comprar mediante Kakobuy.",
       "category": "Enlaces de productos",
-      "readMinutes": 7,
+      "readMinutes": 6,
       "intro": "Un enlace útil debe llevar al anuncio exacto investigado. Parece sencillo hasta que una fila, un enlace corto, un título traducido y una URL del agente describen lo mismo de formas distintas. Lo más seguro es conservar el enlace original, verificar la identidad y comprobar después la variante en Kakobuy. Esta guía explica qué comparar, cómo reconocer importaciones incompletas y por qué un ID no determina talla, color, cantidad ni precio final.",
       "sections": [
         {
@@ -882,70 +1137,80 @@
           "paragraphs": [
             "El anuncio del marketplace es la página del vendedor. Un enlace de agente dirige al servicio que ayuda a comprarlo. Una ficha de catálogo sirve para investigar y puede describirlo y facilitar enlaces. Cada dirección tiene un propósito distinto. Un número al final de la URL de una web de guías puede ser su registro interno, no el producto del vendedor.",
             "Guarda el enlace original aunque uses normalmente el botón del agente. Permite comparar fuente e importación y explicar discrepancias a asistencia. El tutorial oficial Kakobuy empieza por un enlace de producto de un marketplace chino. Usa esa identidad como base, no solo un título traducido o una miniatura reutilizable por varios vendedores."
-          ]
+          ],
+          "id": "section-0"
         },
         {
           "heading": "Verifica marketplace y número",
           "paragraphs": [
             "El número necesita su contexto. Weidian suele usar itemID, Taobao id y las ofertas de 1688 un identificador numérico en la ruta. Los patrones ayudan a inspeccionar la dirección, pero reconocerlos no confirma que el anuncio esté activo, admitido o sea adecuado para comprar.",
             "No pongas un número de un marketplace en el formato URL de otro ni sustituyas el ID del vendedor por el del catálogo. Compara host de origen e identificador juntos. Mantén visible la duda hasta abrir el anuncio real. Una fotografía igual aporta contexto, pero no prueba que dos enlaces sean del mismo vendedor u oferta."
-          ]
+          ],
+          "id": "section-1"
         },
         {
           "heading": "Abre con cuidado los enlaces compartidos",
           "paragraphs": [
             "Un enlace compartido puede pasar por una app, dirección corta o seguimiento antes del producto. Ábrelo en un navegador normal e inspecciona el destino final. Copia el enlace real cuando esté disponible. Si una app o acceso es necesario para ver detalles importantes, reconoce que la investigación está incompleta: el mensaje compartido no es un anuncio completo.",
             "No pegues enlaces privados de cuenta, gestión de pedidos o sesiones de pago en una hoja pública. Pueden fallar para otros y contener información ajena al producto. Anota anuncio público y variantes por separado. Si deja de resolver, vuelve a la fuente o pide otro enlace en lugar de adivinar qué artículo representaba el token corto."
-          ]
+          ],
+          "id": "section-2"
         },
         {
           "heading": "Inspecciona la URL incluida en el enlace del agente",
           "paragraphs": [
             "La dirección de compra puede contener la URL original como parámetro. La dirección exterior identifica Kakobuy y la interior el anuncio. La codificación permite incluirla de forma segura: dos puntos, barras o interrogaciones pueden aparecer como secuencias con porcentaje. Es normal y no indica por sí solo otro producto.",
             "El problema aparece si la dirección interior está cortada, tiene un ID incorrecto o codificación inadecuada. Para el comprador importa el producto mostrado al cargar. Compara marketplace, título, imágenes y opciones con tu investigación. Si discrepan, detente y aclara el enlace, sin asumir que todo botón de catálogo está bien emparejado."
-          ]
+          ],
+          "id": "section-3"
         },
         {
           "heading": "Verifica la importación antes de elegir",
           "paragraphs": [
             "Cuando abra Kakobuy, confirma que aparece realmente el artículo. Una pantalla de carga, un aviso de no disponible o un formulario manual genérico no son una importación terminada. Lee restricciones y avisos. Una URL de aspecto normal no garantiza compra ni método de pago disponible.",
             "Compara varias pistas, no solo la primera imagen: referencia original, contexto del vendedor visible, descripción y variantes. Si la importación muestra menos que el vendedor, identifica lo ausente antes de pedir. Puede ser más útil preguntar a asistencia que pagar inmediatamente. Guarda enlace y pregunta precisa para asociar la respuesta al anuncio correcto."
-          ]
+          ],
+          "id": "section-4"
         },
         {
           "heading": "Trata la opción como parte del producto",
           "paragraphs": [
             "Un anuncio puede reunir tallas, colores, materiales, conjuntos y accesorios. El ID señala el anuncio, no necesariamente la opción deseada. Lee nombres y fotos correspondientes. Un precio inicial bajo puede pertenecer a una variante y otra tener importe o cantidad diferentes.",
             "Anota la opción con palabras del vendedor cuando sea posible. En ropa incluye etiqueta de talla y medidas usadas. En conjuntos comprueba piezas; en accesorios confirma compatibilidad, no solo un nombre parecido. Si la traducción es ambigua, pregunta antes de pagar. Adivinar talla o color por posición en el menú puede seleccionar la variante errónea."
-          ]
+          ],
+          "id": "section-5"
         },
         {
           "heading": "Separa traducción y hechos del producto",
           "paragraphs": [
             "Traducir facilita leer, pero etiquetas originales y especificaciones importan. Un modelo puede traducirse como palabra común, una abreviatura de medida entenderse mal o un título genérico ocultar versiones distintas. Mantén intactos identificadores de marca y modelo y verifica unidades.",
             "Usa el contexto para comprobar la traducción. Una cifra sin unidad no implica el sistema de tu país. Si un accesorio menciona varios dispositivos, verifica si la variante es universal o específica. Un título inglés claro en una recomendación ayuda a navegar, pero no crea promesas del vendedor sobre materiales, compatibilidad o contenido."
-          ]
+          ],
+          "id": "section-6"
         },
         {
           "heading": "Revisa los enlaces guardados hace tiempo",
           "paragraphs": [
             "Un enlace puede seguir funcionando mientras cambian precio, variantes, existencias o descripción. Reábrelo cerca de la compra y compara con tus notas, basando la decisión en el checkout actual. La fecha de una hoja indica revisión del registro, no que todos los campos permanezcan iguales.",
             "Si no está disponible, otra página con la misma foto no es automáticamente equivalente. Revisa vendedor, medidas, variantes y precio real. Conserva enlaces viejo y nuevo separados hasta saber qué cambió. Resulta útil si un comentario o QC histórico se refiere a otra versión o lote que el ofrecido hoy."
-          ]
+          ],
+          "id": "section-7"
         },
         {
           "heading": "Entiende el propósito de los enlaces afiliados",
           "paragraphs": [
             "Algunos enlaces añaden un parámetro de referido o afiliado a la URL de origen. En esta web independiente, ciertos enlaces externos pueden generar comisión. El parámetro no certifica vendedor, calidad ni descuento. Verifica cualquier oferta en las páginas actuales de Kakobuy antes de confiar en ella.",
             "Para identificar el producto importa que el enlace incrustado sea correcto y la opción satisfaga tus necesidades. Separa decisión y promoción. Puedes usar un botón cómodo y comprobar anuncio, medidas, precio y ruta. Registro, pago y gestión se completan en el destino oficial; una guía o catálogo no realiza esas transacciones por ti."
-          ]
+          ],
+          "id": "section-8"
         },
         {
           "heading": "Mantén una rutina repetible de verificación",
           "paragraphs": [
             "Por candidato, guarda el enlace original, identifica marketplace y artículo, ábrelo mediante Kakobuy, compara detalles importados, elige la variante y verifica el importe final. Registra dudas antes de pedir. Después conserva referencia del pedido junto a la fuente para relacionar fotos del almacén o respuestas con el artículo correcto.",
             "La rutina ayuda en una compra y más al comparar muchos productos parecidos. Reduce elegir mal por una miniatura familiar y deja pruebas compactas si cambia la página. Un buen Kakobuy spreadsheet descubre candidatos; verificar fuente y variante convierte ese descubrimiento en un pedido claramente definido."
-          ]
+          ],
+          "id": "section-9"
         }
       ],
       "sources": [
@@ -953,14 +1218,16 @@
         "https://www.kakobuy.com/service/help/question?cid=35&id=79",
         "https://www.kakobuy.com/item/notfound"
       ],
-      "wordCount": 1503
+      "wordCount": 1135,
+      "datePublished": "2026-10-24",
+      "dateModified": "2026-10-24"
     },
     {
       "slug": "kakobuy-first-haul-checklist",
       "title": "Tu primer haul de Kakobuy: lista de comprobación de la selección a la entrega",
       "description": "Planifica tu primer pedido con controles de producto, presupuesto realista, decisiones en almacén y revisión final del paquete.",
       "category": "Primeros pasos",
-      "readMinutes": 7,
+      "readMinutes": 6,
       "intro": "Un primer haul es más fácil cuando cada artículo tiene un propósito y cada fase una comprobación sencilla. No necesitas un carrito grande para aprender: necesitas enlaces exactos, medidas útiles, presupuesto para todo el trayecto y tiempo para revisar antes del envío internacional. Usa esta guía independiente junto al tutorial y las instrucciones actuales de Kakobuy. No promete fecha, precio de envío ni resultado; te ayuda a distinguir lo conocido de lo pendiente.",
       "sections": [
         {
@@ -968,70 +1235,80 @@
           "paragraphs": [
             "Elige artículos que puedas describir y comparar sin adivinar. Anota enlace, color o estilo, talla, cantidad y motivo de incluir cada uno. Una lista breve bien especificada se evalúa mejor que muchas miniaturas atractivas. Descarta candidatos que no puedas distinguir de otras versiones o que necesiten datos no facilitados.",
             "Asigna límite de gasto y prioridad a cada artículo para poder quitarlo después sin rehacer el plan. No añadas solo porque alguien lo llame imprescindible o aparezca junto a un producto popular. Una recomendación ayuda a descubrir, pero ajuste, uso previsto y presupuesto total deben decidir qué avanza."
-          ]
+          ],
+          "id": "section-0"
         },
         {
           "heading": "Confirma el anuncio original y la opción",
           "paragraphs": [
             "Abre el producto de origen y la página Kakobuy correspondiente. Compara identidad, imágenes y variantes. Asegura que el precio corresponde a opción y cantidad. Un ID identifica el anuncio, no elige talla o color. Resuelve importaciones incompletas o restricciones antes de pagar.",
             "Guarda el nombre de la opción y descripciones importantes. Un conjunto puede incluir menos piezas que la foto principal, o un accesorio exigir una versión de dispositivo. Pregunta de forma concreta si falta claridad. Una respuesta útil confirma el detalle necesario; decir que es bueno no resuelve compatibilidad, medidas ni contenido."
-          ]
+          ],
+          "id": "section-1"
         },
         {
           "heading": "Comprueba el ajuste con medidas comprensibles",
           "paragraphs": [
             "En ropa, compara la tabla con una prenda similar que te quede bien. Usa el mismo método: no compares directamente ancho plano y contorno corporal sin entender la relación. Registra dimensiones importantes, como pecho, largo, cintura o entrepierna, manteniendo visible la unidad original.",
             "En calzado o accesorios ajustados revisa la orientación de medidas y pregunta si las etiquetas son ambiguas. Una letra conocida no garantiza dimensiones conocidas. Decide qué diferencias toleras antes de pedir para orientar la revisión del almacén. Si faltan datos útiles, reconoce la duda en vez de sustituirla por una conversión tajante de otro producto."
-          ]
+          ],
+          "id": "section-2"
         },
         {
           "heading": "Presupuesta más allá de los artículos",
           "paragraphs": [
             "Separa compra prevista de envío internacional y servicios o cargos adicionales. La guía oficial Kakobuy identifica más costes que el precio del artículo. Registra transporte al almacén aparte del paquete posterior. Usa pantallas actuales para importes y conserva como estimaciones las cifras preliminares.",
             "Reserva margen para incertidumbre en lugar de gastar todo en el carrito. Peso o volumen embalado pueden desconocerse hasta llegar al almacén. Embalaje opcional y ruta disponible también influyen. Si el coste entregado probable deja de compensar, descarta antes de comprar en vez de esperar que un cupón no verificado o un envío optimista lo arregle."
-          ]
+          ],
+          "id": "section-3"
         },
         {
           "heading": "Comprueba que el contenido encaje con el trayecto",
           "paragraphs": [
             "Revisa restricciones actuales de plataforma y transporte para tus productos y destino. Presta atención a baterías, líquidos, piezas frágiles u otras necesidades. Que el vendedor venda no significa que una ruta internacional lo acepte. Pregunta antes de pedir si no está claro.",
             "Considera tus plazos además de la compatibilidad. Si necesitas para un evento, contrasta la fecha con la incertidumbre de salida del vendedor, almacén e internacional. Un plazo de tránsito no promete cubrir todas las fases previas. Es más fácil gestionar el primer haul con tiempo para inspeccionar y decidir, sin aprobar todo bajo presión."
-          ]
+          ],
+          "id": "section-4"
         },
         {
           "heading": "Pide con instrucciones claras",
           "paragraphs": [
             "Antes de enviar el pedido, revisa lista, variantes, cantidades, transporte nacional y total. Añade instrucciones breves solo para aclarar algo necesario, como una opción ambigua. Mantén coherencia con la selección. Notas vagas o contradictorias pueden crear más dudas.",
             "Tras pagar, confirma el estado y guarda la referencia. Si el resultado es incierto, revisa cuenta y proveedor antes de repetir. Regístrate y paga en el destino oficial. Esta web ayuda a investigar y entender; no gestiona tu cuenta, recoge datos de pago ni ordena al almacén actuar sobre notas externas."
-          ]
+          ],
+          "id": "section-5"
         },
         {
           "heading": "Sigue las llegadas sin mezclar fases",
           "paragraphs": [
             "Distingue salida del vendedor, entrega nacional y procesamiento del almacén. Kakobuy describe inspección y medición antes de preparar el paquete. Comprueba por separado el escaneo de entrega y el registro listo para enviar. Usa la referencia para conectar actualizaciones con distintos seguimientos.",
             "Si algo es confuso, pregunta por artículo y fase concretos, incluyendo referencia y discrepancia. No reemplaces un pedido aparentemente retrasado sin saber si fue cancelado, enviado o recibido. Al llegar artículos, actualiza una lista de listo o pendiente. Sirve para decidir qué entra en tu primer paquete y qué sigue abierto."
-          ]
+          ],
+          "id": "section-6"
         },
         {
           "heading": "Revisa pronto la inspección disponible",
           "paragraphs": [
             "Compara pedido, fotos y detalles del almacén. Comprueba color visible, cantidad, etiquetas, estado y medidas relevantes. El QC histórico muestra otra compra, no sustituye revisar la tuya. Una foto tampoco prueba todas las propiedades materiales o funcionales ocultas.",
             "Si necesitas aclarar, pide una vista o medida específica y explica por qué. Lee pronto condiciones de devolución o cambio; almacenamiento y plazo de devolución no son iguales por defecto. Mantén en disputa fuera del grupo listo hasta entender la solución. Revisar pronto y con claridad es un hábito especialmente útil para el primer haul."
-          ]
+          ],
+          "id": "section-7"
         },
         {
           "heading": "Compara paquetes antes de comprometerte",
           "paragraphs": [
             "Elige qué artículos listos viajarán juntos y consulta rutas reales para ese grupo. Compara cargos totales, reglas de tamaño y peso, gestión y datos de entrega. Agrupar en un paquete mayor no es siempre mejor. Considera fragilidad o restricciones y compara otras agrupaciones con mismo destino e información.",
             "Decide qué embalaje conservar o retirar y da instrucciones precisas donde importe. Revisa nombre, dirección, código postal y contacto. Declara la mercancía correctamente con los datos requeridos. Antes de pagar verifica de nuevo la selección para no incluir por error artículos tardíos, duplicados o en disputa."
-          ]
+          ],
+          "id": "section-8"
         },
         {
           "heading": "Termina con un registro de entrega y costes",
           "paragraphs": [
             "Después de presentar, atiende mensajes que requieren respuesta y guarda la referencia con la lista. Al recibir, compara contenido antes de tirar el embalaje. Si hay discrepancias o daño visible, conserva pruebas y contacta pronto con el canal oficial adecuado siguiendo las condiciones del envío.",
             "Finalmente registra el coste real y las decisiones útiles. Compara con la selección inicial: ajuste, utilidad, gasto y esfuerzo. Eso informa mejor el siguiente pedido que afirmaciones de gangas sin verificar. Un primer proceso exitoso se puede repetir con registros claros y decisiones deliberadas, aunque acabes comprando menos de lo previsto."
-          ]
+          ],
+          "id": "section-9"
         }
       ],
       "sources": [
@@ -1042,7 +1319,294 @@
         "https://www.kakobuy.com/service/help/question?id=37",
         "https://www.kakobuy.com/tools/estimate"
       ],
-      "wordCount": 1418
+      "wordCount": 1081,
+      "datePublished": "2026-10-24",
+      "dateModified": "2026-10-24"
+    },
+    {
+      "slug": "kakobuy-shipping-calculator",
+      "title": "Calculadora de envío Kakobuy: peso real y volumétrico",
+      "description": "Estima el peso facturable de tu paquete con nuestra calculadora. Compara peso real, volumétrico, incrementos y ejemplos de embalaje antes de pedir presupuesto.",
+      "category": "Calculadora de envío",
+      "readMinutes": 5,
+      "intro": "Una calculadora de envío resulta útil cuando sus datos describen el paquete que realmente vas a enviar. Estimar solo el peso de la ropa deja fuera la caja, la protección y el espacio vacío. Esta guía te ayuda a calcular el peso facturable, entender la cifra y trasladar las medidas correctas al presupuesto actual de la ruta de Kakobuy. La calculadora siguiente funciona localmente en tu navegador y no consulta precios en directo ni presenta un paquete para envío.",
+      "answer": "En una ruta que facture por volumen, calcula largo × ancho × alto en centímetros, divide por el divisor de la ruta y compara el resultado con el peso real del paquete en kilogramos. La ruta puede cobrar el valor mayor y redondearlo hacia arriba. Comprueba sus reglas antes de utilizar el resultado.",
+      "calculator": true,
+      "sections": [
+        {
+          "heading": "Reúne las medidas de un paquete ya preparado",
+          "paragraphs": [
+            "Introduce el largo, ancho y alto exteriores del paquete definitivo y su peso real, incluida la caja y los materiales de protección. No uses las medidas de una prenda del vendedor como dimensiones del paquete. Si el almacén aún no ha embalado los artículos, registra las cifras como estimaciones y repite el cálculo cuando tengas las medidas finales.",
+            "Utiliza el divisor y el incremento de facturación indicados por la ruta exacta que estés considerando. Los números iniciales de la herramienta son una demostración, no una recomendación ni reglas universales de Kakobuy. Si la ruta cobra únicamente el peso real, selecciona esa opción. Si sus reglas no pueden representarse aquí, utiliza el presupuesto oficial en vez de forzar las cifras para que encajen."
+          ]
+        },
+        {
+          "heading": "El peso real y el volumétrico responden a preguntas distintas",
+          "paragraphs": [
+            "El peso real mide la masa en una báscula. El peso volumétrico representa el espacio ocupado por un paquete según la fórmula del transportista. Por eso una caja ligera pero voluminosa puede tener un peso facturable mayor que otra más pequeña y pesada. Comparar dos estimaciones de envío exige conocer tanto las dimensiones como el peso en báscula.",
+            "La fórmula genérica utilizada aquí divide el volumen en centímetros cúbicos por el divisor seleccionado. Cuando la ruta factura la medida mayor, el peso facturable antes del redondeo es el máximo entre peso real y volumétrico. Los cargos mínimos, límites de tamaño, restricciones de mercancías especiales y tramos tarifarios se comprueban aparte; el cálculo no determina si la ruta admite el paquete."
+          ]
+        },
+        {
+          "heading": "Ejemplo: un paquete de 3 kg puede facturarse como 5 kg",
+          "paragraphs": [
+            "Imagina una caja de ejemplo de 40 × 30 × 20 cm que pesa 3 kg. Con un divisor hipotético de 5000, el peso volumétrico es 4.8 kg. Si esta ruta de ejemplo factura la medida mayor en incrementos de 0.5 kg, el resultado redondeado es 5 kg. Son datos didácticos, no una tarifa actual de Kakobuy ni una afirmación sobre todas las líneas de envío."
+          ],
+          "table": {
+            "headers": [
+              "Dato o paso del ejemplo",
+              "Resultado"
+            ],
+            "rows": [
+              [
+                "Dimensiones exteriores",
+                "40 × 30 × 20 cm"
+              ],
+              [
+                "Peso real con embalaje",
+                "3 kg"
+              ],
+              [
+                "Peso volumétrico: 24000 ÷ 5000",
+                "4.8 kg"
+              ],
+              [
+                "Medida mayor, redondeada hacia arriba en tramos de 0.5 kg",
+                "5 kg"
+              ]
+            ]
+          }
+        },
+        {
+          "heading": "Compara embalajes sin olvidar la protección",
+          "paragraphs": [
+            "En el mismo ejemplo hipotético, reducir la altura de 20 a 15 cm cambia el peso volumétrico a 3.6 kg. Manteniendo el peso real y el incremento de facturación, el peso facturable pasa a 4 kg. Esta comparación muestra por qué eliminar espacio vacío innecesario puede influir más que un pequeño cambio en la báscula.",
+            "No retires embalaje automáticamente. Un artículo frágil puede necesitar protección y algunos embalajes pueden ser importantes para devolverlo al vendedor. Pregunta qué cambios puede hacer el almacén, si existe un cargo por reembalaje y si volverán a medir las dimensiones finales. Recalcula solo cuando esas condiciones estén claras; el ejemplo más pequeño no garantiza un ahorro."
+          ]
+        },
+        {
+          "heading": "Convierte el peso en un presupuesto completo",
+          "paragraphs": [
+            "Lleva el peso calculado, las dimensiones, el destino y la descripción exacta del contenido al estimador oficial o al presupuesto de tu paquete. Revisa el cargo por el primer tramo de peso, los incrementos adicionales, los mínimos y los gastos de servicio. Un precio por kilogramo copiado de otro comprador puede omitir estas condiciones y no permite valorar tu paquete de forma fiable.",
+            "Mantén todos los importes en una sola moneda al comparar rutas. Añade el coste del artículo, el transporte nacional, el embalaje elegido y los cargos de pago al transporte internacional. Comprueba cómo trata el presupuesto el seguro y los cargos de importación aplicables. Esta página no calcula impuestos ni recomienda un valor de declaración; utiliza información exacta del artículo y los requisitos actuales del destino."
+          ]
+        },
+        {
+          "heading": "Por qué el presupuesto final puede diferir de tu estimación",
+          "paragraphs": [
+            "La caja definitiva puede tener otras dimensiones, el almacén puede medir el peso con más precisión o una ruta disponible puede aplicar un incremento de facturación que omitiste. Una modificación de la tarifa o un servicio adicional seleccionado también puede cambiar el importe. Compara el presupuesto final línea por línea en vez de atribuir todas las diferencias a la fórmula del peso.",
+            "Antes de pagar, guarda el nombre de la ruta, las medidas del paquete preparado, la moneda, los servicios incluidos y la fecha del presupuesto. Si una cifra no está clara, pregunta qué peso y qué regla tarifaria la produjeron. Usa la guía de gastos de envío para el presupuesto completo y la de seguimiento después del despacho. Vuelve a esta calculadora cuando cambie el paquete; no sustituye al presupuesto que debes pagar."
+          ]
+        }
+      ],
+      "sources": [
+        "https://www.kakobuy.com/tools/estimate",
+        "https://item2.kakobuy.com/index/information?information_id=3"
+      ],
+      "related": [
+        "kakobuy-shipping-costs",
+        "kakobuy-warehouse-consolidation",
+        "kakobuy-shipping-time-tracking"
+      ],
+      "datePublished": "2026-10-30",
+      "dateModified": "2026-10-30",
+      "wordCount": 898
+    },
+    {
+      "slug": "is-kakobuy-legit",
+      "title": "¿Kakobuy es fiable? Qué comprobar antes de comprar y enviar",
+      "description": "Evalúa Kakobuy mediante el proceso oficial, los pagos, las fotos de QC y las condiciones de reembolso. Distingue plataforma, vendedor y afirmaciones de afiliados.",
+      "category": "Antes de comprar",
+      "readMinutes": 5,
+      "intro": "Buscar «¿Kakobuy es fiable?» suele reunir varias preguntas: ¿es la web correcta?, ¿el vendedor elegido suministrará el artículo?, ¿qué demuestra el QC?, ¿qué pasa si algo sale mal? Cada pregunta necesita pruebas distintas. Esta lista independiente se basa en el proceso de compra publicado y en los registros que puedes revisar de tu propio pedido. No es una reseña de una compra personal, una auditoría de la empresa ni una garantía de entrega.",
+      "answer": "Kakobuy publica un proceso de agente de compras que cubre la compra, la inspección en almacén y la solicitud de envío internacional. Eso explica el servicio previsto, pero no garantiza la calidad del vendedor, la autenticidad del producto ni el resultado de un reembolso. Verifica el dominio, el coste total, el anuncio exacto y las condiciones actuales del pedido antes de decidir cuánto riesgo aceptar.",
+      "sections": [
+        {
+          "heading": "Distingue la plataforma, el vendedor y este sitio",
+          "paragraphs": [
+            "Un agente de compras y un vendedor de marketplace desempeñan funciones distintas. El vendedor suministra los productos elegidos; el agente realiza los servicios que contratas, como la compra y la expedición. La disponibilidad, la talla y el estado de un producto no se pueden determinar solo por reconocer el nombre del agente. Comprueba el anuncio original y la opción exacta que pretendes comprar.",
+            "Kakobuy Buys es un directorio y una guía independientes. No gestionamos tu cuenta de Kakobuy, no cobramos pedidos ni decidimos reembolsos. Algunos enlaces de compra salientes contienen un código de afiliación y pueden generarnos una comisión. Esa relación no convierte el anuncio en una recomendación basada en pruebas del producto. Para una disputa real sobre un pedido, utiliza el soporte oficial de tu cuenta."
+          ]
+        },
+        {
+          "heading": "Comprueba el destino antes de introducir datos de pago",
+          "paragraphs": [
+            "Parte de una dirección oficial verificada e inspecciona el nombre completo del dominio después de seguir un enlace. Un logotipo familiar, un anuncio de búsqueda o un artículo de ayuda copiado no bastan para demostrar que la página pertenece al servicio previsto. Ten cuidado si un mensaje cambia el destino del pago o te pide enviar credenciales de la cuenta por un chat ajeno.",
+            "El botón de registro de este sitio abre item2.kakobuy.com/register y los botones de compra abren una página de artículo en item2.kakobuy.com. Inspecciona la dirección real en tu navegador antes de iniciar sesión. Nunca necesitamos tu contraseña, código de un solo uso ni código de seguridad de tarjeta para mostrar un directorio. HTTPS protege una conexión; por sí solo no demuestra la fiabilidad de un comerciante."
+          ]
+        },
+        {
+          "heading": "Utiliza pruebas que respondan a la pregunta adecuada",
+          "paragraphs": [
+            "El tutorial oficial distingue las etapas de compra y envío internacional. Usa esa secuencia para identificar qué pruebas deberían existir en cada momento. Confirmar un pedido no es confirmar su entrega, y las fotos del vendedor no documentan lo recibido para tu pedido."
+          ],
+          "table": {
+            "headers": [
+              "Prueba",
+              "Sirve para",
+              "No demuestra"
+            ],
+            "rows": [
+              [
+                "Anuncio original del vendedor",
+                "Modelo, opción y medidas anunciadas",
+                "Estado del artículo recibido"
+              ],
+              [
+                "Tus registros de pedido y pago",
+                "Qué se solicitó y qué se cobró",
+                "Entrega satisfactoria"
+              ],
+              [
+                "Tus fotos de QC del almacén",
+                "Detalles visibles del artículo recibido",
+                "Autenticidad o prestaciones no visibles"
+              ],
+              [
+                "Registros del transportista sobre tu paquete",
+                "Eventos de transporte registrados",
+                "Una fecha de llegada garantizada"
+              ],
+              [
+                "Condiciones actuales de reembolso y respuesta de soporte",
+                "Procedimiento y condiciones aplicables",
+                "Un reembolso incondicional"
+              ]
+            ]
+          }
+        },
+        {
+          "heading": "Lee reseñas sin convertir experiencias aisladas en garantías",
+          "paragraphs": [
+            "Una reseña útil incluye fecha, ruta, destino, etapa del pedido y un relato claro de lo observado. Una entrega satisfactoria en otro país puede no predecir el comportamiento de tu línea de envío, y una queja sin resolver puede referirse a un vendedor o artículo concreto. Busca la parte de la experiencia que coincida con la decisión que estás tomando.",
+            "Ten cuidado con las clasificaciones construidas principalmente alrededor de cupones o enlaces de recomendación. Comprueba si el autor distingue las fotos del vendedor de su propio QC y si describe un resultado negativo con suficiente contexto para evaluarlo. No hemos calculado una tasa de éxito verificada ni autenticado de forma independiente las reseñas de clientes, por lo que esta guía no asigna una puntuación numérica de confianza."
+          ]
+        },
+        {
+          "heading": "Fija un límite de gasto antes del primer pago",
+          "paragraphs": [
+            "Estima el coste completo en lugar de decidir a partir de la ficha del producto. Incluye transporte nacional, envío internacional, servicios elegidos y los cargos de pago o importación aplicables. Confirma la moneda y el importe actual a pagar. Si tu presupuesto solo cubre comprar el artículo, su llegada al almacén no resuelve el coste restante de entrega.",
+            "Antes de comprar, comprueba las condiciones de devolución del vendedor y pregunta qué cargos seguirían siendo pagaderos si el pedido no puede continuar como esperabas. Empezar con un pedido limitado puede reducir el dinero expuesto, pero no elimina la incertidumbre del envío o del reembolso. Evita añadir artículos solo para alcanzar el umbral de un cupón cuando el coste adicional no se justifique."
+          ]
+        },
+        {
+          "heading": "Detén el proceso en el almacén si algo sigue sin resolverse",
+          "paragraphs": [
+            "Compara las fotos de tu pedido con la opción elegida y solicita la medida o el ángulo concreto que resolvería una duda. Una foto puede revelar un color incorrecto, daños visibles o una etiqueta que no coincide; no puede garantizar autenticidad, materiales internos ni durabilidad a largo plazo. No incluyas artículos dudosos en un paquete hasta entender la solución disponible.",
+            "Para cancelar o devolver, conserva el número de pedido, el anuncio, el registro del pago, las fotos pertinentes y las respuestas de soporte. Pregunta por los requisitos, los plazos, el porte de devolución y el destino de cualquier reembolso. Si las respuestas siguen sin estar claras, pausa el siguiente pago o envío. La decisión práctica consiste en si las pruebas y condiciones bastan para este pedido, no en si una sola etiqueta puede describir todos los resultados posibles."
+          ]
+        }
+      ],
+      "sources": [
+        "https://item2.kakobuy.com/index/information?information_id=3",
+        "https://www.kakobuy.com/service/help/question?id=51",
+        "https://www.kakobuy.com/index/information?information_id=12"
+      ],
+      "related": [
+        "how-to-buy-on-kakobuy",
+        "kakobuy-qc-photos-guide",
+        "kakobuy-returns-refunds"
+      ],
+      "datePublished": "2026-10-30",
+      "dateModified": "2026-10-30",
+      "wordCount": 950
+    },
+    {
+      "slug": "kakobuy-shipping-time-tracking",
+      "title": "Plazos y seguimiento de Kakobuy: etapas del envío",
+      "description": "Sigue un pedido Kakobuy desde el despacho del vendedor hasta el almacén y la entrega internacional. Aprende qué número usar y qué comprobar si no hay novedades.",
+      "category": "Envíos y seguimiento",
+      "readMinutes": 5,
+      "intro": "Un pedido de Kakobuy tiene más de un trayecto. Primero el vendedor envía el artículo al almacén; después, un paquete cuya expedición has solicitado viaja a tu destino. Entre ambos trayectos se encuentran la inspección, el embalaje y tus decisiones de envío. Entender la etapa actual resulta más útil que comparar un número de «días de envío» sin contexto con el pedido de otra persona. Esta guía explica qué pruebas revisar sin prometer una fecha fija de llegada.",
+      "answer": "Usa el seguimiento nacional del vendedor para la entrega al almacén y el registro del paquete internacional tras solicitar el envío. Un número de orden de compra no es necesariamente un número de seguimiento del transportista. Una etiqueta generada no demuestra la recogida; busca el último registro físico y las indicaciones actuales de servicio de la ruta.",
+      "sections": [
+        {
+          "heading": "Cuenta todo el proceso, no solo el tránsito internacional",
+          "paragraphs": [
+            "El tiempo total puede incluir la tramitación de la compra, la espera del despacho del vendedor, el transporte nacional, el registro de entrada y QC del almacén, tu revisión de artículos, el embalaje, el transporte internacional y la entrega en destino. Si esperas otro artículo para consolidar, esa espera pertenece a la planificación de tu paquete y no al tiempo de tránsito del transportista.",
+            "El tutorial de compra publicado por Kakobuy describe las etapas, pero un plazo orientativo de procesamiento no es una promesa para todos los vendedores o líneas de envío. Las existencias, los fines de semana, las rutas disponibles y el contenido del paquete pueden modificar la secuencia. Si necesitas el pedido para una fecha concreta, compara las indicaciones actuales de la ruta y reserva tiempo para las etapas que el presupuesto de transporte podría no incluir."
+          ]
+        },
+        {
+          "heading": "Asocia cada número con el trayecto correcto",
+          "paragraphs": [
+            "Guarda por separado la referencia del pedido al vendedor, el número del transportista nacional, el número de paquete de Kakobuy y el seguimiento internacional. Pueden referirse a registros relacionados sin ser intercambiables. El anuncio oficial sobre seguimiento de pedidos originales explica el acceso a la información del pedido al vendedor; el tutorial de compra sitúa el seguimiento internacional en el área de paquetes de la cuenta.",
+            "Abre el registro actual del pedido o paquete y sigue la información de seguimiento vinculada. Si no se reconoce un número, comprueba el transportista, la etapa y si la etiqueta acaba de generarse. No asumas que copiar una referencia de compra en la web de un transportista mostrará un envío. Nunca publiques capturas con tu dirección completa o teléfono al pedir ayuda públicamente."
+          ]
+        },
+        {
+          "heading": "Interpreta las etapas habituales a partir de sus pruebas",
+          "paragraphs": [
+            "Las descripciones siguientes son etapas generales de envío, no una lista exacta de las etiquetas de la interfaz de Kakobuy. La redacción puede variar según el idioma y el transportista. Lee el evento detallado, el lugar y la hora en vez de confiar únicamente en un estado traducido breve."
+          ],
+          "table": {
+            "headers": [
+              "Etapa",
+              "Qué comprobar a continuación"
+            ],
+            "rows": [
+              [
+                "Despachado por el vendedor",
+                "Transportista nacional y destino de entrega: el almacén."
+              ],
+              [
+                "Entregado en el almacén",
+                "Registro de entrada en la cuenta y QC; el registro de entrega puede preceder al procesamiento."
+              ],
+              [
+                "Preparado en el almacén",
+                "Tu decisión sobre el QC, las opciones de embalaje y la solicitud de envío del paquete."
+              ],
+              [
+                "Etiqueta o información de envío creada",
+                "Un registro de recogida o aceptación que confirme la entrega física al transportista."
+              ],
+              [
+                "Tránsito internacional",
+                "Último registro, indicaciones de la ruta y cualquier transferencia documentada."
+              ],
+              [
+                "Procesamiento o entrega en destino",
+                "Actualizaciones del transportista local y cualquier acción solicitada oficialmente."
+              ]
+            ]
+          }
+        },
+        {
+          "heading": "Qué hacer si el seguimiento no se actualiza",
+          "paragraphs": [
+            "Primero registra el último evento, su fecha, lugar y texto exacto. Comprueba si el paquete espera el despacho del vendedor, el procesamiento del almacén, la recogida del transportista o un evento posterior del transporte. Cada situación requiere un contacto distinto. Una página sin novedades no demuestra por sí sola que el paquete se haya perdido o esté retenido en aduanas.",
+            "Compara el intervalo con las indicaciones actuales de servicio de tu ruta y cualquier aviso de incidencias. Si supera el plazo indicado, contacta con el soporte de paquetes de tu cuenta aportando el número de paquete, el de seguimiento y el último evento. Pregunta quién tiene actualmente el paquete y cuál es el siguiente punto de escalado. Evita abrir casos repetidos que repartan las mismas pruebas entre conversaciones."
+          ]
+        },
+        {
+          "heading": "Verifica los mensajes del destino antes de actuar",
+          "paragraphs": [
+            "Un transportista puede pedir instrucciones de entrega o documentación durante la etapa de destino. Verifica la petición en su página oficial de seguimiento o desde el canal habitual de tu cuenta antes de pagar un cargo inesperado o enviar datos personales. Un mensaje de texto que mencione un paquete no basta para demostrar que se refiere al tuyo.",
+            "Si el seguimiento indica entregado pero no encuentras el paquete, revisa los detalles de entrega, el punto de recogida autorizado y cualquier justificante. Contacta con el transportista y soporte de Kakobuy utilizando el mismo registro conciso. Conserva el embalaje y las fotos si hay daños. Respeta el plazo de reclamación aplicable en vez de asumir que el procedimiento general de devolución del almacén cubre problemas de entrega internacional."
+          ]
+        },
+        {
+          "heading": "Lleva un registro breve del seguimiento para mantener el caso claro",
+          "paragraphs": [
+            "Guarda la referencia del pedido, la del paquete, el transportista, el número de seguimiento, el último evento, las indicaciones de la ruta y la fecha de la última respuesta de soporte. Añade la siguiente acción y quién debe realizarla. Este registro permite un seguimiento concreto: puedes preguntar por una entrega pendiente entre operadores o una incidencia de entrega en vez de repetir que el envío va lento.",
+            "Para próximos pedidos, compara rutas con el mismo destino y las mismas características del paquete y registra después los hitos reales de entrega. Un envío satisfactorio sigue siendo una sola observación. Usa la calculadora de peso antes de pedir presupuesto, la guía de almacén antes de consolidar y la de reembolsos si el problema afecta a un artículo o pago. Cada página aborda una etapa distinta de la misma compra."
+          ]
+        }
+      ],
+      "sources": [
+        "https://item2.kakobuy.com/index/information?information_id=3",
+        "https://www.kakobuy.com/tipdetail?id=37",
+        "https://www.kakobuy.com/index/information?information_id=12"
+      ],
+      "related": [
+        "kakobuy-warehouse-consolidation",
+        "kakobuy-shipping-costs",
+        "kakobuy-returns-refunds"
+      ],
+      "datePublished": "2026-10-30",
+      "dateModified": "2026-10-30",
+      "wordCount": 992
     }
   ],
   "faqs": [

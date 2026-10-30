@@ -1,0 +1,30 @@
+---
+const {ui}=Astro.props;
+const t=ui.calculator;
+const inputs=[
+  {name:'weight',label:t.weight,value:3,max:10000,step:'any'},
+  {name:'length',label:t.length,value:40,max:10000,step:'any'},
+  {name:'width',label:t.width,value:30,max:10000,step:'any'},
+  {name:'height',label:t.height,value:20,max:10000,step:'any'},
+  {name:'divisor',label:t.divisor,value:5000,max:1000000,step:'any'},
+  {name:'increment',label:t.step,value:0.5,max:1000,step:'any'}
+];
+---
+<section class="shipping-calculator" id="weight-calculator" aria-labelledby="calculator-title">
+  <h2 id="calculator-title">{t.title}</h2>
+  <p>{t.intro}</p>
+  <form data-shipping-calculator>
+    <div class="calculator-fields">
+      {inputs.map(input=><label><span>{input.label}</span><input type="number" name={input.name} value={input.value} min="0.001" max={input.max} step={input.step} required inputmode="decimal"/></label>)}
+      <fieldset class="calculator-rule"><legend>{t.rule}</legend><label><input type="radio" name="rule" value="higher" checked/><span>{t.higher}</span></label><label><input type="radio" name="rule" value="actual"/><span>{t.actualOnly}</span></label></fieldset>
+    </div>
+    <button type="submit" class="button">{t.calculate} →</button>
+    <div class="calculator-results" aria-live="polite" aria-atomic="true" hidden>
+      <p><span>{t.volumeResult}</span><output data-volume></output></p>
+      <p><span>{t.billableResult}</span><output data-billable></output></p>
+    </div>
+    <p data-calculator-error role="alert" hidden>{t.invalid}</p>
+  </form>
+  <p class="fineprint">{t.note}</p>
+  <noscript><p>{t.noScript}</p></noscript>
+</section>

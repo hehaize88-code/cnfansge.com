@@ -41,12 +41,12 @@ let urls=0;
 for(const lang of Object.keys(allLocales)){
   assert.ok(index('sitemap>loc').toArray().some(el=>index(el).text()===origin+'/sitemaps/'+lang+'.xml'));
   const response=await request('/sitemaps/'+lang+'.xml');assert.equal(response.status,200);
-  const $=load(await response.text(),{xmlMode:true});assert.equal($('url').length,19);
+  const $=load(await response.text(),{xmlMode:true});assert.equal($('url').length,22);
   for(const el of $('url').toArray()){
     const loc=$(el).find('loc').text(),url=new URL(loc);assert.equal(url.origin,origin);assert.equal(url.search,'');
     assert.ok(!/\/product\/|\/search\//.test(url.pathname));assert.ok(fs.existsSync('.astro-output'+url.pathname+'index.html'));
-    assert.equal($(el).find('xhtml\\:link').length,25);urls++;
+    assert.equal($(el).find('xhtml\\:link').length,25);assert.match($(el).find('lastmod').text(),/^2026-10-(24|30)$/);urls++;
   }
 }
-assert.equal(urls,456);
+assert.equal(urls,528);
 console.log(JSON.stringify({productionPolicyChecks:checks,sitemaps:24,indexableUrls:urls,network:'disabled'},null,2));

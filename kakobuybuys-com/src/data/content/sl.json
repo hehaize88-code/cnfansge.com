@@ -59,8 +59,8 @@
       "jersey": "Dresi"
     },
     "catalogEyebrow": "AKTUALNI KATALOG",
-    "catalogTitle": "Poiščite svoj naslednji najljubši izdelek.",
-    "catalogIntro": "Prebrskajte trenutne oglase, primerjajte cene izdelkov in fotografije prodajalcev, preden odprete točen izdelek na Kakobuyu.",
+    "catalogTitle": "Kakobuy preglednica in povezave do izdelkov",
+    "catalogIntro": "Iščite po Kakobuyevi preglednici s ključno besedo ali kategorijo, primerjajte trenutne cene v oglasih in odprite izvirno povezavo do izdelka. Pred nakupom preverite točno velikost, prodajalčeve fotografije in celoten proračun za dostavo.",
     "catalogStatus": "20 izdelkov na stran · Nadaljujte brskanje z gumbi za strani",
     "resultsFor": "Rezultati za",
     "clearFilters": "Počisti filtre",
@@ -96,7 +96,7 @@
     "journalEyebrow": "NAKUPOVALNI DNEVNIK",
     "journalTitle": "Bolje informirano naslednje naročilo.",
     "journalIntro": "Praktični vodniki o povezavah do izdelkov, velikostih, QC, odločitvah v skladišču in stroških dostave.",
-    "allArticles": "Vseh 10 vodnikov",
+    "allArticles": "Vsi nakupovalni vodniki",
     "minutes": "min branja",
     "articleLabel": "NAKUPOVALNI VODNIK",
     "contents": "V tem vodniku",
@@ -118,7 +118,7 @@
     "qcEyebrow": "POGLEJTE PRED POŠILJANJEM",
     "qcTitle": "Preglejte fotografije. Preverite podrobnosti.",
     "qcIntro": "Fotografije skladiščnega pregleda vam lahko pomagajo oceniti vidne podrobnosti pred pošiljanjem. Spoznajte, katere kote in mere preveriti ter česa slika ne more potrditi.",
-    "qcUnavailable": "V tem predogledu preverjen vir referenčnih QC fotografij ni povezan. Strani izdelkov trenutno prikazujejo jasno označene fotografije iz oglasov prodajalcev.",
+    "qcUnavailable": "To spletno mesto ne ponuja preverjenega vira skladiščnih fotografij QC. Strani izdelkov prikazujejo fotografije iz prodajalčevih oglasov. Pred odpremo v svojem računu Kakobuy preglejte skladiščne fotografije svojega naročila.",
     "qcChecklist": [
       "Primerjajte vidno barvo, model in izbrano različico s svojim naročilom.",
       "Preverite oznake in zahtevane mere glede na svoje potrebe po velikosti.",
@@ -126,7 +126,7 @@
       "Pri odločitvi o pošiljanju uporabite fotografije pregleda svojega naročila."
     ],
     "shippingEyebrow": "RAZUMITE CELOTEN STROŠEK",
-    "shippingTitle": "Načrtujte več kot le ceno izdelka.",
+    "shippingTitle": "Stroški dostave Kakobuy, teža in sledenje",
     "shippingIntro": "Cena v oglasu je izhodišče. Domača dostava, mednarodni prevoz in izbrane storitve lahko spremenijo končni znesek.",
     "shippingCards": [
       {
@@ -144,7 +144,7 @@
     ],
     "visualTitle": "Iskanje s sliko",
     "visualIntro": "Iskanje s sliko bo uporabljalo isti vir izdelkov kot katalog.",
-    "visualUnavailable": "Vmesnik vira za iskanje s sliko še ni preverjen. Nalaganje slik v tem predogledu ni na voljo; na voljo sta iskanje po ključnih besedah in brskanje po kategorijah.",
+    "visualUnavailable": "Nalaganje slik trenutno ni na voljo. Iščite po ključnih besedah ali preglejte kategorije.",
     "aboutTitle": "Uporabno izhodišče.",
     "aboutIntro": "Kakobuy Buys je neodvisna spletna stran za odkrivanje izdelkov in nakupovalne vodnike. Pomagamo vam raziskati oglase in razumeti, kaj vprašati pred oddajo naročila.",
     "aboutBody": "Naročila, plačila, skladiščne storitve in dostava potekajo na Kakobuyu. Ta stran ne sprejema plačil in ne upravlja vašega Kakobuy računa. Nekatere izhodne povezave za registracijo ali nakup so partnerske in nam lahko prinesejo provizijo.",
@@ -162,15 +162,39 @@
       "V proračun vključite dostavo in vse veljavne stroške.",
       "Pred pošiljanjem preglejte fotografije skladiščnega pregleda svojega naročila."
     ],
-    "top": "Nazaj na vrh"
+    "top": "Nazaj na vrh",
+    "catalogSeoTitle": "Kakobuy preglednica: povezave do izdelkov, cene in kategorije",
+    "shippingSeoTitle": "Kakobuy dostava: stroški, kalkulator in sledenje",
+    "quickAnswer": "Kratek odgovor",
+    "reviewedLabel": "Posodobljeno",
+    "decisionGuides": "Pred plačilom ali odpremo",
+    "calculator": {
+      "title": "Izračunajte obračunsko težo paketa",
+      "intro": "Vnesite mere zapakiranega paketa in delitelj za svojo prevozno pot. Ta neodvisni kalkulator oceni težo, ne trenutne cene Kakobuy. Vzorčne vrednosti so ponazoritev; zamenjajte jih s svojimi meritvami.",
+      "weight": "Dejanska teža zapakiranega paketa (kg)",
+      "length": "Dolžina (cm)",
+      "width": "Širina (cm)",
+      "height": "Višina (cm)",
+      "divisor": "Volumetrični delitelj za vašo prevozno pot",
+      "step": "Obračunski korak (kg)",
+      "rule": "Pravilo obračuna prevozne poti",
+      "higher": "Večja od dejanske in volumetrične teže",
+      "actualOnly": "Samo dejanska teža",
+      "calculate": "Izračunaj težo",
+      "volumeResult": "Volumetrična teža",
+      "billableResult": "Zaokrožena obračunska teža",
+      "note": "Preverite najmanjšo težo, omejitve mer, cenovne razrede in pravila zaokroževanja prevozne poti. Izračun ne vključuje cen, davkov, zavarovanja in stroškov obdelave. Rezultati ostanejo v vašem brskalniku.",
+      "invalid": "V vsa polja vnesite pozitivna števila. Preverite enote in pravilo obračuna izbrane prevozne poti.",
+      "noScript": "Formula: dolžina × širina × višina ÷ delitelj. Če prevozna pot uporablja obe meri teže, izberite večjo od izračunane in dejanske teže ter jo zaokrožite navzgor na obračunski korak."
+    }
   },
   "articles": [
     {
       "slug": "how-to-use-kakobuy-spreadsheet",
-      "title": "Kako uporabljati katalog Kakobuy: od iskanja do uporabnega ožjega izbora",
-      "description": "Naučite se brati vnose izdelkov, preverjati izvirne povezave, primerjati možnosti in pripraviti ožji izbor pred naročanjem prek Kakobuya.",
+      "title": "Kako uporabljati preglednico Kakobuy in preveriti povezave",
+      "description": "Iščite po preglednici Kakobuy, primerjajte povezave in fotografije prodajalcev, preverite velikosti ter sestavite ožji izbor z realnim proračunom dostave.",
       "category": "Katalog",
-      "readMinutes": 8,
+      "readMinutes": 7,
       "intro": "Katalog Kakobuy je najbolj uporaben, ko vam pomaga sprejeti odločitev, ne ko vam ponudi neskončen seznam slik. Vsak vnos obravnavajte kot pot do prodajalčevega oglasa, ki zahteva nekaj preverjanj: kaj izdelek je, katero možnost želite, kaj vključuje cena in kateri dokazi so na voljo. Ta vodnik pojasnjuje ponovljiv način prehoda od širokega iskanja do majhnega, praktičnega ožjega izbora, ne da bi priporočilo zamenjali z obljubo.",
       "sections": [
         {
@@ -178,70 +202,80 @@
           "paragraphs": [
             "Katalog izdelkov ureja reference. Lahko prikaže naslov, fotografijo, oceno cene in povezavo, ki oglas odpre prek Kakobuya. Ta polja pospešijo brskanje, vendar ne nadomeščajo trenutne prodajalčeve ponudbe. Zaloga, različice in cene se lahko spremenijo po prvem vnosu. Smiseln naslednji korak je odpreti dejanski izdelek in primerjati informacije, pomembne za vaš nakup.",
             "Vloge naj bodo jasne. To neodvisno spletišče pomaga pri odkrivanju in branju. Prodajalec dobavi izdelek. Kakobuy opravlja storitve, ki jih naročite na njegovi platformi. Privlačna kartica v katalogu ne pomeni, da je spletišče lastnik blaga, da ga je osebno pregledalo ali da lahko spremeni vaše naročilo. To razlikovanje olajša razumevanje, kje postaviti vprašanje in kateri zaslon mora dati končni odgovor."
-          ]
+          ],
+          "id": "section-0"
         },
         {
           "heading": "Začnite z natančnim iskanjem",
           "paragraphs": [
             "Pred brskanjem izberite nekaj uporabnih besed. Vrsto izdelka skupaj s praktično podrobnostjo je običajno lažje oceniti kot zelo široko poizvedbo. Iskanje jopice s kapuco in zadrgo na primer ponudi jasnejšo primerjavo kot iskanje oblačil. Če so rezultati preozki, odstranjujte podrobnosti eno za drugo, namesto da celotno poizvedbo nadomestite z nepovezanim izrazom.",
             "S filtri kategorij zmanjšajte moteče rezultate, nato preglejte, kako razvrščanje spremeni zadetke. Razvrstitev po priljubljenosti je pomoč pri brskanju, ne potrdilo kakovosti. Razvrstitev po nizki ceni pove le, katera prikazana cena je nižja; ne pove, ali ima oglas pravo možnost oziroma ali bo izdelek po dostavi cenovno smiseln. Pri primerjanju več vnosov ohranite iste filtre, da ocenjujete smiselno skupino."
-          ]
+          ],
+          "id": "section-1"
         },
         {
           "heading": "Vnos berite kot ločene dokaze",
           "paragraphs": [
             "Začnite z naslovom, nato primerjajte fotografijo in izvirno referenco izdelka. Naslov je lahko skrajšan za majhno kartico. Fotografija lahko prikazuje eno barvo ali značilno različico namesto vseh možnosti. Cena se lahko nanaša na eno različico, začetno ceno ali oceno. Ločeno branje teh polj prepreči, da priročen povzetek spremenite v trditev, ki je prodajalec ni podal.",
             "Bodite pozorni na manjkajoče in prisotne informacije. Če stran nima preverjene mase, tabele velikosti ali nabora QC, pustite vprašanje odprto. Teh podatkov si ne izposojajte v mislih od podobnega izdelka. Dva oglasa s fotografijami istega sloga imata lahko različne dobavitelje, materiale ali strukturo možnosti. Primerjava postane zanesljivejša, ko v zapiskih ločujete zabeležena dejstva od predpostavk."
-          ]
+          ],
+          "id": "section-2"
         },
         {
           "heading": "Izvirno povezavo hranite ob izbrani možnosti",
           "paragraphs": [
             "Izvirna povezava tržnice je osnova ožjega izbora. Shranite jo ob imenu izdelka, barvi, ki jo nameravate izbrati, ter obravnavani velikosti ali različici. ID izdelka določa oglas, vendar morda ne določa posamezne kombinacije barve in velikosti znotraj njega. Celotna izbira možnosti je zato enako pomembna kot povezava.",
             "Ko gumb za nakup odpre Kakobuy, preverite, ali uvoženi izdelek ustreza izvirni referenci. Primerjajte prikazane podatke prodajalca, glavno sliko, imena možnosti in izvirni ID. Če je cilj prazen, nedostopen ali očitno drugačen, se ustavite pred plačilom. Delujoč gumb ni dovolj: cilj mora predstavljati želeni izdelek. Ne uporabite znanega nadomestka samo zato, ker je njegova slika podobna shranjeni."
-          ]
+          ],
+          "id": "section-3"
         },
         {
           "heading": "Cene uporabite za primerjavo, nato sestavite dejanski proračun",
           "paragraphs": [
             "Ocena v USD je priročen začetni filter. Pomaga presoditi, ali izdelek sodi v vaš cenovni okvir, vendar je ne smete obravnavati kot skupni strošek do dostave. Kakobuyeve informacije o stroških ločujejo blago in domači prevoz od mednarodne dostave ter ustreznega pakiranja ali dodatnih storitev. Trenutne zneske je treba preveriti na zaslonih naročila in paketa.",
             "Za vsakega kandidata zabeležite ceno izbrane možnosti in vidno domačo poštnino. V primerjavi pustite prostor za poznejšo mednarodno pošiljko. Izogibajte se navidezni natančnosti, denimo razglasitvi izdelka za najcenejšega v celoti, ker je njegova prikazana cena nekaj centov nižja. Drugačna velikost paketa, možnost ali zahtevana storitev lahko spremeni rezultat. Ko je potrebna ponudba na voljo, primerjajte celovite izbire, nedokončane ocene pa tako tudi označite."
-          ]
+          ],
+          "id": "section-4"
         },
         {
           "heading": "Ločujte prodajalčeve slike od dokazov QC",
           "paragraphs": [
             "Slike prodajalca pojasnjujejo ponudbo. Lahko prikazujejo slog, podrobnosti, oznake ali tabelo velikosti. Slike QC se nanašajo na pregled prejetega izdelka. Ta vira odgovarjata na različna vprašanja in velika galerija prodajalčevih fotografij ne postane samodejno galerija QC. Preberite oznake slik in poiščite jasno povezavo med fotografijami pregleda ter ustrezno referenco izdelka.",
             "Pretekli QC je lahko uporaben za ugotavljanje, kaj je nekdo prej prejel, vendar ne more določiti vsebine vašega naročila. Kakobuy v poteku storitve opisuje skladiščni pregled in fotografiranje. Ko naročite, preglejte dokaze, povezane z vašim izdelkom, in obseg tega pregleda. Če fotografije ne kažejo značilnosti, ki jo morate oceniti, naj nerešeno vprašanje ostane nerešeno."
-          ]
+          ],
+          "id": "section-5"
         },
         {
           "heading": "Primerjajte prileganje pred slogom",
           "paragraphs": [
             "Dober ožji izbor mora vsebovati izdelke, ki bi lahko dejansko ustrezali vašim potrebam. Pri oblačilih začnite z merami konkretnega prodajalca in jih primerjajte s podobnim oblačilom, ki ga že nosite. Pri čevljih potrdite sistem velikosti in pomen mere v centimetrih. Kakobuyeva pomoč za velikosti navaja, da prodajalci uporabljajo različne standarde, zato enaka črka ali številka v dveh oglasih ni dovolj.",
             "Zapišite konkretno negotovost. »Potrebujem širino prsi za velikost M« je uporabnejše kot »nisem prepričan o velikosti«. »Ali navedena dolžina vključuje ročaj?« je jasneje kot »je ta torba velika?«. Ta vprašanja pomagajo ugotoviti, ali oglas že odgovarja na pomislek ali pred naročilom potrebujete pojasnilo. Vprašanje ob shranjeni povezavi tudi prepreči, da bi ga ob plačilu pozabili."
-          ]
+          ],
+          "id": "section-6"
         },
         {
           "heading": "Naredite ožji izbor, ki prenese ponovni pregled",
           "paragraphs": [
             "Aktivni ožji izbor omejite na nekaj kandidatov za vsako potrebo. Vsakemu dodelite isti majhen nabor polj: izvirno povezavo, izbrano možnost, prikazano ceno, znane dodatne stroške, zahtevano mero in nerešeno vprašanje. Ne potrebujete zapletenega sistema točkovanja. Dosledni zapiski olajšajo razlikovanje med oglasom z boljšimi dokazi in oglasom z bolj prepričljivo fotografijo.",
             "Po premoru se vrnite k ožjemu izboru. Ponovno odprite trenutne povezave, odstranite dvojnike in preverite, ali je shranjena možnost še na voljo. Če kandidat po več preverjanjih ostane nejasen, je to uporabna informacija. Morda je bolje izbrati jasnejši oglas kot vlagati več truda v zagovarjanje negotove izbire. Ožji izbor naj zmanjšuje negotovost, ne kopiči zavihkov."
-          ]
+          ],
+          "id": "section-7"
         },
         {
           "heading": "Na telefonu uporabite isto metodo",
           "paragraphs": [
             "Na majhnem zaslonu primerjajte zavestno, namesto da se med pomikanjem zanašate na spomin. Odprite en izdelek, preglejte ključna polja in shranite ustrezno povezavo, preden nadaljujete. Povečava fotografije lahko pomaga pri vidnih podrobnostih, ne more pa povrniti informacij, ki jih slika nikoli ni vsebovala. Zamegljena oznaka ostaja neodgovorjeno vprašanje.",
             "Ob vrnitvi v katalog ohranite izbiro kategorije in razvrščanja. Če zamenjate jezik, potrdite, da ostajate na želeni strani izdelka ali rezultatov. Prevod naj pomaga razumeti vmesnik, ne ustvariti druge identitete izdelka. Pred plačilom ponovno preverite izbrano možnost na samem Kakobuyu. Zadnja kontrola je posebej smiselna, ko ste med istim brskanjem odprli več podobnih oglasov."
-          ]
+          ],
+          "id": "section-8"
         },
         {
           "heading": "Uporabite jasno pravilo za zaključek",
           "paragraphs": [
             "Z raziskovanja ste pripravljeni preiti na naročilo, ko se izvirni oglas ujema s ciljem, je želena možnost izrecna, je vprašanje prileganja dovolj dobro odgovorjeno in razumete, kateri stroški še potrebujejo ponudbo. To ne odpravi vsakega tveganja, vendar daje razumno podlago za naslednji korak.",
             "Če ti pogoji niso izpolnjeni, nadaljujte raziskovanje ali izdelek izpustite. Velikosti kataloga, navdušenega naslova ali nizke cene ne obravnavajte kot nadomestila za dokaze. Uporaben katalog Kakobuy podpira odločitve, ki jih znate pojasniti: zakaj ta oglas, zakaj ta možnost in kaj boste ponovno preverili ob prihodu izdelka v skladišče."
-          ]
+          ],
+          "id": "section-9"
         }
       ],
       "sources": [
@@ -250,14 +284,22 @@
         "https://www.kakobuy.com/index/information?information_id=12",
         "https://www.kakobuy.com/service/help/question?id=91"
       ],
-      "wordCount": 1450
+      "wordCount": 1232,
+      "datePublished": "2026-10-24",
+      "dateModified": "2026-10-30",
+      "answer": "Iščite po vrsti izdelka, odprite točen oglas in preverite povezavo do tržnice, izbrano velikost ter prodajalčeve fotografije. Shranite le kandidate, pri katerih razumete celoten proračun in pogoje vračila. Vnos v preglednici je pripomoček za odkrivanje, ne dokaz, da je bil izdelek pregledan ali potrjen kot pristen.",
+      "related": [
+        "kakobuy-weidian-taobao-links",
+        "kakobuy-shipping-calculator",
+        "is-kakobuy-legit"
+      ]
     },
     {
       "slug": "how-to-buy-on-kakobuy",
       "title": "Kako kupovati na Kakobuyu: vodnik za prvo naročilo po korakih",
       "description": "Spremljajte naročilo od prodajalčeve povezave do pregleda v skladišču in oddaje paketa, z jasnimi preverjanji pred vsakim plačilom.",
       "category": "Vodnik za nakup",
-      "readMinutes": 7,
+      "readMinutes": 6,
       "intro": "Nakup prek Kakobuya vključuje več povezanih odločitev, ne le enega plačila. Izberete prodajalčev izdelek, uredite njegov nakup, pregledate prejeto blago v skladišču in nato uredite mednarodno dostavo. Razumevanje zaporedja olajša razlago zaslonov in pomaga preprečiti potrditev koraka, preden so njegove pomembne podrobnosti jasne. Vodnik sledi objavljenemu poteku storitve, trenutne cene, razpoložljivost in pogoje poti pa prepušča aktualnim stranem Kakobuya.",
       "sections": [
         {
@@ -265,70 +307,80 @@
           "paragraphs": [
             "Pred dodajanjem denarja ali naročilom se odločite, kaj želite kupiti. Shranite izvirni URL prodajalca in zapišite točno možnost: velikost, barvo, model, količino in oznako različice. En oglas tržnice lahko vsebuje veliko možnosti z različnimi cenami. Shranjevanje samo glavne slike pušča preveč prostora za poznejšo zmedo.",
             "Oglas skrbno odprite in prepoznajte vse, kar vpliva na odločitev. Oblačilo potrebuje uporabno referenco velikosti. Torba lahko potrebuje dimenzije. Elektronski izdelek lahko zahteva specifikacijo, ki je fotografija ne more potrditi. Če kaj manjka, zapišite kratko vprašanje. To je preprosteje storiti pred plačilom kot po nakupu poskušati iz spomina obnoviti pričakovanja."
-          ]
+          ],
+          "id": "section-0"
         },
         {
           "heading": "Uporabite uradni cilj za račun",
           "paragraphs": [
             "Povezava za registracijo na tem spletišču vodi na Kakobuy. Tam dokončajte nastavitev računa in tam hranite prijavne podatke. To neodvisno spletišče z vodniki za pomoč pri brskanju ne potrebuje vašega gesla Kakobuy, plačilnih podatkov ali dostopa do naročil. Ko se pojavi prijavni zaslon, preglejte naslov in se prepričajte, da gre za storitev, ki ste jo nameravali uporabiti.",
             "Pred vplačilom preglejte trenutne informacije o računu, plačilih in storitvi. Ne predpostavljajte, da promocija iz starejše objave danes velja za nov račun. Če se med registracijo pojavi ugodnost, preberite pogoje, rok in storitev, za katero velja. Jasno razumevanje običajnih stroškov je uporabnejše od proračuna, zgrajenega okoli nepreverjenega kupona ali obljubljenega popusta."
-          ]
+          ],
+          "id": "section-1"
         },
         {
           "heading": "Uvoženi izdelek primerjajte z izvirnim oglasom",
           "paragraphs": [
             "S povezavo izdelka odprite izdelek v Kakobuyu, nato rezultat primerjajte s shranjeno referenco. Preverite identiteto izdelka, fotografije, prikazane podatke prodajalca in oznake možnosti. ID tržnice ni enak interni številki zapisa kataloga. Cilj mora razrešiti izvirni oglas prodajalca, ne le vsebovati številke, ki je videti verjetna.",
             "Če izdelka ni mogoče uvoziti, ni na voljo ali prikazuje nepričakovan izdelek, ne nadaljujte z ugibanjem. Ponovno preverite izvirni URL in odstranite nepovezane sledilne parametre ali dele naslova le, ko razumete dejanski naslov izdelka. Ne zamenjajte oglasa z drugim brez pregleda njegovih mer in pogojev. Nadomestek pomeni novo odločitev za nakup, tudi če sta sliki skoraj enaki."
-          ]
+          ],
+          "id": "section-2"
         },
         {
           "heading": "Izberite točno možnost in napišite natančne opombe",
           "paragraphs": [
             "Vsako možnost izberite namerno. Preberite oznake velikosti in barve, namesto da se zanašate na položaj sličic, saj se vrstni red možnosti med zasloni lahko razlikuje. Potrdite količino in ceno, povezano z izbiro. Če prodajalec uporablja kodo modela, jo ohranite v zapiskih. Lahko je natančnejši identifikator kot ohlapno prevedeno ime barve.",
             "V razpoložljivo polje za navodila vnesite kratko zahtevo, ki jo je mogoče preveriti. »Prosimo, potrdite izbrano možnost: črna, velikost M« je jasneje kot »pošljite najboljšega«. Z opombo ne predpostavljajte, da je mogoče dobaviti nedostopno možnost. Če zahteva spreminja prodajalčevo ponudbo, najprej poiščite potrditev. Opombe naj pojasnijo izbiro, ne neopazno zamenjajo dejansko izbrane možnosti."
-          ]
+          ],
+          "id": "section-3"
         },
         {
           "heading": "Plačilo izdelka preglejte kot samostojno fazo",
           "paragraphs": [
             "Objavljeni nakupni postopek Kakobuya opisuje plačilo blaga in domače poštnine pred poznejšo fazo mednarodnega paketa. Preberite trenutni skupni znesek in prepoznajte vključene sestavine. Plačilo izdelka ne pomeni, da je že poslan na vaš dom, niti ne določa končnega zneska mednarodne dostave.",
             "Hranite zapis izbranega izdelka in odobrenega zneska. Če se cena ali možnost pred dokončanjem nakupa spremeni, preberite pojasnilo in potrdite želeni odziv. Smiselno je ustaviti postopek, ko spremenjena ponudba ne ustreza več proračunu ali zahtevam. Skrben pregled v tej fazi lahko prepreči zapletenejši pogovor, ko je izdelek že v domačem prevozu."
-          ]
+          ],
+          "id": "section-4"
         },
         {
           "heading": "Statuse naročila berite kot faze, ne obljube prihoda",
           "paragraphs": [
             "Naročilo gre skozi različne dejavnosti: obdelavo nakupa, odpremo prodajalca, domači prevoz in prejem v skladišču. Sprememba ene faze ne pomeni samodejno, da je naslednja končana. Preberite dejanski status in sporočilo izdelka. Domače sledilne številke na primer ne zamenjajte s poznejšim sledenjem mednarodnega paketa.",
             "Če napredek ni jasen, postavite usmerjeno vprašanje z referenco naročila in zadnjim vidnim dogodkom. »Odprema prodajalca še ni potrjena; moram kaj storiti?« je uporabnejše od neutemeljene ocene prihoda paketa. Načrtov potovanja ali darila ne gradite na eni optimistični številki. Izpolnitev prodajalčevega naročila in mednarodna dostava sta odvisni od različnih dogodkov in lahko potrebujeta ločeni časovni rezervi."
-          ]
+          ],
+          "id": "section-5"
         },
         {
           "heading": "Prejeti izdelek preglejte pred oddajo paketa",
           "paragraphs": [
             "Kakobuy v svojem poteku storitve opisuje skladiščni pregled in fotografije. Ko so dokazi za izdelek na voljo, jih primerjajte z naročeno možnostjo. Začnite z identiteto in popolnostjo: pravi izdelek, oznaka velikosti, barva ali različica ter sestavni deli, pričakovani po oglasu. Nato preglejte vidna področja, pomembna za vašo uporabo.",
             "Razumite omejitve pregleda. Fotografija lahko pokaže oznako ali šiv, ne more pa dokazati vsakega vidika prileganja, udobja, trajnosti ali delovanja. Če potreben pogled manjka, vprašajte, ali je ustrezno dodatno preverjanje na voljo in koliko stane. Nerešeno vprašanje ločite od odobritve pošiljanja. Ko paket napreduje, se lahko praktične možnosti reševanja težave s prodajalcem spremenijo."
-          ]
+          ],
+          "id": "section-6"
         },
         {
           "heading": "Vprašanja razrešite z jasnimi dokazi",
           "paragraphs": [
             "Če opazite morebitno neskladje, ga opišite v kratkem sporočilu z ustrezno referenco. Navedite, kaj ste naročili, kaj kažejo dokazi prejetega izdelka in kaj želite pojasniti. Po potrebi pokažite na konkretno fotografijo ali prodajalčevo možnost. To je uporabnejše od splošne trditve, da je izdelek videti napačen, posebej kadar sta barva ali mera dvoumni.",
             "Pred predpostavljanjem izida vprašajte po trenutnih možnostih vračila ali zamenjave. Kakobuyeva pomoč obravnava poprodajne postopke, povezane s prodajalcem, vendar je treba upravičenost, roke in stroške preveriti za dejansko naročilo. Ne obljubite si, da je vsako težavo mogoče odpraviti brezplačno. Pred odločitvijo, da izdelek obdržite, zamenjate, vrnete ali izpustite iz pošiljke, upoštevajte dokaze, odgovor podpore in skupne posledice."
-          ]
+          ],
+          "id": "section-7"
         },
         {
           "heading": "Paket sestavite glede na dejansko vsebino",
           "paragraphs": [
             "Ko so izdelki, ki jih želite poslati, pripravljeni, preglejte možnosti paketa v Kakobuyu. Preverite naslov dostave, prejemnikove podatke, omejitve vsebine, pakiranje in razpoložljive poti. Končni paket je nova enota primerjave: več posamezno poceni izdelkov lahko ustvari velik paket, različne izbire pakiranja pa lahko spremenijo ponudbo ali zaščito.",
             "Poti primerjajte z isto vsebino in predpostavkami. Preberite trenutne pogoje, ne le cene na vrhu seznama. Če so na voljo zavarovanje, dodatno pakiranje ali druga storitev, pred izbiro preglejte obseg in ceno. Ne predpostavljajte, da je vsaka storitev potrebna ali vključena. Koristno vprašanje je, ali izbrana kombinacija ustreza izdelku, cilju in želeni ravni zaščite."
-          ]
+          ],
+          "id": "section-8"
         },
         {
           "heading": "Potrdite pošiljko in dokaze hranite skupaj",
           "paragraphs": [
             "Pred oddajo paketa preglejte celoten plačljivi znesek in vse zahtevane podatke deklaracije. Uporabite točne informacije in sledite veljavnim zahtevam poti in cilja. Če polje ni jasno, poiščite pojasnilo pri storitvi, ki obdeluje pošiljko, namesto da prekopirate poljubno vrednost iz tujega naročila.",
             "Po oddaji hranite referenco paketa, pot in podatke sledenja skupaj z nakupnimi zapisi. Posodobitve sledenja razlagajte v dejanskem zaporedju dogodkov prevoznika. Če nastane težava, uporabite ustrezen kanal naročila ali paketa in opišite zadnji potrjeni dogodek. Cilj je sledljiv postopek: ena preverjena referenca prodajalca, ena izrecna izbira možnosti, pregledan skladiščni izdelek in premišljeno izbrana mednarodna pošiljka."
-          ]
+          ],
+          "id": "section-9"
         }
       ],
       "sources": [
@@ -340,14 +392,16 @@
         "https://www.kakobuy.com/service/help/question?id=51",
         "https://www.kakobuy.com/service/help/question?id=69"
       ],
-      "wordCount": 1388
+      "wordCount": 1127,
+      "datePublished": "2026-10-24",
+      "dateModified": "2026-10-24"
     },
     {
       "slug": "kakobuy-qc-photos-guide",
       "title": "Vodnik po fotografijah QC na Kakobuyu: kaj preveriti pred pošiljanjem",
       "description": "Sistematično preglejte skladiščne fotografije, ločite prodajalčeve slike od dokazov QC in prepoznajte podrobnosti, ki jih je vredno pojasniti.",
       "category": "Vodnik QC",
-      "readMinutes": 8,
+      "readMinutes": 6,
       "intro": "Fotografije QC na Kakobuyu so uporabne, ko jih povežete s konkretnim vprašanjem o izdelku, prejetem za vaše naročilo. Manj uporabne so, ko jih hitro preletite, prepoznate splošno obliko in predpostavite, da je vse drugo pravilno. Strukturiran pregled se začne z identiteto, nadaljuje z vidno izdelavo in merami ter konča z nerešenimi vprašanji. Vodnik pojasnjuje postopek brez obravnavanja fotografije kot jamstva pristnosti, delovanja ali popolnega prileganja.",
       "sections": [
         {
@@ -355,70 +409,80 @@
           "paragraphs": [
             "Prodajalčeva fotografija predstavlja ponudbo izdelka. Lahko je stilizirana slika, bližnji posnetek, tabela velikosti ali primer razpoložljive možnosti. Skladiščna slika QC dokumentira izdelek, prejet za pregled. Razlika je pomembna, ker se sliki lahko nanašata na različna trenutka in morda ne prikazujeta istega fizičnega kosa.",
             "Pretekla slika pregleda lahko ponudi kontekst oglasa, vendar vaše naročilo potrebuje svoj pregled. Pred zanašanjem na fotografijo preverite referenco izdelka in povezavo z naročilom. Če galerija ni označena kot preverjen QC, jo obravnavajte kot slike izdelka, ne dokaze pregleda. Več slik ne pomeni samodejno boljših dokazov; uporabne so slike, ki kažejo natančno značilnost, ki jo morate presoditi."
-          ]
+          ],
+          "id": "section-0"
         },
         {
           "heading": "Začnite z identiteto in ujemanjem možnosti",
           "paragraphs": [
             "Pred pregledom majhnih podrobnosti potrdite, da je izdelek tisti, ki ste ga želeli naročiti. Primerjajte vrsto izdelka, barvo ali različico, vidno oznako velikosti in vključene dele s shranjeno možnostjo. Če oglas uporablja kode modelov, jih primerjajte, kjer so berljive. Ta prvi pregled lahko odkrije preprosto neskladje, preden porabite čas za šive ali zaključno obdelavo.",
             "Izdelek preglejte kot celoto. Par čevljev potrebuje oba čevlja; komplet oblačil kose, opisane v izbrani možnosti; dodatek z odstranljivimi deli pričakovane sestavne dele. Ne sklepajte, da je skriti del vključen samo zato, ker je na prodajalčevi promocijski fotografiji. Če popolnosti ni mogoče potrditi z razpoložljivimi pogledi, prosite za pojasnilo prav o tem delu."
-          ]
+          ],
+          "id": "section-1"
         },
         {
           "heading": "Pred povečavo preglejte celoten izdelek",
           "paragraphs": [
             "Začnite s celotnim pogledom, da razumete obliko in poravnavo. Preverite, ali je izdelek enakomerno razporejen in ali perspektiva lahko pojasni vizualno razliko. Prepognjen rokav, nagnjen čevelj ali kamera pod kotom lahko eno stran naredi drugačno brez dokaza napake. Pred trdnim sklepom iz ene fotografije poiščite drug pogled.",
             "Nato se premaknite na področja, pomembna za kategorijo. Pri oblačilih preglejte vidne šive, zapirala in splošno poravnavo delov. Pri čevljih primerjajte levi in desni čevelj iz podobnih kotov. Pri torbah preglejte obris, pritrditve ročajev in prikazana zapirala. Vidna opažanja opišite natančno. »Šiv je na tej sliki videti neenakomeren« je boljša podlaga za vprašanje kot trditev o kakovosti izdelave, ki je fotografija ne more potrditi."
-          ]
+          ],
+          "id": "section-2"
         },
         {
           "heading": "Podrobne fotografije berite z določenim vprašanjem",
           "paragraphs": [
             "Povečava je uporabna, ko je izvirna slika dovolj jasna. Poglejte relevantno oznako, zapiralo, rob ali površino in vprašajte, kaj slika dejansko kaže. Morda lahko prepoznate madež, manjkajoč del ali nepričakovano oznako. Samo iz bližnjega posnetka običajno ne morete določiti sestave materiala, dolgotrajne obstojnosti ali skrite konstrukcije.",
             "Digitalne povečave ne uporabljajte kot nadomestilo za manjkajoč pogled. Majhna zamegljena oznaka ne postane zanesljiv dokaz, ker zapolni zaslon. Če je pomembna za odločitev, vprašajte, ali je na voljo jasnejša fotografija. Zahtevo omejite na negotovo podrobnost. Tako ločite potrebno preverjanje od ponavljajočih se fotografij, ki ne odgovorijo na novo vprašanje."
-          ]
+          ],
+          "id": "section-3"
         },
         {
           "heading": "Barvo in svetlobo obravnavajte kot negotovost",
           "paragraphs": [
             "Odtenek je lahko drugačen zaradi skladiščne svetlobe, osvetlitve kamere in nastavitev zaslona. Primerjajte več pogledov in razmislite, ali so tudi okoliške površine barvno spremenjene. Kakobuyeve informacije o pregledu med omejitvami storitve omenjajo barvne razlike. Ene fotografije zato ne obravnavajte kot natančno meritev barve.",
             "Če je določena barva pomembna, opišite pričakovano prodajalčevo možnost in vprašajte, ali prejeti izdelek ustreza izbiri. To je uporabneje kot zahtevati ujemanje z videzom drugače osvetljene promocijske slike. Če razlika ostane nejasna, presodite, ali je negotovost za vas sprejemljiva. Nekateri nakupi so bolj odvisni od natančnega ujemanja, zato je previdna odločitev lahko primerna, ko fotografije ne morejo razrešiti zahteve."
-          ]
+          ],
+          "id": "section-4"
         },
         {
           "heading": "Mere preverjajte z ujemajočimi se metodami",
           "paragraphs": [
             "Mera je uporabna le, če razumete začetno in končno točko ter enote. Oblačilo, fotografirano na mrežasti podlagi, lahko ponudi kontekst, vendar ni vedno enakovredno traku, položenemu po natančnem šivu, ki vas zanima. Kadar je mogoče, primerjajte mere, vzete enako kot v prodajalčevi tabeli ali na referenčnem oblačilu.",
             "Pri majici je ravna širina čez trup drugačna od telesnega obsega. Pri hlačah je sproščen pas drugačen od raztegnjene mere. Pri čevlju je zunanja dolžina podplata drugačna od dolžine stopala ali odstranljivega vložka. Če pomen ni jasen, postavite konkretno vprašanje. Kakobuyeve smernice velikosti priporočajo uporabo mer, omejitve pregleda pa opozarjajo, da preverjanje mer ni brezpogojno jamstvo."
-          ]
+          ],
+          "id": "section-5"
         },
         {
           "heading": "Dodatne dokaze zahtevajte, ko spremenijo odločitev",
           "paragraphs": [
             "Uporabna zahteva določi izdelek, potreben pogled in razlog njegove pomembnosti. Lahko na primer zahtevate berljivo oznako velikosti, oba čevlja iz istega kota ali merjenje s trakom med imenovanima točkama. Vprašajte Kakobuy, ali je zahteva podprta za trenutni izdelek in ali je plačljiva. Razpoložljivost in ceno preverite ob zahtevi.",
             "Prednost dajte vprašanjem, ki bi lahko spremenila odločitev o obdržanju ali pošiljanju izdelka. Dodatna fotografija že jasne površine lahko doda malo. Manjkajoča mera oprijetega oblačila je lahko veliko pomembnejša. Osredotočene zahteve olajšajo tudi razlago poznejšega odgovora: preverite lahko, ali novi dokaz odgovarja na prvotno vprašanje, namesto ponovnega začetka pregleda."
-          ]
+          ],
+          "id": "section-6"
         },
         {
           "heading": "Razumite, česa vizualni pregled ne more dokazati",
           "paragraphs": [
             "Vidni dokazi QC imajo meje. Fotografija ne določa udobja med celodnevno uporabo, odziva blaga na pranje, življenjske dobe zapirala ali notranje varnosti elektronske naprave. Objavljene Kakobuyeve informacije o pregledu vključujejo izključitve nekaterih funkcionalnih in elektronskih preverjanj. Uspešnega vizualnega pregleda ne spremenite v širše potrdilo.",
             "Potrditev pristnosti je prav tako drugačna trditev od opazovanja prejetega izdelka. Viden logotip ali znana oblika sama ne dokazuje izvora ali licenciranja. Če je nakup odvisen od določenega certifikata, specifikacije materiala ali standarda delovanja, pred naročilom pridobite ustrezno dokumentacijo od relevantnega vira. Če dokaz ni na voljo, vrzeli ne zapolnjujte z zbirko fotografij QC."
-          ]
+          ],
+          "id": "section-7"
         },
         {
           "heading": "Olajšajte razpravo o težavah",
           "paragraphs": [
             "Ko najdete pomislek, naj sporočilo ostane stvarno. Določite naročilo ali skladiščni izdelek, opišite izbrano možnost in pojasnite opaženo razliko. Pokažite na fotografijo, ki jo kaže, in navedite potrebno pojasnilo. Tako ustvarite jasen zapis, na katerega lahko podpora odgovori brez ugibanja o izdelku ali značilnosti.",
             "Vprašanja ločite od zahtevanih izidov. Najprej ugotovite, ali je navidezna sled svetlobni učinek ali fizična težava, ali je manjkajoči del samo zunaj kadra oziroma ali je prišla napačna možnost. Nato vprašajte po ustreznih naslednjih korakih. Pogoji vračila, zamenjave ali druge obravnave so odvisni od trenutnega naročila in prodajalčevih pogojev; pomislek QC ne ustvari samodejno upravičenosti do določenega ukrepa."
-          ]
+          ],
+          "id": "section-8"
         },
         {
           "heading": "Pred odobritvijo paketa opravite končni pregled",
           "paragraphs": [
             "Pred oddajo izdelka za pošiljanje ponovno preglejte vprašanja, zapisana pred nakupom. So bili preverjeni identiteta, možnost, pomembne vidne značilnosti in relevantne mere? Ali kakšno odprto sporočilo še čaka odgovor? Dokaze pregleda hranite skupaj z referenco izdelka, da razlogi za odločitev ostanejo jasni.",
             "Ni treba iskati napake na vsaki fotografiji. Cilj je presoditi, ali dokazi zadoščajo za vašo nameravano uporabo in ali so pomembne negotovosti obravnavane. Če vprašanje ostaja nerešeno, se ustavite, namesto da tišino obravnavate kot potrditev. Skrben pregled QC je praktična kontrolna točka med prejemom izdelka in zavezo k njegovemu mednarodnemu prevozu."
-          ]
+          ],
+          "id": "section-9"
         }
       ],
       "sources": [
@@ -429,85 +493,128 @@
         "https://www.kakobuy.com/service/help/question?id=89",
         "https://www.kakobuy.com/service/help/question?id=51"
       ],
-      "wordCount": 1409
+      "wordCount": 1130,
+      "datePublished": "2026-10-24",
+      "dateModified": "2026-10-24"
     },
     {
       "slug": "kakobuy-shipping-costs",
-      "title": "Stroški dostave na Kakobuyu: proračun od cene izdelka do dostave",
-      "description": "Ločite ceno izdelka, domači prevoz, mednarodno dostavo in dodatne storitve, nato ponudbe paketov primerjajte z enakimi predpostavkami.",
+      "title": "Stroški dostave Kakobuy: teža, pristojbine in celoten proračun",
+      "description": "Načrtujte dostavo Kakobuy s težo zapakiranega paketa, merami in stroški prevozne poti. Primerjajte celotne stroške namesto same cene izdelka.",
       "category": "Dostava",
-      "readMinutes": 8,
+      "readMinutes": 7,
       "intro": "Številka na kartici izdelka je le del proračuna za nakup prek posrednika. Uporabna ocena dostave Kakobuy se začne z ločevanjem plačila izdelka od plačila prevoza in obdelave paketa. Loči tudi načrtovano oceno od dejanske ponudbe za vaš cilj in vsebino. Ta vodnik pokaže, kako urediti stroške, primerjati možnosti in ugotoviti, katere informacije še potrebujete pred oddajo pošiljke.",
       "sections": [
+        {
+          "heading": "Primer proračuna: kaj je vključeno in kaj manjka?",
+          "paragraphs": [
+            "Ponazoritveni primer v eni valuti: izdelek stane 30, domača dostava 3, mednarodni prevoz 24 in dodatno pakiranje 2. Vmesni seštevek je 59 pred morebitnimi stroški pretvorbe pri plačilu, zavarovanjem ali veljavnimi uvoznimi stroški. Zneski ponazarjajo postopek; niso cene Kakobuy ali ponudba za določen cilj."
+          ],
+          "table": {
+            "headers": [
+              "Postavka stroškov",
+              "Preverite pred primerjavo"
+            ],
+            "rows": [
+              [
+                "Izdelek + domača dostava",
+                "Uporabite isto različico, količino in prodajalca."
+              ],
+              [
+                "Mednarodni prevoz",
+                "Uporabite isti cilj, mere zapakiranega paketa in obračunsko težo."
+              ],
+              [
+                "Pakiranje + izbirne storitve",
+                "Dodajte le storitve, izbrane za ta paket."
+              ],
+              [
+                "Plačilni + uvozni stroški",
+                "Potrdite pretvorbo valute in kaj ponudba za prevozno pot dejansko vključuje."
+              ]
+            ]
+          },
+          "id": "decision-check"
+        },
         {
           "heading": "Ločite fazo izdelka od faze paketa",
           "paragraphs": [
             "Objavljene Kakobuyeve informacije o stroških in naročanju ločujejo blago in domačo poštnino od poznejše mednarodne dostave. Ta razlika je temelj zanesljivega proračuna. Ko pregledujete oceno izdelka v USD, jo zabeležite kot referenco blaga. Ne obravnavajte je tiho kot znesek, potreben za prejem izdelka na vaš naslov.",
             "Ustvarite ločene postavke za izdelek, domačo dostavo, mednarodni prevoz, izbrano pakiranje ali storitve in vsak drug ustrezen strošek, prikazan za naročilo ali pot. Nekatere postavke lahko ostanejo neznane do pozneje. Iskreno prazno polje je uporabnejše od ugibane številke, ki deluje natančno. Ko aktualni zaslon naročila ali paketa poda znesek, zamenjajte načrtovano predpostavko in zapišite, katera odločitev ali storitev je povzročila spremembo."
-          ]
+          ],
+          "id": "section-0"
         },
         {
           "heading": "Primerjajte natančno izbrano možnost",
           "paragraphs": [
             "En oglas lahko vsebuje različne velikosti, različice ali komplete po različnih cenah. Pred oceno pošiljke preverite, da cena blaga pripada možnosti, ki jo nameravate naročiti. Nizka začetna cena se lahko nanaša na dodatek ali drugo različico. Preberite skupni znesek izbrane možnosti, namesto da množite prvo vidno ceno na strani izdelka.",
             "Možnost lahko vpliva tudi na potrebe pakiranja. Komplet, izdelek v škatli in posamezen kos brez škatle imajo lahko različne praktične zahteve. Če oglas nima zanesljive mase ali dimenzij, naj ocena dostave ostane široka do boljših informacij. Ne izposodite si mase vizualno podobnega izdelka in rezultata ne predstavljajte kot ponudbo za svoj nakup. Povezava med izbranim izdelkom in oceno mora ostati izrecna."
-          ]
+          ],
+          "id": "section-1"
         },
         {
           "heading": "Domači prevoz razumite kot ločen del poti",
           "paragraphs": [
             "Domači prevoz premakne kupljeni izdelek od prodajalca do posrednikovega prevzemnega mesta. Preverite, ali je vključen v prodajalčevo ponudbo ali dodan na zaslonu uvoženega naročila. Če razmišljate o več izdelkih iz različnih oglasov, preverite dejansko obravnavo vsakega naročila, namesto da predpostavljate enake pogoje vseh prodajalcev.",
             "Ta strošek je ločen od mednarodnega pošiljanja skladiščnega paketa. Ločevanje faz pomaga, ko je naročilo videti plačano, vendar pozneje še zahteva plačilo paketa. Olajša tudi razumevanje sprememb: spremenjen znesek blaga ali domačega prevoza ni nujno sprememba cene mednarodne poti. Če znesek ni jasen, pred odobritvijo vprašajte, kateri del postopka pokriva."
-          ]
+          ],
+          "id": "section-2"
         },
         {
           "heading": "Maso in dimenzije obravnavajte kot različni vprašanji",
           "paragraphs": [
             "Velikost paketa je lahko pomembna poleg mase. Kompakten gost predmet in lahek velik predmet povzročata različne prevozne in pakirne zahteve. Ko ponudba poti zahteva dimenzije ali prikazuje način obračunske mase, preberite dejansko pravilo. Ne predpostavljajte, da formula drugega prevoznika ali poti velja za vašo pošiljko.",
             "Za načrtovanje zapišite, kaj veste o izdelku in kaj ostaja neznano o zapakiranem paketu. Prodajalčeva masa izdelka morda ne vključuje zaščitnega materiala ali transportne škatle. Dimenzije izdelka morda niso enake dimenzijam končnega paketa. Ko je pomembno, zahtevajte razpoložljive podatke paketa, nato primerjajte poti na isti osnovi. Tako dveh ocen z različnimi predpostavkami pakiranja ne obravnavate kot neposredno primerljivih."
-          ]
+          ],
+          "id": "section-3"
         },
         {
           "heading": "Pakiranje preglejte glede stroška in zaščite",
           "paragraphs": [
             "Odločitve o pakiranju naj odražajo izdelek. Odstranitev velike prodajne škatle lahko spremeni dimenzije, vendar škatla lahko zagotavlja zaščito ali je del želenega prejetega blaga. Dodatne ojačitve ali zaščitni materiali lahko spremenijo tako ceno kot velikost paketa. Pred odločitvijo preverite možnosti dejanskega paketa in trenutne stroške.",
             "Izbiro opredelite praktično. Krhek predmet, oblikovana torba in mehko oblačilo ne potrebujejo nujno enakega pristopa. Vprašajte, kaj bo zaščiteno, kaj odstranjeno in ali je končno pakiranje primerno za izbrano pot. Ne izberite vsake dodatne storitve samo zato, ker je na voljo, niti ne zavrnite vse zaščite samo zaradi nižje začetne ponudbe. Primerjajte celovito možnost, s katero ste pripravljeni poslati paket."
-          ]
+          ],
+          "id": "section-4"
         },
         {
           "heading": "Poti primerjajte z enakimi predpostavkami",
           "paragraphs": [
             "Uporabna primerjava poti ohranja isto vsebino, cilj in predpostavke pakiranja. Nato preberite ponujeni znesek, trenutno oceno dostave, sprejete izdelke, podatke sledenja in pogoje Kakobuya. Najnižja izpostavljena cena morda ni najprimernejša možnost za vaš paket, višja cena pa sama ne dokazuje boljše obravnave.",
             "Zapišite dve ali tri poti, o katerih dejansko razmišljate, in razlog primernosti vsake. Če možnost ni na voljo za vsebino ali cilj, jo odstranite, namesto da ceno ohranite kot merilo. Aktualne podatke poti preverite blizu oddaje, saj se razpoložljivost in pogoji lahko spremenijo. Posnetek tuje pošiljke je kontekst, ne nadomestilo za ponudbo vašega paketa."
-          ]
+          ],
+          "id": "section-5"
         },
         {
           "heading": "Izbrane storitve naj bodo vidne v skupnem znesku",
           "paragraphs": [
             "Pakiranje, dodatna obdelava in druge izbirne storitve naj bodo v proračunu vidne kot ločene odločitve. Pred plačilom preberite, kaj storitev vključuje. Podobna oznaka na dveh straneh ne zagotavlja enakega obsega. Če niste prepričani, ali je strošek izbiren, vključen ali zahtevan za izbrano pot, poiščite pojasnilo pred nadaljevanjem.",
             "Če je ponujeno zavarovanje ali zaščita, preberite ustrezno kritje, izključitve in pogoje zahtevkov. Ne ocenjujte ga samo po premiji in ne predpostavljajte, da pokriva vse možne težave. Če možnost izberete, shranite kopijo pogojev, predstavljenih za pošiljko. Cilj ni izbrati največ storitev, temveč razumeti, kaj vsaka izbrana storitev spremeni in katere odgovornosti ostajajo vaše."
-          ]
+          ],
+          "id": "section-6"
         },
         {
           "heading": "Carinske postopke obravnavajte glede na pot",
           "paragraphs": [
             "Kakobuyeva pomoč ločuje načine pošiljanja z različnimi carinskimi postopki. Ne predpostavljajte, da opis ene poti velja za drugo pot, drug cilj ali poznejši datum. Preberite trenutne pogoje razpoložljive možnosti in prepoznajte stroške ali dejanja, ki morda ostanejo vaša odgovornost.",
             "Kadar se zahteva, podajte točne podatke o izdelku in pošiljki. Če polje deklaracije ali zahteva cilja ni jasna, preverite ustrezne uradne smernice ali storitev, ki obdeluje paket. Ne kopirajte poljubnih vrednosti drugega kupca. Vodnik ne izračunava univerzalnega davka ali carine, ker je pravilna obravnava odvisna od dejanskega blaga, cilja in veljavnih pravil. Proračun naj te negotovosti zabeleži, ne skrije v izmišljeni skupni strošek dostave."
-          ]
+          ],
+          "id": "section-7"
         },
         {
           "heading": "Skrbno primerjajte skupne in ločene pakete",
           "paragraphs": [
             "Združevanje nakupov je lahko priročno, vendar ni univerzalno pravilo varčevanja. Skupen paket lahko spremeni dimenzije, razrede mase, izbiro pakiranja in upravičenost poti. Ločeni paketi lahko ustvarijo ponavljajoče se stroške. Za odločitev o smiselni razporeditvi prispelih izdelkov potrebujete dejanske primerljive možnosti.",
             "Začnite z izdelki, pripravljenimi za pošiljanje, nato razpoložljive načine obdelave primerjajte na isti osnovi. Ne dodajajte nepotrebnega izdelka samo za upravičenje večjega paketa ali doseganje domnevnega praga prihranka. Če izdelek zamuja, premislite, ali čakanje spreminja prioritete ali razpoložljive pogoje storitve. Cilj je pošiljka, ki ustreza nakupu, ne več nakupovanja zaradi špekulativnega izračuna dostave."
-          ]
+          ],
+          "id": "section-8"
         },
         {
           "heading": "Oceno posodobite ob vsaki odločitvi",
           "paragraphs": [
             "Praktičen proračun ima kontrolne točke. Najprej med raziskovanjem zabeležite oceno blaga. Nato jo pred nakupom zamenjajte z izbrano možnostjo in skupnim domačim stroškom. Ko izdelek prispe, dodajte ustrezne podatke paketa in aktualno ponudbo poti. Ob oddaji nazadnje preglejte celoten znesek, vključno z namerno izbranimi storitvami.",
             "Za ponazoritev si predstavljajte dva kandidata s podobnima cenama izdelka. Eden potrebuje večji paket ali drugo obdelavo; drugega lažje združite z že načrtovanimi izdelki. Samo iz kartic izdelkov ne morete ugotoviti nižjega stroška do dostave. Primerjavo pustite odprto do potrebne ponudbe. Uporaben proračun dostave jasno navaja predpostavke, se posodobi ob spremembi dejstev in se nanaša na paket, ki ga boste dejansko oddali."
-          ]
+          ],
+          "id": "section-9"
         }
       ],
       "sources": [
@@ -516,14 +623,22 @@
         "https://www.kakobuy.com/service/help/question?id=69",
         "https://www.kakobuy.com/index/information?information_id=12"
       ],
-      "wordCount": 1401
+      "wordCount": 1274,
+      "datePublished": "2026-10-24",
+      "dateModified": "2026-10-30",
+      "answer": "Uporaben skupni znesek vključuje izdelek, domačo dostavo, mednarodni prevoz ter veljavne plačilne, storitvene in uvozne stroške. Pred primerjavo poti pridobite težo in mere zapakiranega paketa. Za vse države, pakete in prevozne linije ne obstaja ena zanesljiva cena na kilogram.",
+      "related": [
+        "kakobuy-shipping-calculator",
+        "kakobuy-shipping-time-tracking",
+        "kakobuy-payment-fees"
+      ]
     },
     {
       "slug": "kakobuy-sizing-guide",
       "title": "Vodnik po velikostih na Kakobuyu: uskladite prodajalčeve mere z želenim prileganjem",
       "description": "Uporabite točne prodajalčeve tabele, primerljive mere oblačil in jasna vprašanja skladišču, da pred mednarodnim pošiljanjem zmanjšate negotovost velikosti.",
       "category": "Velikosti",
-      "readMinutes": 8,
+      "readMinutes": 6,
       "intro": "Za vse, kar naročite prek Kakobuya, ni ene same tabele velikosti. Platforma vas povezuje s prodajalčevimi oglasi, prodajalci pa lahko uporabljajo različne oznake, kroje in načine merjenja. Boljši pristop je primerjati mere konkretnega izdelka z ustrezno referenco, zabeležiti izbrano možnost in preveriti prejeti izdelek, ko so na voljo uporabni dokazi. Vodnik se osredotoča na ta postopek, ne na univerzalno navodilo za izbiro večje ali manjše velikosti.",
       "sections": [
         {
@@ -531,70 +646,80 @@
           "paragraphs": [
             "Uradne Kakobuyeve smernice velikosti navajajo, da prodajalci lahko uporabljajo lastne standarde, in priporočajo izbiro z merami. Odprite tabelo, povezano s točnim oglasom in različico, ki jo želite naročiti. Tabela podobnega izdelka ni zanesljivo nadomestilo. Tudi znane oznake velikosti lahko med prodajalci ali linijami izdelkov opisujejo različne mere.",
             "Preverite pomen vsake številke. Nekatere tabele opisujejo telesne mere, druge končno oblačilo, položeno ravno. Pomembne so tudi enote in merilne točke. Če je tabela slika, jo dovolj povečajte, da preberete naslove, namesto ugibanja iz vrste številk. Če oznaka ostane nejasna, pred naročilom vprašajte za pojasnilo. Tabela naj odgovori na vprašanje prileganja, ne le deluje kot pomirjujoča dokumentacija."
-          ]
+          ],
+          "id": "section-0"
         },
         {
           "heading": "Izberite referenco, ki ustreza izdelku",
           "paragraphs": [
             "Za oblačila je podobno oblačilo, ki ga že nosite, pogosto uporabna primerjava. Izberite referenco s prileganjem in namenom uporabe, ki ju želite od novega izdelka. Oprijeta srajca in ohlapen pulover sta različni izhodišči. Primerjava vseh zgornjih delov z isto referenco lahko skrije učinek sloga, plastenja in raztegljivosti blaga.",
             "Referenco dosledno izmerite na ravni površini, brez vlečenja preko naravne oblike, razen če izrecno primerjate raztegnjeno mero. Zabeležite uporabljene točke, ne le številke. Navedite na primer, kje ste merili širino ali dolžino trupa. Tako lahko primerjate enako z enakim pri branju prodajalčeve tabele ali zahtevi skladiščne meritve. Majhen nabor jasnih mer je uporabnejši od dolgega seznama nedoslednih meritev."
-          ]
+          ],
+          "id": "section-1"
         },
         {
           "heading": "Dajte prednost dimenzijam, ki določajo prileganje",
           "paragraphs": [
             "Vsaka mera nima enake pomembnosti za vsak izdelek. Pri zgornjem delu so vam lahko najpomembnejše širina trupa, dolžina in doseg rokavov. Pri hlačah pas, višina razkoraka, širina stegna in dolžina hlačnice vplivajo na različne dele prileganja. Jakna lahko potrebuje prostor za plasti, ki jih nameravate nositi spodaj.",
             "Odločite se, katera napačna dimenzija bi naredila izdelek neprimeren. To je prva primerjalna točka. Nato preverite druge pomembne dimenzije, da rešitev ene težave ne ustvari druge. Večja oznaka lahko zagotovi želeno širino trupa, vendar naredi rokave ali dolžino manj primerne. Namesto ene številke obravnavajte velikost kot majhen nabor kompromisov, vezanih na uporabo oblačila."
-          ]
+          ],
+          "id": "section-2"
         },
         {
           "heading": "Ločite mere oblačila od telesnih mer",
           "paragraphs": [
             "Telesni obseg in ravna širina oblačila nista zamenljivi vrednosti. Podobno sproščen in raztegnjen elastični pas opisujeta različni stanji. Pred primerjavo dveh številk preverite, da opisujeta isto stvar. Če en vir meri okoli telesa in drugi čez ravno oblačilo, morate razliko razumeti pred sklepom.",
             "Bodite previdni pri samodejnih pretvorbah, ki zanemarijo izdelek. Splošna tabela lahko pomaga razložiti enote ali znane sisteme velikosti, ne more pa zamenjati dejanskih prodajalčevih mer. Kjer je mogoče, v zapiskih hranite izvirne enote in pretvorbe naredite izrecno. Najuporabnejši zapis pove, kaj je bilo merjeno, kako in kateri možnosti pripada. Golo številko brez konteksta pozneje zlahka napačno preberete."
-          ]
+          ],
+          "id": "section-3"
         },
         {
           "heading": "Upoštevajte blago in želeno prileganje brez izmišljanja specifikacij",
           "paragraphs": [
             "Obnašanje oblačila lahko vpliva na občutek njegovih mer, vendar uporabite le specifikacije, ki jih oglas dejansko poda. Ne predpostavljajte, da se blago razteza, ker je na sliki videti mehko, ali da fotografija modela v širokem kroju pomeni ohlapno prileganje vsake velikosti. Oblikovanje, razmerja modela in izbrana velikost vzorca lahko vplivajo na videz.",
             "Če je odločitev odvisna od lastnosti materiala, zahtevajte ustrezno informacijo. Primerjava mer lahko zmanjša negotovost, ne more pa določiti, kako se bo nedokumentirano blago povrnilo po raztezanju ali spremenilo po pranju. Ne dodajajte enotnega dodatka vsakemu izdelku na podlagi splošne trditve o vseh izdelkih ene države. Uporabite prodajalčeve podatke, primerljivo referenco in želeno prileganje tega oblačila."
-          ]
+          ],
+          "id": "section-4"
         },
         {
           "heading": "Obutev preverite s pravim sistemom velikosti",
           "paragraphs": [
             "Pri čevljih ugotovite, ali prodajalec uporablja EU, UK, US ali centimetrsko referenco, in preverite, ali oznaka US velja za želeni razpon velikosti. Kakobuyeve smernice priporočajo merjenje obeh stopal in uporabo večje mere pri izbiri obutve. To mero primerjajte s točno prodajalčevo tabelo, ne predpostavljajte enakega prileganja pri isti natisnjeni velikosti.",
             "Ugotovite, kaj opisuje podatek v centimetrih. Dolžina stopala, vložka in zunanjega podplata so različne mere. Fotografija podplata ne more neposredno potrditi notranjega prostora za stopalo. Širina in oblika lahko vplivata na udobje tudi ob primerni dolžini. Če prodajalčevi podatki ne obravnavajo pomembne zahteve prileganja, naj negotovost ostane vidna, namesto da pretvorbeno tabelo obravnavate kot jamstvo."
-          ]
+          ],
+          "id": "section-5"
         },
         {
           "heading": "Možnost zabeležite pred oddajo plačila",
           "paragraphs": [
             "Izbrano velikost in povezano kodo različice shranite z izvirno povezavo izdelka. En oglas lahko vsebuje ločene skupine možnosti in enaka oznaka velikosti se lahko pojavi pri različnih modelih. Pred plačilom preglejte izbrano kombinacijo na Kakobuyu, da zapiski in uvoženo naročilo opisujejo isti izdelek.",
             "Če pošljete navodilo, naj bo natančno in skladno z dejansko izbiro. Opomba naj pojasni izbrano možnost, ne tiho zahteva druge. Ko oglas ne ponuja potrebne velikosti, poiščite potrditev razpoložljivosti, namesto da predpostavljate, da jo komentar zagotovi. Zapis omogoča tudi jasno primerjavo, ko izdelek prispe v skladišče in je oznaka na voljo za pregled."
-          ]
+          ],
+          "id": "section-6"
         },
         {
           "heading": "Skladiščne dokaze uporabite za natančno vprašanje",
           "paragraphs": [
             "Ko so fotografije vašega naročila na voljo, začnite s primerjavo vidne oznake velikosti z izbrano možnostjo. Če ključna mera ostane negotova, vprašajte Kakobuy, ali je mogoče zagotoviti ustrezno meritev ali dodaten pogled in ali je plačljiv. Določite začetno in končno točko, enote in ali naj bo izdelek izmerjen sproščen ali v drugem določenem stanju.",
             "Ko je odločitev tesna, se ne zanašajte na ozadje fotografije kot natančen merilni instrument. Perspektiva, gube in položaj lahko vplivajo na razlago. Kakobuyeve informacije o pregledu opisujejo tudi omejitve glede merilnih napak, zato sliko obravnavajte kot dokaz za razlago, ne obljubo popolnega prileganja. Če nova mera uporablja drugo metodo kot referenca, razrešite razliko, preden sklenete, da je izdelek prevelik ali premajhen."
-          ]
+          ],
+          "id": "section-7"
         },
         {
           "heading": "Na neskladje se odzovite pred načrtovanjem pošiljke",
           "paragraphs": [
             "Če se prejeta oznaka ali mera ne ujema z naročilom, najprej primerjajte zapise. Preverite izvirno tabelo, izbrano možnost, merilno metodo in relevantno fotografijo. Jasno neskladje in nejasna fotografija zahtevata različni vprašanji. Opišite pričakovano in to, kar kažejo trenutni dokazi, brez predpostavljanja vzroka.",
             "Vprašajte o trenutnih možnostih obravnave, dokler je izdelek v ustrezni fazi naročila ali skladišča. Pogoji vračila in zamenjave so odvisni od prodajalca in veljavnih pogojev; niso samodejni ali brezplačni. Pred odobritvijo mednarodne pošiljke upoštevajte praktične možnosti in stroške. Zgodnje reševanje je lažje kot pričakovanje, da bo mednarodna dostava odpravila težavo prileganja, že vidno v skladišču."
-          ]
+          ],
+          "id": "section-8"
         },
         {
           "heading": "Ustvarite ponovno uporaben zapis velikosti",
           "paragraphs": [
             "Po odločitvi hranite kratek zapis za prihodnost: prodajalčevo povezavo, različico izdelka, izbrano velikost, vrednosti tabele, mere referenčnega oblačila in opaženi rezultat. To je uporabnejše od spomina, da vam neka znamka običajno ustreza v določeni črki. Rezultat prileganja poveže s konkretnim oglasom in merilno metodo.",
             "Dve jopici s kapuco imata lahko na primer isto oznako velikosti, vendar ima ena želeno širino, druga pa ljubšo dolžino. Zapis naj pojasni sprejeti kompromis. Če nobena ne ustreza potrebam, je lahko smiselneje izbrati drug oglas kot ugibati med njima. Namen postopka velikosti je zmanjšati in jasno prikazati negotovost, ne obljubiti, da bo vsak spletni nakup popolnoma ustrezal."
-          ]
+          ],
+          "id": "section-9"
         }
       ],
       "sources": [
@@ -603,12 +728,14 @@
         "https://www.kakobuy.com/index/information?information_id=12",
         "https://www.kakobuy.com/service/help/question?id=51"
       ],
-      "wordCount": 1440
+      "wordCount": 1158,
+      "datePublished": "2026-10-24",
+      "dateModified": "2026-10-24"
     },
     {
       "slug": "kakobuy-warehouse-consolidation",
-      "title": "Kakobuyevo skladišče in združevanje: načrtujte smiseln paket",
-      "description": "Razumite skladiščne faze, roke hrambe, izbiro pakiranja in kompromise združevanja pred oddajo paketa Kakobuy.",
+      "title": "Skladišče Kakobuy: hramba, QC in združevanje paketov",
+      "description": "Uredite prihode v skladišče, preverite roke hrambe in vračila, preglejte QC ter primerjajte združene pakete pred mednarodno odpremo.",
       "category": "Skladišče",
       "readMinutes": 7,
       "intro": "Kakobuyevo skladišče je točka odločanja med nakupom izdelka in plačilom njegove mednarodne dostave. Več naročil prodajalcev lahko tja prispe ob različnih časih, z različnim pakiranjem, merami in nerešenimi vprašanji. Združevanje pomeni izbiro primernih izdelkov, ki naj potujejo skupaj. Pošiljka je lahko učinkovitejša, vendar večji paket ni samodejno cenejši ali boljši. Vodnik ponuja praktičen način organiziranja skladiščnih izdelkov, primerjave pakiranja in oddaje paketa brez spregledanega roka ali težave, ki bi jo lažje rešili pred odpremo.",
@@ -618,70 +745,80 @@
           "paragraphs": [
             "Izdelek običajno potuje od prodajalca do posrednikovega skladišča, preden začne mednarodno pot do vas. Fazi v zapiskih ločite. Posodobitev domačega sledenja ne pove, ali je izdelek pripravljen zapustiti Kitajsko, račun za nakup pa ne vključuje vseh prihodnjih stroškov dostave. Javni opis storitve Kakobuy pojasnjuje, da uporabniki lahko izberejo skladiščne izdelke za skupen paket; razpoložljive možnosti računa določajo, kaj je dejansko mogoče oddati.",
             "Vsako prodajalčevo naročilo obravnavajte kot posamezen zapis, dokler ga namerno ne dodate paketu. Povezavo izdelka, izbrano možnost, količino in referenco naročila hranite skupaj. Nato ustvarite ločen zapis paketa za načrtovane izdelke. Ta preprosta razlika olajša prepoznavanje plačanega, a neprispelega izdelka ali pripravljenega paketa, ki še potrebuje plačilo oziroma pregled podatkov."
-          ]
+          ],
+          "id": "section-0"
         },
         {
           "heading": "Sestavite uporaben skladiščni seznam",
           "paragraphs": [
             "Uporaben seznam odgovori na tri vprašanja: kaj je tu, kaj je pripravljeno in kaj potrebuje odločitev? Zabeležite skladiščni status, datum prihoda, vidne mere, nerešeno težavo in predvideni paket vsakega izdelka. Če kupujete podobni barvi ali več velikosti, uporabite točno ime možnosti namesto nejasne oznake, kot je »črn zgornji del«. Poleg imena navedite količino, saj naročilo lahko vsebuje več enot.",
             "Dodajte kratko polje za dejanje. Primeri so »preveri mero rokava«, »potrdi manjkajoči dodatek« ali »pripravljeno po odločitvi o vračilu«. Zapiski so namenjeni vaši organizaciji in ne nadomeščajo navodil, oddanih prek Kakobuya. Ko mora osebje ukrepati, pošljite zahtevo prek ustreznega naročila ali podpore. Opomba v osebni preglednici skladišču ne naroči zadržanja izdelka ali ohranitve pakiranja."
-          ]
+          ],
+          "id": "section-1"
         },
         {
           "heading": "Ločite prihod od pripravljenosti",
           "paragraphs": [
             "Skeniranje prihoda je spodbudno, vendar ni enako dokončanemu pregledu in uporabnemu zapisu za pošiljanje. Kakobuyeva navodila o prihodu opisujejo dodatno skladiščno obdelavo pred upravičenostjo izdelka za oddajo paketa. Preberite trenutno stanje naročila in spremljajoče sporočilo, ne predpostavljajte, da je vsak izdelek v skladišču mogoče takoj zapakirati.",
             "Ko kurir navaja dostavo, račun pa se ni spremenil, preverite referenčno številko. Sledenje prodajalca, reference naročil in skladišča lahko označujejo različne faze istega nakupa. Če potrebujete pojasnilo, pošljite podpori ustrezne identifikatorje in konkretno neskladje. Ponavljanje nadomestnega naročila pred razumevanjem prvotnega statusa lahko povzroči neželeni dvojnik. Odgovor zabeležite z datumom, da veste, kaj čakate."
-          ]
+          ],
+          "id": "section-2"
         },
         {
           "heading": "Vprašanja izdelkov rešite pred združevanjem",
           "paragraphs": [
             "Pred sestavljanjem paketa preglejte razpoložljive podatke pregleda vsakega predlaganega izdelka. Vidno barvo, oznake, količino in možnost primerjajte z dejanskim naročilom. Če so mere pomembne, jih primerjajte z oblačilom ali izdelkom, ki ga že imate, z isto merilno metodo. Fotografije lahko podprejo odločitev o vidnih podrobnostih; ne določajo vsake lastnosti materiala, funkcionalne značilnosti ali trditve pristnosti.",
             "Nerešene izdelke izključite iz pripravljene skupine do odgovora. O manjkajočem pasu ali negotovi velikosti se je na primer lahko preprosto pogovoriti, ko je izdelek še v skladišču. Vključitev v paket ustvari dodatno fazo obdelave in lahko zaplete odločitev o vračilu. Pretekle referenčne fotografije drugih kupcev so uporaben kontekst, vendar naj končni pregled vodijo podatki vašega naročila."
-          ]
+          ],
+          "id": "section-3"
         },
         {
           "heading": "Maso in prostornino primerjajte skupaj",
           "paragraphs": [
             "Paket je lahko lahek, a velik, posebej če vsebuje škatle, podložene izdelke ali nepravilne oblike. Pri primerjanju možnosti dostave preglejte izmerjeno maso in verjetne zapakirane dimenzije. Uporabite pravila obračunavanja konkretne poti. Ne uporabljajte formule prostorninske mase drugega prevoznika in ne predpostavljajte enakih omejitev ali zaokroževanja vseh poti.",
             "Ponazoritev je par čevljev v veliki prodajni škatli skupaj z več mehkimi oblačili. Odstranitev škatle lahko zmanjša prostornino, dodajanje zaščite pa poveča dimenzije ali maso. Nobena sprememba ne zagotavlja določenega prihranka. Ko je negotovost pomembna, vprašajte za razpoložljivo pakiranje ali merjenje in nato primerjajte ponudbe. Kakobuyeve smernice navajajo, da se mere pred končnim pakiranjem in po njem lahko razlikujejo, zato preliminarne številke ločite od končnega obračuna."
-          ]
+          ],
+          "id": "section-4"
         },
         {
           "heading": "Združujte po združljivosti, ne samo količini",
           "paragraphs": [
             "Začnite s ciljem in združljivostjo poti. Izdelki za različne naslove, z različnimi zahtevami obravnave ali izključeni iz istega prevoza morda ne sodijo skupaj. Preglejte trenutne omejitve dostave za dejansko vsebino. Običajno zveneče ime ne reši vprašanja: baterije, tekočine ali občutljivi deli lahko vplivajo na obravnavo, razpoložljive poti računa pa se lahko spremenijo po oceni blaga.",
             "Nato upoštevajte fizično zaščito. Težek izdelek lahko pritiska na krhkega; ostri kovinski deli lahko zaznamujejo mehko blago; trda škatla lahko zasede prostor, ki bi ga sicer stisnili. Vprašajte, kako bo predlagana skupina zaščitena, namesto predpostavke, da večja škatla reši vse. Če dva manjša paketa ponujata jasnejšo obravnavo ali primernejše poti, pred odločitvijo primerjajte njun skupni plačljivi znesek z enim paketom."
-          ]
+          ],
+          "id": "section-5"
         },
         {
           "heading": "Podajte natančna navodila za pakiranje",
           "paragraphs": [
             "Pakiranje izberite glede na izdelek in to, kar želite ohraniti. Če vam je prodajna škatla dragocena, to povejte pred zahtevo za odstranitev. Če ima izdelek občutljive okraske, pojasnite, katero področje potrebuje zaščito. Izogibajte se nasprotujočim navodilom, kot sta ohranitev vsake škatle in najmanjši možni paket. Navedite prednost in naj skladišče pojasni razpoložljive možnosti.",
             "Pred izbiro preglejte stroške izbirnega pakiranja ali pregleda. Dodatne storitve niso samodejno potrebne za vsak paket, njihova imena pa ne dokazujejo določene ravni zaščite. Potrjena navodila hranite z zapisom paketa. To je posebej uporabno, ko izdelek potrebuje drugačno obravnavo od skupine ali ko želite razumeti spremembo končnih dimenzij."
-          ]
+          ],
+          "id": "section-6"
         },
         {
           "heading": "Odločite se o izdelku, ki zamuja",
           "paragraphs": [
             "Manjkajoče naročilo ustvari kompromis med čakanjem in odpremo že pripravljenih izdelkov. Posledice ocenite z dejanskimi informacijami: zadnjim odgovorom prodajalca, skladiščnimi roki, aktualnimi ponudbami paketa in lastnimi potrebami dostave. Nepotrjene obljube odpreme ne obravnavajte kot zagotovljen datum prihoda. Poceni dodatni izdelek lahko povzroči drago zamudo, če zadrži časovno občutljivo skupino.",
             "Primerjate lahko paket, pripravljen zdaj, s predlaganim poznejšim paketom brez zaveze enemu. Zapišite, kateri izdelki sodijo v vsak scenarij in kateri stroški še niso znani. Če je zamujeni izdelek bistven za skupino, pred plačilom končnega pakiranja zahtevajte jasnejši status. Če je neobvezen, razmislite, ali dodatna ločena pošiljka še upravičuje nakup."
-          ]
+          ],
+          "id": "section-7"
         },
         {
           "heading": "Roke hrambe in vračil spremljajte ločeno",
           "paragraphs": [
             "Čas hrambe in upravičenost vračila odgovarjata na različni vprašanji. Izdelek lahko ostane v skladišču po obdobju, ko bi prodajalec razmislil o vračilu. Kakobuy objavlja pravila hrambe, vendar ustrezen rok in status preverite glede na svoj skladiščni zapis in aktualno pomoč. Števila dni iz starega članka ne uporabljajte kot edini opomnik.",
             "Opomnike nastavite dovolj pred najzgodnejšim pomembnim datumom, da ostane čas za odgovor podpore in odločitev. Zabeležite datum začetka vsakega pravila: nakup, odprema, prejem ali skladiščni vnos morda niso zamenljivi. Če obstaja podaljšanje hrambe, pred zanašanjem nanj preverite ceno, trajanje in pogoje. Nerešeno sporočilo ali namen poznejšega pošiljanja ne pomeni samodejne prekinitve roka."
-          ]
+          ],
+          "id": "section-8"
         },
         {
           "heading": "Paket preglejte kot novo transakcijo",
           "paragraphs": [
             "Pred oddajo preberite celoten seznam izbranih izdelkov in ga primerjajte s skladiščnim načrtom. Potrdite količine, prejemnikove podatke, ustreznost poti, navodila pakiranja in zahtevani znesek. Preverite, kaj je ocena, kaj že plačano in kaj se še lahko prilagodi. Deklaracija naj resnično opisuje vsebino in uporablja podatke, potrebne za cilj in pot.",
             "Po oddaji hranite referenco paketa in spremljajte zahteve za odgovor. Smiseln načrt združevanja ostane uporaben po pakiranju: pove, kaj naj prispe skupaj in kateri izdelki so še v skladišču. Ko paket prispe, prejeto vsebino primerjajte z zapisom. Cilj je pošiljka, ki jo lahko pojasnite in spremljate, ne preprosto največji možni skupni nakup."
-          ]
+          ],
+          "id": "section-9"
         }
       ],
       "sources": [
@@ -691,85 +828,142 @@
         "https://www.kakobuy.com/service/help/question?id=95",
         "https://www.kakobuy.com/service/help/question?id=37"
       ],
-      "wordCount": 1514
+      "wordCount": 1231,
+      "datePublished": "2026-10-24",
+      "dateModified": "2026-10-30",
+      "answer": "Za vsak izdelek posebej spremljajte datum prihoda, stanje QC in roke v računu. Ustrezne izdelke združite šele po preverjanju omejitev prevozne poti, mer zapakiranega paketa in skupnih stroškov. Dovoljena hramba ni rok za vračilo, večji združeni paket pa ni samodejno cenejši.",
+      "related": [
+        "kakobuy-shipping-calculator",
+        "kakobuy-returns-refunds",
+        "kakobuy-qc-photos-guide"
+      ]
     },
     {
       "slug": "kakobuy-returns-refunds",
-      "title": "Vračila izdelkov in denarja na Kakobuyu: ohranite dokaze in sledite pravi fazi",
-      "description": "Praktičen vodnik po preklicu, skladiščnih vračilih, zamenjavah in evidenci vračil denarja z jasnimi vprašanji pred odobritvijo vračila.",
+      "title": "Vračila Kakobuy: preklic naročila ali vračilo iz skladišča",
+      "description": "Kako zahtevati vračilo denarja na posamezni stopnji naročila Kakobuy, vrniti izdelek iz skladišča, preklicati zahtevek in preveriti, kam je bil denar vrnjen.",
       "category": "Poprodajna podpora",
       "readMinutes": 7,
       "intro": "Vračilo je zaporedje odločitev in potrditev, ne en gumb, ki zagotovi denar nazaj. Koristno prvo vprašanje je, kje je naročilo zdaj: še ni kupljeno, je kupljeno, a ni odposlano, je v domačem prevozu, v skladišču ali že mednarodno odposlano. Kakobuyeva pomoč opisuje različne postopke v različnih fazah in navaja, da je lahko pomembno prodajalčevo soglasje. Vodnik pomaga sestaviti jasno zahtevo, razumeti predlagano rešitev in spremljati vračilo, ne da bi dobroimetje računa zamenjali z dokončanim povračilom na izvirni način plačila.",
       "sections": [
         {
+          "heading": "Kateri postopek vračila ustreza vašemu naročilu?",
+          "paragraphs": [
+            "Odprite zapis naročila in pošljite eno jasno zahtevo s številko naročila, izbrano možnostjo, razlogom in ustreznimi fotografijami. Pred plačilom stroškov vračila ali potrditvijo odpreme zahtevajte potrditev. Tabela je kontrolni seznam za odločanje, ne obljuba, da vsak prodajalec sprejema vračila."
+          ],
+          "table": {
+            "headers": [
+              "Stopnja naročila",
+              "Kaj vprašati ali preveriti"
+            ],
+            "rows": [
+              [
+                "Še ni kupljeno",
+                "Vprašajte, ali je nakup še mogoče preklicati in kateri znesek je vračljiv."
+              ],
+              [
+                "Kupljeno ali v domačem prevozu",
+                "Vprašajte, ali preklic zahteva soglasje prodajalca oziroma ali mora paket najprej prispeti."
+              ],
+              [
+                "V skladišču",
+                "Izdelka ne odpremite; preverite upravičenost, dokazila, povratno poštnino in rok."
+              ],
+              [
+                "Vračilo denarja je že zahtevano",
+                "Za preklic zahtevka se obrnite na podporo, preden je vračilo izdelka obdelano; ne predpostavljajte, da je postopek mogoče razveljaviti."
+              ],
+              [
+                "Vračilo je prikazano kot zaključeno",
+                "Preverite cilj vračila sredstev. Dobroimetje v denarnici ne dokazuje vračila na izvirno plačilno sredstvo."
+              ],
+              [
+                "Mednarodni paket je odpremljen",
+                "Uporabite poprodajni postopek za paket; vračilo iz skladišča morda ni več mogoče."
+              ]
+            ]
+          },
+          "id": "decision-check"
+        },
+        {
           "heading": "Najprej natančno opredelite težavo",
           "paragraphs": [
             "Opišite razliko med naročenim in prejetim oziroma vidnim. »Napačen izdelek« je manj uporabno kot »naročilo določa temno modro možnost, oznaka in fotografije pa kažejo črno«. Če je pomislek mera, navedite začetno in končno točko merjenja. Če manjka dodatek, pokažite na opis prodajalčeve možnosti, iz katerega je razvidno, da bi moral biti vključen.",
             "Nezadovoljstvo ločite od dokumentiranega neskladja. Barva vam v živo lahko ni všeč, čeprav ustreza izbrani možnosti, manjkajoča količina pa je drugačna težava. Razlika pomaga postaviti pravo vprašanje in razumeti prodajalčev odgovor. Ne pretiravajte s poškodbami ali izmišljajte napačnega opisa za krepitev zahteve. Točni podatki pregledovalcem omogočajo hitrejše razumevanje."
-          ]
+          ],
+          "id": "section-0"
         },
         {
           "heading": "Pred izbiro dejanja preverite fazo naročila",
           "paragraphs": [
             "Odprite trenutni zapis naročila in preberite zadnje sporočilo. Kakobuyeve smernice vračil ločujejo še neodposlano naročilo od že poslanega ali uskladiščenega. Zahteva za preklic, poskus prestrezanja pošiljke in skladiščno vračilo so različni postopki. Ustrezna možnost je lahko odvisna od tega, ali sta prodajalec ali skladišče že ukrepala.",
             "Ko je na voljo, uporabite zahtevo, povezano z naročilom, ali vprašajte uradno podporo o pravem postopku. Vključite referenco naročila in navedite, ali želite preklic, nadomestilo ali vračilo denarja. Če blago potrebujete do določenega datuma, ga pojasnite kot zahtevo, ne predpostavite, da ga platforma lahko doseže. Predlog čakanja na zamenjavo je uporaben le, če spremenjen časovni okvir še ustreza."
-          ]
+          ],
+          "id": "section-1"
         },
         {
           "heading": "Sestavite strnjen nabor dokazov",
           "paragraphs": [
             "Shranite stran izdelka, izbrano možnost, količino, potrditev naročila in slike težave. Kadar je mogoče, hranite izvirne slikovne datoteke, označeno kopijo pa dodajte posebej, če poudarjanje pomaga. Jasen celoten pogled in en bližnji posnetek sta pogosto lažje pregledna kot zbirka skoraj enakih zaslonskih posnetkov. Ohranite sporočila, kjer sta prodajalec ali posrednik pred nakupom potrdila določeno podrobnost.",
             "Napišite kratko časovnico: kdaj je bilo naročilo oddano, kdaj opažena težava in kaj ste že zahtevali. Jezik naj ostane stvaren. Navedite na primer, da je šiv na določeni fotografiji videti odprt, ne trdite, da je pokvarjena cela serija. Če je fotografija nejasna, zahtevajte pojasnilo ali uporabnejši pogled, namesto obravnavanja negotovosti kot dokaza napake."
-          ]
+          ],
+          "id": "section-2"
         },
         {
           "heading": "Ukrepajte hitro in preverite veljavni rok",
           "paragraphs": [
             "Preverite trenutne pogoje vračila ali zamenjave pri naročilu in prosite podporo, naj potrdi nejasen rok. Različne Kakobuyeve strani pomoči opisujejo posebne primere vračil, omejitve izdelka ali prodajalca pa lahko vplivajo na rešitev. Zgodovinski zadetek iskanja ali izkušnja drugega kupca nista zanesljivo nadomestilo pogojev vašega nakupa.",
             "Zabeležite rok in dogodek, od katerega se meri. Ne predpostavljajte, da pošiljanje sporočila ustavi čas. Če podpora potrebuje dodatne dokaze, jih hitro podajte in vprašajte, ali je zahteva uradno zabeležena. Hranite kopije zahteve in odgovora. Zgodnji pregled je posebej dragocen, ko izdelek ostaja v skladišču, pred vključitvijo v ločeno transakcijo mednarodne dostave."
-          ]
+          ],
+          "id": "section-3"
         },
         {
           "heading": "Primerjajte vračilo z zamenjavo",
           "paragraphs": [
             "Zamenjava lahko odpravi napako velikosti ali barve, vendar ustvari nov cikel nakupa in prihoda. Pred sprejetjem potrdite točno nadomestno možnost, razpoložljivost, kaj je treba vrniti in katere dodatne stroške je mogoče pričakovati. Vprašajte, kako bo zamenjava označena na računu, da novega zapisa ne zamenjate z dvojnikom.",
             "Pri vračilu se osredotočite na pričakovani neto znesek in potrebne korake za prejem. Pri zamenjavi upoštevajte ustreznost nadomestka ter strošek in čas. Če so bile prvotne velikostne informacije nezanesljive, lahko druga velikost brez boljših mer ponovi težavo. V obeh primerih izrecno navedite želeni izid. »Prosimo, popravite to« pušča preveč prostora za različne razlage sprejemljive rešitve."
-          ]
+          ],
+          "id": "section-4"
         },
         {
           "heading": "Pred soglasjem preberite predlog stroškov vračila",
           "paragraphs": [
             "Vračilo, ki ga prodajalec odobri, ne pomeni nujno povrnitve vsakega stroška nakupa. Kakobuyeva pomoč opisuje okoliščine, ko so stroški prevoza pomembni za povračilo. Zahtevajte jasno razčlenitev predloga: znesek izdelka, domači prevoz, uporabljeno storitveno pristojbino in pričakovano dobroimetje po odbitkih. Potrdite, kateri zneski so ocene.",
             "Predlog nato primerjajte z razpoložljivimi alternativami. Nizkovreden izdelek z visokim stroškom vračila lahko prinese malo denarja, vendar zato ne obdržite samodejno neprimernega izdelka. Upoštevajte praktičen rezultat in svoje prioritete. Vračila ne odobrite samo zato, ker je glavni znesek videti velik, če sta končni znesek ali cilj plačila še nejasna."
-          ]
+          ],
+          "id": "section-5"
         },
         {
           "heading": "Med odločanjem ohranite stanje in pakiranje",
           "paragraphs": [
             "Med obravnavo vračila se izogibajte zahtevam, ki bi spremenile stanje izdelka. Odstranitev oznak, zavrženje pakiranja, spreminjanje izdelka ali odprtje zapečatenega izdelka lahko vpliva na dokaze in prodajalčevo pripravljenost sprejeti vračilo. Objavljeni Kakobuyevi poprodajni materiali omenjajo stanje in popolnost pri nekaterih vračilih. Vprašajte, kaj je treba ohraniti v vašem primeru.",
             "Če ste že izbrali pakirno storitev, podpori povejte, da odločitev o vračilu še čaka, in vprašajte, katera obdelava je bila opravljena. Ne predpostavljajte, da splošna skladiščna opomba preglasi oddajo paketa. Sporni izdelek v načrtu hranite ločeno do jasne rešitve. Tako preprečite pakiranje z nepovezanimi naročili, pripravljenimi za odpremo, kar bi povzročilo nepotrebne zaplete celotnemu paketu."
-          ]
+          ],
+          "id": "section-6"
         },
         {
           "heading": "Vračilu denarja sledite skozi dejanske faze",
           "paragraphs": [
             "Sprejetje zahteve v pregled, prejem izdelka pri prodajalcu in pojav vračila na računu so ločeni dogodki. Kakobuyeva navodila opisujejo vrnitev prodajalcu pred knjiženjem določenih plačil nazaj na stanje računa. Ko posodobitev samo pravi, da se vračilo obdeluje, vprašajte, katera faza je končana. Ustrezne reference in zneske hranite skupaj.",
             "Ko se dobroimetje pojavi, preverite, ali je razpoložljivo stanje računa ali vračilo na izvirni način vplačila. Istega zneska v proračunu ne štejte dvakrat. Če želite dvigniti stanje, prek uradnega računa potrdite trenutni postopek, upravičenost, cilj in stroške. Povračilo izdelka samo ne določa pogojev ali časa ločenega dviga."
-          ]
+          ],
+          "id": "section-7"
         },
         {
           "heading": "Težave mednarodne dostave obravnavajte ločeno",
           "paragraphs": [
             "Če je paket že zapustil skladišče, lahko vračilo izdelka in prevozna reklamacija zahtevata različne dokaze in postopke. Začnite z beleženjem prejetega, reference paketa, zunanjega pakiranja in vidnih poškodb. Pakiranje hranite do jasnih navodil ustreznega prevoznika ali platforme. Težavo hitro prijavite prek kanala za konkretni paket ali naročilo.",
             "Običajnih pravil skladiščnih vračil ne obravnavajte kot obljube mednarodne povratne poštnine, zavarovanja ali odškodnine prevoznika. Preberite pogoje izbrane poti in dejansko kupljenega kritja. Navedite, ali gre za manjkajoč paket, poškodovan paket, manjkajočo vsebino ali neskladje prodajalca. Ta razvrstitev pomaga podpori pravilno usmeriti primer in prepreči pošiljanje iste nepopolne zahteve več nepovezanim kanalom."
-          ]
+          ],
+          "id": "section-8"
         },
         {
           "heading": "Primer zaključite z usklajenim zapisom",
           "paragraphs": [
             "Pred označitvijo težave kot rešene primerjajte končni izid z zadnjim dogovorjenim predlogom. Potrdite znesek, valuto, odbitke, cilj sredstev in stanje zamenjave. Če se kaj razlikuje, vprašajte o konkretni razliki in priložite ustrezno potrditev. Izvirni zapis naročila ohranite, ne izbrišite ga po vračilu; ostaja uporaben za poznejše usklajevanje dejavnosti računa.",
             "Izkušnjo uporabite za izboljšanje naslednjega nakupa. Jasnejša izbira možnosti, vprašanje o meri pred nakupom ali hitrejši skladiščni pregled lahko prepreči isto težavo. Uspešno vračilo ni dokaz, da bo vsako prihodnje naročilo dobilo isto rešitev. Ta neodvisni vodnik pojasnjuje organizacijo odločitve; dejansko zahtevo pod ustreznimi pogoji obravnavata Kakobuy in relevantni prodajalec."
-          ]
+          ],
+          "id": "section-9"
         }
       ],
       "sources": [
@@ -779,85 +973,138 @@
         "https://www.kakobuy.com/index/information?information_id=13",
         "https://www.kakobuy.com/service/help/question?cid=63&id=40"
       ],
-      "wordCount": 1466
+      "wordCount": 1320,
+      "datePublished": "2026-10-24",
+      "dateModified": "2026-10-30",
+      "answer": "Začnite s trenutno stopnjo naročila. Če je izdelek v skladišču, ga ne vključite v mednarodni paket, dokler pri podpori ne preverite soglasja prodajalca, stroškov vračila in veljavnega roka. Zahtevek za vračilo, dobroimetje na računu in povračilo na banko so različni koraki.",
+      "related": [
+        "kakobuy-payment-fees",
+        "kakobuy-qc-photos-guide",
+        "is-kakobuy-legit"
+      ]
     },
     {
       "slug": "kakobuy-payment-fees",
-      "title": "Plačila in pristojbine na Kakobuyu: preberite skupni znesek pred plačilom",
-      "description": "Ločite cene izdelkov, pretvorbo valut, plačilne pristojbine, dostavo in povračila, da proračun Kakobuy odraža dejansko plačilo.",
+      "title": "Plačilne provizije, valuta in polnjenje računa Kakobuy",
+      "description": "Razumite plačilne stroške Kakobuy, polnjenje računa, pretvorbo valut in dobroimetje vračil. Pred ponovnim plačilom uporabite preprost kontrolni seznam.",
       "category": "Stroški",
       "readMinutes": 7,
       "intro": "Prikazana cena izdelka v USD je uporabna primerjalna točka, vendar ni celoten načrt plačila. Končna poraba lahko vključuje nakup izdelka, domači prevoz, pretvorbo valut, plačilno pristojbino, izbirne storitve in mednarodno dostavo. Nekateri zneski so znani zgodaj, drugi šele, ko je naročilo ali paket pripravljen. Namesto enega odstotka pristojbine iz starega vodnika uporabite trenutni plačilni zaslon Kakobuya, da razumete, kaj plačujete, v kateri valuti in kaj še ostaja zunaj transakcije.",
       "sections": [
         {
+          "heading": "Kaj valuta in polnjenje računa pomenita za vaše plačilo?",
+          "paragraphs": [
+            "Če vidite potrditev polnjenja, primerjajte transakcijo z evidenco stanja in zapisom naročila. Plačila ne ponovite zgolj zato, ker naročilo še ni posodobljeno. Najprej prosite podporo, naj preveri referenco transakcije; nikoli ne delite varnostnih kod kartice ali gesel."
+          ],
+          "table": {
+            "headers": [
+              "Zaslon ali zapis",
+              "Kaj vam pove"
+            ],
+            "rows": [
+              [
+                "Cena izdelka",
+                "Znesek iz oglasa ali preračunana ocena; dostava je lahko ločena."
+              ],
+              [
+                "Polnjenje / stanje",
+                "Sredstva, pripisana računu; preverite, ali so bila dodeljena naročilu."
+              ],
+              [
+                "Potrdilo o plačilu",
+                "Znesek in valuta transakcije; primerjajte ju s poravnano bremenitvijo pri banki."
+              ],
+              [
+                "Ponudba za paket",
+                "Mednarodni prevoz in izbrane storitve; preverite jih kot ločeno plačilo."
+              ],
+              [
+                "Zapis vračila denarja",
+                "Znesek in cilj vrnjenih sredstev, ki se lahko razlikujeta od izvirne poti nakazila."
+              ]
+            ]
+          },
+          "id": "decision-check"
+        },
+        {
           "heading": "Ločite nakup od poti",
           "paragraphs": [
             "Začnite z dvema proračunskima zapisoma: za pridobitev blaga in za pošiljanje paketa. Kakobuyeve smernice stroškov ločujejo strošek blaga od mednarodnega prevoza in drugih pomembnih pristojbin. Znesek za nakup izdelka zato ni nujno znesek za njegov prejem. Prevoz od prodajalca do skladišča ločite od prevoza do vas, tudi če obema neformalno rečemo dostava.",
             "Pri primerjanju izdelkov preverite, da se cena nanaša na isto količino in izbrano možnost. Najnižja cena oglasa lahko pripada dodatku, drugi velikosti ali slogu. Pred zapisom zneska kot potrjenega odprite aktualne podrobnosti naročila. Privlačna kataloška cena je uporabna le, ko lahko ugotovite, kaj vključuje, in to primerjate s konkretnim želenim izdelkom."
-          ]
+          ],
+          "id": "section-0"
         },
         {
           "heading": "Ločite ocene od plačljivih zneskov",
           "paragraphs": [
             "Vsak znesek v proračunu označite kot ocenjen, ponujen ali plačan. Ocenjeni prikaz v USD pomaga primerjati izdelke, ponujeni znesek pa pripada določenemu plačilu ali izračunu dostave. Plačani znesek naj se ujema s potrdilom ali transakcijo računa. Vidne oznake preprečijo, da stara ocena tiho postane domnevni končni strošek.",
             "Z vsako ponudbo zabeležite datum in valuto. Ko se pozneje vrnete, ponovno preverite, ne predpostavljajte veljavnosti prejšnjega zneska. Spremembo lahko povzročijo izbrana možnost, tečajna pretvorba, cilj dostave, lastnosti paketa ali potek ponudbe. Če ni jasno, vprašajte o konkretni razliki. Ni treba napovedati vsake spremembe; potrebujete dovolj informacij, da jo prepoznate in ocenite pred plačilom."
-          ]
+          ],
+          "id": "section-1"
         },
         {
           "heading": "Preberite dejansko ponujeni način plačila",
           "paragraphs": [
             "Uporabite plačilne možnosti svojega računa za konkretno transakcijo. Način, omenjen v članku pomoči, morda ni na voljo za vsakega kupca, izdelek ali plačilo. Javna Kakobuyeva plačilna navodila sama navajajo, da je treba pristojbine obdelave preveriti ob plačilu. Splošnega seznama plačilnih znamk ne obravnavajte kot obljube razpoložljivosti.",
             "Primerjajte skupni znesek načinov, ki jih dejansko lahko izberete, vključno z valuto bremenitve. Preberite ločene informacije ponudnika plačila ali izdajatelja kartice, saj lahko vplivajo na končno bremenitev. Plačilo dokončajte le na uradni platformi ali jasno označenem plačilnem vmesniku ponudnika. To priporočilno spletišče ne zbira plačilnih podatkov ali sprejema polnitev računov, članek pa ne more odobriti poti plačila, ki je račun ne ponuja."
-          ]
+          ],
+          "id": "section-2"
         },
         {
           "heading": "Razumite mesto pretvorbe valut",
           "paragraphs": [
             "Zapišite valuto prodajalčevega zneska, valuto računa Kakobuy in valuto, bremenjeno na vašem načinu vplačila. Lahko so različne. Znan valutni simbol na kataloški kartici ne določa menjalnega tečaja ob plačilu ali morebitne dodatne pretvorbe pri obdelavi ponudnika.",
             "Za uporabno primerjavo vzemite dejansko bremenjeni znesek in znesek, pripisan ali uporabljen za transakcijo. Potrdite, ali katera številka vključuje ločeno pristojbino. Če plačilni možnosti navajata različna skupna zneska, primerjajte isti nakupni znesek in valutno osnovo. Ne združujte aktualnega tržnega tečaja s staro pristojbino platforme v navidezno natančno ponudbo Kakobuya; podatki lahko opisujejo različne transakcije."
-          ]
+          ],
+          "id": "section-3"
         },
         {
           "heading": "Izračunajte dejanski strošek financiranja",
           "paragraphs": [
             "Računski primer razkrije razliko med izpostavljenim zneskom in denarjem, ki zapusti račun. Če hipotetično plačilo bremeni 107 valutnih enot, pripiše pa 100 v isti valuti, je dodatni strošek glede na pripis 7 odstotkov. To je ponazoritev izračuna, ne ponudba Kakobuyeve pristojbine. Pri različnih valutah je treba pred primerjavo upoštevati pretvorbo.",
             "Isti pristop uporabite pri svojem plačilu, ne da bi vsako razliko pripisali platformni pristojbini. Plačilni zaslon, pretvorba ponudnika in kartični izpisek lahko pojasnjujejo različne dele celote. Hranite ustrezna potrdila za poznejše usklajevanje. En odstotek, kopiran v preglednico, je manj uporaben kot jasen zapis zneska plačila in njegovega namena."
-          ]
+          ],
+          "id": "section-4"
         },
         {
           "heading": "Stanje računa obravnavajte kot ločen zapis",
           "paragraphs": [
             "Če izbrani način uporablja stanje računa, ločite dodani denar od porabe za naročilo. Uspešna polnitev ne pomeni samodejno plačanega želenega naročila, preklic naročila pa lahko ustvari dobroimetje namesto povračila na izvirni način vplačila. Preverite ustrezni stanji naročila in transakcije.",
             "Vzdržujte preprosto uskladitev: začetno stanje, dodatki, stroški naročil, dobroimetja, dvigi in končno stanje. Uporabite valuto računa in zabeležite ločeno zunanjo bremenitev. Če se številke ne ujemajo, poiščite manjkajočo transakcijo pred ponovnim plačilom. Pred dodajanjem več sredstev, kot jih nameravate porabiti, potrdite trenutne pogoje dviga. Razpoložljivega stanja in denarja, že vrnjenega banki, nikoli ne štejte kot isto stvar."
-          ]
+          ],
+          "id": "section-5"
         },
         {
           "heading": "Popuste ocenite po učinku na to naročilo",
           "paragraphs": [
             "Preberite upravičenost promocije, ustrezno postavko, najmanjšo porabo, rok in omejitve uporabe. Kupon za prihodnje plačilo dostave ne zniža današnjega nakupa izdelka, razen če ga plačilo izrecno uporabi tam. Oglaševana nominalna vrednost paketa ni nujno prihranek vašega naročila. Vrednost neunovčene ponudbe ločite od potrjene porabe.",
             "Primerjajte končni plačljivi znesek pred uporabo ustrezne ponudbe in po njej. Če zahteva dodatni nakup ali manj primerno pot, vključite posledico v odločitev. Ne dodajajte nepotrebnega izdelka zgolj za prag brez primerjave končnega zneska. Pomembno je, ali ponudba izboljša dejansko želeni nakup, ne velikost promocijske številke na pasici."
-          ]
+          ],
+          "id": "section-6"
         },
         {
           "heading": "Preglejte izbirne storitve in stroške paketa",
           "paragraphs": [
             "V skladiščni ali paketni fazi skrbno preberite izbrane storitve. Pakiranje, fotografiranje ali obdelava so lahko uporabni, vendar je primernost odvisna od blaga in potreb. Preverite trenutno ceno in namen storitve. Ločite jo od osnovnega prevoza, da lahko pošteno primerjate paketne alternative.",
             "Ko je končni paket izmerjen, posodobljeni strošek primerjajte s prejšnjo oceno. Kakobuyeva navodila o prihodu navajajo, da se končne zapakirane mere lahko razlikujejo od zgodnejših mer izdelkov. Če prilagoditev ni jasna, vprašajte, kateri podatek se je spremenil. Davki cilja ali drugi stroški zahtevajo lasten pregled; ne predpostavljajte, da splošno ime poti ali današnje plačilo poravna vsak možni strošek dostave."
-          ]
+          ],
+          "id": "section-7"
         },
         {
           "heading": "Negotova plačila rešujte brez dvojnikov",
           "paragraphs": [
             "Če se plačilni zaslon ne odziva, najprej preverite status naročila, dejavnost računa in zapis ponudnika plačila. Shranite referenco in čas. Počasna stran ne dokazuje neuspešne bremenitve, bančno obvestilo samo pa morda ne dokazuje pripisa naročilu. Ponavljanje istega plačila lahko oteži razjasnitev.",
             "Če se zapisi razlikujejo, vprašajte uradno podporo o konkretni transakciji. Podajte referenco, znesek, valuto in vidni status, brez polnih kartičnih podatkov, gesel in potrditvenih kod. Odgovor hranite s potrdilom. Če je potreben ponovni poskus, potrdite, kaj se je zgodilo s prvim in ali čaka, je razveljavljen ali pripisan drugje. Jasni zapisi so uporabnejši od nepopolnih posnetkov ponavljajočih se poskusov."
-          ]
+          ],
+          "id": "section-8"
         },
         {
           "heading": "Uskladite povračila in končni strošek do dostave",
           "paragraphs": [
             "Pri povračilu zabeležite izvirno bremenitev, dogovorjene odbitke, pripisani znesek in cilj denarja. Dobroimetje računa in poznejši dvig sta ločeni postavki. Če pretvorba nastopa v različnih fazah, ne predpostavljajte številčne enakosti končnega zunanjega povračila in prvotne bremenitve brez pregleda povezanih zapisov.",
             "Po dostavi seštejte potrjene stroške izdelkov, domačega prevoza, plačil ali pretvorb, izbranih storitev, mednarodne dostave in dejanskih ciljnih stroškov. Odštejte le uporabljena povračila ali popuste. Končni zapis daje realno osnovo za naslednji skupni nakup. Omogoča tudi poštenejše primerjave: najcenejša kataloška kartica ni nujno najcenejši dostavljeni nakup, jasna trenutna ponudba pa je uporabnejša od neutemeljene univerzalne trditve o pristojbini."
-          ]
+          ],
+          "id": "section-9"
         }
       ],
       "sources": [
@@ -867,14 +1114,22 @@
         "https://item.kakobuy.com/service/help/question?id=87",
         "https://www.kakobuy.com/tools/estimate"
       ],
-      "wordCount": 1457
+      "wordCount": 1260,
+      "datePublished": "2026-10-24",
+      "dateModified": "2026-10-30",
+      "answer": "Upoštevajte valuto in znesek za plačilo na trenutni blagajni. Ocena v USD v katalogu ne dokazuje valute bremenitve kartice. Polnjenje doda sredstva na račun; stanje in plačilni status naročila preverite ločeno, preden predpostavite, da sta izdelek ali pošiljka plačana.",
+      "related": [
+        "kakobuy-shipping-costs",
+        "kakobuy-returns-refunds",
+        "kakobuy-shipping-calculator"
+      ]
     },
     {
       "slug": "kakobuy-weidian-taobao-links",
       "title": "Povezave Weidian in Taobao za Kakobuy: ujemite pravi izdelek in možnost",
       "description": "Spoznajte povezavo med izvornimi povezavami, ID-ji tržnic, povezavami posrednika in prodajalčevimi možnostmi pred nakupom prek Kakobuya.",
       "category": "Povezave izdelkov",
-      "readMinutes": 7,
+      "readMinutes": 6,
       "intro": "Uporabna povezava izdelka mora voditi do točnega prodajalčevega oglasa, ki ste ga raziskali. To zveni preprosto, dokler vrstica kataloga, skrajšana deljena povezava, prevedeni naslov in posrednikov URL ne označujejo istega izdelka na različne načine. Najvarnejši postopek je ohraniti izvirno povezavo tržnice, preveriti identiteto oglasa in nato potrditi izbrano možnost v Kakobuyu. Vodnik pojasnjuje, kaj primerjati, kako prepoznati nepopoln uvoz in zakaj sam ID izdelka ne določa velikosti, barve, količine ali končne cene.",
       "sections": [
         {
@@ -882,70 +1137,80 @@
           "paragraphs": [
             "Oglas tržnice je prodajalčeva stran izdelka. Povezava posrednika kaže na storitev, ki lahko pomaga kupiti ta izdelek. Kataloška stran podrobnosti je raziskovalna stran, ki lahko opiše izdelek in ponudi eno teh povezav. Vsak naslov ima drug namen. Številka na koncu URL-ja raziskovalnega spletišča lahko določa njegov zapis namesto prodajalčevega izdelka.",
             "Izvirno prodajalčevo povezavo hranite z ožjim izborom, tudi če običajno kliknete posrednikov nakupni gumb. Omogoča primerjavo vira z uvoženo stranjo in pojasnitev neskladja podpori. Uradni Kakobuyev nakupni vodnik opisuje začetek s povezavo izdelka kitajske tržnice. To izvorno identiteto uporabite kot oporo raziskovanja, namesto da se zanašate le na prevedeni naslov ali sličico, ki jo uporablja več prodajalcev."
-          ]
+          ],
+          "id": "section-0"
         },
         {
           "heading": "Preverite tržnico in številko",
           "paragraphs": [
             "Številka izdelka potrebuje kontekst tržnice. Weidianove povezave običajno uporabljajo parameter itemID, Taobaoove strani izdelkov parameter id, ponudbe 1688 pa pogosto vključujejo številčni identifikator ponudbe v poti. Vzorci pomagajo pregledati naslov, vendar prepoznan vzorec ne potrjuje aktivnega, podprtega ali primernega oglasa.",
             "Številke ene tržnice ne premikajte v obliko URL-ja druge. Izvirnega prodajalčevega identifikatorja ne zamenjajte z interno številko kataloga. Če primerjate povezavi, skupaj preglejte izvorno gostiteljsko ime in identifikator izdelka. Negotovost naj ostane vidna, dokler ne odprete dejanskega oglasa. Ujemajoča fotografija je uporaben kontekst, ne more pa dokazati istega prodajalca ali ponudbe pri različnih povezavah."
-          ]
+          ],
+          "id": "section-1"
         },
         {
           "heading": "Deljene povezave odpirajte previdno",
           "paragraphs": [
             "Deljena povezava lahko pred izdelkom preusmeri prek aplikacije, skrajšanega naslova ali sledilne strani. Sledite ji v običajnem brskalniku in preglejte končni cilj. Ko je na voljo, kopirajte dejansko povezavo izdelka. Če stran zahteva aplikacijo ali prijavo za pomembne podatke, prepoznajte nepopolnost raziskovanja, namesto obravnavanja deljenega sporočila kot celotnega oglasa.",
             "Zasebnih povezav računa, strani upravljanja naročil ali plačilnih sej ne lepite v javno preglednico. Ti naslovi drugemu obiskovalcu morda ne delujejo in lahko vsebujejo podatke, nepovezane z izdelkom. V svojih zapiskih ločeno shranite javni oglas in podrobnosti možnosti. Če povezava preneha delovati, se vrnite k izvirnemu viru ali zahtevajte nadomestno, namesto ugibanja, kateri izdelek je predstavljala skrajšana oznaka."
-          ]
+          ],
+          "id": "section-2"
         },
         {
           "heading": "Preglejte vgnezdeni URL v posrednikovi povezavi",
           "paragraphs": [
             "Posrednikov naslov nakupa lahko vsebuje izvirni URL tržnice v enem parametru. Zunanji naslov določa Kakobuy, notranji pa prodajalčev oglas. Kodiranje omogoča varno vključitev notranjega URL-ja kot parametra; dvopičja, poševnice in vprašaji se lahko pojavijo kot odstotkovna zaporedja. To oblikovanje je normalno in samo ne označuje drugega izdelka.",
             "Težave nastanejo, ko je notranji naslov odrezan, zamenjan z napačnim ID-jem ali neprimerno kodiran. Za kupca je pomembna kontrola izdelka po nalaganju posrednikove strani. Izvorno tržnico, naslov, slike in možnosti primerjajte z raziskovanjem. Če se razlikujejo, se ustavite in pojasnite povezavo, namesto predpostavke, da je vsaka stran iz kataloškega gumba pravilno povezana."
-          ]
+          ],
+          "id": "section-3"
         },
         {
           "heading": "Pred izbiro možnosti preverite uvoz",
           "paragraphs": [
             "Ko Kakobuy odpre oglas, potrdite, da je prikazan dejanski prodajalčev izdelek. Nalagalni zaslon, sporočilo o nedostopnosti ali splošni obrazec ročnega naročila niso isto kot dokončan uvoz. Preberite omejitve in obvestila izdelka. Običajno videti posrednikov URL ne zagotavlja razpoložljivega nakupa ali plačilnega načina.",
             "Primerjajte več znakov identitete, ne samo prve slike. Preverite izvorno referenco izdelka, vidni kontekst prodajalca, splošni opis in različice. Če uvožena stran kaže manj informacij kot prodajalčeva, pred naročilom ugotovite, kaj manjka. Naslednje uporabno dejanje je morda vprašanje uradni podpori, ne takojšnje plačilo. Shranite povezavo in natančno vprašanje, da se odgovor lahko poveže s pravim oglasom."
-          ]
+          ],
+          "id": "section-4"
         },
         {
           "heading": "Možnost obravnavajte kot del izdelka",
           "paragraphs": [
             "En oglas lahko vključuje več velikosti, barv, materialov, kompletov ali dodatkov. ID izdelka kaže na oglas, ne nujno na točno želeno možnost. Preberite imena možnosti in pripadajoče slike. Nizka začetna cena se lahko nanaša na eno možnost, druga pa nosi drug znesek ali količino.",
             "Izbrano možnost zapišite z besedilom prodajalca, kadar je mogoče. Pri oblačilu vključite oznako velikosti in uporabljene mere. Pri kompletu preverite vključene kose. Pri dodatku potrdite združljivost, ne zanašajte se na podobno ime modela. Če je prevedena možnost dvoumna, pred plačilom poiščite pojasnilo. Ugibanje barve ali velikosti iz položaja v meniju lahko izbere napačno različico."
-          ]
+          ],
+          "id": "section-5"
         },
         {
           "heading": "Prevedeno besedilo ločite od dejstev izdelka",
           "paragraphs": [
             "Prevod lahko olajša branje, vendar izvirne oznake možnosti in specifikacije ostajajo pomembne. Ime modela se lahko prevede kot navadna beseda, kratica mere se lahko napačno razume, splošen naslov pa skrije pomembno razliko različic. Pri primerjanju oglasov ohranite identifikatorje znamk in modelov ter preverite merske enote.",
             "Z okoliškimi podatki preverite smiselnost prevoda. Če tabela velikosti navaja številko brez jasne enote, ne predpostavljajte domačega sistema. Če opis dodatka našteva več naprav, preverite univerzalnost ali vezanost izbrane različice na model. Urejen angleški naslov priporočilne strani je navigacijska pomoč; ne obravnavajte ga kot novo prodajalčevo obljubo o materialu, združljivosti ali vključenih predmetih."
-          ]
+          ],
+          "id": "section-6"
         },
         {
           "heading": "Ponovno preverite dolgo shranjene povezave",
           "paragraphs": [
             "Shranjena povezava lahko ostane dosegljiva, medtem ko se cena, možnosti, zaloga ali opis spremenijo. Stran ponovno odprite blizu nameravanega naročila. Trenutni oglas primerjajte z zapiski in novo informacijo plačila uporabite za osnovo odločitve. Datum preglednice pove čas pregleda zapisa, ne da je vsako prodajalčevo polje od takrat nespremenjeno.",
             "Če oglas ni na voljo, ne predpostavljajte, da je druga stran z isto fotografijo enakovreden nadomestek. Ponovno primerjajte prodajalčevo identiteto, mere, možnosti in dejansko ceno. Staro in novo povezavo hranite ločeno, dokler ne ugotovite sprememb. To je posebno uporabno, ko razprava ali zgodovinska slika QC govori o starejšem nakupu: referenca lahko opisuje drugo različico ali serijo od trenutne ponudbe."
-          ]
+          ],
+          "id": "section-7"
         },
         {
           "heading": "Partnerske povezave berite brez zamenjave namena",
           "paragraphs": [
             "Nekatere nakupne povezave poleg izvornega URL-ja vsebujejo priporočilni ali partnerski parameter. Na tem neodvisnem priporočilnem spletišču lahko ustrezne izhodne povezave ustvarijo provizijo. Parameter ne potrjuje prodajalca, ne dokazuje kakovosti izdelka in ne zagotavlja popusta. Pred zanašanjem na oglaševano ponudbo jo preverite na Kakobuyevih aktualnih straneh.",
             "Pri ujemanju izdelka ostaja glavno vprašanje pravilnost vgrajene izvorne povezave in ustreznost izbrane možnosti vašim potrebam. Nakupne odločitve ločite od promocijskih trditev. Uporabite lahko priročen posrednikov gumb in še vedno preverite oglas, mere, ceno ter razpoložljivo pot. Registracijo, plačilo in upravljanje naročil opravite na uradnem cilju; raziskovalni članek ali kataloška stran ne opravi transakcij za vas."
-          ]
+          ],
+          "id": "section-8"
         },
         {
           "heading": "Ohranite ponovljivo rutino preverjanja povezav",
           "paragraphs": [
             "Za vsakega kandidata ohranite izvirno povezavo tržnice, določite pravo tržnico in izdelek, odprite ga prek Kakobuya, primerjajte uvožene podatke, izberite točno možnost in preverite končni nakupni znesek. Pred oddajo naročila zabeležite nerešeno vprašanje. Po nakupu hranite referenco naročila ob izvorni povezavi, da lahko skladiščne fotografije ali odgovore podpore povežete s pravim izdelkom.",
             "Rutina je uporabna pri enem nakupu in še dragocenejša pri primerjanju več podobnih izdelkov. Zmanjša možnost napačne različice zaradi znane sličice. Zagotavlja tudi strnjen dokazni zapis, če se stran pozneje spremeni. Dober katalog Kakobuy pomaga odkriti kandidate; skrbne kontrole vira in možnosti spremenijo odkritje v jasno določeno naročilo."
-          ]
+          ],
+          "id": "section-9"
         }
       ],
       "sources": [
@@ -953,14 +1218,16 @@
         "https://www.kakobuy.com/service/help/question?cid=35&id=79",
         "https://www.kakobuy.com/item/notfound"
       ],
-      "wordCount": 1503
+      "wordCount": 1132,
+      "datePublished": "2026-10-24",
+      "dateModified": "2026-10-24"
     },
     {
       "slug": "kakobuy-first-haul-checklist",
       "title": "Vaš prvi skupni nakup na Kakobuyu: seznam od ožjega izbora do dostave",
       "description": "Načrtujte prvo naročilo Kakobuy z jasnim preverjanjem izdelkov, realnim proračunom, skladiščnimi odločitvami in končnim pregledom paketa.",
       "category": "Začetek",
-      "readMinutes": 7,
+      "readMinutes": 6,
       "intro": "Prvi skupni nakup je lažje voditi, ko ima vsak izdelek jasen namen in vsaka faza preprosto preverjanje dokončanosti. Za učenje postopka ne potrebujete velike košarice. Potrebujete točne povezave izdelkov, smiselne mere, dovolj proračuna za celotno pot in čas za pregled blaga pred mednarodno dostavo. Seznam uporabite kot neodvisni vodnik načrtovanja ob aktualnih Kakobuyevih navodilih in navodilih računa. Ne obljublja določenega datuma dostave, cene pošiljanja ali rezultata izdelka; pomaga prepoznati znano in tisto, kar še potrebuje odločitev.",
       "sections": [
         {
@@ -968,70 +1235,80 @@
           "paragraphs": [
             "Izberite izdelke, ki jih lahko natančno opišete in primerjate brez ugibanja. Zapišite povezavo, izbrano barvo ali slog, velikost, količino in razlog vključitve vsakega. Kratek seznam jasno določenih izdelkov je lažje oceniti kot veliko zbirko privlačnih sličic. Odstranite kandidate, ki jih ne ločite od podobnih različic ali potrebujejo podatke, ki jih prodajalec ni zagotovil.",
             "Vsakemu izdelku določite lastno omejitev porabe in prednost. Tako lahko nekaj pozneje odstranite brez ponovne izgradnje celotnega načrta. Ne dodajajte blaga samo zaradi kupčeve oznake »nujno« ali ker je v katalogu ob priljubljenem izdelku. Priporočilo lahko pomaga pri odkrivanju, toda vaše zahteve prileganja, namen uporabe in celoten proračun naj odločijo, kateri kandidati napredujejo."
-          ]
+          ],
+          "id": "section-0"
         },
         {
           "heading": "Potrdite izvirni oglas in izbrano možnost",
           "paragraphs": [
             "Odprite izvorni izdelek in ustrezno stran Kakobuya. Primerjajte identiteto oglasa, slike in razpoložljive različice. Preverite, da cena pripada izbrani možnosti in količini. ID izdelka določa oglas, ne izbira sam vaše velikosti ali barve. Če je uvoz nepopoln ali stran prikazuje omejitev, težavo rešite pred plačilom.",
             "Hranite zapis besedila možnosti in pomembnega opisa prodajalca. Komplet lahko na primer vsebuje manj kosov, kot kaže glavna slika, ali dodatek zahteva posebno različico naprave. Ko informacija ni jasna, postavite ozko vprašanje. Uporaben odgovor potrdi potrebno podrobnost; splošna trditev, da je izdelek dober, ne razreši združljivosti, mer ali vključene vsebine."
-          ]
+          ],
+          "id": "section-1"
         },
         {
           "heading": "Prileganje preverite z razumljivimi merami",
           "paragraphs": [
             "Pri oblačilih primerjajte prodajalčevo tabelo s podobnim oblačilom, ki se vam dobro prilega. Uporabite isto merilno metodo: ravne širine oblačila ne primerjajte neposredno s celotnim telesnim obsegom brez razumevanja odnosa. Zabeležite pomembne dimenzije izdelka, denimo prsi, dolžino, pas ali notranjo dolžino hlačnice. Izvirna enota naj ostane vidna.",
             "Pri obutvi ali oprijetih dodatkih preglejte razpoložljiva merilna navodila in zahtevajte pojasnilo dvoumnih oznak. Znana črka velikosti ne jamči znanih dimenzij. Pred naročilom določite sprejemljive razlike, da ima skladiščni pregled jasen namen. Če oglas nima uporabnih podatkov velikosti, priznajte negotovost, ne zamenjajte je s samozavestno pretvorbo nepovezanega izdelka."
-          ]
+          ],
+          "id": "section-2"
         },
         {
           "heading": "Načrtujte več kot znesek izdelkov",
           "paragraphs": [
             "Pričakovani nakup ločite od mednarodne dostave in dodatnih storitev ali stroškov. Uradne Kakobuyeve smernice navajajo več kot samo ceno izdelka. Prevoz od prodajalca do skladišča zabeležite ločeno od poznejše paketne pošiljke. Trenutne zneske preverite na aktualnih plačilnih in dostavnih zaslonih, preliminarne ocene pa tako označite.",
             "V načrtu pustite prostor za negotovost, namesto porabe celotnega proračuna za košarico. Masa izdelka ali zapakirana prostornina morda pred skladiščnim prihodom nista znani. Na odločitev lahko vplivata tudi dodatno pakiranje in pot, razpoložljiva za dejansko vsebino. Če verjetni končni strošek naredi izdelek za vas slabo izbiro, ga odstranite pred nakupom, namesto upanja na nepreverjen kupon ali optimistično dostavno oceno."
-          ]
+          ],
+          "id": "section-3"
         },
         {
           "heading": "Preverite ustreznost vsebine za pot",
           "paragraphs": [
             "Preglejte trenutne omejitve platforme in dostave za želeno blago in cilj. Posebno pazite na baterije, tekočine, krhke dele ali druge zahteve obravnave. Prodajalčeva pripravljenost prodati izdelek ne pomeni, da ga sprejme določena mednarodna pot. Če razpoložljive informacije niso jasne, vprašajte pred naročilom.",
             "Poleg upravičenosti poti upoštevajte svoje dostavne potrebe. Če je blago za dogodek, rok primerjajte z negotovostjo prodajalčeve odpreme, skladiščne obdelave in mednarodnega prevoza. Ocene prevoza ne obravnavajte kot obljube vseh prejšnjih faz. Prvi skupni nakup je lažji, ko imate dovolj časa za pregled in premišljeno odločitev, namesto odobravanja vsega pod pritiskom roka."
-          ]
+          ],
+          "id": "section-4"
         },
         {
           "heading": "Naročilo oddajte z jasnimi navodili",
           "paragraphs": [
             "Pred oddajo preglejte seznam izdelkov, različice, količine, domačo dostavo in plačljivi znesek. Kratka navodila dodajte le za pojasnitev potrebne podrobnosti, denimo možnosti, ki je ni mogoče nedvoumno izbrati. Besedilo naj bo skladno z naročilom. Nasprotujoče ali nejasne opombe lahko ustvarijo več negotovosti, kot je odpravijo.",
             "Po plačilu potrdite, da status naročila odraža transakcijo, in hranite referenco. Če je izid plačila negotov, pred ponovitvijo preverite račun in zapise plačilnega ponudnika. Registracijo in plačilo ohranite na uradnem cilju. To neodvisno spletišče pomaga pri raziskovanju izdelkov in razumevanju postopka; ne upravlja računa, ne zbira plačilnih podatkov ali naroča skladišču izvajanja zapiskov zunaj platforme."
-          ]
+          ],
+          "id": "section-5"
         },
         {
           "heading": "Spremljajte prihode brez mešanja faz",
           "paragraphs": [
             "Prodajalčevo odpremo, domačo dostavo in skladiščno obdelavo spremljajte kot ločene faze. Kakobuyeva navodila prihoda opisujejo pregled in merjenje pred pripravljenostjo izdelka za paket. Kurirsko skeniranje dostave in skladiščni vnos, pripravljen za pošiljanje, zato preverite ločeno. Z referenco naročila povežite posodobitve z različnimi sledilnimi številkami.",
             "Če je posodobitev nejasna, vprašajte o konkretnem izdelku in fazi. Vključite referenco in vidno neskladje. Ne nadomestite na videz zamujenega naročila, preden ugotovite, ali je preklicano, odposlano ali prejeto. Ob prihodih posodabljajte preprost seznam »pripravljeno« ali »potrebuje pozornost«. To je osnova odločitve, kaj lahko gre v prvi paket in kaj mora za zdaj ostati nerešeno."
-          ]
+          ],
+          "id": "section-6"
         },
         {
           "heading": "Razpoložljive podatke pregleda preglejte hitro",
           "paragraphs": [
             "Naročilo primerjajte z razpoložljivimi skladiščnimi fotografijami in podrobnostmi. Preverite vidno barvo, količino, oznake velikosti, stanje in mere, pomembne za odločitev. Zgodovinske referenčne slike lahko pokažejo videz drugega nakupa, vendar ne nadomestijo pregleda vašega naročila. Fotografija tudi ne dokazuje vsake skrite materialne ali funkcionalne lastnosti.",
             "Če potrebujete pojasnilo, zahtevajte konkreten pogled ali mero in pojasnite pomembnost. Hitro preberite ustrezne pogoje vračila ali zamenjave, ne predpostavljajte enakega časa hrambe in vračila. Sporni izdelek izključite iz pripravljene skupine do razumevanja razpoložljive rešitve. Jasen zgodnji pregled je ena najuporabnejših navad prvega skupnega nakupa."
-          ]
+          ],
+          "id": "section-7"
         },
         {
           "heading": "Pred zavezo primerjajte paketne možnosti",
           "paragraphs": [
             "Izberite pripravljene izdelke za skupno pot, nato preglejte dejanske možnosti poti za skupino. Primerjajte celotne stroške, pravila velikosti in mase, potrebe obravnave in informacije o dostavi. Večji združen paket ni samodejno najboljši. Upoštevajte krhko ali omejeno vsebino in alternativne skupine primerjajte z istim ciljem ter ravnjo informacij.",
             "Odločite, katero pakiranje ohraniti in kaj odstraniti. Kjer je izbira pomembna, podajte natančna navodila. Skrbno preglejte ime prejemnika, naslov, poštno številko in stik. Deklaracija naj točno opiše blago in uporablja podatke, zahtevane za pošiljko. Pred plačilom še enkrat preverite izbrane izdelke, da zamujeni, podvojeni ali sporni ni vključen pomotoma."
-          ]
+          ],
+          "id": "section-8"
         },
         {
           "heading": "Zaključite z zapisom dostave in stroškov",
           "paragraphs": [
             "Po oddaji paketa spremljajte sporočila, ki potrebujejo odgovor, in referenco hranite ob seznamu izdelkov. Ob prihodu pošiljke primerjajte vsebino s seznamom pred zavrženjem pakiranja. Če je prisotno neskladje ali vidna poškodba, ohranite uporabne dokaze in hitro kontaktirajte ustrezen uradni kanal po pogojih pošiljke.",
             "Na koncu zabeležite dejanski strošek skupnega nakupa in uspešne odločitve. Dostavljeni rezultat primerjajte z izvirnim ožjim izborom: prileganje, uporabnost, celotna poraba in vloženi trud. Tako dobite boljše podatke za naslednje naročilo kot iz zbirke nepreverjenih trditev o ugodnih nakupih. Uspešen prvi postopek je ponovljiv z jasnimi zapisi in premišljenimi izbirami, tudi če pomeni manj izdelkov, kot ste jih sprva načrtovali."
-          ]
+          ],
+          "id": "section-9"
         }
       ],
       "sources": [
@@ -1042,7 +1319,294 @@
         "https://www.kakobuy.com/service/help/question?id=37",
         "https://www.kakobuy.com/tools/estimate"
       ],
-      "wordCount": 1418
+      "wordCount": 1109,
+      "datePublished": "2026-10-24",
+      "dateModified": "2026-10-24"
+    },
+    {
+      "slug": "kakobuy-shipping-calculator",
+      "title": "Kalkulator dostave Kakobuy: dejanska in volumetrična teža",
+      "description": "S kalkulatorjem ocenite obračunsko težo paketa. Pred pridobitvijo ponudbe primerjajte dejansko in volumetrično težo, obračunske korake in primere pakiranja.",
+      "category": "Kalkulator dostave",
+      "readMinutes": 4,
+      "intro": "Kalkulator dostave je uporaben, ko njegovi podatki opisujejo paket, ki ga boste dejansko poslali. Ocena teže oblačil ne zajame škatle, zaščitne embalaže in praznega prostora. Ta vodnik pomaga izračunati obračunsko težo, razumeti njen pomen in prenesti prave meritve v trenutno ponudbo prevozne poti Kakobuy. Spodnji kalkulator deluje lokalno v brskalniku ter ne pridobiva trenutnih cen in ne oddaja paketa.",
+      "answer": "Pri prevozni poti z volumetričnim obračunom pomnožite dolžino × širino × višino v centimetrih, delite z deliteljem poti in rezultat primerjajte z dejansko težo zapakiranega paketa v kilogramih. Pot lahko obračuna večjo vrednost in jo zaokroži navzgor. Pred uporabo rezultata preverite njena pravila.",
+      "calculator": true,
+      "sections": [
+        {
+          "heading": "Zberite meritve enega zapakiranega paketa",
+          "paragraphs": [
+            "Vnesite zunanjo dolžino, širino in višino končnega paketa ter njegovo dejansko težo, vključno s škatlo in zaščitnimi materiali. Mer oblačila iz prodajalčevega oglasa ne uporabite kot mer paketa. Če skladišče blaga še ni zapakiralo, podatke označite kot ocene in izračun ponovite, ko bodo na voljo končne meritve.",
+            "Uporabite delitelj in obračunski korak, navedena za točno prevozno pot, ki jo primerjate. Začetne številke v orodju so prikaz delovanja, ne priporočilo ali splošna pravila Kakobuy. Če pot obračuna samo dejansko težo, izberite to možnost. Če njenih pravil tu ni mogoče predstaviti, uporabite uradno ponudbo, namesto da bi podatke na silo prilagodili."
+          ]
+        },
+        {
+          "heading": "Dejanska in volumetrična teža odgovarjata na različni vprašanji",
+          "paragraphs": [
+            "Dejanska teža je masa, izmerjena na tehtnici. Volumetrična teža predstavlja prostor, ki ga paket zavzame po prevoznikovi formuli. Lahek, a velik zaboj ima zato lahko večjo obračunsko težo kot manjši in težji. Prav zato primerjava dveh ocen dostave zahteva tako mere kot težo na tehtnici.",
+            "Splošna formula tukaj deli prostornino v kubičnih centimetrih z izbranim deliteljem. Ko pot obračunava večjo vrednost, je obračunska teža pred zaokrožitvijo večja od dejanske in volumetrične teže. Najnižje pristojbine, omejitve velikosti, omejitve posebnega blaga in cenovni razredi so ločena preverjanja; izračun ne določa upravičenosti do prevozne poti."
+          ]
+        },
+        {
+          "heading": "Izračunan primer: paket s 3 kg se lahko obračuna kot 5 kg",
+          "paragraphs": [
+            "Oglejmo si ponazoritveno škatlo z merami 40 × 30 × 20 cm in težo 3 kg. Pri hipotetičnem delitelju 5000 je volumetrična teža 4.8 kg. Če ta vzorčna pot obračunava večjo vrednost v korakih po 0.5 kg, je zaokrožen rezultat 5 kg. To so učni podatki, ne trenutna tarifa Kakobuy ali trditev o vsaki prevozni liniji."
+          ],
+          "table": {
+            "headers": [
+              "Vzorčni podatek ali korak",
+              "Rezultat"
+            ],
+            "rows": [
+              [
+                "Zunanje mere",
+                "40 × 30 × 20 cm"
+              ],
+              [
+                "Dejanska teža zapakiranega paketa",
+                "3 kg"
+              ],
+              [
+                "Volumetrična teža: 24000 ÷ 5000",
+                "4.8 kg"
+              ],
+              [
+                "Večja vrednost, zaokrožena navzgor po 0.5 kg",
+                "5 kg"
+              ]
+            ]
+          }
+        },
+        {
+          "heading": "Primerjajte pakiranje, ne da bi pozabili na zaščito",
+          "paragraphs": [
+            "Če v istem hipotetičnem primeru zmanjšamo višino z 20 na 15 cm, se volumetrična teža spremeni na 3.6 kg. Ob isti dejanski teži in obračunskem koraku postane obračunska teža 4 kg. Ta primerjava kaže, zakaj je odstranitev nepotrebnega praznega prostora lahko pomembnejša kot majhna sprememba na tehtnici.",
+            "Embalaže ne odstranjujte samodejno. Krhek izdelek lahko potrebuje zaščito, določena embalaža pa je lahko pomembna za vračilo prodajalcu. Vprašajte, katere spremembe lahko skladišče izvede, ali zaračuna prepakiranje in ali ponovno izmeri končne mere. Ponovno računajte šele, ko so te predpostavke jasne; manjši primer ne pomeni zagotovljenega prihranka."
+          ]
+        },
+        {
+          "heading": "Pretvorite težo v celovito ponudbo",
+          "paragraphs": [
+            "Dobljeno težo, mere, cilj in točno vsebino vnesite v uradno oceno dostave ali ponudbo za paket. Preberite ceno za začetno težo, dodatne korake, minimum in storitvene stroške. Ena cena na kilogram, prepisana od drugega kupca, lahko te pogoje izpusti in vašega paketa ne more zanesljivo ovrednotiti.",
+            "Pri primerjavi poti imejte vse zneske v eni valuti. Mednarodnemu prevozu prištejte ceno izdelka, domačo dostavo, izbrano pakiranje in plačilne stroške. Preverite, kako ponudba obravnava zavarovanje in veljavne uvozne stroške. Ta stran ne računa davkov in ne priporoča vrednosti deklaracije; uporabite točne podatke o izdelkih in trenutne zahteve ciljne države."
+          ]
+        },
+        {
+          "heading": "Zakaj se končna ponudba lahko razlikuje od ocene",
+          "paragraphs": [
+            "Končna škatla ima lahko drugačne mere, skladišče lahko natančneje izmeri težo ali pa primerna pot uporabi obračunski korak, ki ga ocena ni zajela. Na znesek lahko vplivata tudi spremenjena tarifa ali dodatna izbrana storitev. Končno ponudbo primerjajte po postavkah, namesto da vsako razliko pripišete formuli za težo.",
+            "Pred plačilom shranite ime poti, meritve zapakiranega paketa, valuto ponudbe, vključene storitve in datum ponudbe. Če številka ni jasna, vprašajte, katera teža in cenovno pravilo sta jo določila. Za celoten proračun uporabite vodnik po stroških dostave, po odpremi pa vodnik za sledenje. Kalkulator ponovno uporabite ob spremembi paketa, ne kot nadomestilo za ponudbo za plačilo."
+          ]
+        }
+      ],
+      "sources": [
+        "https://www.kakobuy.com/tools/estimate",
+        "https://item2.kakobuy.com/index/information?information_id=3"
+      ],
+      "related": [
+        "kakobuy-shipping-costs",
+        "kakobuy-warehouse-consolidation",
+        "kakobuy-shipping-time-tracking"
+      ],
+      "datePublished": "2026-10-30",
+      "dateModified": "2026-10-30",
+      "wordCount": 717
+    },
+    {
+      "slug": "is-kakobuy-legit",
+      "title": "Ali je Kakobuy zanesljiv? Preverjanja pred nakupom in odpremo",
+      "description": "Ocenite Kakobuy z uradnimi koraki naročanja, plačilnimi zapisi, fotografijami QC in pogoji vračila. Ločite dokaze o platformi od kakovosti prodajalca in partnerskih trditev.",
+      "category": "Pred nakupom",
+      "readMinutes": 4,
+      "intro": "Iskanje »ali je Kakobuy zanesljiv« običajno združuje več vprašanj: ali gre za pravo spletno mesto, ali bo izbrani prodajalec dobavil izdelek, kaj lahko potrdi QC in kaj se zgodi ob težavah? Ta vprašanja zahtevajo različna dokazila. To je neodvisen kontrolni seznam, ki temelji na objavljenem nakupnem postopku in zapisih vašega naročila. Ni osebna ocena nakupa, revizija podjetja ali jamstvo dostave.",
+      "answer": "Kakobuy objavlja postopek nakupnega posrednika, ki zajema nakup, skladiščni pregled in oddajo mednarodnega paketa. To pojasni predvideno storitev, ne zagotavlja pa kakovosti prodajalca, pristnosti izdelka ali izida vračila. Pred odločitvijo o sprejemljivem tveganju preverite domeno, celotne stroške, točen oglas in trenutne pogoje naročila.",
+      "sections": [
+        {
+          "heading": "Ločite platformo, prodajalca in to spletno mesto",
+          "paragraphs": [
+            "Nakupni posrednik in prodajalec na tržnici imata različni vlogi. Prodajalec dobavi izbrano blago; posrednik izvede storitve, ki jih naročite, na primer nakup in posredovanje pošiljke. Razpoložljivosti, velikosti in stanja izdelka ni mogoče potrditi zgolj s prepoznavanjem imena posrednika. Preverite izvirni oglas in točno možnost, ki jo želite kupiti.",
+            "Kakobuy Buys je neodvisen imenik in vodnik. Ne upravljamo vašega računa Kakobuy, ne sprejemamo plačil naročil in ne odločamo o vračilih. Nekatere odhodne nakupne povezave vsebujejo partnersko kodo in nam lahko prinesejo provizijo. To razmerje ne spremeni oglasa v preizkušeno priporočilo. Za dejanski spor glede naročila uporabite uradno podporo računa."
+          ]
+        },
+        {
+          "heading": "Pred vnosom plačilnih podatkov preverite cilj povezave",
+          "paragraphs": [
+            "Začnite na preverjenem uradnem naslovu in po kliku povezave preglejte celotno ime gostitelja. Znan logotip, iskalni oglas ali kopiran članek pomoči niso zadosten dokaz, da stran pripada pričakovani storitvi. Bodite previdni, če sporočilo spremeni cilj plačila ali zahteva pošiljanje prijavnih podatkov po nepovezanem klepetu.",
+            "Gumb za registracijo na tem spletnem mestu odpre item2.kakobuy.com/register, nakupni gumbi pa stran izdelka na item2.kakobuy.com. Pred prijavo preverite dejanski naslov v brskalniku. Za prikaz imenika izdelkov nikoli ne potrebujemo vašega gesla, enkratne kode ali varnostne kode kartice. HTTPS varuje povezavo, sam pa ne dokazuje zanesljivosti trgovca."
+          ]
+        },
+        {
+          "heading": "Uporabite dokazila, ki odgovarjajo na pravo vprašanje",
+          "paragraphs": [
+            "Uradna navodila ločujejo nakup od mednarodne odpreme. S tem zaporedjem ugotovite, katera dokazila bi morala obstajati v trenutni fazi. Potrditev naročila ni potrditev dostave, prodajalčeve fotografije pa niso zapis izdelka, ki je prispel za vaše naročilo."
+          ],
+          "table": {
+            "headers": [
+              "Dokazilo",
+              "Uporabno za",
+              "Ne potrjuje"
+            ],
+            "rows": [
+              [
+                "Izvirni prodajalčev oglas",
+                "Model, možnost in oglaševane mere",
+                "Stanja prejetega izdelka"
+              ],
+              [
+                "Vaši zapisi naročil in plačil",
+                "Kaj je bilo zahtevano in zaračunano",
+                "Uspešne dostave"
+              ],
+              [
+                "Vaše skladiščne fotografije QC",
+                "Vidne podrobnosti prejetega izdelka",
+                "Pristnosti ali skritega delovanja"
+              ],
+              [
+                "Prevoznikovi odčitki vašega paketa",
+                "Zabeležene prevozne dogodke",
+                "Zagotovljenega datuma prihoda"
+              ],
+              [
+                "Trenutni pogoji vračila in odgovor podpore",
+                "Veljavni postopek in pogoje",
+                "Brezpogojnega vračila denarja"
+              ]
+            ]
+          }
+        },
+        {
+          "heading": "Berite ocene, ne da bi iz zgodb delali jamstva",
+          "paragraphs": [
+            "Uporabna ocena navede datum, prevozno pot, cilj, stopnjo naročila in jasen opis opaženega. Uspešna dostava v drugo državo morda ne napoveduje vaše prevozne linije, nerešena pritožba pa se lahko nanaša na določenega prodajalca ali izdelek. Poiščite del izkušnje, ki ustreza vaši odločitvi.",
+            "Bodite previdni pri lestvicah, ki temeljijo predvsem na kuponih ali priporočilnih povezavah. Vprašajte se, ali avtor loči prodajalčeve slike od lastnega QC in ali negativni izid opiše z dovolj okoliščinami za presojo. Nismo izračunali preverjene stopnje uspeha ali neodvisno potrdili ocen kupcev, zato ta vodnik ne dodeljuje številčne ocene zaupanja."
+          ]
+        },
+        {
+          "heading": "Pred prvim plačilom določite omejitev porabe",
+          "paragraphs": [
+            "Ocenite celotne stroške, namesto da odločate po kartici izdelka. Upoštevajte domačo dostavo, mednarodni prevoz, izbrane storitve ter veljavne plačilne in uvozne stroške. Potrdite valuto in trenutni znesek za plačilo. Če proračun pokrije le nakup izdelka, prihod v skladišče ne odpravi preostalih stroškov dostave.",
+            "Pred nakupom preverite prodajalčeve pogoje vračila in vprašajte, kateri stroški ostanejo za plačilo, če naročilo ne more potekati po pričakovanjih. Omejeno prvo naročilo lahko zmanjša izpostavljeni znesek, ne odpravi pa negotovosti pri dostavi ali vračilu. Ne dodajajte izdelkov samo za dosego praga kupona, če dodatni strošek ni upravičen."
+          ]
+        },
+        {
+          "heading": "Ob nerešenem vprašanju ustavite postopek v skladišču",
+          "paragraphs": [
+            "Fotografije svojega naročila primerjajte z izbrano možnostjo in zahtevajte določeno meritev ali zorni kot, ki bi razjasnil pomislek. Slika lahko pokaže napačno barvo, vidno poškodbo ali neujemanje oznake; ne more zagotoviti pristnosti, notranjih materialov ali dolgoročne vzdržljivosti. Sporne izdelke pustite zunaj paketa, dokler ne razumete možne rešitve.",
+            "Pri preklicu ali vračilu shranite številko naročila, oglas, plačilni zapis, ustrezne fotografije in odgovore podpore. Vprašajte o upravičenosti, rokih, povratni poštnini in cilju morebitnega vračila denarja. Če odgovori ostajajo nejasni, zadržite naslednje plačilo ali odpremo. Praktično vprašanje je, ali dokazila in pogoji zadoščajo za to naročilo, ne ali lahko ena oznaka opiše vse možne izide."
+          ]
+        }
+      ],
+      "sources": [
+        "https://item2.kakobuy.com/index/information?information_id=3",
+        "https://www.kakobuy.com/service/help/question?id=51",
+        "https://www.kakobuy.com/index/information?information_id=12"
+      ],
+      "related": [
+        "how-to-buy-on-kakobuy",
+        "kakobuy-qc-photos-guide",
+        "kakobuy-returns-refunds"
+      ],
+      "datePublished": "2026-10-30",
+      "dateModified": "2026-10-30",
+      "wordCount": 715
+    },
+    {
+      "slug": "kakobuy-shipping-time-tracking",
+      "title": "Čas dostave in sledenje Kakobuy: razlaga posameznih stopenj",
+      "description": "Spremljajte naročilo Kakobuy od prodajalčeve odpreme do skladišča in mednarodne dostave. Ugotovite, katero številko uporabiti in kaj preveriti ob odsotnosti odčitkov.",
+      "category": "Dostava in sledenje",
+      "readMinutes": 4,
+      "intro": "Naročilo Kakobuy ima več kot eno pot. Najprej prodajalec pošlje izdelek v skladišče; pozneje oddani paket potuje na vaš cilj. Med tema potema so pregled, pakiranje in vaše odločitve o odpremi. Razumevanje trenutne stopnje je uporabnejše kot primerjanje nepojasnjenega števila »dni dostave« s tujim naročilom. Vodnik pojasnjuje, katera dokazila preveriti, ne da bi obljubljal stalen čas prihoda.",
+      "answer": "Za dostavo v skladišče uporabite prodajalčevo domače sledenje, po oddaji pošiljke pa zapis mednarodnega paketa. Številka nakupnega naročila ni nujno prevoznikova sledilna številka. Ustvarjena nalepka ne dokazuje prevzema; poiščite zadnji fizični odčitek in trenutna navodila za storitev izbrane poti.",
+      "sections": [
+        {
+          "heading": "Štejte celoten postopek, ne le mednarodnega prevoza",
+          "paragraphs": [
+            "Celoten čas lahko vključuje obdelavo nakupa, čakanje na prodajalčevo odpremo, domači prevoz, sprejem in QC v skladišču, vaš čas pregleda, pakiranje, mednarodni prevoz in dostavo na cilju. Če pred združevanjem čakate še en izdelek, je ta zamuda del načrta paketa, ne prevoznikovega tranzitnega časa.",
+            "Kakobuyeva objavljena navodila za nakup opisujejo stopnje, vendar okvirni čas obdelave ni obljuba za vsakega prodajalca ali prevozno linijo. Zaloga, konci tedna, razpoložljivost poti in vsebina paketa lahko spremenijo zaporedje. Za časovno občutljivo naročilo primerjajte trenutna navodila poti in predvidite čas za stopnje, ki jih ocena prevoza morda ne vključuje."
+          ]
+        },
+        {
+          "heading": "Povežite številko s pravo potjo",
+          "paragraphs": [
+            "Prodajalčevo referenco naročila, številko domačega prevoznika, številko paketa Kakobuy in mednarodno sledilno številko hranite v ločenih poljih. Lahko se nanašajo na povezane zapise, vendar niso zamenljive. Uradna objava o sledenju izvirnemu naročilu opisuje dostop do podatkov na strani prodajalca; nakupna navodila usmerjajo mednarodno sledenje v razdelek s paketi v računu.",
+            "Odprite trenutni zapis naročila ali paketa in sledite podatkom za sledenje, ki so mu priloženi. Če številka ni prepoznana, preverite prevoznika, stopnjo in ali je bila nalepka ustvarjena šele pred kratkim. Ne predpostavljajte, da bo vnos nakupne reference na prevoznikovi strani prikazal pošiljko. Ko javno iščete pomoč, nikoli ne objavljajte posnetkov z vašim polnim naslovom ali telefonsko številko."
+          ]
+        },
+        {
+          "heading": "Razlagajte običajne stopnje glede na dokazila",
+          "paragraphs": [
+            "Spodnji opisi predstavljajo splošne stopnje dostave, ne točnega seznama oznak v vmesniku Kakobuy. Besedilo se lahko razlikuje glede na jezik in prevoznika. Preberite podroben dogodek, lokacijo in čas, namesto da se zanašate le na kratko prevedeno stanje."
+          ],
+          "table": {
+            "headers": [
+              "Stopnja",
+              "Kaj preveriti naslednje"
+            ],
+            "rows": [
+              [
+                "Prodajalec je odpremil",
+                "Domačega prevoznika in cilj dostave: skladišče."
+              ],
+              [
+                "Dostavljeno v skladišče",
+                "Sprejem v računu in zapis QC; sam odčitek dostave lahko nastane pred obdelavo."
+              ],
+              [
+                "Pripravljeno v skladišču",
+                "Vašo odločitev o QC, izbiro pakiranja in oddajo paketa."
+              ],
+              [
+                "Ustvarjena nalepka ali podatki pošiljke",
+                "Odčitek prevzema ali sprejema, ki potrjuje fizično predajo."
+              ],
+              [
+                "Mednarodni prevoz",
+                "Zadnji odčitek, navodila prevozne poti in morebitno dokumentirano predajo."
+              ],
+              [
+                "Obdelava ali dostava na cilju",
+                "Posodobitve lokalnega prevoznika in morebitno zahtevano uradno dejanje."
+              ]
+            ]
+          }
+        },
+        {
+          "heading": "Kaj storiti, ko se sledenje ne posodablja",
+          "paragraphs": [
+            "Najprej zabeležite zadnji odčitek, datum, lokacijo in točno besedilo. Preverite, ali paket čaka na prodajalčevo odpremo, skladiščno obdelavo, prevzem prevoznika ali poznejši prevozni dogodek. Ti položaji zahtevajo različne stike. Neaktivna sledilna stran sama ne dokazuje izgube paketa ali carinskega zadržanja.",
+            "Premor primerjajte s trenutnimi navodili storitve za svojo pot in morebitnimi obvestili o motnjah. Če presega navedeni okvir, se obrnite na podporo za pakete v računu ter priložite številko paketa, prevoznikovo številko in zadnji odčitek. Vprašajte, pri kom je paket trenutno in kdaj sledi naslednji korak obravnave. Ne odpirajte ponavljajočih se primerov, ki ista dokazila razdelijo med več pogovorov."
+          ]
+        },
+        {
+          "heading": "Pred ukrepanjem preverite sporočila na cilju",
+          "paragraphs": [
+            "Prevoznik lahko na ciljni stopnji zahteva navodila za dostavo ali dokumentacijo. Pred plačilom nepričakovanega stroška ali pošiljanjem osebnih podatkov preverite zahtevo prek uradne sledilne strani prevoznika ali obstoječega računa. Besedilno sporočilo, ki omenja paket, še ne dokazuje, da se nanaša na vašega.",
+            "Če sledenje kaže dostavo, paketa pa ne najdete, preglejte podrobnosti dostave, pooblaščeno prevzemno mesto in morebitno dokazilo o dostavi. Prevozniku in podpori Kakobuy pošljite isti jedrnat zapis. Ob poškodbi shranite embalažo in fotografije. Upoštevajte veljavni rok za zahtevek, namesto da predpostavljate, da splošno vračilo iz skladišča pokriva težave mednarodne dostave."
+          ]
+        },
+        {
+          "heading": "Vodite kratek zapis sledenja za jasen pregled primera",
+          "paragraphs": [
+            "Shranite referenco naročila, referenco paketa, prevoznika, sledilno številko, zadnji odčitek, navodila poti in datum zadnjega odgovora podpore. Dodajte naslednje dejanje in odgovorno osebo. Tako je nadaljnje vprašanje konkretno: vprašate lahko o manjkajoči predaji ali težavi pri dostavi, namesto da ponavljate, da je prevoz počasen.",
+            "Pri prihodnjih naročilih primerjajte poti z istim ciljem in predpostavkami za paket, po dostavi pa zabeležite dejanske mejnike. Ena uspešna pošiljka je še vedno le eno opažanje. Pred ponudbo uporabite kalkulator teže, pred združevanjem skladiščni vodnik, pri težavi z izdelkom ali plačilom pa vodnik po vračilih. Vsaka stran obravnava drugo stopnjo istega nakupa."
+          ]
+        }
+      ],
+      "sources": [
+        "https://item2.kakobuy.com/index/information?information_id=3",
+        "https://www.kakobuy.com/tipdetail?id=37",
+        "https://www.kakobuy.com/index/information?information_id=12"
+      ],
+      "related": [
+        "kakobuy-warehouse-consolidation",
+        "kakobuy-shipping-costs",
+        "kakobuy-returns-refunds"
+      ],
+      "datePublished": "2026-10-30",
+      "dateModified": "2026-10-30",
+      "wordCount": 736
     }
   ],
   "faqs": [

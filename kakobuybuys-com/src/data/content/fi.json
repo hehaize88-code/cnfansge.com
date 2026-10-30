@@ -59,8 +59,8 @@
       "jersey": "Pelipaidat"
     },
     "catalogEyebrow": "AJANTASAINEN TUOTELUETTELO",
-    "catalogTitle": "Löydä seuraava suosikkisi.",
-    "catalogIntro": "Selaa ajantasaisia ilmoituksia, vertaa tuotehintoja ja tarkista myyjän kuvat ennen kuin avaat oikean tuotteen Kakobuyssa.",
+    "catalogTitle": "Kakobuy-tuotetaulukko ja tuotelinkit",
+    "catalogIntro": "Hae Kakobuy-tuotetaulukosta hakusanalla tai kategorialla, vertaa nykyisiä listahintoja ja avaa alkuperäinen tuotelinkki. Tarkista tarkka koko, myyjän kuvat ja koko toimitusbudjetti ennen ostamista.",
     "catalogStatus": "20 tuotetta sivulla · Jatka selaamista sivupainikkeilla",
     "resultsFor": "Hakutulokset haulle",
     "clearFilters": "Tyhjennä suodattimet",
@@ -96,7 +96,7 @@
     "journalEyebrow": "OSTAJAN ARTIKKELIT",
     "journalTitle": "Seuraava tilauksesi, paremmin harkittuna.",
     "journalIntro": "Käytännön oppaita tuotelinkeistä, koosta, QC:stä, varastovalinnoista ja toimituskuluista.",
-    "allArticles": "Kaikki 10 opasta",
+    "allArticles": "Kaikki osto-oppaat",
     "minutes": "min lukuaika",
     "articleLabel": "OSTO-OPAS",
     "contents": "Tässä oppaassa",
@@ -118,7 +118,7 @@
     "qcEyebrow": "TARKISTA ENNEN LÄHETTÄMISTÄ",
     "qcTitle": "Tutki kuvia. Tarkista yksityiskohdat.",
     "qcIntro": "Varaston tarkastuskuvat voivat auttaa arvioimaan näkyviä yksityiskohtia ennen lähettämistä. Opi, mitkä kuvakulmat ja mitat kannattaa tarkistaa ja mitä kuva ei voi osoittaa.",
-    "qcUnavailable": "Tähän esikatseluun ei ole yhdistetty varmennettua QC-viitekuvien lähdettä. Tuotesivuilla näkyvät tällä hetkellä myyjän ilmoituskuvat, jotka on merkitty selvästi.",
+    "qcUnavailable": "Tämä sivusto ei tarjoa varmennettua varaston QC-kuvasyötettä. Tuotesivuilla näkyvät myyjän tuotekuvat. Tarkista oman tilauksesi varastokuvat Kakobuy-tililtäsi ennen lähettämistä.",
     "qcChecklist": [
       "Vertaa näkyvää väriä, mallia ja valittua vaihtoehtoa tilaukseesi.",
       "Tarkista etiketit ja pyydetyt mitat suhteessa omiin kokovaatimuksiisi.",
@@ -126,7 +126,7 @@
       "Käytä oman tilauksesi tarkastuskuvia, kun päätät lähettämisestä."
     ],
     "shippingEyebrow": "YMMÄRRÄ KOKONAISKUSTANNUKSET",
-    "shippingTitle": "Suunnittele tuotteen hintaa pidemmälle.",
+    "shippingTitle": "Kakobuyn toimituskulut, paino ja seuranta",
     "shippingIntro": "Ilmoituksessa näkyvä hinta on lähtökohta. Kiinan sisäinen toimitus, kansainvälinen rahti ja valitut palvelut voivat muuttaa lopullista summaa.",
     "shippingCards": [
       {
@@ -144,7 +144,7 @@
     ],
     "visualTitle": "Hae kuvalla",
     "visualIntro": "Kuvahaku tulee käyttämään samaa tuotelähdettä kuin luettelo.",
-    "visualUnavailable": "Lähteen kuvahakurajapintaa ei ole vielä varmennettu. Kuvien lataaminen ei ole käytettävissä tässä esikatselussa; hakusanahaku ja kategorioiden selaus ovat käytettävissä.",
+    "visualUnavailable": "Kuvien lataaminen ei ole tällä hetkellä käytettävissä. Hae hakusanalla tai selaa tuoteryhmiä.",
     "aboutTitle": "Hyödyllinen lähtökohta.",
     "aboutIntro": "Kakobuy Buys on riippumaton tuotteiden löytämiseen ja osto-oppaisiin keskittyvä sivusto. Autamme tutustumaan ilmoituksiin ja ymmärtämään, mitä kannattaa kysyä ennen tilaamista.",
     "aboutBody": "Tilaukset, maksut, varastopalvelut ja toimitukset hoidetaan Kakobuyssa. Tämä sivusto ei vastaanota maksuja eikä hallinnoi Kakobuy-tiliäsi. Osa ulospäin johtavista rekisteröitymis- tai ostolinkeistä on kumppanuuslinkkejä, joista voimme saada palkkion.",
@@ -162,15 +162,39 @@
       "Sisällytä toimitus ja mahdolliset maksut budjettiisi.",
       "Tarkista oman tilauksesi varastotarkastuskuvat ennen lähettämistä."
     ],
-    "top": "Takaisin alkuun"
+    "top": "Takaisin alkuun",
+    "catalogSeoTitle": "Kakobuy Spreadsheet: tuotelinkit, hinnat ja kategoriat",
+    "shippingSeoTitle": "Kakobuy-toimitus: kulut, laskuri ja seuranta",
+    "quickAnswer": "Lyhyt vastaus",
+    "reviewedLabel": "Päivitetty",
+    "decisionGuides": "Ennen maksamista tai lähettämistä",
+    "calculator": {
+      "title": "Laske pakettisi laskutuspaino",
+      "intro": "Anna pakatun lähetyksen mitat ja toimitusreitin jakaja. Tämä riippumaton laskuri arvioi painoa, ei Kakobuyn ajantasaista hintaa. Esimerkkiarvot havainnollistavat laskentaa; korvaa ne omilla mittauksillasi.",
+      "weight": "Todellinen pakattu paino (kg)",
+      "length": "Pituus (cm)",
+      "width": "Leveys (cm)",
+      "height": "Korkeus (cm)",
+      "divisor": "Toimitusreitin tilavuuspainon jakaja",
+      "step": "Laskutusporras (kg)",
+      "rule": "Toimitusreitin laskutussääntö",
+      "higher": "Todellisen painon ja tilavuuspainon suurempi arvo",
+      "actualOnly": "Vain todellinen paino",
+      "calculate": "Laske paino",
+      "volumeResult": "Tilavuuspaino",
+      "billableResult": "Pyöristetty laskutuspaino",
+      "note": "Tarkista toimitusreitin vähimmäispaino, mittarajat, hintaportaat ja pyöristyssäännöt. Laskelma ei sisällä hintoja, veroja, vakuutusta tai käsittelykuluja. Tulokset pysyvät selaimessasi.",
+      "invalid": "Anna positiiviset luvut jokaiseen kenttään. Tarkista yksiköt ja valitun toimitusreitin laskutussääntö.",
+      "noScript": "Kaava: pituus × leveys × korkeus ÷ jakaja. Jos reitti käyttää molempia painoja, valitse tämän tuloksen ja todellisen painon suurempi arvo ja pyöristä se ylöspäin laskutusportaaseen."
+    }
   },
   "articles": [
     {
       "slug": "how-to-use-kakobuy-spreadsheet",
-      "title": "Kakobuy-tuoteluettelon käyttö: hausta hyödylliseen ehdokaslistaan",
-      "description": "Opi lukemaan tuotetietoja, vahvistamaan alkuperäiset linkit, vertailemaan vaihtoehtoja ja kokoamaan ehdokaslista ennen tilaamista Kakobuyn kautta.",
+      "title": "Kakobuy-tuotetaulukon käyttö ja tuotelinkkien tarkistaminen",
+      "description": "Hae Kakobuy-tuotetaulukosta, vertaa tuotelinkkejä ja myyjän kuvia, tarkista koot ja laadi ehdokaslista realistisella toimitusbudjetilla.",
       "category": "Tuoteluettelo",
-      "readMinutes": 8,
+      "readMinutes": 6,
       "intro": "Kakobuy-tuoteluettelo on hyödyllisimmillään silloin, kun se auttaa tekemään päätöksen eikä vain tarjoa loputonta kuvavirtaa. Käsittele jokaista merkintää reittinä myyjän ilmoitukseen, joka vaatii muutaman tarkistuksen: mikä tuote on, minkä vaihtoehdon haluat, mitä hinta sisältää ja millaista näyttöä on saatavilla. Tämä opas kuvaa toistettavan tavan siirtyä laajasta hausta pieneen, käytännölliseen ehdokaslistaan sekoittamatta suositusta lupaukseen.",
       "sections": [
         {
@@ -178,70 +202,80 @@
           "paragraphs": [
             "Tuotehakemisto järjestää viitteitä. Se voi näyttää otsikon, valokuvan, hinta-arvion ja linkin, joka avaa ilmoituksen Kakobuyn kautta. Tiedot nopeuttavat selaamista, mutta eivät korvaa myyjän ajantasaista tarjousta. Saatavuus, vaihtoehdot ja hinnat voivat muuttua merkinnän lisäämisen jälkeen. Järkevä seuraava askel on avata varsinainen tuote ja verrata ostoksesi kannalta tärkeitä tietoja.",
             "Pidä toimijoiden roolit selvinä. Tämä riippumaton sivusto auttaa tuotteiden löytämisessä ja tietojen lukemisessa. Myyjä toimittaa tuotteen. Kakobuy hoitaa palvelut, jotka järjestät sen alustalla. Houkutteleva tuotekortti ei tarkoita, että tämä sivusto omistaisi tavarat, olisi tarkastanut ne henkilökohtaisesti tai voisi muuttaa tilaustasi. Ero auttaa ymmärtämään, mistä kysyä ja minkä näkymän pitäisi antaa lopullinen vastaus."
-          ]
+          ],
+          "id": "section-0"
         },
         {
           "heading": "Aloita täsmällisestä hausta",
           "paragraphs": [
             "Valitse muutama hyödyllinen sana ennen selaamista. Tuotetyyppi ja käytännöllinen yksityiskohta muodostavat yleensä helpommin arvioitavan haun kuin hyvin laaja hakusana. Esimerkiksi vetoketjullisen hupparin haku antaa selkeämmän vertailuryhmän kuin vaatteiden haku. Jos tulokset ovat liian rajattuja, poista yksi yksityiskohta kerrallaan sen sijaan, että korvaisit koko haun asiaan liittymättömällä termillä.",
             "Vähennä häiriöitä luokkasuodattimilla ja tarkista sitten, miten lajittelu muuttaa tuloksia. Suosiojärjestys auttaa selaamisessa, mutta ei ole laatutodistus. Halvimman hinnan järjestys kertoo vain, mikä näytetty hinta on alempi, ei sitä, löytyykö oikea vaihtoehto tai tekeekö toimitus ostoksesta edullisen. Pidä suodatusehdot samoina vertaillessasi useita tuotteita, jotta arvioit yhtenäistä joukkoa."
-          ]
+          ],
+          "id": "section-1"
         },
         {
           "heading": "Lue merkinnän tiedot erillisinä todisteina",
           "paragraphs": [
             "Aloita otsikosta ja vertaa sitten kuvaa ja alkuperäistä tuoteviitettä. Otsikkoa on voitu lyhentää pieneen korttiin. Kuva voi esittää yhtä väriä tai edustavaa versiota kaikkien vaihtoehtojen sijaan. Hinta voi tarkoittaa yhtä vaihtoehtoa, alkaen-hintaa tai arviota. Lukemalla kentät erikseen vältät muuttamasta kätevää yhteenvetoa väitteeksi, jota myyjä ei ole esittänyt.",
             "Etsi sekä puuttuvia että saatavilla olevia tietoja. Jos sivulta puuttuu vahvistettu paino, kokotaulukko tai QC-kuvasarja, jätä kysymys avoimeksi. Älä lainaa yksityiskohtia mielessäsi samankaltaiselta tuotteelta. Kahdella samantyylisiä kuvia käyttävällä ilmoituksella voi olla eri toimittaja, materiaali tai vaihtoehtorakenne. Vertailu on luotettavampi, kun erotat muistiinpanoissasi kirjatut tosiasiat oletuksista."
-          ]
+          ],
+          "id": "section-2"
         },
         {
           "heading": "Säilytä alkuperäinen linkki valitun vaihtoehdon kanssa",
           "paragraphs": [
             "Alkuperäinen kauppapaikkalinkki on ehdokaslistasi perusta. Tallenna sen rinnalle tuotteen nimi, haluamasi väri ja harkitsemasi koko tai versio. Tuotetunnus yksilöi ilmoituksen, mutta ei välttämättä tiettyä väri- ja kokoyhdistelmää sen sisällä. Täydellinen vaihtoehdon valinta on siksi yhtä tärkeä kuin linkki.",
             "Kun ostopainike avaa Kakobuyn, tarkista, että tuotu tuote vastaa alkuperäistä viitettä. Vertaa näkyviä myyjätietoja, pääkuvaa, vaihtoehtojen nimiä ja alkuperäistä tunnusta. Jos kohde on tyhjä, poissa käytöstä tai selvästi erilainen, pysähdy ennen maksamista. Toimiva painike ei riitä: kohteen on edustettava tarkoitettua tuotetta. Älä käytä tutulta näyttävää korvaajaa vain siksi, että sen kuva muistuttaa tallentamaasi kuvaa."
-          ]
+          ],
+          "id": "section-3"
         },
         {
           "heading": "Vertaa hintoja ja muodosta sitten todellinen budjetti",
           "paragraphs": [
             "USD-arvio on kätevä ensimmäinen suodatin. Se auttaa päättämään, sopiiko tuote budjettisi hintaluokkaan, mutta sitä ei pidä käsitellä toimitettuna kokonaishintana. Kakobuyn kustannustiedot erottavat tavarat ja Kiinan sisäisen kuljetuksen kansainvälisestä rahdista sekä mahdollisesta pakkauksesta ja lisäpalveluista. Ajantasaiset summat tarkistetaan tilaus- ja pakettinäkymistä.",
             "Kirjaa jokaisesta ehdokkaasta valitun vaihtoehdon hinta ja näkyvät Kiinan sisäiset postikulut. Jätä vertailuun tilaa myöhemmälle kansainväliselle toimitukselle. Vältä näennäistä tarkkuutta, kuten tuotteen nimeämistä kokonaisuutena halvimmaksi vain siksi, että sen näytetty hinta on muutaman sentin alempi. Eri pakkauskoko, vaihtoehto tai palvelutarve voi muuttaa tulosta. Vertaa kokonaisia valintoja tarvittavan tarjouksen valmistuttua ja merkitse keskeneräiset arviot keskeneräisiksi."
-          ]
+          ],
+          "id": "section-4"
         },
         {
           "heading": "Erota myyjän kuvat QC-näytöstä",
           "paragraphs": [
             "Myyjän kuvat selittävät tarjousta. Ne voivat esittää tyyliä, yksityiskohtia, etikettejä tai kokotaulukon. QC-kuvat liittyvät vastaanotetun tuotteen tarkastukseen. Lähteet vastaavat eri kysymyksiin, eikä suuri myyjän kuvagalleria muutu automaattisesti QC-galleriaksi. Lue kuvien merkinnät ja etsi selkeä yhteys tarkastuskuvien ja kyseisen tuoteviitteen väliltä.",
             "Vanhoista QC-kuvista voi nähdä, mitä joku aiemmin sai, mutta ne eivät todista oman tilauksesi sisältöä. Kakobuy kuvaa palveluprosessissaan varastotarkastus- ja valokuvausvaiheen. Kun tilaat, tarkista omaan tuotteeseesi liitetty näyttö ja tarkastuksen laajuus. Jätä ratkaisematon kysymys avoimeksi, jos saatavilla olevat kuvat eivät näytä arvioitavaa ominaisuutta."
-          ]
+          ],
+          "id": "section-5"
         },
         {
           "heading": "Vertaa istuvuutta ennen tyyliä",
           "paragraphs": [
             "Hyvän ehdokaslistan tulisi sisältää tuotteita, jotka voivat realistisesti täyttää tarpeesi. Aloita vaatteissa kyseisen myyjän mitoista ja vertaa niitä samankaltaiseen jo käyttämääsi vaatteeseen. Vahvista kengissä kokojärjestelmä ja senttimetrimittojen merkitys. Kakobuyn koko-ohje huomauttaa myyjien käyttävän eri standardeja, joten sama kirjain tai numero kahdessa ilmoituksessa ei riitä.",
             "Kirjoita täsmällinen epävarmuus muistiin. ”Tarvitsen M-koon rinnankohdan leveyden” on hyödyllisempi kuin ”koko epäilyttää”. ”Sisältääkö ilmoitettu pituus kahvan?” on selkeämpi kuin ”onko laukku suuri?”. Kysymykset auttavat selvittämään, vastaako ilmoitus jo huoleesi vai tarvitsetko tarkennuksen ennen tilaamista. Kysymyksen pitäminen tallennetun linkin vieressä ehkäisee myös sen unohtumista kassalla."
-          ]
+          ],
+          "id": "section-6"
         },
         {
           "heading": "Kokoa ehdokaslista, joka kestää toisen tarkastelun",
           "paragraphs": [
             "Rajaa aktiivinen listasi muutamaan ehdokkaaseen kutakin tarvetta varten. Anna jokaiselle samat kentät: alkuperäinen linkki, valittu vaihtoehto, näytetty hinta, tunnetut lisäkulut, tarvittava mitta ja avoin kysymys. Monimutkaista pisteytystä ei tarvita. Johdonmukaiset muistiinpanot auttavat näkemään, tarjoaako ilmoitus todella parempaa näyttöä vai onko siinä vain vakuuttavampi kuva.",
             "Palaa listaan tauon jälkeen. Avaa nykyiset linkit uudelleen, poista kaksoiskappaleet ja tarkista tallennetun vaihtoehdon saatavuus. Jos ehdokas on edelleen epäselvä useiden tarkistusten jälkeen, sekin on hyödyllistä tietoa. Voi olla parempi valita selkeämpi ilmoitus kuin käyttää lisää vaivaa epävarman valinnan puolustamiseen. Ehdokaslistan pitäisi vähentää epävarmuutta eikä kerätä lisää välilehtiä."
-          ]
+          ],
+          "id": "section-7"
         },
         {
           "heading": "Käytä samaa menetelmää puhelimella",
           "paragraphs": [
             "Tee pienellä näytöllä tietoisia vertailuja sen sijaan, että luottaisit muistiin selatessasi. Avaa yksi tuote, tarkista tärkeimmät kentät ja tallenna linkki ennen seuraavaan siirtymistä. Kuvan suurentaminen voi auttaa näkyvien yksityiskohtien kanssa, mutta ei palauta tietoa, jota kuvassa ei koskaan ollut. Epätarkka etiketti on edelleen avoin kysymys.",
             "Pidä luokka ja lajittelu samoina palatessasi hakemistoon. Jos vaihdat kieltä, varmista olevasi yhä tarkoitetulla tuote- tai tulossivulla. Käännöksen pitäisi auttaa ymmärtämään käyttöliittymää eikä luoda eri tuotteen identiteettiä. Palaa valitsemaasi vaihtoehtoon Kakobuyssa ennen maksamista. Viimeinen tarkistus kannattaa erityisesti silloin, kun olet avannut samassa selausistunnossa useita samankaltaisia ilmoituksia."
-          ]
+          ],
+          "id": "section-8"
         },
         {
           "heading": "Käytä selkeää pysähtymissääntöä",
           "paragraphs": [
             "Voit siirtyä tutkimisesta tilaamiseen, kun alkuperäinen ilmoitus vastaa kohdetta, tarkoitettu vaihtoehto on selvä, istuvuuskysymykseen on riittävä vastaus ja ymmärrät, mitkä kulut odottavat vielä tarjousta. Se ei poista kaikkia riskejä, mutta antaa harkitun perustan seuraavalle vaiheelle.",
             "Jos ehdot eivät täyty, jatka selvittämistä tai jätä tuote pois. Älä käytä hakemiston kokoa, innostunutta otsikkoa tai matalaa tuotehintaa näytön korvikkeena. Hyödyllinen Kakobuy-tuoteluettelo tukee päätöksiä, jotka osaat perustella: miksi tämä ilmoitus, miksi tämä vaihtoehto ja mitä tarkistat uudelleen tuotteen saavuttua varastoon."
-          ]
+          ],
+          "id": "section-9"
         }
       ],
       "sources": [
@@ -250,14 +284,22 @@
         "https://www.kakobuy.com/index/information?information_id=12",
         "https://www.kakobuy.com/service/help/question?id=91"
       ],
-      "wordCount": 1450
+      "wordCount": 1033,
+      "datePublished": "2026-10-24",
+      "dateModified": "2026-10-30",
+      "answer": "Hae tuotetyypillä, avaa tarkka listaus ja tarkista markkinapaikan linkki, valittu koko ja myyjän kuvat. Tallenna vain ehdokkaat, joiden kokonaisbudjetin ja palautusehdot ymmärrät. Taulukon merkintä auttaa löytämään tuotteen; se ei todista tuotteen tarkastusta tai aitoutta.",
+      "related": [
+        "kakobuy-weidian-taobao-links",
+        "kakobuy-shipping-calculator",
+        "is-kakobuy-legit"
+      ]
     },
     {
       "slug": "how-to-buy-on-kakobuy",
       "title": "Ostaminen Kakobuyssa: ensimmäinen tilaus vaihe vaiheelta",
       "description": "Seuraa tilausta myyjän linkistä varastotarkastukseen ja paketin lähettämiseen. Tee selkeät tarkistukset ennen jokaista maksua.",
       "category": "Osto-opas",
-      "readMinutes": 7,
+      "readMinutes": 5,
       "intro": "Kakobuyn kautta ostaminen sisältää useita toisiinsa liittyviä päätöksiä yhden kassakäynnin sijaan. Valitset tuotteen myyjältä, järjestät oston, tarkistat varastoon saapuvan tuotteen ja järjestät kansainvälisen toimituksen. Järjestyksen ymmärtäminen helpottaa näkymien tulkintaa ja ehkäisee vaiheen hyväksymistä ennen tärkeiden yksityiskohtien selviämistä. Opas seuraa julkaistua palveluprosessia; nykyiset hinnat, saatavuus ja reittiehdot tarkistetaan Kakobuyn ajantasaisilta sivuilta.",
       "sections": [
         {
@@ -265,70 +307,80 @@
           "paragraphs": [
             "Päätä ennen rahan lisäämistä tai tilaamista, mitä haluat ostaa. Säilytä alkuperäinen myyjän URL ja kirjaa tarkka vaihtoehto: koko, väri, malli, määrä ja mahdollinen versiomerkintä. Yhdessä kauppapaikkailmoituksessa voi olla monia erihintaisia vaihtoehtoja. Pelkän pääkuvan tallentaminen jättää liikaa tilaa myöhemmälle sekaannukselle.",
             "Avaa ilmoitus huolellisesti ja tunnista päätökseesi vaikuttavat tiedot. Vaate tarvitsee käyttökelpoisen kokoviitteen. Laukku voi tarvita mitat. Elektroninen tuote voi edellyttää teknistä tietoa, jota kuva ei vahvista. Kirjoita lyhyt kysymys, jos jotain puuttuu. Tämä on helpompaa ennen maksamista kuin odotusten palauttaminen mieleen tuotteen ostamisen jälkeen."
-          ]
+          ],
+          "id": "section-0"
         },
         {
           "heading": "Käytä virallista tilipalvelua",
           "paragraphs": [
             "Tämän sivuston rekisteröitymislinkki vie Kakobuyhin. Tee tilin perustaminen siellä ja säilytä tunnukset siellä. Tämä riippumaton opassivusto ei tarvitse Kakobuy-salasanaasi, maksutietojasi tai pääsyä tilauksiisi auttaakseen selaamisessa. Kun kirjautumisnäkymä ilmestyy, tarkista osoite ja varmista sen olevan palvelu, jota tarkoitit käyttää.",
             "Lue nykyiset tili-, maksu- ja palvelutiedot ennen varojen sitomista. Älä oleta vanhassa kirjoituksessa mainitun kampanjan koskevan uutta tiliä tänään. Jos rekisteröityessä näytetään etu, lue sen ehdot, päättymisaika ja soveltuva palvelu. Tavallisten kustannusten ymmärtäminen on hyödyllisempää kuin budjetin rakentaminen vahvistamattoman kupongin tai luvatun alennuksen varaan."
-          ]
+          ],
+          "id": "section-1"
         },
         {
           "heading": "Yhdistä tuotu tuote alkuperäiseen ilmoitukseen",
           "paragraphs": [
             "Avaa tuote Kakobuyssa tuotelinkillä ja vertaa tulosta tallentamaasi viitteeseen. Tarkista tuotteen identiteetti, valokuvat, näkyvät myyjätiedot ja vaihtoehtojen nimikkeet. Kauppapaikan tuotetunnus ei ole sama kuin hakemiston sisäinen tietuenumero. Kohteen tulee avata alkuperäinen myyjän ilmoitus eikä vain sisältää uskottavalta näyttävää numeroa.",
             "Jos tuotteen tuonti epäonnistuu, tuote ei ole saatavilla tai näkyviin tulee odottamaton tuote, älä jatka arvauksen perusteella. Tarkista alkuperäinen URL uudelleen ja poista asiaankuulumaton seuranta tai sivukatkelmat vain, kun ymmärrät varsinaisen tuoteosoitteen. Älä vaihda toiseen ilmoitukseen tarkistamatta sen omia mittoja ja ehtoja. Korvaava tuote on uusi ostopäätös, vaikka kuvat näyttäisivät lähes samoilta."
-          ]
+          ],
+          "id": "section-2"
         },
         {
           "heading": "Valitse tarkka vaihtoehto ja tee täsmälliset muistiinpanot",
           "paragraphs": [
             "Valitse jokainen vaihtoehto tietoisesti. Lue koko- ja värimerkinnät sen sijaan, että luottaisit pienoiskuvien sijaintiin, sillä järjestys voi vaihdella näkymien välillä. Vahvista määrä ja valintaan liittyvä hinta. Jos myyjä käyttää mallikoodia, säilytä se muistiinpanoissa. Se voi olla tarkempi tunniste kuin väljästi käännetty värin nimi.",
             "Käytä mahdollista ohjekenttää lyhyeen, tarkistettavaan pyyntöön. ”Vahvistakaa, että valittu vaihtoehto on musta, koko M” on selkeämpi kuin ”lähettäkää paras”. Älä oleta huomautuksella, että puuttuva vaihtoehto voidaan toimittaa. Jos pyyntö muuttaa myyjän tarjousta, pyydä ensin vahvistus. Tilaushuomautusten tulee selventää valintaa eikä korvata hiljaisesti tosiasiallisesti valittua vaihtoehtoa."
-          ]
+          ],
+          "id": "section-3"
         },
         {
           "heading": "Tarkista tuotemaksu omana vaiheenaan",
           "paragraphs": [
             "Kakobuyn julkaistu ostoprosessi kuvaa tuotteiden ja Kiinan sisäisten postikulujen maksamisen ennen myöhempää kansainvälistä pakettivaihetta. Lue nykyinen yhteissumma ja tunnista siihen sisältyvät osat. Tuotteen maksaminen ei tarkoita, että se olisi jo lähetetty kotiisi, eikä vahvista lopullista kansainvälistä toimitushintaa.",
             "Säilytä tiedot valitusta tuotteesta ja hyväksymästäsi summasta. Jos hinta tai vaihtoehto muuttuu ennen oston valmistumista, lue selitys ja vahvista haluamasi toimintatapa. On järkevää pysähtyä, jos muutettu tarjous ei enää vastaa budjettiasi tai vaatimuksiasi. Huolellinen tarkistus nyt voi ehkäistä vaikeamman keskustelun tuotteen ollessa jo Kiinan sisäisessä kuljetuksessa."
-          ]
+          ],
+          "id": "section-4"
         },
         {
           "heading": "Lue tilauksen tilat vaiheina, älä saapumislupauksina",
           "paragraphs": [
             "Tilaus kulkee eri toimintojen läpi: oston käsittely, myyjän lähetys, Kiinan sisäinen kuljetus ja varastovastaanotto. Muutos yhdessä vaiheessa ei automaattisesti tarkoita seuraavan valmistumista. Lue tuotteeseesi liittyvä todellinen tila ja viesti. Esimerkiksi Kiinan sisäistä seurantatunnusta ei pidä sekoittaa myöhempään kansainvälisen paketin seurantaan.",
             "Jos eteneminen on epäselvää, kysy rajattu kysymys käyttäen tilausviitettä ja viimeisintä näkyvää tapahtumaa. ”Myyjän lähetystä ei ole vielä vahvistettu; tarvitaanko minulta toimia?” on hyödyllisempi kuin perusteeton arvio paketin saapumisesta. Älä rakenna matka- tai lahjasuunnitelmia yhden optimistisen luvun varaan. Myyjän toimitus ja kansainvälinen kuljetus riippuvat eri tapahtumista ja voivat tarvita erilliset aikavaraukset."
-          ]
+          ],
+          "id": "section-5"
         },
         {
           "heading": "Tarkista vastaanotettu tuote ennen paketin lähettämistä",
           "paragraphs": [
             "Kakobuy kuvaa varastotarkastuksen ja kuvat osana palveluprosessiaan. Kun tuotteesi näyttö on saatavilla, vertaa sitä tilaamaasi vaihtoehtoon. Aloita tunnistuksesta ja täydellisyydestä: oikea tuote, kokolappu, väri tai versio sekä ilmoituksen perusteella odotetut osat. Tarkastele sitten käyttöösi tärkeitä näkyviä kohtia.",
             "Ymmärrä tarkastuksen rajat. Kuva voi näyttää etiketin tai sauman, mutta ei todistaa kaikkia istuvuuden, mukavuuden, kestävyyden tai toiminnan puolia. Jos tarpeellinen näkymä puuttuu, kysy sopivan lisätarkistuksen saatavuutta ja hintaa. Pidä ratkaisematon ongelma erillään lähetysluvasta. Paketin edetessä käytännön mahdollisuudet myyjään liittyvän ongelman ratkaisemiseen voivat muuttua."
-          ]
+          ],
+          "id": "section-6"
         },
         {
           "heading": "Selvitä kysymykset selkeän näytön avulla",
           "paragraphs": [
             "Jos huomaat mahdollisen poikkeaman, kuvaa se tiiviissä viestissä oikean viitteen kanssa. Kerro, mitä tilasit, mitä vastaanotettu näyttö osoittaa ja mihin tarvitset tarkennuksen. Viittaa tarvittaessa tiettyyn kuvaan tai myyjän vaihtoehtoon. Tämä on helpompi käsitellä kuin yleinen väite tuotteen näyttämisestä väärältä, varsinkin jos väri tai mitta on tulkinnanvarainen.",
             "Kysy nykyisistä palautus- ja vaihtovaihtoehdoista ennen lopputuloksen olettamista. Kakobuyn ohjeissa käsitellään myyjiin liittyvää ostonjälkeistä palvelua, mutta mahdollisuudet, ajankohdat ja maksut on tarkistettava kyseiselle tilaukselle. Älä lupaa itsellesi kaikkien ongelmien korjaantuvan ilmaiseksi. Punnitse näyttöä, tuen vastausta ja kokonaisvaikutuksia ennen kuin päätät pitää, vaihtaa, palauttaa tai jättää tuotteen lähetyksestä pois."
-          ]
+          ],
+          "id": "section-7"
         },
         {
           "heading": "Suunnittele paketti todellisen sisällön perusteella",
           "paragraphs": [
             "Kun lähettämäsi tuotteet ovat valmiina, tarkista Kakobuyn pakettivaihtoehdot. Tarkista toimitusosoite, vastaanottajan tiedot, sisältörajoitukset, pakkausvaihtoehdot ja saatavilla olevat reitit. Valmis paketti on uusi vertailuyksikkö: useat erikseen halvat tuotteet voivat muodostaa kookkaan pakkauksen, ja eri pakkausvalinnat voivat muuttaa tarjousta tai suojausta.",
             "Vertaa reittejä samalla sisällöllä ja samoilla oletuksilla. Lue nykyiset ehdot, älä vain listan yläosan hintaa. Jos tarjolla on vakuutus, lisäpakkaus tai muu palvelu, tarkista sen kattavuus ja hinta ennen valintaa. Älä oleta kaikkien palvelujen olevan tarpeellisia tai sisältyvän hintaan. Hyödyllinen kysymys on, sopiiko valittu yhdistelmä tuotteelle, määränpäähän ja haluamaasi suojaustasoon."
-          ]
+          ],
+          "id": "section-8"
         },
         {
           "heading": "Vahvista lähetys ja säilytä näyttö yhdessä",
           "paragraphs": [
             "Tarkista koko maksettava summa ja vaaditut ilmoitustiedot ennen paketin vahvistamista. Käytä oikeita tietoja ja noudata reitin sekä määränpään soveltuvia vaatimuksia. Jos jokin kenttä on epäselvä, pyydä selvennystä lähetystä hoitavalta palvelulta sen sijaan, että kopioisit sattumanvaraisen arvon jonkun toisen tilauksesta.",
             "Säilytä vahvistuksen jälkeen pakettiviite, reitti ja seurantatiedot ostotietojesi kanssa. Tulkitse seurantapäivityksiä kuljetusyhtiön todellisessa tapahtumajärjestyksessä. Käytä ongelmatilanteessa oikeaa tilaus- tai pakettikanavaa ja kuvaa viimeisin vahvistettu tapahtuma. Tavoitteena on jäljitettävä prosessi: yksi varmennettu myyjäviite, yksi täsmällinen vaihtoehto, tarkistettu varastotuote ja harkitusti valittu kansainvälinen lähetys."
-          ]
+          ],
+          "id": "section-9"
         }
       ],
       "sources": [
@@ -340,14 +392,16 @@
         "https://www.kakobuy.com/service/help/question?id=51",
         "https://www.kakobuy.com/service/help/question?id=69"
       ],
-      "wordCount": 1388
+      "wordCount": 965,
+      "datePublished": "2026-10-24",
+      "dateModified": "2026-10-24"
     },
     {
       "slug": "kakobuy-qc-photos-guide",
       "title": "Kakobuyn QC-kuvaopas: mitä tarkistaa ennen lähettämistä",
       "description": "Lue varastokuvia järjestelmällisesti, erota myyjän kuvat QC-näytöstä ja tunnista lisäselvitystä kaipaavat yksityiskohdat.",
       "category": "QC-opas",
-      "readMinutes": 8,
+      "readMinutes": 5,
       "intro": "Kakobuyn QC-kuvat ovat hyödyllisiä, kun liität ne tiettyyn kysymykseen tilaustasi varten vastaanotetusta tuotteesta. Hyöty vähenee, jos selaat nopeasti, tunnistat yleisen muodon ja oletat muun olevan oikein. Järjestelmällinen tarkistus alkaa tuotteen tunnistuksesta, jatkuu näkyvään rakenteeseen ja mittoihin ja päättyy avoimiin kysymyksiin. Tämä opas selittää prosessin käsittelemättä valokuvaa aitouden, toimivuuden tai täydellisen istuvuuden takuuna.",
       "sections": [
         {
@@ -355,70 +409,80 @@
           "paragraphs": [
             "Myyjän valokuva esittelee tuotetarjouksen. Se voi olla sommiteltu kuva, lähikuva, kokotaulukko tai esimerkki saatavilla olevasta vaihtoehdosta. Varaston QC-kuva dokumentoi tarkastettavaksi vastaanotetun tuotteen. Ero on tärkeä, koska kuvat voivat liittyä eri ajankohtiin eivätkä välttämättä esitä samaa fyysistä kappaletta.",
             "Vanha tarkastuskuva voi taustoittaa ilmoitusta, mutta oma tilauksesi tarvitsee oman tarkistuksensa. Tarkista tuoteviite ja tilausyhteys ennen kuvaan luottamista. Jos galleriaa ei ole merkitty varmennetuksi QC-aineistoksi, käsittele sitä tuotekuvina tarkastusnäytön sijaan. Suurempi kuvamäärä ei automaattisesti tarkoita parempaa näyttöä; hyödylliset kuvat näyttävät juuri arvioitavan ominaisuuden."
-          ]
+          ],
+          "id": "section-0"
         },
         {
           "heading": "Aloita tunnistuksesta ja vaihtoehdon täsmäämisestä",
           "paragraphs": [
             "Varmista ennen pieniä yksityiskohtia, että tuote on se, jonka aioit tilata. Vertaa tuotetyyppiä, väriä tai versiota, näkyvää kokolappua ja mukana tulevia osia tallennettuun valintaasi. Jos ilmoitus käyttää mallikoodeja, vertaa niitä siltä osin kuin ne näkyvät. Ensimmäinen kierros voi havaita selvän sekaannuksen ennen ajan käyttämistä ompeluun tai viimeistelyyn.",
             "Tarkista tuote kokonaisuutena. Kenkäpari tarvitsee molemmat kengät; vaatesetti valitussa vaihtoehdossa kuvatut osat; irrotettavilla osilla varustettu asuste odotetut komponentit. Älä päättele piilossa olevan osan sisältyvän pakettiin vain siksi, että se näkyy myyjän mainoskuvassa. Jos täydellisyyttä ei voi vahvistaa saatavilla olevista näkymistä, kysy juuri kyseisestä osasta."
-          ]
+          ],
+          "id": "section-1"
         },
         {
           "heading": "Tarkista koko tuote ennen suurentamista",
           "paragraphs": [
             "Aloita kokonaiskuvasta hahmottaaksesi muodon ja linjauksen. Tarkista, onko tuote aseteltu tasaisesti ja voiko perspektiivi selittää näkyvän eron. Taitettu hiha, kallistettu kenkä tai vino kamera voi saada toisen puolen näyttämään erilaiselta todistamatta virhettä. Etsi toinen näkymä ennen varmaa päätelmää yhdestä kuvasta.",
             "Siirry sitten tuoteryhmälle tärkeisiin kohtiin. Tarkastele vaatteiden näkyviä saumoja, kiinnityksiä ja kappaleiden yleistä linjausta. Vertaa kenkäparin vasenta ja oikeaa kenkää samankaltaisista kulmista. Tarkista laukuista ääriviiva, kahvan kiinnitys ja näkyvät sulkimet. Kuvaa havaintoja täsmällisesti. ”Sauma näyttää tässä kuvassa epätasaiselta” on parempi kysymyksen perusta kuin valmistuslaatua koskeva väite, jota kuva ei voi todistaa."
-          ]
+          ],
+          "id": "section-2"
         },
         {
           "heading": "Lue lähikuvia määritellyn kysymyksen avulla",
           "paragraphs": [
             "Suurentaminen auttaa, kun lähdekuva on riittävän tarkka. Katso kyseistä etikettiä, kiinnikettä, reunaa tai pintaa ja kysy, mitä kuva todella näyttää. Voit ehkä tunnistaa jäljen, puuttuvan osan tai odottamattoman etiketin. Pelkkä lähikuva ei yleensä vahvista materiaalikoostumusta, pitkäaikaista kestävyyttä tai piilossa olevaa rakennetta.",
             "Älä korvaa puuttuvaa näkymää digitaalisella suurennuksella. Pieni sumea etiketti ei muutu luotettavaksi näytöksi täyttämällä näytön. Jos etiketti vaikuttaa päätökseesi, kysy tarkemman kuvan mahdollisuutta. Rajaa pyyntö epävarmaan yksityiskohtaan. Näin erotat tarpeellisen tarkistuksen toistuvista kuvista, jotka eivät vastaa uuteen kysymykseen."
-          ]
+          ],
+          "id": "section-3"
         },
         {
           "heading": "Käsittele väriä ja valaistusta epävarmuuksina",
           "paragraphs": [
             "Sävy voi näyttää erilaiselta varastovalaistuksen, kameran valotuksen ja näyttöasetusten vuoksi. Vertaa useita näkymiä ja arvioi, ovatko myös läheisten pintojen värit muuttuneet. Kakobuyn tarkastustiedoissa värierot mainitaan palvelun rajoituksina. Yksittäistä valokuvaa ei siksi pidä käsitellä tarkkana värimittauksena.",
             "Jos tietty väri on tärkeä, kuvaa odotettu myyjän vaihtoehto ja kysy, vastaako vastaanotettu tuote valintaa. Se on hyödyllisempää kuin vaatia vastaavuutta eri valossa otettuun mainoskuvaan. Jos ero jää epäselväksi, päätä, hyväksytkö epävarmuuden. Osa ostoksista vaatii tarkempaa vastaavuutta kuin muut, ja varovainen päätös voi olla sopiva, kun kuvat eivät ratkaise vaatimusta."
-          ]
+          ],
+          "id": "section-4"
         },
         {
           "heading": "Tarkista mitat vastaavilla menetelmillä",
           "paragraphs": [
             "Mitta on hyödyllinen vain, jos ymmärrät alku- ja loppupisteen sekä yksiköt. Ruudutetulla taustalla kuvattu vaate voi antaa suuntaa, mutta ei aina vastaa mittanauhaa juuri haluamasi sauman kohdalla. Vertaa mahdollisuuksien mukaan samalla tavalla otettuja mittoja kuin myyjän taulukossa tai vertailuvaatteessasi.",
             "Paidan tasainen leveys on eri asia kuin vartalon ympärysmitta. Housujen lepotilainen vyötärönauha on eri mitta kuin venytetty. Kengän ulkopohjan pituus eroaa jalan pituudesta tai irrotettavan sisäpohjan pituudesta. Kysy täsmällisesti, jos merkitykset ovat epäselviä. Kakobuyn koko-ohje suosittelee mittaamista, mutta tarkastusrajoitukset myös varoittavat käsittelemästä mittatarkistuksia ehdottomana takuuna."
-          ]
+          ],
+          "id": "section-5"
         },
         {
           "heading": "Pyydä lisänäyttöä vain, kun se voi muuttaa päätöstä",
           "paragraphs": [
             "Hyödyllinen pyyntö yksilöi tuotteen, tarvittavan näkymän ja sen merkityksen. Voit esimerkiksi pyytää luettavaa kokolappua, molempia kenkiä samasta kulmasta tai mittanauhamittausta nimettyjen pisteiden väliltä. Kysy Kakobuylta, onnistuuko pyyntö nykyiselle tuotteelle ja veloitetaanko siitä. Saatavuus ja hinta tulee tarkistaa pyyntöhetkellä.",
             "Aseta etusijalle kysymykset, jotka voivat muuttaa päätöstä pitää tai lähettää tuote. Lisäkuva jo selvästi näkyvästä pinnasta voi tuoda vähän lisäarvoa. Puuttuva mitta istuvasta vaatteesta voi olla paljon tärkeämpi. Rajatut pyynnöt helpottavat myös vastauksen tulkintaa: voit tarkistaa, vastaako uusi näyttö alkuperäiseen kysymykseen, aloittamatta koko tarkistusta alusta."
-          ]
+          ],
+          "id": "section-6"
         },
         {
           "heading": "Ymmärrä, mitä silmämääräinen tarkastus ei todista",
           "paragraphs": [
             "Näkyvällä QC-näytöllä on rajat. Kuva ei osoita päivän käytön mukavuutta, kankaan käyttäytymistä pesussa, kiinnityksen käyttöikää tai elektronisen laitteen sisäistä turvallisuutta. Kakobuyn julkaistuissa tarkastustiedoissa rajataan pois tiettyjä toiminnallisia ja elektronisia tarkastuksia. Älä muuta onnistunutta silmämääräistä tarkistusta laajemmaksi sertifioinniksi.",
             "Aitouden varmentaminen on myös eri väite kuin vastaanotetun tuotteen havainnointi. Näkyvä logo tai tuttu muoto ei yksin todista alkuperää tai lisensointia. Jos ostosi riippuu tietystä sertifikaatista, materiaalimäärityksestä tai suorituskykystandardista, hanki asianmukainen dokumentaatio oikeasta lähteestä ennen tilaamista. Jos näyttöä ei ole saatavilla, QC-kuvakokoelmalla ei tule täyttää aukkoa."
-          ]
+          ],
+          "id": "section-7"
         },
         {
           "heading": "Tee ongelmista helposti käsiteltäviä",
           "paragraphs": [
             "Pidä viesti tosiasioissa, kun huomaat huolen. Yksilöi tilaus tai varastotuote, kuvaa valittu vaihtoehto ja selitä havaittu ero. Viittaa sen näyttävään kuvaan ja kerro, minkä tarkennuksen tarvitset. Näin syntyy selkeä merkintä, johon tuki voi vastata arvaamatta tarkoittamaasi tuotetta tai ominaisuutta.",
             "Erota kysymykset toivotuista lopputuloksista. Selvitä ensin, onko näennäinen jälki valoilmiö vai fyysinen ongelma, onko puuttuva osa vain kuvan ulkopuolella tai vastaanotettiinko väärä vaihtoehto. Kysy sen jälkeen soveltuvista jatkotoimista. Palautuksen, vaihdon ja muun käsittelyn ehdot riippuvat nykyisestä tilauksesta ja myyjän ehdoista; QC-huoli ei automaattisesti oikeuta tiettyyn hyvitykseen."
-          ]
+          ],
+          "id": "section-8"
         },
         {
           "heading": "Tee viimeinen tarkistus ennen paketin hyväksymistä",
           "paragraphs": [
             "Palaa ennen tuotteen lähettämistä ennen ostoa kirjoittamiisi kysymyksiin. Onko identiteetti, vaihtoehto, tärkeät näkyvät ominaisuudet ja olennaiset mitat tarkistettu? Odottavatko avoimet viestit yhä vastausta? Säilytä tarkastusnäyttö tuoteviitteen kanssa, jotta päätöksesi peruste pysyy selvänä.",
             "Jokaisesta valokuvasta ei tarvitse etsiä virhettä. Tavoitteena on päättää, riittääkö näyttö omaan käyttötarkoitukseesi ja onko tärkeät epävarmuudet käsitelty. Jos kysymys jää avoimeksi, pysähdy sen sijaan, että tulkitsisit hiljaisuuden vahvistukseksi. Huolellinen QC-tarkistus on käytännöllinen tarkistuspiste tuotteen vastaanottamisen ja kansainväliseen kuljetukseen sitoutumisen välillä."
-          ]
+          ],
+          "id": "section-9"
         }
       ],
       "sources": [
@@ -429,85 +493,128 @@
         "https://www.kakobuy.com/service/help/question?id=89",
         "https://www.kakobuy.com/service/help/question?id=51"
       ],
-      "wordCount": 1409
+      "wordCount": 938,
+      "datePublished": "2026-10-24",
+      "dateModified": "2026-10-24"
     },
     {
       "slug": "kakobuy-shipping-costs",
-      "title": "Kakobuyn toimituskulut: budjetti tuotteen hinnasta kotiinkuljetukseen",
-      "description": "Erota tuotteen hinta, Kiinan sisäinen kuljetus, kansainvälinen rahti ja valinnaiset palvelut ja vertaa pakettitarjouksia samoilla oletuksilla.",
+      "title": "Kakobuyn toimituskulut: paino, maksut ja kokonaisbudjetti",
+      "description": "Laadi Kakobuy-toimitusbudjetti pakatun painon, mittojen ja reittimaksujen perusteella. Vertaa kokonaiskuluja pelkän tuotehinnan sijaan.",
       "category": "Toimitus",
-      "readMinutes": 8,
+      "readMinutes": 6,
       "intro": "Tuotekortin luku on vain osa ostovälittäjän kautta tehtävän hankinnan budjettia. Hyödyllinen Kakobuyn toimitusarvio alkaa erottamalla tuotteen maksu paketin siirtämisen ja käsittelyn kustannuksista. Se erottaa myös suunnitteluarvion todellisesta tarjouksesta omalle määränpäälle ja sisällölle. Opas näyttää, miten järjestät kustannukset, vertaat vaihtoehtoja ja tunnistat ennen lähettämistä vielä tarvittavat tiedot.",
       "sections": [
+        {
+          "heading": "Budjettiesimerkki: mitä sisältyy ja mitä puuttuu?",
+          "paragraphs": [
+            "Havainnollistava esimerkki yhdessä valuutassa: tuote maksaa 30, Kiinan sisäinen toimitus 3, kansainvälinen rahti 24 ja valinnainen pakkaus 2. Välisumma on 59 ennen mahdollista maksun valuutanmuunnosta, vakuutusta tai sovellettavia tuontikuluja. Luvut näyttävät menetelmän; ne eivät ole Kakobuyn hintoja tai kohdemaan tarjouksia."
+          ],
+          "table": {
+            "headers": [
+              "Kulurivi",
+              "Tarkista ennen vertailua"
+            ],
+            "rows": [
+              [
+                "Tuote + Kiinan sisäinen toimitus",
+                "Käytä samaa vaihtoehtoa, määrää ja myyjää."
+              ],
+              [
+                "Kansainvälinen rahti",
+                "Käytä samaa kohdetta, pakattuja mittoja ja laskutuspainoa."
+              ],
+              [
+                "Pakkaus + valinnaiset palvelut",
+                "Lisää vain tälle paketille valitut palvelut."
+              ],
+              [
+                "Maksu- ja tuontikulut",
+                "Varmista valuutanmuunnos ja se, mitä reittitarjous todella sisältää."
+              ]
+            ]
+          },
+          "id": "decision-check"
+        },
         {
           "heading": "Erota tuotevaihe pakettivaiheesta",
           "paragraphs": [
             "Kakobuyn julkaistut kustannus- ja tilaustiedot erottavat tavarat ja Kiinan sisäiset postikulut myöhemmästä kansainvälisestä toimituksesta. Ero on luotettavan budjetin perusta. Kun selaat USD-tuotearviota, kirjaa se tavaran hintaviitteeksi. Älä käsittele sitä hiljaisesti summana, jolla tuote saadaan omaan osoitteeseesi.",
             "Luo erilliset rivit tuotteelle, Kiinan sisäiselle toimitukselle, kansainväliselle rahdille, valitulle pakkaukselle tai palveluille ja muille tilauksen tai reitin soveltuville maksuille. Osa riveistä voi jäädä tuntemattomiksi myöhempään vaiheeseen. Rehellinen tyhjä kohta on parempi kuin tarkalta näyttävä arvaus. Kun ajantasainen tilaus- tai pakettinäkymä antaa summan, korvaa suunnitteluoletus ja kirjaa muutoksen aiheuttanut päätös tai palvelu."
-          ]
+          ],
+          "id": "section-0"
         },
         {
           "heading": "Vertaa täsmälleen valittua vaihtoehtoa",
           "paragraphs": [
             "Yksi ilmoitus voi sisältää erikokoisia, eri versioisia tai eri kokonaisuuksiin kuuluvia vaihtoehtoja eri hinnoilla. Varmista ennen toimitusarviota, että tavaran hinta kuuluu tilaamaasi vaihtoehtoon. Matala alkaen-hinta voi tarkoittaa lisävarustetta tai toista versiota. Lue valitun vaihtoehdon yhteishinta sen sijaan, että kertoisit tuotesivun ensimmäisen näkyvän hinnan määrällä.",
             "Vaihtoehto voi vaikuttaa myös pakkaustarpeeseen. Setillä, laatikollisella tuotteella ja yksittäisellä laatikottomalla tuotteella voi olla eri käytännön vaatimukset. Jos ilmoituksesta puuttuu luotettava paino tai mitta, pidä toimitusarvio väljänä parempien tietojen saamiseen asti. Älä lainaa painoa samannäköiseltä tuotteelta ja esitä tulosta oman ostoksesi tarjouksena. Valitun tuotteen ja arvion yhteyden pitää pysyä selkeänä."
-          ]
+          ],
+          "id": "section-1"
         },
         {
           "heading": "Ymmärrä Kiinan sisäinen kuljetus erillisenä osuutena",
           "paragraphs": [
             "Kiinan sisäinen kuljetus vie ostetun tuotteen myyjältä välittäjän vastaanottopaikkaan. Tarkista, sisältyykö se myyjän tarjoukseen vai lisätäänkö se tuotuun tilausnäkymään. Jos harkitset useita tuotteita eri ilmoituksista, varmista kunkin tilauksen todellinen käsittely sen sijaan, että olettaisit kaikkien myyjien toimivan samalla tavalla.",
             "Tämä kustannus on erillinen varastopaketin kansainvälisestä lähettämisestä. Vaiheiden erottaminen auttaa ymmärtämään, miksi maksettu tilaus vaatii myöhemmin vielä pakettimaksun. Myös muutokset selkiytyvät: korjattu tuote- tai sisäisen kuljetuksen summa ei välttämättä muuta kansainvälisen reitin hintaa. Kysy epäselvästä summasta, minkä prosessin osan se kattaa, ennen hyväksymistä."
-          ]
+          ],
+          "id": "section-2"
         },
         {
           "heading": "Käsittele painoa ja mittoja eri kysymyksinä",
           "paragraphs": [
             "Paketin koolla voi olla merkitystä massan lisäksi. Tiivis painava tuote ja kevyt mutta tilaa vievä tuote aiheuttavat erilaisia kuljetus- ja pakkaustarpeita. Kun reittitarjous pyytää mittoja tai näyttää laskutuspainon menetelmän, lue sen todellinen sääntö. Älä oleta toisen kuljettajan tai reitin kaavan koskevan omaa lähetystäsi.",
             "Kirjaa suunnittelua varten tuotteen tunnetut tiedot ja pakatun lähetyksen avoimet kysymykset. Myyjän ilmoittama tuotepaino ei ehkä sisällä suojamateriaalia tai lähetyslaatikkoa. Tuotteen mitat eivät välttämättä vastaa valmiin pakkauksen mittoja. Pyydä pakettitiedot niiden tullessa ajankohtaisiksi ja vertaa reittejä samalla perusteella. Näin et pidä eri pakkausoletuksiin perustuvia arvioita suoraan vertailukelpoisina."
-          ]
+          ],
+          "id": "section-3"
         },
         {
           "heading": "Arvioi pakkausta sekä hinnan että suojauksen kannalta",
           "paragraphs": [
             "Pakkauspäätösten tulee vastata tuotetta. Suuren myyntilaatikon poistaminen voi muuttaa mittoja, mutta laatikko voi myös suojata tai kuulua siihen, mitä halusit saada. Lisävahvistus tai suojamateriaali voi muuttaa sekä hintaa että pakkauksen kokoa. Tarkista todelliselle paketille saatavilla olevat vaihtoehdot ja nykyiset maksut ennen päätöstä.",
             "Muotoile valinta käytännöllisesti. Hauras esine, ryhdikäs laukku ja joustava vaate eivät välttämättä tarvitse samaa lähestymistä. Kysy, mitä suojataan, mitä poistetaan ja sopiiko lopullinen pakkaus valitulle reitille. Älä valitse jokaista lisäpalvelua vain siksi, että sitä tarjotaan, äläkä hylkää kaikkea suojausta pelkän alemman ensimmäisen tarjouksen vuoksi. Vertaa kokonaisuutta, jonka lähettämiseen olet tyytyväinen."
-          ]
+          ],
+          "id": "section-4"
         },
         {
           "heading": "Vertaa reittejä samoilla oletuksilla",
           "paragraphs": [
             "Hyödyllinen reittivertailu pitää sisällön, määränpään ja pakkausoletukset samoina. Lue sitten tarjottu summa, nykyinen toimitusarvio, hyväksyttävät tuotteet, seurantatiedot ja Kakobuyn ehdot. Halvin pääsumma ei välttämättä ole sopivin vaihtoehto juuri paketillesi, eikä korkeampi hinta yksin todista parempaa käsittelyä.",
             "Kirjaa kaksi tai kolme todella harkitsemaasi reittiä ja syy, miksi kukin voisi sopia. Jos vaihtoehto ei sovellu sisältöön tai määränpäähän, poista se sen sijaan, että pitäisit hintaa vertailukohtana. Tarkista ajantasaiset reittitiedot lähellä lähettämistä, sillä saatavuus ja ehdot voivat muuttua. Toisen lähetyksen kuvakaappaus antaa taustaa, mutta ei korvaa omaan pakettiisi liitettyä tarjousta."
-          ]
+          ],
+          "id": "section-5"
         },
         {
           "heading": "Pidä palveluvalinnat näkyvissä kokonaissummassa",
           "paragraphs": [
             "Pakkauksen, lisäkäsittelyn ja muiden valittavien palvelujen pitäisi näkyä budjetissasi erillisinä päätöksinä. Lue palvelun sisältö ennen maksamista. Samankaltainen nimike kahdella sivulla ei takaa samaa kattavuutta. Jos et tiedä, onko maksu valinnainen, sisältyvä vai reitille pakollinen, pyydä selvennys ennen jatkamista.",
             "Jos tarjolla on vakuutus tai suoja, lue kattavuus, poikkeukset ja korvaushakemuksen ehdot. Älä arvioi sitä vain maksun perusteella tai oleta kaikkien mahdollisten ongelmien kuuluvan korvaukseen. Säilytä lähetykselle esitetyt ehdot, jos valitset palvelun. Tavoitteena ei ole valita mahdollisimman monta palvelua vaan ymmärtää, mitä kukin muuttaa ja mitkä vastuut jäävät sinulle."
-          ]
+          ],
+          "id": "section-6"
         },
         {
           "heading": "Käsittele tullijärjestelyjä reittikohtaisina",
           "paragraphs": [
             "Kakobuyn ohjeissa erotetaan toimitusjärjestelyjä, joissa tullikäsittely vaihtelee. Älä oleta yhden reitin kuvauksen koskevan toista reittiä, toista määränpäätä tai myöhempää ajankohtaa. Lue saatavilla olevan vaihtoehdon nykyiset ehdot ja tunnista maksut tai toimet, jotka saattavat jäädä vastuullesi.",
             "Anna oikeat tuote- ja lähetystiedot, kun niitä pyydetään. Jos ilmoituskenttä tai määränpään vaatimus on epäselvä, tarkista asianmukainen virallinen ohje tai pakettia käsittelevä palvelu. Älä kopioi sattumanvaraisia arvoja toisen ostajan esimerkistä. Opas ei laske yleispätevää veroa tai tullia, sillä oikea käsittely riippuu tavaroista, määränpäästä ja sovellettavista säännöistä. Budjetin tulee kirjata epävarmuudet piilottamatta niitä keksittyyn toimitussummaan."
-          ]
+          ],
+          "id": "section-7"
         },
         {
           "heading": "Vertaa yhdistettyjä ja erillisiä paketteja huolellisesti",
           "paragraphs": [
             "Ostosten yhdistäminen voi olla kätevää, mutta ei ole yleinen säästökeino. Yhdistetty paketti voi muuttaa mittoja, painoluokkia, pakkausvalintoja ja reittikelpoisuutta. Erillisistä paketeista voi tulla toistuvia maksuja. Tarvitset todellisia vertailukelpoisia vaihtoehtoja päättääksesi, mikä järjestely sopii saapuneille tuotteille.",
             "Aloita tuotteista, jotka ovat valmiita lähetettäviksi, ja vertaa käsittelyvaihtoehtoja samalla perusteella. Älä lisää tarpeetonta tuotetta vain perustellaksesi suuremman paketin tai saavuttaaksesi oletetun säästörajan. Jos yksi tuote viivästyy, harkitse, muuttaako odottaminen prioriteettejasi tai saatavilla olevia palveluehtoja. Tavoitteena on ostokseen sopiva lähetys, ei spekulatiivisen toimituslaskelman ajamat lisäostokset."
-          ]
+          ],
+          "id": "section-8"
         },
         {
           "heading": "Päivitä arvio jokaisessa päätösvaiheessa",
           "paragraphs": [
             "Käytännöllisessä budjetissa on tarkistuspisteitä. Kirjaa ensin tuotehinta-arvio tutkimisen aikana. Korvaa se ennen ostoa valitun vaihtoehdon ja Kiinan sisäisen kuljetuksen yhteissummalla. Lisää tuotteen saavuttua pakettitiedot ja nykyinen reittitarjous. Tarkista lopuksi lähettämisvaiheessa koko summa, myös tarkoituksella valitut palvelut.",
             "Kuvittele esimerkiksi kaksi ehdokasta, joiden tuotehinnat ovat samankaltaiset. Toinen tarvitsee suuremman pakkauksen tai eri käsittelyn; toinen on helpompi yhdistää tuotteisiin, jotka aioit jo lähettää. Halvempaa toimitettua kokonaishintaa ei voi päätellä pelkistä tuotekorteista. Pidä vertailu avoimena tarvittavan tarjouksen saamiseen asti. Hyödyllinen toimitusbudjetti kertoo oletuksensa, päivittyy tietojen muuttuessa ja koskee pakettia, jonka todella lähetät."
-          ]
+          ],
+          "id": "section-9"
         }
       ],
       "sources": [
@@ -516,14 +623,22 @@
         "https://www.kakobuy.com/service/help/question?id=69",
         "https://www.kakobuy.com/index/information?information_id=12"
       ],
-      "wordCount": 1401
+      "wordCount": 1090,
+      "datePublished": "2026-10-24",
+      "dateModified": "2026-10-30",
+      "answer": "Hyödyllinen kokonaissumma sisältää tuotteen, Kiinan sisäisen toimituksen, kansainvälisen rahdin sekä sovellettavat maksu-, palvelu- ja tuontikulut. Selvitä pakattu paino ja mitat ennen reittien vertailua. Yhtä luotettavaa kilohintaa kaikille maille, paketeille ja kuljetuslinjoille ei ole.",
+      "related": [
+        "kakobuy-shipping-calculator",
+        "kakobuy-shipping-time-tracking",
+        "kakobuy-payment-fees"
+      ]
     },
     {
       "slug": "kakobuy-sizing-guide",
       "title": "Kakobuyn koko-opas: vertaa myyjän mittoja haluamaasi istuvuuteen",
       "description": "Käytä oikeita myyjän taulukoita, vertailukelpoisia vaatteen mittoja ja selkeitä varastokysymyksiä vähentääksesi kokoepävarmuutta ennen kansainvälistä toimitusta.",
       "category": "Koot",
-      "readMinutes": 8,
+      "readMinutes": 5,
       "intro": "Kaikille Kakobuyn kautta tilattaville tuotteille ei ole yhtä kokotaulukkoa. Alusta yhdistää sinut myyjien ilmoituksiin, ja myyjät voivat käyttää eri merkintöjä, kaavoja ja mittausmenetelmiä. Parempi tapa on verrata juuri kyseisen tuotteen mittoja sopivaan vertailukohteeseen, kirjata valittu vaihtoehto ja tarkistaa saapunut tuote hyödyllisen näytön tullessa saataville. Tämä opas keskittyy prosessiin yleisen kokoa suuremman tai pienemmän valintaohjeen sijaan.",
       "sections": [
         {
@@ -531,70 +646,80 @@
           "paragraphs": [
             "Kakobuyn virallinen koko-ohje huomauttaa myyjien voivan käyttää omia standardejaan ja suosittelee valitsemaan mittojen perusteella. Avaa juuri tilaamasi ilmoituksen ja version taulukko. Samannäköisen tuotteen taulukko ei ole luotettava korvike. Tututkin kokomerkinnät voivat tarkoittaa eri mittoja eri myyjillä tai tuotesarjoissa.",
             "Tarkista jokaisen luvun merkitys. Jotkin taulukot kuvaavat vartalon mittoja, toiset valmista vaatetta tasoon aseteltuna. Myös yksiköt ja mittauspisteet merkitsevät. Jos taulukko on kuva, suurenna sitä lukeaksesi otsikot sen sijaan, että arvaisit numerorivistä. Jos merkintä jää epäselväksi, pyydä selvennys ennen tilaamista. Taulukon tulee vastata istuvuuskysymykseen eikä vain näyttää rauhoittavalta dokumentilta."
-          ]
+          ],
+          "id": "section-0"
         },
         {
           "heading": "Valitse tuotetta vastaava vertailukohde",
           "paragraphs": [
             "Vaatteissa jo käyttämäsi samankaltainen vaate on usein hyödyllinen vertailu. Valitse vertailukohteeksi vaate, jonka istuvuus ja käyttötarkoitus vastaavat uuden tuotteen tavoitteita. Vartalonmyötäinen paita ja väljä collegepaita ovat eri lähtökohtia. Kaikkien yläosien vertaaminen samaan vaatteeseen voi peittää tyylin, kerrospukeutumisen ja jouston vaikutuksen.",
             "Mittaa vertailuvaate johdonmukaisesti tasaisella pinnalla vetämättä sitä luonnollisen muotonsa yli, ellet nimenomaisesti vertaa venytettyä mittaa. Kirjaa käytetyt pisteet, älä vain lukua. Merkitse esimerkiksi, mistä vartalon leveys tai pituus mitattiin. Näin voit verrata vastaavia mittoja myyjän taulukossa tai varastomittausta pyytäessäsi. Muutama selkeä mitta on hyödyllisempi kuin pitkä epäjohdonmukaisesti mitattu lista."
-          ]
+          ],
+          "id": "section-1"
         },
         {
           "heading": "Aseta istuvuutta määräävät mitat etusijalle",
           "paragraphs": [
             "Kaikki mitat eivät ole yhtä tärkeitä jokaiselle tuotteelle. Yläosassa tärkeimpiä voivat olla vartalon leveys, pituus ja hihojen ulottuvuus. Housuissa vyötärönauha, haarakorkeus, reisileveys ja lahkeen pituus vaikuttavat eri istuvuuden osiin. Takissa saatetaan tarvita tilaa sen alle suunnitelluille kerroksille.",
             "Päätä, mikä väärä mitta tekisi vaatteesta sopimattoman. Se on ensimmäinen vertailukohta. Tarkista sitten muut tärkeät mitat, jotta yhden ongelman ratkaisu ei luo toista. Suurempi kokomerkintä voi antaa halutun vartaloleveyden mutta huonomman hihan tai pituuden. Käsittele koon valintaa pienenä joukkona käyttöön liittyviä kompromisseja yhden luvun sijaan."
-          ]
+          ],
+          "id": "section-2"
         },
         {
           "heading": "Erota vaatteen mitat vartalon mitoista",
           "paragraphs": [
             "Vartalon ympärysmitta ja vaatteen tasainen leveys eivät ole keskenään vaihdettavia arvoja. Samoin levossa oleva ja venytetty joustava vyötärönauha kuvaavat eri tilanteita. Varmista kahden luvun kuvaavan samaa asiaa ennen vertailua. Jos yksi lähde mittaa vartalon ympäri ja toinen tasaisen vaatteen poikki, ymmärrä ero ennen päätelmää.",
             "Varo automaattisia muunnosohjeita, jotka sivuuttavat tuotteen. Yleinen taulukko voi auttaa yksiköiden tai tuttujen kokojärjestelmien tulkinnassa, mutta ei korvaa myyjän todellisia mittoja. Säilytä alkuperäiset yksiköt muistiinpanoissa mahdollisuuksien mukaan ja kirjaa muunnokset selvästi. Hyödyllisin merkintä kertoo, mitä mitattiin, miten ja mihin vaihtoehtoon mitta kuuluu. Irrallinen luku on helppo tulkita myöhemmin väärin."
-          ]
+          ],
+          "id": "section-3"
         },
         {
           "heading": "Huomioi kangas ja haluttu istuvuus keksimättä ominaisuuksia",
           "paragraphs": [
             "Vaatteen käyttäytyminen voi vaikuttaa mittojen tuntumaan, mutta käytä vain ilmoituksen todellisia ominaisuustietoja. Älä oleta kankaan joustavan pehmeältä näyttävän kuvan vuoksi tai mallin väljää vaatetta esittävän kuvan tarkoittavan kaikkien kokojen väljyyttä. Stailaus, mallin mittasuhteet ja valitun näytteen koko vaikuttavat ulkonäköön.",
             "Jos päätös riippuu materiaalin ominaisuudesta, pyydä asiaankuuluva tieto. Mittavertailu rajaa epävarmuutta, mutta ei osoita dokumentoimattoman kankaan palautumista venytyksestä tai muuttumista pesussa. Älä lisää kaikkiin tuotteisiin yleistä varaa yhden maan tuotteita koskevan väitteen perusteella. Käytä myyjän tietoja, vertailukelpoista vaatetta ja juuri tältä vaatteelta haluamaasi istuvuutta."
-          ]
+          ],
+          "id": "section-4"
         },
         {
           "heading": "Tarkista jalkineet oikealla kokojärjestelmällä",
           "paragraphs": [
             "Tunnista kengissä, käyttääkö myyjä EU-, UK-, US- vai senttimetripohjaista viitettä, ja tarkista mahdollisen US-merkinnän tarkoittama kokoryhmä. Kakobuyn ohje neuvoo mittaamaan molemmat jalat ja käyttämään suurempaa mittaa. Vertaa sitä kyseisen myyjän taulukkoon sen sijaan, että olettaisit saman painetun koon tarkoittavan aina samaa istuvuutta.",
             "Selvitä senttimetriluvun merkitys. Jalan pituus, sisäpohjan pituus ja ulkopohjan pituus ovat eri mittoja. Ulkopohjan valokuva ei suoraan vahvista jalalle tarjolla olevaa sisätilaa. Leveys ja muoto voivat myös vaikuttaa mukavuuteen, vaikka pituus vaikuttaisi sopivalta. Jos myyjän tiedot eivät käsittele tärkeää istuvuusvaatimustasi, pidä epävarmuus näkyvänä muunnostaulukon takuuksi muuttamisen sijaan."
-          ]
+          ],
+          "id": "section-5"
         },
         {
           "heading": "Kirjaa vaihtoehto ennen maksamista",
           "paragraphs": [
             "Tallenna valittu koko ja mahdollinen versiokoodi alkuperäisen tuotelinkin kanssa. Yhdessä ilmoituksessa voi olla erillisiä vaihtoehtoryhmiä, ja sama kokomerkintä voi esiintyä eri malleissa. Tarkista valittu yhdistelmä Kakobuyssa ennen maksamista, jotta muistiinpanot ja tuotu tilaus kuvaavat samaa tuotetta.",
             "Jos lähetät ohjeen, tee siitä täsmällinen ja todellisen valinnan mukainen. Huomautuksen tulee selventää valittua vaihtoehtoa eikä pyytää hiljaisesti toista. Jos ilmoitus ei tarjoa tarvitsemaasi kokoa, pyydä saatavuusvahvistus sen sijaan, että olettaisit kommentin tuovan sen saataville. Merkintä antaa myös selkeän vertailukohdan tuotteen saavuttua varastoon, kun etikettiä voi tarkastella."
-          ]
+          ],
+          "id": "section-6"
         },
         {
           "heading": "Käytä varaston näyttöä täsmälliseen kysymykseen",
           "paragraphs": [
             "Kun oman tilauksesi kuvat ovat saatavilla, aloita näkyvän kokolapun vertaamisesta valintaasi. Jos ratkaiseva mitta on epävarma, kysy Kakobuylta sopivan mittauksen tai lisänäkymän mahdollisuutta ja hintaa. Määrittele alku- ja loppupisteet, yksiköt ja mitataanko tuote rentona vai muussa määritellyssä tilassa.",
             "Älä käytä kuvan taustaa tarkkana mittalaitteena, jos päätös on lähellä rajaa. Perspektiivi, taitokset ja asettelu voivat vaikuttaa tulkintaan. Kakobuyn tarkastustiedoissa kuvataan myös mittausvirheisiin liittyviä rajoja, joten pidä kuvaa tulkittavana näyttönä täydellisen istuvuuden lupauksen sijaan. Jos uusi mittaus käyttää eri menetelmää kuin vertailusi, selvitä ero ennen tuotteen toteamista liian suureksi tai pieneksi."
-          ]
+          ],
+          "id": "section-7"
         },
         {
           "heading": "Reagoi poikkeamaan ennen lähetyksen suunnittelua",
           "paragraphs": [
             "Jos vastaanotettu etiketti tai mitta näyttää poikkeavan tilauksesta, vertaa ensin tietoja. Tarkista alkuperäinen taulukko, valittu vaihtoehto, mittausmenetelmä ja asiaankuuluva kuva. Selvä poikkeama ja epäselvä valokuva vaativat eri kysymyksiä. Kuvaa odotuksesi ja nykyinen näyttö olettamatta syytä.",
             "Kysy nykyisistä käsittelyvaihtoehdoista, kun tuote on vielä asianmukaisessa tilaus- tai varastovaiheessa. Palautuksen ja vaihdon ehdot riippuvat myyjästä ja sovellettavista ehdoista; niitä ei pidä pitää automaattisina tai ilmaisina. Arvioi käytännön vaihtoehdot ja kulut ennen kansainvälisen lähetyksen hyväksymistä. Kysymyksen varhainen ratkaiseminen on helpompaa kuin odottaa toimitusprosessin korjaavan jo varastossa näkyvän istuvuusongelman."
-          ]
+          ],
+          "id": "section-8"
         },
         {
           "heading": "Tee uudelleen käytettävä kokomuistiinpano",
           "paragraphs": [
             "Säilytä päätöksen jälkeen tiivis merkintä tulevaa varten: myyjän linkki, tuoteversio, valittu koko, taulukkoarvot, vertailuvaatteen mitat ja havaittu tulos. Se on hyödyllisempi kuin muistikuva siitä, että jokin merkki sopii yleensä tietyllä kirjaimella. Merkintä yhdistää istuvuustuloksen tiettyyn ilmoitukseen ja mittausmenetelmään.",
             "Esimerkiksi kahdessa hupparissa voi olla sama kokomerkintä, mutta toisessa haluttu vartalon leveys ja toisessa mieluisampi pituus. Muistiinpanon tulee selittää hyväksymäsi kompromissi. Jos kumpikaan ei vastaa tarpeitasi hyvin, toinen ilmoitus voi olla järkevämpi kuin arvaus niiden välillä. Kokoprosessin tarkoitus on pienentää epävarmuutta ja tehdä se näkyväksi, ei luvata jokaisen verkko-ostoksen istuvan täydellisesti."
-          ]
+          ],
+          "id": "section-9"
         }
       ],
       "sources": [
@@ -603,14 +728,16 @@
         "https://www.kakobuy.com/index/information?information_id=12",
         "https://www.kakobuy.com/service/help/question?id=51"
       ],
-      "wordCount": 1440
+      "wordCount": 970,
+      "datePublished": "2026-10-24",
+      "dateModified": "2026-10-24"
     },
     {
       "slug": "kakobuy-warehouse-consolidation",
-      "title": "Kakobuyn varasto ja yhdistäminen: suunnittele järkevä paketti",
-      "description": "Ymmärrä varastovaiheet, säilytysajat, pakkausvalinnat ja yhdistämisen kompromissit ennen Kakobuy-paketin lähettämistä.",
+      "title": "Kakobuy-varasto: säilytys, QC ja pakettien yhdistäminen",
+      "description": "Järjestä varastosaapumiset, tarkista säilytys- ja palautusajat, arvioi QC ja vertaile yhdistettyjä paketteja ennen kansainvälistä lähetystä.",
       "category": "Varasto",
-      "readMinutes": 7,
+      "readMinutes": 6,
       "intro": "Kakobuyn varasto on päätöspiste tuotteen ostamisen ja kansainvälisen lähetyksen maksamisen välillä. Useat myyjätilaukset voivat saapua sinne eri aikoina erilaisine pakkauksineen, mittoineen ja avoimine kysymyksineen. Yhdistäminen tarkoittaa sen valitsemista, mitkä soveltuvat tuotteet kulkevat yhdessä. Se voi tehostaa toimitusta, mutta suurempi paketti ei automaattisesti ole halvempi tai parempi. Opas tarjoaa käytännöllisen tavan järjestää varastotuotteet, vertailla pakkaamista ja lähettää paketti unohtamatta määräaikaa tai ongelmaa, joka olisi helpompi ratkaista ennen lähtöä.",
       "sections": [
         {
@@ -618,70 +745,80 @@
           "paragraphs": [
             "Tuote kulkee tavallisesti myyjältä välittäjän varastoon ennen kansainvälistä matkaa luoksesi. Pidä vaiheet erillisinä muistiinpanoissa. Kiinan sisäinen seurantapäivitys ei kerro, onko tuote valmis lähtemään Kiinasta, eikä ostokuitti sisällä kaikkia tulevia toimituskuluja. Kakobuyn julkinen palvelukuvaus kertoo käyttäjien voivan valita varastotuotteita yhdistettyyn pakettiin; tilillä saatavilla olevat vaihtoehdot määräävät, mitä voidaan todella lähettää.",
             "Käsittele jokaista myyjätilausta omana tietueenaan, kunnes lisäät sen tarkoituksella pakettiin. Säilytä tuotelinkki, valittu vaihtoehto, määrä ja tilausviite yhdessä. Luo sitten erillinen pakettitietue lähetettäville tuotteille. Ero auttaa havaitsemaan maksetun mutta saapumattoman tuotteen tai valmistellun paketin, joka tarvitsee vielä maksun tai tietotarkistuksen."
-          ]
+          ],
+          "id": "section-0"
         },
         {
           "heading": "Laadi hyödyllinen varastolista",
           "paragraphs": [
             "Hyödyllinen lista vastaa kolmeen kysymykseen: mitä on täällä, mikä on valmista ja mikä tarvitsee päätöksen? Kirjaa tuotteen varastotila, saapumispäivä, näkyvät mitat, avoin ongelma ja suunniteltu paketti. Jos ostat kahta samankaltaista väriä tai useita kokoja, käytä tarkkaa vaihtoehtonimeä epämääräisen ”musta yläosa” -merkinnän sijaan. Kirjaa määräkin, sillä tilauksessa voi olla useita kappaleita.",
             "Lisää lyhyt toimintakenttä, esimerkiksi ”tarkista hihan mitta”, ”vahvista puuttuva lisäosa” tai ”valmis palautuspäätöksen jälkeen”. Muistiinpanot auttavat omaa järjestelyäsi eivätkä korvaa Kakobuyn kautta annettuja ohjeita. Kun henkilökunnan pitää toimia, lähetä pyyntö oikeassa tilaus- tai tukikanavassa. Oman taulukon merkintä ei käske varastoa pidättämään tuotetta tai säilyttämään pakkausta."
-          ]
+          ],
+          "id": "section-1"
         },
         {
           "heading": "Erota saapuminen valmiudesta",
           "paragraphs": [
             "Saapumisskannaus on myönteinen merkki, mutta ei sama kuin valmis tarkastus ja käyttökelpoinen lähetystietue. Kakobuyn saapumisohje kuvaa lisävarastokäsittelyn ennen tuotteen kelpaamista pakettiin. Lue nykyinen tilaustila ja viestit sen sijaan, että olettaisit kaikkien varastossa näkyvien tuotteiden olevan heti pakattavissa.",
             "Tarkista viitenumero, jos kuljettaja ilmoittaa toimitetuksi mutta tili näyttää muuttumattomalta. Myyjän seuranta, tilausviitteet ja varastoviitteet voivat yksilöidä saman ostoksen eri vaiheita. Lähetä tuelle asianmukaiset tunnukset ja täsmällinen ristiriita tarvittaessa. Toistuva korvaavien tilausten tekeminen ennen alkuperäisen tilan selvittämistä voi johtaa ei-toivottuun kaksoiskappaleeseen. Säilytä päivätty vastaus, jotta tiedät, mitä odotat."
-          ]
+          ],
+          "id": "section-2"
         },
         {
           "heading": "Ratkaise tuotekysymykset ennen ryhmittelyä",
           "paragraphs": [
             "Tarkista ennen paketin muodostamista jokaisen ehdotetun tuotteen tarkastustiedot. Vahvista näkyvä väri, etiketit, määrä ja vaihtoehto tekemääsi tilaukseen nähden. Jos mitat merkitsevät, vertaa niitä omistamaasi vaatteeseen tai tuotteeseen samalla mittausmenetelmällä. Kuvat voivat tukea näkyviä yksityiskohtia koskevaa päätöstä, mutta eivät vahvista kaikkia materiaalin ominaisuuksia, toimintoja tai aitousväitteitä.",
             "Pidä ratkaisemattomat tuotteet valmiin ryhmän ulkopuolella vastauksen saamiseen asti. Esimerkiksi puuttuvasta vyöstä tai epävarmasta koosta voi olla helppo keskustella tuotteen ollessa vielä varastossa. Pakettiin lisääminen tuo uuden käsittelyvaiheen ja voi vaikeuttaa palautuspäätöstä. Toisen ostajan vanhat viitekuvat antavat taustaa, mutta omien tilaustietojen tulee ohjata viimeistä tarkistusta."
-          ]
+          ],
+          "id": "section-3"
         },
         {
           "heading": "Vertaa painoa ja tilavuutta yhdessä",
           "paragraphs": [
             "Paketti voi olla kevyt mutta tilaa vievä, erityisesti jos se sisältää laatikoita, pehmustettuja tuotteita tai hankalia muotoja. Tarkista sekä mitattu paino että todennäköiset pakatut mitat toimitusvaihtoehtoa verratessasi. Käytä kyseisen reitin veloitussääntöjä. Älä sovella toisen kuljettajan tilavuuspainokaavaa tai oleta kaikkien linjojen käyttävän samoja rajoja ja pyöristyksiä.",
             "Esimerkkinä on kenkäpari suuressa myyntilaatikossa yhdessä pehmeiden vaatteiden kanssa. Laatikon poistaminen voi vähentää tilavuutta, kun taas suojapakkaus voi kasvattaa mittoja tai painoa. Kumpikaan muutos ei takaa tiettyä säästöä. Kysy saatavilla olevaa pakkaus- tai mittauspalvelua epävarmuuden ollessa tärkeä ja vertaa sitten tarjouksia. Kakobuyn ohje huomauttaa mittojen voivan muuttua lopullisessa pakkauksessa, joten pidä alustavat luvut erillään lopullisesta veloituksesta."
-          ]
+          ],
+          "id": "section-4"
         },
         {
           "heading": "Ryhmittele yhteensopivuuden, älä vain määrän mukaan",
           "paragraphs": [
             "Aloita määränpäästä ja reittiyhteensopivuudesta. Eri osoitteisiin tarkoitetut, eri käsittelyä vaativat tai samasta kuljetusvaihtoehdosta suljetut tuotteet eivät ehkä kuulu yhteen. Tarkista todellisen sisällön nykyiset toimitusrajoitukset. Tavalliselta kuulostava nimi ei ratkaise asiaa: akut, nesteet tai herkät osat voivat vaikuttaa vaatimuksiin, ja tilillä näkyvät reitit voivat muuttua tavaroiden arvioinnin jälkeen.",
             "Pohdi sitten fyysistä suojaa. Painava tuote voi painaa haurasta, terävät metalliosat voivat jättää jälkiä pehmeään kankaaseen ja jäykkä laatikko voi viedä muuten tiivistettävää tilaa. Kysy ryhmän suojaamisesta sen sijaan, että olettaisit suuremman laatikon ratkaisevan kaiken. Jos kaksi pienempää pakettia tarjoaa selkeämmän käsittelyn tai sopivammat reitit, vertaa niiden yhteismaksua yhden paketin vaihtoehtoon ennen päätöstä."
-          ]
+          ],
+          "id": "section-5"
         },
         {
           "heading": "Anna täsmälliset pakkausohjeet",
           "paragraphs": [
             "Valitse pakkaus tuotteen ja säilytettävien asioiden perusteella. Jos myyntilaatikolla on sinulle arvoa, kerro siitä ennen poistopyyntöä. Jos tuotteessa on herkkiä koristeita, selitä suojattava kohta. Vältä ristiriitaisia ohjeita, kuten kaikkien laatikoiden säilyttämistä ja samalla pienintä mahdollista pakettia. Kerro prioriteetti ja anna varaston selittää vaihtoehdot.",
             "Tarkista valinnaisen pakkaus- tai tarkastuspalvelun maksu ennen valintaa. Lisäpalvelut eivät ole automaattisesti tarpeellisia jokaiselle paketille, eivätkä nimet todista tiettyä suojaustasoa. Säilytä vahvistetut ohjeet pakettitietueen mukana. Tämä auttaa erityisesti, jos yksi tuote tarvitsee eri käsittelyn kuin muu ryhmä tai haluat ymmärtää lopullisten mittojen muutoksen."
-          ]
+          ],
+          "id": "section-6"
         },
         {
           "heading": "Päätä, mitä myöhäiselle tuotteelle tehdään",
           "paragraphs": [
             "Puuttuva tilaus tuo valinnan odottamisen ja valmiiden tuotteiden lähettämisen välille. Arvioi seuraukset todellisilla tiedoilla: myyjän viimeisin vastaus, varastomääräajat, nykyiset pakettitarjoukset ja omat toimitustarpeesi. Älä käsittele vahvistamatonta lähetyslupausta taattuna saapumispäivänä. Halpakin lisätuote voi aiheuttaa kalliin viivästyksen pidättäessään aikataululle herkän ryhmän.",
             "Voit verrata heti valmista pakettia myöhempään ehdotukseen sitoutumatta kumpaankaan. Kirjaa tuotteet kummassakin tilanteessa ja tuntemattomat kulut. Jos myöhäinen tuote on ryhmälle välttämätön, pyydä selvempi tila ennen lopullisen pakkauksen maksamista. Jos se on valinnainen, harkitse, tekeekö erillinen lisälähetys ostoksesta enää kannattavaa."
-          ]
+          ],
+          "id": "section-7"
         },
         {
           "heading": "Seuraa säilytys- ja palautusmääräaikoja erikseen",
           "paragraphs": [
             "Säilytysaika ja palautuskelpoisuus vastaavat eri kysymyksiin. Tuote voi olla säilytyksessä vielä sen jälkeen, kun myyjän harkitsema palautusaika päättyy. Kakobuy julkaisee säilytyssäännöt, mutta soveltuva määräaika ja tila pitää tarkistaa omasta varastotietueesta ja nykyisistä ohjeista. Älä käytä vanhan artikkelin päivälukua ainoana muistutuksena.",
             "Aseta muistutukset hyvissä ajoin ennen varhaisinta tärkeää päivää, jotta tukivastaukselle ja omalle päätökselle jää aikaa. Kirjaa kunkin säännön alkamispäivä: osto, lähetys, vastaanotto ja varastokirjaus eivät välttämättä ole vaihdettavissa. Jos säilytyksen pidennys on mahdollinen, tarkista hinta, kesto ja ehdot ennen siihen luottamista. Avoimen viestin tai myöhemmän lähetysaikeen ei pidä olettaa pysäyttävän määräaikaa."
-          ]
+          ],
+          "id": "section-8"
         },
         {
           "heading": "Tarkista paketti uutena maksutapahtumana",
           "paragraphs": [
             "Lue koko valittu tuotelista ennen lähettämistä ja vertaa varastosuunnitelmaan. Vahvista määrät, vastaanottajatiedot, reittikelpoisuus, pakkausohjeet ja pyydetty summa. Tarkista, mikä on arvio, mikä on jo maksettu ja mikä voi vielä muuttua. Ilmoitusten tulee kuvata sisältö totuudenmukaisesti ja käyttää määränpään ja reitin vaatimia tietoja.",
             "Säilytä pakettiviite vahvistuksen jälkeen ja seuraa vastaustasi vaativia pyyntöjä. Järkevä yhdistämissuunnitelma auttaa pakkauksen jälkeenkin: se kertoo, minkä pitäisi saapua yhdessä ja mitä jää varastoon. Vertaa vastaanotettua sisältöä tietoihin paketin saapuessa. Tavoitteena on lähetys, jonka voit selittää ja jäljittää, ei vain mahdollisimman suuri ostoserä."
-          ]
+          ],
+          "id": "section-9"
         }
       ],
       "sources": [
@@ -691,85 +828,142 @@
         "https://www.kakobuy.com/service/help/question?id=95",
         "https://www.kakobuy.com/service/help/question?id=37"
       ],
-      "wordCount": 1514
+      "wordCount": 1039,
+      "datePublished": "2026-10-24",
+      "dateModified": "2026-10-30",
+      "answer": "Seuraa kunkin tuotteen saapumispäivää, QC-tilaa ja tilin määräaikoja erikseen. Yhdistä kelvollisia tuotteita vasta tarkistettuasi reitin rajoitukset, pakatut mitat ja kokonaiskulut. Säilytysaika ei ole palautusaika, eikä suurempi yhdistelmäpaketti ole automaattisesti halvempi.",
+      "related": [
+        "kakobuy-shipping-calculator",
+        "kakobuy-returns-refunds",
+        "kakobuy-qc-photos-guide"
+      ]
     },
     {
       "slug": "kakobuy-returns-refunds",
-      "title": "Kakobuyn palautukset ja hyvitykset: säilytä näyttö ja seuraa oikeaa vaihetta",
-      "description": "Käytännön opas peruutuksiin, varastopalautuksiin, vaihtoihin ja hyvitystietoihin sekä selkeisiin kysymyksiin ennen palautuksen hyväksymistä.",
+      "title": "Kakobuy-hyvitykset: tilauksen peruminen tai palautus varastolta",
+      "description": "Näin pyydät Kakobuy-hyvitystä tilauksen eri vaiheissa, palautat varastotuotteen, perut hyvityspyynnön ja tarkistat, minne rahat menivät.",
       "category": "Oston jälkeen",
-      "readMinutes": 7,
+      "readMinutes": 6,
       "intro": "Palautus on päätösten ja vahvistusten sarja, ei yksi painike, joka takaa rahat takaisin. Ensimmäinen hyödyllinen kysymys on tilauksen sijainti: vielä ostamatta, ostettu mutta lähettämättä, Kiinan sisäisessä kuljetuksessa, varastossa vai jo kansainvälisesti lähetetty. Kakobuyn ohjesivut kuvaavat eri vaiheiden käsittelyä ja myyjän suostumuksen mahdollista merkitystä. Opas auttaa kokoamaan selkeän pyynnön, ymmärtämään ehdotetun ratkaisun ja seuraamaan hyvitystä sekoittamatta tilihyvitystä valmiiseen palautukseen alkuperäiselle maksutavalle.",
       "sections": [
+        {
+          "heading": "Mikä hyvitystoimi sopii tilauksesi vaiheeseen?",
+          "paragraphs": [
+            "Avaa tilaus ja lähetä yksi selkeä pyyntö, jossa ovat tilausnumero, valittu vaihtoehto, syy ja asiaa tukevat kuvat. Pyydä vahvistus ennen palautuskulujen maksamista tai lähetyksen hyväksymistä. Taulukko on päätöksenteon tarkistuslista, ei lupaus siitä, että kaikki myyjät hyväksyvät palautukset."
+          ],
+          "table": {
+            "headers": [
+              "Tilauksen vaihe",
+              "Mitä kysyä tai tarkistaa"
+            ],
+            "rows": [
+              [
+                "Ei vielä ostettu",
+                "Kysy, voiko oston vielä perua ja mikä summa on palautettavissa."
+              ],
+              [
+                "Ostettu tai Kiinan sisäisessä kuljetuksessa",
+                "Kysy, vaatiiko peruminen myyjän hyväksynnän vai pitääkö paketin ensin saapua."
+              ],
+              [
+                "Varastossa",
+                "Älä lähetä tuotetta; varmista palautuskelpoisuus, todisteet, palautuspostitus ja määräaika."
+              ],
+              [
+                "Hyvitystä on jo pyydetty",
+                "Jos haluat perua hyvityspyynnön, ota yhteyttä tukeen ennen palautuksen käsittelyä; älä oleta, että toimi voidaan kumota."
+              ],
+              [
+                "Hyvitys näkyy valmiina",
+                "Tarkista, minne rahat palautettiin. Lompakon hyvitys ei todista palautusta alkuperäiselle maksutavalle."
+              ],
+              [
+                "Kansainvälinen paketti on lähetetty",
+                "Käytä paketin jälkimyyntiprosessia; varastopalautus ei välttämättä enää ole mahdollinen."
+              ]
+            ]
+          },
+          "id": "decision-check"
+        },
         {
           "heading": "Yksilöi ensin tarkka ongelma",
           "paragraphs": [
             "Kuvaa tilatun ja vastaanotetun tai nähtävissä olevan ero. ”Väärä tuote” on vähemmän hyödyllinen kuin ”tilaus määrittää tummansinisen, mutta etiketti ja kuvat näyttävät mustan”. Jos huoli koskee mittaa, määrittele sen alku ja loppu. Jos lisäosa puuttuu, viittaa myyjän vaihtoehtokuvaukseen, jonka mukaan sen kuuluu sisältyä.",
             "Erota tyytymättömyys dokumentoidusta poikkeamasta. Et ehkä pidä väristä luonnossa, vaikka se vastaisi valintaa, kun taas puuttuva kappalemäärä on eri ongelma. Ero auttaa kysymään oikein ja ymmärtämään myyjän vastauksen. Älä liioittele vahinkoa tai keksi väärää kuvausta vahvistaaksesi pyyntöä. Tarkat tiedot auttavat käsittelijää ymmärtämään asian nopeammin."
-          ]
+          ],
+          "id": "section-0"
         },
         {
           "heading": "Tarkista tilausvaihe ennen toimenpiteen valintaa",
           "paragraphs": [
             "Avaa nykyinen tilaustietue ja lue viimeisin viesti. Kakobuyn palautusohje erottaa lähettämättömän tilauksen jo postitetusta tai varastoidusta. Peruutuspyyntö, lähetyksen pysäyttämisyritys ja varastopalautus ovat eri toimenpiteitä. Soveltuva vaihtoehto voi riippua siitä, onko myyjä tai varasto jo toiminut.",
             "Käytä tilaukseen liitettyä pyyntöä, jos sellainen on, tai kysy viralliselta tuelta oikeaa prosessia. Kerro tilausviite ja haluatko peruutuksen, korvaavan tuotteen vai rahapalautuksen. Jos tarvitset tavarat tiettyyn päivään mennessä, esitä päivä vaatimuksena äläkä oleta alustan saavuttavan sitä. Ehdotus odottaa korvaajaa auttaa vain, jos uusi aikataulu sopii sinulle."
-          ]
+          ],
+          "id": "section-1"
         },
         {
           "heading": "Kokoa tiivis näyttöpaketti",
           "paragraphs": [
             "Tallenna tuotesivu, valittu vaihtoehto, määrä, tilausvahvistus ja ongelman näyttävät kuvat. Säilytä alkuperäiset kuvatiedostot mahdollisuuksien mukaan ja lisää erillinen merkitty kopio, jos korostus auttaa. Selkeä yleiskuva ja yksi lähikuva on usein helpompi arvioida kuin suuri joukko lähes samoja kuvakaappauksia. Säilytä viestit, joissa myyjä tai välittäjä vahvisti yksityiskohdan ennen ostoa.",
             "Kirjoita lyhyt aikajana: milloin tilasit, milloin ongelma havaittiin ja mitä toimenpidettä olet jo pyytänyt. Pysy tosiasioissa. Sano esimerkiksi sauman näyttävän avoimelta tietyssä kuvassa väittämättä koko erää vialliseksi. Jos kuva on epäselvä, pyydä tarkennusta tai hyödyllisempää näkymää sen sijaan, että pitäisit epävarmuutta vikana."
-          ]
+          ],
+          "id": "section-2"
         },
         {
           "heading": "Toimi ripeästi ja vahvista soveltuva määräaika",
           "paragraphs": [
             "Tarkista tilauksen nykyiset palautus- tai vaihtoehdot ja pyydä tukea vahvistamaan epäselvät määräajat. Kakobuyn ohjesivut käsittelevät tiettyjä palautustilanteita, ja tuote- tai myyjärajoitukset voivat vaikuttaa korjaustapaan. Vanha hakutulos tai toisen ostajan kokemus ei korvaa luotettavasti omaan ostokseesi sovellettavia ehtoja.",
             "Kirjaa määräaika ja tapahtuma, josta se lasketaan. Viestin lähettämisen ei pidä olettaa pysäyttävän kelloa. Toimita lisänäyttö nopeasti tuen pyytäessä ja kysy, onko pyyntö kirjattu virallisesti. Säilytä pyyntö ja vastaus. Varhainen tarkistus kannattaa erityisesti tuotteen ollessa varastossa ennen sen sitomista erilliseen kansainväliseen toimitukseen."
-          ]
+          ],
+          "id": "section-3"
         },
         {
           "heading": "Vertaa palautusta vaihtoon",
           "paragraphs": [
             "Vaihto voi korjata koko- tai värivirheen, mutta aloittaa uuden osto- ja saapumiskierroksen. Vahvista ennen hyväksymistä tarkka korvaava vaihtoehto, saatavuus, palautettavat osat ja mahdolliset lisämaksut. Kysy, miten korvaaja näkyy tilillä, jotta et sekoita uutta tietuetta kaksoistilaukseen.",
             "Palautuksessa keskity odotettuun nettosummaan ja sen saamiseksi tarvittaviin vaiheisiin. Vaihdossa keskity korvaajan sopivuuteen sekä hintaan ja aikaan. Jos alkuperäiset kokotiedot olivat epäluotettavia, toisen koon tilaaminen ilman parempia mittoja voi toistaa ongelman. Kerro kummassakin tapauksessa haluttu lopputulos selvästi. ”Korjatkaa tämä” jättää liikaa tilaa eri tulkinnoille hyväksyttävästä ratkaisusta."
-          ]
+          ],
+          "id": "section-4"
         },
         {
           "heading": "Lue palautuskuluehdotus ennen suostumista",
           "paragraphs": [
             "Myyjän hyväksymä palautus ei välttämättä tarkoita kaikkien ostoon liittyvien maksujen saamista takaisin. Kakobuyn ohje kuvaa tilanteita, joissa kuljetuskulut liittyvät hyvitykseen. Pyydä selkeä erittely: tuotteen summa, mahdollinen Kiinan sisäinen kuljetus, sovellettava palvelumaksu ja odotettu hyvitys vähennysten jälkeen. Vahvista, mitkä summat ovat arvioita.",
             "Vertaa ehdotusta sitten saatavilla oleviin vaihtoehtoihin. Halpa tuote suurilla palautuskuluilla voi tuottaa pienen hyvityksen, mutta se ei tarkoita sopimattoman tuotteen automaattista pitämistä. Pohdi käytännön tulosta ja prioriteettejasi. Älä hyväksy palautusta vain suuren otsikkosumman vuoksi, jos lopullinen summa tai maksun kohde on vielä epäselvä."
-          ]
+          ],
+          "id": "section-5"
         },
         {
           "heading": "Säilytä kunto ja pakkaus päätöksen aikana",
           "paragraphs": [
             "Vältä tuotteen kuntoa muuttavia pyyntöjä palautusarvion aikana. Etikettien poisto, pakkauksen hävittäminen, tuotteen muuttaminen tai sinetin avaaminen voi vaikuttaa näyttöön ja myyjän halukkuuteen hyväksyä palautus. Kakobuyn julkaistu ostonjälkeinen materiaali mainitsee kunnon ja täydellisyyden merkityksen joissakin palautuksissa. Kysy, mitä omassa tapauksessasi tulee säilyttää.",
             "Jos olet jo valinnut pakkauspalvelun, kerro tuelle keskeneräisestä palautuspäätöksestä ja kysy toteutunutta käsittelyä. Älä oleta yleisen varastohuomautuksen ohittavan pakettilähetystä. Pidä kiistanalainen tuote erillään omassa suunnitelmassasi ratkaisun selviämiseen asti. Näin ehkäiset sen pakkaamisen muiden valmiiden tilausten kanssa ja vältettävät ongelmat koko paketille."
-          ]
+          ],
+          "id": "section-6"
         },
         {
           "heading": "Seuraa hyvitystä sen todellisissa vaiheissa",
           "paragraphs": [
             "Arvioitavaksi hyväksytty palautuspyyntö, myyjän vastaanottama tuote ja tilillä näkyvä hyvitys ovat eri tapahtumia. Kakobuyn ohje kuvaa palautuksen myyjälle ennen joidenkin maksujen hyvittämistä tilisaldoon. Kysy valmistunut vaihe, jos päivitys kertoo vain hyvityksen käsittelystä. Säilytä vastaavat viitenumerot ja summat yhdessä.",
             "Kun hyvitys näkyy, tarkista, onko se käytettävissä olevaa tilisaldoa vai palautus alkuperäiselle rahoitustavalle. Älä laske summaa budjettiin kahdesti. Jos haluat nostaa saldon, varmista nykyinen menettely, kelpoisuus, kohde ja maksut virallisen tilin kautta. Tuotteen hyvittäminen ei yksin määrittele erillisen noston ehtoja tai aikaa."
-          ]
+          ],
+          "id": "section-7"
         },
         {
           "heading": "Pidä kansainväliset toimitusongelmat erillisinä",
           "paragraphs": [
             "Jos paketti on lähtenyt varastosta, tuotepalautus ja kuljetusvaatimus voivat tarvita eri näyttöä ja prosesseja. Aloita kirjaamalla saapunut sisältö, pakettiviite, ulkopakkaus ja näkyvät vauriot. Säilytä pakkaus, kunnes kuljettajan tai alustan ohjeet ovat selvät. Ilmoita ongelma nopeasti kyseisen paketin tai tilauksen oikeassa kanavassa.",
             "Älä käsittele tavallista varastopalautuskäytäntöä lupauksena kansainvälisestä palautuspostista, vakuutuksesta tai kuljettajan korvauksesta. Lue valitun reitin ja todella ostamasi turvan ehdot. Kerro, koskeeko huoli kadonnutta pakettia, vaurioitunutta pakettia, puuttuvaa sisältöä vai myyjän poikkeamaa. Luokittelu auttaa tukea ohjaamaan asian oikein ja ehkäisee saman puutteellisen pyynnön lähettämistä moneen irralliseen kanavaan."
-          ]
+          ],
+          "id": "section-8"
         },
         {
           "heading": "Sulje asia täsmäytetyillä tiedoilla",
           "paragraphs": [
             "Vertaa lopputulosta viimeiseen sovittuun ehdotukseen ennen asian merkitsemistä ratkaistuksi. Vahvista summa, valuutta, vähennykset, varojen kohde ja korvaajan tila. Kysy täsmällisestä erosta, jos jokin poikkeaa, ja liitä vastaava vahvistus. Säilytä alkuperäinen tilaustietue hyvityksen jälkeen; se auttaa myöhemmän tilitoiminnan täsmäyttämisessä.",
             "Hyödynnä kokemus seuraavassa ostossa. Selkeämpi vaihtoehdon valinta, mittakysymys ennen ostoa tai nopeampi varastotarkistus voi ehkäistä saman ongelman. Onnistunut palautus ei todista kaikkien tulevien tilausten saavan samaa ratkaisua. Riippumaton opas auttaa päätöksen jäsentämisessä; Kakobuy ja myyjä käsittelevät varsinaisen pyynnön sovellettavilla ehdoilla."
-          ]
+          ],
+          "id": "section-9"
         }
       ],
       "sources": [
@@ -779,85 +973,138 @@
         "https://www.kakobuy.com/index/information?information_id=13",
         "https://www.kakobuy.com/service/help/question?cid=63&id=40"
       ],
-      "wordCount": 1466
+      "wordCount": 1092,
+      "datePublished": "2026-10-24",
+      "dateModified": "2026-10-30",
+      "answer": "Aloita tilauksen nykyisestä vaiheesta. Jos tuote on varastossa, jätä se pois kansainvälisestä paketista ja kysy tuelta myyjän hyväksynnästä, palautuskuluista ja sovellettavasta määräajasta. Hyvityspyyntö, tilille kirjattu hyvitys ja palautus pankkiin ovat eri vaiheita.",
+      "related": [
+        "kakobuy-payment-fees",
+        "kakobuy-qc-photos-guide",
+        "is-kakobuy-legit"
+      ]
     },
     {
       "slug": "kakobuy-payment-fees",
-      "title": "Kakobuyn maksut ja kulut: lue kokonaissumma ennen maksamista",
-      "description": "Erota tuotehinnat, valuuttamuunnokset, maksukulut, toimitus ja hyvitykset, jotta Kakobuy-budjettisi vastaa todellista kassaa.",
+      "title": "Kakobuyn maksukulut, valuutta ja saldon lataaminen",
+      "description": "Ymmärrä Kakobuyn maksukulut, saldon lataaminen, valuutanvaihto ja hyvityssaldo. Käytä yksinkertaista tarkistuslistaa ennen maksun toistamista.",
       "category": "Kulut",
-      "readMinutes": 7,
+      "readMinutes": 6,
       "intro": "Tuotteen näytetty USD-hinta on hyödyllinen vertailukohta, mutta ei täydellinen maksusuunnitelma. Lopulliseen kulutukseen voi sisältyä tuoteosto, Kiinan sisäinen kuljetus, valuuttamuunnos, maksukulu, valinnaiset palvelut ja kansainvälinen toimitus. Osa summista tiedetään varhain, osa vasta tilauksen tai paketin valmistuessa. Käytä vanhan oppaan yksittäisen kuluprosentin sijaan Kakobuyn nykyistä maksunäkymää ymmärtääksesi, mistä maksat, missä valuutassa ja mitä jää vielä tapahtuman ulkopuolelle.",
       "sections": [
+        {
+          "heading": "Mitä valuutta ja saldon lataaminen tarkoittavat maksullesi?",
+          "paragraphs": [
+            "Jos näet latausvahvistuksen, vertaa rahoitustapahtumaa saldokirjauksiin ja tilaustietoihin. Älä toista maksua vain siksi, ettei tilaus ole vielä päivittynyt. Pyydä ensin tukea täsmäyttämään tapahtuman viite; älä koskaan jaa kortin turvakoodia tai salasanoja."
+          ],
+          "table": {
+            "headers": [
+              "Näkymä tai tietue",
+              "Mitä se kertoo"
+            ],
+            "rows": [
+              [
+                "Tuotteen hinta",
+                "Listahinta tai muunnettu arvio; toimitus voi olla erillinen."
+              ],
+              [
+                "Lataus / saldo",
+                "Tilille hyvitetyt varat; tarkista, onko ne kohdistettu tilaukseen."
+              ],
+              [
+                "Maksuvahvistus",
+                "Tapahtuman summa ja valuutta; vertaa pankin lopulliseen veloitukseen."
+              ],
+              [
+                "Pakettitarjous",
+                "Kansainvälinen rahti ja valitut palvelut; käsittele erillisenä maksuna."
+              ],
+              [
+                "Hyvitystietue",
+                "Palautettujen varojen määrä ja kohde, jotka voivat poiketa alkuperäisestä rahoitustavasta."
+              ]
+            ]
+          },
+          "id": "decision-check"
+        },
         {
           "heading": "Erota ostos kuljetuksesta",
           "paragraphs": [
             "Aloita kahdesta budjettitietueesta: tavaroiden hankinnasta ja paketin lähettämisestä. Kakobuyn kustannusohje erottaa tuotteen hinnan kansainvälisestä rahdista ja muista maksuista. Ostamiseen tarvittava summa ei siis välttämättä riitä tuotteen vastaanottamiseen. Pidä myyjältä varastoon tapahtuva kuljetus erillään varastosta luoksesi tapahtuvasta, vaikka molempia kutsutaan toimitukseksi.",
             "Varmista kahta tuotetta verratessa, että hinta koskee samaa määrää ja valittua vaihtoehtoa. Ilmoituksen alin hinta voi kuulua lisäosaan, toiseen kokoon tai tyyliin. Avaa nykyiset tilaustiedot ennen summan kirjaamista vahvistetuksi. Houkutteleva luettelohinta auttaa vain, jos tiedät sen sisällön ja voit verrata sitä täsmälleen ostamaasi tuotteeseen."
-          ]
+          ],
+          "id": "section-0"
         },
         {
           "heading": "Erota arviot maksettavista summista",
           "paragraphs": [
             "Merkitse jokainen budjettisumma arvioksi, tarjoukseksi tai maksetuksi. USD-arvio auttaa tuotevertailua, kun taas tarjottu summa kuuluu tiettyyn kassaan tai toimituslaskelmaan. Maksetun summan tulee vastata kuittia tai tilitapahtumaa. Näkyvät merkinnät estävät vanhan arvion muuttumisen hiljaisesti oletetuksi loppukuluksi.",
             "Kirjaa jokaisen tarjouksen päivä ja valuutta. Tarkista summa uudelleen palatessasi sivulle myöhemmin sen sijaan, että olettaisit vanhan olevan voimassa. Muutos voi johtua vaihtoehdosta, valuuttamuunnoksesta, määränpäästä, paketin ominaisuuksista tai päättyneestä tarjouksesta. Kysy täsmällisestä erosta, jos se on epäselvä. Kaikkea ei tarvitse ennustaa, mutta muutoksen tunnistamiseen ja arviointiin ennen maksamista tarvitaan riittävästi tietoa."
-          ]
+          ],
+          "id": "section-1"
         },
         {
           "heading": "Lue todella tarjottu maksutapa",
           "paragraphs": [
             "Käytä kyseiseen tapahtumaan omalla tililläsi saatavilla olevia maksuvaihtoehtoja. Ohjeessa mainittu tapa ei välttämättä sovellu kaikille ostajille, tuotteille tai maksuille. Kakobuyn julkinen maksuohje itsekin neuvoo tarkistamaan käsittelykulut maksuhetkellä. Yleinen maksumerkkien lista ei ole saatavuuslupaus.",
             "Vertaa todella valittavien tapojen yhteissummaa ja veloitusvaluuttaa. Lue maksuntarjoajan tai kortinmyöntäjän erilliset tiedot, sillä ne voivat vaikuttaa lopulliseen veloitukseen. Maksa vain virallisella alustalla tai selvästi tunnistetussa maksuntarjoajan kassassa. Tämä suositussivusto ei kerää maksutunnuksia eikä vastaanota saldolatauksia, eikä artikkeli voi hyväksyä maksureittiä, jota nykyinen tilisi ei tarjoa."
-          ]
+          ],
+          "id": "section-2"
         },
         {
           "heading": "Ymmärrä, missä valuuttamuunnos tapahtuu",
           "paragraphs": [
             "Kirjaa myyjän summan valuutta, Kakobuy-tilin valuutta ja maksutavaltasi veloitettava valuutta. Ne voivat poiketa. Tuttu valuuttasymboli tuotekortissa ei määrää kassalla käytettävää kurssia eikä sitä, tekeekö palveluntarjoaja vielä toisen muunnoksen.",
             "Käytä hyödylliseen vertailuun todellista veloitettavaa summaa ja tapahtumaan hyvitettyä tai käytettyä summaa. Vahvista, sisältyykö erillinen maksu jompaankumpaan. Jos kaksi tapaa tarjoaa eri kokonaiskulut, vertaa samaa ostosummaa ja valuuttapohjaa. Älä yhdistä nykyistä markkinakurssia vanhaan alustamaksuun ja esitä tulosta tarkkana Kakobuy-tarjouksena; tiedot voivat kuvata eri tapahtumia."
-          ]
+          ],
+          "id": "section-3"
         },
         {
           "heading": "Laske rahoituksen todellinen kustannus",
           "paragraphs": [
             "Laskuesimerkki näyttää eron näkyvän pääsumman ja tililtä lähtevän rahan välillä. Jos kuvitteellinen maksu veloittaa 107 valuuttayksikköä ja hyvittää 100 samassa valuutassa, lisäkulu hyvitykseen nähden on 7 prosenttia. Tämä havainnollistaa laskua eikä ole Kakobuyn kulutarjous. Jos valuutat eroavat, muunnos on huomioitava ennen vertailua.",
             "Käytä samaa tapaa oman kassasi tarkistamiseen olettamatta jokaista eroa alustamaksuksi. Maksunäkymä, tarjoajan muunnos ja korttilasku voivat selittää eri osia kokonaissummasta. Säilytä kuitit myöhempää täsmäytystä varten. Yksittäinen taulukkoon kopioitu prosentti auttaa vähemmän kuin selkeä kirjaus maksetusta määrästä ja maksun kattamista asioista."
-          ]
+          ],
+          "id": "section-4"
         },
         {
           "heading": "Käsittele tilisaldo erillisenä tietueena",
           "paragraphs": [
             "Jos valittu tapa käyttää tilisaldoa, erota saldoon lisätty raha tilaukseen käytetystä. Onnistunut lataus ei automaattisesti tarkoita tarkoitetun tilauksen maksamista, ja peruutus voi tuottaa saldohyvityksen alkuperäisen maksutavan palautuksen sijaan. Tarkista vastaavat tilaus- ja tapahtumatilat.",
             "Ylläpidä yksinkertainen täsmäytys: alkusaldo, lisäykset, tilausmaksut, hyvitykset, nostot ja loppusaldo. Käytä tilillä näkyvää valuuttaa ja kirjaa erilliset ulkoiset veloitukset. Jos luvut eivät täsmää, etsi puuttuva tapahtuma ennen uutta maksua. Vahvista nostoehdot ennen aiottua käyttöä suuremman summan lisäämistä. Käytettävissä olevaa saldoa ja jo pankkiin palautettua käteistä ei saa laskea samaksi asiaksi."
-          ]
+          ],
+          "id": "section-5"
         },
         {
           "heading": "Arvioi alennus tämän tilauksen vaikutuksen perusteella",
           "paragraphs": [
             "Lue kampanjan kelpoisuus, soveltuva maksu, vähimmäisosto, päättyminen ja käyttörajoitukset. Tulevan toimituksen kuponki ei alenna tämän päivän tuoteostoa, ellei kassa nimenomaisesti käytä sitä siihen. Tarjouspaketin mainostettu nimellisarvo ei välttämättä ole oman tilauksesi säästö. Pidä käyttämätön tarjous erillään vahvistetusta kulutuksesta.",
             "Vertaa lopullista maksettavaa summaa ennen kelvollisen tarjouksen käyttöä ja sen jälkeen. Jos käyttö vaatii lisäostoksia tai huonommin sopivan reitin, huomioi seuraus päätöksessä. Älä lisää tarpeetonta tuotetta vain rajan saavuttamiseksi vertaamatta lopputuloksen kokonaishintaa. Olennainen kysymys on, parantaako tarjous haluamaasi ostosta, ei mainosbannerin luvun koko."
-          ]
+          ],
+          "id": "section-6"
         },
         {
           "heading": "Tarkista valinnaiset palvelut ja pakettimaksut",
           "paragraphs": [
             "Lue varasto- tai pakettivaiheen valittu palvelulista huolellisesti. Pakkaus-, kuvaus- tai käsittelyvaihtoehto voi auttaa, mutta sopivuus riippuu tavaroista ja tarpeistasi. Tarkista nykyinen hinta ja palvelun tarkoitus. Pidä se erillään perusrahdista, jotta pakettivaihtoehtojen vertailu on tasapuolista.",
             "Kun lopullinen paketti on mitattu, vertaa uutta maksua aiempaan arvioon. Kakobuyn saapumisohje huomauttaa lopullisten pakattujen mittojen voivan erota aiemmista tuotemitoista. Kysy muuttunutta lähtötietoa, jos korjaus on epäselvä. Määränpään verot ja muut maksut tarvitsevat oman tarkistuksensa; älä oleta yleisen reittinimen tai tänään maksetun summan ratkaisevan kaikkia mahdollisia toimituskuluja."
-          ]
+          ],
+          "id": "section-7"
         },
         {
           "heading": "Käsittele epävarmat maksut luomatta kaksoiskappaleita",
           "paragraphs": [
             "Jos maksunäkymä lakkaa vastaamasta, tarkista ensin tilaus, tilitoiminta ja maksuntarjoajan tiedot. Säilytä viite ja aikaleima. Hidas sivu ei todista veloituksen epäonnistumista, eikä pankki-ilmoitus yksin välttämättä todista tilauksen hyvittämistä. Saman maksun toistaminen voi vaikeuttaa selvitystä.",
             "Kysy viralliselta tuelta kyseisestä tapahtumasta, jos tiedot eroavat. Anna viite, summa, valuutta ja näkyvä tila, mutta älä täydellisiä korttitietoja, salasanoja tai vahvistuskoodeja. Säilytä vastaus kuitin mukana. Jos maksu on uusittava, vahvista ensimmäisen yrityksen kohtalo: odottava, peruttu vai muualle hyvitetty. Selkeät tiedot auttavat enemmän kuin useat puutteelliset kuvakaappaukset toistuvista yrityksistä."
-          ]
+          ],
+          "id": "section-8"
         },
         {
           "heading": "Täsmäytä hyvitykset ja toimitetun ostoksen loppukulu",
           "paragraphs": [
             "Kirjaa hyvityksestä alkuperäinen veloitus, sovitut vähennykset, hyvitetty summa ja rahojen kohde. Tilihyvitys ja myöhempi nosto ovat eri kirjauksia. Jos valuuttamuunnos tapahtuu eri vaiheissa, älä oleta ulkoisen loppupalautuksen olevan numerollisesti sama kuin alkuperäinen veloitus tarkistamatta liittyviä tietoja.",
             "Laske toimituksen jälkeen yhteen vahvistetut tuotehinnat, Kiinan sisäinen kuljetus, maksu- tai muunnoskulut, valitut palvelut, kansainvälinen toimitus ja toteutuneet määränpäämaksut. Vähennä vain käytetyt hyvitykset tai alennukset. Lopputieto antaa realistisen pohjan seuraavalle ostoserälle ja rehellisemmän vertailun: halvin tuotekortti ei välttämättä ole halvin toimitettu ostos, ja selkeä nykyinen tarjous auttaa enemmän kuin perusteeton yleinen kuluväite."
-          ]
+          ],
+          "id": "section-9"
         }
       ],
       "sources": [
@@ -867,14 +1114,22 @@
         "https://item.kakobuy.com/service/help/question?id=87",
         "https://www.kakobuy.com/tools/estimate"
       ],
-      "wordCount": 1457
+      "wordCount": 1041,
+      "datePublished": "2026-10-24",
+      "dateModified": "2026-10-30",
+      "answer": "Käytä nykyisessä kassassa näkyvää valuuttaa ja maksettavaa summaa. Tuoteluettelon USD-arvio ei todista, missä valuutassa korttiasi veloitetaan. Lataus lisää tilin saldoa; tarkista saldo ja tilauksen maksutila erikseen ennen kuin oletat tuotteen tai lähetyksen olevan maksettu.",
+      "related": [
+        "kakobuy-shipping-costs",
+        "kakobuy-returns-refunds",
+        "kakobuy-shipping-calculator"
+      ]
     },
     {
       "slug": "kakobuy-weidian-taobao-links",
       "title": "Weidian- ja Taobao-linkit Kakobuyhin: varmista oikea tuote ja vaihtoehto",
       "description": "Opi lähdelinkkien, kauppapaikkatunnusten, välittäjälinkkien ja myyjän vaihtoehtojen yhteys ennen Kakobuy-ostoa.",
       "category": "Tuotelinkit",
-      "readMinutes": 7,
+      "readMinutes": 5,
       "intro": "Hyödyllisen tuotelinkin tulee johtaa täsmälleen tutkimasi myyjän ilmoitukseen. Tämä vaikuttaa helpolta, kunnes taulukkorivi, lyhennetty jakolinkki, käännetty otsikko ja välittäjäosoite viittaavat samaan tuotteeseen eri tavoin. Turvallisin tapa on säilyttää alkuperäinen kauppapaikkalinkki, tarkistaa ilmoituksen identiteetti ja vahvistaa valittu vaihtoehto Kakobuyssa. Opas selittää vertailun, puutteellisen tuonnin tunnistamisen ja sen, miksi tuotetunnus yksin ei määrittele kokoa, väriä, määrää tai lopullista hintaa.",
       "sections": [
         {
@@ -882,70 +1137,80 @@
           "paragraphs": [
             "Kauppapaikan ilmoitus on myyjän tuotesivu. Välittäjälinkki osoittaa palveluun, joka auttaa ostamaan ilmoituksen tuotteen. Hakemiston tietosivu on tutkimussivu, joka voi kuvata tuotetta ja tarjota jonkin näistä linkeistä. Osoitteilla on eri tehtävät. Tutkimussivuston URL:n lopun numero voi yksilöidä sen oman tietueen eikä myyjän tuotetta.",
             "Säilytä myyjän alkuperäinen linkki ehdokaslistalla, vaikka käyttäisit yleensä välittäjän ostopainiketta. Se auttaa vertaamaan lähdettä tuontisivuun ja selittämään poikkeaman tuelle. Kakobuyn virallinen osto-opas lähtee kiinalaisen kauppapaikan tuotelinkistä. Käytä lähdeidentiteettiä tutkimuksen perustana pelkän käännetyn otsikon tai monen myyjän kierrättämän pienoiskuvan sijaan."
-          ]
+          ],
+          "id": "section-0"
         },
         {
           "heading": "Tarkista kauppapaikka numeron lisäksi",
           "paragraphs": [
             "Tuotenumero tarvitsee kauppapaikkansa asiayhteyden. Weidian-linkeissä käytetään yleensä itemID-parametria, Taobao-tuotesivuissa id-parametria ja 1688-tarjouksissa usein numeerista tarjoustunnusta polussa. Mallit auttavat osoitteen tarkistamisessa, mutta tunnistaminen ei vahvista ilmoituksen aktiivisuutta, tukea tai ostokelpoisuutta.",
             "Älä siirrä yhden kauppapaikan numeroa toisen URL-muotoon. Älä myöskään korvaa alkuperäistä myyjätunnistetta hakemiston sisäisellä tietuenumerolla. Tarkista kahdesta linkistä lähdepalvelin ja tuotetunnus yhdessä. Pidä epävarmuus näkyvänä varsinaisen ilmoituksen avaamiseen asti. Sama tuotekuva antaa taustaa, mutta ei todista eri linkkien koskevan samaa myyjää tai tarjousta."
-          ]
+          ],
+          "id": "section-1"
         },
         {
           "heading": "Avaa jakolinkit huolellisesti",
           "paragraphs": [
             "Jaettu linkki voi ohjata sovelluksen, lyhennetyn osoitteen tai seurantasivun kautta tuotteeseen. Seuraa sitä tavallisessa selaimessa ja tarkista lopullinen kohde. Kopioi varsinainen tuotelinkki, kun se on saatavilla. Jos tärkeiden tietojen näkeminen vaatii sovelluksen tai kirjautumisen, tunnista tutkimuksen puutteellisuus sen sijaan, että pitäisit jakoviestiä täydellisenä ilmoituksena.",
             "Älä liitä yksityisiä tililinkkejä, tilausten hallintasivuja tai kassasessioita julkiseen taulukkoon. Osoitteet eivät ehkä toimi toiselle kävijälle ja voivat sisältää tuotteeseen liittymätöntä tietoa. Kirjaa omiin muistiinpanoihin julkinen ilmoitus ja vaihtoehtotiedot erikseen. Jos linkki lakkaa toimimasta, palaa alkuperäiseen lähteeseen tai pyydä uusi linkki arvaamatta lyhytkoodin aiemmin tarkoittamaa tuotetta."
-          ]
+          ],
+          "id": "section-2"
         },
         {
           "heading": "Tarkista välittäjälinkin sisäinen URL",
           "paragraphs": [
             "Välittäjän osto-osoite voi sisältää alkuperäisen kauppapaikan URL:n parametrissaan. Ulompi osoite tunnistaa Kakobuyn, sisempi myyjän ilmoituksen. Koodaus tekee sisäisestä URL:sta sopivan parametrin; kaksoispisteet, vinoviivat ja kysymysmerkit voivat näkyä prosenttijonoina. Muotoilu on normaalia eikä yksin tarkoita eri tuotetta.",
             "Ongelmia syntyy sisäisen osoitteen katketessa, väärän tunnuksen korvatessa sen tai koodauksen ollessa sopimaton. Ostajalle tärkein tarkistus on välittäjäsivun latauduttua näkyvä tuote. Vertaa lähdekauppapaikkaa, otsikkoa, kuvia ja vaihtoehtoja tutkimukseesi. Jos ne eroavat, pysähdy selvittämään linkki sen sijaan, että olettaisit kaikkien hakemistopainikkeiden kohteiden täsmäävän oikein."
-          ]
+          ],
+          "id": "section-3"
         },
         {
           "heading": "Vahvista tuonti ennen vaihtoehdon valintaa",
           "paragraphs": [
             "Kun Kakobuy avaa ilmoituksen, vahvista myyjän tuotteen todella näkyvän. Latausnäkymä, saatavuusvirhe tai yleinen käsintilauslomake ei ole valmis tuotetuonti. Lue tuotteen rajoitukset ja ilmoitukset. Tavallisen näköinen välittäjä-URL ei takaa oston tai maksutavan saatavuutta.",
             "Vertaa useita tunnistusvihjeitä ensimmäisen kuvan lisäksi. Tarkista lähdetuoteviite, näkyvä myyjätausta, yleiskuvaus ja vaihtoehdot. Jos tuotu sivu näyttää myyjän sivua vähemmän, tunnista puuttuva tieto ennen tilaamista. Seuraava hyödyllinen toimi voi olla kysymys viralliselle tuelle maksamisen sijaan. Säilytä linkki ja täsmällinen kysymys, jotta vastaus yhdistyy oikeaan ilmoitukseen."
-          ]
+          ],
+          "id": "section-4"
         },
         {
           "heading": "Käsittele vaihtoehto tuotteen osana",
           "paragraphs": [
             "Yksi ilmoitus voi sisältää useita kokoja, värejä, materiaaleja, settejä tai lisäosia. Tuotetunnus osoittaa ilmoitukseen, ei välttämättä haluamaasi tarkkaan vaihtoehtoon. Lue vaihtoehtojen nimet ja vastaavat kuvat. Matala alkaen-hinta voi koskea yhtä vaihtoehtoa, kun toisella on eri summa tai määrä.",
             "Kirjaa vaihtoehto mahdollisuuksien mukaan myyjän sanoin. Lisää vaatteelle kokomerkintä ja valinnassa käytetyt mitat. Tarkista setin sisältämät osat. Vahvista lisäosan yhteensopivuus samankaltaiseen mallinimeen luottamisen sijaan. Pyydä epäselvän käännöksen tarkennus ennen maksua. Värin tai koon arvaaminen valikon sijainnista voi valita väärän version."
-          ]
+          ],
+          "id": "section-5"
         },
         {
           "heading": "Erota käännös tuotteen tosiasioista",
           "paragraphs": [
             "Käännös helpottaa lukemista, mutta alkuperäiset vaihtoehtomerkinnät ja tekniset tiedot säilyvät tärkeinä. Mallinimi voidaan kääntää tavalliseksi sanaksi, mittalyhenne ymmärtää väärin tai yleinen otsikko voi peittää merkittävän versioeron. Säilytä merkki- ja mallitunnukset vertailussa ja vahvista mittayksiköt.",
             "Käytä ympäröiviä tietoja käännöksen järkevyyden arviointiin. Jos kokotaulukossa on luku ilman selvää yksikköä, älä oleta kotimaasi tuttua järjestelmää. Jos lisäosakuvaus nimeää useita laitteita, tarkista vaihtoehdon yleisyys tai mallikohtaisuus. Selkeä englanninkielinen otsikko suositussivulla auttaa navigointia, mutta ei ole uusi myyjän lupaus materiaalista, yhteensopivuudesta tai sisällöstä."
-          ]
+          ],
+          "id": "section-6"
         },
         {
           "heading": "Tarkista pitkään tallennetut linkit uudelleen",
           "paragraphs": [
             "Tallennettu linkki voi toimia, vaikka hinta, vaihtoehdot, varasto tai kuvaus muuttuu. Avaa sivu lähellä aiottua tilausta. Vertaa nykyistä ilmoitusta muistiinpanoihin ja käytä uusia kassatietoja päätöspohjana. Taulukon päivämäärä kertoo tietueen tarkistuksesta, ei kaikkien myyjän kenttien pysymisestä muuttumattomina.",
             "Jos ilmoitus puuttuu, älä oleta toista saman kuvan sivua vastaavaksi korvaajaksi. Vertaa uudelleen myyjää, mittoja, vaihtoehtoja ja todellista hintaa. Pidä vanha ja uusi linkki erillään muutoksen selviämiseen asti. Tämä auttaa erityisesti keskustelun tai vanhan QC-kuvan viitatessa aiempaan ostoon: viite voi koskea nykyisestä tarjouksesta poikkeavaa versiota tai erää."
-          ]
+          ],
+          "id": "section-7"
         },
         {
           "heading": "Ymmärrä kumppanilinkit sekoittamatta niiden tarkoitusta",
           "paragraphs": [
             "Joissakin ostolinkeissä on lähdetuotteen URL:n lisäksi suosittelu- tai kumppaniparametri. Tämän riippumattoman suositussivuston kelvolliset ulkoiset linkit voivat tuottaa palkkion. Parametri ei sertifioi myyjää, todista tuotelaatua eikä takaa alennusta. Tarkista mainostetut tarjoukset Kakobuyn omilta nykyisiltä sivuilta ennen niihin luottamista.",
             "Tuotteen vastaavuudessa ydinkysymys on edelleen sisäisen lähdelinkin oikeellisuus ja vaihtoehdon sopivuus tarpeisiisi. Pidä ostopäätös erillään mainosväitteistä. Voit käyttää kätevää välittäjäpainiketta ja tarkistaa silti ilmoituksen, mitat, hinnan ja reitin. Tee rekisteröityminen, maksaminen ja tilausten hallinta virallisessa kohteessa; tutkimusartikkeli tai hakemistosivu ei tee tapahtumia puolestasi."
-          ]
+          ],
+          "id": "section-8"
         },
         {
           "heading": "Säilytä toistettava linkkitarkistusrutiini",
           "paragraphs": [
             "Säilytä jokaisen ehdokkaan alkuperäinen kauppapaikkalinkki, tunnista oikea kauppapaikka ja tuote, avaa Kakobuyn kautta, vertaa tuotuja tietoja, valitse tarkka vaihtoehto ja tarkista lopullinen ostosumma. Kirjaa avoimet kysymykset ennen tilausta. Säilytä oston jälkeen tilausviite lähdelinkin vieressä, jotta varastokuvat ja tukivastaukset yhdistyvät oikeaan tuotteeseen.",
             "Rutiini auttaa yksittäisessä ostossa ja muuttuu arvokkaammaksi monien samankaltaisten tuotteiden vertailussa. Se vähentää väärän vaihtoehdon ostamista tutulta näyttävän pienoiskuvan vuoksi ja luo tiiviin näyttöketjun sivun myöhempien muutosten varalle. Hyvä Kakobuy-tuoteluettelo auttaa löytämään ehdokkaita; huolellinen lähteen ja vaihtoehdon tarkistus tekee löydöstä selvästi määritellyn tilauksen."
-          ]
+          ],
+          "id": "section-9"
         }
       ],
       "sources": [
@@ -953,14 +1218,16 @@
         "https://www.kakobuy.com/service/help/question?cid=35&id=79",
         "https://www.kakobuy.com/item/notfound"
       ],
-      "wordCount": 1503
+      "wordCount": 901,
+      "datePublished": "2026-10-24",
+      "dateModified": "2026-10-24"
     },
     {
       "slug": "kakobuy-first-haul-checklist",
       "title": "Ensimmäinen Kakobuy-ostoseräsi: tarkistuslista valinnasta toimitukseen",
       "description": "Suunnittele ensimmäinen Kakobuy-tilaus selkeillä tuotetarkistuksilla, realistisella budjetilla, varastopäätöksillä ja paketin loppukatselmuksella.",
       "category": "Aloittaminen",
-      "readMinutes": 7,
+      "readMinutes": 5,
       "intro": "Ensimmäinen ostoserä on helpompi hallita, kun jokaisella tuotteella on selvä tarkoitus ja jokaisella vaiheella yksinkertainen valmistumisen tarkistus. Et tarvitse suurta ostoskoria oppiaksesi prosessin. Tarvitset oikeat tuotelinkit, järkevät mitat, koko matkan kattavan budjetin ja aikaa tavaroiden tarkistamiseen ennen kansainvälistä toimitusta. Käytä listaa riippumattomana suunnitteluoppaana Kakobuyn nykyisen ohjeen ja tiliohjeiden rinnalla. Se ei lupaa tiettyä toimituspäivää, hintaa tai tuotetulosta, vaan auttaa tunnistamaan tunnetut tiedot ja vielä päätöstä vaativat asiat.",
       "sections": [
         {
@@ -968,70 +1235,80 @@
           "paragraphs": [
             "Valitse tuotteita, jotka voit kuvata täsmällisesti ja verrata arvaamatta. Kirjaa tuotelinkki, valittu väri tai tyyli, koko, määrä ja kunkin tuotteen mukaan ottamisen syy. Lyhyt selvästi määritelty lista on helpompi arvioida kuin suuri houkuttelevien pienoiskuvien kokoelma. Poista ehdokkaat, joita et erota samankaltaisista versioista tai jotka tarvitsevat myyjän puuttuvia tietoja.",
             "Anna jokaiselle tuotteelle oma kulutusraja ja tärkeysjärjestys. Näin voit poistaa myöhemmin jotain tekemättä koko suunnitelmaa uusiksi. Älä lisää tavaraa vain toisen ostajan välttämättömyysväitteen vuoksi tai siksi, että se näkyy suositun tuotteen vieressä taulukossa. Suositus auttaa löytämistä, mutta omat istuvuusvaatimukset, käyttö ja kokonaisbudjetti ratkaisevat jatkoon menevät ehdokkaat."
-          ]
+          ],
+          "id": "section-0"
         },
         {
           "heading": "Vahvista alkuperäinen ilmoitus ja valittu vaihtoehto",
           "paragraphs": [
             "Avaa lähdetuote ja vastaava Kakobuy-sivu. Vertaa ilmoituksen identiteettiä, kuvia ja vaihtoehtoja. Varmista hinnan koskevan valintaasi ja määrääsi. Tuotetunnus yksilöi ilmoituksen, mutta ei itsessään valitse kokoa tai väriä. Selvitä puutteellinen tuonti tai näkyvä rajoitus ennen maksamista.",
             "Säilytä vaihtoehdon sanamuoto ja tärkeä myyjän kuvaus. Setti voi esimerkiksi sisältää pääkuvan vihjaamaa vähemmän osia tai lisäosa vaatia tietyn laiteversion. Kysy rajattu kysymys epäselvästä tiedosta. Hyödyllinen vastaus vahvistaa tarvitsemasi yksityiskohdan; yleinen toteamus tuotteen hyvyydestä ei ratkaise yhteensopivuutta, mittoja tai sisältöä."
-          ]
+          ],
+          "id": "section-1"
         },
         {
           "heading": "Tarkista istuvuus ymmärtämilläsi mitoilla",
           "paragraphs": [
             "Vertaa vaatteen myyjän kokotaulukkoa samankaltaiseen hyvin istuvaan vaatteeseen. Käytä samaa mittausmenetelmää: tasaista vaatteen leveyttä ei pidä suoraan verrata koko vartalon ympärysmittaan ymmärtämättä suhdetta. Kirjaa tuotteelle olennaiset mitat, kuten rinta, pituus, vyötärö tai sisälahje. Säilytä alkuperäinen yksikkö näkyvissä.",
             "Tarkista kenkien tai istuvien asusteiden mittausohje ja pyydä selvennys epäselviin nimikkeisiin. Tuttu kokokirjain ei takaa tuttuja mittoja. Päätä hyväksyttävät erot ennen tilaamista, jotta varastotarkistuksella on selvä tarkoitus. Jos ilmoituksesta puuttuu käyttökelpoinen kokotieto, tunnista epävarmuus korvaamatta sitä varmasti esitetyllä muunnoksella asiaan liittymättömästä tuotteesta."
-          ]
+          ],
+          "id": "section-2"
         },
         {
           "heading": "Budjetoi tuotesummaa pidemmälle",
           "paragraphs": [
             "Erota odotettu tuoteosto kansainvälisestä toimituksesta sekä lisäpalveluista ja maksuista. Kakobuyn virallinen kustannusohje sisältää muutakin kuin tuotehinnan. Kirjaa myyjältä varastoon tapahtuva toimitus erikseen myöhemmästä pakettilähetyksestä. Käytä ajantasaisia maksu- ja toimitusnäkymiä ja merkitse alustavat arviot edelleen arvioiksi.",
             "Jätä suunnitelmaan epävarmuusvaraa koko budjetin ostoskoriin käyttämisen sijaan. Tuotteen paino tai pakattu tilavuus voi olla tuntematon ennen varastoon saapumista. Valinnainen pakkaus ja todelliselle sisällölle saatavilla oleva reitti vaikuttavat myös päätökseen. Jos todennäköinen toimitettu hinta tekee tuotteesta huonon hankinnan sinulle, poista se ennen ostoa äläkä toivo vahvistamattoman kupongin tai optimistisen toimitusarvion ratkaisevan asiaa."
-          ]
+          ],
+          "id": "section-3"
         },
         {
           "heading": "Tarkista sisällön sopivuus matkalle",
           "paragraphs": [
             "Lue nykyiset alustan ja kuljetuksen rajoitukset tavaroillesi ja määränpäällesi. Huomioi erityisesti akut, nesteet, hauraat osat ja muut käsittelyvaatimukset. Myyjän halukkuus myydä ei todista tietyn kansainvälisen reitin hyväksyvän tuotetta. Kysy ennen tilaamista, jos saatavilla olevat tiedot ovat epäselviä.",
             "Huomioi toimitustarpeesi reittikelpoisuuden lisäksi. Jos tarvitset tuotteet tapahtumaan, vertaa määräpäivää myyjän lähetyksen, varastokäsittelyn ja kansainvälisen kuljetuksen epävarmuuteen. Älä käsittele kuljetusarviota kaikkien aiempien vaiheiden lupauksena. Ensimmäinen ostoserä on helpompi, kun aikaa jää tarkistukseen ja harkittuun päätökseen kaiken hyväksymisen sijaan määräaikapaineessa."
-          ]
+          ],
+          "id": "section-4"
         },
         {
           "heading": "Tee tilaus selkein ohjein",
           "paragraphs": [
             "Tarkista tuotelista, vaihtoehdot, määrät, Kiinan sisäinen toimitus ja maksettava kokonaissumma ennen vahvistamista. Lisää lyhyet ohjeet vain tarpeellisen yksityiskohdan selventämiseksi, esimerkiksi vaihtoehdolle, jota ei voi valita yksiselitteisesti. Pidä sanamuoto tilauksen mukaisena. Ristiriitaiset tai epämääräiset huomautukset voivat lisätä epävarmuutta enemmän kuin poistaa sitä.",
             "Vahvista maksun jälkeen tilauksen tilan vastaavan tapahtumaa ja säilytä viite. Jos maksutulos on epävarma, tarkista tilin ja maksuntarjoajan tiedot ennen toistamista. Rekisteröidy ja maksa virallisessa kohteessa. Tämä riippumaton sivusto auttaa tuotetutkimuksessa ja prosessin ymmärtämisessä, mutta ei hallitse tiliäsi, kerää maksutietoja tai käske varastoa toimimaan alustan ulkopuolisten muistiinpanojen perusteella."
-          ]
+          ],
+          "id": "section-5"
         },
         {
           "heading": "Seuraa saapumisia sekoittamatta tilausvaiheita",
           "paragraphs": [
             "Seuraa myyjän lähetystä, Kiinan sisäistä toimitusta ja varastokäsittelyä eri vaiheina. Kakobuyn saapumisohje kuvaa tarkastuksen ja mittauksen ennen tuotteen pakettivalmiutta. Kuljettajan toimitusskannaus ja lähetysvalmis varastotietue tulee siksi tarkistaa erikseen. Yhdistä eri seurantatunnuksia kantavat päivitykset tilausviitteellä.",
             "Kysy epäselvästä päivityksestä juuri kyseisen tuotteen ja vaiheen osalta. Liitä viite ja näkyvä ristiriita. Älä korvaa näennäisesti viivästynyttä tilausta ennen sen peruutuksen, lähetyksen tai vastaanoton selvittämistä. Päivitä tuotteiden saapuessa yksinkertainen valmis–vaatii huomiota -lista. Se ratkaisee ensimmäiseen pakettiin sopivat tuotteet ja vielä avoimiksi jäävät."
-          ]
+          ],
+          "id": "section-6"
         },
         {
           "heading": "Tarkista saatavilla oleva tarkastusnäyttö ripeästi",
           "paragraphs": [
             "Vertaa tilausta varaston kuviin ja tietoihin. Tarkista näkyvä väri, määrä, kokolaput, kunto ja päätökselle olennaiset mitat. Vanhat viitekuvat voivat näyttää toisen ostoksen, mutta eivät korvaa oman tilauksen tarkistusta. Kuva ei myöskään todista kaikkia piilossa olevia materiaali- tai toimintaominaisuuksia.",
             "Jos jokin vaatii selvennystä, pyydä tietty näkymä tai mitta ja selitä sen merkitys. Lue palautus- tai vaihtoehdot nopeasti olettamatta säilytysajan ja palautusajan olevan samat. Pidä kiistanalainen tuote valmiin ryhmän ulkopuolella ratkaisuvaihtoehtojen selviämiseen asti. Selkeä varhainen tarkistus on yksi hyödyllisimmistä ensimmäisen ostoserän tavoista."
-          ]
+          ],
+          "id": "section-7"
         },
         {
           "heading": "Vertaa pakettivaihtoehtoja ennen sitoutumista",
           "paragraphs": [
             "Valitse yhdessä kulkevat valmiit tuotteet ja tarkista ryhmän todelliset reittivaihtoehdot. Vertaa kokonaismaksuja, koko- ja painosääntöjä, käsittelytarpeita ja toimitustietoja. Suurempi yhdistetty paketti ei automaattisesti ole paras. Huomioi hauras tai rajoitettu sisältö ja vertaa muita ryhmittelyjä samalla määränpäällä ja tietotasolla.",
             "Päätä säilytettävä ja poistettava pakkaus. Anna täsmälliset ohjeet tärkeistä valinnoista. Tarkista vastaanottajan nimi, osoite, postinumero ja yhteystiedot huolellisesti. Ilmoitusten tulee kuvata tavarat oikein ja käyttää lähetyksessä vaadittuja tietoja. Tarkista valitut tuotteet vielä ennen maksua, jotta myöhäinen, kaksinkertainen tai kiistanalainen tuote ei tule vahingossa mukaan."
-          ]
+          ],
+          "id": "section-8"
         },
         {
           "heading": "Viimeistele toimitus- ja kustannustiedoilla",
           "paragraphs": [
             "Seuraa paketin vahvistuksen jälkeen vastausta vaativia viestejä ja säilytä pakettiviite tuotelistan kanssa. Vertaa saapuneen lähetyksen sisältöä listaan ennen pakkauksen hävittämistä. Jos löydät poikkeaman tai näkyvän vaurion, säilytä hyödyllinen näyttö ja ota nopeasti yhteys oikeaan viralliseen kanavaan lähetyksen ehtojen mukaisesti.",
             "Kirjaa lopuksi ostoserän todellinen hinta ja toimineet päätökset. Vertaa toimitettua tulosta alkuperäiseen listaan: istuvuus, hyödyllisyys, kokonaiskulutus ja vaiva. Se antaa seuraavalle tilaukselle parempaa tietoa kuin vahvistamattomat löytöväitteet. Onnistunut ensimmäinen prosessi on toistettavissa selkeillä tiedoilla ja harkituilla valinnoilla, vaikka se tarkoittaisi aiottua pienempää tuotemäärää."
-          ]
+          ],
+          "id": "section-9"
         }
       ],
       "sources": [
@@ -1042,7 +1319,294 @@
         "https://www.kakobuy.com/service/help/question?id=37",
         "https://www.kakobuy.com/tools/estimate"
       ],
-      "wordCount": 1418
+      "wordCount": 929,
+      "datePublished": "2026-10-24",
+      "dateModified": "2026-10-24"
+    },
+    {
+      "slug": "kakobuy-shipping-calculator",
+      "title": "Kakobuyn toimituslaskuri: todellinen paino vai tilavuuspaino",
+      "description": "Arvioi paketin laskutuspaino laskurillamme. Vertaa todellista painoa, tilavuuspainoa, laskutusportaita ja pakkausesimerkkejä ennen tarjousta.",
+      "category": "Toimituslaskuri",
+      "readMinutes": 3,
+      "intro": "Toimituslaskurista on hyötyä, kun sen lähtötiedot kuvaavat todella lähettämääsi pakettia. Pelkkä vaatteiden painoarvio jättää laatikon, suojapakkauksen ja tyhjän tilan huomiotta. Tämä opas auttaa laskemaan laskutuspainon, ymmärtämään luvun merkityksen ja siirtämään oikeat mitat Kakobuyn nykyiseen reittitarjoukseen. Alla oleva laskuri toimii paikallisesti selaimessasi eikä hae ajantasaisia hintoja tai lähetä pakettitilausta.",
+      "answer": "Jos reitti käyttää tilavuuspainoon perustuvaa laskutusta, laske pituus × leveys × korkeus senttimetreinä, jaa tulos reitin jakajalla ja vertaa sitä todelliseen pakattuun painoon kilogrammoina. Reitti saattaa laskuttaa suuremman arvon ja pyöristää sen ylöspäin. Tarkista säännöt ennen tuloksen käyttöä.",
+      "calculator": true,
+      "sections": [
+        {
+          "heading": "Kerää yhden pakatun lähetyksen mitat",
+          "paragraphs": [
+            "Anna lopullisen pakkauksen ulkopituus, leveys ja korkeus sekä sen todellinen paino laatikko ja suojamateriaalit mukaan lukien. Älä käytä myyjän vaatteen mittoja paketin mittoina. Jos varasto ei ole vielä pakannut tavaroita, merkitse luvut arvioiksi ja toista laskenta, kun lopulliset mitat ovat saatavilla.",
+            "Käytä juuri harkitsemasi toimitusreitin ilmoittamaa jakajaa ja laskutusporrasta. Työkalun lähtöluvut ovat havainnollistus, eivät suositus tai Kakobuyn yleiset säännöt. Jos reitti laskuttaa vain todellisen painon mukaan, valitse kyseinen vaihtoehto. Jos sen sääntöjä ei voi kuvata tässä, käytä virallista tarjousta sen sijaan, että pakottaisit luvut sopimaan."
+          ]
+        },
+        {
+          "heading": "Todellinen paino ja tilavuuspaino vastaavat eri kysymyksiin",
+          "paragraphs": [
+            "Todellinen paino mittaa massaa vaa'alla. Tilavuuspaino kuvaa paketin viemää tilaa kuljetusyhtiön kaavan mukaan. Kevyen mutta suuren laatikon laskutuspaino voi siksi ylittää pienemmän ja painavamman laatikon painon. Tästä syystä kahden toimitusarvion vertailu vaatii sekä mitat että vaakapainon.",
+            "Tässä käytetty yleinen kaava jakaa tilavuuden kuutiosenttimetreinä valitulla jakajalla. Kun reitti laskuttaa suuremman mitan mukaan, laskutuspaino ennen pyöristystä on todellisen painon ja tilavuuspainon enimmäisarvo. Vähimmäismaksut, ylikokorajat, erityistuotteiden rajoitukset ja hintaportaat on tarkistettava erikseen; laskenta ei ratkaise reitin soveltuvuutta."
+          ]
+        },
+        {
+          "heading": "Laskuesimerkki: 3 kg:n paketista voidaan laskuttaa 5 kg",
+          "paragraphs": [
+            "Ajatellaan havainnollistavaa laatikkoa, jonka mitat ovat 40 × 30 × 20 cm ja paino 3 kg. Kuvitteellisella jakajalla 5000 tilavuuspaino on 4,8 kg. Jos esimerkkireitti laskuttaa suuremman painon 0,5 kg:n portaissa, pyöristetty tulos on 5 kg. Nämä ovat opetusesimerkin lähtötietoja, eivät Kakobuyn nykyinen hinta tai kaikkia kuljetuslinjoja koskeva väite."
+          ],
+          "table": {
+            "headers": [
+              "Esimerkin lähtötieto tai vaihe",
+              "Tulos"
+            ],
+            "rows": [
+              [
+                "Ulkomitat",
+                "40 × 30 × 20 cm"
+              ],
+              [
+                "Todellinen pakattu paino",
+                "3 kg"
+              ],
+              [
+                "Tilavuuspaino: 24000 ÷ 5000",
+                "4,8 kg"
+              ],
+              [
+                "Suurempi paino, pyöristetty ylöspäin 0,5 kg:n portaissa",
+                "5 kg"
+              ]
+            ]
+          }
+        },
+        {
+          "heading": "Vertaa pakkauksia unohtamatta suojausta",
+          "paragraphs": [
+            "Samassa kuvitteellisessa esimerkissä korkeuden pienentäminen 20:stä 15 cm:iin muuttaa tilavuuspainon 3,6 kg:aan. Kun todellinen paino ja laskutusporras pysyvät samoina, laskutuspainoksi tulee 4 kg. Vertailu näyttää, miksi tarpeettoman tyhjän tilan poistaminen voi vaikuttaa enemmän kuin pieni muutos vaa'alla.",
+            "Älä poista pakkausta automaattisesti. Särkyvä tuote voi tarvita suojaa, ja pakkauksella voi olla merkitystä myyjäpalautuksessa. Kysy, mitä muutoksia varasto voi tehdä, veloitetaanko uudelleenpakkaamisesta ja mitataanko lopulliset mitat uudelleen. Laske uudestaan vasta näiden oletusten selvittyä; pienempi esimerkkipakkaus ei takaa säästöä."
+          ]
+        },
+        {
+          "heading": "Muuta paino täydelliseksi tarjoukseksi",
+          "paragraphs": [
+            "Syötä saatu paino, mitat, kohde ja täsmällinen sisältö viralliseen toimitusarvioon tai pakettitarjoukseen. Tarkista ensimmäisen painoportaan hinta, lisäportaat, vähimmäismaksut ja palvelukulut. Toiselta ostajalta kopioitu yksittäinen kilohinta voi jättää ehdot pois eikä siksi hinnoittele pakettiasi luotettavasti.",
+            "Pidä kaikki summat yhdessä valuutassa reittejä vertaillessasi. Lisää kansainväliseen rahtiin tuotteen hinta, Kiinan sisäinen toimitus, valittu pakkaus ja maksukulut. Tarkista, miten tarjous käsittelee vakuutusta ja sovellettavia tuontikuluja. Tämä sivu ei laske veroja tai suosittele ilmoitusarvoa; käytä oikeita tuotetietoja ja kohteen nykyisiä vaatimuksia."
+          ]
+        },
+        {
+          "heading": "Miksi lopullinen tarjous voi poiketa arviosta?",
+          "paragraphs": [
+            "Lopullisen laatikon mitat voivat muuttua, varasto voi punnita tarkemmin tai sopiva reitti voi käyttää laskutusporrasta, jonka arviosi unohti. Myös muuttunut hinta tai lisäpalvelu voi vaikuttaa summaan. Vertaa lopullista tarjousta rivi riviltä äläkä oleta, että jokainen ero johtuu painokaavasta.",
+            "Tallenna ennen maksamista reitin nimi, pakatut mitat, tarjousvaluutta, sisältyvät palvelut ja tarjouspäivä. Jos luku on epäselvä, kysy, millä painolla ja hinnoittelusäännöllä se saatiin. Käytä toimituskuluopasta kokonaisbudjettiin ja seurantaopasta lähettämisen jälkeen. Palaa laskuriin paketin muuttuessa, älä korvaa sillä maksettavaa tarjousta."
+          ]
+        }
+      ],
+      "sources": [
+        "https://www.kakobuy.com/tools/estimate",
+        "https://item2.kakobuy.com/index/information?information_id=3"
+      ],
+      "related": [
+        "kakobuy-shipping-costs",
+        "kakobuy-warehouse-consolidation",
+        "kakobuy-shipping-time-tracking"
+      ],
+      "datePublished": "2026-10-30",
+      "dateModified": "2026-10-30",
+      "wordCount": 584
+    },
+    {
+      "slug": "is-kakobuy-legit",
+      "title": "Onko Kakobuy luotettava? Tarkistukset ennen ostoa ja lähetystä",
+      "description": "Arvioi Kakobuyta virallisten tilausvaiheiden, maksutietojen, QC-kuvien ja hyvitysehtojen avulla. Erota alustaa koskeva näyttö myyjän laadusta ja kumppaniväitteistä.",
+      "category": "Ennen ostamista",
+      "readMinutes": 4,
+      "intro": "Haku ”onko Kakobuy luotettava” yhdistää yleensä useita kysymyksiä: onko tämä oikea sivusto, toimittaako valittu myyjä tuotteen, mitä QC voi osoittaa ja mitä tapahtuu, jos jokin menee pieleen? Niihin tarvitaan erilaista näyttöä. Tämä riippumaton tarkistuslista perustuu julkaistuun ostoprosessiin ja oman tilauksesi tarkastettaviin tietoihin. Se ei ole henkilökohtainen ostokokemus, yrityksen tarkastus tai toimitustakuu.",
+      "answer": "Kakobuy julkaisee ostoagentin työnkulun, joka kattaa ostamisen, varastotarkastuksen ja kansainvälisen paketin jättämisen lähetettäväksi. Se selittää tarkoitetun palvelun mutta ei takaa myyjän laatua, tuotteen aitoutta tai hyvityksen lopputulosta. Tarkista verkkotunnus, kokonaiskulut, tarkka listaus ja nykyiset tilausehdot ennen riskin hyväksymistä.",
+      "sections": [
+        {
+          "heading": "Erota alusta, myyjä ja tämä sivusto",
+          "paragraphs": [
+            "Ostoagentilla ja markkinapaikan myyjällä on eri roolit. Myyjä toimittaa valitut tavarat; agentti suorittaa sopimasi palvelut, kuten ostamisen ja edelleenlähetyksen. Tuotteen saatavuutta, mitoitusta tai kuntoa ei voi päätellä pelkästä agentin nimen tunnistamisesta. Tarkista alkuperäinen listaus ja täsmälleen se vaihtoehto, jonka aiot ostaa.",
+            "Kakobuy Buys on riippumaton hakemisto ja opas. Emme hallinnoi Kakobuy-tiliäsi, vastaanota tilausmaksuja tai päätä hyvityksistä. Osa ulospäin johtavista ostolinkeistä sisältää kumppanikoodin, josta saatamme saada palkkion. Suhde ei tee listauksesta testattua suositusta. Käytä todellisen tilausriidan selvittämiseen virallista tilitukea."
+          ]
+        },
+        {
+          "heading": "Tarkista kohde ennen maksutietojen antamista",
+          "paragraphs": [
+            "Aloita varmennetusta virallisesta osoitteesta ja tarkista linkin avaamisen jälkeen koko verkkotunnus. Tuttu logo, hakumainos tai kopioitu ohje ei riitä todistamaan, että sivu kuuluu tarkoitetulle palvelulle. Ole varovainen, jos viesti muuttaa maksun kohteen tai pyytää lähettämään tilitunnukset asiaan liittymättömässä chatissa.",
+            "Tämän sivuston rekisteröintipainike avaa osoitteen item2.kakobuy.com/register, ja ostopainikkeet avaavat tuotesivun verkkotunnuksessa item2.kakobuy.com. Tarkista selaimen todellinen osoite ennen kirjautumista. Emme tarvitse salasanaasi, kertakäyttökoodiasi tai kortin turvakoodia tuoteluettelon näyttämiseen. HTTPS suojaa yhteyttä, mutta ei yksin todista kauppiaan luotettavuutta."
+          ]
+        },
+        {
+          "heading": "Käytä oikeaan kysymykseen vastaavaa näyttöä",
+          "paragraphs": [
+            "Virallinen opas kuvaa ostamisen ja kansainvälisen toimituksen erillisiksi vaiheiksi. Käytä järjestystä tunnistaaksesi, mitä näyttöä tässä vaiheessa pitäisi olla. Tilausvahvistus ei ole toimitusvahvistus, eivätkä myyjän kuvat dokumentoi oman tilauksesi saapunutta tuotetta."
+          ],
+          "table": {
+            "headers": [
+              "Näyttö",
+              "Mihin se auttaa",
+              "Mitä se ei osoita"
+            ],
+            "rows": [
+              [
+                "Alkuperäinen myyjän listaus",
+                "Malli, vaihtoehto ja ilmoitetut mitat",
+                "Vastaanotetun tuotteen kunto"
+              ],
+              [
+                "Omat tilaus- ja maksutietosi",
+                "Mitä pyydettiin ja veloitettiin",
+                "Onnistunut toimitus"
+              ],
+              [
+                "Oman tilauksesi varaston QC-kuvat",
+                "Vastaanotetun tuotteen näkyvät yksityiskohdat",
+                "Aitous tai näkymätön suorituskyky"
+              ],
+              [
+                "Paketin kuljetusyhtiön skannaukset",
+                "Kirjatut kuljetustapahtumat",
+                "Taattu saapumispäivä"
+              ],
+              [
+                "Nykyiset hyvitysehdot ja tuen vastaus",
+                "Sovellettava prosessi ja ehdot",
+                "Ehdoton hyvitys"
+              ]
+            ]
+          }
+        },
+        {
+          "heading": "Lue arvosteluja tekemättä kokemuksista takuita",
+          "paragraphs": [
+            "Hyödyllinen arvostelu kertoo päivämäärän, reitin, kohteen, tilausvaiheen ja selkeästi sen, mitä havaittiin. Toiseen maahan onnistunut toimitus ei välttämättä ennusta oman kuljetuslinjasi toimintaa, ja ratkaisematon valitus voi koskea tiettyä myyjää tai tuotetta. Etsi kokemuksesta osa, joka vastaa tekemääsi päätöstä.",
+            "Suhtaudu varovaisesti sijoituksiin, jotka perustuvat pääasiassa kuponkeihin tai suosittelulinkkeihin. Selvitä, erottaako kirjoittaja myyjän kuvat omasta QC-aineistostaan ja kuvataanko kielteinen tulos riittävässä asiayhteydessä arviointia varten. Emme ole laskeneet varmennettua onnistumisastetta tai todentaneet asiakasarvosteluja riippumattomasti, joten opas ei anna numeerista luottamuspistettä."
+          ]
+        },
+        {
+          "heading": "Aseta kulutusraja ennen ensimmäistä maksua",
+          "paragraphs": [
+            "Arvioi kokonaiskulut sen sijaan, että päättäisit tuotekortin perusteella. Varaudu Kiinan sisäiseen toimitukseen, kansainväliseen rahtiin, valittuihin palveluihin ja sovellettaviin maksu- tai tuontikuluihin. Vahvista valuutta ja ajantasainen maksettava summa. Jos budjettisi kattaa vain tuotteen, sen saapuminen varastoon ei ratkaise jäljellä olevaa toimituskulua.",
+            "Tarkista ennen ostoa myyjän palautusehdot ja kysy, mitkä maksut jäisivät maksettaviksi, jos tilaus ei etenisi odotetusti. Pieni aloitustilaus voi vähentää vaarannettua rahamäärää, mutta se ei poista toimitus- tai hyvitysepävarmuutta. Älä lisää tuotteita vain kuponkirajan saavuttamiseksi, jos lisäkulu ei ole perusteltu."
+          ]
+        },
+        {
+          "heading": "Pysähdy varastovaiheessa, jos jokin on ratkaisematta",
+          "paragraphs": [
+            "Vertaa tilauksesi kuvia valittuun vaihtoehtoon ja pyydä juuri se mittaus tai kuvakulma, joka selvittäisi huolen. Valokuva voi paljastaa väärän värin, näkyvän vaurion tai poikkeavan etiketin; se ei takaa aitoutta, sisäisiä materiaaleja tai pitkäaikaista kestävyyttä. Jätä epäselvät tuotteet pois paketista, kunnes ymmärrät mahdollisen ratkaisun.",
+            "Säilytä perumista tai palautusta varten tilausnumero, listaus, maksutiedot, asiaankuuluvat kuvat ja tuen vastaukset. Kysy kelpoisuudesta, määräajoista, palautuspostituksesta ja hyvityksen kohteesta. Jos vastaukset jäävät epäselviksi, keskeytä seuraava maksu tai lähetys. Käytännön päätös on, riittävätkö näyttö ja ehdot tähän tilaukseen, ei se, kuvaako yksi luokitus kaikkia mahdollisia lopputuloksia."
+          ]
+        }
+      ],
+      "sources": [
+        "https://item2.kakobuy.com/index/information?information_id=3",
+        "https://www.kakobuy.com/service/help/question?id=51",
+        "https://www.kakobuy.com/index/information?information_id=12"
+      ],
+      "related": [
+        "how-to-buy-on-kakobuy",
+        "kakobuy-qc-photos-guide",
+        "kakobuy-returns-refunds"
+      ],
+      "datePublished": "2026-10-30",
+      "dateModified": "2026-10-30",
+      "wordCount": 601
+    },
+    {
+      "slug": "kakobuy-shipping-time-tracking",
+      "title": "Kakobuyn toimitusaika ja seuranta: vaiheet selitettynä",
+      "description": "Seuraa Kakobuy-tilausta myyjän lähetyksestä varastoon ja kansainväliseen toimitukseen. Selvitä oikea seurantatunnus ja tarkistukset, kun skannaukset loppuvat.",
+      "category": "Toimitus ja seuranta",
+      "readMinutes": 3,
+      "intro": "Kakobuy-tilauksella on useampi kuin yksi matka. Ensin myyjä lähettää tuotteen varastoon; myöhemmin lähettämäsi paketti kulkee kohteeseesi. Näiden matkojen välissä ovat tarkastus, pakkaus ja omat lähetyspäätöksesi. Nykyisen vaiheen ymmärtäminen on hyödyllisempää kuin selittämättömien ”toimituspäivien” vertailu jonkun toisen tilaukseen. Opas kertoo tarkistettavan näytön lupaamatta kiinteää saapumisaikaa.",
+      "answer": "Käytä myyjän Kiinan sisäistä seurantaa varastotoimitukseen ja kansainvälisen paketin tietuetta lähetyspyynnön jälkeen. Ostotilausnumero ei välttämättä ole kuljetusyhtiön seurantatunnus. Luotu osoitetarra ei todista kuljetusyhtiön noutoa; etsi viimeisin fyysinen skannaus ja reitin ajantasainen palveluohje.",
+      "sections": [
+        {
+          "heading": "Laske koko prosessi, älä vain kansainvälistä kuljetusta",
+          "paragraphs": [
+            "Kokonaisaikaan voivat sisältyä oston käsittely, myyjän lähetyksen odotus, Kiinan sisäinen kuljetus, varaston kirjaus ja QC, oma tarkistusaikasi, pakkaus, kansainvälinen kuljetus ja toimitus kohdemaassa. Jos odotat toista tuotetta ennen yhdistämistä, viive kuuluu pakettisuunnitelmaasi eikä kuljetusyhtiön kuljetusaikaan.",
+            "Kakobuyn julkaistu osto-opas kuvaa vaiheet, mutta ohjeellinen käsittelyaika ei ole lupaus jokaiselle myyjälle tai kuljetuslinjalle. Varastotilanne, viikonloput, reittien saatavuus ja paketin sisältö voivat muuttaa etenemistä. Jos tilaus tarvitaan tiettyyn päivään mennessä, vertaa nykyisiä reittiohjeita ja varaa aikaa vaiheille, joita rahtiarvio ei ehkä sisällä."
+          ]
+        },
+        {
+          "heading": "Yhdistä tunnus oikeaan matkaan",
+          "paragraphs": [
+            "Pidä myyjän tilausviite, Kiinan sisäisen kuljetusyhtiön tunnus, Kakobuy-pakettinumero ja kansainvälinen seurantatunnus erillisinä kenttinä. Ne voivat liittyä toisiinsa olematta keskenään vaihdettavia. Virallinen alkuperäisen tilauksen seurantailmoitus kuvaa pääsyn myyjän tilaustietoihin; osto-opas ohjaa kansainvälisen seurannan tilin pakettiosioon.",
+            "Avaa nykyinen tilaus- tai pakettitietue ja seuraa siihen liitettyjä seurantatietoja. Jos tunnusta ei tunnisteta, tarkista kuljetusyhtiö, vaihe ja se, luotiinko osoitetarra vasta äskettäin. Älä oleta, että ostoviitteen kopioiminen kuljetusyhtiön sivulle näyttää lähetyksen. Älä koskaan julkaise koko osoitteesi tai puhelinnumerosi sisältäviä kuvakaappauksia pyytäessäsi julkista apua."
+          ]
+        },
+        {
+          "heading": "Tulkitse yleisiä vaiheita niiden näytön perusteella",
+          "paragraphs": [
+            "Alla olevat kuvaukset ovat yleisiä toimitusvaiheita, eivät tarkka luettelo Kakobuyn käyttöliittymän nimikkeistä. Sanamuodot voivat vaihdella kielen ja kuljetusyhtiön mukaan. Lue tapahtuma, sijainti ja aikaleima yksityiskohtaisesti äläkä luota pelkkään lyhyeen käännettyyn tilaan."
+          ],
+          "table": {
+            "headers": [
+              "Vaihe",
+              "Mitä tarkistaa seuraavaksi"
+            ],
+            "rows": [
+              [
+                "Myyjä lähetti",
+                "Kiinan sisäinen kuljetusyhtiö ja toimituskohde: varasto."
+              ],
+              [
+                "Toimitettu varastoon",
+                "Tilille kirjaus ja QC-tietue; toimitusskannaus voi edeltää käsittelyä."
+              ],
+              [
+                "Valmis varastossa",
+                "Oma QC-päätöksesi, pakkausvalinnat ja paketin lähetyspyyntö."
+              ],
+              [
+                "Osoitetarra tai lähetystiedot luotu",
+                "Nouto- tai vastaanottoskannaus, joka vahvistaa fyysisen luovutuksen."
+              ],
+              [
+                "Kansainvälisessä kuljetuksessa",
+                "Viimeisin skannaus, reittiohjeet ja dokumentoidut luovutukset."
+              ],
+              [
+                "Kohdemaan käsittely tai toimitus",
+                "Paikallisen kuljetusyhtiön päivitykset ja pyydetyt viralliset toimet."
+              ]
+            ]
+          }
+        },
+        {
+          "heading": "Mitä tehdä, kun seuranta ei päivity?",
+          "paragraphs": [
+            "Kirjaa ensin viimeisin skannaus, sen päivä, sijainti ja tarkka sanamuoto. Tarkista, odottaako paketti myyjän lähetystä, varastokäsittelyä, kuljetusyhtiön noutoa vai myöhempää kuljetustapahtumaa. Tilanteet edellyttävät eri yhteyshenkilöitä. Päivittymätön seurantasivu ei yksin osoita paketin kadonneen tai jääneen tulliin.",
+            "Vertaa taukoa reitin nykyisiin palveluohjeisiin ja mahdollisiin häiriötiedotteisiin. Jos se ylittää ilmoitetun ajan, ota yhteyttä tilin pakettitukeen ja anna pakettinumero, kuljetusyhtiön tunnus ja viimeisin skannaus. Kysy, kenen hallussa paketti on ja mikä on seuraava eskalointivaihe. Vältä toistuvia tukipyyntöjä, jotka hajottavat saman aineiston eri keskusteluihin."
+          ]
+        },
+        {
+          "heading": "Tarkista kohdemaan viestit ennen toimimista",
+          "paragraphs": [
+            "Kuljetusyhtiö voi pyytää toimitusohjeita tai asiakirjoja kohdemaan vaiheessa. Varmenna pyyntö yhtiön viralliselta seurantasivulta tai aiemman tilisi kautta ennen odottamattoman maksun maksamista tai henkilötietojen lähettämistä. Paketin mainitseva tekstiviesti ei yksin todista, että se koskee omaasi.",
+            "Jos seuranta sanoo toimitetuksi mutta et löydä pakettia, tarkista toimitustiedot, hyväksytty noutopaikka ja mahdollinen toimitustodiste. Ota yhteyttä kuljetusyhtiöön ja Kakobuy-tukeen samalla tiiviillä tietueella. Säilytä pakkaus ja valokuvat, jos tuotteessa on vaurioita. Noudata sovellettavaa reklamaatioaikaa äläkä oleta yleisen varastopalautuksen kattavan kansainvälisiä toimitusongelmia."
+          ]
+        },
+        {
+          "heading": "Pidä asia selkeänä pienellä seurantamuistiolla",
+          "paragraphs": [
+            "Tallenna tilausviite, pakettiviite, kuljetusyhtiö, seurantatunnus, viimeisin skannaus, reittiohjeet ja tuen viimeisimmän vastauksen päivä. Lisää seuraava toimi ja sen tekijä. Tietue tekee jatkokysymyksestä täsmällisen: voit kysyä puuttuvasta luovutuksesta tai toimituspoikkeamasta sen sijaan, että toistaisit toimituksen olevan hidas.",
+            "Vertaa tulevia tilauksia varten reittejä samalla kohteella ja samoilla pakettioletuksilla ja kirjaa todelliset virstanpylväät toimituksen jälkeen. Yksi onnistunut lähetys on silti vain yksi havainto. Käytä painolaskuria ennen tarjousta, varasto-opasta ennen yhdistämistä ja hyvitysopasta tuotteen tai maksun ongelmiin. Jokainen sivu käsittelee saman oston eri vaihetta."
+          ]
+        }
+      ],
+      "sources": [
+        "https://item2.kakobuy.com/index/information?information_id=3",
+        "https://www.kakobuy.com/tipdetail?id=37",
+        "https://www.kakobuy.com/index/information?information_id=12"
+      ],
+      "related": [
+        "kakobuy-warehouse-consolidation",
+        "kakobuy-shipping-costs",
+        "kakobuy-returns-refunds"
+      ],
+      "datePublished": "2026-10-30",
+      "dateModified": "2026-10-30",
+      "wordCount": 586
     }
   ],
   "faqs": [

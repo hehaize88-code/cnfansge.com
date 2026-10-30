@@ -1,4 +1,5 @@
 import {catalogMarkup,productMarkup,errorMarkup} from './render.mjs';
+import {calculateWeight} from './shipping.mjs';
 const t=JSON.parse(document.querySelector('#ui-data').textContent),body=document.body,p=body.dataset.prefix,lang=body.dataset.lang;const url=new URL(location.href);
 document.querySelectorAll('[data-locale]').forEach(a=>{const u=new URL(a.href);u.search=location.search;u.hash=location.hash;a.href=u.pathname+u.search+u.hash;a.addEventListener('click',()=>{try{localStorage.setItem('kakobuybuys-language',a.dataset.locale)}catch{}})});
 document.querySelectorAll('[data-query]').forEach(el=>{const value=url.searchParams.get(el.dataset.query);if(value!==null)el.value=value});
@@ -10,3 +11,37 @@ if(body.dataset.sourceRendered!=='true')load();
 
 const queryInput=document.querySelector('.catalog-controls [name=q]'),categoryInput=document.querySelector('.catalog-controls [name=category]');
 if(queryInput&&categoryInput){const update=()=>{categoryInput.disabled=!!queryInput.value.trim();if(categoryInput.disabled)categoryInput.value='all'};queryInput.addEventListener('input',update);update();}
+
+// Intent events are not purchases. Never attach free-text searches, account data or full URLs.
+const track=(event,params={})=>{
+  if(location.hostname==='kakobuybuys.com'&&typeof window.gtag==='function')window.gtag('event',event,{page_language:lang,content_route:body.dataset.route||'home',...params});
+};
+document.addEventListener('click',event=>{
+  const anchor=event.target.closest('a[href]');if(!anchor)return;
+  const destination=new URL(anchor.href,location.origin);
+  if(destination.hostname==='item2.kakobuy.com'&&['/register','/item/details'].includes(destination.pathname))track('affiliate_click',{link_type:destination.pathname==='/register'?'register':'product'});
+  if(destination.origin===location.origin&&destination.pathname.includes('/articles/'))track('guide_navigation',{guide_slug:destination.pathname.split('/').filter(Boolean).at(-1)});
+});
+document.querySelectorAll('form').forEach(form=>{
+  if(form.querySelector('[name="q"]'))form.addEventListener('submit',()=>{
+    track('catalog_search',{has_search_term:!!form.querySelector('[name="q"]').value.trim(),category:form.querySelector('[name="category"]')?.value||'all'});
+  });
+});
+const calculator=document.querySelector('[data-shipping-calculator]');
+if(calculator){
+  const results=calculator.querySelector('.calculator-results'),error=calculator.querySelector('[data-calculator-error]');
+  calculator.addEventListener('input',()=>{results.hidden=true;error.hidden=true});
+  calculator.addEventListener('change',()=>{results.hidden=true;error.hidden=true});
+  calculator.addEventListener('submit',event=>{
+    event.preventDefault();
+    try{
+      const fields=new FormData(calculator),values=Object.fromEntries(['weight','length','width','height','divisor','increment'].map(key=>[key,Number(fields.get(key))]));
+      const {volumetric,billable}=calculateWeight({...values,rule:fields.get('rule')});
+      const format=new Intl.NumberFormat(lang,{style:'unit',unit:'kilogram',maximumFractionDigits:3});
+      calculator.querySelector('[data-volume]').textContent=format.format(volumetric);
+      calculator.querySelector('[data-billable]').textContent=format.format(billable);
+      error.hidden=true;results.hidden=false;
+      track('shipping_calculation',{billing_rule:fields.get('rule')});
+    }catch{results.hidden=true;error.hidden=false;}
+  });
+}

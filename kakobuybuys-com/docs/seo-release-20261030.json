@@ -1,0 +1,91 @@
+{
+  "date": "2026-10-30",
+  "site": "https://kakobuybuys.com",
+  "status": "validated locally; production deployment pending",
+  "research": {
+    "firstParty": [
+      "Google Search Console query/page/country/device reports",
+      "Bing Webmaster keyword research and indexing inspection",
+      "Google Analytics 4 acquisition and engagement reports"
+    ],
+    "privacy": "Raw account reports and user identifiers are not published in this repository.",
+    "publicCompetitorIntentSources": [
+      "https://kakofind.net/",
+      "https://rep.tools/tools",
+      "https://spreadsheet-kakobuy.com/kakobuy-spreadsheet-template"
+    ],
+    "volumeCaveat": "Bing keyword-research impressions are not Google monthly search volume. No volume or ranking guarantee is used in page copy."
+  },
+  "newArticleIntentMap": [
+    {
+      "slug": "kakobuy-shipping-calculator",
+      "keywords": [
+        "kakobuy shipping calculator",
+        "kakobuy volumetric weight",
+        "kakobuy shipping estimate"
+      ],
+      "intent": "Calculate chargeable weight with explicit route assumptions"
+    },
+    {
+      "slug": "is-kakobuy-legit",
+      "keywords": [
+        "is kakobuy legit",
+        "kakobuy review",
+        "is kakobuy safe"
+      ],
+      "intent": "Assess evidence and terms before ordering; no fabricated first-hand review"
+    },
+    {
+      "slug": "kakobuy-shipping-time-tracking",
+      "keywords": [
+        "kakobuy shipping time",
+        "kakobuy tracking",
+        "kakobuy tracking not updating"
+      ],
+      "intent": "Identify the current shipping stage and appropriate next action"
+    }
+  ],
+  "existingPriorityGuides": [
+    "kakobuy-returns-refunds",
+    "kakobuy-payment-fees",
+    "kakobuy-shipping-costs",
+    "kakobuy-warehouse-consolidation",
+    "how-to-use-kakobuy-spreadsheet"
+  ],
+  "locales": 24,
+  "articlesPerLocale": 13,
+  "newArticleLanguageVersions": 72,
+  "expectedStaticPages": 576,
+  "expectedSitemapUrls": 528,
+  "tracking": {
+    "measurementId": "G-WEF871FSL0",
+    "events": [
+      "affiliate_click",
+      "guide_navigation",
+      "catalog_search",
+      "shipping_calculation"
+    ],
+    "keyEventsChanged": false
+  },
+  "limitations": [
+    "No live shipping tariff integration",
+    "No verified warehouse QC photo feed or image-upload search interface",
+    "Search rankings and clicks require subsequent observation"
+  ],
+  "validation": {
+    "build": "passed",
+    "locales": 24,
+    "articleVersions": 312,
+    "faqVersions": 672,
+    "staticPages": 576,
+    "uiKeys": 159,
+    "sitemaps": 24,
+    "indexableUrls": 528,
+    "productionPolicyChecks": 16,
+    "calculator": "arithmetic, rounding, actual-only and invalid input checks passed",
+    "originalBodyPreservation": "all 240 original article versions retained",
+    "responsivePreview": "English and German calculator at 390px; long rule labels changed to wrapping radio options",
+    "workerBytes": 7625181,
+    "workerSha256": "9e81ef64bdc6259b1d4e949ec41cd2aa8eb8aa9f0b2a5eb7fbfe70a5724769a7"
+  }
+}

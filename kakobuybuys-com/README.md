@@ -34,10 +34,18 @@ Purchase buttons preserve the original marketplace URL and use `https://item2.ka
 
 ## Content and languages
 
-English uses `/`;23 other locales use language prefixes. JSON content lives in `src/data/content/`. Each published locale must contain 10 complete articles,28 FAQs and the same UI keys. Language switching retains route, query parameters and section anchors. Product names/brands remain source data; translation never invents attributes.
+English uses `/`;23 other locales use language prefixes. JSON content lives in `src/data/content/`. Each published locale must contain 13 complete articles,28 FAQs and the same UI keys. Language switching retains route, query parameters and section anchors. Product names/brands remain source data; translation never invents attributes.
 
 Official help research, competitor keyword observations and current integration evidence are in `docs/`. The durable project decisions and continuation checklist are in `PROJECT_MEMORY.md`. Official brand assets are recorded in `docs/brand-assets.json`.
 
-Production content pages are indexable. `/sitemap.xml` lists 24 language sitemaps containing 456 canonical content URLs and reciprocal hreflang alternatives. Product parameter pages, search filters, pagination and the visual-search tool use `noindex,follow` and are excluded from sitemaps. The www host and HTTP redirect to `https://kakobuybuys.com`, preserving path and query. Preview hosts remain `noindex,nofollow`, disallow crawling and do not serve sitemaps. Run `npm run check` after building: it includes production/preview policy, redirect and sitemap validation. Domain binding and latest live verification are recorded in `PROJECT_MEMORY.md`.
+Production content pages are indexable. `/sitemap.xml` lists 24 language sitemaps containing 528 canonical content URLs and reciprocal hreflang alternatives. Product parameter pages, search filters, pagination and the visual-search tool use `noindex,follow` and are excluded from sitemaps. The www host and HTTP redirect to `https://kakobuybuys.com`, preserving path and query. Preview hosts remain `noindex,nofollow`, disallow crawling and do not serve sitemaps. Run `npm run check` after building: it includes production/preview policy, redirect and sitemap validation. Domain binding and latest live verification are recorded in `PROJECT_MEMORY.md`.
 
 Run `node scripts/check-source.mjs` only when changing the source adapter or investigating a live-feed issue; it performs real public-source reads. The default check is local and deterministic.
+
+## SEO content release (2026-10-30)
+
+All 24 languages include three additional guides: chargeable-weight calculation, a pre-order credibility checklist and shipping stages/tracking. Five existing guides receive concise search-intent answers and metadata improvements; refunds, payments and shipping costs also gain practical comparison tables. Existing article paths and original section anchors are preserved.
+
+The weight calculator is a browser-only tool using user-entered dimensions, mass, divisor and billing increment. Its sample inputs are hypothetical, not official rates. It neither returns live prices nor submits parcels. `npm run check` validates its arithmetic, 312 article versions, 576 pages and 528 sitemap URLs.
+
+GA4 retains the existing production-only measurement ID. Additional intent events are `affiliate_click` (register/product), `guide_navigation`, `catalog_search` and `shipping_calculation`. They do not represent purchases, carry free-text searches or contain order/account data. GA4 key-event configuration is not changed by this release.

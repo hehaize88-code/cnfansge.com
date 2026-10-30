@@ -7,7 +7,7 @@ const sitemapDir='.astro-output/sitemaps';fs.mkdirSync(sitemapDir,{recursive:tru
 const pageUrl=(lang,route)=>SITE_ORIGIN+prefix(lang)+'/'+(route?route+'/':'');
 const xmlHeader='<?xml version="1.0" encoding="UTF-8"?>\n';
 for(const lang of Object.keys(locales)) {
-  const urls=routes.map(route=>`<url><loc>${pageUrl(lang,route)}</loc>${Object.keys(locales).map(alternate=>`<xhtml:link rel="alternate" hreflang="${alternate}" href="${pageUrl(alternate,route)}"/>`).join('')}<xhtml:link rel="alternate" hreflang="x-default" href="${pageUrl('en',route)}"/></url>`).join('\n');
+  const urls=routes.map(route=>`<url><loc>${pageUrl(lang,route)}</loc><lastmod>${editorial.articles.find(a=>'articles/'+a.slug===route)?.dateModified||'2026-10-30'}</lastmod>${Object.keys(locales).map(alternate=>`<xhtml:link rel="alternate" hreflang="${alternate}" href="${pageUrl(alternate,route)}"/>`).join('')}<xhtml:link rel="alternate" hreflang="x-default" href="${pageUrl('en',route)}"/></url>`).join('\n');
   fs.writeFileSync(`${sitemapDir}/${lang}.xml`,xmlHeader+`<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">\n${urls}\n</urlset>\n`);
 }
 fs.writeFileSync('.astro-output/sitemap.xml',xmlHeader+`<sitemapindex xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n${Object.keys(locales).map(lang=>`<sitemap><loc>${SITE_ORIGIN}/sitemaps/${lang}.xml</loc></sitemap>`).join('\n')}\n</sitemapindex>\n`);

@@ -23,7 +23,7 @@ export default {async fetch(request,env,ctx) {
 
   let cache=null;
   try{cache=typeof caches!=='undefined'?caches.default:null}catch{}
-  const cacheUrl=new URL(url);cacheUrl.searchParams.set('__cache_release','production-ga4-20261024-v1');
+  const cacheUrl=new URL(url);cacheUrl.searchParams.set('__cache_release','seo-content-20261030-v1');
   const cacheKey=new Request(cacheUrl.href,{method:'GET'});
   if(cache&&request.method==='GET') {const hit=await cache.match(cacheKey).catch(()=>null);if(hit)return hit;}
   if(url.pathname.startsWith('/api/')) {
