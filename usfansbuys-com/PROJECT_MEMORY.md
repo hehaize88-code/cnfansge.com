@@ -1,7 +1,7 @@
 # USFans × cnfansge.com — 项目记忆与实施规划
 
-更新时间：2026-10-26（Asia/Shanghai）
-当前阶段：用户已明确授权部署 GitHub 与 Cloudflare，正式发布配置与验证已准备；Cloudflare 连接失效，需要恢复访问完成上线。
+更新时间：2026-10-30（UTC）
+当前阶段：正式站已在线；五语言 SEO 内容与抓取优化完成本地构建，本地验证通过，正在通过原 GitHub → Cloudflare 集成发布。下方历史规划不代表当前授权范围。
 
 **当前决定优先于下方首轮历史规划：** 用户已确定域名 usfansbuys.com、目录 usfansbuys-com/，明确授权公开预览。下方“待选域名 / 尚未实现”等文字是首轮历史状态，不是当前阻塞。
 
@@ -286,3 +286,12 @@ GitHub 保存源码和自动构建配置；GitHub Pages 只能托管静态产物
 - 搜图及独立仓库QC能力仍为 false，等待 cnfansge 可验证接口；seller galleries不标为QC。已上线5语言、每语言28 FAQ与10文章，不代表该两项接口已接通。
 - 既有 Sites 公开预览维持原版本和 noindex，正式Cloudflare站与预览分开维护。本节覆盖上文“Cloudflare待部署/正式站尚未验收”等历史状态。
 
+
+
+## 2026-10-30 五语言 SEO 更新
+
+用户明确要求依据 GSC、Bing 和 Analytics 调研改进并部署，同时改善旧文、新增最优先文章，全部语言同步。已完成 EN/DE/ES/FR/IT 三篇新文、四篇重点旧文检查表、三个分类落地页、相关链接和分页 SEO。详见 `docs/seo-release-2026-10-30.md`。
+
+生产继续使用仓库 `hehaize88-code/cnfansge.com` 的 `usfansbuys-com/` 和 Cloudflare Worker `usfansbuys-com`。没有迁移到 Sites 或改变其他子站。GA4 尚未发现对应资源，本次不接入其他站点的衡量 ID。
+
+验证：`npm run build`、`npm run check:seo`、`npm run check:production`、`npm run check` 通过；最后一项包含实时商品数据、分页、排序、搜索和 USFans 购买参数校验。空的后续目录分页返回 404，避免软 404。

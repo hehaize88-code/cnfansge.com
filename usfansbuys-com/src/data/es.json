@@ -54,7 +54,7 @@
     "sourceLoading": "Obteniendo los detalles actuales del producto…",
     "qcUnavailable": "La fuente de datos de este anuncio no ofrece fotos verificadas de la inspección del almacén.",
     "imageSearch": "Buscar con una imagen",
-    "imageUnavailable": "La búsqueda por imagen no está disponible en esta vista previa porque la fuente de productos no ha facilitado una interfaz de búsqueda por imagen verificada.",
+    "imageUnavailable": "La búsqueda por imagen no está disponible actualmente. Busca por nombre de producto o categoría.",
     "imageAlternative": "Puedes seguir buscando por el nombre del producto, el tipo o un detalle distintivo.",
     "faqSearch": "Buscar preguntas…",
     "faqEmpty": "No hay preguntas que coincidan. Prueba otra palabra.",
@@ -76,7 +76,8 @@
     "copied": "Enlace copiado",
     "copyFailed": "No se puede copiar. Utiliza la barra de direcciones del navegador.",
     "gallery": "Galería",
-    "qcTab": "Estado del QC"
+    "qcTab": "Estado del QC",
+    "reviewedLabel": "Revisado el"
   },
   "categories": {
     "all": "Todos los productos",
@@ -96,7 +97,7 @@
     "eyebrow": "EL CATÁLOGO DE HALLAZGOS USFANS",
     "title": "Spreadsheet de USFans.",
     "titleAccent": "Encuentra con un plan.",
-    "intro": "Explora enlaces de productos, compara fotos y precios de los vendedores y abre el anuncio correcto en USFans. Un buen hallazgo empieza por los detalles.",
+    "intro": "Encuentra enlaces USFans de zapatillas, sudaderas y camisetas deportivas. Compara fotos y precios; revisa tallas, QC y envío antes de comprar.",
     "featuredLabel": "ENTRE LOS ÚLTIMOS ANUNCIOS",
     "heroNote": "Anuncios reales. Próximos pasos claros.",
     "categoryTitle": "Empieza por lo que estás buscando.",
@@ -121,20 +122,21 @@
     "journalTitle": "Entiende qué viene después.",
     "journalIntro": "Guías prácticas sobre enlaces de productos, tallas, QC y envíos. Lee la parte que necesites cuando la necesites.",
     "ctaTitle": "Una selección más breve. Una mejor decisión.",
-    "ctaText": "Empieza con la lista completa y conserva juntos el anuncio exacto y la opción elegida."
+    "ctaText": "Empieza con la lista completa y conserva juntos el anuncio exacto y la opción elegida.",
+    "seoTitle": "USFans Spreadsheet: catálogo y guías de compra"
   },
   "pages": {
     "spreadsheet": {
-      "title": "La lista de productos de USFans",
+      "title": "Catálogo USFans: enlaces de productos y precios",
       "intro": "Busca en todo el directorio de origen, compara precios estimados en USD y abre cada anuncio. Las categorías, el orden y la paginación utilizan los resultados actuales de la fuente."
     },
     "finds": {
-      "title": "Novedades que merecen una mirada más detenida.",
+      "title": "Novedades USFans: enlaces añadidos recientemente",
       "intro": "Explora las últimas incorporaciones del directorio. Son anuncios añadidos recientemente, no recomendaciones basadas en pruebas de compra ni certificaciones de calidad.",
       "note": "Nuevo no significa revisado. Comprueba la galería del vendedor, la variante elegida y el precio actual antes de comprar."
     },
     "qc": {
-      "title": "Mira con atención antes de enviar.",
+      "title": "Fotos QC USFans: qué revisar antes del envío",
       "intro": "Las fotos de QC te ayudan a revisar el artículo que llegó al almacén. Distínguelas de las fotos del vendedor y relaciona cada imagen con el pedido y la opción exactos.",
       "sections": [
         {
@@ -162,7 +164,7 @@
       "article": "usfans-qc-photo-checklist"
     },
     "guide": {
-      "title": "Tu primer pedido en USFans, paso a paso.",
+      "title": "Cómo comprar en USFans: tu primer pedido",
       "intro": "Encontrar un artículo, comprarlo y enviar un paquete son decisiones distintas. Sigue el proceso oficial y revisa los detalles en cada etapa.",
       "sections": [
         {
@@ -197,7 +199,7 @@
       "article": "usfans-first-order-checklist"
     },
     "shipping": {
-      "title": "Planifica el paquete, no solo el precio.",
+      "title": "Envíos USFans: costes, rutas y seguimiento",
       "intro": "El precio anunciado de un artículo es solo una parte del total. Revisa el envío nacional, el peso del paquete, las dimensiones una vez embalado y la cotización real de la ruta antes de decidir el envío internacional.",
       "sections": [
         {
@@ -232,12 +234,12 @@
       "article": "usfans-shipping-cost-guide"
     },
     "faq": {
-      "title": "Respuestas útiles antes de comprar.",
+      "title": "FAQ USFans: pagos, QC, almacén y envío",
       "intro": "Respuestas basadas en la guía oficial para principiantes y el Centro de ayuda de USFans, además del funcionamiento de este directorio independiente. Las condiciones actuales y las opciones concretas de cada pedido se consultan en USFans."
     },
     "articles": {
-      "title": "La biblioteca de guías de compra.",
-      "intro": "Diez guías prácticas para las decisiones entre encontrar un producto y recibir un paquete. Empieza por la lista de productos y después elige la etapa que necesites."
+      "title": "Guías USFans: tallas, costes, QC y envío",
+      "intro": "13 guías USFans sobre enlaces, tallas, QC, pagos, almacenamiento y envío. Elige el paso que necesitas y continúa con una guía relacionada."
     },
     "image-search": {
       "title": "Busca por un detalle del producto.",
@@ -360,16 +362,16 @@
     {
       "id": "detailed-photos",
       "q": "¿Puedo solicitar fotos de detalles o medidas?",
-      "a": "USFans ofrece un servicio de pago de fotos detalladas para ángulos, detalles o medidas concretos. Identifica el artículo y describe con claridad cada vista solicitada. La página oficial también indica que puedes comunicar que una imagen estándar está borrosa para solicitar que se repita; confirma en tu cuenta las opciones y los cargos actuales.",
+      "a": "Pregunta si hay fotos de detalle o medidas disponibles para tu pedido y confirma su coste. Especifica artículo, vista y puntos de medición. Si una imagen estándar es poco clara, solicita aclaración en vez de considerarla prueba suficiente.",
       "source": "https://www.usfans.com/help/HCON_STATIC_059",
       "sourceTitle": "Fotos detalladas de USFans"
     },
     {
       "id": "storage",
       "q": "¿Cuánto tiempo pueden permanecer los productos en el almacén de USFans?",
-      "a": "La página actual de ayuda sobre almacenamiento indica 90 días para los paquetes del servicio de compras y 60 días para los de reenvío, contados desde el estado Warehoused. Comprueba tu propio plazo y organiza el envío a tiempo; los productos que permanezcan más allá del periodo aplicable pueden considerarse abandonados.",
-      "source": "https://www.usfans.com/help/HCON_STATIC_071",
-      "sourceTitle": "¿Cuánto tiempo pueden almacenarse los productos en el almacén de USFans?"
+      "a": "La guía oficial anuncia 90 días de almacenamiento gratuito. Comprueba vencimiento y condiciones de cada artículo; no asumas que el reenvío tiene el mismo periodo. Consulta fechas o ampliaciones antes del vencimiento.",
+      "source": "https://www.usfans.com/beginner-guide",
+      "sourceTitle": "Guía oficial de USFans"
     },
     {
       "id": "combine-orders",
@@ -395,7 +397,7 @@
     {
       "id": "no-route",
       "q": "¿Qué hago si no hay ninguna ruta de envío disponible?",
-      "a": "Abre la información View Reason de la ruta y contacta con soporte de USFans para aclarar la restricción. La lista disponible se filtra según los atributos de los artículos y las restricciones postales. No supongas que una ruta ofrecida para otro producto es adecuada para el tuyo.",
+      "a": "Consulta la explicación de indisponibilidad en tu cuenta. Confirma destino real, restricciones, peso y medidas embaladas. Pregunta qué límite aplica sin falsear destino o mercancía para forzar una ruta.",
       "source": "https://www.usfans.com/help/HCON_STATIC_049",
       "sourceTitle": "¿Qué ocurre si no hay rutas disponibles al solicitar el envío de un paquete?"
     },
@@ -516,6 +518,12 @@
           "label": "Centro de ayuda oficial de USFans",
           "url": "https://www.usfans.com/help"
         }
+      ],
+      "datePublished": "2026-10-26",
+      "dateModified": "2026-10-26",
+      "related": [
+        "usfans-first-order-checklist",
+        "usfans-shipping-cost-guide"
       ]
     },
     {
@@ -602,12 +610,18 @@
           "label": "Alcance de la inspección de USFans",
           "url": "https://www.usfans.com/help/HCON_STATIC_047"
         }
+      ],
+      "datePublished": "2026-10-26",
+      "dateModified": "2026-10-26",
+      "related": [
+        "usfans-first-order-checklist",
+        "usfans-shipping-cost-guide"
       ]
     },
     {
       "slug": "usfans-qc-photo-checklist",
-      "title": "Fotos QC de USFans: una lista práctica antes del envío internacional",
-      "description": "Descubre qué pueden mostrar las fotos QC de USFans, cómo verificar la identidad del artículo, comparar medidas y solicitar una vista concreta antes del envío.",
+      "title": "Fotos QC USFans: controles y solicitudes de medidas",
+      "description": "Revisa artículo, talla y defectos visibles en fotos QC USFans. Pide los detalles que faltan antes de enviar.",
       "category": "QC y tallas",
       "keywords": [
         "usfans qc",
@@ -622,7 +636,36 @@
           "paragraphs": [
             "Empieza por comprobar de dónde procede la imagen. Una galería del vendedor, una referencia QC anterior y las fotografías de tu propio pedido en el almacén no deben tratarse como si fueran lo mismo. Las imágenes del vendedor pueden explicar el diseño previsto. Una referencia anterior puede mostrar un artículo fotografiado en otra ocasión. Las fotografías de tu propio pedido son el punto de partida adecuado para comprobar el artículo asociado a tu compra. Mantén estas diferencias claras al guardar o comparar imágenes.",
             "Comprueba que el registro coincide con la plataforma de origen, el ID del producto, la variante seleccionada y la cantidad. No basta con que sea un producto parecido del mismo vendedor. Verifica si las fotos muestran el color y la talla que elegiste, en lugar de asumir que una miniatura coincidente demuestra que todo el pedido es correcto. Si una galería no está claramente vinculada a una ficha, úsala como mucho como inspiración. Una revisión QC fiable empieza por confirmar la identidad, no por la confianza que transmite una imagen atractiva."
-          ]
+          ],
+          "table": {
+            "headers": [
+              "Qué comparar",
+              "Prueba útil",
+              "Siguiente paso"
+            ],
+            "rows": [
+              [
+                "Artículo y opción",
+                "Pedido, color y etiqueta",
+                "Compara lo recibido con tu propio pedido"
+              ],
+              [
+                "Estado visible",
+                "Vista general y detalle del problema",
+                "Describe marca, costura o diferencia concreta"
+              ],
+              [
+                "Duda de talla",
+                "Medida relevante de prenda o calzado",
+                "Confirma disponibilidad y coste antes de pedir"
+              ],
+              [
+                "Dato ausente",
+                "Decisión que resolvería otra vista",
+                "Aclara el punto antes del envío internacional"
+              ]
+            ]
+          }
         },
         {
           "heading": "2. Revisa el artículo completo antes de los detalles pequeños",
@@ -685,6 +728,12 @@
           "label": "Servicio Detailed Photo de USFans",
           "url": "https://www.usfans.com/help/HCON_STATIC_059"
         }
+      ],
+      "datePublished": "2026-10-26",
+      "dateModified": "2026-10-30",
+      "related": [
+        "usfans-sizing-shoes-clothing",
+        "usfans-returns-refunds-guide"
       ]
     },
     {
@@ -772,6 +821,11 @@
           "label": "Peso facturable estimado y real de USFans",
           "url": "https://www.usfans.com/help/HCON_STATIC_053"
         }
+      ],
+      "datePublished": "2026-10-26",
+      "dateModified": "2026-10-26",
+      "related": [
+        "usfans-first-order-checklist"
       ]
     },
     {
@@ -856,6 +910,12 @@
           "label": "Guía oficial para principiantes de USFans",
           "url": "https://www.usfans.com/beginner-guide"
         }
+      ],
+      "datePublished": "2026-10-26",
+      "dateModified": "2026-10-26",
+      "related": [
+        "usfans-first-order-checklist",
+        "usfans-shipping-cost-guide"
       ]
     },
     {
@@ -940,12 +1000,18 @@
           "label": "Orientación de USFans sobre la recepción de paquetes",
           "url": "https://www.usfans.com/help/HCON_STATIC_065"
         }
+      ],
+      "datePublished": "2026-10-26",
+      "dateModified": "2026-10-26",
+      "related": [
+        "usfans-fees-payment-methods",
+        "usfans-qc-photo-checklist"
       ]
     },
     {
       "slug": "usfans-sizing-shoes-clothing",
-      "title": "Tallas en USFans: compara zapatos y ropa mediante sus medidas",
-      "description": "Utiliza una prenda conocida, una tabla de tallas clara y medidas concretas del almacén para elegir mejor las tallas en USFans.",
+      "title": "Tallas USFans: medidas de zapatillas y ropa",
+      "description": "Compara tablas USFans con medidas en plano y calzado de referencia. Usa la lista para pedir medidas útiles al almacén.",
       "category": "Tallas",
       "keywords": [
         "tallas usfans",
@@ -960,7 +1026,36 @@
             "Empieza por cómo piensas llevar el artículo. Una capa ceñida, una sudadera amplia que se lleva sobre otras prendas y una chaqueta con estructura tienen requisitos distintos aunque sus etiquetas sean idénticas. Anota las zonas donde más importa el ajuste: libertad de movimiento en el pecho, alcance de las mangas, posición de los hombros, cintura, tiro o abertura de la pernera. Priorizar unas pocas dimensiones es más útil que reunir todas las medidas posibles sin saber qué decisión van a respaldar.",
             "Describe el resultado deseado con palabras corrientes. Por ejemplo, quizá quieras mangas que permanezcan en las muñecas al estirar los brazos hacia delante, espacio suficiente para una segunda capa o pantalones cómodos a una altura concreta de la cintura. Son requisitos personales, no reglas universales. Evita convertirlos inmediatamente en consejos como elegir siempre una talla más. Ese atajo oculta la cuestión real y puede mejorar una dimensión mientras empeora otra.",
             "El mismo método sirve para los zapatos. Considera los calcetines previstos, las actividades que esperas realizar y si tu principal dificultad con el calzado conocido es el largo, el ancho, la forma de la puntera o la presión en el empeine. El largo por sí solo no resuelve todas las dudas de ajuste."
-          ]
+          ],
+          "table": {
+            "headers": [
+              "Qué comparar",
+              "Prueba útil",
+              "Siguiente paso"
+            ],
+            "rows": [
+              [
+                "Pecho en plano",
+                "Prenda similar; cinta de axila a axila",
+                "Compara anchos planos, no contorno corporal"
+              ],
+              [
+                "Largo o manga",
+                "Misma costura inicial y punto final",
+                "Pide foto de ambos extremos de la cinta"
+              ],
+              [
+                "Longitud de calzado",
+                "Distingue pie, plantilla y suela exterior",
+                "Confirma qué se mide antes de comparar"
+              ],
+              [
+                "Talla elegida",
+                "Variante pedida y etiqueta recibida",
+                "Separa opción equivocada y preferencia de ajuste"
+              ]
+            ]
+          }
         },
         {
           "heading": "2. Mide un artículo de referencia que ya te quede bien",
@@ -1024,6 +1119,12 @@
           "label": "Normas de devolución y cambio de USFans",
           "url": "https://www.usfans.com/help/HCON_STATIC_029"
         }
+      ],
+      "datePublished": "2026-10-26",
+      "dateModified": "2026-10-30",
+      "related": [
+        "usfans-qc-photo-checklist",
+        "usfans-returns-refunds-guide"
       ]
     },
     {
@@ -1108,12 +1209,18 @@
           "label": "Guía para principiantes de USFans",
           "url": "https://www.usfans.com/beginner-guide"
         }
+      ],
+      "datePublished": "2026-10-26",
+      "dateModified": "2026-10-26",
+      "related": [
+        "usfans-first-order-checklist",
+        "usfans-shipping-cost-guide"
       ]
     },
     {
       "slug": "usfans-shipping-tracking-status",
-      "title": "Seguimiento de USFans: comprende las actualizaciones del pedido, almacén y paquete",
-      "description": "Aprende qué referencia de USFans debes seguir, qué demuestran los eventos de seguimiento y cómo plantear una consulta útil cuando un envío necesita atención.",
+      "title": "Seguimiento USFans: pedido, almacén y paquete",
+      "description": "Identifica el siguiente paso del seguimiento USFans. Distingue pedidos sin enviar, procesamiento de almacén y paquetes sin nuevos escaneos.",
       "category": "Envíos",
       "keywords": [
         "seguimiento usfans",
@@ -1128,7 +1235,36 @@
             "Crea una pequeña lista privada de referencias para la compra. Identifica el código del producto como el artículo que seleccionaste, la referencia del pedido como la transacción de compra y la referencia del paquete como el conjunto que finalmente se te envía. Si está disponible el número de seguimiento nacional del vendedor, identifícalo por separado. Los nombres claros evitan que sigas una entrega ya completada del vendedor mientras te preguntas por qué tu paquete internacional parece haber dejado de moverse.",
             "Registra qué artículos pertenecen a cada paquete. Si divides los productos del almacén en dos envíos, pueden tener referencias y progresos distintos. Que uno figure como entregado no demuestra qué ocurrió con el otro. Del mismo modo, un pedido de producto puede implicar preguntas que deben plantearse mediante su consulta de pedido y no en una conversación de paquete sin relación.",
             "Cuando pidas ayuda, incluye solo la referencia necesaria para el problema. Mantén las direcciones, los registros de pago y los datos completos de cuenta fuera de las publicaciones públicas. Una conversación privada con soporte puede aportar el contexto necesario sin divulgar información que otros compradores no necesitan para entender una duda general de seguimiento."
-          ]
+          ],
+          "table": {
+            "headers": [
+              "Qué comparar",
+              "Prueba útil",
+              "Siguiente paso"
+            ],
+            "rows": [
+              [
+                "Vendedor",
+                "Estado y referencia de salida",
+                "Pregunta por ese pedido; puede no haber tracking internacional"
+              ],
+              [
+                "Almacén",
+                "Llegada, inspección y almacenamiento",
+                "Comprueba fotos, medidas y solicitudes pendientes"
+              ],
+              [
+                "Paquete",
+                "Número, ruta y último evento fechado",
+                "Compara cuenta y transportista"
+              ],
+              [
+                "Sin nuevo escaneo",
+                "Último evento, fecha y mensaje",
+                "Solicita revisión sin asumir pérdida o plazo fijo"
+              ]
+            ]
+          }
         },
         {
           "heading": "2. Lee por separado las etapas de compra y de almacén",
@@ -1196,12 +1332,18 @@
           "label": "USFans: orientación para recibir un paquete",
           "url": "https://www.usfans.com/help/HCON_STATIC_065"
         }
+      ],
+      "datePublished": "2026-10-26",
+      "dateModified": "2026-10-30",
+      "related": [
+        "usfans-no-shipping-routes",
+        "usfans-shipping-cost-guide"
       ]
     },
     {
       "slug": "usfans-returns-refunds-guide",
-      "title": "Devoluciones y reembolsos de USFans: prepara una solicitud de posventa clara",
-      "description": "Comprende las comprobaciones de una solicitud de devolución o reembolso en USFans, conserva pruebas útiles y distingue los problemas del almacén de los del paquete entregado.",
+      "title": "Devoluciones USFans: pasos, pruebas y reembolsos",
+      "description": "Prepara una devolución USFans con las pruebas correctas. Distingue condiciones del vendedor, retornos desde almacén y abonos al saldo.",
       "category": "Posventa",
       "keywords": [
         "devoluciones usfans",
@@ -1216,7 +1358,36 @@
             "Empieza escribiendo una frase que describa la discrepancia. Indica qué se pidió, qué muestran las pruebas disponibles y dónde está ahora el artículo. Por ejemplo, un pedido hipotético podría especificar un color mientras que la etiqueta y las fotografías del almacén parecen mostrar otro. Ese es un punto de partida más claro que afirmar de forma general que el producto es malo. Si el problema es que ya no lo quieres, descríbelo honestamente como una preferencia en lugar de inventar un defecto.",
             "Después identifica la etapa: compra en curso, expedición del vendedor, procesamiento en el almacén, almacenado, embalado para envío internacional o entregado. La siguiente acción disponible puede depender de esa etapa. No asumas que una solicitud de cancelación y una devolución desde el almacén siguen el mismo proceso, ni que un problema de un paquete entregado pueda gestionarse como un cambio con el vendedor antes de la exportación.",
             "Mantén la referencia correcta del pedido o del paquete junto a la descripción. Si hay varios artículos implicados, enuméralos por separado. Un producto dañado no debe confundirse con una reclamación de pérdida de todo un paquete, y un problema con una variante no debe ocultar el estado de los demás productos."
-          ]
+          ],
+          "table": {
+            "headers": [
+              "Qué comparar",
+              "Prueba útil",
+              "Siguiente paso"
+            ],
+            "rows": [
+              [
+                "Artículo o variante incorrectos",
+                "Opción y fotos claras",
+                "Comunica antes del envío internacional"
+              ],
+              [
+                "Cambio de opinión o talla",
+                "Condiciones y estado del artículo",
+                "Confirma elegibilidad sin asumir aceptación"
+              ],
+              [
+                "Ajuste de envío",
+                "Estimación, factura y saldo",
+                "Distingue abono interno y reembolso externo"
+              ],
+              [
+                "Problema entregado",
+                "Embalaje, artículos y referencia",
+                "Contacta pronto con posventa y conserva pruebas"
+              ]
+            ]
+          }
         },
         {
           "heading": "2. Lee las condiciones aplicables antes de hacer cambios",
@@ -1284,7 +1455,346 @@
           "label": "Consideraciones de posventa de paquetes de USFans",
           "url": "https://www.usfans.com/help/HCON_STATIC_068"
         }
+      ],
+      "datePublished": "2026-10-26",
+      "dateModified": "2026-10-30",
+      "related": [
+        "usfans-qc-photo-checklist",
+        "usfans-fees-payment-methods"
+      ]
+    },
+    {
+      "slug": "usfans-fees-payment-methods",
+      "title": "Comisiones y pagos en USFans: cómo calcular el coste total",
+      "description": "Distingue el pago de los artículos, el depósito de envío, los cargos adicionales y los abonos al saldo antes de comprar en USFans.",
+      "category": "Pagos",
+      "keywords": [
+        "comisiones USFans",
+        "métodos de pago USFans",
+        "depósito envío USFans",
+        "USFans PayPal"
+      ],
+      "intro": "El primer pago de USFans normalmente no es el coste completo del pedido entregado. La guía oficial separa la compra de los artículos del envío internacional. Para comparar un precio atractivo con tu presupuesto, incluye transporte dentro de China, envío del paquete y servicios elegidos. Esta guía explica cómo organizar esos importes, comparar las opciones disponibles y distinguir un depósito estimado de la factura definitiva. No presupone una comisión universal ni garantiza un método de pago para todas las cuentas.",
+      "sections": [
+        {
+          "heading": "1. Separar las dos etapas principales del pago",
+          "paragraphs": [
+            "Al comprar, comprueba precio de la variante, cantidad y transporte nacional. El catálogo permite comparar, pero el checkout muestra el importe de la opción que realmente has elegido. Guarda referencia y variante junto al precio para no confundir tallas, versiones o lotes distintos de productos parecidos.",
+            "El envío internacional se decide después de llegar la mercancía al almacén. Seleccionas artículos, destino, embalaje y una ruta compatible. La guía oficial describe un pago estimado que se revisa con las medidas finales. Comprar una camiseta no reserva una tarifa internacional. Deja presupuesto para esa segunda etapa y comprueba antes de comprar que la mercancía pueda viajar a tu destino."
+          ]
+        },
+        {
+          "heading": "2. Crear un presupuesto sin duplicar cargos",
+          "paragraphs": [
+            "Separa productos, transporte nacional, envío internacional, servicios opcionales y cualquier cargo mostrado al pagar. Mantén posibles impuestos o aranceles de destino como incertidumbre independiente hasta que las condiciones de la ruta aclaren su tratamiento. El nombre de una línea o un comentario del vendedor no confirma que estén incluidos.",
+            "Ejemplo ficticio: 200 CNY en productos, 10 CNY en transporte nacional, 120 CNY de envío estimado y 15 CNY de embalaje suman 345 CNY antes de otros cargos aplicables. No son tarifas de USFans. Si el embalaje ya está dentro del total de envío, no lo sumes otra vez. Anota la moneda y distingue estimaciones; conserva el importe original cuando el proveedor de pago muestre una conversión."
+          ]
+        },
+        {
+          "heading": "3. Revisar las comisiones del servicio concreto",
+          "paragraphs": [
+            "Una tarifa de un servicio no se aplica necesariamente a toda la plataforma. El acuerdo oficial distingue compras mediante agente de otras prestaciones para comerciantes o reenvíos. Que una prestación de compra figure como gratuita no convierte en gratuitos todos los pagos, paquetes u opciones. Tampoco una comisión de otro servicio es automáticamente la de tu compra.",
+            "Compara la explicación vigente con el resumen de tu pedido. Si una línea no está clara, pregunta su nombre, sobre qué importe se calcula y si ya está incluida. Guarda la respuesta. Una pregunta útil distingue entre compra, envío y servicio opcional. No uses una comisión de un competidor ni de una captura antigua para calcular tu propio pedido."
+          ]
+        },
+        {
+          "heading": "4. Comparar los métodos que aparecen en el checkout",
+          "paragraphs": [
+            "La guía menciona PayPal, tarjetas y Google Pay. Las opciones reales son las que se ofrecen para tu cuenta, moneda y transacción. Compara total, moneda del cargo y cualquier coste de procesamiento visible. Si falta un método, revisa la página actual o consulta al soporte antes de generar más pedidos.",
+            "Distingue saldo de la plataforma, moneda del checkout e importe cobrado por el proveedor. Una conversión mostrada no garantiza el tipo de cambio de tu banco. Lee su confirmación antes de autorizar. No envíes datos completos de tarjeta, contraseñas ni códigos de verificación en mensajes normales. Si una transacción está pendiente, comprueba su estado antes de repetirla para evitar un pago duplicado."
+          ]
+        },
+        {
+          "heading": "5. Entender el depósito de envío y el ajuste final",
+          "paragraphs": [
+            "El peso estimado incluye los artículos con su embalaje original y una previsión del embalaje exterior. La facturación final utiliza las medidas del paquete preparado en el almacén, sujetas a posibles correcciones del transportista. En una ruta volumétrica, un paquete grande puede facturarse por encima de su peso en báscula. Contar artículos no permite prever por sí solo el coste.",
+            "La ayuda detallada indica que una factura real superior puede requerir un pago adicional. Describe un abono al saldo cuando la estimación supera el importe real en más de la unidad de peso adicional aplicable, con un plazo ligado al envío. No promete devolver cada pequeña diferencia al método original. Compara estimación, peso final, escalones de facturación y ajustes registrados antes de considerar incorrecto un movimiento."
+          ]
+        },
+        {
+          "heading": "6. Distinguir un abono al saldo de un reembolso externo",
+          "paragraphs": [
+            "Un ajuste al saldo USFans no es lo mismo que un reembolso a una cuenta bancaria o cartera externa. Poder usar ese dinero en la plataforma no demuestra condiciones de retirada, comisión ni plazo. Comprueba el procedimiento antes de contar con su llegada a una fecha concreta. La devolución de un producto tiene además sus propias condiciones de pedido y vendedor.",
+            "Reúne importe del pedido o paquete, transacción de pago y movimiento del saldo, con fecha y moneda. Un reembolso de artículo, un ajuste de envío y una recarga pueden aparecer próximos y corresponder a acciones distintas. Pregunta por la entrada exacta que no encaja y oculta información personal ajena al problema en las capturas. Referencias claras ayudan más que varios totales sin explicación."
+          ]
+        },
+        {
+          "heading": "7. Revisar el presupuesto antes de confirmar",
+          "paragraphs": [
+            "Antes de comprar, confirma variante, cantidad, primer pago, segundo pago probable y máximo del coste entregado. Antes de enviar, sustituye la estimación general por las ofertas disponibles para los productos almacenados, embalaje y destino reales. Lee inclusiones y restricciones. Si el presupuesto solo funciona con todas las estimaciones en su mínimo, deja más margen o reconsidera la compra.",
+            "Después del envío compara el estado final con el presupuesto guardado y registra pagos adicionales o abonos. Usa la experiencia para paquetes comparables, no como precio universal por kilogramo. Dimensiones, restricciones, rutas y monedas cambian. Un pequeño registro permite entender el coste de tu pedido dejando precios actuales y decisiones de pago en el checkout real.",
+            "Antes de pagar, escribe qué cubre el importe, qué costes faltan y dónde se abonaría un ajuste. Guarda ficha, resumen de compra y resumen del paquete. Compara cantidades en la misma moneda. Si recargas saldo, comprueba lo necesario: una recarga mayor no garantiza mejor envío. Pregunta por un cargo discutido antes de hacer otro pago para compensarlo. Una segunda transacción no explica la primera y puede dificultar la conciliación."
+          ]
+        }
+      ],
+      "sources": [
+        {
+          "label": "Guía oficial de USFans",
+          "url": "https://www.usfans.com/beginner-guide"
+        },
+        {
+          "label": "Acuerdo de servicio de USFans",
+          "url": "https://www.usfans.com/page/serviceAgreement"
+        },
+        {
+          "label": "Peso facturable estimado y real",
+          "url": "https://www.usfans.com/help/HCON_STATIC_053"
+        }
+      ],
+      "related": [
+        "usfans-shipping-cost-guide",
+        "usfans-returns-refunds-guide",
+        "usfans-first-order-checklist"
+      ],
+      "datePublished": "2026-10-30",
+      "dateModified": "2026-10-30"
+    },
+    {
+      "slug": "usfans-warehouse-storage-deadlines",
+      "title": "Almacén USFans: almacenamiento gratuito, plazos y plan de envío",
+      "description": "Organiza el almacenamiento USFans según el vencimiento de cada artículo, la revisión QC y la disponibilidad real del envío.",
+      "category": "Almacén",
+      "keywords": [
+        "almacén USFans",
+        "almacenamiento gratuito USFans",
+        "plazo almacenamiento USFans",
+        "vencimiento USFans"
+      ],
+      "intro": "El almacenamiento USFans permite revisar compras y decidir qué productos enviar juntos. Debe formar parte de un plan, sin dejar todas las decisiones para el último día. La guía oficial anuncia 90 días de almacenamiento gratuito. Para un artículo concreto, comprueba fechas y condiciones en tu cuenta; no calcules una fecha definitiva solo a partir de una guía general. Aquí encontrarás un método para registrar artículos, reservar tiempo para dudas QC y decidir cuándo dejar de esperar otra compra.",
+      "sections": [
+        {
+          "heading": "1. Comprobar la regla general en el registro del artículo",
+          "paragraphs": [
+            "Los 90 días anunciados son un punto de partida para compras. No prueban que cualquier servicio de reenvío, producto especial o política futura tenga la misma duración. Busca los datos del pedido exacto y consulta si inicio o vencimiento no están claros. La salida del vendedor, el escaneo de entrega y la entrada en almacenamiento no son necesariamente fechas equivalentes.",
+            "Registra el vencimiento mostrado en vez de sustituirlo por un cálculo propio. Si no aparece, pregunta qué evento inicia el periodo, qué fecha corresponde y si el servicio tiene condiciones distintas. Los artículos que llegan en entregas separadas pueden vencer en fechas diferentes aunque después formen un solo paquete."
+          ]
+        },
+        {
+          "heading": "2. Mantener un calendario por artículo",
+          "paragraphs": [
+            "Crea una fila con referencia, variante, estado visible, vencimiento y siguiente acción. Añade si revisaste QC y si hay una medida o devolución sin resolver. Guarda estos datos en tus notas, sin publicar información de la cuenta. Ordenar por fecha hace visibles las decisiones pendientes más antiguas antes de que sean urgentes.",
+            "Programa recordatorios con tiempo para aclaraciones, embalaje y elección de ruta. Por ejemplo, revisa dos semanas y una semana antes del vencimiento indicado. Son márgenes personales, no plazos de procesamiento garantizados por USFans. Adáptalos a la incertidumbre: una fotografía adicional, un cambio de presupuesto o una consulta pueden necesitar tiempo."
+          ]
+        },
+        {
+          "heading": "3. Resolver pronto las dudas QC y de devolución",
+          "paragraphs": [
+            "Cuando las fotos estén disponibles, compara artículo y variante: identidad, color, etiquetas de talla y detalles importantes. Si el ajuste es incierto, pide una medida concreta tras confirmar disponibilidad y precio. El almacenamiento no equivale al plazo de devolución; una estancia gratuita larga no amplía automáticamente las condiciones del vendedor.",
+            "Conserva embalaje y etiquetas mientras se valora una devolución o cambio. Vincula consulta, fotos y fecha al pedido. Un producto pendiente no obliga a dejar de revisar los demás del futuro paquete. Marca los que están listos y considera si pueden salir por separado. Revisar pronto deja más opciones que descubrir una diferencia justo antes del vencimiento."
+          ]
+        },
+        {
+          "heading": "4. Decidir si merece la pena esperar otra compra",
+          "paragraphs": [
+            "Agrupar depende de más factores que la cantidad de artículos. Compara vencimientos con la incertidumbre del siguiente envío del vendedor y su procesamiento en almacén. Una fecha estimada no garantiza que el producto esté listo antes de que venza el más antiguo. Decide qué retraso toleras y si el artículo pendiente es imprescindible.",
+            "Si un producto revisado está cerca del vencimiento y otro aún no salió, compara enviar ahora con esperar. Incluye cualquier cargo de almacenamiento confirmado, límites de ruta y necesidades de embalaje. No significa que dividir siempre sea más barato. Comprar algo innecesario para justificar la agrupación puede costar más que el posible ahorro de transporte."
+          ]
+        },
+        {
+          "heading": "5. Preparar el paquete antes de la urgencia",
+          "paragraphs": [
+            "Comprueba que los productos sean compatibles con la misma ruta y destino. Peso, dimensiones y restricciones pueden impedir la combinación prevista. Revisa dirección, contacto y datos solicitados en el proceso. Consulta opciones de embalaje y su coste. Retirar una caja cambia volumen y protección: decide por las necesidades del artículo y no por las prisas.",
+            "Distingue estar almacenado de estar listo para salir. Puede faltar una medida, una respuesta o una decisión de ruta. Revisa identidad, talla, ausencia de devoluciones pendientes, destino y línea compatible. Si algo falla, resuelve ese obstáculo concreto. Seleccionar productos para un proyecto de paquete no confirma que se cumplan todos los requisitos."
+          ]
+        },
+        {
+          "heading": "6. Confirmar una ampliación antes de contar con ella",
+          "paragraphs": [
+            "Pregunta si se puede ampliar el plazo de esos artículos y cuánto cuesta. Confirma nueva fecha, inicio de cargos y acción necesaria en la cuenta. Un mensaje sin responder no es una ampliación aprobada. Guarda la confirmación escrita con referencias para distinguir una explicación general de un cambio efectivo de tu almacenamiento.",
+            "No presupongas qué ocurre al vencer ni que siempre será posible recuperar la mercancía. Consulta condiciones actuales antes de la fecha. Esta guía no fija periodos de gracia, calendarios de eliminación ni precios de ampliación. Si ya venció, contacta pronto con referencias y estado visible en vez de confiar en una captura antigua o en otro cliente."
+          ]
+        },
+        {
+          "heading": "7. Conectar el registro de almacén con el seguimiento",
+          "paragraphs": [
+            "Tras presentar el paquete, sigue su estado real y las solicitudes pendientes de información o pago. Seleccionar artículos no demuestra que se hayan enviado. Cuando salgan, guarda número y seguimiento con la lista original. Así podrás aclarar más tarde un producto ausente o un estado poco comprensible.",
+            "Identifica qué provocó la espera principal: vendedor, talla, embalaje o decisión personal. Úsalo para planificar el próximo pedido. La finalidad no es consumir todos los días gratuitos, sino conservar tiempo para decidir y enviar mercancía compatible. Calendario por artículo, QC temprano y fechas confirmadas convierten el almacenamiento en una ayuda sin crear urgencias evitables.",
+            "En una revisión semanal empieza por el artículo más antiguo y anota una decisión: listo, esperando una respuesta concreta o posible devolución. Fija cuándo revisar cada duda. Tu calendario no amplía el plazo oficial. Si esperas otra compra, determina cuándo reconsiderar la espera. Antes de ausentarte, comprueba vencimientos próximos y solicitudes pendientes. El resultado debe ser una decisión aplicable, no solo una lista de fechas."
+          ]
+        }
+      ],
+      "sources": [
+        {
+          "label": "Guía oficial de USFans",
+          "url": "https://www.usfans.com/beginner-guide"
+        },
+        {
+          "label": "Ayuda de almacenamiento USFans",
+          "url": "https://www.usfans.com/help/HCON_STATIC_071"
+        },
+        {
+          "label": "Acuerdo de servicio de USFans",
+          "url": "https://www.usfans.com/page/serviceAgreement"
+        }
+      ],
+      "related": [
+        "usfans-warehouse-consolidation",
+        "usfans-qc-photo-checklist",
+        "usfans-no-shipping-routes"
+      ],
+      "datePublished": "2026-10-30",
+      "dateModified": "2026-10-30"
+    },
+    {
+      "slug": "usfans-no-shipping-routes",
+      "title": "USFans sin rutas de envío disponibles: qué revisar paso a paso",
+      "description": "Comprueba destino, restricciones, peso y dimensiones cuando USFans no muestra una ruta de envío disponible.",
+      "category": "Envíos",
+      "keywords": [
+        "USFans sin rutas de envío",
+        "envío USFans no disponible",
+        "restricciones USFans",
+        "peso paquete USFans"
+      ],
+      "intro": "Una lista vacía no indica por sí sola si el problema está en el destino, los productos, el paquete o una disponibilidad temporal. Empieza por el paquete real y el motivo mostrado en la cuenta. Cambia después una sola variable relevante cada vez. Este recorrido ayuda a investigar la falta de rutas; no hace admisible un producto restringido, no promete entregas en cualquier lugar ni sustituye las reglas vigentes del transportista.",
+      "sections": [
+        {
+          "heading": "1. Guardar el contexto antes de cambiar nada",
+          "paragraphs": [
+            "Anota artículos, país, código postal, peso, dimensiones y explicación de indisponibilidad. Incluye cuándo lo revisaste porque ofertas y rutas cambian. Si una línea concreta muestra una razón, empieza por ella sin suponer que todas las opciones faltan por el mismo motivo.",
+            "Evita rehacer el paquete cambiando varias cosas a la vez: si aparece una ruta no sabrás qué modificación influyó. Primero confirma selección y datos pendientes. No pagues otro pedido para comprobar una teoría sobre transporte. Una captura con información personal irrelevante ocultada puede ayudar al soporte a entender el estado exacto."
+          ]
+        },
+        {
+          "heading": "2. Revisar destino y campos de dirección",
+          "paragraphs": [
+            "Contrasta país, región y código postal con la dirección real de recepción. Busca campos vacíos, formatos incorrectos o una selección de un presupuesto anterior. Usa el destino verdadero. Introducir otro país o un código inventado puede mostrar una ruta sin demostrar que entregue en tu dirección.",
+            "Lee las limitaciones territoriales y los tipos de dirección excluidos. Una ruta que sirve a un país puede no cubrir todos sus códigos postales. Si no hay explicación, pregunta si el destino está cubierto para la mercancía real. Mantén datos privados en el canal oficial y facilita solo lo necesario para esa consulta."
+          ]
+        },
+        {
+          "heading": "3. Examinar las restricciones de la mercancía",
+          "paragraphs": [
+            "Cada producto puede tener restricciones distintas. Los avisos USFans mencionan mercancía, logística, peso, volumen y destino, y recomiendan consultar antes de comprar ciertos tipos de artículos. Un componente particular puede reducir las opciones. Revisa descripción real y reglas de la línea, no solo una foto o una categoría amplia.",
+            "No elimines ni falsees una clasificación para forzar la aparición de una ruta. Si crees que está mal, pide una revisión con datos correctos. Agrupar no anula restricciones. Cuando los artículos no sean compatibles, consulta alternativas permitidas o un posible proceso de devolución, sin asumir que habrá necesariamente otra línea o reembolso."
+          ]
+        },
+        {
+          "heading": "4. Comparar peso, volumen y límites",
+          "paragraphs": [
+            "Una ruta puede limitar peso, dimensiones o composición. Compara los valores del paquete con sus condiciones actuales. En un servicio volumétrico, el tamaño embalado puede importar más que el peso de báscula. Usa su fórmula: no hay un divisor único aplicable a todas las líneas. El peso estimado de un producto tampoco describe la caja final.",
+            "Si parece un problema de límites, pregunta si las medidas son estimadas o finales y si un cambio adecuado de embalaje ayudaría. Mantén la protección necesaria. Quitar una caja grande puede reducir volumen, mientras un artículo frágil puede necesitar refuerzo. No prometas ahorros con dimensiones desconocidas; confirma paquete resultante y rutas disponibles."
+          ]
+        },
+        {
+          "heading": "5. Probar una selección más pequeña y compatible",
+          "paragraphs": [
+            "Si puedes modificar el paquete, compara un grupo menor sin cambiar el destino real. Registra qué artículo retiras y cómo cambia la lista. Puede aislar una restricción o límite, pero el presupuesto solo sirve para esa selección. Una ruta disponible para una camiseta no valida el paquete original.",
+            "Antes de dividir envíos, compara coste completo y consecuencias: cargos mínimos repetidos, seguimientos independientes y distintas fechas de llegada. Comprueba vencimientos y opciones para lo que queda en almacén. Dividir es una herramienta de diagnóstico y planificación, no un ahorro automático. Entiende cómo saldrá el resto antes de presentar el primer paquete."
+          ]
+        },
+        {
+          "heading": "6. Hacer una consulta que soporte pueda investigar",
+          "paragraphs": [
+            "Facilita referencias, destino real, peso y medidas mostrados, mensaje y pruebas ya realizadas. Distingue entre una lista totalmente vacía y una línea ausente con otras disponibles. Pregunta qué restricción aplica y qué paso permitido existe para ese paquete.",
+            "Expón los hechos en orden: selección, destino, valores, mensaje y resultado tras retirar un producto. No incluyas contraseñas ni códigos. Si soporte identifica una interrupción temporal, pregunta cuándo y dónde consultar actualizaciones sin convertir una previsión informal en una fecha garantizada de reapertura."
+          ]
+        },
+        {
+          "heading": "7. Comprobar la oferta final antes de pagar",
+          "paragraphs": [
+            "Cuando aparezca una ruta adecuada, confirma que los productos y el destino siguen siendo correctos tras las pruebas. Lee restricciones, coste actual, seguimiento y plazo estimado. Comprueba embalaje y servicios adicionales. Poder seleccionar una ruta es el inicio de la evaluación, no una prueba de que sea la mejor para tus prioridades.",
+            "Guarda el resumen y atiende solicitudes posteriores. Si no hay una opción adecuada, aclara almacenamiento y posventa antes de sus respectivos vencimientos. No elijas por prisa una línea que no entiendes. Revisar destino, mercancía, medidas y agrupación produce una consulta clara incluso si el paquete no puede enviarse como estaba previsto.",
+            "Para documentar una prueba sin crear un envío, conserva el destino real, registra selección y mensaje iniciales y cambia un solo elemento permitido. Si aparece una ruta al quitar un artículo, comunica la observación sin dar la causa por probada: pueden influir composición, peso o volumen. Si nada cambia, restaura la selección prevista antes de pedir ayuda. Explica cualquier modificación posterior. Al comparar una división incluye ambos paquetes en el presupuesto y confirma una solución para lo restante, evitando que el primer envío deje un problema de almacenamiento o transporte pendiente. Conserva el registro hasta completar la entrega para relacionar futuras dudas con el paquete que realmente pagaste."
+          ]
+        }
+      ],
+      "sources": [
+        {
+          "label": "Guía oficial de USFans",
+          "url": "https://www.usfans.com/beginner-guide"
+        },
+        {
+          "label": "Ayuda sobre rutas USFans",
+          "url": "https://www.usfans.com/help/HCON_STATIC_049"
+        },
+        {
+          "label": "Avisos de compra y envío USFans",
+          "url": "https://www.usfans.com/product/1/897643733710"
+        },
+        {
+          "label": "Peso facturable estimado y real",
+          "url": "https://www.usfans.com/help/HCON_STATIC_053"
+        }
+      ],
+      "related": [
+        "usfans-shipping-cost-guide",
+        "usfans-warehouse-storage-deadlines",
+        "usfans-warehouse-consolidation"
+      ],
+      "datePublished": "2026-10-30",
+      "dateModified": "2026-10-30"
+    }
+  ],
+  "categoryPages": {
+    "shoes": {
+      "title": "Zapatillas USFans: enlaces de productos y tallas",
+      "intro": "Compara zapatillas, fotos del vendedor y precios estimados. Confirma modelo, tabla de tallas y envío en USFans antes de comprar.",
+      "sections": [
+        {
+          "heading": "Comparar el modelo y la talla exactos",
+          "paragraphs": [
+            "Relaciona modelo y color con su tabla. Longitud del pie, plantilla y suela exterior son medidas diferentes. Compara un par cómodo y pregunta por las medidas necesarias antes de confiar en una conversión de etiqueta."
+          ]
+        },
+        {
+          "heading": "Planificar caja y paquete",
+          "paragraphs": [
+            "Las fotos del vendedor no son QC de tu pedido. Revisa el par recibido y decide si la caja importa para protección o almacenamiento. El embalaje cambia el volumen: consulta la oferta real en lugar de suponer un coste fijo."
+          ]
+        }
+      ],
+      "related": [
+        "usfans-sizing-shoes-clothing",
+        "usfans-qc-photo-checklist",
+        "usfans-shipping-cost-guide"
+      ]
+    },
+    "hoodies-sweaters": {
+      "title": "Sudaderas USFans: enlaces, precios y ajuste",
+      "intro": "Explora sudaderas y jerséis. Compara medidas, materiales, fotos y costes del paquete antes de elegir un pedido USFans.",
+      "sections": [
+        {
+          "heading": "Usar medidas de la prenda",
+          "paragraphs": [
+            "Compara ancho de pecho en plano, largo, hombros y mangas con una prenda similar. Comprueba si la tabla mide cuerpo o producto. Corte amplio, hombro caído y elasticidad cambian el ajuste aunque la talla resulte familiar."
+          ]
+        },
+        {
+          "heading": "Revisar antes de agrupar el paquete",
+          "paragraphs": [
+            "Confirma color y talla y revisa las fotos del artículo recibido. Pide medidas específicas cuando sean necesarias. Varias sudaderas voluminosas afectan las dimensiones: compara embalaje y límites antes de asumir que agrupar reduce el coste."
+          ]
+        }
+      ],
+      "related": [
+        "usfans-sizing-shoes-clothing",
+        "usfans-qc-photo-checklist",
+        "usfans-shipping-cost-guide"
+      ]
+    },
+    "jersey": {
+      "title": "Camisetas deportivas USFans: enlaces, tallas y detalles",
+      "intro": "Explora camisetas deportivas y compara tallas, fotos y opciones. Revisa estampados y precio actual en USFans antes de pedir.",
+      "sections": [
+        {
+          "heading": "Relacionar versión y tabla de tallas",
+          "paragraphs": [
+            "Confirma corte, talla y opción de impresión. Las versiones pueden tener medidas distintas. Compara pecho y largo con una prenda similar y guarda las instrucciones de personalización como referencia para QC."
+          ]
+        },
+        {
+          "heading": "Revisar impresión y condiciones de devolución",
+          "paragraphs": [
+            "Comprueba letras, números, posición y costuras en las fotos de tu artículo en almacén. La galería del vendedor no verifica tu unidad. Confirma condiciones de opciones personalizadas y rutas disponibles para el paquete completo."
+          ]
+        }
+      ],
+      "related": [
+        "usfans-sizing-shoes-clothing",
+        "usfans-qc-photo-checklist",
+        "usfans-shipping-cost-guide"
       ]
     }
-  ]
+  }
 }

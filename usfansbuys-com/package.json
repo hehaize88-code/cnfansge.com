@@ -8,7 +8,8 @@
     "build": "astro build && node scripts/build-worker.mjs",
     "check": "node scripts/check.mjs",
     "deploy": "npm run build && wrangler deploy",
-    "check:production": "node scripts/check-production.mjs"
+    "check:production": "node scripts/check-seo.mjs && node scripts/check-production.mjs",
+    "check:seo": "node scripts/check-seo.mjs"
   },
   "dependencies": {
     "astro": "7.4.2",

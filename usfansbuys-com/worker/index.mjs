@@ -1,3 +1,4 @@
+import {categorySlugs,catalogSeo,renderPagination,paginateHead} from '../src/lib/catalog-seo.mjs';
 import {readCatalog,readProduct,SourceError} from '../src/lib/source.mjs';
 import {cards,hero,product,errorBox} from '../public/render.js';
 import {assets,ui,isPreview} from '../generated/assets.mjs';
@@ -14,14 +15,21 @@ export default {async fetch(request){
  if(!asset){asset=assets['/404.html'];status=404;}if(!asset)return new Response('Not found',{status:404});
  if(asset.encoding==='base64'){const bin=Uint8Array.from(atob(asset.body),c=>c.charCodeAt(0));return new Response(request.method==='HEAD'?null:bin,{status,headers:{'Content-Type':asset.type,'Cache-Control':'public,max-age=86400'}});}
  let body=asset.body;const {lang,path}=resolvePath(url.pathname);const t=ui[lang]?.ui||ui.en.ui;
- if(asset.type.startsWith('text/html')&&status===200&&['','spreadsheet','finds','product'].includes(path)){
+ const category=path.startsWith('category/')&&categorySlugs.includes(path.split('/')[1])?path.split('/')[1]:null;
+ const isCatalog=['spreadsheet','finds'].includes(path)||Boolean(category);
+ const seo=catalogSeo(url,isCatalog);
+ if(['spreadsheet','finds'].includes(path)&&categorySlugs.includes(url.searchParams.get('category'))&&!url.searchParams.has('q')){const dest=new URL(url);dest.pathname=(lang==='en'?'':'/'+lang)+'/category/'+url.searchParams.get('category')+'/';dest.searchParams.delete('category');return Response.redirect(dest.href,301);}
+ if(isCatalog&&!seo.noindex&&url.searchParams.get('page')==='1'){url.searchParams.delete('page');return Response.redirect(url.href,301);}
+ if(asset.type.startsWith('text/html')&&isCatalog&&!seo.noindex)body=paginateHead(body,seo.canonicalQuery);
+ if(asset.type.startsWith('text/html')&&status===200&&(['','product'].includes(path)||isCatalog)){
   let data;
   try{
    const signal=AbortSignal.any([request.signal,AbortSignal.timeout(14000)]);
    if(path==='product'){data=await readProduct(url.searchParams.get('id'),signal);body=body.replace(/<!--product-start-->[\s\S]*?<!--product-end-->/,()=>product(data,t,lang));}
-   else {data=await readCatalog(path===''?{sort:'latest',pageSize:4}:Object.fromEntries(url.searchParams),signal);body=body.replace(/<!--catalog-start-->[\s\S]*?<!--catalog-end-->/,()=>data.products.length?cards(path===''?data.products.slice(0,4):data.products,t,lang):`<p class="loading-box">${t.noResults}</p>`);if(path===''&&data.products[0])body=body.replace(/<!--hero-start-->[\s\S]*?<!--hero-end-->/,()=>hero(data.products[0],t,lang));}
+   else {data=await readCatalog(path===''?{sort:'latest',pageSize:4}:{...Object.fromEntries(url.searchParams),...(category?{category}:{}),page:seo.page},signal);if(isCatalog){body=renderPagination(body,data,url);if(seo.page>1&&!data.products.length)status=404;}body=body.replace(/<!--catalog-start-->[\s\S]*?<!--catalog-end-->/,()=>data.products.length?cards(path===''?data.products.slice(0,4):data.products,t,lang):`<p class="loading-box">${t.noResults}</p>`);if(path===''&&data.products[0])body=body.replace(/<!--hero-start-->[\s\S]*?<!--hero-end-->/,()=>hero(data.products[0],t,lang));}
   }catch(e){data={error:'SOURCE_UNAVAILABLE'};if(path==='product'){status=e.status===400?404:(e.status||502);body=body.replace(/<!--product-start-->[\s\S]*?<!--product-end-->/,()=>errorBox(t,t.productMissing));}else{if(path!=='')status=e.status||502;body=body.replace(/<!--catalog-start-->[\s\S]*?<!--catalog-end-->/,()=>errorBox(t));if(path==='')body=body.replace(/<!--hero-start-->[\s\S]*?<!--hero-end-->/,()=>errorBox(t));}}
   body=body.replace('</body>',`<script type="application/json" id="initial-data">${JSON.stringify(data).replace(/</g,'\\u003c')}</script></body>`);
  }
- return new Response(request.method==='HEAD'?null:body,{status,headers:{'Content-Type':asset.type,'Cache-Control':status===200?(asset.type.startsWith('text/html')?'public,max-age=60':'public,max-age=3600'):'no-store','X-Content-Type-Options':'nosniff','Referrer-Policy':'strict-origin-when-cross-origin',...(asset.type.startsWith('text/html')&&(isPreview||path==='product'||url.search)?{'X-Robots-Tag':isPreview?'noindex,nofollow':'noindex,follow'}:{})}});
+ if(asset.type.startsWith('text/html')&&(isPreview||['product','image-search'].includes(path)||seo.noindex))body=body.replace('content="index,follow"','content="noindex,follow"');
+ return new Response(request.method==='HEAD'?null:body,{status,headers:{'Content-Type':asset.type,'Cache-Control':status===200?(asset.type.startsWith('text/html')?'public,max-age=60':'public,max-age=3600'):'no-store','X-Content-Type-Options':'nosniff','Referrer-Policy':'strict-origin-when-cross-origin',...(asset.type.startsWith('text/html')&&(isPreview||['product','image-search'].includes(path)||seo.noindex)?{'X-Robots-Tag':isPreview?'noindex,nofollow':'noindex,follow'}:{})}});
 }};

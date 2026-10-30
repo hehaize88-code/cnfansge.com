@@ -10,9 +10,9 @@ function shape(a,b,path='root'){
  else if(/\.(id|slug|source|url)$/.test(path))assert.equal(b,a,path);
 }
 for(let i=0;i<langs.length;i++){
- const d=data[i];shape(data[0],d,langs[i]);assert.equal(d.faq.length,28);assert.equal(d.articles.length,10);
- for(const a of d.articles){assert.equal(a.sections.length,7);assert.ok(a.sources.every(s=>['usfans.com','www.usfans.com'].includes(new URL(s.url).hostname)));}
- for(const path of ['', 'spreadsheet','finds','qc','guide','shipping','faq','articles','product','image-search',...d.articles.map(a=>'articles/'+a.slug)]){
+ const d=data[i];shape(data[0],d,langs[i]);assert.equal(d.faq.length,28);assert.equal(d.articles.length,13);
+ for(const a of d.articles){assert.ok(a.related.length);assert.ok(a.related.every(slug=>d.articles.some(x=>x.slug===slug)&&slug!==a.slug));assert.equal(a.sections.length,7);assert.ok(a.sources.every(s=>['usfans.com','www.usfans.com'].includes(new URL(s.url).hostname)));}
+ for(const path of ['', 'spreadsheet','finds','qc','guide','shipping','faq','articles','product','image-search',...Object.keys(d.categoryPages).map(c=>'category/'+c),...d.articles.map(a=>'articles/'+a.slug)]){
   const prefix=langs[i]==='en'?'':langs[i]+'/';const html=await fs.readFile(`generated/static/${prefix}${path?path+'/':''}index.html`,'utf8');const $=load(html);
   assert.equal($('html').attr('lang'),langs[i]);assert.equal($('h1').length,path==='product'?0:1);assert.equal($('link[hreflang]').length,6);assert.ok($('link[rel=canonical]').attr('href'));assert.ok($('meta[name=description]').attr('content'));assert.ok($('a[href="https://www.usfans.com/register"]').length>=1);
  }
@@ -26,4 +26,4 @@ const search=await call('/api/catalog?q=shoes');assert.equal(search.status,200);
 const detail=await call('/api/product?id=6681');assert.equal(detail.status,200);const d=JSON.parse(detail.body);assert.equal(d.buy,'https://www.usfans.com/product/3/7755101935?ref=SWD92F');assert.equal(d.qcVerified,false);
 const rendered=await call('/product/?id=6681');assert.equal(rendered.status,200);assert.ok(rendered.body.includes('7755101935?ref=SWD92F'));
 assert.equal((await call('/api/product?id=invalid')).status,400);assert.equal((await call('/missing/')).status,404);
-console.log('PASS: 100 locale routes; 28 FAQs and 10 full articles in each language; live source cards, page 10, price sort, search, product/gallery link, invalid requests.');
+console.log('PASS: 130 locale routes; 28 FAQs and 13 full articles in each language; live source cards, page 10, price sort, search, product/gallery link, invalid requests.');

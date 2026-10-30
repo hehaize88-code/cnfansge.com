@@ -54,7 +54,7 @@
     "sourceLoading": "Fetching current product details…",
     "qcUnavailable": "Verified warehouse QC photos are not available from this listing’s data source.",
     "imageSearch": "Search with an image",
-    "imageUnavailable": "Image search is not available in this preview because the product source has not exposed a verified image-search interface.",
+    "imageUnavailable": "Image search is currently unavailable. Search by product name or category instead.",
     "imageAlternative": "You can still search by product name, type or a distinctive detail.",
     "faqSearch": "Search questions…",
     "faqEmpty": "No matching questions. Try another word.",
@@ -76,7 +76,8 @@
     "copied": "Link copied",
     "copyFailed": "Copy unavailable. Use your browser’s address bar.",
     "gallery": "Gallery",
-    "qcTab": "QC status"
+    "qcTab": "QC status",
+    "reviewedLabel": "Reviewed"
   },
   "categories": {
     "all": "All finds",
@@ -96,7 +97,7 @@
     "eyebrow": "THE USFANS FIND FILE",
     "title": "USFans spreadsheet.",
     "titleAccent": "Find with a plan.",
-    "intro": "Explore product links, compare seller photos and prices, then open the right listing on USFans. A useful find starts with the details.",
+    "intro": "Find USFans product links for shoes, hoodies and jerseys. Compare seller photos and prices, then check sizing, QC and shipping before you order.",
     "featuredLabel": "FROM THE LATEST LISTINGS",
     "heroNote": "Real listings. Clear next steps.",
     "categoryTitle": "Start with what you’re looking for.",
@@ -121,20 +122,21 @@
     "journalTitle": "Know what happens next.",
     "journalIntro": "Practical guides to product links, sizing, QC and shipping. Read the part you need, when you need it.",
     "ctaTitle": "A smaller shortlist. A better decision.",
-    "ctaText": "Start with the full spreadsheet and keep the exact listing and selected option together."
+    "ctaText": "Start with the full spreadsheet and keep the exact listing and selected option together.",
+    "seoTitle": "USFans Spreadsheet & Buying Guides"
   },
   "pages": {
     "spreadsheet": {
-      "title": "The USFans spreadsheet",
+      "title": "USFans Spreadsheet: Search Product Links & Prices",
       "intro": "Search the full source directory, compare estimated USD prices and open individual listings. Categories, sorting and pagination use the source’s current results."
     },
     "finds": {
-      "title": "Fresh finds, worth a closer look.",
+      "title": "USFans Finds: Recently Added Product Links",
       "intro": "Browse the latest additions across the directory. These are recently added listings, not recommendations based on purchase testing or quality certification.",
       "note": "New does not mean checked. Review the seller gallery, selected variant and live price before ordering."
     },
     "qc": {
-      "title": "Look closer before you ship.",
+      "title": "USFans QC Photos: What to Check Before Shipping",
       "intro": "QC photos help you review the item that reached the warehouse. Keep them separate from seller photos, and connect every image to the exact order and option.",
       "sections": [
         {
@@ -162,7 +164,7 @@
       "article": "usfans-qc-photo-checklist"
     },
     "guide": {
-      "title": "Your first USFans order, in focus.",
+      "title": "How to Buy on USFans: Your First Order Guide",
       "intro": "Finding an item, purchasing it and shipping a parcel are separate decisions. Use the official workflow and check the details at each handoff.",
       "sections": [
         {
@@ -197,7 +199,7 @@
       "article": "usfans-first-order-checklist"
     },
     "shipping": {
-      "title": "Plan the parcel, not just the price.",
+      "title": "USFans Shipping: Costs, Routes & Tracking",
       "intro": "An item’s listed price is only one part of the total. Review domestic delivery, parcel weight, packed dimensions and the actual route quote before committing to international shipping.",
       "sections": [
         {
@@ -232,12 +234,12 @@
       "article": "usfans-shipping-cost-guide"
     },
     "faq": {
-      "title": "Useful answers, before you order.",
+      "title": "USFans FAQ: Payments, QC, Storage & Shipping",
       "intro": "Answers based on USFans’ official beginner guide and Help Center, plus the way this independent directory works. Current terms and order-specific choices remain on USFans."
     },
     "articles": {
-      "title": "The buying guide library.",
-      "intro": "Ten practical guides for the decisions between finding a product and receiving a parcel. Start with the spreadsheet, then choose the step you need."
+      "title": "USFans Buying Guides: Sizing, Fees, QC & Shipping",
+      "intro": "13 practical USFans guides covering product links, sizing, QC, payments, storage and shipping. Choose the step you need and continue with a related guide."
     },
     "image-search": {
       "title": "Search by a product detail.",
@@ -360,16 +362,16 @@
     {
       "id": "detailed-photos",
       "q": "Can I request close-up or measurement photos?",
-      "a": "USFans offers a paid Detailed Photo service for specific angles, details or measurements. Identify the item and describe each requested view clearly. The official page also says blurred standard images can be raised for a retake; confirm current options and charges in your account.",
+      "a": "Ask whether additional close-up or measurement photos are available for your order and confirm any charge first. Specify the item, view and measurement endpoints. If a standard image is unclear, request clarification rather than assuming it proves the item’s condition.",
       "source": "https://www.usfans.com/help/HCON_STATIC_059",
       "sourceTitle": "USFans Detailed Photo"
     },
     {
       "id": "storage",
       "q": "How long can goods remain in the USFans warehouse?",
-      "a": "The current storage help page states 90 days for purchasing-agent parcels and 60 days for forwarding parcels, counted from Warehoused status. Check your own storage deadline and arrange shipment promptly; goods left beyond the applicable period may be treated as abandoned.",
-      "source": "https://www.usfans.com/help/HCON_STATIC_071",
-      "sourceTitle": "How long can the goods be stored in the USFans warehouse?"
+      "a": "The official beginner guide advertises 90 days of free storage. Check the deadline and applicable service conditions for each item in your account; do not assume forwarding orders use the same period. Ask support about unclear dates or extension terms before the deadline.",
+      "source": "https://www.usfans.com/beginner-guide",
+      "sourceTitle": "USFans beginner guide"
     },
     {
       "id": "combine-orders",
@@ -395,7 +397,7 @@
     {
       "id": "no-route",
       "q": "What if no shipping route is available?",
-      "a": "Open the route’s View Reason information and contact USFans support to clarify the restriction. The available list is filtered by item attributes and mailing restrictions. Do not assume that a route offered for another product is suitable for yours.",
+      "a": "Check the unavailable-route explanation shown in your account. Confirm the actual destination, item restrictions, weight and packed dimensions. Ask support which restriction applies; do not change the destination or misstate the goods to force a route to appear.",
       "source": "https://www.usfans.com/help/HCON_STATIC_049",
       "sourceTitle": "What if there are no routes to choose from when submitting a parcel for delivery?"
     },
@@ -516,6 +518,12 @@
           "label": "USFans official help center",
           "url": "https://www.usfans.com/help"
         }
+      ],
+      "datePublished": "2026-10-26",
+      "dateModified": "2026-10-26",
+      "related": [
+        "usfans-first-order-checklist",
+        "usfans-shipping-cost-guide"
       ]
     },
     {
@@ -602,12 +610,18 @@
           "label": "USFans inspection scope",
           "url": "https://www.usfans.com/help/HCON_STATIC_047"
         }
+      ],
+      "datePublished": "2026-10-26",
+      "dateModified": "2026-10-26",
+      "related": [
+        "usfans-first-order-checklist",
+        "usfans-shipping-cost-guide"
       ]
     },
     {
       "slug": "usfans-qc-photo-checklist",
-      "title": "USFans QC Photos: A Practical Checklist Before International Shipping",
-      "description": "Learn what USFans QC photos can show, how to verify item identity, compare measurements and request a specific missing view before shipping.",
+      "title": "USFans QC Photos: Checklist & Measurement Requests",
+      "description": "Check USFans warehouse QC photos for the right item, size and visible defects. Use clear requests for missing details before shipping.",
       "category": "QC and sizing",
       "keywords": [
         "usfans qc",
@@ -622,7 +636,36 @@
           "paragraphs": [
             "Begin by asking where the image came from. A seller gallery, a historical QC reference and photographs of your own warehouse order should not be treated as the same thing. Seller pictures can help explain the intended design. A historical reference may show one previously photographed item. Your own order photographs are the relevant starting point for checking the item associated with your purchase. Keep those distinctions visible when saving or comparing images.",
             "Match the record to the marketplace, product ID, selected option and quantity. A similar-looking product from the same seller is not enough. Check whether the photos show the color and size you selected, rather than assuming a matching thumbnail proves the whole order. If a gallery has no clear association with a listing, use it as inspiration at most. A credible QC review begins with an identity match, not with confidence inspired by an attractive picture."
-          ]
+          ],
+          "table": {
+            "headers": [
+              "What to compare",
+              "Evidence to collect",
+              "Useful next step"
+            ],
+            "rows": [
+              [
+                "Item and option",
+                "Order reference, color and size label",
+                "Compare your received item with your actual order"
+              ],
+              [
+                "Visible condition",
+                "Overall view and close-up of the concern",
+                "Describe the exact mark, seam or mismatch"
+              ],
+              [
+                "Sizing uncertainty",
+                "Flat garment or relevant shoe measurement",
+                "Confirm service availability and cost before requesting"
+              ],
+              [
+                "Missing information",
+                "Which decision the extra view would answer",
+                "Keep the item out of an international parcel until resolved"
+              ]
+            ]
+          }
         },
         {
           "heading": "2. Review the whole item before small details",
@@ -685,6 +728,12 @@
           "label": "USFans Detailed Photo service",
           "url": "https://www.usfans.com/help/HCON_STATIC_059"
         }
+      ],
+      "datePublished": "2026-10-26",
+      "dateModified": "2026-10-30",
+      "related": [
+        "usfans-sizing-shoes-clothing",
+        "usfans-returns-refunds-guide"
       ]
     },
     {
@@ -772,6 +821,11 @@
           "label": "USFans estimated and actual billing weight",
           "url": "https://www.usfans.com/help/HCON_STATIC_053"
         }
+      ],
+      "datePublished": "2026-10-26",
+      "dateModified": "2026-10-26",
+      "related": [
+        "usfans-first-order-checklist"
       ]
     },
     {
@@ -856,6 +910,12 @@
           "label": "USFans official beginner guide",
           "url": "https://www.usfans.com/beginner-guide"
         }
+      ],
+      "datePublished": "2026-10-26",
+      "dateModified": "2026-10-26",
+      "related": [
+        "usfans-first-order-checklist",
+        "usfans-shipping-cost-guide"
       ]
     },
     {
@@ -940,12 +1000,18 @@
           "label": "USFans receiving-parcel guidance",
           "url": "https://www.usfans.com/help/HCON_STATIC_065"
         }
+      ],
+      "datePublished": "2026-10-26",
+      "dateModified": "2026-10-26",
+      "related": [
+        "usfans-fees-payment-methods",
+        "usfans-qc-photo-checklist"
       ]
     },
     {
       "slug": "usfans-sizing-shoes-clothing",
-      "title": "USFans Sizing: Compare Shoes and Clothing With Measurements",
-      "description": "Use a familiar garment, a clear size chart and targeted warehouse measurements to make better sizing decisions on USFans.",
+      "title": "USFans Sizing: Shoe & Clothing Measurements Checklist",
+      "description": "Compare USFans size charts with flat garment measurements and shoe references. Use the checklist to request useful warehouse measurements.",
       "category": "Sizing",
       "keywords": [
         "usfans sizing",
@@ -960,7 +1026,36 @@
             "Start with the way you intend to wear the item. A close-fitting layer, a roomy sweatshirt worn over other clothing and a structured jacket have different requirements even if their labels are identical. Write down the areas where fit matters most: chest movement, sleeve reach, shoulder position, waist, rise or leg opening. Prioritising a few dimensions is more useful than collecting every possible measurement without knowing what decision it will support.",
             "Describe the preferred result in ordinary terms. For example, you may want sleeves that stay at your wrists when reaching forward, enough room for a second layer or trousers that sit comfortably at a chosen waist height. These are personal requirements, not universal rules. Avoid converting them immediately into advice such as always sizing up. That shortcut hides the actual issue and can improve one dimension while making another worse.",
             "The same approach applies to shoes. Consider intended socks, the activities you expect and whether your main difficulty with familiar footwear is length, width, toe shape or instep pressure. Length alone cannot resolve every fit question."
-          ]
+          ],
+          "table": {
+            "headers": [
+              "What to compare",
+              "Evidence to collect",
+              "Useful next step"
+            ],
+            "rows": [
+              [
+                "Flat chest width",
+                "Same garment type; tape underarm to underarm",
+                "Compare flat width with flat width, not body circumference"
+              ],
+              [
+                "Body or sleeve length",
+                "Matching starting seam and endpoint",
+                "Ask for a photo showing both tape endpoints"
+              ],
+              [
+                "Shoe length",
+                "Identify foot, insole or outsole measurement",
+                "Confirm the measurement type before comparing sizes"
+              ],
+              [
+                "Selected size",
+                "Order variant and received label",
+                "Document a wrong option separately from a fit preference"
+              ]
+            ]
+          }
         },
         {
           "heading": "2. Measure a reference item that already works",
@@ -1024,6 +1119,12 @@
           "label": "USFans return and exchange rules",
           "url": "https://www.usfans.com/help/HCON_STATIC_029"
         }
+      ],
+      "datePublished": "2026-10-26",
+      "dateModified": "2026-10-30",
+      "related": [
+        "usfans-qc-photo-checklist",
+        "usfans-returns-refunds-guide"
       ]
     },
     {
@@ -1108,12 +1209,18 @@
           "label": "USFans beginner guide",
           "url": "https://www.usfans.com/beginner-guide"
         }
+      ],
+      "datePublished": "2026-10-26",
+      "dateModified": "2026-10-26",
+      "related": [
+        "usfans-first-order-checklist",
+        "usfans-shipping-cost-guide"
       ]
     },
     {
       "slug": "usfans-shipping-tracking-status",
-      "title": "USFans Tracking: Understand Order, Warehouse and Parcel Updates",
-      "description": "Learn which USFans reference to follow, what tracking events establish, and how to ask a useful question when a shipment needs attention.",
+      "title": "USFans Tracking Status: Order, Warehouse & Parcel Help",
+      "description": "Find the next step for USFans order, warehouse and parcel tracking updates. Separate an unshipped order from a parcel without new scans.",
       "category": "Shipping",
       "keywords": [
         "usfans tracking",
@@ -1128,7 +1235,36 @@
             "Create a small private reference list for the purchase. Label the product identifier as the item you selected, the order reference as the purchasing transaction and the parcel reference as the group eventually shipped to you. If the seller's domestic tracking number is available, label it separately. Clear names prevent you from following a completed seller delivery while wondering why your international parcel appears to have stopped moving.",
             "Record which items belong to each parcel. If you split warehouse goods into two shipments, they can have different references and different progress. A delivered status for one does not establish what happened to the other. Likewise, a single product order can involve questions that should be raised through its order enquiry rather than through an unrelated parcel conversation.",
             "When asking for help, include only the reference needed for the issue. Keep addresses, payment records and full account details out of public posts. A private support conversation can provide the necessary context without broadcasting information that other shoppers do not need to diagnose a general tracking question."
-          ]
+          ],
+          "table": {
+            "headers": [
+              "What to compare",
+              "Evidence to collect",
+              "Useful next step"
+            ],
+            "rows": [
+              [
+                "Seller stage",
+                "Order status and any seller dispatch reference",
+                "Ask about that order; international tracking may not exist yet"
+              ],
+              [
+                "Warehouse stage",
+                "Arrival, inspection and storage information",
+                "Check pending photos, measurements or support requests"
+              ],
+              [
+                "Parcel stage",
+                "Parcel number, route and latest dated scan",
+                "Compare the platform record with the carrier record"
+              ],
+              [
+                "No recent scan",
+                "Last event, date and carrier message",
+                "Ask for investigation without assuming loss or a fixed delay"
+              ]
+            ]
+          }
         },
         {
           "heading": "2. Read purchasing and warehouse stages separately",
@@ -1196,12 +1332,18 @@
           "label": "USFans: receiving-parcel guidance",
           "url": "https://www.usfans.com/help/HCON_STATIC_065"
         }
+      ],
+      "datePublished": "2026-10-26",
+      "dateModified": "2026-10-30",
+      "related": [
+        "usfans-no-shipping-routes",
+        "usfans-shipping-cost-guide"
       ]
     },
     {
       "slug": "usfans-returns-refunds-guide",
-      "title": "USFans Returns and Refunds: Prepare a Clear After-Sales Request",
-      "description": "Understand the checks behind a USFans return or refund request, preserve useful evidence and separate warehouse issues from delivered-parcel problems.",
+      "title": "USFans Returns & Refunds: Steps, Evidence & Balance Credits",
+      "description": "Prepare a USFans return or refund request with the right evidence. Understand seller decisions, warehouse returns and balance credits.",
       "category": "After-sales",
       "keywords": [
         "usfans returns",
@@ -1216,7 +1358,36 @@
             "Start by writing one sentence that describes the mismatch. State what was ordered, what the available evidence shows and where the item is now. For example, a hypothetical order might specify one colour while the warehouse label and photographs appear to show another. That is a clearer starting point than a general statement that the product is bad. If the concern is that you no longer want it, describe that honestly as a preference rather than inventing a defect.",
             "Then establish the stage: purchasing, seller dispatch, warehouse processing, stored, packed for international shipment or delivered to you. The available next action can depend on that stage. Do not assume a cancellation request and a warehouse return follow the same process, or that a delivered-parcel issue can be handled like a seller exchange before export.",
             "Keep the correct order or parcel reference beside the description. If several items are involved, list them separately. One damaged product should not be confused with a claim that an entire parcel is missing, and an issue with one option should not obscure the status of the other goods."
-          ]
+          ],
+          "table": {
+            "headers": [
+              "What to compare",
+              "Evidence to collect",
+              "Useful next step"
+            ],
+            "rows": [
+              [
+                "Wrong item or variant",
+                "Order option and clear warehouse photos",
+                "Raise the mismatch before international shipment"
+              ],
+              [
+                "Change of mind or fit",
+                "Seller conditions and item status",
+                "Confirm eligibility; do not assume automatic acceptance"
+              ],
+              [
+                "Shipping adjustment",
+                "Estimated bill, final bill and balance entry",
+                "Distinguish a balance credit from an external refund"
+              ],
+              [
+                "Delivered parcel issue",
+                "Packaging, affected items and parcel reference",
+                "Contact parcel after-sales promptly and retain evidence"
+              ]
+            ]
+          }
         },
         {
           "heading": "2. Read the applicable conditions before making changes",
@@ -1284,7 +1455,346 @@
           "label": "USFans parcel after-sales considerations",
           "url": "https://www.usfans.com/help/HCON_STATIC_068"
         }
+      ],
+      "datePublished": "2026-10-26",
+      "dateModified": "2026-10-30",
+      "related": [
+        "usfans-qc-photo-checklist",
+        "usfans-fees-payment-methods"
+      ]
+    },
+    {
+      "slug": "usfans-fees-payment-methods",
+      "title": "USFans Fees & Payment Methods: Work Out Your Total Cost",
+      "description": "Understand USFans item payments, shipping deposits, payment methods and balance refunds before you commit to an order.",
+      "category": "Payments",
+      "keywords": [
+        "usfans fees",
+        "usfans payment methods",
+        "usfans shipping deposit",
+        "usfans paypal"
+      ],
+      "intro": "Your first USFans payment is usually not the complete cost of receiving an order. The official beginner guide separates buying the goods from submitting the international parcel. This matters when comparing a low item price with your actual spending limit: domestic delivery, parcel shipping and selected services still need a place in the calculation. Use this guide to build a complete budget, compare the payment options offered to you and keep an estimated shipping deposit separate from the final bill. It does not quote a universal commission or promise that a particular payment method is available for every account.",
+      "sections": [
+        {
+          "heading": "1. Separate the two main payment stages",
+          "paragraphs": [
+            "At the purchase stage, identify the selected variant price, quantity and domestic delivery charge. A spreadsheet price helps you shortlist products, but the live checkout is the relevant amount for the version you actually chose. Save the item number and selected option alongside that amount. If several listings look similar, those details prevent you from comparing one size or quantity with another by accident.",
+            "International shipping is a later decision. After goods reach the warehouse, you choose the items in a parcel, destination, packaging and an eligible route. The official guide describes the shipping payment as an estimate that is checked against the eventual parcel measurements. Paying for a shirt does not reserve a particular international shipping price. Before buying, leave enough budget for this second stage and confirm that the goods can travel to your destination."
+          ]
+        },
+        {
+          "heading": "2. Build a cost sheet without counting a charge twice",
+          "paragraphs": [
+            "Use separate lines for goods, Chinese domestic delivery, international delivery, optional services and any payment charge displayed at checkout. Keep destination duties or taxes as a separate uncertainty unless the selected route explicitly explains their treatment. Do not assume that a route name, a seller comment or a low shipping quote includes every possible destination charge. The calculation should describe the quote you have, with its exclusions still visible.",
+            "For a purely illustrative budget, suppose goods cost CNY 200, domestic delivery CNY 10, estimated international delivery CNY 120 and selected packing CNY 15. The subtotal is CNY 345 before other applicable charges; these numbers are not USFans prices. If packing is already included in the shipping total, adding it again would overstate the budget. Read the breakdown, label estimates and record the currency. Keep the original amount when a payment provider also shows a converted amount."
+          ]
+        },
+        {
+          "heading": "3. Check fees for the service you are actually using",
+          "paragraphs": [
+            "Avoid treating a fee quoted for one service as a platform-wide rate. The official service agreement describes agency purchasing and other merchant or forwarding arrangements separately. Their scope matters. A sentence saying an agency service is currently free cannot establish that every order, parcel, payment or optional service is free. Equally, a percentage attached to a different service is not automatically your purchasing commission.",
+            "Before payment, compare the current fee explanation with your order summary. Ask support to identify any unexplained charge by name, what it applies to and whether it is already included in the displayed total. Save the answer with the order record. A useful question is specific: does this line apply to the purchase amount, the shipment or an optional service? Do not import a fee percentage from a competitor or an old screenshot into your own calculation."
+          ]
+        },
+        {
+          "heading": "4. Compare the payment options shown in your checkout",
+          "paragraphs": [
+            "The beginner guide names PayPal, cards and Google Pay as examples. Your actual checkout determines which options are available for the account, currency and transaction. Compare the total payable, the currency being charged and any separately displayed processing cost. An option mentioned in a guide may not appear in every situation. If one is missing, check the current payment page or ask support instead of repeatedly creating new orders.",
+            "When comparing currencies, distinguish the site balance, the checkout currency and the amount charged by your payment provider. A displayed conversion does not guarantee that your card provider uses the same rate. Review the provider's own confirmation before approving payment. Never send card details, account passwords or verification codes in an ordinary support message. If a payment appears pending, check its transaction status before attempting it again so that a slow confirmation does not become a duplicate payment."
+          ]
+        },
+        {
+          "heading": "5. Understand shipping deposits and the final adjustment",
+          "paragraphs": [
+            "USFans explains that estimated billing weight includes the goods with their original packaging and an allowance for outer packaging. Final billing uses the packed measurements recorded by the warehouse, subject to a carrier adjustment where applicable. For a volumetric route, a bulky parcel can be billed above its scale weight. This is why reducing unnecessary volume may change a quote, while simply counting the number of items cannot predict the final charge.",
+            "The detailed billing-weight help page says that a higher actual bill can require an additional payment. It describes a balance credit when the estimate exceeds the actual bill by more than the continued-weight unit, with the stated credit timing tied to shipment. That is not an unconditional promise to refund every small difference to your original payment method. Compare the estimated and final weight, route billing steps and recorded adjustments before concluding that a balance movement is incorrect."
+          ]
+        },
+        {
+          "heading": "6. Keep balance credits separate from payment refunds",
+          "paragraphs": [
+            "A shipping adjustment credited to your USFans balance and a refund to an external payment account are different outcomes. The balance may be available for later platform spending, but that does not establish withdrawal eligibility, a withdrawal fee or a transfer time. Check the applicable process before relying on money returning to a bank or payment wallet by a particular date. A product return also has its own seller and order conditions.",
+            "Keep three records together when something seems wrong: the order or parcel amount, the payment transaction and the balance entry. Note the currency and date on each. An item refund, a shipping adjustment and a new top-up may appear close together while referring to different actions. Ask support about the specific unmatched entry, and redact unrelated personal information from screenshots. A short, traceable explanation is easier to resolve than a list of totals with no transaction references."
+          ]
+        },
+        {
+          "heading": "7. Make the final budget check before submitting",
+          "paragraphs": [
+            "Before buying, confirm the variant and quantity, the first payment total, the likely second payment and your maximum delivered-cost budget. Before shipping, replace the rough estimate with the routes offered for the actual stored goods, selected packaging and destination. Read the inclusions and restrictions, then leave room for any still-unconfirmed charge. If the order only works financially when every estimate lands at its lowest value, it may not fit your budget.",
+            "After dispatch, compare the final parcel statement with your saved estimate and record any extra payment or credit. Use the result as a reference for a comparable future parcel, not a fixed per-kilogram rate for all orders. Different dimensions, restrictions, routes and currencies can change the outcome. Keeping a small cost sheet gives you a practical answer to how much USFans costs for your order, while leaving current prices and payment decisions with the actual checkout.",
+            "A useful payment check answers three questions in writing: what am I paying for now, which costs remain unquoted, and where would an adjustment be credited? For a first order, keep a simple receipt folder containing the selected listing, the purchase summary and the eventual parcel summary. Compare amounts in the same currency before calculating a difference. If you choose to fund an account balance, check the amount needed instead of assuming that a larger top-up improves the shipping price. Ask about a disputed charge before making another payment intended to cancel it out. A second transaction does not explain the first one and can make the record harder to reconcile."
+          ]
+        }
+      ],
+      "sources": [
+        {
+          "label": "USFans beginner guide",
+          "url": "https://www.usfans.com/beginner-guide"
+        },
+        {
+          "label": "USFans service agreement",
+          "url": "https://www.usfans.com/page/serviceAgreement"
+        },
+        {
+          "label": "Estimated and actual billing weight",
+          "url": "https://www.usfans.com/help/HCON_STATIC_053"
+        }
+      ],
+      "related": [
+        "usfans-shipping-cost-guide",
+        "usfans-returns-refunds-guide",
+        "usfans-first-order-checklist"
+      ],
+      "datePublished": "2026-10-30",
+      "dateModified": "2026-10-30"
+    },
+    {
+      "slug": "usfans-warehouse-storage-deadlines",
+      "title": "USFans Warehouse Storage: Free Period, Deadlines & Shipping Plan",
+      "description": "Plan USFans warehouse storage around each item’s deadline, QC review and parcel readiness without assuming every service uses the same rules.",
+      "category": "Warehouse",
+      "keywords": [
+        "usfans warehouse storage",
+        "usfans free storage",
+        "usfans storage deadline",
+        "usfans warehouse"
+      ],
+      "intro": "USFans storage gives you time to inspect purchases and decide which goods to ship together. It should be part of a parcel plan, not a reason to postpone every decision until the last day. The official beginner guide advertises 90 days of free storage. For a particular item, however, check the dates and service conditions shown in your own account; do not calculate an irreversible deadline from a general article alone. This guide explains how to keep a useful storage record, protect time for QC questions and decide when waiting for another purchase stops being worthwhile.",
+      "sections": [
+        {
+          "heading": "1. Check the free-storage statement against your item record",
+          "paragraphs": [
+            "The 90-day statement in the beginner guide is a useful starting point for purchased goods. It does not prove that every forwarding arrangement, special item or future policy uses an identical period. Look for the storage information associated with the exact order and ask support if the applicable start date or expiry is unclear. Do not assume that a seller's dispatch date, carrier delivery scan and warehouse storage date are interchangeable.",
+            "Record the displayed deadline rather than replacing it with your own guess. If you cannot find one, ask which event starts the storage period, what date applies to that item and whether any different service terms are relevant. This is especially important when goods arrive in separate deliveries. A general promise of free storage is not confirmation that every piece in a future combined parcel expires on the same day."
+          ]
+        },
+        {
+          "heading": "2. Keep an item-level warehouse calendar",
+          "paragraphs": [
+            "Create one row per stored item with the order reference, selected option, visible warehouse status, displayed deadline and the next action you need to take. Add whether QC has been reviewed and whether a return or measurement request is unresolved. Keep this record in your own notes; there is no need to share account information publicly. Sorting it by deadline makes the oldest unresolved decision visible before it becomes urgent.",
+            "Set a personal reminder with enough time for clarification, packing and route selection. For example, you might review items two weeks before the displayed expiry and again a week before it. Those are planning buffers, not official USFans processing guarantees. Adjust them to the uncertainty of your order. Waiting until the last day leaves no margin if an item needs an additional photograph, a parcel quote changes or support must clarify the account status."
+          ]
+        },
+        {
+          "heading": "3. Finish QC and return decisions early",
+          "paragraphs": [
+            "When warehouse photos become available, compare the received item with the option you ordered. Check visible identity, color, size labels and any detail important to your purchase. If sizing is uncertain, request a particular measurement and confirm its availability and cost first. The storage period should not be confused with the time allowed to request a return: a long storage allowance does not automatically extend seller after-sales conditions.",
+            "Keep the relevant packaging and labels while a return or exchange is being considered. Record the question, supporting photos and request date against the order. If several goods will eventually share a parcel, one unresolved item does not require you to ignore the rest. Mark reviewed goods separately and decide whether they can ship on their own. Early inspection gives you more choices than discovering a mismatch while rushing to meet a storage deadline."
+          ]
+        },
+        {
+          "heading": "4. Decide whether waiting for another item is worth it",
+          "paragraphs": [
+            "Combining goods can be convenient, but the decision depends on more than the number of purchases. Compare the existing items' deadlines with the realistic uncertainty around the next seller's dispatch and warehouse processing. A seller estimate is not proof that the goods will be stored and ready before your oldest item expires. Consider how much delay you can accept and whether the pending item is essential to the parcel.",
+            "For example, suppose one reviewed item is approaching its displayed deadline while a second has not been dispatched. Compare shipping the reviewed item now with waiting, including any confirmed storage charge, route limits and packaging needs. This is a decision framework, not a claim that splitting is always cheaper. Avoid buying an unnecessary extra item solely to justify consolidation. Spending more on goods can outweigh a small possible saving in delivery."
+          ]
+        },
+        {
+          "heading": "5. Prepare the parcel before the deadline becomes urgent",
+          "paragraphs": [
+            "Check that your chosen goods are eligible for the same route and destination. Weight, dimensions and product restrictions may prevent the combination you had in mind. Review the current address, contact details and required delivery information in the parcel flow. Confirm available packaging services and their cost. Removing packaging can affect volume and protection, so decide deliberately rather than choosing an option just because time is short.",
+            "Keep parcel readiness separate from storage status. An item can be present in the warehouse while a measurement, support issue or route decision remains unfinished. Use a simple ready-to-ship check: identity reviewed, sizing question resolved, no open return decision, destination checked and a suitable route available. If one condition fails, address that specific blocker. Moving goods into a parcel plan is not the same as confirming that every shipment requirement has been met."
+          ]
+        },
+        {
+          "heading": "6. Ask about extension terms before relying on them",
+          "paragraphs": [
+            "If you need more time, ask USFans whether an extension is available for the exact items and what it costs. Confirm the new expiry, when a charge begins and whether the request must be completed through a particular account action. An unanswered support message is not an approved extension. Keep written confirmation with the affected order references so that you can distinguish a general explanation from a change to your own storage arrangement.",
+            "Do not assume that expiry leads to a particular outcome or that late recovery will always be possible. Check the current terms and ask support before the displayed deadline. This guide does not establish an automatic disposal schedule, grace period or extension price. If a date has already passed, contact support promptly with the item references and visible status rather than guessing from an old screenshot or a different customer's experience."
+          ]
+        },
+        {
+          "heading": "7. Close the storage record when the parcel moves on",
+          "paragraphs": [
+            "After submitting a parcel, follow its actual status and any remaining payment or information requests. Do not infer dispatch merely because you selected goods for shipping. Once the parcel is sent, keep the parcel number and tracking record alongside the original item list. This connects a warehouse decision with the eventual delivery and makes it easier to investigate a missing item or an unclear status later.",
+            "Review what caused the longest wait: a seller delay, an unanswered size question, packaging uncertainty or your own decision timing. Use that information to plan the next order more realistically. The aim is not to use every free storage day; it is to preserve enough time to make a confident decision and send suitable goods by an available route. A clear item calendar, early QC review and confirmed deadlines make storage useful without turning it into an avoidable last-minute problem.",
+            "For a practical weekly review, open the oldest item first and write one decision beside it: ready to ship, waiting for a specific answer, or considering a return. Give each unresolved question a next review date. This personal review schedule is separate from the platform's storage clock; changing your reminder does not extend the official period. If you are waiting for another purchase, record the latest date on which you will reconsider that plan rather than repeatedly postponing it without a limit. Before a holiday or a period when you cannot monitor the account, review the oldest deadlines and any pending requests. The important output is a decision you can act on, not merely a list of dates."
+          ]
+        }
+      ],
+      "sources": [
+        {
+          "label": "USFans beginner guide",
+          "url": "https://www.usfans.com/beginner-guide"
+        },
+        {
+          "label": "USFans storage help",
+          "url": "https://www.usfans.com/help/HCON_STATIC_071"
+        },
+        {
+          "label": "USFans service agreement",
+          "url": "https://www.usfans.com/page/serviceAgreement"
+        }
+      ],
+      "related": [
+        "usfans-warehouse-consolidation",
+        "usfans-qc-photo-checklist",
+        "usfans-no-shipping-routes"
+      ],
+      "datePublished": "2026-10-30",
+      "dateModified": "2026-10-30"
+    },
+    {
+      "slug": "usfans-no-shipping-routes",
+      "title": "USFans No Shipping Routes Available? A Step-by-Step Check",
+      "description": "Check destination details, item restrictions, parcel weight and dimensions when USFans shows no available shipping route.",
+      "category": "Shipping",
+      "keywords": [
+        "usfans no shipping routes",
+        "usfans shipping unavailable",
+        "usfans shipping restrictions",
+        "usfans parcel weight"
+      ],
+      "intro": "An empty shipping-route list does not tell you by itself whether the issue is the destination, the goods, the package or a temporary availability change. Start with the exact parcel and the reason shown in your account. Then change one relevant detail at a time so that you can understand the result. This guide offers a diagnostic sequence for a USFans parcel with no available route. It cannot make a restricted item eligible, promise delivery to every location or replace the carrier rules shown during parcel submission.",
+      "sections": [
+        {
+          "heading": "1. Save the parcel context before changing anything",
+          "paragraphs": [
+            "Note which stored items are selected, the destination country and postal code, the displayed weight and dimensions, and any unavailable-route explanation. Keep the information in your own order notes. A useful record includes when you checked because route availability and quotations can change. If the interface supplies a reason for a particular route, start there rather than assuming every unavailable route has the same cause.",
+            "Avoid repeatedly rebuilding the parcel with several different changes at once. If a route appears afterward, you will not know which change mattered. First confirm that the parcel contains the goods you intended and that there is no unfinished information request. Do not pay for a new order simply to test a theory about shipping. A screenshot with unrelated personal details removed can help support understand the exact state you are seeing."
+          ]
+        },
+        {
+          "heading": "2. Check the destination and address fields",
+          "paragraphs": [
+            "Confirm the destination country, region and postal code against the address where the parcel will actually be received. Look for a missing field, a format mismatch or an accidental selection carried over from another quote. Use your genuine destination. Entering a different country or an invented postal code may display a route, but it does not establish that the carrier can deliver to your address.",
+            "Read any location-specific limitations shown for the route, including service areas or excluded address types. A route that serves a country may not serve every postcode or address within it. If the interface gives no explanation, ask support whether the selected destination is covered for the actual goods. Keep private address details inside the official account or support flow, and provide only what is necessary for that delivery question."
+          ]
+        },
+        {
+          "heading": "3. Review the goods and their shipping restrictions",
+          "paragraphs": [
+            "Different items can have different transport restrictions. USFans purchase notices identify limitations involving the goods, logistics, weight, volume and destination, and advise checking certain product types before buying. A parcel containing a restricted component may have fewer options than an ordinary clothing parcel. Review the actual item description and the route's rules instead of relying on an attractive photo or a broad category label.",
+            "Do not remove or misstate an item classification to make a route appear. Ask support to explain a classification you believe is incorrect and provide the real product information. Combining goods cannot cancel a carrier restriction. If an item is unsuitable for the available routes, discuss legitimate options such as a different eligible service or an applicable return process. Do not assume that a refund or alternative route will necessarily be offered."
+          ]
+        },
+        {
+          "heading": "4. Compare actual weight, volume and route limits",
+          "paragraphs": [
+            "A route may set limits on weight, dimensions or parcel composition. Compare the values shown for your package with the current route requirements. For a volumetric service, the packed size can matter more than the scale weight. Use the route's stated calculation; there is no single volumetric divisor that can safely be applied to every service. An estimated item weight also does not describe the dimensions of the final shipping box.",
+            "If a limit seems to be the problem, ask whether the displayed measurements are estimated or final and whether a legitimate packaging change could help. Keep protection requirements in view. Removing a bulky shoe box may alter volume, but fragile goods may need reinforcement. Do not calculate a guaranteed saving from dimensions you have not measured. Confirm the resulting package and eligible routes before treating a packaging change as the solution."
+          ]
+        },
+        {
+          "heading": "5. Test a smaller, eligible grouping of goods",
+          "paragraphs": [
+            "Where the account allows you to revise a parcel, compare a smaller selection of compatible items while keeping the genuine destination unchanged. Record which item was removed and whether the route list changed. This can help isolate a restriction or size limit, but the result remains a quote for that specific selection. A route that appears for one shirt does not establish eligibility for the original combined parcel.",
+            "Before choosing separate shipments, compare the complete cost and practical consequences. Multiple parcels can mean repeated minimum charges, separate tracking records and different arrival dates. Consider the warehouse deadlines of goods left behind and whether suitable routes exist for them. Splitting is a diagnostic and planning option, not a universal money-saving rule. Do not submit the first parcel until you understand what will happen to the remaining items."
+          ]
+        },
+        {
+          "heading": "6. Ask support a question they can investigate",
+          "paragraphs": [
+            "Provide the affected order or parcel references, the genuine destination, the displayed weight and size, the route message and the single changes you have already tried. Explain whether the issue is a completely empty route list or one unavailable service while others remain. Those situations can require different decisions. Ask which restriction applies and which legitimate next step is available for the actual parcel.",
+            "Keep the request focused. For example: the listed goods are selected, this destination is entered, the page shows this weight and this message, and removing one item changes the result in this way. Do not include payment passwords or verification codes. If support identifies a temporary service interruption, ask when and where to check for an update; do not turn an informal estimate into a guaranteed reopening date."
+          ]
+        },
+        {
+          "heading": "7. Recheck the final quote before paying",
+          "paragraphs": [
+            "Once a suitable route appears, verify that the parcel still contains the intended goods and that the destination has not changed during troubleshooting. Review the route restrictions, current charge, tracking information and stated delivery estimate. Confirm packaging and any extra services. The fact that a route is selectable is a starting point for reviewing the offer, not proof that it is the best choice for your priorities.",
+            "Save the final parcel summary and follow any subsequent payment or information requests. If no suitable route remains, resolve the goods' storage and after-sales options before their applicable deadlines. Avoid rushing into a route you do not understand simply because the earlier list was empty. Working through destination, goods, measurements and grouping in that order gives you a clear record and a more useful support request, even when the answer is that the current parcel cannot be shipped as planned.",
+            "Here is a practical way to record a test without creating a new shipment: keep the destination fixed, note the original item selection and visible message, then compare one permitted selection change. If a line appears only after removing a particular item, report that observation to support without declaring the cause proven. The item might affect composition, weight or volume, and the interface may not identify which factor matters. If nothing changes, restore the intended selection before asking for help so that your reference matches the parcel support reviews. Do not keep changing details after receiving advice without explaining the new configuration. When comparing a split option, include both parcels in the cost sheet and confirm a solution for the remaining goods. This prevents a seemingly successful first shipment from leaving an unresolved storage or transport problem behind. Keep that record until the shipment is complete, so that any later question can be linked to the configuration you actually paid for."
+          ]
+        }
+      ],
+      "sources": [
+        {
+          "label": "USFans beginner guide",
+          "url": "https://www.usfans.com/beginner-guide"
+        },
+        {
+          "label": "USFans shipping-route help",
+          "url": "https://www.usfans.com/help/HCON_STATIC_049"
+        },
+        {
+          "label": "USFans purchase and shipping notices",
+          "url": "https://www.usfans.com/product/1/897643733710"
+        },
+        {
+          "label": "Estimated and actual billing weight",
+          "url": "https://www.usfans.com/help/HCON_STATIC_053"
+        }
+      ],
+      "related": [
+        "usfans-shipping-cost-guide",
+        "usfans-warehouse-storage-deadlines",
+        "usfans-warehouse-consolidation"
+      ],
+      "datePublished": "2026-10-30",
+      "dateModified": "2026-10-30"
+    }
+  ],
+  "categoryPages": {
+    "shoes": {
+      "title": "USFans Shoes: Product Links & Sizing Checks",
+      "intro": "Compare shoe listings, seller photos and estimated prices. Confirm the exact model, size chart and shipping options on USFans before buying.",
+      "sections": [
+        {
+          "heading": "Compare the exact shoe and size",
+          "paragraphs": [
+            "Match the selected model and color to its own size chart. Foot length, insole length and outsole length describe different measurements. Compare a comfortable pair you own, and ask about any measurement you need before relying on a label conversion."
+          ]
+        },
+        {
+          "heading": "Plan the shoe box and parcel",
+          "paragraphs": [
+            "Seller photos are not warehouse QC for your order. Review the received pair before shipment and decide whether the original box matters for protection or storage. Packaging can change parcel volume; check the actual route quote rather than assuming a fixed shoe shipping price."
+          ]
+        }
+      ],
+      "related": [
+        "usfans-sizing-shoes-clothing",
+        "usfans-qc-photo-checklist",
+        "usfans-shipping-cost-guide"
+      ]
+    },
+    "hoodies-sweaters": {
+      "title": "USFans Hoodies & Sweaters: Links, Prices & Fit",
+      "intro": "Browse hoodie and sweater listings. Compare garment measurements, materials, seller photos and parcel costs before choosing a USFans order.",
+      "sections": [
+        {
+          "heading": "Use garment measurements for fit",
+          "paragraphs": [
+            "Compare flat chest width, body length, shoulders and sleeves with a similar garment you already wear. Check whether the listing chart measures the body or the garment. An oversized cut, dropped shoulders and fabric stretch can change fit even when the size letter is familiar."
+          ]
+        },
+        {
+          "heading": "Check details before combining your parcel",
+          "paragraphs": [
+            "Confirm the selected color and size, then review warehouse photos for the received item. Ask about specific measurements when needed. Several bulky hoodies can affect packed dimensions, so compare route limits and packaging before assuming consolidation reduces the total cost."
+          ]
+        }
+      ],
+      "related": [
+        "usfans-sizing-shoes-clothing",
+        "usfans-qc-photo-checklist",
+        "usfans-shipping-cost-guide"
+      ]
+    },
+    "jersey": {
+      "title": "USFans Jerseys: Product Links, Sizes & Details",
+      "intro": "Browse jersey listings and compare sizes, seller photos and selected options. Check printing details and the current USFans price before ordering.",
+      "sections": [
+        {
+          "heading": "Match the version and size chart",
+          "paragraphs": [
+            "Confirm the exact jersey cut, size and selected printing option. Different versions can use different measurements. Compare chest width and length with a similar garment, and keep any personalization instructions together with the order so that a later QC check has a clear reference."
+          ]
+        },
+        {
+          "heading": "Review printing and after-sales conditions",
+          "paragraphs": [
+            "Check the received item’s spelling, numbers, placement and visible seams in your own warehouse photos. A seller gallery cannot verify your individual order. Confirm return conditions before choosing customized options, and review available shipping routes for the complete parcel."
+          ]
+        }
+      ],
+      "related": [
+        "usfans-sizing-shoes-clothing",
+        "usfans-qc-photo-checklist",
+        "usfans-shipping-cost-guide"
       ]
     }
-  ]
+  }
 }
