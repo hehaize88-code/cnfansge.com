@@ -1,6 +1,6 @@
 # Kakobuy Buys 项目记忆
 
-更新：2026-10-24。未来继续工作时先读本文件，再读实际代码。早期域名候选和阶段性规划保存在[planning-history.md](docs/planning-history.md)，不作为当前状态。
+更新：2026-10-30。未来继续工作时先读本文件，再读实际代码。早期域名候选和阶段性规划保存在[planning-history.md](docs/planning-history.md)，不作为当前状态。
 
 ## 当前身份与交付
 
@@ -11,7 +11,7 @@
 - 用户已明确授权“部署到GitHub 和cf”，正式域名绑定与上线已完成。
 - 当前公开预览：**https://kakobuybuys-preview.hehaize88.workers.dev/**。2026-10-24已通过用户Chrome打开验证。旧chatgpt.site地址曾被入口安全服务拦截，不再作为交付链接。
 - Sites项目ID：appgprj_6adc4f0bd82c8191b163618b4f0a83c0。复用已有ID，不能重复create_site。
-- 正式网址：**https://kakobuybuys.com/**；www以308转至主域名。当前Cloudflare版本前缀b1ae6e3b，构建源d1673a198434e562071dbb622d4b8cb037bc3575；24语、每语10文章/28FAQ。Sites版本3只是旧预览记录。
+- 正式网址：**https://kakobuybuys.com/**；www以308转至主域名。当前Cloudflare版本前缀9570d1ed，构建源71a66c6afb6d81adf1f0ce9ed479c3f06627e886；24语、每语13文章/28FAQ。Sites版本3只是旧预览记录。
 - 本地编辑目录：/workspace/sites/kakobuybuys-preview。冻结构建目录：/workspace/sites/kakobuybuys-review-build。GitHub是用户要求的源码保存位置，Sites源仓库仅保存对应预览快照。
 
 ## 用户固定要求
@@ -20,7 +20,7 @@
 2. 商品数据、商品照片、搜索、分页、排序、搜图和QC能力均使用cnfansge.com，不另建数据库、商品索引或后台。
 3. LOGO/favicon使用Kakobuy官网原素材；不得用生成图片或虚构商品替代真实内容。
 4. 首页是SEO入口，核心词kakobuy spreadsheet。先调研关键词/竞品和官网资料，再写内容。
-5. 至少20条FAQ，10篇完整独立文章，顶部有Articles独立入口。实际英文为28条FAQ、10篇约1400—1500词文章。
+5. 至少20条FAQ，10篇完整独立文章，顶部有Articles独立入口。实际英文为28条FAQ；原10篇完整长文保留，2026-10-30另增3篇约800词的实用文章。
 6. 参考kakobuypicklist.com的交互和多语言。研究后采用24语全内容方案；24不是用户原话指定的数字。
 7. 搜索、分类、翻页和商品详情保持在子站。仅注册/购买按钮前往官方指定地址。
 8. 每次对话只做一个平台/域名；边做边更新本文件。其他优化后续进行。
@@ -76,7 +76,7 @@
 - 官方素材来源和SHA256：`docs/brand-assets.json`。logo为真实官网下载PNG，favicon为官网原ICO。
 - 24语言：en,de,es,fr,it,pl,pt,ro,sv,nl,da,fi,el,cs,hu,bg,sk,hr,sl,lt,lv,et,ga,mt。
 - 英文根路径，其余`/de/`等语言前缀。同一文章slug/产品ID稳定；切换保留路径、q/category/sort/page和锚点。
-- 每种完整语言需要137条UI叶子字符串、28FAQ、10文章/100章节/200正文段落。不能用英文回退或摘要冒充完整译文。
+- 当前每种完整语言需要159条UI叶子字符串、28FAQ、13文章/121章节/236章节正文段落。不能用英文回退或摘要冒充完整译文。
 - 语言菜单和hreflang只发布内容齐全的语言；正式完整版本仍须通过24语严格检查。
 
 ## 验证与目前状态
@@ -215,7 +215,7 @@
 - 验收结论：已解决用户所见“成功但0网址”及全部子图无法抓取状态；发现456页不等于456页已编入Google索引。详细结果docs/sitemap-gsc-recovery.json、截图docs/sitemap-gsc-recovery.jpg。
 
 
-## SEO 内容与全语言更新（2026-10-30，待正式部署验收）
+## SEO 内容与全语言更新（2026-10-30，已正式部署验收）
 
 - 用户要求根据 GSC、Bing、GA4 与竞品调研改进并部署，明确所有语言都要同步。只修改本项目目录，继续现有 GitHub main → Cloudflare Worker 自动构建；无需另建 Sites 项目或托管。
 - 24 语言各新增 3 篇完整独立文章：`kakobuy-shipping-calculator`、`is-kakobuy-legit`、`kakobuy-shipping-time-tracking`。英文每篇约 788–831 词；所有译文保留完整章节、段落、表格、摘要和 UI，不能把这些称为只翻标题。现在每语 13 篇，共 312 文章版本。
@@ -225,4 +225,16 @@
 - GA4 保留 G-WEF871FSL0 和正式域名限制；增加 affiliate_click、guide_navigation、catalog_search、shipping_calculation 意图事件。不伪造购买事件，不传自由搜索词/订单/账户信息，未改 GA4 关键事件配置。
 - 构建通过：576 页面、24 语、312 文章、672 FAQ、每语 159 UI 字符串；内部链接、完整译文、canonical/hreflang、原锚点、日期、计算器与生产/预览策略检查均通过。24 份地图现包含 528 个规范内容 URL，并有真实修改日期。
 - 官方资料/竞品仅作为事实与搜索意图依据；不虚构购买体验、产品鉴真、价格、退款保证或搜索量。原主站商品数据/图片/搜索/推广地址合同未改。搜图上传及独立 QC feed 缺口仍在。
-- 只在公开仓库记录实现和验收；账号报表原始数据未发布。部署状态与公开访问验收将在完成后补充，不能把本地构建或提交成功等同于上线。
+- 只在公开仓库记录实现和验收；账号报表原始数据未发布。部署状态与公开访问验收已补充在下节；本地构建或提交成功本身不等同于上线。
+
+### 本次正式发布结果
+
+- GitHub 正式源码提交：`71a66c6afb6d81adf1f0ce9ed479c3f06627e886`；源树 `291acefa0a716271a5938758af1718dbc21122ad` 与本地通过全部检查的源树完全一致。直接 Git 推送无凭证，已使用现有 GitHub 连接按 expected_sha 更新 main；没有新建凭证，也没有覆盖其他目录。
+- Cloudflare 构建 `671bc9ce-129c-44d1-b15d-d71add9a16aa`，界面状态 Ready、45 秒，Active deployment 版本前缀 `9570d1ed`。正式域名已显示本次新文章和计算器。
+- 实际逐一打开 24 个语言文章目录，全部 13 篇且包含全部 3 篇新文章；不是只检查语言菜单链接。额外抽查英、马耳他、意、波兰语独立文章的完整正文/表格。英文新文章 canonical、index robots、24 语言切换均正确。
+- 线上计算器验证：示例体积重 4.8kg，取较高值并进位为 5kg；切换实际重量计费为 3kg。马耳他语 390×844 外部视口（375px 内容宽度）scrollWidth=375，无横向溢出；单选项能换行。本次未宣称全部语言每一页均目视检查。
+- 正式商品搜索 jersey 返回 20 条，商品 6679 的购买链接仍正确对应 Weidian 7641464690 和 affcode=rf8x8，注册仍为既定官方地址；没有注册账户、付款或下单。
+- GA4 实时报告实际收到 shipping_calculation、guide_navigation、catalog_search、affiliate_click 四种事件。这些是验收操作，不是新增自然访问、成交或 SEO 增长证据。未改关键事件设置，未把点击冒充购买。
+- 正式 sitemap.xml 实际列 24 子图；英文子图 22 URL，包含三篇新文章与 2026-10-30 lastmod。全部 24 图/528URL 已通过打包产物校验。
+- 已重新提交既有根站点地图：GSC 显示提交成功、提交日期 2026-10-30；Bing 提交日期同日、正在处理。此前 456 个发现网址的报表尚未刷新；不能宣称 528 个网页已收录。未重复提交每一篇网页的索引请求。
+- 公开页面验收截图 `docs/seo-articles-live-20261030.png`，详细记录 `docs/seo-release-20261030.json`。Chrome 保留正式文章目录供用户查看。文档补充提交不触发应用重新部署。
