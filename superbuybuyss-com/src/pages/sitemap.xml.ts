@@ -1,7 +1,7 @@
-import {locales,articles,path} from '../data/site';
+import {locales,articles,path,categoryKeys} from '../data/site';
 
 export function GET(){
-  const routes=['','spreadsheet','guide','qc','shipping','faq','articles',...articles('en').map(a=>'articles/'+a.slug)];
+  const routes=['','spreadsheet','guide','qc','shipping','faq','articles',...categoryKeys.slice(1).map(c=>'spreadsheet/'+c),...articles('en').map(a=>'articles/'+a.slug)];
   const base='https://superbuybuyss.com';
   const entries=locales.flatMap(lang=>routes.map(route=>{
     const alternates=[...locales.map(l=>`<xhtml:link rel="alternate" hreflang="${l}" href="${base+path(l,route)}"/>`),`<xhtml:link rel="alternate" hreflang="x-default" href="${base+path('en',route)}"/>`].join('');

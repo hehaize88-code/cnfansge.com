@@ -1,3 +1,18 @@
+# 2026-10-30 — Multilingual SEO content and catalogue release
+
+This entry supersedes earlier article/page counts. Scope remains only `superbuybuyss-com` and the existing GitHub → Cloudflare deployment.
+
+- All five existing locales EN/DE/ES/FR/IT now have 13 articles and 28 FAQ entries. Added full Shipping Expert, USA shipping and payment-method guides; English bodies are 1,250 / 1,243 / 1,245 words. Translations retain every section and paragraph, without English fallback.
+- Shipping time/tracking, cost and returns/refunds articles now lead with direct stage-specific guidance, more descriptive titles and summaries. Changed articles show their actual review date; unchanged articles retain 2026-10-23.
+- 11 category landing pages per locale (55 total), with category-specific buying notes, canonical URLs and reciprocal alternates. Old category query links 301 to their matching route, preserving remaining parameters.
+- Home shows six guides; shipping hub and related reading link the relevant content clusters. Article bodies end with a translated catalogue CTA.
+- First product grids are rendered by the Worker from the existing cnfansge.com adapter, with a 4.5-second bound, HTML escaping and a 60-second bounded process cache. No product data is checked in, mirrored, or copied to a database. Bootstrap data avoids a duplicate browser request; source failures retain the client retry path.
+- Existing GA4 ID remains production-only. Added product selection, buy click, search-length, category click and article-to-catalogue events. These are engagement events, not evidence of completed purchases.
+- Build creates 160 HTML pages: 155 sitemap URLs plus five noindex product shells. Checks cover translations, metadata, 5,925 internal links, redirects, affiliate mapping, source rendering, escaping, pagination bootstrap, cache and fallback.
+- Local build and checks passed; Wrangler dry-run passed. Release/deployment verification is recorded below when complete.
+
+---
+
 ## 当前部署决定（2026-10-24）
 
 用户已明确授权部署到 GitHub 和 Cloudflare。此段取代后文历史记录中的“仅预览、等待正式部署”状态。
