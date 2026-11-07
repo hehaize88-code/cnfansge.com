@@ -757,3 +757,7 @@ img { display: block; max-width: 100%; }
   .article-toc ol { columns: 1; }
   .home-articles .article-card, .home-articles .article-card.featured { min-height: 200px; }
 }
+@media (max-width: 800px) {
+  .hero::before { right: 0; }
+  .decision-links a { min-width: 0; overflow-wrap: anywhere; }
+}
