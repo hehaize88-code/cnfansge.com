@@ -1,4 +1,6 @@
 "use client";
+import { CatalogProducts } from "./CatalogProducts";
+import { searchPageCopy } from "./search-page-copy";
 
 import { useEffect, useMemo } from "react";
 import Link from "next/link";
@@ -152,7 +154,7 @@ export function ResearchClient({ section, initialLang, articles }: { section: Se
   const ui = interfaceText[lang];
   const categories = categoriesByLang[lang];
   const products = productsByLang[lang];
-  const page = pages[lang][section];
+  const page = {...pages[lang][section], ...searchPageCopy[lang][section]};
   const pageTitle = page.title.includes("Kakobuy") ? page.title : `Kakobuy · ${page.title}`;
   const pageFacts = facts[lang][factGroupBySection[section]];
   const changeLanguage = (value: Lang) => { localStorage.setItem("kv-language", value); router.push(localizedPath(pathname, value)); };
@@ -162,9 +164,9 @@ export function ResearchClient({ section, initialLang, articles }: { section: Se
   const showFaq = section === "faq";
   const relatedRoutes: Partial<Record<SectionKey, string[]>> = {
     guide: ["how-to-use-kakobuy", "check-kakobuy-product-links", "kakobuy-shipping-calculator"],
-    qc: ["qc-photo-checklist", "kakobuy-shoes-spreadsheet-checks", "kakobuy-hoodie-size-qc-guide"],
-    shipping: ["kakobuy-shipping-calculator", "kakobuy-shipping-time-tracking", "kakobuy-parcel-consolidation-packing", "actual-vs-volumetric-weight"],
-    spreadsheet: ["check-kakobuy-product-links", "kakobuy-shoes-spreadsheet-checks", "kakobuy-hoodie-size-qc-guide"],
+    qc: ["kakobuy-qc-finder", "qc-photo-checklist", "kakobuy-shoes-spreadsheet-checks", "kakobuy-hoodie-size-qc-guide"],
+    shipping: ["kakobuy-shipping-calculator", "kakobuy-shipping-time-tracking", "kakobuy-parcel-consolidation-packing", "actual-vs-volumetric-weight", "kakobuy-coupons"],
+    spreadsheet: ["choose-kakobuy-spreadsheet", "check-kakobuy-product-links", "kakobuy-shoes-spreadsheet-checks", "kakobuy-hoodie-size-qc-guide"],
     finds: ["kakobuy-weidian-taobao-links", "kakobuy-jersey-listing-measurements", "kakobuy-product-link-not-working"],
     faq: ["how-to-use-kakobuy", "kakobuy-return-exchange-guide", "kakobuy-shipping-time-tracking"],
   };
@@ -207,6 +209,9 @@ export function ResearchClient({ section, initialLang, articles }: { section: Se
       <Select value={lang} onValueChange={(value) => changeLanguage(value as Lang)}><SelectTrigger className="language-select" aria-label={ui.selectLanguage}><SelectValue /></SelectTrigger><SelectContent><SelectItem value="en">EN</SelectItem><SelectItem value="de">DE</SelectItem><SelectItem value="es">ES</SelectItem><SelectItem value="fr">FR</SelectItem><SelectItem value="it">IT</SelectItem></SelectContent></Select>
     </header>
     <section className="inner-hero"><Link href={localizedPath("/", lang)} className="back-link"><ArrowLeft size={16}/> {ui.home}</Link><p>{page.eyebrow}</p><h1>{pageTitle}</h1><div><p>{page.intro}</p><span>{ui.updatedStamp}</span></div></section>
+    {section === "spreadsheet" && <section className="content-section"><div className="section-heading"><div><p>{ui.catalogRoutes}</p><h2>{t.category[1]}</h2></div></div><div className="category-grid">{categories.map(([name, desc, href], index) => <a key={name} href={href} className="category-card"><span>{String(index + 1).padStart(2,"0")}</span><div><b>{name}</b><small>{desc}</small></div><ArrowUpRight/></a>)}</div></section>}
+    {showProducts && <CatalogProducts lang={lang} />}
+    {showArticles && <section className="content-section"><p className="result-count">{articles.length} {ui.articles}</p><div className="article-grid">{articles.map(([tag,title,text,href],index)=><Link href={localizedPath(href, lang)} className={`article-card article-${index+1}`} key={title}><small>{tag} / {ui.longFormGuide}</small><h3>{title}</h3><p>{text}</p><span>{t.read}<ArrowUpRight size={17}/></span></Link>)}</div></section>}
     {(section === "articles" || section === "shipping") && <GuideShortcuts lang={lang} />}
     <section className="inner-content">
       <div className="research-card-grid">{page.cards.map(([title, text], index) => <article key={`${title}-${index}`}><span>0{index + 1}</span><h2>{title}</h2><p>{text}</p></article>)}</div>
@@ -216,9 +221,6 @@ export function ResearchClient({ section, initialLang, articles }: { section: Se
       <div className="section-heading"><div><p>{factHeading[lang][0]}</p><h2>{factHeading[lang][1]}</h2></div><p>{evidenceSource[lang]}</p></div>
       <div className="evidence-grid">{pageFacts.map(([title, text], index) => <article key={title}><span>{String(index + 1).padStart(2, "0")}</span><h2>{title}</h2><p>{text}</p></article>)}</div>
     </section>
-    {section === "spreadsheet" && <section className="content-section"><div className="section-heading"><div><p>{ui.catalogRoutes}</p><h2>{t.category[1]}</h2></div></div><div className="category-grid">{categories.map(([name, desc, href], index) => <a key={name} href={href} className="category-card"><span>{String(index + 1).padStart(2,"0")}</span><div><b>{name}</b><small>{desc}</small></div><ArrowUpRight/></a>)}</div></section>}
-    {showProducts && <section className="content-section product-section"><div className="section-heading"><div><p>{ui.productRoutes}</p><h2>{t.products[1]}</h2></div><p>{t.products[2]}</p></div><div className="product-grid">{products.map(([name, category, price, image, href], index) => <a key={name} href={href} className="product-card"><div className="product-image"><img src={image} alt={name} width="750" height="750" loading={index < 2 ? "eager" : "lazy"}/><span>{ui.route} {index + 1}</span></div><div className="product-meta"><small>{category}</small><h3>{name}</h3><div><b>{price}</b><span>{t.open}<ArrowUpRight size={16}/></span></div></div></a>)}</div></section>}
-    {showArticles && <section className="content-section"><div className="article-grid">{articles.map(([tag,title,text,href],index)=><Link href={localizedPath(href, lang)} className={`article-card article-${index+1}`} key={title}><small>{tag} / {ui.longFormGuide}</small><h3>{title}</h3><p>{text}</p><span>{t.read}<ArrowUpRight size={17}/></span></Link>)}</div></section>}
     {relatedArticles.length > 0 && <section className="content-section related-articles"><div className="section-heading"><div><p>{t.articles[0]}</p><h2>{t.articles[1]}</h2></div></div><div className="article-grid">{relatedArticles.map(([tag,title,text,href],index)=><Link href={localizedPath(href, lang)} className={`article-card article-${index+1}`} key={title}><small>{tag} / {ui.longFormGuide}</small><h3>{title}</h3><p>{text}</p><span>{t.read}<ArrowUpRight size={17}/></span></Link>)}</div></section>}
     {showFaq && <section className="content-section faq-section"><div className="faq-grid">{t.faq.map(([question,answer],index)=><article key={question}><span>0{index+1}</span><h3>{question}</h3><p>{answer}</p></article>)}</div></section>}
     <LanguageLinks pathname={pathname} lang={lang} />

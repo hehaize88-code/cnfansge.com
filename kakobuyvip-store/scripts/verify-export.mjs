@@ -24,6 +24,19 @@ for (const lang of languages) {
     else assert.ok(article.sections.reduce((sum, section) => sum + section.body.split(/\s+/).length, 0) >= 1200, `${slug}: incomplete long-form guide`);
   }
 }
+const discovery = JSON.parse(await readFile("components/discovery-en.json", "utf8"));
+for (const lang of languages) {
+  const localized = JSON.parse(await readFile(`components/discovery-${lang}.json`, "utf8"));
+  assert.deepEqual(Object.keys(localized), Object.keys(discovery), `${lang}: missing new guide`);
+  for (const [slug, article] of Object.entries(localized)) {
+    assert.equal(article.sections.length, discovery[slug].sections.length, `${lang}/${slug}: incomplete sections`);
+    assert.equal(article.takeaways.length, discovery[slug].takeaways.length, `${lang}/${slug}: incomplete checklist`);
+    assert.ok(article.sections.every(section => section.heading && section.body.length > 500), `${lang}/${slug}: thin section`);
+    const words = article.sections.reduce((sum, section) => sum + section.body.split(/\s+/).length, 0);
+    assert.ok(words >= (lang === "en" ? 1200 : 1000), `${lang}/${slug}: incomplete article (${words} words)`);
+    if (lang !== "en") assert.ok(article.sections.every((section, index) => section.body !== discovery[slug].sections[index].body), `${lang}/${slug}: untranslated body`);
+  }
+}
 const articleCounts = Object.fromEntries(languages.map(lang => [lang, 0]));
 let linksChecked = 0;
 for (const url of urls) {
@@ -58,6 +71,8 @@ for (const url of urls) {
     assert.ok(html.includes('class="article-contents"'), `${pathname}: missing contents`);
     assert.ok(html.includes('id="related-title"'), `${pathname}: missing related guides`);
   }
+  assert.ok(!html.includes('href="https://cnfansge.com'), `${pathname}: catalog redirect loses its path`);
+  if (/\/(spreadsheet|finds)$/.test(pathname)) assert.equal([...html.matchAll(/class="product-card"/g)].length, 18, `${pathname}: missing catalog references`);
   for (const tag of html.matchAll(/<a\b[^>]*>/g)) {
     const { href } = attrs(tag[0]);
     if (!href || /^(mailto:|tel:)/.test(href)) continue;
@@ -68,7 +83,8 @@ for (const url of urls) {
     linksChecked++;
   }
 }
-assert.ok(articleCounts.en >= Object.keys(en).length + 17, "Existing articles missing");
+assert.equal(articleCounts.en, 23, "Expected all 20 existing and 3 new articles");
+assert.equal(urls.length, 155, "Expected 31 pages in each of 5 languages");
 assert.ok(Object.values(articleCounts).every(count => count === articleCounts.en), "Unequal article counts across languages");
 console.log(`Verified ${urls.length} indexable pages, ${linksChecked} internal links, reciprocal hreflang, canonical URLs, schemas and complete translations.`);
 console.log(`Articles per language: ${JSON.stringify(articleCounts)}`);

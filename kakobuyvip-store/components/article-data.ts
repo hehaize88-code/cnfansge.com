@@ -1,3 +1,4 @@
+import { discoveryArticles, discoverySlugs, discoveryKeywords, type DiscoverySlug } from "./discovery-articles";
 import { usaArticleTranslations } from "./usa-readiness-article";
 import { usaAddressArticleTranslations } from "./usa-address-article";
 import { usaUnitZip4ArticleTranslations } from "./usa-unit-zip4-article";
@@ -9,6 +10,7 @@ import { newFindsFinalNotes } from "./new-finds-final-notes";
 import { shippingArticles, shippingSlugs, shippingKeywords, type ShippingSlug } from "./shipping-articles";
 
 export type ArticleSlug =
+  | DiscoverySlug
   | ShippingSlug
   | "how-to-use-kakobuy"
   | "qc-photo-checklist"
@@ -37,6 +39,7 @@ export type ArticleRecord = {
 };
 
 export const articleRecords: ArticleRecord[] = [
+  ...discoverySlugs.map((slug): ArticleRecord => ({slug, ...discoveryArticles.en[slug], primaryKeyword: discoveryKeywords[slug], readingTime: "7 min read", updated: "November 7, 2026"})),
   {
     slug: "how-to-use-kakobuy",
     tag: "BEGINNER GUIDE",

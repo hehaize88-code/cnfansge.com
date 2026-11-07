@@ -638,3 +638,22 @@ footer > div:last-child a:hover { color: var(--red); }
   .article-hero h1 { font-size: clamp(31px, 9vw, 43px); }
   .article-card p { font-size: 14px; }
 }
+
+/* November 2026: lead with usable catalog entries and short answers. */
+.quick-answer { width: min(1020px, calc(100% - 36px)); margin: 20px auto; padding: 22px 26px; background: #fff; border-left: 4px solid var(--red); border-radius: 10px; }
+.quick-answer p { margin: 0; font-size: 17px; line-height: 1.7; }
+.catalog-controls { display: flex; flex-wrap: wrap; align-items: center; gap: 16px; justify-content: space-between; margin: 0 0 20px; }
+.catalog-controls label { display: flex; align-items: center; flex-wrap: wrap; gap: 12px; font-size: 15px; }
+.catalog-controls select { max-width: 100%; border: 1px solid var(--line); background: white; border-radius: 10px; padding: 12px; font: inherit; }
+.catalog-controls > span, .result-count { color: var(--muted); font-size: 14px; margin-bottom: 16px; }
+.catalog-more { display: inline-flex; align-items: center; gap: 10px; padding: 16px 0; margin-top: 16px; text-decoration: underline; text-underline-offset: 4px; font-weight: 650; }
+.inner-spreadsheet .inner-hero, .inner-finds .inner-hero, .inner-articles .inner-hero { padding-top: 32px; padding-bottom: 26px; }
+.inner-spreadsheet .inner-hero h1, .inner-finds .inner-hero h1, .inner-articles .inner-hero h1 { font-size: clamp(30px, 4.4vw, 58px); max-width: 1000px; }
+.site-header nav { flex-wrap: wrap; row-gap: 10px; }
+@media (max-width: 600px) {
+  .quick-answer { width: calc(100% - 20px); padding: 16px; }
+  .quick-answer p { font-size: 15px; }
+  .catalog-controls { align-items: flex-start; gap: 8px; }
+  .catalog-controls label { width: 100%; }
+  .catalog-controls select { flex: 1; min-width: 0; }
+}

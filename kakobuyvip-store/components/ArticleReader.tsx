@@ -121,6 +121,7 @@ export function ArticleReader({ slug, initialLang, article, sources, dates, rela
         <div className="article-meta"><span><Clock3 size={15} />{readingTime}</span><span>{ui.updated} {updatedDate}</span></div>
       </header>
 
+      {article.answer && <aside className="quick-answer"><p>{article.answer}</p></aside>}
       <nav className="article-contents" aria-label={navigation.contents}>
         <h2>{navigation.contents}</h2>
         <ol>{article.sections.map((section, index) => <li key={section.heading}><a href={`#section-${index + 1}`}>{section.heading}</a></li>)}</ol>

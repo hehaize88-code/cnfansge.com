@@ -7,7 +7,7 @@ import { languages, localizedPath } from "@/components/site-data";
 export const dynamic = "force-static";
 
 const sections = ["spreadsheet", "finds", "guide", "qc", "shipping", "faq", "articles"];
-const updated = new Date("2026-10-13T00:00:00.000Z");
+const updated = new Date("2026-11-07T00:00:00.000Z");
 
 function entry(pathname: string, lang: (typeof languages)[number], priority: number, frequency: "weekly" | "monthly"): MetadataRoute.Sitemap[number] {
   const slug = pathname.startsWith("/articles/") ? pathname.slice("/articles/".length) as ArticleSlug : undefined;

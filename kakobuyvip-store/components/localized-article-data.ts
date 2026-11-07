@@ -1,3 +1,5 @@
+import { discoveryArticles, type DiscoverySlug } from "./discovery-articles";
+import { applySearchImprovements } from "./search-improvements";
 import { shippingArticles, type ShippingSlug } from "./shipping-articles";
 import { articleImprovement } from "./article-improvements";
 import type { ArticleRecord, ArticleSlug } from "./article-data";
@@ -11,7 +13,7 @@ import { usaAddressArticleTranslations } from "./usa-address-article";
 import { usaUnitZip4ArticleTranslations } from "./usa-unit-zip4-article";
 import { usaBillingDeliveryArticleTranslations } from "./usa-billing-delivery-article";
 
-export type LocalizedArticle = Pick<ArticleRecord, "tag" | "title" | "description" | "sourceNote" | "sections" | "takeaways">;
+export type LocalizedArticle = Pick<ArticleRecord, "tag" | "title" | "description" | "sourceNote" | "sections" | "takeaways"> & { answer?: string };
 type ArticleTranslations = Partial<Record<ArticleSlug, LocalizedArticle>>;
 
 const de: ArticleTranslations = {
@@ -546,6 +548,7 @@ const en = articleBySlug as ArticleTranslations;
 export const localizedArticles: Record<Lang, ArticleTranslations> = { en, de, es, fr, it };
 
 function originalLocalizedArticle(lang: Lang, slug: ArticleSlug): LocalizedArticle {
+  if (slug in discoveryArticles[lang]) return discoveryArticles[lang][slug as DiscoverySlug];
   if (slug in shippingArticles[lang]) return shippingArticles[lang][slug as ShippingSlug];
   if (slug in newFindsArticles) return newFindsArticle(lang, slug as NewFindsSlug);
   if (slug === "kakobuy-usa-pre-order-readiness-checklist") return usaArticleTranslations[lang];
@@ -567,11 +570,11 @@ function originalLocalizedArticle(lang: Lang, slug: ArticleSlug): LocalizedArtic
 export function getLocalizedArticle(lang: Lang, slug: ArticleSlug): LocalizedArticle {
   const article = originalLocalizedArticle(lang, slug);
   const improvement = articleImprovement(lang, slug);
-  if (!improvement) return article;
-  return {
+  if (!improvement) return applySearchImprovements(lang, slug, article);
+  return applySearchImprovements(lang, slug, {
     ...article,
     title: improvement.title ?? article.title,
     description: improvement.description ?? article.description,
     sections: [...article.sections, { heading: improvement.heading, body: improvement.body }],
-  };
+  });
 }

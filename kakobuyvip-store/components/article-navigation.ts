@@ -10,8 +10,11 @@ export const articleNavigationText: Record<Lang, { contents: string; related: st
 };
 
 export const relatedArticleSlugs: Record<ArticleSlug, ArticleSlug[]> = {
+  "choose-kakobuy-spreadsheet": ["check-kakobuy-product-links", "kakobuy-qc-finder", "kakobuy-shipping-calculator"],
+  "kakobuy-qc-finder": ["qc-photo-checklist", "kakobuy-weidian-taobao-links", "kakobuy-shipping-calculator"],
+  "kakobuy-coupons": ["kakobuy-shipping-calculator", "actual-vs-volumetric-weight", "choose-kakobuy-spreadsheet"],
   "how-to-use-kakobuy": ["qc-photo-checklist", "kakobuy-shipping-calculator", "kakobuy-shipping-time-tracking"],
-  "qc-photo-checklist": ["kakobuy-shoes-spreadsheet-checks", "kakobuy-hoodie-size-qc-guide", "kakobuy-return-exchange-guide"],
+  "qc-photo-checklist": ["kakobuy-qc-finder", "kakobuy-hoodie-size-qc-guide", "kakobuy-return-exchange-guide"],
   "actual-vs-volumetric-weight": ["kakobuy-shipping-calculator", "kakobuy-parcel-consolidation-packing", "kakobuy-shipping-time-tracking"],
   "kakobuy-fees-explained": ["kakobuy-shipping-calculator", "actual-vs-volumetric-weight", "kakobuy-return-exchange-guide"],
   "kakobuy-warehouse-storage-guide": ["kakobuy-parcel-consolidation-packing", "kakobuy-shipping-time-tracking", "kakobuy-return-exchange-guide"],
@@ -21,13 +24,13 @@ export const relatedArticleSlugs: Record<ArticleSlug, ArticleSlug[]> = {
   "kakobuy-us-delivery-address-format": ["kakobuy-apartment-suite-unit-zip4-checks", "kakobuy-billing-address-vs-delivery-address", "kakobuy-usa-pre-order-readiness-checklist"],
   "kakobuy-apartment-suite-unit-zip4-checks": ["kakobuy-us-delivery-address-format", "kakobuy-billing-address-vs-delivery-address", "kakobuy-shipping-time-tracking"],
   "kakobuy-billing-address-vs-delivery-address": ["kakobuy-us-delivery-address-format", "kakobuy-usa-pre-order-readiness-checklist", "how-to-use-kakobuy"],
-  "check-kakobuy-product-links": ["kakobuy-weidian-taobao-links", "how-to-use-kakobuy", "qc-photo-checklist"],
+  "check-kakobuy-product-links": ["kakobuy-weidian-taobao-links", "choose-kakobuy-spreadsheet", "qc-photo-checklist"],
   "kakobuy-shoes-spreadsheet-checks": ["qc-photo-checklist", "kakobuy-parcel-consolidation-packing", "actual-vs-volumetric-weight"],
   "kakobuy-hoodie-size-qc-guide": ["qc-photo-checklist", "kakobuy-parcel-consolidation-packing", "kakobuy-shipping-calculator"],
   "kakobuy-jersey-listing-measurements": ["qc-photo-checklist", "kakobuy-hoodie-size-qc-guide", "kakobuy-shipping-calculator"],
   "kakobuy-weidian-taobao-links": ["check-kakobuy-product-links", "kakobuy-product-link-not-working", "how-to-use-kakobuy"],
   "kakobuy-product-link-not-working": ["kakobuy-weidian-taobao-links", "check-kakobuy-product-links", "how-to-use-kakobuy"],
-  "kakobuy-shipping-calculator": ["actual-vs-volumetric-weight", "kakobuy-fees-explained", "kakobuy-parcel-consolidation-packing"],
+  "kakobuy-shipping-calculator": ["actual-vs-volumetric-weight", "kakobuy-coupons", "kakobuy-parcel-consolidation-packing"],
   "kakobuy-shipping-time-tracking": ["how-to-use-kakobuy", "kakobuy-warehouse-storage-guide", "kakobuy-parcel-consolidation-packing"],
   "kakobuy-parcel-consolidation-packing": ["kakobuy-shipping-calculator", "actual-vs-volumetric-weight", "qc-photo-checklist"],
 };

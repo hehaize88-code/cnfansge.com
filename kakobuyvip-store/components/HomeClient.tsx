@@ -1,4 +1,5 @@
 "use client";
+import { CatalogProducts } from "./CatalogProducts";
 import { GuideShortcuts } from "./GuideShortcuts";
 import { LanguageLinks } from "./LanguageLinks";
 import { trackEvent } from "./AnalyticsEvents";
@@ -25,7 +26,7 @@ import {
   SelectValue,
 } from "@/components/ui/select";
 import { copy, Lang, localizedPath, navHref } from "./site-data";
-import { type ArticleCardItem, categoriesByLang, interfaceText, productsByLang } from "./localized-data";
+import { type ArticleCardItem, categoriesByLang, interfaceText } from "./localized-data";
 
 import { Mark } from "./Mark";
 
@@ -36,7 +37,6 @@ export function HomeClient({ initialLang, articles }: { initialLang: Lang; artic
   const t = useMemo(() => copy[lang], [lang]);
   const ui = interfaceText[lang];
   const categories = categoriesByLang[lang];
-  const products = productsByLang[lang];
 
   useEffect(() => {
     document.documentElement.lang = lang;
@@ -54,8 +54,8 @@ export function HomeClient({ initialLang, articles }: { initialLang: Lang; artic
     const keyword = String(form.get("keywords") || "").trim();
     trackEvent("search_submit", { content_language: lang, has_query: Boolean(keyword), query_length: keyword.length });
     window.location.href = keyword
-      ? `https://cnfansge.com/search.html?keywords=${encodeURIComponent(keyword)}`
-      : "https://cnfansge.com/AllProducts";
+      ? `https://www.cnfansge.com/search.html?keywords=${encodeURIComponent(keyword)}`
+      : "https://www.cnfansge.com/AllProducts/";
   };
 
   return (
@@ -79,7 +79,7 @@ export function HomeClient({ initialLang, articles }: { initialLang: Lang; artic
           <p className="eyebrow"><Sparkles size={16} /> {t.eyebrow}</p>
           <h1><span>{t.title[0]}</span><span>{t.title[1]}</span><span className="slash-word">{t.title[2]}</span></h1>
           <p className="hero-intro">{t.intro}</p>
-          <form className="search-panel" action="https://cnfansge.com/search.html" method="get" onSubmit={submitSearch}>
+          <form className="search-panel" action="https://www.cnfansge.com/search.html" method="get" onSubmit={submitSearch}>
             <Search aria-hidden="true" />
             <input name="keywords" aria-label={t.search} placeholder={t.search} />
             <button type="submit">{t.searchButton}<ArrowUpRight size={18} /></button>
@@ -118,17 +118,7 @@ export function HomeClient({ initialLang, articles }: { initialLang: Lang; artic
         </div>
       </section>
 
-      <section className="content-section product-section">
-        <div className="section-heading"><div><p>{t.products[0]}</p><h2>{t.products[1]}</h2></div><p>{t.products[2]}</p></div>
-        <div className="product-grid">
-          {products.map(([name, category, price, image, href], index) => (
-            <a key={name} href={href} className="product-card">
-              <div className="product-image"><img src={image} alt={name} width="750" height="750" loading={index < 2 ? "eager" : "lazy"} /><span>{ui.newRoute}</span></div>
-              <div className="product-meta"><small>{category}</small><h3>{name}</h3><div><b>{price}</b><span>{t.open}<ArrowUpRight size={16} /></span></div></div>
-            </a>
-          ))}
-        </div>
-      </section>
+      <CatalogProducts lang={lang} compact />
 
       <section className="content-section process-section">
         <div className="section-heading"><div><p>{t.process[0]}</p><h2>{t.process[1]}</h2></div></div>

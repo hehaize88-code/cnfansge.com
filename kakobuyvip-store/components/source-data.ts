@@ -11,6 +11,10 @@ export type SourceReference = {
 };
 
 const sources = {
+inspectionNov: {"publisher": "Kakobuy", "title": "Inspection and warehouse storage notice", "reference": "https://www.kakobuy.com/service/help/question?id=95", "checked": "2026-11-07", "scope": {"en": "Published inspection scope and exclusions; photographs do not establish every material or functional claim.", "de": "Veröffentlichter Prüfumfang und Ausschlüsse; Fotos belegen nicht jede Material- oder Funktionsaussage.", "es": "Alcance y exclusiones publicados; las fotos no prueban todo material o funcionamiento.", "fr": "Périmètre et exclusions publiés ; les photos ne prouvent pas toutes les propriétés ou fonctions.", "it": "Ambito ed esclusioni pubblicati; le foto non provano ogni proprietà o funzione."}},
+couponMarch: {"publisher": "Kakobuy", "title": "March 2026 campaign archive", "reference": "https://www.kakobuy.com/tipdetail?id=46", "checked": "2026-11-07", "scope": {"en": "Expired campaign used to explain multiple coupon denominations and spending thresholds, not current availability.", "de": "Abgelaufene Aktion als Beispiel für Gutscheinwerte und Mindestbeträge, nicht aktuelle Verfügbarkeit.", "es": "Campaña caducada para explicar importes y mínimos, no disponibilidad actual.", "fr": "Ancienne campagne expliquant montants et seuils, sans disponibilité actuelle annoncée.", "it": "Campagna scaduta per spiegare importi e soglie, non disponibilità attuale."}},
+couponOctober: {"publisher": "Kakobuy", "title": "October 2026 campaign archive", "reference": "https://www.kakobuy.com/tipdetail?id=56", "checked": "2026-11-07", "scope": {"en": "The listed claim period ended on 31 October 2026. Verify separate validity terms for any coupon already held.", "de": "Der genannte Bezugszeitraum endete am 31. Oktober 2026. Nutzungsfristen vorhandener Gutscheine getrennt prüfen.", "es": "El periodo anunciado terminó el 31 de octubre de 2026. Verifica aparte la validez de cupones ya obtenidos.", "fr": "La période annoncée se terminait le 31 octobre 2026. Vérifiez séparément la validité des coupons déjà obtenus.", "it": "Il periodo indicato terminava il 31 ottobre 2026. Verifica separatamente la validità dei coupon già ottenuti."}},
+
   estimateCurrent: {"publisher": "Kakobuy", "title": "Shipping estimate", "reference": "https://kakobuy.com/tools/estimate", "checked": "2026-10-13", "scope": {"en": "Current estimate tool; third-party logistics rates can change.", "de": "Aktueller Rechner; Logistikpreise Dritter können sich ändern.", "es": "Estimador actual; las tarifas de terceros pueden cambiar.", "fr": "Calculateur actuel ; les tarifs des prestataires peuvent changer.", "it": "Calcolatore attuale; le tariffe di terzi possono cambiare."}},
   warehouseCurrent: {"publisher": "Kakobuy", "title": "Warehouse arrival and parcel measurements", "reference": "https://kakobuy.com/service/help/question?cid=35&id=84", "checked": "2026-10-13", "scope": {"en": "Intake status and differences between intake and final packed measurements.", "de": "Lagereingang und Unterschiede zu endgültigen Packmaßen.", "es": "Recepción y diferencias respecto a las medidas finales del paquete.", "fr": "Réception et écarts avec les mesures du colis emballé.", "it": "Ricezione e differenze rispetto alle misure finali del pacco."}},
   parcelFlowCurrent: {"publisher": "Kakobuy", "title": "Shopping and parcel submission guide", "reference": "https://item2.kakobuy.com/index/information?information_id=12", "checked": "2026-10-13", "scope": {"en": "Selecting warehouse items, packing services and submitting a parcel.", "de": "Lagerwaren auswählen, Packdienste und Paketeinreichung.", "es": "Selección de artículos, servicios de embalaje y presentación del paquete.", "fr": "Choix des articles, emballage et soumission du colis.", "it": "Selezione degli articoli, imballaggio e presentazione del pacco."}},
@@ -176,11 +180,14 @@ const sources = {
 } satisfies Record<string, SourceReference>;
 
 const sourceKeysByArticle: Record<ArticleSlug, (keyof typeof sources)[]> = {
+  "choose-kakobuy-spreadsheet": ["inspectionNov"],
+  "kakobuy-qc-finder": ["inspectionNov"],
+  "kakobuy-coupons": ["couponMarch", "couponOctober"],
   "kakobuy-shipping-calculator": ["estimateCurrent", "warehouseCurrent"],
   "kakobuy-shipping-time-tracking": ["parcelFlowCurrent", "warehouseCurrent", "trackingCurrent"],
   "kakobuy-parcel-consolidation-packing": ["parcelFlowCurrent", "warehouseCurrent", "estimateCurrent"],
   "how-to-use-kakobuy": ["service", "returns", "estimate"],
-  "qc-photo-checklist": ["service", "returns"],
+  "qc-photo-checklist": ["inspectionNov", "service", "returns"],
   "actual-vs-volumetric-weight": ["estimate", "costs"],
   "kakobuy-fees-explained": ["costs", "estimate"],
   "kakobuy-warehouse-storage-guide": ["service", "returns"],

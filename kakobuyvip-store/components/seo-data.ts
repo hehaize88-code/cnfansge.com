@@ -1,3 +1,5 @@
+import { searchPageCopy } from "./search-page-copy";
+import { discoveryKeywords } from "./discovery-articles";
 import { articleDates } from "./article-dates";
 import { shippingKeywords } from "./shipping-articles";
 import type { Metadata } from "next";
@@ -66,7 +68,9 @@ export function languageAlternates(pathname: string) {
 }
 
 export function sectionMetadata(section: SectionKey, lang: Lang): Metadata {
-  const entry = sectionSeo[lang][section];
+  const original = sectionSeo[lang][section];
+  const updated = searchPageCopy[lang][section];
+  const entry = updated ? {...original, title: updated.title, description: updated.intro} : original;
   const pathname = `/${section}`;
   return {
     ...entry,
@@ -103,7 +107,7 @@ export function articleMetadata(slug: ArticleSlug, lang: Lang): Metadata {
   const pathname = `/articles/${slug}`;
   const canonical = localizedPath(pathname, lang);
   const metadata: Metadata = {
-    title: `${article.title} | KakobuyVIP`,
+    title: article.title,
     description: article.description,
     keywords: slug === "kakobuy-billing-address-vs-delivery-address"
       ? [articleByIntent[slug], "Kakobuy billing address", "Kakobuy delivery address", "US Kakobuy address mismatch"]
@@ -129,6 +133,7 @@ export function articleMetadata(slug: ArticleSlug, lang: Lang): Metadata {
 
 const articleByIntent: Record<ArticleSlug, string> = {
   ...shippingKeywords,
+  ...discoveryKeywords,
   "how-to-use-kakobuy": "how to use Kakobuy",
   "qc-photo-checklist": "Kakobuy QC photos",
   "actual-vs-volumetric-weight": "Kakobuy volumetric weight",

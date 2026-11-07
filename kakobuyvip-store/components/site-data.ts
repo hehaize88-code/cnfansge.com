@@ -27,11 +27,11 @@ type Copy = {
 
 export const copy: Record<Lang, Copy> = {
   en: {
-    note: "Independent product research hub · Updated August 2026",
-    nav: ["Spreadsheet", "Finds", "QC guide", "Shipping", "Articles", "FAQ"],
+    note: "Independent product research directory",
+    nav: ["Spreadsheet", "Finds", "QC guide", "Shipping", "Articles", "FAQ", "How to buy"],
     eyebrow: "Latest Kakobuy finds and category updates",
-    title: ["Kakobuy finds.", "Checked routes.", "Current categories."],
-    intro: "A focused Kakobuy product-route directory for recently added finds, category updates, matching images and practical checks before you open the current destination.",
+    title: ["Kakobuy spreadsheet.", "Product links.", "QC & shipping."],
+    intro: "Browse 10 product categories, compare item links and reference prices, then check sizing, warehouse photos and shipping costs before ordering.",
     search: "Search a product, category or style",
     searchButton: "Search the full catalog",
     browse: "Browse spreadsheet",
@@ -49,11 +49,11 @@ export const copy: Record<Lang, Copy> = {
     footer: "Independent research directory. Product availability, pricing and third-party content can change. Verify details before proceeding.",
   },
   de: {
-    note: "Unabhängiger Produkt-Research-Hub · Aktualisiert August 2026",
-    nav: ["Tabelle", "Funde", "QC-Ratgeber", "Versand", "Artikel", "FAQ"],
+    note: "Unabhängiges Produktverzeichnis",
+    nav: ["Tabelle", "Funde", "QC-Ratgeber", "Versand", "Artikel", "FAQ", "Kaufanleitung"],
     eyebrow: "Aktuelle Kakobuy-Funde und Kategorie-Updates",
-    title: ["Kakobuy-Funde.", "Geprüfte Routen.", "Aktuelle Kategorien."],
-    intro: "Ein fokussiertes Kakobuy-Verzeichnis für neue Funde, Kategorie-Updates, passende Bilder und praktische Prüfungen vor dem Öffnen des aktuellen Ziels.",
+    title: ["Kakobuy Spreadsheet.", "Produktlinks.", "QC & Versand."],
+    intro: "10 Produktkategorien durchsuchen, Links und Referenzpreise vergleichen und vor der Bestellung Maße, Lagerfotos und Versandkosten prüfen.",
     search: "Produkt, Kategorie oder Stil suchen",
     searchButton: "Gesamten Katalog suchen",
     browse: "Spreadsheet öffnen",
@@ -71,11 +71,11 @@ export const copy: Record<Lang, Copy> = {
     footer: "Unabhängiges Rechercheverzeichnis. Verfügbarkeit, Preise und Drittinhalte können sich ändern. Details vorab prüfen.",
   },
   es: {
-    note: "Centro independiente de investigación · Actualizado en agosto de 2026",
-    nav: ["Hoja", "Hallazgos", "Guía QC", "Envío", "Artículos", "FAQ"],
+    note: "Directorio independiente de productos",
+    nav: ["Hoja", "Hallazgos", "Guía QC", "Envío", "Artículos", "FAQ", "Cómo comprar"],
     eyebrow: "Últimos hallazgos Kakobuy y categorías actualizadas",
-    title: ["Hallazgos Kakobuy.", "Rutas revisadas.", "Categorías actuales."],
-    intro: "Un directorio Kakobuy centrado en hallazgos recientes, actualizaciones de categorías, imágenes correspondientes y controles prácticos antes de abrir el destino actual.",
+    title: ["Spreadsheet Kakobuy.", "Enlaces de productos.", "QC y envío."],
+    intro: "Explora 10 categorías, compara enlaces y precios orientativos y revisa medidas, fotos del almacén y envío antes de comprar.",
     search: "Busca un producto, categoría o estilo",
     searchButton: "Buscar en todo el catálogo",
     browse: "Ver spreadsheet",
@@ -93,11 +93,11 @@ export const copy: Record<Lang, Copy> = {
     footer: "Directorio independiente. La disponibilidad, precios y contenido externo pueden cambiar. Verifica los detalles.",
   },
   fr: {
-    note: "Centre de recherche indépendant · Mis à jour en août 2026",
-    nav: ["Tableur", "Sélections", "Guide QC", "Livraison", "Articles", "FAQ"],
+    note: "Répertoire indépendant de produits",
+    nav: ["Tableur", "Sélections", "Guide QC", "Livraison", "Articles", "FAQ", "Comment acheter"],
     eyebrow: "Dernières sélections Kakobuy et catégories actualisées",
-    title: ["Sélections Kakobuy.", "Liens vérifiés.", "Catégories actuelles."],
-    intro: "Un répertoire Kakobuy centré sur les sélections récentes, les mises à jour de catégories, les images correspondantes et les contrôles utiles avant d’ouvrir la destination actuelle.",
+    title: ["Spreadsheet Kakobuy.", "Liens produits.", "QC et livraison."],
+    intro: "Explorez 10 catégories, comparez liens et prix indicatifs puis vérifiez mesures, photos d’entrepôt et frais avant de commander.",
     search: "Rechercher un produit, une catégorie ou un style",
     searchButton: "Rechercher dans le catalogue",
     browse: "Voir le spreadsheet",
@@ -115,11 +115,11 @@ export const copy: Record<Lang, Copy> = {
     footer: "Répertoire de recherche indépendant. Disponibilité, prix et contenus tiers peuvent changer. Vérifiez les détails.",
   },
   it: {
-    note: "Hub di ricerca indipendente · Aggiornato ad agosto 2026",
-    nav: ["Spreadsheet", "Prodotti", "Guida QC", "Spedizione", "Articoli", "FAQ"],
+    note: "Directory indipendente di prodotti",
+    nav: ["Spreadsheet", "Prodotti", "Guida QC", "Spedizione", "Articoli", "FAQ", "Come acquistare"],
     eyebrow: "Ultimi prodotti Kakobuy e categorie aggiornate",
-    title: ["Prodotti Kakobuy.", "Percorsi controllati.", "Categorie attuali."],
-    intro: "Una directory Kakobuy per prodotti aggiunti di recente, aggiornamenti di categoria, immagini corrispondenti e controlli pratici prima di aprire la destinazione attuale.",
+    title: ["Spreadsheet Kakobuy.", "Link ai prodotti.", "QC e spedizione."],
+    intro: "Esplora 10 categorie, confronta link e prezzi indicativi, poi controlla misure, foto di magazzino e spedizione prima di ordinare.",
     search: "Cerca un prodotto, categoria o stile",
     searchButton: "Cerca nel catalogo",
     browse: "Apri lo spreadsheet",
@@ -138,7 +138,7 @@ export const copy: Record<Lang, Copy> = {
   },
 };
 
-export const navHref = ["/spreadsheet", "/finds", "/qc", "/shipping", "/articles", "/faq"];
+export const navHref = ["/spreadsheet", "/finds", "/qc", "/shipping", "/articles", "/faq", "/guide"];
 
 export const languages: Lang[] = ["en", "de", "es", "fr", "it"];
 

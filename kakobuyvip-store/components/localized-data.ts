@@ -1,3 +1,4 @@
+import catalogReferences from "./catalog-references.json";
 import type { Lang } from "./site-data";
 
 export type CategoryItem = [name: string, description: string, href: string];
@@ -52,7 +53,7 @@ export const interfaceText: Record<Lang, InterfaceText> = {
     researchWorkflow: "Research workflow summary", manifest: "RESEARCH MANIFEST", manifestNumber: "№ 0826",
     manifestRoute: ["DISCOVER", "QC", "ROUTE"], manifestItems: ["Fast visual scan", "Image-first checks", "Parcel context", "Clear disclosure"],
     independentIndex: "INDEPENDENT INDEX", highlights: "Site highlights", newRoute: "NEW ROUTE", allArticles: "All articles", longFormGuide: "LONG-FORM GUIDE",
-    updated: "Updated", updatedStamp: "UPDATED / 2026.08", quickCheck: "QUICK CHECK", beforeNextStep: "Before the next step",
+    updated: "Updated", updatedStamp: "UPDATED / 2026.11.07", quickCheck: "QUICK CHECK", beforeNextStep: "Before the next step",
     catalogRoutes: "CATALOG ROUTES", productRoutes: "PRODUCT ROUTES", route: "ROUTE", articles: "Articles", englishGuide: "ENGLISH GUIDE",
     keyTakeaways: "KEY TAKEAWAYS", whatToRemember: "What to remember", sourceBoundary: "SOURCE BOUNDARY",
     footerLinks: ["Spreadsheet", "QC", "Shipping", "Articles"],
@@ -68,7 +69,7 @@ export const interfaceText: Record<Lang, InterfaceText> = {
     researchWorkflow: "Zusammenfassung des Rechercheablaufs", manifest: "RECHERCHEPLAN", manifestNumber: "№ 0826",
     manifestRoute: ["ENTDECKEN", "QC", "ÖFFNEN"], manifestItems: ["Schnell visuell prüfen", "Bilder zuerst prüfen", "Paketkontext", "Klare Hinweise"],
     independentIndex: "UNABHÄNGIGER INDEX", highlights: "Website-Schwerpunkte", newRoute: "NEUE ROUTE", allArticles: "Alle Artikel", longFormGuide: "AUSFÜHRLICHER RATGEBER",
-    updated: "Aktualisiert", updatedStamp: "AKTUALISIERT / 2026.08", quickCheck: "SCHNELLPRÜFUNG", beforeNextStep: "Vor dem nächsten Schritt",
+    updated: "Aktualisiert", updatedStamp: "AKTUALISIERT / 2026.11.07", quickCheck: "SCHNELLPRÜFUNG", beforeNextStep: "Vor dem nächsten Schritt",
     catalogRoutes: "KATALOGROUTEN", productRoutes: "PRODUKTROUTEN", route: "ROUTE", articles: "Artikel", englishGuide: "DEUTSCHER RATGEBER",
     keyTakeaways: "DAS WICHTIGSTE", whatToRemember: "Was Sie beachten sollten", sourceBoundary: "QUELLENGRENZE",
     footerLinks: ["Tabelle", "QC", "Versand", "Artikel"],
@@ -84,7 +85,7 @@ export const interfaceText: Record<Lang, InterfaceText> = {
     researchWorkflow: "Resumen del proceso de investigación", manifest: "PLAN DE INVESTIGACIÓN", manifestNumber: "№ 0826",
     manifestRoute: ["DESCUBRIR", "QC", "ABRIR"], manifestItems: ["Revisión visual rápida", "Comprobar primero las imágenes", "Contexto del paquete", "Avisos claros"],
     independentIndex: "ÍNDICE INDEPENDIENTE", highlights: "Puntos clave del sitio", newRoute: "RUTA NUEVA", allArticles: "Todos los artículos", longFormGuide: "GUÍA DETALLADA",
-    updated: "Actualizado", updatedStamp: "ACTUALIZADO / 2026.08", quickCheck: "COMPROBACIÓN RÁPIDA", beforeNextStep: "Antes del siguiente paso",
+    updated: "Actualizado", updatedStamp: "ACTUALIZADO / 2026.11.07", quickCheck: "COMPROBACIÓN RÁPIDA", beforeNextStep: "Antes del siguiente paso",
     catalogRoutes: "RUTAS DEL CATÁLOGO", productRoutes: "RUTAS DE PRODUCTOS", route: "RUTA", articles: "Artículos", englishGuide: "GUÍA EN ESPAÑOL",
     keyTakeaways: "PUNTOS CLAVE", whatToRemember: "Qué conviene recordar", sourceBoundary: "LÍMITE DE LAS FUENTES",
     footerLinks: ["Hoja", "QC", "Envío", "Artículos"],
@@ -100,7 +101,7 @@ export const interfaceText: Record<Lang, InterfaceText> = {
     researchWorkflow: "Résumé du parcours de recherche", manifest: "PLAN DE RECHERCHE", manifestNumber: "№ 0826",
     manifestRoute: ["DÉCOUVRIR", "QC", "OUVRIR"], manifestItems: ["Analyse visuelle rapide", "Vérifier d’abord les images", "Contexte du colis", "Informations claires"],
     independentIndex: "INDEX INDÉPENDANT", highlights: "Points clés du site", newRoute: "NOUVEAU LIEN", allArticles: "Tous les articles", longFormGuide: "GUIDE DÉTAILLÉ",
-    updated: "Mis à jour", updatedStamp: "MIS À JOUR / 2026.08", quickCheck: "VÉRIFICATION RAPIDE", beforeNextStep: "Avant l’étape suivante",
+    updated: "Mis à jour", updatedStamp: "MIS À JOUR / 2026.11.07", quickCheck: "VÉRIFICATION RAPIDE", beforeNextStep: "Avant l’étape suivante",
     catalogRoutes: "LIENS DU CATALOGUE", productRoutes: "LIENS PRODUITS", route: "LIEN", articles: "Articles", englishGuide: "GUIDE EN FRANÇAIS",
     keyTakeaways: "POINTS CLÉS", whatToRemember: "À retenir", sourceBoundary: "LIMITES DES SOURCES",
     footerLinks: ["Tableur", "QC", "Livraison", "Articles"],
@@ -116,7 +117,7 @@ export const interfaceText: Record<Lang, InterfaceText> = {
     researchWorkflow: "Sintesi del percorso di ricerca", manifest: "PIANO DI RICERCA", manifestNumber: "№ 0826",
     manifestRoute: ["SCOPRIRE", "QC", "APRIRE"], manifestItems: ["Controllo visivo rapido", "Prima le immagini", "Contesto del pacco", "Informazioni chiare"],
     independentIndex: "INDICE INDIPENDENTE", highlights: "Punti chiave del sito", newRoute: "NUOVO PERCORSO", allArticles: "Tutti gli articoli", longFormGuide: "GUIDA APPROFONDITA",
-    updated: "Aggiornato", updatedStamp: "AGGIORNATO / 2026.08", quickCheck: "CONTROLLO RAPIDO", beforeNextStep: "Prima del prossimo passo",
+    updated: "Aggiornato", updatedStamp: "AGGIORNATO / 2026.11.07", quickCheck: "CONTROLLO RAPIDO", beforeNextStep: "Prima del prossimo passo",
     catalogRoutes: "PERCORSI CATALOGO", productRoutes: "PERCORSI PRODOTTO", route: "PERCORSO", articles: "Articoli", englishGuide: "GUIDA IN ITALIANO",
     keyTakeaways: "PUNTI CHIAVE", whatToRemember: "Cosa ricordare", sourceBoundary: "LIMITI DELLE FONTI",
     footerLinks: ["Spreadsheet", "QC", "Spedizione", "Articoli"],
@@ -130,8 +131,8 @@ export const interfaceText: Record<Lang, InterfaceText> = {
 };
 
 const categoryLinks = [
-  "https://cnfansge.com/shoes/", "https://cnfansge.com/hoodies-sweaters/", "https://cnfansge.com/t-shirts/", "https://cnfansge.com/jackets/", "https://cnfansge.com/pants-shorts/",
-  "https://cnfansge.com/headwear/", "https://cnfansge.com/accessories/", "https://cnfansge.com/Jersey/", "https://cnfansge.com/electronics/", "https://cnfansge.com/other-stuff/",
+  "https://www.cnfansge.com/shoes/", "https://www.cnfansge.com/hoodies-sweaters/", "https://www.cnfansge.com/t-shirts/", "https://www.cnfansge.com/jackets/", "https://www.cnfansge.com/pants-shorts/",
+  "https://www.cnfansge.com/headwear/", "https://www.cnfansge.com/accessories/", "https://www.cnfansge.com/Jersey/", "https://www.cnfansge.com/electronics/", "https://www.cnfansge.com/other-stuff/",
 ];
 
 const localizedCategoryLabels: Record<Lang, [string, string][]> = {
@@ -147,12 +148,12 @@ export const categoriesByLang = Object.fromEntries(
 ) as Record<Lang, CategoryItem[]>;
 
 const productBase = [
-  ["$25.14", "/products/sweatshirt.webp", "https://cnfansge.com/AllProducts/6681.html"],
-  ["$28.11", "/products/pants.webp", "https://cnfansge.com/AllProducts/6680.html"],
-  ["$19.48", "/products/jersey-blue.jpg", "https://cnfansge.com/AllProducts/6679.html"],
-  ["$19.48", "/products/jersey-white.jpg", "https://cnfansge.com/AllProducts/6678.html"],
-  ["$19.48", "/products/jersey-red.jpg", "https://cnfansge.com/AllProducts/6677.html"],
-  ["$11.16", "/products/jersey-black.jpg", "https://cnfansge.com/AllProducts/6676.html"],
+  ["$23.28", "/products/sweatshirt.webp", "https://www.cnfansge.com/AllProducts/6681.html"],
+  ["$26.03", "/products/pants.webp", "https://www.cnfansge.com/AllProducts/6680.html"],
+  ["$18.04", "/products/jersey-blue.jpg", "https://www.cnfansge.com/AllProducts/6679.html"],
+  ["$18.04", "/products/jersey-white.jpg", "https://www.cnfansge.com/AllProducts/6678.html"],
+  ["$18.04", "/products/jersey-red.jpg", "https://www.cnfansge.com/AllProducts/6677.html"],
+  ["$10.33", "/products/jersey-black.jpg", "https://www.cnfansge.com/AllProducts/6676.html"],
 ] as const;
 
 const localizedProductLabels: Record<Lang, [string, string][]> = {
@@ -169,3 +170,18 @@ export const productsByLang = Object.fromEntries(
     return [name, category, price, image, href] as ProductItem;
   })])
 ) as Record<Lang, ProductItem[]>;
+
+
+// Public source references checked on 2026-11-07; no inventory or checkout promises.
+const catalogCategoryNames: Record<Lang, {hoodies: string; shoes: string}> = {
+ en: {hoodies: "Hoodies", shoes: "Shoes"}, de: {hoodies: "Hoodies", shoes: "Schuhe"},
+ es: {hoodies: "Sudaderas", shoes: "Calzado"}, fr: {hoodies: "Sweats à capuche", shoes: "Chaussures"},
+ it: {hoodies: "Felpe", shoes: "Scarpe"},
+};
+for (const lang of Object.keys(productsByLang) as Lang[]) {
+  productsByLang[lang].push(...catalogReferences.map(item => {
+    const category = catalogCategoryNames[lang][item.category as "hoodies" | "shoes"];
+    const name = item.category === "hoodies" ? `${category} ${item.name.split("-").pop()}` : item.name;
+    return [name, category, `$${item.price}`, item.image, item.href] as ProductItem;
+  }));
+}

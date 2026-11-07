@@ -19,9 +19,12 @@ export function AnalyticsEvents() {
       const link = event.target instanceof Element ? event.target.closest<HTMLAnchorElement>("a[href]") : null;
       if (!link) return;
       const destination = new URL(link.href, location.href);
-      if (destination.origin === location.origin) return;
+      if (destination.origin === location.origin) {
+        if (/\/articles\/[^/]+/.test(destination.pathname)) trackEvent("guide_navigation", { content_language: language, source_path: pathname, destination_path: destination.pathname });
+        return;
+      }
       const name = link.classList.contains("product-card") ? "product_outbound" : link.classList.contains("category-card") ? "category_outbound" : "resource_outbound";
-      trackEvent(name, { content_language: language, link_domain: destination.hostname, link_path: destination.pathname });
+      trackEvent(name, { content_language: language, link_domain: destination.hostname, link_path: destination.pathname, source_path: pathname });
     };
     document.addEventListener("click", clicked);
     let observer: IntersectionObserver | undefined;
