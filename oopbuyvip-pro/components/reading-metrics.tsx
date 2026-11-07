@@ -19,8 +19,10 @@ export function ReadingMetrics({ locale }: { locale: Locale }) {
       const url = new URL(link.href, window.location.origin);
       if (link.dataset.languageLink) send("language_switch", { target_language: link.dataset.languageLink });
       else if (url.origin === window.location.origin && url.hash && link.closest(".mobile-toc, .article-layout aside")) send("article_toc_click", { section_id: url.hash.slice(1) });
+      else if (link.hasAttribute("data-qc-guide")) send("qc_guide_click", { destination_path: url.pathname });
       else if (link.hasAttribute("data-related-article")) send("article_related_click", { destination_path: url.pathname });
       else if (url.hostname === "cnfansge.com") send("catalog_click", { destination_path: url.pathname });
+      else if (url.hostname === "oopbuy.com" || url.hostname.endsWith(".oopbuy.com")) send("official_resource_click", { destination_path: url.pathname });
     };
     const submit = (event: Event) => {
       if (event.target instanceof HTMLFormElement && new URL(event.target.action).hostname === "cnfansge.com") send("catalog_search"); // No query text.
