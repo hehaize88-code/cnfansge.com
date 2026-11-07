@@ -1,3 +1,4 @@
+import { prioritySlugs, releaseUi } from "@/lib/seo-release";
 import { articleUi } from "@/lib/article-improvements";
 import Link from "next/link";
 import Image from "next/image";
@@ -38,6 +39,8 @@ export function HomePage({ locale }: { locale: Locale }) {
         </div>
       </section>
 
+      <QcNextSteps locale={locale} />
+
       <section className="section shell product-section">
         <div className="section-head"><div><p className="kicker">{t.liveSheet}</p><h2>{t.products}</h2><p>{t.productIntro}</p></div><Link className="text-link" href={sectionPath(locale, "spreadsheet")}>{t.liveSheet}<ArrowRight /></Link></div>
         <ProductExplorer locale={locale} />
@@ -64,10 +67,19 @@ export function HomePage({ locale }: { locale: Locale }) {
   );
 }
 
+function QcNextSteps({ locale }: { locale: Locale }) {
+ const ui = releaseUi[locale];
+ const articles = getArticles(locale);
+ return <section className="shell qc-next-steps" aria-labelledby="qc-next-heading"><div><p className="kicker">OOPBUY QC</p><h2 id="qc-next-heading">{ui.heading}</h2><p>{ui.intro}</p></div><nav>{prioritySlugs.map((slug, index) => { const article = articles.find(item => item.slug === slug); return article ? <Link key={slug} href={articlePath(locale,slug)} data-qc-guide><span>0{index + 1}</span><b>{article.title}</b><ArrowRight /></Link> : null; })}</nav></section>;
+}
+
 export function ArticleGrid({ locale, articles }: { locale: Locale; articles: Article[] }) {
   const t = copy[locale];
   const labels = homeUi[locale].articleLabels;
   const visuals = {
+    "oopbuy-how-to-find-qc-photos": { label: labels.qc, className: "thumb-qc", Icon: Search },
+    "oopbuy-qc-photos-not-showing": { label: labels.qc, className: "thumb-guide", Icon: Focus },
+    "oopbuy-extra-qc-photos-measurements": { label: labels.qc, className: "thumb-sheet", Icon: Ruler },
     "oopbuy-qc-photo-angles": { label: labels.qc, className: "thumb-qc", Icon: Camera },
     "oopbuy-qc-quantity-accessories": { label: labels.qc, className: "thumb-sheet", Icon: Boxes },
     "oopbuy-qc-prints-embroidery": { label: labels.qc, className: "thumb-guide", Icon: ScanText },
@@ -103,12 +115,13 @@ export function SectionPage({ locale, section }: { locale: Locale; section: Sect
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbLd) }} />
       {itemListLd && <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(itemListLd) }} />}
       <section className="page-hero"><div className="shell narrow"><p className="eyebrow">{t.sectionKickers[section]}</p><h1>{t.sectionTitles[section]}</h1><p>{t.sectionIntros[section]}</p>{isProduct && <CatalogSearch locale={locale} />}</div></section>
+      {["qc", "guide", "articles", "spreadsheet"].includes(section) && <QcNextSteps locale={locale} />}
       {isProduct && <section className="section shell"><ProductExplorer locale={locale} limit={section === "finds" ? 6 : undefined} /></section>}
       {section === "guide" && <GuideBody locale={locale} />}
       {section === "qc" && <QcBody locale={locale} />}
       {section === "shipping" && <ShippingBody locale={locale} />}
       {isFaq && <section className="section shell narrow"><FaqList locale={locale} /><p className="source-note">{t.sourceNote}</p></section>}
-      {isArticles && <section className="section shell"><ArticleGrid locale={locale} articles={articles} /></section>}
+      {isArticles && <section className="section shell"><p className="article-count">{articles.length} {releaseUi[locale].count}</p><ArticleGrid locale={locale} articles={articles} /></section>}
       {!isFaq && <SectionDepth locale={locale} section={section as DepthSection} />}
     </main>
   );
@@ -119,7 +132,7 @@ const bodyCopy: Record<Locale, { guide: { title: string; text: string }[]; qc: {
     guide: [
       { title: "1. Define the purchase", text: "Write down category, intended use, selected size or option, product budget and a separate shipping allowance. A clear brief stops the spreadsheet becoming an endless browse." },
       { title: "2. Open the current route", text: "Confirm the destination page still matches the card. Save the product ID, option, date and visible price. Treat changed or missing routes as stale." },
-      { title: "3. Review warehouse evidence", text: "OOPBUY says arrivals are inspected and photographed. Compare the received item with your saved reference while the official five-day / 120-hour return window may still apply." },
+      { title: "3. Review warehouse evidence", text: "OOPBUY says arrivals are inspected and photographed. Compare the received item with your saved reference and check the current aftersales options for your order." },
       { title: "4. Build the parcel", text: "Use measured information when available, account for actual and volumetric weight, check restrictions and compare routes by total service—not only the lowest headline price." },
       { title: "5. Pay the packed result", text: "OOPBUY’s tutorial distinguishes estimated shipping from the actual cost shown after packing. Recheck the item list, address, route, measurements, optional services and final amount before payment." },
       { title: "6. Track the waybill", text: "After shipment, the official tutorial directs users to the logistics track in “My Waybill”. Keep the parcel reference and compare the delivered result with the original cost and timing range." },
@@ -164,7 +177,7 @@ const bodyCopy: Record<Locale, { guide: { title: string; text: string }[]; qc: {
 };
 
 function GuideBody({ locale }: { locale: Locale }) { return <BodyCards items={bodyCopy[locale].guide} icon="guide" sourceNote={copy[locale].sourceNote} />; }
-function QcBody({ locale }: { locale: Locale }) { return <BodyCards items={bodyCopy[locale].qc} icon="qc" sourceNote={copy[locale].sourceNote} />; }
+function QcBody({ locale }: { locale: Locale }) { return <BodyCards items={bodyCopy[locale].qc.map((item, index) => index === 3 ? { ...item, text: releaseUi[locale].policy } : item)} icon="qc" sourceNote={copy[locale].sourceNote} />; }
 function ShippingBody({ locale }: { locale: Locale }) { return <BodyCards items={bodyCopy[locale].shipping} icon="shipping" sourceNote={copy[locale].sourceNote} />; }
 
 function BodyCards({ items, icon, sourceNote }: { items: { title: string; text: string }[]; icon: string; sourceNote: string }) {
