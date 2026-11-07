@@ -562,3 +562,13 @@ footer small { color: #9d918e; text-align: right; }
 .weight-result{margin-top:18px;padding:16px;background:white;border-radius:12px}.weight-result p{margin:6px 0}.weight-result small{display:block;line-height:1.5}
 :focus-visible{outline:3px solid #5a8243;outline-offset:4px}
 @media(max-width:700px){.breadcrumbs{margin:12px auto;padding:0 16px;font-size:12px}.calculator-fields{grid-template-columns:repeat(2,minmax(0,1fr))}.calculator-fields label:last-child{grid-column:1/-1}.weight-calculator{padding:18px;border-radius:14px}.weight-calculator h2{font-size:23px}.weight-calculator p{font-size:14px}.related-grid{grid-template-columns:1fr;gap:8px}.related-grid a{padding:15px}.related-grid h3{font-size:17px;margin:6px 0}.related-grid svg{display:none}.article-toc li{font-size:13px;margin:8px 0}.article-toc h2{font-size:16px}.field-article header > span{font-size:11px;line-height:1.6}.field-article header > p:not(.eyebrow){font-size:15px;line-height:1.6}.article-body aside p{font-size:12px;line-height:1.6}.article-body aside small{font-size:11px}.source-notes li{font-size:12px;line-height:1.5}.article-grid p{font-size:13px;line-height:1.55}}
+
+/* Catalogue controls share the existing compact card layout. */
+.catalog-filter{display:flex;align-items:center;gap:12px;flex-wrap:wrap;margin:30px 0 12px}
+.catalog-filter select{min-width:180px;max-width:100%;padding:12px;border:1px solid var(--line);border-radius:10px;background:white;font:inherit}
+.catalog-filter button,.catalog-pagination a{padding:12px 18px;background:var(--rose);color:white;border:0;border-radius:12px;font:inherit;font-weight:700;display:inline-flex;align-items:center;gap:8px}
+.catalog-pagination{display:flex;justify-content:flex-end;align-items:center;gap:20px;margin:24px 0}
+.catalog-status{padding:24px;background:var(--soft);border-radius:16px;line-height:1.7}
+.article-count{width:min(1420px,calc(100% - 40px));margin:0 auto;font-weight:800;color:var(--rose)}
+.source-notes a{display:inline-flex;align-items:center;gap:7px;text-decoration:underline;text-underline-offset:3px}
+@media(max-width:600px){.catalog-filter{gap:8px}.catalog-filter label{width:100%}.catalog-filter select{min-width:0;flex:1}.catalog-pagination{gap:12px}.article-count{width:calc(100% - 28px)}}

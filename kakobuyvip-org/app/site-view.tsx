@@ -2,9 +2,11 @@
 import Link from "next/link";
 import { ArrowRight, Box, Check, ExternalLink, Search, ShieldCheck, Sparkles, Weight } from "lucide-react";
 import LocaleSwitcher from "./locale-switcher";
-import { categories, copy, localPath, products, type Locale, type PageKey } from "./site-data";
+import { categories, copy, localPath, type Locale, type PageKey } from "./site-data";
 import { articleKeys, articleDates, getArticle, relatedArticles, type ArticlePageKey } from "./article-registry";
 import { editorialUi } from "./editorial-ui";
+import { catalogCategories, type CatalogData } from './catalog';
+import { catalogCopy } from './catalog-copy';
 import ShippingCalculator from "./shipping-calculator";
 import { officialFaqs, seoPageIntro } from "./research-copy";
 
@@ -39,20 +41,27 @@ function SearchBox({ locale }: {locale:Locale}) {
   </form>;
 }
 
-function ProductGrid({ locale, all=false }: {locale:Locale; all?:boolean}) {
-  const c=copy[locale];
-  return <div className={`product-grid ${all?"wide":""}`}>{products.map((product,index)=><a className="product-card" href={product.href} key={product.href} target="_blank" rel="noreferrer">
-    <div className="product-image"><img src={product.image} alt={product.name} width="600" height="600" loading={index===0?"eager":"lazy"}/><span>{String(index+1).padStart(2,"0")}</span></div>
-    <div className="product-copy"><small>{product.category} · {product.cny}</small><h3>{product.name}</h3><div><strong>{product.price}</strong><span>{c.open}<ExternalLink size={13}/></span></div></div>
+function ProductGrid({ locale, data, limit=20 }: {locale:Locale; data?:CatalogData; limit?:number}) {
+  const ui=catalogCopy[locale];
+  if(!data||data.unavailable)return <p className="catalog-status" role="status">{ui.unavailable}</p>;
+  if(!data.products.length)return <p className="catalog-status">{ui.empty}</p>;
+  return <div className="product-grid">{data.products.slice(0,limit).map((product,index)=><a className="product-card" href={product.href} key={product.id} target="_blank" rel="noopener noreferrer">
+    <div className="product-image">{product.image&&<img src={product.image} alt={product.name} width="600" height="600" loading={index<4?'eager':'lazy'}/>}<span>{String((data.page-1)*20+index+1).padStart(2,'0')}</span></div>
+    <div className="product-copy"><small>{product.cny===null?ui.price:`¥${product.cny.toFixed(2)} CNY`}</small><h3>{product.name}</h3><div><span>{copy[locale].open}<ExternalLink size={13}/></span></div></div>
   </a>)}</div>;
+}
+function Catalog({locale,page,data}:{locale:Locale;page:'spreadsheet'|'finds';data?:CatalogData}){
+ const ui=catalogCopy[locale],current=data?.page??1,category=data?.category??'all';
+ const href=(n:number)=>`${localPath(locale,page)}?${new URLSearchParams({category,page:String(n)})}`;
+ return <><form className="catalog-filter" action={localPath(locale,page)}><label htmlFor="catalog-category">{ui.category}</label><select id="catalog-category" name="category" defaultValue={category}>{catalogCategories.map((key,i)=><option key={key} value={key}>{ui.categories[i]}</option>)}</select><button type="submit">{ui.apply}</button></form><p className="price-note">{ui.note}</p><ProductGrid locale={locale} data={data}/><nav className="catalog-pagination" aria-label={ui.page}>{current>1&&<a href={href(current-1)}>{ui.previous}</a>}<span>{ui.page} {current}</span>{data?.next&&<a href={href(current+1)}>{ui.next}<ArrowRight size={16}/></a>}</nav></>;
 }
 
 function Categories({ locale }: {locale:Locale}) {
   const c=copy[locale];
-  return <section className="section split-title"><div><p className="eyebrow">CATALOG / 08</p><h2>{c.categories}</h2></div><div><p>{c.categoriesBody}</p><div className="category-grid">{categories.map(([name,href],i)=><a href={href} key={href} target="_blank" rel="noreferrer"><span>{String(i+1).padStart(2,"0")}</span>{editorialUi[locale].categories[i]}<ArrowRight size={16}/></a>)}</div></div></section>;
+  return <section className="section split-title"><div><p className="eyebrow">CATALOG / 08</p><h2>{c.categories}</h2></div><div><p>{c.categoriesBody}</p><div className="category-grid">{categories.map(([,href],i)=><a href={href} key={href} target="_blank" rel="noreferrer"><span>{String(i+1).padStart(2,"0")}</span>{editorialUi[locale].categories[i]}<ArrowRight size={16}/></a>)}</div></div></section>;
 }
 
-function Home({ locale }: {locale:Locale}) {
+function Home({ locale, catalog }: {locale:Locale;catalog?:CatalogData}) {
   const c=copy[locale];
   const [homeTitle,homeBody]=homeResearch[locale];
   const schema={"@context":"https://schema.org","@type":"WebSite",name:"Kakobuy VIP",url:"https://kakobuyvip.org",potentialAction:{"@type":"SearchAction",target:"https://cnfansge.com/search.html?keywords={search_term_string}&channelid=2","query-input":"required name=search_term_string"}};
@@ -63,9 +72,9 @@ function Home({ locale }: {locale:Locale}) {
     <main>
       <section className="hero">
         <div className="hero-copy"><p className="status"><span/> {c.badge}</p><h1>{homeTitle}</h1><p className="lede">{homeBody}</p><SearchBox locale={locale}/><div className="hero-meta"><span><ShieldCheck size={16}/>{c.verified}</span><span>{c.updated}</span></div></div>
-        <div className="hero-board"><div className="board-orbit orbit-one">QC</div><div className="board-orbit orbit-two">LIVE</div><a href={products[0].href} target="_blank" rel="noreferrer"><div className="board-head"><span>FEATURED FIND</span><strong>01 / 04</strong></div><img src={products[0].image} alt="Featured shoes" width="720" height="720"/><div className="board-caption"><small>LINK &amp; IMAGE CHECKED</small><b>{products[0].name}</b><span>{products[0].price}</span></div></a><div className="board-note"><ShieldCheck size={18}/><span>{c.verified}</span></div></div>
+        <div className="hero-board"><div className="board-orbit orbit-one">QC</div><div className="board-orbit orbit-two">CNY</div><Link href={localPath(locale,'spreadsheet')}><div className="board-head"><span>{catalogCopy[locale].title}</span><strong>01 / 20</strong></div><img src={catalog?.products[0]?.image||'/kakobuy.png'} alt={catalog?.products[0]?.name||'Kakobuy'} width="720" height="720"/><div className="board-caption"><small>{copy[locale].browse}</small><b>{catalog?.products[0]?.name||homeTitle}</b><span>{catalog?.products[0]?.cny?`¥${catalog.products[0].cny}`:''}</span></div></Link></div>
       </section>
-      <section className="section"><div className="section-head"><div><p className="eyebrow">LIVE SAMPLE / 04</p><h2>{c.featured}</h2></div><p>{c.featuredBody}</p></div><ProductGrid locale={locale}/><p className="price-note">{c.priceNote}</p></section>
+      <section className="section"><div className="section-head"><div><p className="eyebrow">{catalogCopy[locale].title}</p><h2>{c.featured}</h2></div><p>{c.featuredBody}</p></div><ProductGrid locale={locale} data={catalog} limit={4}/><p className="price-note">{catalogCopy[locale].note}</p><Link className="text-link" href={localPath(locale,"spreadsheet")}>{c.browse}<ArrowRight size={16}/></Link></section>
       <Categories locale={locale}/>
       <section className="section qc-strip"><div><p className="eyebrow">INSPECTION / 60 SEC</p><h2>{c.qcSignals}</h2><Link className="text-link" href={localPath(locale,"qc")}>{c.learn}<ArrowRight size={16}/></Link></div><ol>{c.qcItems.map((item,i)=><li key={item}><span>{String(i+1).padStart(2,"0")}</span>{item}</li>)}</ol></section>
       <section className="section resource-section"><div className="section-head"><div><p className="eyebrow">WORKFLOW / 04</p><h2>{c.resourceTitle}</h2></div><p>{c.resourceBody}</p></div><div className="resource-grid">{c.resourceCards.map(([key,title,body],i)=><Link href={localPath(locale,key)} key={key}><span>0{i+1}</span><h3>{title}</h3><p>{body}</p><ArrowRight size={19}/></Link>)}</div></section>
@@ -102,8 +111,9 @@ const shippingCopy:Record<Locale,{formula:string;cards:Array<[string,string]>}>=
 type SectionPageKey=Extract<PageKey,"spreadsheet"|"finds"|"guide"|"qc"|"shipping"|"faq"|"articles">;
 function PageHero({locale,page}:{locale:Locale;page:SectionPageKey}) { const [title,body]=seoPageIntro[locale][page]; return <section className="page-hero"><p className="eyebrow">KAKOBUY VIP / {page.toUpperCase()}</p><h1>{title}</h1><p>{body}</p></section>; }
 
-function SpreadsheetPage({locale}:{locale:Locale}) { const c=copy[locale]; return <main><PageHero locale={locale} page="spreadsheet"/><section className="section"><div className="method-grid"><div><span>01</span><h3>{c.verified}</h3><p>{c.categoriesBody}</p></div><div><span>02</span><h3>{c.updated}</h3><p>{c.priceNote}</p></div><div><span>03</span><h3>{editorialUi[locale].exact}</h3><p>{editorialUi[locale].exactBody}</p></div></div><ProductGrid locale={locale} all/><Categories locale={locale}/></section></main>; }
-function FindsPage({locale}:{locale:Locale}) { const c=copy[locale]; return <main><PageHero locale={locale} page="finds"/><section className="section"><SearchBox locale={locale}/><div className="spacer"/><ProductGrid locale={locale} all/><p className="price-note">{c.priceNote}</p></section></main>; }
+function SpreadsheetPage({locale,catalog}:{locale:Locale;catalog?:CatalogData}) { return <main><PageHero locale={locale} page="spreadsheet"/><section className="section"><SearchBox locale={locale}/><Catalog locale={locale} page="spreadsheet" data={catalog}/></section><Categories locale={locale}/></main>; }
+function FindsPage({locale,catalog}:{locale:Locale;catalog?:CatalogData}) { return <main><PageHero locale={locale} page="finds"/><section className="section"><SearchBox locale={locale}/><Catalog locale={locale} page="finds" data={catalog}/></section><Categories locale={locale}/></main>; }
+
 function GuidePage({locale}:{locale:Locale}) { return <main><PageHero locale={locale} page="guide"/><section className="section process">{processText[locale].map(([title,body],i)=><article key={title}><span>{String(i+1).padStart(2,"0")}</span><div><h2>{title}</h2><p>{body}</p></div></article>)}</section></main>; }
 function QCPage({locale}:{locale:Locale}) { const c=copy[locale]; return <main><PageHero locale={locale} page="qc"/><section className="section qc-groups">{qcGroups[locale].map(([title,items],i)=><article key={title}><div className="iconbox">{i===0?<Sparkles/>:i===1?<ShieldCheck/>:<Check/>}</div><h2>{title}</h2><ul>{items.map(x=><li key={x}>{x}</li>)}</ul></article>)}</section><section className="section callout"><strong>{c.qcSignals}</strong><p>{c.disclaimer}</p></section></main>; }
 function ShippingPage({locale}:{locale:Locale}) { const s=shippingCopy[locale]; return <main><PageHero locale={locale} page="shipping"/><section className="section"><ShippingCalculator locale={locale}/><div className="formula"><Weight/><span>{s.formula}</span></div><div className="method-grid shipping-grid">{s.cards.map(([a,b],i)=><div key={a}><span>0{i+1}</span><h2>{a}</h2><p>{b}</p></div>)}</div></section></main>; }
@@ -121,7 +131,7 @@ const articleUi:Record<Locale,{latest:string;standard:string;basis:string;source
 function ArticleHighlights({locale}:{locale:Locale}) {
   return <section className="section article-highlights"><div className="section-head"><div><p className="eyebrow">RESEARCH / {articleKeys.length}</p><h2>{articleUi[locale].latest}</h2></div><p>{seoPageIntro[locale].articles[1]}</p></div><div className="article-grid">{articleKeys.slice(0,6).map((key,i)=>{const a=getArticle(locale,key);return <Link href={localPath(locale,key)} key={key}><span>{a.tag} / {String(i+1).padStart(2,"0")}</span><h2>{a.title}</h2><p>{a.lede}</p><b>{a.read}<ArrowRight size={16}/></b></Link>})}</div><Link className="text-link" href={localPath(locale,"articles")}>{copy[locale].pageIntro.articles[0]}<ArrowRight size={16}/></Link></section>;
 }
-function ArticlesPage({locale}:{locale:Locale}) { return <main><PageHero locale={locale} page="articles"/><section className="section article-grid">{articleKeys.map((key,i)=>{const a=getArticle(locale,key);return <Link href={localPath(locale,key)} key={key}><span>{a.tag} / 0{i+1}</span><h2>{a.title}</h2><p>{a.lede}</p><b>{a.read}<ArrowRight size={16}/></b></Link>})}</section></main>; }
+function ArticlesPage({locale}:{locale:Locale}) { return <main><PageHero locale={locale} page="articles"/><p className="article-count">{articleKeys.length} {catalogCopy[locale].count}</p><section className="section article-grid">{articleKeys.map((key,i)=>{const a=getArticle(locale,key);return <Link href={localPath(locale,key)} key={key}><span>{a.tag} / {String(i+1).padStart(2,"0")}</span><h2>{a.title}</h2><p>{a.lede}</p><b>{a.read}<ArrowRight size={16}/></b></Link>})}</section></main>; }
 
 function ArticlePage({locale,page}:{locale:Locale;page:ArticlePageKey}) {
   const a=getArticle(locale,page); const canonical=`https://kakobuyvip.org${localPath(locale,page)==="/"?"":localPath(locale,page)}`;
@@ -131,11 +141,11 @@ function ArticlePage({locale,page}:{locale:Locale;page:ArticlePageKey}) {
   const breadcrumbSchema={"@type":"BreadcrumbList",itemListElement:[{"@type":"ListItem",position:1,name:ui.home,item:`https://kakobuyvip.org${localPath(locale,"home")}`},{"@type":"ListItem",position:2,name:copy[locale].pageIntro.articles[0],item:`https://kakobuyvip.org${localPath(locale,"articles")}`},{"@type":"ListItem",position:3,name:a.title,item:canonical}]};
   const graph=[articleSchema,breadcrumbSchema];
   const schema={"@context":"https://schema.org","@graph":graph};
-  return <main><script type="application/ld+json" dangerouslySetInnerHTML={{__html:JSON.stringify(schema)}}/><article className="field-article"><nav className="breadcrumbs" aria-label={ui.home}><Link href={localPath(locale,"home")}>{ui.home}</Link><span>/</span><Link href={localPath(locale,"articles")}>{copy[locale].nav[6]}</Link><span>/</span><span>{a.tag}</span></nav><header><p className="eyebrow">{a.tag} / FIELD NOTE</p><h1>{a.title}</h1><p>{a.lede}</p><span>{a.read} · {ui.published} <time dateTime={dates.published}>{dates.published}</time> · {ui.updated} <time dateTime={dates.modified}>{dates.modified}</time></span></header>{page==="qcArticle"&&<figure className="article-visual"><img src={products[0].image} alt={products[0].name} width="1200" height="780"/><figcaption>{articleUi[locale].visual}</figcaption></figure>}<div className="article-body"><aside><Box/><strong>{articleUi[locale].standard}</strong><p>{copy[locale].disclaimer}</p><small>{a.reviewed}</small><nav className="article-toc" aria-label={ui.contents}><h2>{ui.contents}</h2><ol>{a.sections.map(([title],i)=><li key={title}><a href={`#section-${i+1}`}>{title}</a></li>)}</ol></nav></aside><div>{a.sections.map(([title,paras],i)=><section id={`section-${i+1}`} key={title}><span>{String(i+1).padStart(2,"0")}</span><h2>{title}</h2>{paras.map(p=><p key={p}>{p}</p>)}</section>)}<section className="source-notes"><span>{articleUi[locale].basis}</span><h2>{ui.sourceHeading}</h2><p>{ui.sourceNote}</p><ul>{a.sources.map(source=><li key={source.url}><span>{source.label}</span></li>)}</ul></section></div></div><RelatedGuides locale={locale} page={page}/><div className="article-next"><p>{copy[locale].resourceBody}</p><Link href={localPath(locale,"articles")}>{copy[locale].pageIntro.articles[0]}<ArrowRight size={17}/></Link></div></article></main>;
+  return <main><script type="application/ld+json" dangerouslySetInnerHTML={{__html:JSON.stringify(schema)}}/><article className="field-article"><nav className="breadcrumbs" aria-label={ui.home}><Link href={localPath(locale,"home")}>{ui.home}</Link><span>/</span><Link href={localPath(locale,"articles")}>{copy[locale].nav[6]}</Link><span>/</span><span>{a.tag}</span></nav><header><p className="eyebrow">{a.tag} / FIELD NOTE</p><h1>{a.title}</h1><p>{a.lede}</p><span>{a.read} · {ui.published} <time dateTime={dates.published}>{dates.published}</time> · {ui.updated} <time dateTime={dates.modified}>{dates.modified}</time></span></header><div className="article-body"><aside><Box/><strong>{articleUi[locale].standard}</strong><p>{copy[locale].disclaimer}</p><small>{a.reviewed}</small><nav className="article-toc" aria-label={ui.contents}><h2>{ui.contents}</h2><ol>{a.sections.map(([title],i)=><li key={title}><a href={`#section-${i+1}`}>{title}</a></li>)}</ol></nav></aside><div>{a.sections.map(([title,paras],i)=><section id={`section-${i+1}`} key={title}><span>{String(i+1).padStart(2,"0")}</span><h2>{title}</h2>{paras.map(p=><p key={p}>{p}</p>)}</section>)}<section className="source-notes"><span>{articleUi[locale].basis}</span><h2>{ui.sourceHeading}</h2><p>{ui.sourceNote}</p><ul>{a.sources.map(source=><li key={source.url}><a href={source.url} target="_blank" rel="noopener noreferrer">{source.label}<ExternalLink size={14}/></a></li>)}</ul></section></div></div><RelatedGuides locale={locale} page={page}/><div className="article-next"><p>{copy[locale].resourceBody}</p><Link href={localPath(locale,"articles")}>{copy[locale].pageIntro.articles[0]}<ArrowRight size={17}/></Link></div></article></main>;
 }
 
 function RelatedGuides({locale,page}:{locale:Locale;page:PageKey}) {return <section className="section related-guides"><h2>{editorialUi[locale].related}</h2><div className="related-grid">{relatedArticles(page).map(key=><Link key={key} href={localPath(locale,key)}><span>{getArticle(locale,key).tag}</span><h3>{getArticle(locale,key).title}</h3><ArrowRight size={17}/></Link>)}</div></section>;}
 
-export function SiteView({locale,page}:{locale:Locale;page:PageKey}) {
-  return <><Header locale={locale} page={page}/>{page==="home"?<Home locale={locale}/>:page==="spreadsheet"?<SpreadsheetPage locale={locale}/>:page==="finds"?<FindsPage locale={locale}/>:page==="guide"?<GuidePage locale={locale}/>:page==="qc"?<QCPage locale={locale}/>:page==="shipping"?<ShippingPage locale={locale}/>:page==="faq"?<FAQPage locale={locale}/>:page==="articles"?<ArticlesPage locale={locale}/>:<ArticlePage locale={locale} page={page as ArticlePageKey}/>}{!["home","articles","faq"].includes(page)&&!page.endsWith("Article")&&<RelatedGuides locale={locale} page={page}/>}<Footer locale={locale}/></>;
+export function SiteView({locale,page,catalog}:{locale:Locale;page:PageKey;catalog?:CatalogData}) {
+  return <><Header locale={locale} page={page}/>{page==="home"?<Home locale={locale} catalog={catalog}/>:page==="spreadsheet"?<SpreadsheetPage locale={locale} catalog={catalog}/>:page==="finds"?<FindsPage locale={locale} catalog={catalog}/>:page==="guide"?<GuidePage locale={locale}/>:page==="qc"?<QCPage locale={locale}/>:page==="shipping"?<ShippingPage locale={locale}/>:page==="faq"?<FAQPage locale={locale}/>:page==="articles"?<ArticlesPage locale={locale}/>:<ArticlePage locale={locale} page={page as ArticlePageKey}/>}{!["home","articles","faq"].includes(page)&&!page.endsWith("Article")&&<RelatedGuides locale={locale} page={page}/>}<Footer locale={locale}/></>;
 }

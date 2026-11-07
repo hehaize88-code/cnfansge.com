@@ -1,7 +1,7 @@
 /** Preserve existing hosting and normalize only the site's public hosts. */
 import handler from 'vinext/server/app-router-entry';
 declare const HTMLRewriter: {new(): {on(selector:string,handler:{element(element:{setAttribute(name:string,value:string):void}):void}):{transform(response:Response):Response}}};
-export default {
+const worker = {
  async fetch(request:Request,env:Parameters<typeof handler.fetch>[1],ctx:Parameters<typeof handler.fetch>[2]):Promise<Response>{
   const url=new URL(request.url);
   if(['kakobuyvip.org','www.kakobuyvip.org'].includes(url.hostname)){
@@ -17,3 +17,5 @@ export default {
   return new HTMLRewriter().on('html',{element(element){element.setAttribute('lang',locale);}}).transform(response);
  }
 };
+
+export default worker;

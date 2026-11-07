@@ -4,8 +4,8 @@ type IndependentPage = Exclude<PageKey,"home"|`${string}Article`>;
 
 export const seoPageIntro: Record<Locale, Record<IndependentPage, [string, string]>> = {
   en: {
-    spreadsheet: ["Kakobuy Spreadsheet: Product Finds and Category Links", "A checked product index that keeps images, prices and destination routes aligned—and explains what still needs verifying before you order."],
-    finds: ["Kakobuy Finds With Checked Product Routes", "Browse current product records whose card image and destination were reviewed together. Prices remain dated snapshots, not final landed costs."],
+    spreadsheet: ["Kakobuy Spreadsheet: Product Finds and Category Links", "Browse Kakobuy product links by category, compare listed CNY prices and check sizes, QC photos and shipping before ordering. 20 products per page when the catalog is available."],
+    finds: ["Kakobuy Finds With Checked Product Routes", "Explore product links with images and listed CNY prices. Choose a category, browse more pages and confirm the exact seller option before purchase."],
     guide: ["How to Buy With Kakobuy: Step-by-Step Guide", "Follow the official agent sequence from Chinese marketplace link to item payment, warehouse QC and international parcel submission."],
     qc: ["Kakobuy QC Photo Guide", "Use a repeatable inspection method for identity, shape, construction and decision-critical evidence before the parcel leaves the warehouse."],
     shipping: ["Kakobuy Shipping Calculator and Weight Guide", "Compare live routes with realistic weight and dimensions, understand volumetric billing, and separate platform services from destination taxes."],
@@ -13,8 +13,8 @@ export const seoPageIntro: Record<Locale, Record<IndependentPage, [string, strin
     articles: ["Kakobuy Guides: QC, Fees, Links and Shipping", "Source-checked research on the official site, legitimacy, reviews, safety, policy changes, QC and parcel decisions."],
   },
   de: {
-    spreadsheet: ["Kakobuy Spreadsheet: Produktliste und Kategorien", "Geprüfte Produktwege mit passenden Bildern, Preisen und Zielen – plus klare Hinweise, was vor der Bestellung noch geprüft werden muss."],
-    finds: ["Kakobuy-Funde mit geprüften Zielen", "Aktuelle Datensätze, deren Kartenbild und Ziel gemeinsam kontrolliert wurden. Preise bleiben datierte Momentaufnahmen."],
+    spreadsheet: ["Kakobuy Spreadsheet: Produktliste und Kategorien", "Kakobuy-Produktlinks nach Kategorie mit CNY-Preisen durchsuchen. Größen, QC und Versand prüfen. Bei verfügbarem Katalog bis zu 20 Produkte je Seite."],
+    finds: ["Kakobuy-Funde mit geprüften Zielen", "Produktlinks mit Bildern und CNY-Preisen entdecken. Kategorie wählen, weiterblättern und die genaue Variante vor dem Kauf bestätigen."],
     guide: ["Mit Kakobuy bestellen: Schritt für Schritt", "Vom chinesischen Produktlink über Artikelzahlung und Lager-QC bis zur Einreichung des internationalen Pakets."],
     qc: ["Kakobuy QC-Foto-Leitfaden", "Identität, Form, Verarbeitung und entscheidende Belege vor dem Versand systematisch prüfen."],
     shipping: ["Kakobuy Versandkosten- und Gewichtsleitfaden", "Live-Linien mit realistischen Maßen vergleichen, Volumengewicht verstehen und Plattformdienste von Einfuhrabgaben trennen."],
@@ -22,8 +22,8 @@ export const seoPageIntro: Record<Locale, Record<IndependentPage, [string, strin
     articles: ["Kakobuy-Leitfäden: QC, Kosten, Links und Versand", "Quellengeprüfte Recherche zu offizieller Website, Seriosität, Sicherheit, Richtlinien, QC und Paketentscheidungen."],
   },
   es: {
-    spreadsheet: ["Hoja Kakobuy 2026", "Índice revisado que mantiene alineados imagen, precio y destino y explica qué verificar antes de pedir."],
-    finds: ["Hallazgos Kakobuy con rutas revisadas", "Registros actuales cuya imagen y destino se comprobaron juntos. Los precios son capturas fechadas, no costes finales."],
+    spreadsheet: ["Kakobuy Spreadsheet: productos, precios y categorías", "Explora enlaces Kakobuy por categoría, compara precios CNY y revisa talla, QC y envío. Hasta 20 productos por página cuando el catálogo está disponible."],
+    finds: ["Hallazgos Kakobuy con rutas revisadas", "Enlaces con imágenes y precios CNY. Elige una categoría, explora más páginas y confirma la variante exacta antes de comprar."],
     guide: ["Cómo comprar con Kakobuy: paso a paso", "Del enlace del marketplace chino al pago, QC de almacén y envío del paquete internacional."],
     qc: ["Guía de fotos QC de Kakobuy", "Método repetible para identidad, forma, construcción y evidencia decisiva antes del envío."],
     shipping: ["Calculadora y guía de peso Kakobuy", "Compara rutas con peso y medidas realistas, entiende el volumétrico y separa servicios de impuestos de destino."],
@@ -31,8 +31,8 @@ export const seoPageIntro: Record<Locale, Record<IndependentPage, [string, strin
     articles: ["Guías Kakobuy: QC, costes, enlaces y envío", "Investigación verificada sobre web oficial, legitimidad, seguridad, políticas, QC y decisiones de paquete."],
   },
   fr: {
-    spreadsheet: ["Tableur Kakobuy 2026", "Index vérifié où image, prix et destination restent alignés, avec les contrôles à faire avant commande."],
-    finds: ["Sélections Kakobuy aux routes vérifiées", "Fiches actuelles dont l'image et la destination ont été contrôlées ensemble. Les prix sont des instantanés datés."],
+    spreadsheet: ["Tableur Kakobuy : produits, prix et catégories", "Parcourez les liens Kakobuy par catégorie, comparez les prix CNY et vérifiez tailles, QC et livraison. Jusqu’à 20 produits par page selon disponibilité."],
+    finds: ["Sélections Kakobuy aux routes vérifiées", "Liens produits avec images et prix CNY. Choisissez une catégorie, parcourez les pages et confirmez la variante exacte avant achat."],
     guide: ["Acheter avec Kakobuy : guide étape par étape", "Du lien de marketplace chinoise au paiement, au QC d'entrepôt et à la soumission du colis international."],
     qc: ["Guide des photos QC Kakobuy", "Méthode répétable pour identité, forme, fabrication et preuve décisive avant expédition."],
     shipping: ["Calculateur et guide de poids Kakobuy", "Comparez les lignes avec poids et dimensions réalistes et séparez services de plateforme et taxes de destination."],
@@ -40,8 +40,8 @@ export const seoPageIntro: Record<Locale, Record<IndependentPage, [string, strin
     articles: ["Guides Kakobuy : QC, frais, liens et livraison", "Recherche vérifiée sur le site officiel, la légitimité, la sécurité, les politiques, le QC et les colis."],
   },
   it: {
-    spreadsheet: ["Foglio Kakobuy 2026", "Indice verificato che mantiene allineati immagine, prezzo e destinazione e indica cosa controllare prima dell'ordine."],
-    finds: ["Prodotti Kakobuy con percorsi verificati", "Schede attuali con immagine e destinazione controllate insieme. I prezzi sono istantanee datate."],
+    spreadsheet: ["Kakobuy Spreadsheet: prodotti, prezzi e categorie", "Esplora link Kakobuy per categoria, confronta prezzi CNY e verifica taglie, QC e spedizione. Fino a 20 prodotti per pagina quando il catalogo è disponibile."],
+    finds: ["Prodotti Kakobuy con percorsi verificati", "Link con immagini e prezzi CNY. Scegli una categoria, sfoglia le pagine e conferma la variante esatta prima di acquistare."],
     guide: ["Come comprare con Kakobuy: guida passo passo", "Dal link del marketplace cinese al pagamento, QC di magazzino e invio del pacco internazionale."],
     qc: ["Guida alle foto QC Kakobuy", "Metodo ripetibile per identità, forma, costruzione e prova decisiva prima della spedizione."],
     shipping: ["Calcolatore e guida peso Kakobuy", "Confronta linee con peso e misure realistiche e separa servizi di piattaforma e tasse di destinazione."],

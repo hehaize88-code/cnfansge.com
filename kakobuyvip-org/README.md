@@ -52,3 +52,11 @@ Offline checks: `node scripts/verify-seo.mjs` and `npx tsc --noEmit`. The former
 checks all routes with React static rendering, metadata, links, sitemap parity
 and calculator edge cases. It does not run a browser or a deployed Worker.
 `npm run build` validates the production bundle.
+
+## November 2026 multilingual update
+
+- All five languages contain the same 18 topics (90 article pages and 130 sitemap URLs). Added Germany shipping, clothing/shoe measurements, and consolidation versus split shipping.
+- Existing QC, total-cost, product-link, tracking, spreadsheet, shipping-weight and storage guides were updated in all five languages. Removed the outdated fixed declaration-service charge.
+- The catalogue reads the existing upstream listings on the server, validates source URLs and renders 20 products per page. A bounded 60-second memory cache avoids repeated reads of the same source batch. No product database or persisted product snapshot is used.
+- Category and pagination variants are noindex with a base-page canonical; article translations retain reciprocal hreflang. Sources are clickable and related-article navigation connects the new guides with existing pages.
+- `node scripts/verify-seo.mjs`, `npx tsc --noEmit`, `npm run lint`, and `npm run build` validate the release before the connected production build.
