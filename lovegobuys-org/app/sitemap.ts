@@ -9,7 +9,7 @@ function alternates(path: string) {
 export default function sitemap(): MetadataRoute.Sitemap {
   const baseRoutes = ["", "/finds", "/categories", "/guide", "/qc", "/shipping", "/faq", "/articles"];
   const localized = languages.flatMap(lang => baseRoutes.map(route => ({
-    url: `${origin}/${lang}${route}`, lastModified: new Date("2026-10-15"),
+    url: `${origin}/${lang}${route}`, lastModified: new Date("2026-11-07"),
     alternates: alternates(route), changeFrequency: "weekly" as const,
     priority: route === "" ? 1 : 0.8,
   })));

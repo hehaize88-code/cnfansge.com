@@ -5,6 +5,8 @@ import { priorityArticles } from "./priority-articles";
 import { improveArticle } from "./article-improvements";
 import { articleTranslations } from "./article-translations";
 import type { Lang } from "./site-data";
+import { novemberGuides } from "./new-guides";
+import { reviseNovemberArticle } from "./november-improvements";
 
 export type ResearchArticle = Topic & {
   slug: string;
@@ -117,6 +119,7 @@ const reviewGuide: ResearchArticle = {
 };
 
 export const researchArticles: ResearchArticle[] = [
+  ...novemberGuides("en"),
   ...priorityArticles("en"),
   ...restoredArticles,
   spreadsheet,
@@ -133,13 +136,16 @@ export function getArticle(slug: string, lang: Lang = "en") {
   if (!base) return undefined;
   let article: ResearchArticle = base;
   if (lang !== "en") {
+    const november = novemberGuides(lang).find((item) => item.slug === slug);
     const priority = priorityArticles(lang).find((item) => item.slug === slug);
     const translation = restoredTranslations[lang][slug] ?? articleTranslations[lang][slug];
-    if (priority) article = priority;
+    if (november) article = november;
+    else if (priority) article = priority;
     else if (translation) article = { ...base, ...translation, published: restoredTranslations[lang][slug] ? "2026-10-15" : base.published, modified: "2026-10-15" };
     else return undefined;
   }
   article = improveArticle(article, lang);
+  article = reviseNovemberArticle(article, lang);
   const words = [article.intro, ...article.sections.flatMap(s => [s.h, ...s.p, ...(s.bullets ?? [])])].join(" ").split(/\s+/).length;
   return { ...article, readingTime: `${Math.max(2, Math.ceil(words / 190))} min` };
 }

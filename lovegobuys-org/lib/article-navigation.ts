@@ -8,10 +8,12 @@ export const articleUi: Record<Lang, { contents: string; updated: string; all: s
 };
 
 const clusters = [
-  ["lovegobuy-taobao-1688-weidian-links", "how-to-buy-with-lovegobuy-2026", "lovegobuy-spreadsheet-research-workflow", "lovegobuy-order-status-warehouse-parcel"],
-  ["lovegobuy-qc-finder-warehouse-photos", "lovegobuy-qc-photos-guide", "lovegobuy-warehouse-return-refund-evidence", "is-lovegobuy-legit-review-2026"],
-  ["lovegobuy-shipping-cost-guide", "lovegobuy-rehearsal-shipping-packed-weight", "lovegobuy-shipping-usa-cost-weight-guide", "lovegobuy-shipping-france-weight-route-checks", "lovegobuy-parcel-tracking-status-handoff"],
+  ["lovegobuy-budget-finds-total-cost", "lovegobuy-taobao-1688-weidian-links", "how-to-buy-with-lovegobuy-2026", "lovegobuy-spreadsheet-research-workflow", "lovegobuy-order-status-warehouse-parcel"],
+  ["lovegobuy-size-guide-measurements", "lovegobuy-qc-finder-warehouse-photos", "lovegobuy-qc-photos-guide", "lovegobuy-warehouse-return-refund-evidence", "is-lovegobuy-legit-review-2026"],
+  ["lovegobuy-shipping-time-order-to-delivery", "lovegobuy-shipping-cost-guide", "lovegobuy-rehearsal-shipping-packed-weight", "lovegobuy-shipping-usa-cost-weight-guide", "lovegobuy-shipping-france-weight-route-checks", "lovegobuy-parcel-tracking-status-handoff"],
 ];
 export function relatedSlugs(slug: string) {
-  return (clusters.find(group => group.includes(slug)) ?? []).filter(item => item !== slug).slice(0, 3);
+  const group = clusters.find(group => group.includes(slug)) ?? [];
+  const index = group.indexOf(slug);
+  return [...group.slice(index + 1), ...group.slice(0, index)].slice(0, 4);
 }

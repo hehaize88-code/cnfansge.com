@@ -52,11 +52,11 @@ export const researchFacts: Record<Lang, Record<PageKind, FactSet>> = {
 };
 
 const articleNotes: Record<Lang, string> = {
-  en: "13 complete guides in English, with matching German, Spanish, French and Italian editions.",
-  de: "13 vollständige Ratgeber auf Deutsch sowie passende Ausgaben auf Englisch, Spanisch, Französisch und Italienisch.",
-  es: "13 guías completas en español, también disponibles en inglés, alemán, francés e italiano.",
-  fr: "13 guides complets en français, également disponibles en anglais, allemand, espagnol et italien.",
-  it: "13 guide complete in italiano, disponibili anche in inglese, tedesco, spagnolo e francese.",
+  en: "Complete guides to product links, sizing, QC, budgets and shipping, with matching editions in all five languages.",
+  de: "Vollständige Ratgeber zu Produktlinks, Größen, QC, Budget und Versand mit passenden Ausgaben in allen fünf Sprachen.",
+  es: "Guías completas de enlaces, tallas, QC, presupuesto y envío con ediciones equivalentes en los cinco idiomas.",
+  fr: "Guides complets sur les liens, tailles, QC, budget et livraison, disponibles dans les cinq langues.",
+  it: "Guide complete su link, taglie, QC, budget e spedizione, disponibili in tutte le cinque lingue.",
 };
 const qcFacts: Record<Lang, string> = {
   en: "Check the inspection photos attached to your own warehouse item.",

@@ -10,6 +10,8 @@ import { topics, type Topic } from "@/lib/topics";
 import { articleSlugs, getArticle, getResearchArticles } from "@/lib/articles";
 import { articleUi, relatedSlugs } from "@/lib/article-navigation";
 import { researchFacts, type PageKind } from "@/lib/research-facts";
+import { contentUi, getFaqItems, officialSources } from "@/lib/content-ui";
+import { newGuideSlugs } from "@/lib/new-guides";
 
 type PageProps = { params: Promise<{ lang: string; slug?: string[] }> };
 
@@ -93,7 +95,9 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
   const lang = rawLang;
   const key = (slug[0] ?? "home") as SeoPage;
   const article = slug[0] === "articles" && slug[1] && slug.length === 2 ? getArticle(slug[1], lang) : null;
-  const pageSeo = seoCopy[lang][key] ?? seoCopy[lang].home;
+  const pageSeo = key === "finds" ? { title: contentUi[lang].findsTitle, description: contentUi[lang].findsDescription }
+    : key === "home" ? { ...seoCopy[lang].home, description: contentUi[lang].heroText }
+    : seoCopy[lang][key] ?? seoCopy[lang].home;
   const title = article?.title ?? pageSeo.title;
   const description = article?.deck ?? pageSeo.description;
   const canonical = absolutePath(lang, slug);
@@ -182,6 +186,23 @@ function ArticleCards({ lang, limit }: { lang: Lang; limit?: number }) {
   );
 }
 
+function DecisionLinks({ lang, kind = "home" }: { lang: Lang; kind?: string }) {
+  const choices = kind === "qc" ? [newGuideSlugs[0], "lovegobuy-qc-finder-warehouse-photos", "lovegobuy-warehouse-return-refund-evidence"]
+    : kind === "shipping" ? [newGuideSlugs[2], "lovegobuy-shipping-france-weight-route-checks", "lovegobuy-shipping-usa-cost-weight-guide"]
+    : kind === "finds" ? [newGuideSlugs[1], newGuideSlugs[0], "lovegobuy-qc-finder-warehouse-photos"]
+    : [...newGuideSlugs, "lovegobuy-shipping-france-weight-route-checks"];
+  return <nav className="decision-links" aria-label={contentUi[lang].next}>
+    <b>{contentUi[lang].next}</b>
+    <div>{choices.map(slug => <Link key={slug} href={`/${lang}/articles/${slug}`}>{getArticle(slug, lang)?.title}<ArrowRight size={16} /></Link>)}</div>
+  </nav>;
+}
+
+function OfficialReferences({ lang }: { lang: Lang }) {
+  return <aside className="official-references">
+    <h2>{contentUi[lang].sources}</h2><p>{contentUi[lang].sourceNote}</p>
+    <ul>{officialSources.map((url, index) => <li key={url}><a href={url} target="_blank" rel="noopener noreferrer">{contentUi[lang].sourceLabels[index]}<ArrowUpRight size={14} /></a></li>)}</ul>
+  </aside>;
+}
 
 function ProductGrid({ lang, limit = 8 }: { lang: Lang; limit?: number }) {
   const c = copy[lang];
@@ -190,7 +211,7 @@ function ProductGrid({ lang, limit = 8 }: { lang: Lang; limit?: number }) {
       {products.slice(0, limit).map((product, index) => (
         <a className="product-card" href={product.href} target="_blank" rel="noopener noreferrer" key={product.href}>
           <div className="image-wrap">
-            <img src={product.image} alt={`${productCopy[lang][index].category} ${c.viewItem} ${index + 1}`} width="640" height="640" loading={index < 4 ? "eager" : "lazy"} />
+            <img src={product.image} alt={productCopy[lang][index].name} width="640" height="640" loading={index < 4 ? "eager" : "lazy"} />
             <span>{String(index + 1).padStart(2, "0")}</span>
           </div>
           <div className="product-copy">
@@ -249,8 +270,8 @@ function HomePage({ lang }: { lang: Lang }) {
         <section className="hero page-shell">
           <div className="hero-copy">
             <span className="eyebrow">{c.eyebrow}</span>
-            <h1>{c.heroTitle}</h1>
-            <p>{c.heroText}</p>
+            <h1>{contentUi[lang].hero}</h1>
+            <p>{contentUi[lang].heroText}</p>
             <SearchBox lang={lang} />
             <small className="search-note">{c.searchNote}</small>
           </div>
@@ -267,6 +288,7 @@ function HomePage({ lang }: { lang: Lang }) {
           </div>
         </section>
 
+        <div className="page-shell"><DecisionLinks lang={lang} /></div>
         <section className="quick-strip">
           <div className="page-shell strip-inner">
             <div><b>{c.browse}</b><span>{c.browseText}</span></div>
@@ -279,6 +301,7 @@ function HomePage({ lang }: { lang: Lang }) {
         <section className="page-section page-shell">
           <SectionHead kicker={ui.sectionFinds} title={c.latest} text={c.latestText} />
           <ProductGrid lang={lang} />
+          <p className="product-snapshot">{contentUi[lang].snapshot}</p>
           <div className="section-cta"><Link href={`/${lang}/finds`}>{c.nav[0]} <ArrowRight size={16} /></Link></div>
         </section>
 
@@ -312,7 +335,7 @@ function HomePage({ lang }: { lang: Lang }) {
         <section className="page-section page-shell compact-faq">
           <SectionHead kicker="06 / FAQ" title={c.faq} text={c.independent} />
           <div className="faq-grid">
-            {c.faqItems.map((item, index) => <details key={item.q} open={index === 0}><summary>{item.q}<span>+</span></summary><p>{item.a}</p></details>)}
+            {getFaqItems(lang).slice(0, 8).map((item, index) => <details key={item.q} open={index === 0}><summary>{item.q}<span>+</span></summary><p>{item.a}</p></details>)}
           </div>
           <div className="section-cta"><Link href={`/${lang}/faq`}>{c.nav[6]} <ArrowRight size={16} /></Link></div>
         </section>
@@ -352,7 +375,8 @@ function TopicPage({ lang, topic, kind, sourceBasis, contentLang, articleSlug, m
       <Breadcrumb lang={lang} label={topic.title} />
       <header className="interior-hero"><span>{kind === "article" ? c.nav[5] : kind === "guide" ? articleUi[lang].overview : kind.toUpperCase()} / {ui.fieldNote}</span><h1>{topic.title}</h1><p>{topic.intro}</p>{modified && <p className="article-date">{articleUi[lang].updated} <time dateTime={modified}>{new Intl.DateTimeFormat(lang, { dateStyle: "long", timeZone: "UTC" }).format(new Date(modified))}</time></p>}</header>
       {kind !== "article" && <ResearchStrip lang={lang} kind={kind as PageKind} />}
-      {kind === "finds" && <ProductGrid lang={lang} />}
+      {kind !== "article" && <DecisionLinks lang={lang} kind={kind} />}
+      {kind === "finds" && <><div className="finds-categories">{categories.map(category => <a key={category.href} href={category.href} target="_blank" rel="noopener noreferrer">{category.name[lang]}<ArrowUpRight size={13} /></a>)}</div><ProductGrid lang={lang} /><p className="product-snapshot">{contentUi[lang].snapshot}</p></>}
       <div className="article-layout">
         <aside>{articleSlug ? <nav className="article-toc" aria-label={articleUi[lang].contents}><b>{articleUi[lang].contents}</b><ol>{topic.sections.map((section, index) => <li key={section.h}><a href={`#section-${index + 1}`}>{section.h}</a></li>)}</ol></nav> : <><b>{ui.checkingRule}</b><p>{ui.checkingRuleText}</p></>}<SearchBox lang={lang} /></aside>
         <article className="prose" lang={contentLang}>
@@ -361,7 +385,7 @@ function TopicPage({ lang, topic, kind, sourceBasis, contentLang, articleSlug, m
             <section id={`section-${index + 1}`} key={section.h}><span>{String(index + 1).padStart(2, "0")}</span><h2>{section.h}</h2>{section.p.map((p) => <p key={p}>{p}</p>)}{section.bullets && <ul>{section.bullets.map((item) => <li key={item}><Check size={15} />{item}</li>)}</ul>}</section>
           ))}
           {kind === "guide" && <nav className="related-articles"><b>{articleUi[lang].next}</b><Link href={`/${lang}/articles/how-to-buy-with-lovegobuy-2026`}>{getArticle("how-to-buy-with-lovegobuy-2026", lang)?.title}<ArrowRight size={15} /></Link></nav>}
-          {articleSlug && <RelatedArticles lang={lang} articleSlug={articleSlug} />}
+          {articleSlug && <><OfficialReferences lang={lang} /><RelatedArticles lang={lang} articleSlug={articleSlug} /></>}
           <div className="article-next"><b>{c.guides}</b><GuideGrid lang={lang} /></div>
         </article>
       </div>
@@ -390,7 +414,8 @@ function CategoriesPage({ lang }: { lang: Lang }) {
 
 function FaqPage({ lang }: { lang: Lang }) {
   const c = copy[lang];
-  const schema = { "@context": "https://schema.org", "@type": "FAQPage", mainEntity: c.faqItems.map((item) => ({ "@type": "Question", name: item.q, acceptedAnswer: { "@type": "Answer", text: item.a } })) };
+  const faqItems = getFaqItems(lang);
+  const schema = { "@context": "https://schema.org", "@type": "FAQPage", mainEntity: faqItems.map((item) => ({ "@type": "Question", name: item.q, acceptedAnswer: { "@type": "Answer", text: item.a } })) };
   return (
     <main className="interior page-shell">
       <JsonLd data={schema} />
@@ -398,7 +423,8 @@ function FaqPage({ lang }: { lang: Lang }) {
       <Breadcrumb lang={lang} label={c.faq} />
       <header className="interior-hero"><span>{interfaceCopy[lang].directAnswers}</span><h1>{c.faq}</h1><p>{c.independent}</p></header>
       <ResearchStrip lang={lang} kind="faq" />
-      <div className="faq-page-grid">{c.faqItems.map((item, index) => <article key={item.q}><span>{String(index + 1).padStart(2, "0")}</span><h2>{item.q}</h2><p>{item.a}</p></article>)}</div>
+      <div className="faq-page-grid">{faqItems.map((item, index) => <article key={item.q}><span>{String(index + 1).padStart(2, "0")}</span><h2>{item.q}</h2><p>{item.a}</p></article>)}</div>
+      <DecisionLinks lang={lang} />
       <section className="faq-route"><h2>{c.searchButton}</h2><SearchBox lang={lang} /></section>
     </main>
   );
@@ -410,7 +436,7 @@ function ArticlesPage({ lang }: { lang: Lang }) {
     <main className="interior page-shell">
       <JsonLd data={breadcrumbSchema(lang, ["articles"], c.nav[5])} />
       <Breadcrumb lang={lang} label={c.nav[5]} />
-      <header className="interior-hero"><span>{interfaceCopy[lang].longForm} / {interfaceCopy[lang].sourceAware}</span><h1>{articleUi[lang].all}</h1><p>{c.guidesText}</p></header>
+      <header className="interior-hero"><span>{getResearchArticles(lang).length} {contentUi[lang].count} · EN / DE / ES / FR / IT</span><h1>{articleUi[lang].all}</h1><p>{c.guidesText}</p></header>
       <ResearchStrip lang={lang} kind="articles" />
       <ArticleCards lang={lang} />
     </main>
@@ -419,7 +445,7 @@ function ArticlesPage({ lang }: { lang: Lang }) {
 
 function ArticlePage({ article, lang }: { article: NonNullable<ReturnType<typeof getArticle>>; lang: Lang }) {
   const publisher = { "@type": "Organization", name: "LoveGoBuy Field Guide", url: "https://lovegobuys.org/", logo: { "@type": "ImageObject", url: "https://lovegobuys.org/lovegobuy-logo.png" } };
-  const schema = { "@context": "https://schema.org", "@type": "Article", headline: article.title, description: article.deck, image: ["https://lovegobuys.org/lovegobuy-logo.png"], datePublished: article.published, dateModified: article.modified, inLanguage: lang, mainEntityOfPage: absolutePath(lang, ["articles", article.slug]), author: publisher, publisher };
+  const schema = { "@context": "https://schema.org", "@type": "Article", headline: article.title, description: article.deck, image: ["https://lovegobuys.org/lovegobuy-logo.png"], datePublished: article.published, dateModified: article.modified, inLanguage: lang, mainEntityOfPage: absolutePath(lang, ["articles", article.slug]), author: publisher, publisher, citation: officialSources };
   return (
     <>
       <JsonLd data={schema} />
@@ -444,7 +470,7 @@ export default async function LocalizedPage({ params }: PageProps) {
     if (!article) notFound();
     content = <ArticlePage article={article} lang={lang} />;
   }
-  else if ((["finds", "guide", "qc", "shipping"] as const).includes(key as "finds" | "guide" | "qc" | "shipping") && slug.length === 1) content = <TopicPage lang={lang} topic={key === "guide" ? { title: articleUi[lang].guideTitle, intro: articleUi[lang].guideIntro, sections: getArticle("how-to-buy-with-lovegobuy-2026", lang)!.sections.slice(0, 3) } : topics[key as keyof typeof topics][lang]} kind={key} />;
+  else if ((["finds", "guide", "qc", "shipping"] as const).includes(key as "finds" | "guide" | "qc" | "shipping") && slug.length === 1) content = <TopicPage lang={lang} topic={key === "guide" ? { title: articleUi[lang].guideTitle, intro: articleUi[lang].guideIntro, sections: getArticle("how-to-buy-with-lovegobuy-2026", lang)!.sections.slice(0, 3) } : key === "finds" ? { ...topics.finds[lang], title: contentUi[lang].findsTitle, intro: contentUi[lang].findsDescription } : topics[key as keyof typeof topics][lang]} kind={key} />;
   else notFound();
 
   return <><DocumentLanguage lang={lang} /><SiteHeader lang={lang} />{content}<SiteFooter lang={lang} /></>;
