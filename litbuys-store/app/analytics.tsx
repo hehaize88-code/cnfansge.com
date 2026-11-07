@@ -24,13 +24,27 @@ export function OutboundAnalytics() {
     function record(event: MouseEvent) {
       const target = event.target instanceof Element ? event.target.closest<HTMLAnchorElement>("a[href]") : null;
       if (!target) return;
+      if (target.closest(".language-switcher")) return;
       const url = new URL(target.href, window.location.href);
+      const entryPoint = target.dataset.entryPoint ?? target.closest<HTMLElement>("[data-entry-point]")?.dataset.entryPoint ?? "content";
+      if (url.origin === window.location.origin || url.origin === new URL(window.location.href).origin) {
+        const fromArticle = /\/articles\/[^/]+\//.test(window.location.pathname);
+        const toArticle = /\/articles\/[^/]+\//.test(url.pathname);
+        if (url.pathname !== window.location.pathname && (fromArticle || toArticle || entryPoint === "help_paths")) {
+          recordCatalogEvent(fromArticle ? "article_next_step" : "guide_open", {
+            destination_path: url.pathname,
+            destination_type: toArticle ? "article" : /\/spreadsheet\//.test(url.pathname) ? "spreadsheet" : /\/qc\//.test(url.pathname) ? "qc" : "page",
+            entry_point: entryPoint,
+          });
+        }
+        return;
+      }
       if (url.origin !== CATALOG_ORIGIN) return;
       const id = url.pathname.match(/^\/AllProducts\/(\d+)\.html$/)?.[1];
       recordCatalogEvent(id ? "catalog_product_click" : "catalog_category_click", {
         ...(id ? { product_id: id } : {}),
         link_url: url.origin + url.pathname,
-        entry_point: target.dataset.entryPoint ?? target.closest<HTMLElement>("[data-entry-point]")?.dataset.entryPoint ?? "content",
+        entry_point: entryPoint,
       });
     }
     document.addEventListener("click", record, true);

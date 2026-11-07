@@ -1,9 +1,10 @@
 import type { Metadata } from "next";
 import { articleDates, articleSlugs, getArticle, type ArticleSlug } from "./articles";
-import { copies, innerCopies } from "./copy-data";
+import { innerCopies } from "./copy-data";
 import { products } from "./catalog-data";
 import { languageAlternates, localPath, pageKeys, SITE_ORIGIN, type Lang, type PageKey } from "./i18n";
 import { articleImage, productLabel, ui } from "./ui-copy";
+import { discoveryCopy } from "./editorial-refresh";
 
 export function sitePaths(): string[][] {
   return [[], ...pageKeys.map((page) => [page]), ...articleSlugs.map((slug) => ["articles", slug]), ...products.map((product) => ["products", product.slug])];
@@ -13,8 +14,8 @@ const locale = { en: "en_US", de: "de_DE", es: "es_ES", fr: "fr_FR", it: "it_IT"
 
 export function pageMetadata(lang: Lang, segments: string[] = []): Metadata {
   const path = `/${segments.join("/")}`;
-  let title = copies[lang].hero;
-  let description = copies[lang].intro;
+  let title = discoveryCopy[lang].hero;
+  let description = discoveryCopy[lang].intro;
   let image = "/products/sweatshirt.webp";
   const articleSlug = segments[0] === "articles" && segments.length === 2 ? segments[1] as ArticleSlug : undefined;
   if (articleSlug && articleSlugs.includes(articleSlug)) {
@@ -31,7 +32,7 @@ export function pageMetadata(lang: Lang, segments: string[] = []): Metadata {
   const url = SITE_ORIGIN + localPath(lang, path);
   return {
     metadataBase: new URL(SITE_ORIGIN),
-    title: `${title} | LitBuys Store`, description,
+    title, description,
     alternates: { canonical: url, languages: languageAlternates(path) },
     openGraph: {
       type: articleSlug ? "article" : "website", title, description, url,

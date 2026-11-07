@@ -9,14 +9,20 @@ import shippingReview from "./content-oct/core-shipping-review.json";
 import legacyDeEs from "./content-oct/legacy-de-es.json";
 import legacyFrIt from "./content-oct/legacy-fr-it.json";
 import type { Lang } from "./i18n";
+import coupons from "./content-nov/coupons.json";
+import tracking from "./content-nov/tracking.json";
+import returns from "./content-nov/returns.json";
+import { refreshArticle, revisedSlugs } from "./editorial-refresh";
 
-export const addedSlugs = ["litbuy-hoodies-spreadsheet", "litbuy-finds-under-30", "litbuy-clothing-size-guide"] as const;
+const octoberSlugs = ["litbuy-hoodies-spreadsheet", "litbuy-finds-under-30", "litbuy-clothing-size-guide"] as const;
+export const novemberSlugs = ["litbuy-coupons-guide", "litbuy-tracking-not-updating", "litbuy-returns-refunds-guide"] as const;
+export const addedSlugs = [...octoberSlugs, ...novemberSlugs] as const;
 export const articleSlugs = [...legacySlugs, ...addedSlugs] as const;
 export type ArticleSlug = typeof articleSlugs[number];
-export const featuredArticles: ArticleSlug[] = [...addedSlugs, "litbuy-spreadsheet-2026"];
+export const featuredArticles: ArticleSlug[] = [...novemberSlugs, "litbuy-spreadsheet-2026"];
 export const orderedArticleSlugs = [...featuredArticles, ...articleSlugs.filter((slug) => !featuredArticles.includes(slug))];
 type TranslationSet = Record<string, Partial<Record<Lang, ArticleContent>>>;
-const overrides: TranslationSet = { ...discovery, ...shippingReview, ...newArticles };
+const overrides: TranslationSet = { ...discovery, ...shippingReview, ...newArticles, ...coupons, ...tracking, ...returns };
 const oldTranslations: Partial<Record<Lang, Record<string, ArticleContent>>> = { de: articleDe, es: articleEs, fr: articleFr, it: articleIt };
 const completedTranslations: TranslationSet = Object.fromEntries(Object.keys(legacyDeEs).map((slug) => [slug, {
   ...(legacyDeEs as TranslationSet)[slug], ...(legacyFrIt as TranslationSet)[slug],
@@ -28,22 +34,29 @@ export function getArticle(slug: ArticleSlug, lang: Lang): ArticleContent {
   if (!article) throw new Error(`Missing full article translation: ${lang}/${slug}`);
   // Never silently display English under a different language's URL.
   if (lang !== "en" && article === legacy?.en) throw new Error(`English fallback forbidden: ${lang}/${slug}`);
-  return article;
+  return refreshArticle(slug, lang, article);
 }
 
 export function articleDates(slug: ArticleSlug) {
-  const isAdded = (addedSlugs as readonly string[]).includes(slug);
+  const isAdded = (octoberSlugs as readonly string[]).includes(slug);
+  const isNovember = (novemberSlugs as readonly string[]).includes(slug);
   return {
-    published: isAdded ? "2026-10-15" : legacySlugs.indexOf(slug as typeof legacySlugs[number]) < 4 ? "2026-08-29" : "2026-09-22",
-    modified: "2026-10-15",
+    published: isNovember ? "2026-11-07" : isAdded ? "2026-10-15" : legacySlugs.indexOf(slug as typeof legacySlugs[number]) < 4 ? "2026-08-29" : "2026-09-22",
+    modified: isNovember || revisedSlugs.includes(slug) ? "2026-11-07" : "2026-10-15",
   };
 }
 
 export function relatedArticles(slug: ArticleSlug): ArticleSlug[] {
-  const cluster: ArticleSlug[] = /qc/.test(slug)
-    ? ["litbuy-qc-photos-guide", "litbuy-qc-photo-checklist", "litbuy-order-status-guide"]
-    : /shipping|cost|warehouse|status/.test(slug)
-    ? ["litbuy-shipping-guide", "litbuy-shipping-weight-guide", "litbuy-cost-workflow-checklist"]
+  const cluster: ArticleSlug[] = /returns/.test(slug)
+    ? ["litbuy-qc-photo-checklist", "litbuy-order-status-guide", "litbuy-tracking-not-updating"]
+    : /tracking|status/.test(slug)
+    ? ["litbuy-tracking-not-updating", "litbuy-order-status-guide", "litbuy-shipping-guide", "litbuy-returns-refunds-guide"]
+    : /coupons|cost/.test(slug)
+    ? ["litbuy-coupons-guide", "litbuy-cost-workflow-checklist", "litbuy-shipping-weight-guide", "litbuy-finds-under-30"]
+    : /qc/.test(slug)
+    ? ["litbuy-qc-photos-guide", "litbuy-qc-photo-checklist", "litbuy-returns-refunds-guide", "litbuy-clothing-size-guide"]
+    : /shipping|warehouse/.test(slug)
+    ? ["litbuy-shipping-guide", "litbuy-tracking-not-updating", "litbuy-coupons-guide", "litbuy-shipping-weight-guide"]
     : ["litbuy-spreadsheet-2026", "litbuy-hoodies-spreadsheet", "litbuy-clothing-size-guide", "litbuy-finds-under-30"];
   return cluster.filter((item) => item !== slug).slice(0, 3);
 }

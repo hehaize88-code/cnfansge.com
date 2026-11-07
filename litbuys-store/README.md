@@ -20,13 +20,13 @@ language routes after deployment.
 ## Content and language routes
 
 English uses `/`; German, Spanish, French and Italian use `/de/`, `/es/`, `/fr/`
-and `/it/`. Every language has the same 31 pages, including all 15 full articles.
+and `/it/`. Every language has the same 34 pages, including all 18 full articles.
 Language switching preserves the current page. Pages are exported as static HTML
 with the correct document language, canonical URL, reciprocal hreflang links,
 localized metadata, structured data and matching sitemap entries.
 
 Article resolution is centralized in `app/articles.ts`. October revisions and
-new multilingual articles are in `app/content-oct/`; older complete content is in
+new multilingual articles are in `app/content-oct/`; November additions and five-language revisions are in `app/content-nov/` and `app/editorial-refresh.ts`; older complete content is in
 `app/article-*.ts`. Missing translations fail the build instead of falling back to
 English. Keep translation section and paragraph coverage aligned.
 
@@ -40,7 +40,7 @@ from 29 August 2026, not live offers.
 The existing GA4 tag records `catalog_search`, `catalog_product_click` and
 `catalog_category_click`, with language, page path, product ID where applicable
 and entry point. Search events send query length, not raw visitor-entered text.
-Navigation works even when analytics is unavailable. These events are not
+`guide_open` and `article_next_step` measure internal guide discovery and onward navigation, excluding in-page anchors and language switching. Navigation works even when analytics is unavailable. These events are not
 purchases or evidence of downstream conversions on the main catalog.
 
 ## Build and checks
@@ -53,8 +53,8 @@ npm run build
 python scripts/validate-export.py /tmp/litbuy-articles-expected.json
 ```
 
-The export validator requires Python with `lxml`. It checks all 155 canonical
-pages, the complete 75 article bodies, same-language internal links, all language
+The export validator requires Python with `lxml`. It checks all 170 canonical
+pages, the complete 90 article bodies, same-language internal links, all language
 alternates, sitemap parity, native search fields, matched product destinations,
 local images and the real noindex 404. Browser rendering should also be checked
 on production after deployment.

@@ -20,5 +20,7 @@ window.gtag=undefined;input.value='shoes';blocked=false;form.props.onSubmit({cur
 window.gtag=(...a)=>events.push(a);OutboundAnalytics();
 const click=(href,entryPoint)=>clickHandler({target:new Element({href,dataset:{entryPoint},closest:()=>null})});
 click('https://cnfansge.com/AllProducts/6172.html?tracking=unused','article_products');assert.equal(events.at(-1)[1],'catalog_product_click');assert.equal(events.at(-1)[2].product_id,'6172');assert.equal(events.at(-1)[2].entry_point,'article_products');assert.ok(!events.at(-1)[2].link_url.includes('?'));
-click('https://cnfansge.com/hoodies-sweaters/','homepage_category');assert.equal(events.at(-1)[1],'catalog_category_click');const total=events.length;click('https://litbuys.store/de/articles/','internal');assert.equal(events.length,total);cleanup();
+click('https://cnfansge.com/hoodies-sweaters/','homepage_category');assert.equal(events.at(-1)[1],'catalog_category_click');click('https://litbuys.store/de/spreadsheet/','article_next_step');assert.equal(events.at(-1)[1],'article_next_step');assert.equal(events.at(-1)[2].destination_type,'spreadsheet');
+const total=events.length;click(window.location.href+'#section-1','toc');assert.equal(events.length,total);click('https://litbuy.com/help','source');assert.equal(events.length,total);
+window.location.pathname='/fr/';window.location.href='https://litbuys.store/fr/';click('https://litbuys.store/fr/articles/litbuy-coupons-guide/','help_paths');assert.equal(events.at(-1)[1],'guide_open');assert.equal(events.at(-1)[2].destination_type,'article');cleanup();
 console.log('Search validation, native navigation, privacy, product/category classification and article placement: passed');

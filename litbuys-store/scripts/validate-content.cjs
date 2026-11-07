@@ -6,7 +6,7 @@ require.extensions['.ts'] = (module, filename) => module._compile(ts.transpileMo
 const { articleSlugs, getArticle, addedSlugs } = require('../app/articles.ts');
 const { localizedResearch } = require('../app/research.ts');
 const { languages, localPath, languageAlternates } = require('../app/i18n.ts');
-const improved = [...addedSlugs,'litbuy-spreadsheet-2026','litbuy-qc-photos-guide','litbuy-shipping-guide','litbuy-review-2026'];
+const improved = [...Object.keys(require('../app/content-nov/refresh.json')), ...addedSlugs,'litbuy-spreadsheet-2026','litbuy-qc-photos-guide','litbuy-shipping-guide','litbuy-review-2026'];
 const bodyWords = article => article.sections.flatMap(s => s.paragraphs).join(' ').split(/\s+/).length;
 const counts = {};
 for (const slug of articleSlugs) {

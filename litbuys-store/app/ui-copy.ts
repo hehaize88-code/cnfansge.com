@@ -35,10 +35,10 @@ export function productLabel(product: typeof products[number], lang: Lang) {
 export const topicArticles: Record<PageKey, ArticleSlug[]> = {
   spreadsheet: ["litbuy-spreadsheet-2026", "litbuy-spreadsheet-guide", "litbuy-finds-under-30"],
   finds: ["litbuy-hoodies-spreadsheet", "litbuy-finds-under-30", "litbuy-spreadsheet-shoes"],
-  guides: ["litbuy-clothing-size-guide", "litbuy-order-status-guide", "litbuy-review-2026"],
-  qc: ["litbuy-qc-photos-guide", "litbuy-qc-photo-checklist", "litbuy-clothing-size-guide"],
-  shipping: ["litbuy-shipping-guide", "litbuy-shipping-weight-guide", "litbuy-shipping-usa"],
-  faq: ["litbuy-cost-workflow-checklist", "litbuy-warehouse-city-guide", "litbuy-review-2026"],
+  guides: ["litbuy-clothing-size-guide", "litbuy-order-status-guide", "litbuy-returns-refunds-guide"],
+  qc: ["litbuy-qc-photos-guide", "litbuy-qc-photo-checklist", "litbuy-returns-refunds-guide"],
+  shipping: ["litbuy-shipping-guide", "litbuy-tracking-not-updating", "litbuy-coupons-guide"],
+  faq: ["litbuy-cost-workflow-checklist", "litbuy-returns-refunds-guide", "litbuy-coupons-guide"],
   articles: [],
 };
 
@@ -50,7 +50,7 @@ export const articleProductIds: Partial<Record<ArticleSlug, string[]>> = {
 };
 
 export function articleImage(slug: ArticleSlug) {
-  return /shoes/.test(slug) ? "/products/shoes.jpg" : /hoodies|clothing/.test(slug) ? "/products/hoodie.jpg" : /shipping|cost|warehouse|status/.test(slug) ? "/products/bag.webp" : "/products/sweatshirt.webp";
+  return /shoes/.test(slug) ? "/products/shoes.jpg" : /hoodies|clothing/.test(slug) ? "/products/hoodie.jpg" : /shipping|cost|warehouse|status|tracking|coupons|returns/.test(slug) ? "/products/bag.webp" : "/products/sweatshirt.webp";
 }
 
 export function formatDate(date: string, lang: Lang) {

@@ -11,7 +11,7 @@ langs = ['en','de','es','fr','it']
 ns = {'s':'http://www.sitemaps.org/schemas/sitemap/0.9','x':'http://www.w3.org/1999/xhtml'}
 sitemap = etree.parse(str(out / 'sitemap.xml'))
 urls = sitemap.xpath('//s:url/s:loc/text()', namespaces=ns)
-assert len(urls) == len(set(urls)) == 155, f'Sitemap URLs: {len(urls)}'
+assert len(urls) == len(set(urls)) == 170, f'Sitemap URLs: {len(urls)}'
 expected = json.loads(Path(sys.argv[1]).read_text()) if len(sys.argv) > 1 else None
 pages = {}
 def norm(s): return ' '.join(s.split())
@@ -53,7 +53,8 @@ for url in urls:
             if not anchor.xpath('ancestor::*[contains(concat(" ",normalize-space(@class)," ")," language-switcher ")]'):
                 assert language(target.path) == lang, f'{url}: cross-language content link {href}'
         else:
-            assert target.scheme == 'https' and target.netloc == 'cnfansge.com', f'{url}: unexpected external target {href}'
+            assert target.scheme == 'https', f'{url}: insecure external link {href}'
+            assert target.netloc == 'cnfansge.com' or (target.netloc == 'litbuy.com' and anchor.xpath('ancestor::aside[@class="article-sources"]') and target.path in ['/help','/estimation']), f'{url}: unexpected external target {href}'
     for image in page.xpath('//img[@src]'):
         assert (root/'public'/image.get('src').lstrip('/')).exists(), f'{url}: missing image {image.get("src")}'
         assert image.get('width') and image.get('height') and image.get('alt') is not None
@@ -71,7 +72,7 @@ for url in urls:
         featured = page.xpath('//a[@class="hero-product"]')[0]
         assert featured.get('href') == 'https://cnfansge.com/AllProducts/6681.html'
     if relative == '/articles/':
-        assert len(page.xpath('//div[@class="article-grid"]/article')) == 15
+        assert len(page.xpath('//div[@class="article-grid"]/article')) == 18
 for entry in sitemap.xpath('//s:url',namespaces=ns):
     url = entry.find('s:loc',ns).text
     alts = {a.get('hreflang'):a.get('href') for a in entry.findall('x:link',ns)}
@@ -80,4 +81,4 @@ for entry in sitemap.xpath('//s:url',namespaces=ns):
 not_found = html.fromstring((out/'404.html').read_bytes())
 assert any('noindex' in s for s in not_found.xpath('//meta[@name="robots"]/@content'))
 assert 'https://litbuys.store/sitemap.xml' in (out/'robots.txt').read_text()
-print(json.dumps({'canonical_pages':len(urls),'article_pages':75,'languages':langs,'internal_links':'passed','full_article_bodies':'passed' if expected else 'not checked','metadata_and_sitemap':'passed','search_and_product_destinations':'passed'},ensure_ascii=False,indent=2))
+print(json.dumps({'canonical_pages':len(urls),'article_pages':90,'languages':langs,'internal_links':'passed','full_article_bodies':'passed' if expected else 'not checked','metadata_and_sitemap':'passed','search_and_product_destinations':'passed'},ensure_ascii=False,indent=2))

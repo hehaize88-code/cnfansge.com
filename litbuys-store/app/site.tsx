@@ -9,6 +9,7 @@ import { articleSlugs, featuredArticles, orderedArticleSlugs, getArticle, relate
 import { ui, categoryLabels, productLabel, articleImage, articleProductIds, topicArticles, formatDate } from "./ui-copy";
 import { localizedResearch } from "./research";
 import evidenceTables from "./content-oct/evidence.json";
+import { discoveryCopy } from "./editorial-refresh";
 
 export type { Lang, PageKey } from "./i18n";
 
@@ -32,7 +33,18 @@ const categories = [
 
 const navHrefs = ["/spreadsheet", "/finds", "/guides", "/qc", "/shipping", "/faq", "/articles"];
 
-function pageCopy(lang: Lang = "en") { return { lang, copy: copies[lang] }; }
+function pageCopy(lang: Lang = "en") { return { lang, copy: { ...copies[lang], hero: discoveryCopy[lang].hero, intro: discoveryCopy[lang].intro } }; }
+
+const helpPaths = ["/spreadsheet", "/qc", "/articles/litbuy-cost-workflow-checklist", "/articles/litbuy-coupons-guide", "/articles/litbuy-tracking-not-updating", "/articles/litbuy-returns-refunds-guide"];
+function HelpPaths({ lang }: { lang: Lang }) {
+  const text = discoveryCopy[lang];
+  return <nav className="help-paths" aria-label={text.title} data-entry-point="help_paths"><h2>{text.title}</h2><div>{helpPaths.map((path, index) => <Link key={path} href={localPath(lang,path)}>{text.items[index]} <span aria-hidden="true">↗</span></Link>)}</div></nav>;
+}
+
+function CatalogCategories({ lang }: { lang: Lang }) {
+  const text = discoveryCopy[lang];
+  return <section className="section compact-section"><div className="section-heading"><h2>{text.catalog}</h2><p>{text.catalogNote}</p></div><div className="category-grid" data-entry-point="spreadsheet_categories">{categories.map(([label,url,number]) => <a key={label} href={url} target="_blank" rel="noopener noreferrer"><span>{number}</span><b>{categoryLabels[lang][Number(number)-1]}</b><i>↗</i></a>)}</div></section>;
+}
 
 const heroLabels: Record<Lang, { search: string; placeholder: string; featured: string; product: string; detail: string }> = {
   en: { search: "Search", placeholder: "Search shoes, hoodies, bags…", featured: "Featured find", product: "Sweatshirt record", detail: "View product" },
@@ -77,6 +89,7 @@ export function HomePage({ language = "en" }: { language?: Lang } = {}) {
         <div className="hero-product-info"><p className="hero-product-label">{labels.featured} · ID {featured.id}</p><h2>{labels.product}</h2><div className="hero-product-price"><strong>{featured.price}</strong><span>{copy.usd}</span></div><span className="hero-product-link">{labels.detail} <span aria-hidden="true">↗</span></span></div>
       </a></section>
     <CoreLinks lang={lang} />
+    <HelpPaths lang={lang} />
     <div className="proof-strip"><span>● {copy.verified}</span><span>● {copy.usd}</span><span>● {copy.checked}</span></div>
     <section className="section compact-section"><div className="section-heading"><div><p className="kicker">{copy.categories} / 01</p><h2>{copy.categories}</h2></div><p>{copy.categoryIntro}</p></div><div className="category-grid">{categories.map(([label, url, number]) => <a key={label} href={url} target="_blank" rel="noopener noreferrer"><span>{number}</span><b>{categoryLabels[lang][Number(number)-1]}</b><i>↗</i></a>)}</div></section>
     <section className="section" id="finds"><div className="section-heading"><div><p className="kicker">{copy.nav[1]} / 02</p><h2>{copy.picks}</h2></div><p>{copy.picksIntro}</p></div><ProductGrid lang={lang} copy={copy} /></section>
@@ -112,6 +125,8 @@ export function SubPage({ page, language = "en" }: { page: PageKey; language?: L
   return <StandardShell lang={lang} copy={copy}>
     {page === "faq" && <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />}
     <PageIntro label={`${copy.nav[navHrefs.indexOf(`/${page}`)]} / LITBUYS`} title={meta.title} intro={meta.intro} />
+    {(page === "articles" || page === "guides" || page === "faq") && <HelpPaths lang={lang} />}
+    {page === "spreadsheet" && <CatalogCategories lang={lang} />}
     {page === "spreadsheet" && <><div className="data-strip"><span>08<br/><b>{ui[lang].records}</b></span><span>08<br/><b>{ui[lang].matched}</b></span><span>05<br/><b>{ui[lang].languages}</b></span><span>USD<br/><b>{ui[lang].reference}</b></span></div><section className="section"><div className="section-heading"><div><p className="kicker">{copy.nav[0]} / 01</p><h2>{inner.directory}</h2></div><p>{inner.priceNote}</p></div><ProductGrid lang={lang} copy={copy} /></section></>}
     {page === "finds" && <><section className="section compact-section"><div className="section-heading"><div><p className="kicker">{copy.categories} / 01</p><h2>{copy.categories}</h2></div><p>{copy.categoryIntro}</p></div><div className="category-grid">{categories.map(([label,url,number]) => <a key={label} href={url} target="_blank" rel="noopener noreferrer"><span>{number}</span><b>{categoryLabels[lang][Number(number)-1]}</b><i>↗</i></a>)}</div></section><section className="section"><div className="section-heading"><div><p className="kicker">{copy.nav[1]} / 02</p><h2>{copy.picks}</h2></div><p>{copy.picksIntro}</p></div><ProductGrid lang={lang} copy={copy} /></section></>}
     {page === "guides" && <section className="section"><div className="guide-directory">{copy.guides.map((guide,index) => <a href={localPath(lang, ["/qc","/articles/litbuy-clothing-size-guide","/shipping"][index])} key={guide.tag}><span>{guide.tag}</span><h2>{guide.title}</h2><p>{guide.text}</p><b>↗</b></a>)}</div></section>}
@@ -150,9 +165,10 @@ export function ArticlePage({ slug, language = "en" }: { slug: ArticleSlug; lang
       {evidence && <figure className="evidence-table"><figcaption>{evidence.title}</figcaption><div><table><thead><tr>{evidence.columns.map((column) => <th key={column}>{column}</th>)}</tr></thead><tbody>{evidence.rows.map((row) => <tr key={row[0]}>{row.map((cell,index) => <td key={index}>{cell}</td>)}</tr>)}</tbody></table></div></figure>}
       <div className="article-content">{article.sections.map((section,index) => <section id={`section-${index+1}`} key={section.heading}><h2>{section.heading}</h2>{section.paragraphs.map((paragraph,pIndex) => <p key={pIndex}>{paragraph}</p>)}</section>)}</div>
       <div className="article-note"><strong>{ui[lang].sourceBasis}</strong> {ui[lang].articleSourceNote}</div>
+      <aside className="article-sources"><h2>{discoveryCopy[lang].sources}</h2><p>{discoveryCopy[lang].sourceNote}</p><ul><li><a href="https://litbuy.com/help" target="_blank" rel="noopener noreferrer">{discoveryCopy[lang].help}</a></li>{/shipping|cost|coupons/.test(slug) && <li><a href="https://litbuy.com/estimation" target="_blank" rel="noopener noreferrer">{discoveryCopy[lang].estimate}</a></li>}</ul></aside>
       {articleProductIds[slug] && <section className="article-products" data-entry-point="article_products"><h2>{ui[lang].productExamples}</h2><p>{ui[lang].referenceNote}</p><ProductGrid lang={lang} copy={copy} entryPoint="article_products" items={products.filter((product) => articleProductIds[slug]!.includes(product.id))} /></section>}
       <section className="article-next"><h2>{ui[lang].related}</h2><ArticleCards lang={lang} slugs={relatedArticles(slug)} /></section>
-      <nav className="article-related" aria-label={ui[lang].related}><Link href={localPath(lang,"/spreadsheet")}>{copy.nav[0]}</Link><Link href={localPath(lang,"/qc")}>{copy.nav[3]}</Link><Link href={localPath(lang,"/shipping")}>{copy.nav[4]}</Link><Link href={localPath(lang,"/articles")}>{ui[lang].allArticles}</Link></nav>
+      <nav className="article-related" aria-label={ui[lang].related} data-entry-point="article_next_step"><Link href={localPath(lang,"/spreadsheet")}>{copy.nav[0]}</Link><Link href={localPath(lang,"/qc")}>{copy.nav[3]}</Link><Link href={localPath(lang,"/shipping")}>{copy.nav[4]}</Link><Link href={localPath(lang,"/articles")}>{ui[lang].allArticles}</Link></nav>
     </article>
   </StandardShell>;
 }
