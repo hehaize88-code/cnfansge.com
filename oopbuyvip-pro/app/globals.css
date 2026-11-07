@@ -258,3 +258,16 @@
   .article-body .related-reading h2{font-size:18px}
 }
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.article-card,.product-card{transition:none}}
+
+/* Practical QC routes retain every language and fit narrow screens. */
+.qc-next-steps{display:grid;grid-template-columns:1fr 1.5fr;gap:32px;padding-block:32px;border-block:1px solid var(--line)}
+.qc-next-steps h2{font-family:Georgia,serif;font-size:30px;line-height:1.15;margin:10px 0}
+.qc-next-steps p{font-size:15px;line-height:1.6;color:var(--muted-ink)}
+.qc-next-steps nav{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.qc-next-steps a{display:flex;align-items:center;gap:10px;padding:16px;border:1px solid var(--line);border-radius:14px;background:#fff;min-width:0}
+.qc-next-steps a span{color:var(--coral-dark);font-size:12px;font-weight:700}
+.qc-next-steps a b{flex:1;font-size:15px;line-height:1.4;overflow-wrap:anywhere}
+.qc-next-steps a svg{width:18px;flex-shrink:0}
+.qc-next-steps a:focus-visible{outline:3px solid var(--coral);outline-offset:3px}
+.article-count{font-size:16px;font-weight:700;margin:0 0 20px}
+@media(max-width:760px){.qc-next-steps{grid-template-columns:1fr;gap:12px;padding-block:22px}.qc-next-steps h2{font-size:27px}.qc-next-steps nav{grid-template-columns:1fr}.qc-next-steps a{padding:13px}}
