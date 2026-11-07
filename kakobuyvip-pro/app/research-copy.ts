@@ -1,6 +1,7 @@
+import {newArticleData,landingUpdates} from "./editorial-update";
 import type { Locale } from "./site-data";
 
-type IndependentPage = "spreadsheet" | "finds" | "guide" | "qc" | "shipping" | "faq" | "articles";
+type IndependentPage = "spreadsheet"|"finds"|"guide"|"qc"|"shipping"|"faq"|"articles";
 
 export const seoPageIntro: Record<Locale, Record<IndependentPage, [string, string]>> = {
   en: {
@@ -13,7 +14,7 @@ export const seoPageIntro: Record<Locale, Record<IndependentPage, [string, strin
     articles: ["Kakobuy Guides and Research", "Long-form, source-checked guides covering the Kakobuy spreadsheet, QC photos, shipping cost, 100-day storage and seller returns."],
   },
   de: {
-    spreadsheet: ["Kakobuy-Tabelle: Produktlinks und QC", "Geprüfte Produktwege mit passenden Bildern, Preisen und Zielen – plus klare Hinweise, was vor der Bestellung noch geprüft werden muss."],
+    spreadsheet: ["Kakobuy-Produkttabelle: Links und QC-Hinweise", "Geprüfte Produktwege mit passenden Bildern, Preisen und Zielen – plus klare Hinweise, was vor der Bestellung noch geprüft werden muss."],
     finds: ["Kakobuy-Funde mit geprüften Zielen", "Aktuelle Datensätze, deren Kartenbild und Ziel gemeinsam kontrolliert wurden. Preise bleiben datierte Momentaufnahmen."],
     guide: ["Mit Kakobuy bestellen: Schritt für Schritt", "Vom chinesischen Produktlink über Artikelzahlung und Lager-QC bis zur Einreichung des internationalen Pakets."],
     qc: ["Kakobuy QC-Foto-Leitfaden", "Identität, Form, Verarbeitung und entscheidende Belege vor dem Versand systematisch prüfen."],
@@ -102,3 +103,8 @@ export const officialFaqs: Record<Locale, Array<[string, string]>> = {
     ["La stima di spedizione è finale?", "No. Peso, misure, linea, classificazione e servizi cambiano il costo; dogana e vettori cambiano i tempi."],
   ],
 };
+
+for(const locale of ["en","de","es","fr","it"] as Locale[]){
+ const l=landingUpdates[locale];
+ officialFaqs[locale].push(...Object.values(newArticleData[locale]).flatMap(a=>a.faqs||[]),l.warehouse.steps[0] as [string,string],l.warehouse.steps[1] as [string,string],l.returns.steps[0] as [string,string],l.returns.steps[2] as [string,string],l.qcTroubleshooting.steps[0] as [string,string],l.qcTroubleshooting.steps[1] as [string,string]);
+}

@@ -11,8 +11,9 @@
     "preview": "vite preview",
     "deploy": "npm run build && wrangler deploy",
     "deploy:dry": "npm run build && wrangler deploy --dry-run",
-    "test": "npm run lint && npm run build",
-    "lint": "eslint . --ignore-pattern dist --ignore-pattern .next",
+    "test": "npm run lint && npm run typecheck && npm run build && node --test tests/rendered-html.test.mjs",
+    "lint": "eslint app worker tests/rendered-html.test.mjs",
+    "typecheck": "tsc --project tsconfig.site.json --noEmit",
     "verify:content": "node scripts/verify-content.cjs"
   },
   "dependencies": {

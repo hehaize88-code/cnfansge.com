@@ -1,8 +1,7 @@
 export const localeCodes = ["en", "de", "es", "fr", "it"] as const;
 export type Locale = (typeof localeCodes)[number];
 export type PageKey =
-  | "feesArticle"
-  | "usaArticle"
+  | "feesArticle" | "usaArticle" | "trackingArticle" | "expensiveArticle" | "ukArticle"
   | "home"
   | "spreadsheet"
   | "finds"
@@ -35,8 +34,7 @@ export type PageKey =
   | "parcelManifestArticle";
 
 export const pagePaths: Record<PageKey, string> = {
-  feesArticle: "articles/kakobuy-fees-explained",
-  usaArticle: "articles/kakobuy-shipping-to-usa",
+  feesArticle: "articles/kakobuy-fees-explained", usaArticle: "articles/kakobuy-shipping-to-usa", trackingArticle: "articles/kakobuy-tracking-not-updating", expensiveArticle: "articles/why-is-kakobuy-shipping-so-expensive", ukArticle: "articles/kakobuy-shipping-to-uk",
   home: "", spreadsheet: "spreadsheet", finds: "finds", guide: "guide", qc: "qc", shipping: "shipping", faq: "faq", articles: "articles",
   calculator: "shipping-calculator", shippingLines: "shipping-lines", packing: "parcel-packing", warehouse: "warehouse-status-guide", returns: "returns-exchanges", qcTroubleshooting: "qc-photo-troubleshooting",
   qcArticle: "articles/kakobuy-returns-qc-photo-troubleshooting", shippingArticle: "articles/kakobuy-shipping-calculator-method", storageArticle: "articles/kakobuy-parcel-packing-warehouse-status",

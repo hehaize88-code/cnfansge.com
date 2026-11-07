@@ -1,3 +1,4 @@
+import {landingUpdates, updatedDecisionKeys, editorialUi} from './editorial-update';
 import decisionCopy from "./content/decisions.json";
 import type { Locale, PageKey } from "./site-data";
 
@@ -102,3 +103,11 @@ export const proHome: Record<
 };
 
 export const decisions = decisionCopy as Record<Locale, Record<DecisionKey, LocalDecision>>;
+
+for (const locale of ["en","de","es","fr","it"] as Locale[]) {
+ for(const key of updatedDecisionKeys) Object.assign(decisions[locale][key],landingUpdates[locale][key]);
+ Object.assign(proHome[locale],{title:editorialUi[locale].homeH1,body:editorialUi[locale].homeBody,badge:editorialUi[locale].reviewed});
+}
+
+const calculatorTitles:Record<Locale,string>={en:"Kakobuy Shipping Calculator: Weight & Cost Planning",de:"Kakobuy-Versandrechner: Gewicht und Kosten planen",es:"Calculadora Kakobuy: peso y coste del envío",fr:"Calculateur Kakobuy : poids et coût de livraison",it:"Calcolatore Kakobuy: peso e costo di spedizione"};
+for(const locale of ["en","de","es","fr","it"] as Locale[])decisions[locale].calculator.title=calculatorTitles[locale];

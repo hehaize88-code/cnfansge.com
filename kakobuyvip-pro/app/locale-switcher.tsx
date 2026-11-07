@@ -1,6 +1,6 @@
 "use client";
 
-import Link from "next/link";
+import Link from "./document-link";
 import { useEffect } from "react";
 
 export default function LocaleSwitcher({ value, label, paths }: { value:string; label:string; paths:Record<string,string> }) {

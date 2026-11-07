@@ -52,3 +52,18 @@ terms, order references or recipient details. They are interaction events, not
 purchase or revenue events. The weight calculator models the greater of actual
 and volumetric weight with a user-supplied route divisor and billing increment;
 it is not connected to a live freight pricing API.
+
+
+## 2026-11-07 multilingual SEO release
+
+Production is the existing Cloudflare Worker `kakobuyvip-pro`, built from this
+repository directory. The Sites project holds a matching editorial version but
+is not the origin currently serving the custom domain.
+
+All five locales now contain 21 articles (18 existing plus tracking problems,
+expensive shipping and UK shipping), with 175 sitemap URLs and 20 visible FAQs
+per language. Warehouse, returns and QC troubleshooting pages have been expanded.
+Existing article paths, /en normalization, www/HTTPS redirects and source catalog
+links are retained. `npm test` validates the active application, builds it, and
+checks the production renderer. GA4 G-2NWE1C6LHV is preserved with document navigation
+and separate calculator/catalog events; custom events omit searches and query strings.
