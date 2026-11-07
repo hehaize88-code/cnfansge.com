@@ -1,3 +1,4 @@
+import { getNovemberArticles, refineArticles, releaseUi } from "@/lib/seo-release";
 import { improveArticles } from "@/lib/article-improvements";
 import { getOctoberArticles } from "@/lib/qc-articles-20261015";
 import { researchedArticles } from "@/lib/researched-articles";
@@ -220,6 +221,15 @@ export const faqByLocale: Record<Locale, { q: string; a: string }[]> = {
     { q: "Questo sito vende o spedisce prodotti?", a: "No. È un indice indipendente. I link aprono il catalogo di destinazione, dove vanno confermati disponibilità, opzioni e checkout." },
   ],
 };
+
+for (const locale of locales) {
+ const ui = releaseUi[locale];
+ copy[locale].heroTitle = ui.hero;
+ copy[locale].heroText = ui.deck;
+ copy[locale].sectionTitles.qc = ui.hero;
+ copy[locale].sectionIntros.qc = ui.deck;
+ copy[locale].sectionIntros.articles = ui.intro;
+}
 
 export type Article = { seoTitle?: string; takeaways?: string[]; reviewNotice?: string; slug: string; title: string; deck: string; readTime: string; published?: string; modified?: string; sourceNote?: string; related?: { label: string; kind: "qc" | "article"; slug?: string }[]; sections: { heading: string; paragraphs: string[]; table?: { headers: string[]; rows: string[][] } }[]; sources?: { label: string; href: string }[] };
 
@@ -471,16 +481,16 @@ export function getArticles(locale: Locale): Article[] {
   });
   const [beginner, fees, qvlC01] = researchedArticles[locale];
   const previous = [qvlC01, beginner, existing[0], existing[1], fees, existing[2]].map(article => ({ ...article, ...articleSeoUpdates[locale][article.slug] }));
-  const articles = [...getOctoberArticles(locale), ...newQcArticles[locale], ...previous];
-  if (locale === "en") return improveArticles(locale, articles);
-  return improveArticles(locale, articles.map((article) => {
+  const articles = [...getNovemberArticles(locale), ...getOctoberArticles(locale), ...newQcArticles[locale], ...previous];
+  if (locale === "en") return refineArticles(locale, improveArticles(locale, articles));
+  return refineArticles(locale, improveArticles(locale, articles.map((article) => {
     const additions = localizedArticleParity[locale][article.slug] || [];
     if (!additions.length) return article;
     const sections = article.sections.map((section, index) => index === article.sections.length - 1
       ? { ...section, paragraphs: [...section.paragraphs, ...additions] }
       : section);
     return { ...article, sections };
-  }));
+  })));
 }
 
 export function homePath(locale: Locale) { return locale === "en" ? "/" : `/${locale}`; }
