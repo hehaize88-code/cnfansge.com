@@ -1,4 +1,9 @@
-import { coreArticleMetadata, editorialDate, editorialLabels, octoberSlugs } from "./editorial-config";
+import novemberTitles from "./november-titles.json";
+import sizeGuide from "./november-size.json";
+import missingQC from "./november-qc.json";
+import returnsGuide from "./november-returns.json";
+import answerSections from "./november-answers.json";
+import { coreArticleMetadata, editorialDate, editorialLabels, octoberSlugs, octoberDate, novemberSlugs } from "./editorial-config";
 import assetsDE from "./article-assets-de.json";
 import assetsES from "./article-assets-es.json";
 import assetsFR from "./article-assets-fr.json";
@@ -243,9 +248,16 @@ function getLegacyArticle(lang: Language, slug: string): Article | null {
 
 const octoberArticles={en:octoberEN,de:octoberDE,es:octoberES,fr:octoberFR,it:octoberIT};
 export function getArticle(lang:Language,slug:string):Article|null {
-  const fresh=(octoberArticles[lang] as Record<string,Pick<Article,"title"|"deck"|"sections">>)[slug];
-  const article:Article|null=fresh?{...fresh,read:"",sources:[]}:getLegacyArticle(lang,slug);
+  const additions: Record<string, Record<Language, Pick<Article,"title"|"deck"|"sections">>>={"lovegobuy-size-guide":sizeGuide,"lovegobuy-qc-photos-missing":missingQC,"lovegobuy-returns-refunds":returnsGuide};
+  const fresh=additions[slug]?.[lang]??(octoberArticles[lang] as Record<string,Pick<Article,"title"|"deck"|"sections">>)[slug];
+  const original:Article|null=fresh?{...fresh,read:"",sources:[]}:getLegacyArticle(lang,slug);
+  const article=original?{...original,sections:[...original.sections]}:null;
   if(!article)return null;
+  const answer=(answerSections[lang] as Record<string,Article["sections"][number]>)[slug];
+  if(answer) article.sections=[answer,...article.sections];
+  article.sources=[{label:editorialLabels[lang].sourceNames[0],href:"https://www.lovegobuy.com/article/index?article_id=10003"},{label:({en:"LoveGoBuy help centre: inspection, returns and fees",de:"LoveGoBuy-Hilfe: Prüfung, Rückgabe und Gebühren",es:"Ayuda LoveGoBuy: inspección, devoluciones y tarifas",fr:"Aide LoveGoBuy : inspection, retours et frais",it:"Assistenza LoveGoBuy: ispezione, resi e costi"})[lang],href:"https://www.lovegobuy.com/help-center/index"}];
+  if(slug.includes("shipping")) article.sources.push({label:({en:"Official cost breakdown",de:"Offizielle Kostenübersicht",es:"Desglose oficial de costes",fr:"Décomposition officielle des coûts",it:"Ripartizione ufficiale dei costi"})[lang],href:"https://www.lovegobuy.com/article/index?article_id=10019"});
+  if(slug==="lovegobuy-returns-refunds") article.sources.push({label:({en:"Official product page: warehouse return notice",de:"Offizielle Produktseite: Rückgabehinweis",es:"Ficha oficial: aviso de devolución desde almacén",fr:"Fiche officielle : conditions de retour de l’entrepôt",it:"Scheda ufficiale: avviso sui resi dal magazzino"})[lang],href:"https://www.lovegobuy.com/product?id=775924216929&shop_type=ali_1688"});
   const words=article.sections.reduce((total,s)=>total+[s.title,...s.paragraphs,...(s.bullets??[])].join(" ").split(/\s+/u).length,0);
-  return {...article,...coreArticleMetadata[lang][slug],read:`${Math.max(1,Math.ceil(words/200))} ${editorialLabels[lang].read}`,datePublished:octoberSlugs.includes(slug)||(lang!=="en"&&!(slug in englishArticles))?editorialDate:(slug in englishArticles?"2026-09-01":"2026-09-24"),dateModified:editorialDate};
+  return {...article,...coreArticleMetadata[lang][slug],title:(novemberTitles[lang] as Record<string,string>)[slug]??coreArticleMetadata[lang][slug]?.title??article.title,read:`${Math.max(1,Math.ceil(words/200))} ${editorialLabels[lang].read}`,datePublished:novemberSlugs.includes(slug)?editorialDate:octoberSlugs.includes(slug)||(lang!=="en"&&!(slug in englishArticles))?octoberDate:(slug in englishArticles?"2026-09-01":"2026-09-24"),dateModified:editorialDate};
 }

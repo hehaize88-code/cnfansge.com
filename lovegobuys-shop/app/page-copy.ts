@@ -1,3 +1,5 @@
+import faqCopy from "./november-faq.json";
+import quickAnswers from "./november-answers.json";
 import type { Language } from "./site-content";
 import { enrichPageCopy } from "./page-enrichment";
 import { applyPageLocalizedParity } from "./page-localized-parity";
@@ -92,4 +94,12 @@ translated.it.faq.sections=[{title:"Cos’è un foglio LoveGoBuy?",body:["Una di
 const pageCopyBase: Record<Language, Record<string, ContentRecord>> = { en, ...translated };
 applyPageLocalizedParity(pageCopyBase);
 enrichPageCopy(pageCopyBase);
+for (const language of Object.keys(faqCopy) as Language[]) {
+  pageCopyBase[language].faq.sections=faqCopy[language].map(([title,answer])=>({title,body:[answer]}));
+  const answers=quickAnswers[language];
+  for(const [page,slug] of Object.entries({qc:"lovegobuy-qc-photo-guide",shipping:"lovegobuy-shipping-cost-calculator",guide:"how-to-order-lovegobuy-taobao-weidian"})) {
+    const answer=answers[slug as keyof typeof answers];
+    pageCopyBase[language][page].sections.unshift({title:answer.title,body:answer.paragraphs});
+  }
+}
 export const pageCopy = pageCopyBase;

@@ -500,3 +500,24 @@ footer { padding:40px 0; background:#fff; border-top:1px solid var(--line); }
   .article-cta .primary-button { font-size: 14px; white-space: normal; }
   .article-index .index-card { padding: 22px; }
 }
+
+/* Direct answers and compact navigation remain available in every locale. */
+.intent-links { display:grid; gap:8px; margin:18px 0; }
+.intent-links a { font-size:14px; font-weight:750; line-height:1.45; text-decoration:underline; text-underline-offset:3px; }
+.article-sources a { text-decoration:underline; text-underline-offset:3px; }
+.article-prose>section:first-of-type { background:#fff7ef; border:1px solid var(--line); border-radius:16px; padding:24px; }
+.article-prose .article-figure { margin:24px 0 0; }
+.desktop-nav a { padding:10px 9px; font-size:10px; }
+.header-inner { gap:16px; }
+.product-data> b { font-size:12px; max-width:105px; }
+.evidence-card dl>div { min-width:0; }
+@media(max-width:1200px) { .desktop-nav {display:none;} .mobile-menu {display:block;} }
+@media(max-width:600px) {
+ .intent-links a { font-size:13px; }
+ .article-prose>section:first-of-type {padding:18px;}
+ .article-figure {padding:16px;}
+ .home-page .product-grid {gap:10px;}
+ .home-page .product-data {gap:6px;flex-wrap:wrap;}
+ .home-page .product-data h3 {font-size:14px;}
+ .home-page .product-data> b {font-size:11px;max-width:none;}
+}

@@ -20,6 +20,9 @@
       window.gtag("js", new Date());
       window.gtag("config", measurementId);
     }
+    if (/^\/(en|de|es|fr|it)\/articles\/[^/]+\/?$/.test(location.pathname)) {
+      record("article_view", { article_slug: location.pathname.split("/")[3] });
+    }
   }
   if (document.readyState === "loading") document.addEventListener("DOMContentLoaded", ready, { once: true });
   else ready();
@@ -31,6 +34,17 @@
       transport_type: "beacon"
     }, details));
   }
+  var articleRead = false;
+  var openedAt = Date.now();
+  document.addEventListener("scroll", function () {
+    if (articleRead || document.visibilityState !== "visible" || Date.now() - openedAt < 30000) return;
+    var article = document.querySelector(".long-article");
+    if (!article) return;
+    var bounds = article.getBoundingClientRect();
+    if (window.innerHeight - bounds.top < bounds.height * 0.5) return;
+    articleRead = true;
+    record("article_read", { article_slug: location.pathname.split("/")[3], reading_threshold: "30s_half_article" });
+  }, { passive: true });
   document.addEventListener("click", function (event) {
     var link = event.target instanceof Element ? event.target.closest("a[href]") : null;
     if (!link) return;

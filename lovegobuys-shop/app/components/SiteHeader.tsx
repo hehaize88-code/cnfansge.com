@@ -3,7 +3,8 @@ import { languageNames, languages, type Language, ui } from "../site-content";
 export function SiteHeader({ lang, path = "" }: { lang: Language; path?: string }) {
   const t = ui[lang];
   const openSheet={en:"Open sheet",de:"Tabelle öffnen",es:"Abrir hoja",fr:"Ouvrir la feuille",it:"Apri foglio"}[lang];
-  const sheetLabel={en:"Evidence table",de:"Nachweistabelle",es:"Tabla de pruebas",fr:"Tableau de preuves",it:"Tabella prove"}[lang];
+  const sheetLabel="Spreadsheet";
+  const howTo={en:"How to buy",de:"Bestellen",es:"Cómo comprar",fr:"Comment acheter",it:"Come comprare"}[lang];
   const menu={en:"Menu",de:"Menü",es:"Menú",fr:"Menu",it:"Menu"}[lang];
   return (
     <>
@@ -12,11 +13,11 @@ export function SiteHeader({ lang, path = "" }: { lang: Language; path?: string 
         <div className="shell header-inner">
         <a className="brand" href={`/${lang}`} aria-label="LoveGoBuy Field Guide home"><img src="/lovegobuy.png" alt="LoveGoBuy" width="200" height="37" /></a>
         <nav className="desktop-nav" aria-label="Primary navigation">
-          <a href={`/${lang}/spreadsheet`}>{sheetLabel}</a><a href={`/${lang}/finds`}>{t.nav[0]}</a><a href={`/${lang}/qc`}>{t.nav[1]}</a><a href={`/${lang}/shipping`}>{t.nav[2]}</a><a href={`/${lang}/articles`}>{t.nav[3]}</a>
+          <a href={`/${lang}/spreadsheet`}>{sheetLabel}</a><a href={`/${lang}/finds`}>{t.nav[0]}</a><a href={`/${lang}/qc`}>{t.nav[1]}</a><a href={`/${lang}/shipping`}>{t.nav[2]}</a><a href={`/${lang}/articles`}>{t.nav[3]}</a><a href={`/${lang}/guide`}>{howTo}</a><a href={`/${lang}/faq`}>FAQ</a>
         </nav>
         <div className="header-actions">
           <details className="lang-switch"><summary>{t.locale} <b>⌄</b></summary><div>{languages.map((code) => <a className={code === lang ? "active" : ""} key={code} href={`/${code}${path}`} hrefLang={code} lang={code}>{languageNames[code]}</a>)}</div></details>
-          <details className="mobile-menu"><summary>{menu}</summary><div><a href={`/${lang}/spreadsheet`}>{sheetLabel}</a><a href={`/${lang}/finds`}>{t.nav[0]}</a><a href={`/${lang}/qc`}>{t.nav[1]}</a><a href={`/${lang}/shipping`}>{t.nav[2]}</a><a href={`/${lang}/articles`}>{t.nav[3]}</a></div></details>
+          <details className="mobile-menu"><summary>{menu}</summary><div><a href={`/${lang}/spreadsheet`}>{sheetLabel}</a><a href={`/${lang}/finds`}>{t.nav[0]}</a><a href={`/${lang}/qc`}>{t.nav[1]}</a><a href={`/${lang}/shipping`}>{t.nav[2]}</a><a href={`/${lang}/articles`}>{t.nav[3]}</a><a href={`/${lang}/guide`}>{howTo}</a><a href={`/${lang}/faq`}>FAQ</a></div></details>
           <a className="primary-button compact" href="https://cnfansge.com/AllProducts/" target="_blank" rel="noopener noreferrer">{openSheet} <span>↗</span></a>
         </div>
         </div>

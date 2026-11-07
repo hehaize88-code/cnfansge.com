@@ -9,7 +9,7 @@ const copy = {
 };
 export function ArticleIllustration({ lang, slug }: { lang: Language; slug: string }) {
   const t = copy[lang];
-  const kind = /shipping/.test(slug) ? "box" : /hoodie|jacket|jersey/.test(slug) ? "measure" : /how-to-order|tracking/.test(slug) ? "flow" : "qc";
+  const kind = /shipping/.test(slug) ? "box" : /hoodie|jacket|jersey|size-guide/.test(slug) ? "measure" : /how-to-order|tracking|returns/.test(slug) ? "flow" : "qc";
   return <figure className={`article-figure figure-${kind}`}><figcaption><strong>{t[kind]}</strong></figcaption>
     {kind === "box" && <svg viewBox="0 0 500 220" role="img" aria-label={t.box}><g fill="#ffdfd4" stroke="#4a2637" strokeWidth="2.5" strokeLinejoin="round"><path d="M130 75 270 35 370 90 230 135Z"/><path d="M130 75 230 135 230 205 130 145Z"/><path d="M230 135 370 90 370 160 230 205Z"/></g><g fill="#4a2637" fontSize="20" fontFamily="sans-serif"><text x="160" y="40">40 cm</text><text x="335" y="54">30 cm</text><text x="385" y="135">20 cm</text></g></svg>}
     {kind === "measure" && <svg viewBox="0 0 540 240" role="img" aria-label={`${t.chest}; ${t.length}`}><path d="m175 45 60-20q25 30 50 0l60 20 55 60-55 25-20-20v115H195V110l-20 20-55-25Z" fill="#ffdfd4" stroke="#4a2637" strokeWidth="2.5"/><g stroke="#bd3261" strokeWidth="3"><path d="M199 120H321M200 111v18m120-18v18M300 48v166m-8-164h16m-16 164h16"/></g><g fill="#4a2637" fontSize="16" fontFamily="sans-serif"><text x="260" y="155" textAnchor="middle">{t.chest}</text><text x="405" y="180" textAnchor="middle">{t.length}</text></g></svg>}

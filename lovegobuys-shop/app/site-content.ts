@@ -1,4 +1,6 @@
-import { octoberSlugs } from "./editorial-config";
+import faqCopy from "./november-faq.json";
+import productSnapshot from "./product-snapshot.json";
+import { novemberSlugs, octoberSlugs } from "./editorial-config";
 export const languages = ["en", "de", "es", "fr", "it"] as const;
 export type Language = (typeof languages)[number];
 
@@ -66,13 +68,14 @@ export const categories = [
   { name: "Electronics", note: "spec · plug · restrictions", href: "https://cnfansge.com/electronics/", tone: "cyan" },
 ];
 
-export const products = [
-  { name: "Sweatshirt 01", price: "$23.60*", image: "https://cnfansge.com/uploads/allimg/20260506/1-260506103535537.webp", href: "https://cnfansge.com/AllProducts/6681.html", tag: "Latest" },
-  { name: "Pants / Shorts 01", price: "$26.40*", image: "https://cnfansge.com/uploads/allimg/20260506/1-26050610331M37.webp", href: "https://cnfansge.com/AllProducts/6680.html", tag: "Latest" },
-  { name: "Jersey 55", price: "$18.30*", image: "https://cnfansge.com/uploads/allimg/20260422/1-2604222250014B.jpg", href: "https://cnfansge.com/AllProducts/6679.html", tag: "Popular" },
-  { name: "Jersey 54", price: "$18.30*", image: "https://cnfansge.com/uploads/allimg/20260422/1-260422225000a6.jpg", href: "https://cnfansge.com/AllProducts/6678.html", tag: "Popular" },
-  { name: "Jersey 53", price: "$18.30*", image: "https://cnfansge.com/uploads/allimg/20260422/1-260422224959349.jpg", href: "https://cnfansge.com/AllProducts/6677.html", tag: "New route" },
-  { name: "Jersey 52", price: "$10.50*", image: "https://cnfansge.com/uploads/allimg/20260422/1-260422224959462.jpg", href: "https://cnfansge.com/AllProducts/6676.html", tag: "Value" },
-];
+export const products = productSnapshot;
 
-export const articleSlugs = ["lovegobuy-spreadsheet-guide", "lovegobuy-qc-photo-guide", "lovegobuy-shipping-weight", "lovegobuy-shoe-insole-sizing", "lovegobuy-hoodie-measurements", "lovegobuy-jersey-variant-print", "lovegobuy-product-option-mismatch", "lovegobuy-jacket-material-check", "lovegobuy-bag-dimensions-hardware", "lovegobuy-electronics-compatibility", ...octoberSlugs];
+export const articleSlugs = ["lovegobuy-spreadsheet-guide", "lovegobuy-qc-photo-guide", "lovegobuy-shipping-weight", "lovegobuy-shoe-insole-sizing", "lovegobuy-hoodie-measurements", "lovegobuy-jersey-variant-print", "lovegobuy-product-option-mismatch", "lovegobuy-jacket-material-check", "lovegobuy-bag-dimensions-hardware", "lovegobuy-electronics-compatibility", ...octoberSlugs, ...novemberSlugs];
+
+const discoveryCopy={"en": ["View current price", "Product links checked 7 Nov 2026", "Product references, checked 7 November", "Choose a product, then check its details.", "Product links and images were checked on 7 November 2026. Open the listing for current price, stock, selected options and delivery information.", "variant · measurements · visible condition"], "de": ["Aktueller Preis", "Produktlinks geprüft am 7. Nov. 2026", "Produktlinks, geprüft am 7. November", "Produkt auswählen und Details prüfen.", "Produktlinks und Bilder wurden am 7. November 2026 geprüft. Aktuelle Preise, Verfügbarkeit, Varianten und Versandangaben stehen im Angebot.", "Variante · Maße · sichtbarer Zustand"], "es": ["Ver precio actual", "Enlaces revisados el 7 nov 2026", "Productos revisados el 7 de noviembre", "Elige un producto y comprueba sus detalles.", "Los enlaces y las imágenes se revisaron el 7 de noviembre de 2026. Abre la ficha para consultar el precio, stock, opciones y envío actuales.", "variante · medidas · estado visible"], "fr": ["Voir le prix actuel", "Liens vérifiés le 7 nov. 2026", "Produits vérifiés le 7 novembre", "Choisissez un produit et vérifiez ses détails.", "Liens et images vérifiés le 7 novembre 2026. Consultez la fiche pour connaître le prix, le stock, les variantes et la livraison actuels.", "variante · mesures · état visible"], "it": ["Vedi prezzo attuale", "Link verificati il 7 nov 2026", "Prodotti verificati il 7 novembre", "Scegli un prodotto e controlla i dettagli.", "Link e immagini verificati il 7 novembre 2026. Apri la scheda per prezzo, disponibilità, varianti e spedizione attuali.", "variante · misure · condizioni visibili"]};
+for (const lang of languages) {
+  const [currentPrice,checked,kicker,title,note,productCheck]=discoveryCopy[lang];
+  Object.assign(ui[lang], {currentPrice,productCheck,findsKicker:kicker,findsTitle:title,priceNote:note});
+  ui[lang].ticker[1]=checked;
+  ui[lang].faqs=[0,6,10,16].map(index=>faqCopy[lang][index]);
+}
