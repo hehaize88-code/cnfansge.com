@@ -22,6 +22,9 @@ import {
   type Language,
 } from "./content";
 import { ProductIndex } from "./product-index";
+import { DownloadPanel } from "./download-panel";
+import { ParcelWorksheet } from "./planner-tools";
+import { plannerCopy } from "./planner-copy";
 
 const SITE = "https://oopbuyvip.org";
 const sourceBoundary = {
@@ -233,7 +236,7 @@ function ArticleCards({ lang, limit, selected, exclude }: { lang: Language; limi
             <p className="eyebrow">{article.eyebrow}</p>
             <h3>{article.title}</h3>
             <p>{article.description}</p>
-            <a href={`/${lang}/articles/${slug}`}>{t.labels.learn}<ArrowRight aria-hidden="true" /></a>
+            <a href={`/${lang}/articles/${slug}`} data-track="article_click" data-article={slug}>{t.labels.learn}<ArrowRight aria-hidden="true" /></a>
           </article>
         );
       })}
@@ -330,7 +333,7 @@ function Home({ lang }: { lang: Language }) {
         <section className="section articles-section">
           <div className="section-heading"><p className="eyebrow">06 / FIELD NOTES</p><h2>{t.page.articles.title}</h2><p>{t.page.articles.body}</p></div>
           <ArticleCards lang={lang} limit={4} />
-          <a className="browse-articles" href={`/${lang}/articles`}>{discoveryCopy[lang].all}<ArrowRight aria-hidden="true" /></a>
+          <a className="browse-articles" href={`/${lang}/articles`}>{discoveryCopy[lang].all.replace("{count}", String(articleSlugs.length))}<ArrowRight aria-hidden="true" /></a>
         </section>
 
         <section className="section faq-section">
@@ -351,10 +354,11 @@ function SectionPage({ lang, section }: { lang: Language; section: string }) {
   const isArticles = section === "articles";
   const iconMap = [ShieldCheck, PackageCheck, Truck];
   const crumbs = [{ label: t.nav.home, href: `/${lang}` }, { label: page.title, href: `/${lang}/${section}` }];
+  const faqSchema = isFaq ? { "@context": "https://schema.org", "@type": "FAQPage", mainEntity: t.faq.map(item => ({ "@type": "Question", name: item.q, acceptedAnswer: { "@type": "Answer", text: item.a } })) } : null;
   const itemListSchema = isProducts ? { "@context": "https://schema.org", "@type": "ItemList", name: page.title, numberOfItems: products.length, itemListElement: products.map((product, index) => ({ "@type": "ListItem", position: index + 1, name: `${t.categories[product.category]} ${product.code}`, url: product.href })) } : null;
   return (
     <>
-    <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(itemListSchema ? [breadcrumbSchema(crumbs), itemListSchema] : breadcrumbSchema(crumbs)) }} />
+    <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify([breadcrumbSchema(crumbs), ...(itemListSchema ? [itemListSchema] : []), ...(faqSchema ? [faqSchema] : [])]) }} />
     <main>
       <div className="section breadcrumb-section"><Breadcrumbs items={crumbs} /></div>
       <section className="page-hero section">
@@ -363,7 +367,10 @@ function SectionPage({ lang, section }: { lang: Language; section: string }) {
         <p>{page.body}</p>
         {(isProducts || section === "guide") && <SearchBar lang={lang} />}
       </section>
+      {section === "spreadsheet" && <DownloadPanel lang={lang} />}
+      {section === "shipping" && <ParcelWorksheet lang={lang} />}
       {isProducts && <>
+        <div className="section catalogue-intro"><a className="button-link" href="https://cnfansge.com/AllProducts/" target="_blank" rel="noopener" data-track="catalogue_click">{plannerCopy[lang].catalogue}<ExternalLink aria-hidden="true" /></a><p>{plannerCopy[lang].sample}</p></div>
         <section className="section category-section"><Categories lang={lang} /></section>
         <section className="section products-section">{section === "spreadsheet" ? <ProductIndex lang={lang} rows={products} categories={t.categories} /> : <Products lang={lang} mode="finds" />}<div className="section-actions"><a className="button-link" href="https://cnfansge.com/AllProducts/" target="_blank" rel="noopener">{t.labels.viewAll}<ExternalLink aria-hidden="true" /></a><p>{t.labels.disclaimer}</p></div></section>
       </>}
@@ -373,7 +380,7 @@ function SectionPage({ lang, section }: { lang: Language; section: string }) {
       {isFaq && <section className="section faq-section"><FAQ lang={lang} /></section>}
       {isArticles && <section className="section articles-section"><ArticleCards lang={lang} /></section>}
       {!isArticles && <SourcesPanel lang={lang} section={section} />}
-      {!isArticles && <section className="section related-section"><div className="section-heading"><p className="eyebrow">RELATED / FIELD NOTES</p><h2>{t.page.articles.title}</h2></div><ArticleCards lang={lang} limit={3} selected={section === "shipping" ? ["oopbuy-shipping-planning", "oopbuy-shipping-time", "oopbuy-fees-total-cost"] : section === "qc" ? ["oopbuy-qc-checklist", "oopbuy-shoe-sizing", "oopbuy-return-exchange-before-shipping"] : ["oopbuy-spreadsheet-guide", "oopbuy-budget-finds", "oopbuy-qc-checklist"]} /></section>}
+      {!isArticles && <section className="section related-section"><div className="section-heading"><p className="eyebrow">RELATED / FIELD NOTES</p><h2>{t.page.articles.title}</h2></div><ArticleCards lang={lang} limit={3} selected={section === "shipping" ? ["oopbuy-shipping-planning", "oopbuy-shipping-spain", "oopbuy-shipping-time"] : section === "qc" ? ["oopbuy-qc-checklist", "oopbuy-shoe-sizing", "oopbuy-return-exchange-before-shipping"] : ["oopbuy-spreadsheet-guide", "oopbuy-spreadsheet-template", "oopbuy-links-not-working"]} /></section>}
     </main>
     </>
   );
@@ -404,6 +411,7 @@ function ArticlePage({ lang, slug }: { lang: Language; slug: ArticleSlug }) {
           <div><p className="eyebrow">{article.eyebrow} / {article.read}</p><h1>{article.title}</h1><p>{article.description}</p>{article.updated && <small className="article-updated">{updateLabels[lang]} {article.updated}</small>}</div>
           <aside><ShieldCheck aria-hidden="true"/><strong>{t.labels.independently}</strong><p>{article.description}</p></aside>
         </header>
+        {slug === "oopbuy-spreadsheet-template" && <DownloadPanel lang={lang} showGuide={false} />}
         <nav className="article-toc section" aria-label={discoveryCopy[lang].contents}><strong>{discoveryCopy[lang].contents}</strong><ol>{article.sections.map((section, i) => <li key={section.heading}><a href={`#section-${i + 1}`}>{section.heading}</a></li>)}</ol></nav>
         <article className="article-body section">
           {article.sections.map((section, index) => <section id={`section-${index + 1}`} key={section.heading}><span>{String(index + 1).padStart(2, "0")}</span><div><h2>{section.heading}</h2>{section.paragraphs.map((paragraph, p) => <p key={p}>{paragraph}</p>)}</div></section>)}
@@ -411,6 +419,7 @@ function ArticlePage({ lang, slug }: { lang: Language; slug: ArticleSlug }) {
           {!!article.sources?.length && <section className="article-sources"><span>↗</span><div><h2>{sourceHeadings[lang][0]}</h2><p className="source-intro">{sourceIntro}</p><ul>{article.sources.map((source) => { const kind = source.kind ?? (/Trustpilot|Reddit|customer/i.test(source.label) ? "customer" : "official"); return <li key={source.label}><strong className="source-name">{source.label}</strong><span className="source-meta">{sourceKinds[lang][kind]} · {sourceKinds[lang].checked} {source.checked ?? "1 Sep 2026"}</span><p>{source.note}</p>{source.reference && <code>{source.reference}</code>}</li>; })}</ul></div></section>}
           <div className="source-note"><strong>{sourceBoundary[lang][0]}</strong><p>{t.labels.disclaimer} {sourceBoundary[lang][1]}</p></div>
         </article>
+        {["oopbuy-shipping-planning", "oopbuy-shipping-spain"].includes(slug) && <ParcelWorksheet lang={lang} />}
         <section className="section related-section"><div className="section-heading"><p className="eyebrow">NEXT / FIELD NOTES</p><h2>{t.page.articles.title}</h2></div><ArticleCards lang={lang} limit={3} selected={article.related} exclude={slug} /></section>
       </main>
     </>

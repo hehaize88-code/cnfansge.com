@@ -4,7 +4,8 @@ import { join } from "node:path";
 const root = new URL("../out/", import.meta.url);
 const languages = ["en", "de", "es", "fr", "it"];
 const articleSlugs = (await readdir(new URL("./en/articles/", root))).filter((file) => file.endsWith(".html")).map((file) => file.slice(0, -5));
-const additions = { ...JSON.parse(await readFile(new URL("../app/new-articles-en.json", import.meta.url), "utf8")), ...JSON.parse(await readFile(new URL("../app/seo-expansion-en.json", import.meta.url), "utf8")) };
+const novemberEnglish = JSON.parse(await readFile(new URL("../app/release-nov-en.json", import.meta.url), "utf8"));
+const additions = { ...novemberEnglish, ...JSON.parse(await readFile(new URL("../app/new-articles-en.json", import.meta.url), "utf8")), ...JSON.parse(await readFile(new URL("../app/seo-expansion-en.json", import.meta.url), "utf8")) };
 const allowedOutboundHosts = new Set(["oopbuyvip.org", "www.oopbuyvip.org", "cnfansge.com", "www.cnfansge.com"]);
 const failures = [];
 
@@ -57,14 +58,28 @@ for (const url of urls) {
   }
 }
 
-assert(articleSlugs.length === 17, `Expected 17 article topics, got ${articleSlugs.length}`);
+assert(articleSlugs.length === 20, `Expected 20 article topics, got ${articleSlugs.length}`);
 for (const lang of languages) {
   const listing = await readFile(new URL(`./${lang}/articles.html`, root), "utf8");
   const home = await readFile(new URL(`./${lang}.html`, root), "utf8");
   const sheet = await readFile(new URL(`./${lang}/spreadsheet.html`, root), "utf8");
   assert((home.match(/class="article-card /g) ?? []).length === 4, `${lang}: homepage must show 4 articles`);
-  assert((listing.match(/class="article-card /g) ?? []).length === 17, `${lang}: directory must show all 17 articles`);
+  assert((listing.match(/class="article-card /g) ?? []).length === articleSlugs.length, `${lang}: directory must show all 20 articles`);
   assert(!/(673|949|602|580|958|931|585|670) g<\//.test(home + sheet), `${lang}: view counter remains as a weight`);
+  assert((home.match(/<details/g) ?? []).length === 20, `${lang}: expected 20 FAQs`);
+  assert(sheet.includes(`/downloads/oopbuy-planner-${lang}.pdf`) && sheet.includes(`/downloads/oopbuy-planner-${lang}.csv`), `${lang}: missing localized downloads`);
+  for (const format of ["pdf", "csv"]) {
+    const file = await readFile(new URL(`./downloads/oopbuy-planner-${lang}.${format}`, root));
+    assert(format === "pdf" ? file.subarray(0,5).toString() === "%PDF-" : file[0] === 0xef && file[1] === 0xbb && file[2] === 0xbf, `${lang}: invalid ${format} signature`);
+  }
+  const november = JSON.parse(await readFile(new URL(`../app/release-nov-${lang}.json`, import.meta.url), "utf8"));
+  assert(Object.keys(november).sort().join() === Object.keys(novemberEnglish).sort().join(), `${lang}: November article set mismatch`);
+  for (const [slug,article] of Object.entries(november)) {
+    assert(article.sections.length === novemberEnglish[slug].sections.length, `${lang}/${slug}: missing November sections`);
+    assert(article.sections.every((section,i) => section.paragraphs.length === novemberEnglish[slug].sections[i].paragraphs.length), `${lang}/${slug}: missing November paragraphs`);
+    assert(article.published === "2026-11-07" && article.modified === "2026-11-07", `${lang}/${slug}: incorrect November dates`);
+    assert(article.title.length <= 64 && article.description.length <= 158, `${lang}/${slug}: raw metadata too long`);
+  }
   const expansion = JSON.parse(await readFile(new URL(`../app/seo-expansion-${lang}.json`, import.meta.url), "utf8"));
   const englishExpansion = JSON.parse(await readFile(new URL("../app/seo-expansion-en.json", import.meta.url), "utf8"));
   assert(Object.keys(expansion).sort().join() === Object.keys(englishExpansion).sort().join(), `${lang}: new article set mismatch`);

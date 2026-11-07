@@ -16,6 +16,13 @@ import expansionEs from "./seo-expansion-es.json";
 import expansionFr from "./seo-expansion-fr.json";
 import expansionIt from "./seo-expansion-it.json";
 import refreshData from "./seo-refresh.json";
+import novemberRefresh from "./release-nov-refresh.json";
+import novemberEn from "./release-nov-en.json";
+import novemberDe from "./release-nov-de.json";
+import novemberEs from "./release-nov-es.json";
+import novemberFr from "./release-nov-fr.json";
+import novemberIt from "./release-nov-it.json";
+
 
 type Locale = "en" | "de" | "es" | "fr" | "it";
 type Update = {
@@ -25,9 +32,9 @@ type Update = {
   related: string[];
 };
 
-export type NewArticleSlug = keyof typeof newEn | keyof typeof expansionEn;
-export const newArticleSlugs = [...Object.keys(newEn), ...Object.keys(expansionEn)] as NewArticleSlug[];
-const additions = { en: { ...newEn, ...expansionEn }, de: { ...newDe, ...expansionDe }, es: { ...newEs, ...expansionEs }, fr: { ...newFr, ...expansionFr }, it: { ...newIt, ...expansionIt } } as Record<Locale, Record<string, Article>>;
+export type NewArticleSlug = keyof typeof newEn | keyof typeof expansionEn | keyof typeof novemberEn;
+export const newArticleSlugs = [...Object.keys(newEn), ...Object.keys(expansionEn), ...Object.keys(novemberEn)] as NewArticleSlug[];
+const additions = { en: { ...newEn, ...expansionEn, ...novemberEn }, de: { ...newDe, ...expansionDe, ...novemberDe }, es: { ...newEs, ...expansionEs, ...novemberEs }, fr: { ...newFr, ...expansionFr, ...novemberFr }, it: { ...newIt, ...expansionIt, ...novemberIt } } as Record<Locale, Record<string, Article>>;
 const updates: Record<Locale, Record<string, Update>> = { en: updatesEn, de: updatesDe, es: updatesEs, fr: updatesFr, it: updatesIt };
 const updateDates = { en: "1 October 2026", de: "1. Oktober 2026", es: "1 de octubre de 2026", fr: "1 octobre 2026", it: "1 ottobre 2026" };
 
@@ -53,6 +60,14 @@ export function articleLibrary(lang: Locale, originals: Record<string, Article>)
       updated: dates[lang], modified: "2026-10-15", related: update.related,
       sections: [update.section, ...article.sections.slice(1)],
     };
+  }
+  const novemberDates = { en: "7 November 2026", de: "7. November 2026", es: "7 de noviembre de 2026", fr: "7 novembre 2026", it: "7 novembre 2026" };
+  for (const [slug, update] of Object.entries((novemberRefresh as Record<Locale, Record<string, Update>>)[lang])) {
+    const article = refreshed[slug];
+    if (!article) throw new Error(`Missing November article: ${lang}/${slug}`);
+    refreshed[slug] = { ...article, title: update.title, description: update.description,
+      updated: novemberDates[lang], modified: "2026-11-07", related: update.related,
+      sections: [update.section, ...article.sections.slice(1)] };
   }
   return { ...refreshed, ...additions[lang] };
 }

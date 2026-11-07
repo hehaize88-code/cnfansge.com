@@ -1,3 +1,5 @@
+import { plannerCopy } from "./planner-copy";
+import novemberFaq from "./release-nov-faq.json";
 import { discoveryCopy } from "./discovery-copy";
 export { discoveryCopy } from "./discovery-copy";
 import { englishArticles } from "./seo-articles";
@@ -462,4 +464,11 @@ for (const lang of languages) {
   copy[lang].labels.latestBody = pageRefresh[lang][0];
   copy[lang].page.finds.title = pageRefresh[lang][1];
   copy[lang].page.spreadsheet.body = pageRefresh[lang][2];
+}
+
+// November release: every language receives the same tools, questions and page intent.
+for (const lang of languages) {
+  copy[lang].page.spreadsheet.title = plannerCopy[lang].sheetTitle;
+  copy[lang].page.spreadsheet.body = plannerCopy[lang].sheetDescription;
+  copy[lang].faq.push(...novemberFaq[lang]);
 }

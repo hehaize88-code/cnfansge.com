@@ -583,3 +583,23 @@ svg { stroke-width: 1.8; }
   .breadcrumb-section { padding-top: 14px; padding-bottom: 0; }
   .product-info dd { overflow-wrap: anywhere; }
 }
+
+/* Localized planning tools */
+.planner-panel { background: #f4f7f2; border: 1px solid #dbe3d6; border-radius: 18px; padding: 28px; margin-top: 20px; margin-bottom: 20px; }
+.planner-panel h2 { font-size: clamp(24px,3vw,36px); margin: 8px 0 14px; line-height: 1.15; }
+.planner-panel p { max-width: 850px; line-height: 1.65; }
+.planner-inputs { display: grid; grid-template-columns: repeat(5,minmax(0,1fr)); gap: 12px; margin: 24px 0 18px; }
+.planner-inputs label { display: flex; flex-direction: column; justify-content: space-between; gap: 8px; font-size: 13px; font-weight: 600; }
+.planner-inputs input { min-width: 0; width: 100%; border: 1px solid #aebdaa; background: white; border-radius: 8px; padding: 12px; color: #1c3023; font: inherit; font-size: 16px; }
+.planner-actions { display: flex; flex-wrap: wrap; align-items: center; gap: 12px; }
+.planner-actions .button-link { cursor: pointer; font: inherit; font-size: 14px; border: 1px solid #203d2b; }
+.planner-example { padding: 12px; border: 1px solid #aebdaa; border-radius: 8px; background: transparent; cursor: pointer; font: inherit; font-size: 14px; }
+.planner-results { display: grid; grid-template-columns: repeat(4,minmax(0,1fr)); gap: 10px; margin: 22px 0; }
+.planner-results > div { padding: 14px; border: 1px solid #d3dfcd; background: white; border-radius: 9px; }
+.planner-results dt { font-size: 12px; }
+.planner-results dd { font-size: 26px; font-weight: 700; margin: 8px 0 0; overflow-wrap: anywhere; }
+.planner-note { font-size: 12px; color: #4a5c4e; margin: 15px 0 0; }
+.catalogue-intro { padding-bottom: 0; }
+.catalogue-intro p { color: var(--muted); font-size: 14px; line-height: 1.6; }
+@media(max-width:900px) { .planner-inputs { grid-template-columns: repeat(3,minmax(0,1fr)); } }
+@media(max-width:600px) { .planner-panel { padding: 16px; border-radius: 12px; } .planner-inputs,.planner-results { grid-template-columns: repeat(2,minmax(0,1fr)); } .planner-panel h2 { font-size: 25px; } .planner-panel > p { font-size: 14px; } .planner-actions .button-link,.planner-example { min-height: 44px; } }
