@@ -468,7 +468,8 @@ footer > div:last-child a:hover { color: var(--red); }
 
 @media (max-width: 1040px) {
   .site-header { grid-template-columns: 1fr auto; }
-  .site-header nav { display: none; }
+  .site-header nav { display: flex; grid-column: 1 / -1; grid-row: 2; justify-content: flex-start; gap: 4px; }
+  .site-header nav a { min-height: 36px; display: inline-flex; align-items: center; padding: 7px 9px; }
   .hero-grid { grid-template-columns: 1fr; }
   .hero-manifest { min-height: 480px; }
   .category-grid { grid-template-columns: repeat(3, 1fr); }
@@ -488,7 +489,7 @@ footer > div:last-child a:hover { color: var(--red); }
 @media (max-width: 640px) {
   .top-note { min-height: 30px; padding-inline: 14px; font-size: 8px; }
   .top-note span:first-child { max-width: 72%; }
-  .site-header { min-height: 66px; padding: 11px 14px; }
+  .site-header { min-height: 66px; padding: 11px 14px; gap: 9px; }
   .brand { width: 132px; }
   .language-select { width: 70px !important; height: 37px !important; }
   .hero-grid, .stat-rail, .content-section, .inner-hero, .inner-content, .article-hero { width: calc(100% - 20px); }
