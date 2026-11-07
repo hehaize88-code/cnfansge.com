@@ -137,7 +137,7 @@ export function improveArticles(locale: Locale, articles: Article[]): Article[] 
       return target ? [{ kind: "article" as const, slug, label: target.title }] : [];
     });
     const related = [...additions, ...(article.related || [])].filter((item, i, all) => all.findIndex(other => other.kind === item.kind && other.slug === item.slug) === i);
-    return { ...article, modified: "2026-10-15", takeaways: index < 0 ? article.takeaways : checks[locale][index], related,
+    return { ...article, modified: article.modified || "2026-10-15", takeaways: index < 0 ? article.takeaways : checks[locale][index], related,
       ...(article.slug === "oopbuy-fees-returns-policy" ? { deck: feeDeck[locale], reviewNotice: notice[locale] } : {}),
     };
   });
