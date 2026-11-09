@@ -1,0 +1,26 @@
+import type { Article } from "./articles";
+import type { Locale } from "./site-data";
+import parcelen from "./editorial-20261109/parcel-en.json";
+import timingen from "./editorial-20261109/timing-en.json";
+import usaen from "./editorial-20261109/usa-en.json";
+import uken from "./editorial-20261109/uk-en.json";
+import parcelde from "./editorial-20261109/parcel-de.json";
+import timingde from "./editorial-20261109/timing-de.json";
+import usade from "./editorial-20261109/usa-de.json";
+import ukde from "./editorial-20261109/uk-de.json";
+import parceles from "./editorial-20261109/parcel-es.json";
+import timinges from "./editorial-20261109/timing-es.json";
+import usaes from "./editorial-20261109/usa-es.json";
+import ukes from "./editorial-20261109/uk-es.json";
+import parcelfr from "./editorial-20261109/parcel-fr.json";
+import timingfr from "./editorial-20261109/timing-fr.json";
+import usafr from "./editorial-20261109/usa-fr.json";
+import ukfr from "./editorial-20261109/uk-fr.json";
+import parcelit from "./editorial-20261109/parcel-it.json";
+import timingit from "./editorial-20261109/timing-it.json";
+import usait from "./editorial-20261109/usa-it.json";
+import ukit from "./editorial-20261109/uk-it.json";
+
+export const novemberSlugs = ["sugargoo-parcel-photos-before-shipping", "sugargoo-shipping-time-stages", "sugargoo-shipping-to-usa", "sugargoo-shipping-to-uk"] as const;
+const copy = {en:[parcelen,timingen,usaen,uken],de:[parcelde,timingde,usade,ukde],es:[parceles,timinges,usaes,ukes],fr:[parcelfr,timingfr,usafr,ukfr],it:[parcelit,timingit,usait,ukit]};
+export const novemberArticles = Object.fromEntries(Object.entries(copy).map(([locale, entries]) => [locale, Object.fromEntries(entries.map((article, index) => [novemberSlugs[index], article]))])) as Record<Locale, Record<typeof novemberSlugs[number], Article>>;

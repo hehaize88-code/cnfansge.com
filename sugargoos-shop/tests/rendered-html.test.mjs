@@ -43,7 +43,7 @@ test("keeps production HTML indexable and serves its stylesheet", async () => {
   assert.ok((await asset.text()).length > 1000);
 });
 
-test("sitemap exposes all 80 localized articles and each page has matching canonical metadata", async () => {
+test("sitemap exposes all 100 localized articles and each page has matching canonical metadata", async () => {
   const robots = await request("/robots.txt");
   assert.equal(robots.status, 200);
   assert.match(await robots.text(), /Sitemap: https:\/\/sugargoos.shop\/sitemap.xml/);
@@ -51,11 +51,11 @@ test("sitemap exposes all 80 localized articles and each page has matching canon
   assert.equal(response.status, 200);
   const xml = await response.text();
   const urls = [...xml.matchAll(/<loc>([^<]+)<\/loc>/g)].map((match) => match[1]);
-  assert.equal(urls.length, 120);
+  assert.equal(urls.length, 140);
   assert.equal(new Set(urls).size, urls.length);
   assert.ok(urls.every((url) => url.startsWith("https://sugargoos.shop/") && url.endsWith("/")));
   const articleUrls = urls.filter((url) => /\/articles\/[^/]+\/$/.test(url));
-  assert.equal(articleUrls.length, 80);
+  assert.equal(articleUrls.length, 100);
   for (const url of articleUrls) {
     const result = await runtime.dispatchFetch(url);
     assert.equal(result.status, 200, url);
@@ -71,14 +71,14 @@ test("sitemap exposes all 80 localized articles and each page has matching canon
   }
 });
 
-test("article hubs expose all sixteen guides and homepage highlights four", async () => {
+test("article hubs expose all twenty guides and homepage highlights four", async () => {
   for (const locale of ["en", "de", "es", "fr", "it"]) {
     for (const suffix of ["/", "/articles/"]) {
       const response = await request(`/${locale}${suffix}`);
       assert.equal(response.status, 200);
       const html = await response.text();
       const paths = new Set([...html.matchAll(new RegExp(`href="(/${locale}/articles/[^/]+/)"`, "g"))].map((match) => match[1]));
-      assert.equal(paths.size, suffix === "/" ? 4 : 16, `${locale}${suffix}`);
+      assert.equal(paths.size, suffix === "/" ? 4 : 20, `${locale}${suffix}`);
     }
   }
 });

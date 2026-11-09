@@ -41,7 +41,8 @@ export const articleSeoTitles: Record<Locale, Partial<Record<ArticleSlug, string
 
 export const relatedArticleSlugs: Partial<Record<ArticleSlug, ArticleSlug[]>> = {
   "sugargoo-spreadsheet-guide-2026": ["sugargoo-link-not-working-weidian-taobao", "sugargoo-fees-total-cost-guide", "sugargoo-first-order-checkpoints"],
-  "sugargoo-qc-photo-checklist": ["sugargoo-extra-qc-photo-request-brief", "sugargoo-wrong-size-color-quantity-warehouse", "sugargoo-warehouse-storage-returns"],
+  "sugargoo-qc-photo-checklist": ["sugargoo-parcel-photos-before-shipping", "sugargoo-extra-qc-photo-request-brief", "sugargoo-wrong-size-color-quantity-warehouse", "sugargoo-warehouse-storage-returns"],
+  "sugargoo-shipping-calculator-estimate-check": ["sugargoo-shipping-to-usa", "sugargoo-shipping-to-uk", "sugargoo-shipping-time-stages"],
   "sugargoo-shipping-weight-guide-2026": ["sugargoo-shipping-calculator-estimate-check", "sugargoo-fees-total-cost-guide", "sugargoo-rehearsal-shipping-results-check"],
   "sugargoo-review-2026": ["sugargoo-first-order-checkpoints", "sugargoo-fees-total-cost-guide", "sugargoo-support-request-evidence-checklist"],
   "sugargoo-order-status-purchased-shipped-received-stored": ["sugargoo-warehouse-storage-returns", "sugargoo-combine-orders-item-control", "sugargoo-tracking-not-updating-diagnostics"],

@@ -472,3 +472,20 @@ a:focus-visible,button:focus-visible,summary:focus-visible,input:focus-visible {
   .footer-brand small,.disclaimer { font-size:12px; line-height:1.6; }
   .site-footer nav { font-size:12px; gap:14px; }
 }
+
+/* Compact reading and index spacing; every translated paragraph stays visible. */
+.article-count { margin-top:-16px; margin-bottom:20px; color:var(--muted); font-size:15px; }
+.article-count strong { color:var(--orange); font-size:24px; }
+.article-card h2, .guide-routes a, .article-header h1 { overflow-wrap:anywhere; }
+@media (max-width:560px) {
+  .article-card { padding:17px; }
+  .article-card h2 { margin:18px 0 12px; font-size:24px; }
+  .article-card footer { margin-top:16px; }
+  .article-header { padding:22px 0; }
+  .article-header h1 { font-size:32px; }
+  .article-header>p:nth-of-type(2) { margin:16px 0; }
+  .article-body p { margin-bottom:16px; line-height:1.7; }
+  .article-body>section { padding-bottom:20px; }
+  .article-body h2 { font-size:26px; margin-bottom:16px; }
+  .article-count { margin-top:0; }
+}

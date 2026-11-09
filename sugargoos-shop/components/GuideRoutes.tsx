@@ -6,9 +6,9 @@ import type { Locale } from "@/lib/site-data";
 const bySection: Record<string, ArticleSlug[]> = {
   spreadsheet: ["sugargoo-spreadsheet-guide-2026", "sugargoo-link-not-working-weidian-taobao", "sugargoo-fees-total-cost-guide"],
   finds: ["sugargoo-link-not-working-weidian-taobao", "sugargoo-spreadsheet-guide-2026", "sugargoo-first-order-checkpoints"],
-  guide: ["sugargoo-first-order-checkpoints", "sugargoo-fees-total-cost-guide", "sugargoo-warehouse-storage-returns"],
-  shipping: ["sugargoo-fees-total-cost-guide", "sugargoo-shipping-calculator-estimate-check", "sugargoo-shipping-weight-guide-2026"],
-  qc: ["sugargoo-qc-photo-checklist", "sugargoo-extra-qc-photo-request-brief", "sugargoo-warehouse-storage-returns"],
+  guide: ["sugargoo-shipping-time-stages", "sugargoo-first-order-checkpoints", "sugargoo-fees-total-cost-guide", "sugargoo-warehouse-storage-returns"],
+  shipping: ["sugargoo-shipping-time-stages", "sugargoo-shipping-to-usa", "sugargoo-shipping-to-uk", "sugargoo-fees-total-cost-guide", "sugargoo-shipping-calculator-estimate-check", "sugargoo-shipping-weight-guide-2026"],
+  qc: ["sugargoo-parcel-photos-before-shipping", "sugargoo-qc-photo-checklist", "sugargoo-extra-qc-photo-request-brief", "sugargoo-warehouse-storage-returns"],
   faq: ["sugargoo-warehouse-storage-returns", "sugargoo-fees-total-cost-guide", "sugargoo-support-request-evidence-checklist"],
 };
 export function GuideRoutes({locale, section}:{locale:Locale; section:string}) {
