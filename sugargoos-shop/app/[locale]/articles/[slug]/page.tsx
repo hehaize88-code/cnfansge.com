@@ -54,7 +54,7 @@ export default async function ArticlePage({ params }: { params: Promise<{ locale
       {article.summary && <section className="article-answer"><strong>{ui.answer}</strong><p>{article.summary}</p></section>}
       {article.table && <div className="decision-table-wrap" role="region" aria-label={article.table.caption} tabIndex={0}><table className="decision-table"><caption>{article.table.caption}</caption><thead><tr>{article.table.headers.map(header => <th key={header} scope="col">{header}</th>)}</tr></thead><tbody>{article.table.rows.map((row,index) => <tr key={index}>{row.map((cell,column) => column === 0 ? <th key={column} scope="row">{cell}</th> : <td key={column}>{cell}</td>)}</tr>)}</tbody></table></div>}
       <div className="article-layout">
-        <aside className="toc"><details open><summary>{labels.contents}</summary><nav>{article.sections.map((section, index) => <a href={`#section-${index + 1}`} key={section.heading}><span>{String(index + 1).padStart(2,"0")}</span>{section.heading}</a>)}</nav></details></aside>
+        <aside className="toc"><details><summary>{labels.contents}</summary><nav>{article.sections.map((section, index) => <a href={`#section-${index + 1}`} key={section.heading}><span>{String(index + 1).padStart(2,"0")}</span>{section.heading}</a>)}</nav></details></aside>
         <article className="article-body">{article.sections.map((section, index) => <section id={`section-${index + 1}`} key={section.heading}><span>{String(index + 1).padStart(2,"0")}</span><h2>{section.heading}</h2>{section.paragraphs.map((paragraph) => <p key={paragraph}>{paragraph}</p>)}</section>)}</article>
       </div>
       <section className="article-research source-notes" aria-label={labels.basis}>

@@ -36,7 +36,7 @@ export default async function LocaleHome({ params }: { params: Promise<{ locale:
   if (!isLocale(locale)) notFound();
   const copy = homeCopy[locale];
   const ui = editorialUI[locale];
-  const featured = [...articleSlugs.slice(0,3), "sugargoo-spreadsheet-guide-2026" as const];
+  const featured = articleSlugs.slice(0,4);
   const extra = {
     en:{catalog:"Live discovery workspace",latest:"Latest catalog routes",workflow:"From link to parcel",faq:"Quick answers",faqNote:"Clear answers before you commit to a listing or shipping line.",articles:"Read before you order",articlesNote:"Practical guides built around decisions that listings cannot answer.",read:"Read guide",allFaq:"All answers",allArticles:"All articles"},
     de:{catalog:"Arbeitsfläche für aktive Funde",latest:"Neueste Katalogwege",workflow:"Vom Link zum Paket",faq:"Schnelle Antworten",faqNote:"Klare Antworten, bevor du dich für ein Angebot oder eine Versandlinie entscheidest.",articles:"Vor der Bestellung lesen",articlesNote:"Praktische Leitfäden zu Fragen, die ein Angebot allein nicht beantwortet.",read:"Leitfaden lesen",allFaq:"Alle Antworten",allArticles:"Alle Artikel"},

@@ -1,4 +1,5 @@
 import { editorialUI } from "@/lib/editorial-ui";
+import { novemberUpdates } from "@/lib/november-updates";
 import { Locale } from "@/lib/site-data";
 import { faqAnswerExpansions, pageIntroExpansions, pageSectionExpansions } from "@/lib/page-content-expansions";
 
@@ -190,4 +191,11 @@ for (const locale of ["de", "es", "fr", "it"] as const) {
 for (const locale of ["en", "de", "es", "fr", "it"] as const) {
   const storage = faqCopy[locale].find(item => /100/.test(item.a));
   if (storage) storage.a = editorialUI[locale].storage;
+  const update = novemberUpdates[locale];
+  pageSlugs.forEach((slug, index) => {
+    pageContent[locale][slug].title = update.titles[index];
+    pageContent[locale][slug].intro = update.intros[index];
+  });
+  pageContent[locale].guide.sections.push(update.app);
+  pageContent[locale].qc.sections.unshift({title:update.qc.heading, body:update.qc.paragraphs.join(" ")});
 }

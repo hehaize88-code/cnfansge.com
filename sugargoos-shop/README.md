@@ -42,3 +42,11 @@ This release is scoped to `sugargoos-shop/` and uses the existing GitHub product
 Validation: TypeScript check, production build, rendered canonical/hreflang/language and redirect checks, all-language 1,200–1,800-word content parity, and analytics event/privacy checks. No guarantee of search indexing or traffic growth is implied.
 
 The existing automatic article-update exclusion is unchanged by this manual release.
+
+## November 9, 2026: search-led editorial update
+
+Adds parcel-photo, shipping-time, USA shipping and UK shipping guides in EN/DE/ES/FR/IT: 20 complete guides per locale, 100 article URLs and 140 sitemap URLs. Every new English article has 1,200–1,800 words, with full localized equivalents. Official Sugargoo guidance and current government import references are linked; no fixed shipping price or delivery promise is invented.
+
+Expands the existing spreadsheet, QC and calculator guides in all five languages, and adds app/account/address guidance. Core-page headings and descriptions now describe search tasks directly. Homepage and topic hubs link the new guides; article counts come from the registry. Mobile spacing is smaller and the contents disclosure starts closed without removing article content. Existing URL normalization, product destinations, analytics configuration and automatic-editorial exclusions are retained. The HTML cache revision advances for this release.
+
+Validation: TypeScript, production build, article and landing-page content parity, 100 rendered article routes with canonical/hreflang/schema checks, 140 unique sitemap URLs, navigation counts, 404 handling, analytics event tests and Wrangler deployment dry-run. The managed local visual preview could not start because its workerd binary supports only 2026-05-22, while production uses 2026-09-28; production browser verification follows deployment.

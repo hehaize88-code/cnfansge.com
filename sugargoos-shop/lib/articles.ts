@@ -1,4 +1,6 @@
 import { searchReleaseArticles, searchReleaseSlugs } from "@/lib/articles-search-release";
+import { novemberArticles, novemberSlugs } from "@/lib/articles-november";
+import { novemberUpdates } from "@/lib/november-updates";
 import { articleUpgrades, upgradedSlugs, decisionHeaders } from "@/lib/article-upgrades";
 import { editorialUI } from "@/lib/editorial-ui";
 import { legacyArticleUpdates } from "@/lib/legacy-article-update";
@@ -16,7 +18,7 @@ export const legacyArticleSlugs = [
   "sugargoo-review-2026",
   "sugargoo-order-status-purchased-shipped-received-stored",
 ] as const;
-export const articleSlugs = [...searchReleaseSlugs, ...octoberSlugs, ...legacyArticleSlugs] as const;
+export const articleSlugs = [...novemberSlugs, ...searchReleaseSlugs, ...octoberSlugs, ...legacyArticleSlugs] as const;
 export type LegacyArticleSlug = (typeof legacyArticleSlugs)[number];
 export type ArticleSlug = (typeof articleSlugs)[number];
 export function isArticleSlug(value: string): value is ArticleSlug { return articleSlugs.includes(value as ArticleSlug); }
@@ -225,7 +227,7 @@ for (const locale of locales) {
   }
 }
 
-export const articles = Object.fromEntries(locales.map((locale) => [locale, { ...baseArticles[locale], ...octoberArticles[locale], ...searchReleaseArticles[locale] }])) as Record<Locale, Record<ArticleSlug, Article>>;
+export const articles = Object.fromEntries(locales.map((locale) => [locale, { ...baseArticles[locale], ...octoberArticles[locale], ...searchReleaseArticles[locale], ...novemberArticles[locale] }])) as Record<Locale, Record<ArticleSlug, Article>>;
 
 
 for (const locale of locales) {
@@ -236,6 +238,19 @@ for (const locale of locales) {
     item.table = { caption: editorialUI[locale].table, headers: decisionHeaders[locale], rows: update.rows };
     item.sections.push({ heading: update.heading, paragraphs: [update.paragraph] });
     item.modifiedISO = "2026-10-15";
+  }
+  const update = novemberUpdates[locale];
+  const changes = [
+    ["sugargoo-qc-photo-checklist", update.qc, "https://blog.sugargoo.com/sugargoo-qc-service-quality-check-guide/"],
+    ["sugargoo-spreadsheet-guide-2026", update.spreadsheet, "https://blog.sugargoo.com/about-sugargoo/"],
+    ["sugargoo-shipping-calculator-estimate-check", update.calculator, "https://blog.sugargoo.com/estimate-international-shipping-costs-sugargoo/"],
+  ] as const;
+  for (const [slug, section, source] of changes) {
+    const item = articles[locale][slug];
+    item.sections.unshift(section);
+    item.modifiedISO = "2026-11-09";
+    item.research = { checked: "2026-11-09", sources: [update.method] };
+    if (!item.sources?.some(entry => entry.url === source)) item.sources = [...(item.sources ?? []), {label: "Sugargoo — " + new URL(source).pathname.split("/")[1].replaceAll("-", " "), url: source}];
   }
   for (const slug of articleSlugs) {
     const item = articles[locale][slug];

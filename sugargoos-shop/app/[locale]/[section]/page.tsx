@@ -4,6 +4,7 @@ import Link from "next/link";
 import { ArrowRight, BookOpen, CheckCircle2, Database } from "lucide-react";
 import { notFound } from "next/navigation";
 import { editorialUI } from "@/lib/editorial-ui";
+import { novemberUpdates } from "@/lib/november-updates";
 import { SearchBox } from "@/components/SearchBox";
 import { FAQList } from "@/components/FAQList";
 import { ProductCard } from "@/components/ProductCard";
@@ -19,19 +20,11 @@ function alternates(section: string) {
   return Object.fromEntries(locales.map((locale) => [locale, `https://sugargoos.shop/${locale}/${section}/`]));
 }
 
-const seoTitles = {
-  en: { spreadsheet:"Sugargoo Spreadsheet 2026: Product Links & Finds", finds:"Sugargoo Finds 2026: Product Routes & Categories", guide:"How to Use Sugargoo: From Product Link to Parcel", qc:"Sugargoo QC Photos Guide: What to Check", shipping:"Sugargoo Shipping Calculator & Cost Guide 2026", faq:"Sugargoo FAQ: Storage, Returns, Payment & Shipping", articles:"Sugargoo Guides, Reviews & Buying Research" },
-  de: { spreadsheet:"Sugargoo Spreadsheet 2026: Produktlinks & Funde", finds:"Sugargoo Finds 2026: Produktwege & Kategorien", guide:"Sugargoo verwenden: Vom Produktlink zum Paket", qc:"Sugargoo QC-Fotos: Prüfleitfaden", shipping:"Sugargoo Versandkosten & Rechner 2026", faq:"Sugargoo FAQ: Lagerung, Rückgabe & Versand", articles:"Sugargoo Leitfäden, Tests & Recherche" },
-  es: { spreadsheet:"Sugargoo Spreadsheet 2026: Enlaces y hallazgos", finds:"Sugargoo Finds 2026: Rutas y categorías", guide:"Cómo usar Sugargoo: Del enlace al paquete", qc:"Fotos QC de Sugargoo: Guía de revisión", shipping:"Calculadora y costes de envío Sugargoo 2026", faq:"FAQ Sugargoo: Almacén, devoluciones y envío", articles:"Guías, opiniones e investigación Sugargoo" },
-  fr: { spreadsheet:"Sugargoo Spreadsheet 2026 : liens et sélections", finds:"Sugargoo Finds 2026 : routes et catégories", guide:"Comment utiliser Sugargoo : du lien au colis", qc:"Photos QC Sugargoo : guide de contrôle", shipping:"Calculateur et coûts de livraison Sugargoo 2026", faq:"FAQ Sugargoo : stockage, retours et livraison", articles:"Guides, avis et recherches Sugargoo" },
-  it: { spreadsheet:"Sugargoo Spreadsheet 2026: link e selezioni", finds:"Sugargoo Finds 2026: percorsi e categorie", guide:"Come usare Sugargoo: dal link al pacco", qc:"Foto QC Sugargoo: guida al controllo", shipping:"Calcolatore e costi spedizione Sugargoo 2026", faq:"FAQ Sugargoo: deposito, resi e spedizione", articles:"Guide, recensioni e ricerche Sugargoo" },
-} as const;
-
 export async function generateMetadata({ params }: { params: Promise<{ locale: string; section: string }> }): Promise<Metadata> {
   const { locale, section } = await params;
   if (!isLocale(locale) || !isPageSlug(section)) return {};
   const content = pageContent[locale][section];
-  return { title: { absolute: seoTitles[locale][section] }, description: content.intro, alternates: { canonical: `/${locale}/${section}/`, languages: { ...alternates(section), "x-default": `https://sugargoos.shop/en/${section}/` } } };
+  return { title: { absolute: content.title }, description: content.intro, alternates: { canonical: `/${locale}/${section}/`, languages: { ...alternates(section), "x-default": `https://sugargoos.shop/en/${section}/` } } };
 }
 
 export default async function SectionPage({ params }: { params: Promise<{ locale: string; section: string }> }) {
@@ -39,7 +32,9 @@ export default async function SectionPage({ params }: { params: Promise<{ locale
   if (!isLocale(locale) || !isPageSlug(section)) notFound();
   const content = pageContent[locale][section];
   const ui = editorialUI[locale];
-  const research = locale === "en" ? pageResearchBasis[section] : localizedPageResearchBasis[locale][section];
+  const research = section === "faq" || section === "finds"
+    ? (locale === "en" ? pageResearchBasis[section] : localizedPageResearchBasis[locale][section])
+    : {checked:"2026-11-09", sources:[novemberUpdates[locale].method]};
   const showProducts = section === "spreadsheet" || section === "finds";
   const openLabels = { en:"Open live catalog", de:"Live-Katalog öffnen", es:"Abrir catálogo activo", fr:"Ouvrir le catalogue", it:"Apri catalogo attivo" };
   const researchLabels = {
@@ -55,6 +50,7 @@ export default async function SectionPage({ params }: { params: Promise<{ locale
         <aside><CheckCircle2 aria-hidden="true"/><p>{content.note}</p></aside>
       </section>
 
+      {section === "articles" && <p className="article-count page-width"><strong>{articleSlugs.length}</strong> {novemberUpdates[locale].count}</p>}
       <section className="research-strip page-width" aria-label={researchLabels.title}>
         <div><Database aria-hidden="true"/><span>{researchLabels.title}</span><small>{researchLabels.checked}: {research.checked}</small></div>
         <ul>{research.sources.map((source) => <li key={source}>{source}</li>)}</ul>
