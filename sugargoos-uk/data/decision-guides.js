@@ -1,3 +1,4 @@
+import { novemberUi, novemberSlugs } from "./november-guides.js";
 import en from "./decision-guides-en.js";
 import de from "./decision-guides-de.js";
 import es from "./decision-guides-es.js";
@@ -51,3 +52,7 @@ export const decisionRelated = {
   shipping: ["sugargoo-shipping-cost-uk", rehearsal, "reduce-volumetric-weight", protection],
   qc: ["how-to-read-qc-photos", "sugargoo-returns-refunds-before-shipping", "sugargoo-shoes-qc-shape-stitching-soles-size"]
 };
+
+for (const [lang, ui] of Object.entries(novemberUi)) Object.assign(decisionUi[lang], { homeTitle: ui.homeTitle, homeDescription: ui.homeDescription, links: ui.links, latest: ui.latest, all: ui.all });
+topics.purchase.unshift(novemberSlugs.legit);
+topics.shipping.unshift(novemberSlugs.lines, novemberSlugs.coupons);

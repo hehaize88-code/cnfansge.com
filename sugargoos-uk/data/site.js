@@ -1,3 +1,5 @@
+import { novemberArticleMeta, novemberUi } from "./november-guides.js";
+import { novemberUpdates, novemberUpdatedSlugs } from "./november-updates.js";
 import { newArticles, guideUi } from "./uk-guides.js";
 import { revisedArticleSlugs } from "./article-revisions.js";
 import { decisionArticleMeta, decisionUi, updateLabels } from "./decision-guides.js";
@@ -62,6 +64,7 @@ export const featuredProducts = featuredProductIds.map((id) => products.find((pr
 export const archivedProducts = products.filter((product) => !featuredProductIds.includes(product.id));
 
 export const articles = [
+  ...novemberArticleMeta,
   ...decisionArticleMeta,
   ...newArticles,
   {
@@ -258,6 +261,16 @@ for (const article of articles) {
     article.updatedLabel = updateLabels;
     article.title = Object.fromEntries(languages.map((lang) => [lang, articleImprovements[lang][article.slug].title]));
     article.metaDescription = Object.fromEntries(languages.map((lang) => [lang, articleImprovements[lang][article.slug].description]));
+  }
+}
+
+for (const article of articles) {
+  if (!novemberUpdatedSlugs.includes(article.slug)) continue;
+  article.dateModified = "2026-11-10";
+  article.updatedLabel = Object.fromEntries(languages.map(lang => [lang, novemberUi[lang].updated]));
+  if (novemberUpdates.en[article.slug].title) {
+    article.title = Object.fromEntries(languages.map(lang => [lang, novemberUpdates[lang][article.slug].title]));
+    article.metaDescription = Object.fromEntries(languages.map(lang => [lang, novemberUpdates[lang][article.slug].description]));
   }
 }
 
@@ -470,14 +483,14 @@ export function pageMeta(lang, key) {
 }
 
 export const pageLastModified = {
-  home: "2026-10-15T00:00:00Z",
-  spreadsheet: "2026-10-15T00:00:00Z",
+  home: "2026-11-10T00:00:00Z",
+  spreadsheet: "2026-11-10T00:00:00Z",
   finds: "2026-09-02T06:00:00Z",
-  guide: "2026-10-15T00:00:00Z",
+  guide: "2026-11-10T00:00:00Z",
   qc: "2026-10-15T00:00:00Z",
-  shipping: "2026-10-15T00:00:00Z",
+  shipping: "2026-11-10T00:00:00Z",
   faq: "2026-09-02T06:00:00Z",
-  articles: "2026-10-15T00:00:00Z"
+  articles: "2026-11-10T00:00:00Z"
 };
 
 export function lastModifiedForPath(parts = []) {

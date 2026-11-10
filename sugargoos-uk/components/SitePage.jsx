@@ -1,3 +1,5 @@
+import { novemberUi, novemberRelated, novemberSlugs } from "../data/november-guides";
+import { novemberUpdates } from "../data/november-updates";
 import { guideUi, relatedGuides } from "../data/uk-guides";
 import { decisionUi, decisionRelated, topics } from "../data/decision-guides";
 import { articleImprovements } from "../data/article-improvements";
@@ -144,7 +146,7 @@ function ArticlesGrid({ lang, t, items = articles, limit }) {
 
 function DecisionLinks({ lang }) {
   const ui = decisionUi[lang];
-  const paths = [["spreadsheet"], ["articles", "sugargoo-shipping-cost-uk"], ["articles", "how-to-read-qc-photos"], ["articles", "sugargoo-payment-methods-fees-exchange-rate"]];
+  const paths = [["spreadsheet"], ["articles", "sugargoo-shipping-cost-uk"], ["articles", novemberSlugs.lines], ["articles", "sugargoo-uk-delivery-time-tracking"]];
   return <nav className="decision-links" aria-label={ui.start}><p className="eyebrow">{ui.start}</p><div>{paths.map((path, index) => <a key={path.join("/")} href={routeFor(lang, path)}><span>{String(index + 1).padStart(2, "0")}</span>{ui.links[index]}<b aria-hidden="true">↗</b></a>)}</div></nav>;
 }
 
@@ -229,8 +231,8 @@ function HomePage({ lang, t }) {
 
       <section className="section shell">
         <SectionHeading kicker={t.articlesKicker} title={decisionUi[lang].latest} />
-        <ArticlesGrid lang={lang} t={t} limit={4} />
-        <div className="center-action"><a className="button secondary" href={routeFor(lang, ["articles"])}>{decisionUi[lang].all} →</a></div>
+        <ArticlesGrid lang={lang} t={t} items={[...Object.values(novemberSlugs), "sugargoo-shipping-cost-uk"].map(slug => articles.find(article => article.slug === slug))} />
+        <div className="center-action"><a className="button secondary" href={routeFor(lang, ["articles"])}>{decisionUi[lang].all.replace("{count}", articles.length)} →</a></div>
       </section>
 
       <section className="section shell faq-section">
@@ -290,40 +292,41 @@ function SpreadsheetPage({ lang, t }) {
       <div className="shell"><DecisionLinks lang={lang} /></div>
       <section className="section shell"><SectionHeading kicker={t.categoryKicker} title={t.categoryTitle} text={t.categoryText} split /><CategoryGrid lang={lang} t={t} /></section>
       <section className="section section-ink"><div className="shell"><SectionHeading kicker={t.findsKicker} title={t.findsTitle} text={t.findsText} split /><ProductExplorer items={products} categories={localizedCategories(lang)} copy={{ ...t, filterLabel: guideUi[lang].filter, tagLabels: Object.fromEntries(guideUi.en.tags.map((tag, index) => [tag, guideUi[lang].tags[index]])) }} /></div></section>
-      <section className="section shell catalogue-guidance"><p>{guideUi[lang].catalogueNote}</p><p>{guideUi[lang].sheetHelp}</p><RelatedGuides lang={lang} topic="spreadsheet" /></section>
+      <section className="section shell catalogue-guidance"><p className="catalogue-freshness">{novemberUi[lang].freshness}</p><p>{guideUi[lang].catalogueNote}</p><p>{guideUi[lang].sheetHelp}</p><RelatedGuides lang={lang} topic="spreadsheet" /></section>
     </main>
   );
 }
 
 function RelatedGuides({ lang, topic }) {
   const ui = guideUi[lang];
-  const selected = (decisionRelated[topic] || relatedGuides[topic] || []).map((slug) => articles.find((article) => article.slug === slug)).filter(Boolean);
+  const selected = (novemberRelated[topic] || decisionRelated[topic] || relatedGuides[topic] || []).map((slug) => articles.find((article) => article.slug === slug)).filter(Boolean);
   return <nav className="related-guides" aria-label={ui.related}><h2>{ui.related}</h2><ul>{selected.map((article) => <li key={article.slug}><a href={routeFor(lang, ["articles", article.slug])}>{article.title[lang]} <span aria-hidden="true">↗</span></a></li>)}</ul><a className="article-hub-link" href={routeFor(lang, ["articles"])}>{ui.articleHubLink} →</a></nav>;
 }
 
 function ArticlesPage({ lang, t }) {
   const ui = decisionUi[lang];
-  return <main id="main-content"><section className="page-hero shell"><p className="eyebrow">{t.articlesKicker} / 17</p><h1>{guideUi[lang].articlesHeading}</h1><p>{guideUi[lang].articlesDescription}</p><nav className="topic-tabs" aria-label={ui.topic}>{Object.keys(topics).map((key) => <a key={key} href={`#topic-${key}`}>{ui[key]}</a>)}</nav></section>{Object.entries(topics).map(([key, slugs]) => <section className="section shell article-topic" id={`topic-${key}`} key={key}><SectionHeading kicker={ui.topic} title={ui[key]} /><ArticlesGrid lang={lang} t={t} items={slugs.map((slug) => articles.find((article) => article.slug === slug))} /></section>)}</main>;
+  return <main id="main-content"><section className="page-hero shell"><p className="eyebrow">{t.articlesKicker} / {articles.length}</p><h1>{guideUi[lang].articlesHeading}</h1><p>{guideUi[lang].articlesDescription}</p><nav className="topic-tabs" aria-label={ui.topic}>{Object.keys(topics).map((key) => <a key={key} href={`#topic-${key}`}>{ui[key]}</a>)}</nav></section>{Object.entries(topics).map(([key, slugs]) => <section className="section shell article-topic" id={`topic-${key}`} key={key}><SectionHeading kicker={ui.topic} title={ui[key]} /><ArticlesGrid lang={lang} t={t} items={slugs.map((slug) => articles.find((article) => article.slug === slug))} /></section>)}</main>;
 }
 
 function ArticlePage({ lang, t, article }) {
   const body = articleBody(lang, article.slug);
-  const improvement = articleImprovements[lang]?.[article.slug];
+  const improvement = { ...articleImprovements[lang]?.[article.slug], ...novemberUpdates[lang]?.[article.slug] };
   const labels = editorialLabels[lang] || editorialLabels.en;
   return (
     <main id="main-content">
       <article className="longform shell">
         <header><a className="article-back" href={routeFor(lang, ["articles"])}>← {decisionUi[lang].back}</a><p className="eyebrow">{article.labels?.[lang] || article.label} / {article.read}</p><h1>{article.title[lang]}</h1><p className="article-deck">{article.summary[lang]}</p><div className="article-meta"><span>{labels.independent}</span><span>{article.updatedLabel?.[lang] || labels.updated}</span><span>{lang.toUpperCase()}</span></div></header>
         <div className="article-body">
-          {improvement && <p className="article-answer">{improvement.answer}</p>}
+          {improvement.answer && <p className="article-answer">{improvement.answer}</p>}
           <p className="lead">{body.opening}</p>
           <EvidencePanel facts={body.takeaways} note={body.sourceNote} lang={lang} label={article.researchLabel?.[lang]} />
           <DecisionTable table={improvement?.table || body.table} />
-          <nav className="article-toc" aria-label={guideUi[lang].toc}><h2>{guideUi[lang].toc}</h2><ol>{body.sections.map(({ title }, index) => <li key={title}><a href={`#section-${index + 1}`}>{title}</a></li>)}</ol></nav>
+          <details className="article-toc"><summary>{guideUi[lang].toc}</summary><ol>{body.sections.map(({ title }, index) => <li key={title}><a href={`#section-${index + 1}`}>{title}</a></li>)}</ol></details>
           {body.sections.map(({ title, paragraphs }, index) => <section id={`section-${index + 1}`} key={title}><span className="section-number">{String(index + 1).padStart(2, "0")}</span><h2>{title}</h2>{paragraphs.map((text) => <p key={text}>{text}</p>)}</section>)}
           {body.checklist && <aside className="article-checklist"><p className="eyebrow">{labels.decision}</p><h2>{body.checklist.title}</h2><ol>{body.checklist.items.map((item, index) => <li key={item}><span>{String(index + 1).padStart(2, "0")}</span><p>{item}</p></li>)}</ol></aside>}
           {["reduce-volumetric-weight", "sugargoo-shipping-cost-uk", "sugargoo-rehearsal-shipping-guide"].includes(article.slug) && <div className="inline-tool"><p className="eyebrow">{labels.numbers}</p><WeightCalculator lang={lang} /></div>}
-          <p className="closing">{body.close}</p>
+          <p className="closing" data-article-end={article.slug}>{body.close}</p>
+          {body.sources && <nav className="research-sources" aria-label={decisionUi[lang].sources}><h2>{decisionUi[lang].sources}</h2>{body.sources.map(([label, href]) => <a key={href} href={href} target="_blank" rel="noopener noreferrer">{label} ↗</a>)}</nav>}
           <RelatedGuides lang={lang} topic={article.slug} />
         </div>
       </article>
@@ -368,7 +371,8 @@ function StructuredData({ lang, slug, t }) {
 
 export default function SitePage({ lang = "en", slug = [], isRoot = false }) {
   if (!languages.includes(lang)) lang = "en";
-  const t = translations[lang] || translations.en;
+  const base = translations[lang] || translations.en;
+  const t = { ...base, browse: novemberUi[lang].browse, metrics: [novemberUi[lang].routes, ...base.metrics.slice(1)] };
   const first = slug[0] || "home";
   const second = slug[1];
   const category = first === "category" ? localizedCategories(lang).find((item) => item.slug === second) : null;

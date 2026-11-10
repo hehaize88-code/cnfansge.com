@@ -25,7 +25,9 @@
     try { url = new URL(link.href, location.origin); } catch { return; }
     if (url.origin === location.origin && url.pathname === location.pathname && url.hash) return;
     if (url.origin === location.origin && /\/(en|de|es|fr|it)\/articles\/[^/]+$/.test(url.pathname)) {
-      send("guide_click", { article_slug: url.pathname.split("/").pop(), link_area: link.closest(".related-guides") ? "related" : link.closest(".article-toc") ? "contents" : "navigation" });
+      send("guide_click", { article_slug: url.pathname.split("/").pop(), link_area: link.closest(".related-guides") ? "related" : link.closest(".decision-links") ? "next_step" : link.closest(".article-card") ? "article_card" : "navigation" });
+    } else if (url.hostname === "blog.sugargoo.com") {
+      send("resource_click", { resource_path: url.pathname, link_domain: url.hostname });
     } else if (url.hostname === "cnfansge.com") {
       const product = url.pathname.match(/^\/AllProducts\/(\d+)\.html$/);
       if (product) send("product_click", { product_id: product[1], link_domain: url.hostname });
@@ -34,6 +36,16 @@
       }
     }
   });
+  const articleEnd = document.querySelector("[data-article-end]");
+  if (articleEnd && "IntersectionObserver" in window) {
+    const observer = new IntersectionObserver((entries) => {
+      if (entries.some(entry => entry.isIntersecting)) {
+        send("article_end_view", { article_slug: articleEnd.dataset.articleEnd });
+        observer.disconnect();
+      }
+    }, { threshold: 0.6 });
+    observer.observe(articleEnd);
+  }
   let usedCalculator = false;
   document.addEventListener("change", (event) => {
     if (!usedCalculator && event.target instanceof Element && event.target.closest(".weight-card")) {

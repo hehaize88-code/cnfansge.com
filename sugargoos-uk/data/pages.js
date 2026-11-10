@@ -1,4 +1,6 @@
 import { ukGuides } from "./uk-guides.js";
+import { novemberGuides } from "./november-guides.js";
+import { novemberUpdates } from "./november-updates.js";
 import { decisionGuides } from "./decision-guides.js";
 import { articleRevision } from "./article-revisions.js";
 import { researchedArticles } from "./articles";
@@ -135,7 +137,8 @@ const shared = {
   }
 };
 
-export function articleBody(lang, slug) {
+function originalArticleBody(lang, slug) {
+  if (novemberGuides[lang]?.[slug]) return novemberGuides[lang][slug];
   if (decisionGuides[lang]?.[slug]) return decisionGuides[lang][slug];
   if (ukGuides[lang]?.articles[slug]) return ukGuides[lang].articles[slug];
   const key = slug === "how-to-read-qc-photos" ? "qc" : slug === "reduce-volumetric-weight" ? "shipping" : "guide";
@@ -152,4 +155,10 @@ export function articleBody(lang, slug) {
     sections: copy[key].sections.map(([title, text]) => ({ title, paragraphs: [text] })),
     close: shared[lang]?.close || shared.en.close
   };
+}
+
+export function articleBody(lang, slug) {
+  const body = originalArticleBody(lang, slug);
+  const update = novemberUpdates[lang]?.[slug];
+  return update ? { ...body, sections: [...body.sections, update.section], sources: update.sources } : body;
 }

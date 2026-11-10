@@ -1,3 +1,4 @@
+import { novemberGuides } from "../data/november-guides.js";
 import assert from "node:assert/strict";
 import { readFile, access } from "node:fs/promises";
 import { join } from "node:path";
@@ -9,8 +10,8 @@ import { improvedSlugs } from "../data/article-improvements.js";
 const root = fileURLToPath(new URL("../dist/static/", import.meta.url));
 const routes = languages.flatMap((lang) => localPaths.map((parts) => `/${lang}${parts.length ? `/${parts.join("/")}` : ""}`));
 const routeSet = new Set(routes);
-assert.equal(articles.length, 17);
-assert.equal(routes.length, 155);
+assert.equal(articles.length, 20);
+assert.equal(routes.length, 170);
 assert.deepEqual([...new Set(Object.values(topics).flat())].sort(), articles.map((a) => a.slug).sort());
 const localLinks = new Set();
 let checkedArticles = 0;
@@ -49,13 +50,26 @@ for (const route of routes) {
       const words = [source.opening, ...source.sections.flatMap((s) => [s.title, ...s.paragraphs]), source.close, ...source.takeaways, ...source.table.rows.flat()].join(" ").split(/\s+/).length;
       assert(words >= 1200, `${route}: unexpectedly shortened content (${words})`);
     }
+    if (novemberGuides[lang][slug]) {
+      const body = novemberGuides[lang][slug];
+      assert.equal(body.sections.length, 8);
+      assert(body.sections.every(s => s.paragraphs.length === 2));
+      assert.equal((html.match(/class="section-number"/g) || []).length, 8);
+      assert.equal(article.datePublished, "2026-11-10");
+      assert.equal(article.dateModified, "2026-11-10");
+      for (const [, href] of body.sources) assert(html.includes(`href="${href}"`), `${route}: missing source`);
+      if (lang !== "en") assert.notEqual(body.opening, novemberGuides.en[slug].opening);
+      const words = [body.opening, ...body.takeaways, ...body.sections.flatMap(s => [s.title, ...s.paragraphs]), body.close, ...body.table.rows.flat()].join(" ").split(/\s+/).length;
+      assert(words >= (lang === "en" ? 1200 : 900), `${route}: incomplete guide (${words} words)`);
+      assert(html.includes(`data-article-end="${slug}"`));
+    }
     if (improvedSlugs.includes(slug)) {
       assert(html.includes('class="article-answer"') && html.includes('class="decision-table"'), `${route}: missing improvements`);
     }
   } else if (route === `/${lang}`) {
     assert.equal((html.match(/class="article-card"/g) || []).length, 4, `${route}: homepage article count`);
   } else if (route === `/${lang}/articles`) {
-    assert.equal((html.match(/class="article-card"/g) || []).length, 17, `${route}: hub article count`);
+    assert.equal((html.match(/class="article-card"/g) || []).length, 20, `${route}: hub article count`);
   }
 }
 for (const link of localLinks) {
@@ -64,10 +78,10 @@ for (const link of localLinks) {
 }
 const sitemap = await readFile(join(root, "sitemap.xml"), "utf8");
 const locations = [...sitemap.matchAll(/<loc>([^<]+)<\/loc>/g)].map((m) => m[1]);
-assert.equal(locations.length, 155);
+assert.equal(locations.length, 170);
 assert.deepEqual(locations.sort(), routes.map((r) => `https://sugargoos.uk${r}`).sort());
-assert.equal((sitemap.match(/hreflang=/g) || []).length, 155 * 6);
-assert.equal(checkedArticles, 85);
+assert.equal((sitemap.match(/hreflang=/g) || []).length, 170 * 6);
+assert.equal(checkedArticles, 100);
 await access(join(root, "analytics-events.js"));
 await access(join(root, "404.html"));
-console.log(`Verified ${routes.length} localized routes, ${checkedArticles} articles, 20 complete new translations, all local links and reciprocal metadata.`);
+console.log(`Verified ${routes.length} localized routes, ${checkedArticles} articles, 15 complete November article translations, all local links and reciprocal metadata.`);
