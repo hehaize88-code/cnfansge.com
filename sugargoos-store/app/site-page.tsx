@@ -32,7 +32,7 @@ import {
   type Language,
 } from "./site-data";
 
-const navRoutes = ["spreadsheet", "finds", "guide", "qc", "shipping", "articles"] as const;
+const navRoutes = ["spreadsheet", "finds", "guide", "qc", "shipping", "articles", "faq"] as const;
 
 function Brand() {
   return (
@@ -62,7 +62,6 @@ function Header({ lang, path }: { lang: Language; path: string }) {
             <summary>{utilityCopy[lang].menu}</summary>
             <nav>
               {navRoutes.map((route) => <a key={route} href={localizedPath(lang, route)}>{t.nav[route]}</a>)}
-              <a href={localizedPath(lang, "faq")}>{t.nav.faq}</a>
             </nav>
           </details>
         </div>
@@ -258,7 +257,7 @@ function HomePage({ lang }: { lang: Language }) {
 function SpreadsheetPage({ lang }: { lang: Language }) {
   const t = copy[lang];
   const d = detailCopy[lang];
-  return <><PageHeader eyebrow={d.labels.routes} title={t.pageTitles.spreadsheet} intro={t.pageIntros.spreadsheet} /><section className="content-section no-top"><ProductExplorer lang={lang} products={products} openLabel={t.openFind} estimatedLabel={t.estimated} priceNote={t.priceNote} allLabel={d.labels.all} /></section><TopicLinks lang={lang} slugs={["sugargoo-spreadsheet-guide-2026", "sugargoo-spreadsheet-links-not-working", "sugargoo-finds-under-20-total-cost"]} /><FAQBlock lang={lang} limit={3} /></>;
+  return <><PageHeader eyebrow={d.labels.routes} title={t.pageTitles.spreadsheet} intro={t.pageIntros.spreadsheet} /><section className="content-section no-top"><ProductExplorer lang={lang} products={products} openLabel={t.openFind} estimatedLabel={t.estimated} priceNote={t.priceNote} allLabel={d.labels.all} /></section><TopicLinks lang={lang} slugs={["sugargoo-spreadsheet-guide-2026", "sugargoo-spreadsheet-links-not-working", "sugargoo-finds-under-20-total-cost", "sugargoo-prices-usd-vs-cny"]} /><FAQBlock lang={lang} limit={3} /></>;
 }
 
 function FindsPage({ lang }: { lang: Language }) {
@@ -290,7 +289,7 @@ function ShippingPage({ lang }: { lang: Language }) {
   const t = copy[lang];
   const d = detailCopy[lang];
   const icons = [Weight, Box, Truck, ShieldCheck];
-  return <><PageHeader eyebrow={d.labels.shipping} title={t.pageTitles.shipping} intro={t.pageIntros.shipping} /><section className="content-section shipping-layout"><ShippingCalculator lang={lang} /><div className="shipping-principles"><p className="eyebrow">{d.labels.beforeParcel}</p><h2>{d.shippingTitle}</h2>{d.shippingFacts.map(({ title, text }, index) => { const Icon = icons[index]; return <div key={title}><Icon size={20} /><span><strong>{title}</strong><small>{text}</small></span></div>; })}</div></section><section className="content-section comparison-table"><SectionHeading eyebrow={d.labels.planningTable} title={d.tableTitle} /><div className="table-wrap"><table><thead><tr>{d.tableHeaders.map((header) => <th key={header}>{header}</th>)}</tr></thead><tbody>{d.tableRows.map((row) => <tr key={row[0]}>{row.map((cell) => <td key={cell}>{cell}</td>)}</tr>)}</tbody></table></div><p className="price-disclosure">{d.shippingNote}</p></section><TopicLinks lang={lang} slugs={["sugargoo-consolidation-rehearsal-shipping", "sugargoo-shipping-cost-guide-2026", "sugargoo-shipping-to-usa-quote-comparison"]} /></>;
+  return <><PageHeader eyebrow={d.labels.shipping} title={t.pageTitles.shipping} intro={t.pageIntros.shipping} /><section className="content-section shipping-layout"><ShippingCalculator lang={lang} /><div className="shipping-principles"><p className="eyebrow">{d.labels.beforeParcel}</p><h2>{d.shippingTitle}</h2>{d.shippingFacts.map(({ title, text }, index) => { const Icon = icons[index]; return <div key={title}><Icon size={20} /><span><strong>{title}</strong><small>{text}</small></span></div>; })}</div></section><section className="content-section comparison-table"><SectionHeading eyebrow={d.labels.planningTable} title={d.tableTitle} /><div className="table-wrap"><table><thead><tr>{d.tableHeaders.map((header) => <th key={header}>{header}</th>)}</tr></thead><tbody>{d.tableRows.map((row) => <tr key={row[0]}>{row.map((cell) => <td key={cell}>{cell}</td>)}</tr>)}</tbody></table></div><p className="price-disclosure">{d.shippingNote}</p></section><TopicLinks lang={lang} slugs={["sugargoo-consolidation-rehearsal-shipping", "sugargoo-shipping-cost-guide-2026", "sugargoo-shipping-to-usa-quote-comparison", "sugargoo-tracking-not-updating", "sugargoo-local-freight-explained"]} /></>;
 }
 
 function FAQPage({ lang }: { lang: Language }) {
@@ -301,7 +300,7 @@ function FAQPage({ lang }: { lang: Language }) {
 function ArticlesPage({ lang }: { lang: Language }) {
   const t = copy[lang];
   const d = detailCopy[lang];
-  return <><PageHeader eyebrow={d.labels.articles} title={t.pageTitles.articles} intro={t.pageIntros.articles} /><ArticleCards lang={lang} /><section className="content-section editorial-standard"><SectionHeading eyebrow={d.labels.editorial} title={d.editorialTitle} /><div>{d.editorialItems.map((item) => <span key={item.title}><strong>{item.title}</strong><small>{item.text}</small></span>)}</div></section></>;
+  return <><PageHeader eyebrow={d.labels.articles} title={t.pageTitles.articles} intro={t.pageIntros.articles} /><p className="article-count">{getArticles(lang).length} {t.nav.articles.toLocaleLowerCase(lang)}</p><ArticleCards lang={lang} /><section className="content-section editorial-standard"><SectionHeading eyebrow={d.labels.editorial} title={d.editorialTitle} /><div>{d.editorialItems.map((item) => <span key={item.title}><strong>{item.title}</strong><small>{item.text}</small></span>)}</div></section></>;
 }
 
 const articleSources: Record<string, { label: string; href: string }[]> = {
@@ -327,6 +326,11 @@ function TopicLinks({ lang, slugs }: { lang: Language; slugs: string[] }) {
 }
 
 const relatedTopics: Record<string, string[]> = {
+  "sugargoo-local-freight-explained": ["sugargoo-fees-cost-breakdown-2026", "sugargoo-prices-usd-vs-cny", "sugargoo-returns-refunds-storage-guide"],
+  "sugargoo-prices-usd-vs-cny": ["sugargoo-local-freight-explained", "sugargoo-fees-cost-breakdown-2026", "sugargoo-finds-under-20-total-cost"],
+  "sugargoo-tracking-not-updating": ["sugargoo-shipping-cost-guide-2026", "sugargoo-returns-refunds-storage-guide", "sugargoo-consolidation-rehearsal-shipping"],
+  "sugargoo-fees-cost-breakdown-2026": ["sugargoo-local-freight-explained", "sugargoo-prices-usd-vs-cny", "sugargoo-shipping-cost-guide-2026"],
+  "sugargoo-returns-refunds-storage-guide": ["sugargoo-local-freight-explained", "sugargoo-prices-usd-vs-cny", "sugargoo-tracking-not-updating"],
   "sugargoo-qc-photos-missing-or-blurry": ["how-to-read-sugargoo-qc-photos", "sugargoo-spreadsheet-links-not-working", "sugargoo-returns-refunds-storage-guide"],
   "sugargoo-consolidation-rehearsal-shipping": ["sugargoo-shipping-cost-guide-2026", "sugargoo-shipping-to-usa-quote-comparison", "sugargoo-finds-under-20-total-cost"],
   "sugargoo-finds-under-20-total-cost": ["sugargoo-spreadsheet-guide-2026", "sugargoo-fees-cost-breakdown-2026", "sugargoo-consolidation-rehearsal-shipping"],
@@ -351,8 +355,8 @@ function ArticlePage({ lang, slug }: { lang: Language; slug: string }) {
   const sourceLinks = article.references?.map(({ label, url }) => ({ label, href: url })) ?? articleSources[slug] ?? [];
   return <article className="long-article">
     <header><p className="eyebrow">{article.label}</p><h1>{article.title}</h1><p>{article.dek}</p><div><span><time dateTime={publishedIso}>{dateLabel}</time></span>{article.modified && article.modified !== publishedIso && <span>{updatedLabel}: <time dateTime={article.modified}>{new Intl.DateTimeFormat(lang, { dateStyle: "long", timeZone: "UTC" }).format(new Date(article.modified))}</time></span>}<span>{article.readTime}</span><span>{copy[lang].independent}</span></div></header>
-    <aside><Info size={18} /><div><p><strong>{d.articleSourcePrefix}:</strong> {article.modified || lang === "en" ? article.sourceLine : d.sourceNote}</p><div className="source-attributions">{sourceLinks.map((source) => <span key={source.href}>{source.label} · {new URL(source.href).hostname}</span>)}</div></div></aside>
-    <nav className="article-toc" aria-label={utilityCopy[lang].toc}><strong>{utilityCopy[lang].toc}</strong><ol>{article.sections.map((section, index) => <li key={section.heading}><a href={`#section-${index + 1}`}>{section.heading}</a></li>)}</ol></nav>
+    <aside><Info size={18} /><div><p><strong>{d.articleSourcePrefix}:</strong> {article.modified || lang === "en" ? article.sourceLine : d.sourceNote}</p><div className="source-attributions">{sourceLinks.map((source) => <a key={source.href} href={source.href} target="_blank" rel="noopener noreferrer">{source.label} · {new URL(source.href).hostname}</a>)}</div></div></aside>
+    <details className="article-toc"><summary>{utilityCopy[lang].toc}</summary><nav aria-label={utilityCopy[lang].toc}><ol>{article.sections.map((section, index) => <li key={section.heading}><a href={`#section-${index + 1}`}>{section.heading}</a></li>)}</ol></nav></details>
     {article.image && <figure className="article-figure"><img src={article.image} alt={article.imageCaption ?? article.title} width="750" height="750" loading="lazy" decoding="async" /><figcaption>{article.imageCaption}</figcaption></figure>}
     {article.table ? <section className="article-comparison"><h2>{article.table.title}</h2><table><thead><tr>{article.table.headers.map((header) => <th key={header} scope="col">{header}</th>)}</tr></thead><tbody>{article.table.rows.map((row, index) => <tr key={index}>{row.map((cell, column) => <td key={column} data-label={article.table!.headers[column]}>{cell}</td>)}</tr>)}</tbody></table></section> : <section className="article-visual"><p className="eyebrow">{d.articleSnapshot}</p><h2>{lang === "en" ? article.visual.title : d.editorialTitle}</h2><div className="article-visual-grid">{visualItems.map((item) => <span className="article-visual-item" key={item.label}><small>{item.label}</small><strong>{item.value}</strong>{item.note && <em>{item.note}</em>}</span>)}</div></section>}
     <div className="article-body">{article.sections.map((section, index) => <section key={section.heading} id={`section-${index + 1}`}><span>{String(index + 1).padStart(2, "0")}</span><div><h2>{section.heading}</h2>{section.body.map((body) => <ArticleParagraph key={body} body={body} lang={lang} />)}</div></section>)}</div>

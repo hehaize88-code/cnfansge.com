@@ -1,3 +1,4 @@
+import { refreshNovember } from "./november-refresh";
 import type { Language } from "./site-data";
 import { spreadsheetMaintenanceArticles } from "./spreadsheet-maintenance-article";
 import { additionalArticles, improveArticle } from "./seo-articles";
@@ -1344,6 +1345,10 @@ const localizedArticleText: Record<Exclude<Language, "en">, Record<string, Local
 };
 
 const articlePriority = [
+  "sugargoo-local-freight-explained",
+  "sugargoo-prices-usd-vs-cny",
+  "sugargoo-tracking-not-updating",
+
   "sugargoo-qc-photos-missing-or-blurry",
   "sugargoo-consolidation-rehearsal-shipping",
   "sugargoo-finds-under-20-total-cost",
@@ -1362,7 +1367,7 @@ const articlePriority = [
 
 export function getArticles(lang: Language): Article[] {
   const localized = lang === "en" ? [...englishArticles, spreadsheetMaintenanceArticles.en] : [...englishArticles.map((article) => localizedArticleShell(lang, article)), spreadsheetMaintenanceArticles[lang]];
-  const complete = [...localized.map((article) => improveArticle(lang, article)), ...additionalArticles(lang)];
+  const complete = [...localized.map((article) => refreshNovember(lang, improveArticle(lang, article))), ...additionalArticles(lang)];
   return articlePriority.map((slug) => complete.find((article) => article.slug === slug)!).filter(Boolean);
 }
 

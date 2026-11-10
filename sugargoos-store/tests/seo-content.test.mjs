@@ -5,7 +5,7 @@ import worker from "../dist/server/index.js";
 
 const languages = ["en", "de", "es", "fr", "it"];
 const readJson = async (path) => JSON.parse(await readFile(new URL(path, import.meta.url), "utf8"));
-const articles = Object.fromEntries(await Promise.all(languages.map(async (lang) => [lang, [...await readJson(`../app/seo-content/${lang}.json`), ...await readJson(`../app/seo-content/revised-${lang}.json`), ...await readJson(`../app/seo-content/october-${lang}.json`)]])));
+const articles = Object.fromEntries(await Promise.all(languages.map(async (lang) => [lang, [...await readJson(`../app/seo-content/${lang}.json`), ...await readJson(`../app/seo-content/revised-${lang}.json`), ...await readJson(`../app/seo-content/october-${lang}.json`), ...await readJson(`../app/seo-content/november-${lang}.json`)]])));
 const xml = await readFile(new URL("../public/sitemap.xml", import.meta.url), "utf8");
 const sitemapUrls = [...xml.matchAll(/<loc>(.*?)<\/loc>/g)].map((match) => match[1]);
 const env = { ASSETS: { fetch: async () => new Response("Not found", { status: 404 }) } };
@@ -22,9 +22,9 @@ test("robots advertises the current complete sitemap", async () => {
   assert.doesNotMatch(html, /Sitemap: https:\/\/sugargoos.store\/sitemap.xml/);
 });
 
-test("nine substantive English articles and complete matching translations", async () => {
+test("twelve substantive English articles and complete matching translations", async () => {
   for (const lang of languages) {
-    assert.equal(articles[lang].length, 9);
+    assert.equal(articles[lang].length, 12);
     for (const [index, article] of articles[lang].entries()) {
       const original = articles.en[index];
       assert.equal(article.slug, original.slug);
@@ -51,7 +51,7 @@ test("nine substantive English articles and complete matching translations", asy
   }
 });
 
-test("all 45 current article pages render localized SEO and links", async () => {
+test("all 60 current article pages render localized SEO and links", async () => {
   for (const lang of languages) {
     for (const article of articles[lang]) {
       const path = `${lang === "en" ? "" : `/${lang}`}/articles/${article.slug}`;
@@ -64,8 +64,8 @@ test("all 45 current article pages render localized SEO and links", async () => 
       const schema = ld["@graph"].find((item) => item["@type"] === "Article");
       assert.equal(schema.inLanguage, lang);
       const index = articles[lang].indexOf(article);
-      assert.equal(schema.dateModified, index < 4 ? "2026-10-02" : "2026-10-15");
-      assert.equal(schema.datePublished, article.slug === "how-to-read-sugargoo-qc-photos" ? "2026-08-29" : article.slug === "sugargoo-spreadsheet-guide-2026" ? "2026-09-01" : index >= 6 ? "2026-10-15" : "2026-10-02");
+      assert.equal(schema.dateModified, index >= 9 || article.slug === "how-to-read-sugargoo-qc-photos" ? "2026-11-10" : index < 4 ? "2026-10-02" : "2026-10-15");
+      assert.equal(schema.datePublished, article.slug === "how-to-read-sugargoo-qc-photos" ? "2026-08-29" : article.slug === "sugargoo-spreadsheet-guide-2026" ? "2026-09-01" : index >= 9 ? "2026-11-10" : index >= 6 ? "2026-10-15" : "2026-10-02");
       assert.ok(schema.image.startsWith("https://sugargoos.store/"));
       assert.ok(schema.publisher.logo.url);
       assert.ok(schema.author.logo.url);
@@ -83,10 +83,10 @@ test("all 45 current article pages render localized SEO and links", async () => 
 });
 
 test("sitemap covers every existing and new route in all five languages", async () => {
-  assert.equal(sitemapUrls.length, 110);
+  assert.equal(sitemapUrls.length, 125);
   assert.equal(await readFile(new URL("../public/sitemap-content.xml", import.meta.url), "utf8"), xml);
-  assert.equal(new Set(sitemapUrls).size, 110);
-  assert.equal((xml.match(/hreflang="x-default"/g) ?? []).length, 110);
+  assert.equal(new Set(sitemapUrls).size, 125);
+  assert.equal((xml.match(/hreflang="x-default"/g) ?? []).length, 125);
   for (const url of sitemapUrls) {
     const { status, html } = await render(new URL(url).pathname);
     assert.equal(status, 200, url);
@@ -94,7 +94,7 @@ test("sitemap covers every existing and new route in all five languages", async 
   }
   for (const lang of languages) {
     const { html } = await render(`${lang === "en" ? "" : `/${lang}`}/articles`);
-    assert.equal((html.match(/class="article-card"/g) ?? []).length, 14);
+    assert.equal((html.match(/class="article-card"/g) ?? []).length, 17);
     const prefix = lang === "en" ? "" : `/${lang}`;
     const home = await render(prefix || "/");
     assert.equal((home.html.match(/class="article-card"/g) ?? []).length, 4);
@@ -102,7 +102,7 @@ test("sitemap covers every existing and new route in all five languages", async 
     assert.doesNotMatch(shortlist.html, />\s*Live route\s*</);
     assert.ok(shortlist.html.includes('id="product-filters"'));
     const shipping = await render(`${prefix}/articles/sugargoo-shipping-cost-guide-2026`);
-    assert.match(shipping.html, /"dateModified":"2026-10-15"/);
+    assert.match(shipping.html, /"dateModified":"2026-11-10"/);
     assert.ok(shipping.html.includes(`${prefix}/articles/sugargoo-consolidation-rehearsal-shipping`));
   }
   assert.equal((await render("/articles/missing-article")).status, 404);

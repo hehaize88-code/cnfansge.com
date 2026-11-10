@@ -37,14 +37,14 @@ test("new and refreshed sections are complete in all languages with accurate upd
   const english = getArticles("en");
   for (const lang of ["en", "de", "es", "fr", "it"]) {
     const localized = getArticles(lang);
-    assert.equal(localized.length, 14);
+    assert.equal(localized.length, 17);
     assert.deepEqual(localized.map((a) => a.slug), english.map((a) => a.slug));
-    for (const original of english.filter((a) => a.modified === "2026-10-15")) {
+    for (const original of english.filter((a) => ["2026-10-15", "2026-11-10"].includes(a.modified))) {
       const translated = localized.find((a) => a.slug === original.slug);
       assert.equal(translated.modified, original.modified);
       assert.equal(translated.sections.length, original.sections.length);
       assert.ok(translated.sections.every((s) => s.body.length === 2));
-      if (original.publishedIso === "2026-10-15") {
+      if (["2026-10-15", "2026-11-10"].includes(original.publishedIso)) {
         const sourceLength = original.sections.flatMap((s) => s.body).join(" ").length;
         const targetLength = translated.sections.flatMap((s) => s.body).join(" ").length;
         assert.ok(targetLength >= sourceLength * .75, `${lang}/${original.slug} translation must not be abridged`);

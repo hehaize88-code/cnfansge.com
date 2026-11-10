@@ -1,3 +1,9 @@
+import novemberEn from "./seo-content/november-en.json";
+import novemberDe from "./seo-content/november-de.json";
+import novemberEs from "./seo-content/november-es.json";
+import novemberFr from "./seo-content/november-fr.json";
+import novemberIt from "./seo-content/november-it.json";
+import { novemberSourceLabels } from "./november-refresh";
 import type { Article } from "./articles-data";
 import type { Language } from "./site-data";
 import en from "./seo-content/en.json";
@@ -19,6 +25,7 @@ import { refreshArticle, currentSourceLabels } from "./article-refresh";
 
 const content = { en, de, es, fr, it };
 const revisions = { en: revisedEn, de: revisedDe, es: revisedEs, fr: revisedFr, it: revisedIt };
+const november = { en: novemberEn, de: novemberDe, es: novemberEs, fr: novemberFr, it: novemberIt };
 const october = { en: octoberEn, de: octoberDe, es: octoberEs, fr: octoberFr, it: octoberIt };
 const dateLabels = { en: "October 2, 2026", de: "2. Oktober 2026", es: "2 de octubre de 2026", fr: "2 octobre 2026", it: "2 ottobre 2026" };
 const sourceLabels = {
@@ -39,7 +46,11 @@ export function additionalArticles(lang: Language): Article[] {
     sourceLine: sourceLabels[lang],
     visual: { title: article.table.title, items: article.table.rows.slice(0, 4).map((row) => ({ label: row[0], value: row[1], note: row[2] ?? "" })) },
   }));
-  return [...october[lang].map((article) => ({
+  return [...november[lang].map((article) => ({
+    ...article, published: "2026-11-10", publishedIso: "2026-11-10", modified: "2026-11-10",
+    readTime: "8–10 min", sourceLine: novemberSourceLabels[lang],
+    visual: { title: article.table.title, items: article.table.rows.map((row) => ({ label: row[0], value: row[1], note: row[2] })) },
+  })), ...october[lang].map((article) => ({
     ...article,
     published: "2026-10-15",
     publishedIso: "2026-10-15",
